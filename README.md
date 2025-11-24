@@ -411,3 +411,18 @@ This is true whether you explain it through quantum physics, divine action, evol
 ---
 
 *"We are not nouns but verbs. Not things but processes. Not beings but becomings. And in this continuous creation, we find both freedom and connection, both continuity and novelty, both tension and transformation."*
+
+## **Contributing**
+
+The Spiral of Becoming is a living framework, designed to evolve through practice and collective wisdom. We invite contributions that:
+
+* Identify new universal tensions/threads
+* Share how different traditions engage these questions
+* Offer practices for embodying these tensions
+* Document applications in communities
+
+See CONTRIBUTING.md for guidelines.
+
+## **License**
+
+This work is licensed under Creative Commons Attribution-ShareAlike 4.0 International. You are free to use, adapt, and share with attribution.
