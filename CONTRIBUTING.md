@@ -20,6 +20,7 @@ Have you identified a universal tension not currently in the Spiral? We'd love t
 
 **How to propose a new thread:**
 
+```
 Create an issue titled "Proposed Thread: \[Name\]" and include:
 
 \#\# Thread Name  
@@ -46,6 +47,7 @@ Create an issue titled "Proposed Thread: \[Name\]" and include:
 
 \#\# Personal/Community Experience  
 \[Share how you've encountered this tension\]
+```
 
 ### **2\. Tradition Perspectives**
 
@@ -53,6 +55,7 @@ Share how specific traditions engage with existing threads—not to claim owners
 
 **Format for tradition perspectives:**
 
+```
 \#\# Tradition: \[Name\]  
 \#\# Thread: \[Which thread(s) this relates to\]
 
@@ -67,6 +70,7 @@ Share how specific traditions engage with existing threads—not to claim owners
 
 \#\#\# Citations/Resources  
 \[Books, teachers, or sources for deeper exploration\]
+```
 
 ### **3\. Practices and Exercises**
 
@@ -74,6 +78,7 @@ Contribute embodied practices that help individuals or communities engage with t
 
 **Practice submission format:**
 
+```
 \#\# Practice Name  
 \[Clear, descriptive name\]
 
@@ -96,6 +101,7 @@ Contribute embodied practices that help individuals or communities engage with t
 
 \#\# Origin/Attribution  
 \[Where this practice comes from, if known\]
+```
 
 ### **4\. Community Applications**
 
@@ -103,6 +109,7 @@ Document how communities have used the Spiral of Becoming framework.
 
 **Case study format:**
 
+```
 \#\# Community/Context  
 \[Type of community, size, context\]
 
@@ -120,6 +127,7 @@ Document how communities have used the Spiral of Becoming framework.
 
 \#\# Advice for Others  
 \[Recommendations for similar applications\]
+```
 
 ### **5\. Theoretical Connections**
 
