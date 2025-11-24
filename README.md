@@ -96,7 +96,7 @@
 
 ## **The Power of Questions**
 
-Now the Spiral becomes a **framework for dialogue** where:
+The Spiral is a **framework for dialogue** where:
 
 * Christians can share how incarnation addresses embodied emergence  
 * Buddhists can offer their investigation of uncertainty  
@@ -117,7 +117,7 @@ Each thread also contains a question about creative tension itself:
 
 ## **The Invitation This Creates**
 
-Now we're not saying "I have figured out the universal pattern." We're saying "I've noticed these questions keep appearing. How do you engage them?"
+We're not saying "I have figured out the universal pattern." We're saying "I've noticed these questions keep appearing. How do you engage them?"
 
 This is radically inclusive. It makes space for:
 
@@ -198,7 +198,7 @@ You could include this invitation in your materials:
 
 ### **"The Living Spiral Invitation"**
 
-*The seven threads we've identified are not THE threads but OUR threads \- the ones we've discovered so far in our community's becoming. The Spiral itself is in process, always ready to receive new wisdom.*
+*The current threads we've identified are not THE threads but OUR threads \- the ones we've discovered so far in our community's becoming. The Spiral itself is in process, always ready to receive new wisdom.*
 
 *We invite you to:*
 
@@ -214,7 +214,7 @@ You could include this invitation in your materials:
 
 Like open-source software:
 
-* **Spiral 1.0**: Your original seven threads  
+* **Spiral 1.0**: The original seven threads  
 * **Spiral 1.1**: Community adds Reciprocity thread  
 * **Spiral 2.0**: Major revision based on collective learning  
 * **Personal Forks**: Individuals create their own versions  
@@ -230,14 +230,6 @@ This openness itself becomes a thread:
 * How does the container itself need to change?  
 * When does flexibility become chaos?  
 * When does structure become prison?
-
-## **Documentation Approach**
-
-Create three documents:
-
-1. **The Current Spiral** \- The universal threads as understood now  
-2. **The Thread Archive** \- All threads discovered by community over time  
-3. **The Thread Discovery Guide** \- How to identify and add new threads
 
 ## **The Profound Implication**
 
@@ -257,9 +249,9 @@ The Spiral of Becoming is itself becoming. It demonstrates its own teaching \- t
 
 This openness doesn't weaken the framework \- it's what makes it trustworthy. People can engage knowing they're not being recruited into a fixed system but invited into a living practice.
 
-This is Process Thought at its finest \- even the description of process must remain in process.
-
 # **Process Thought: A Universal Primer**
+
+This is Process Thought at its finest \- even the description of process must remain in process.
 
 ### ***Understanding Reality as Continuous Becoming***
 
@@ -367,7 +359,7 @@ These aren't problems to solve but dynamics to navigate.
 
 **In Community:**
 
-* The congregation is not a thing but an event continuously recreated  
+* The group is not a thing but an event continuously recreated  
 * Each gathering is both continuation and new creation  
 * Conflict is information about what wants to emerge  
 * Change happens through invitation, not force
