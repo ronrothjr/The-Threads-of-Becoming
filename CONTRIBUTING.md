@@ -22,32 +22,32 @@ Have you identified a universal tension not currently in the Spiral? We'd love t
 
 **Create an issue titled "Proposed Thread":**
 ```
-\[Name\]" and include:
+[Name]" and include:
 
-\#\# Thread Name  
-\[Proposed name for the thread\]
+## Thread Name  
+[Proposed name for the thread]
 
-\#\# The Tension  
-\[Describe the fundamental tension/polarity\]
+## The Tension  
+[Describe the fundamental tension/polarity]
 
-\#\# Universal Questions  
-\- \[Question 1\]  
-\- \[Question 2\]  
-\- \[Question 3\]  
-\- \[Additional questions...\]
+## Universal Questions  
+- [Question 1]  
+- [Question 2]  
+- [Question 3]  
+- [Additional questions...]
 
-\#\# Evidence of Universality  
-\[How does this appear across different:\]  
-\- Cultures  
-\- Traditions  
-\- Developmental stages  
-\- Historical periods
+## Evidence of Universality  
+[How does this appear across different:]  
+- Cultures  
+- Traditions  
+- Developmental stages  
+- Historical periods
 
-\#\# Creative Edge  
-\[Where does holding this tension generate energy/possibility?\]
+## Creative Edge  
+[Where does holding this tension generate energy/possibility?]
 
-\#\# Personal/Community Experience  
-\[Share how you've encountered this tension\]
+## Personal/Community Experience  
+[Share how you've encountered this tension]
 ```
 
 ### **2\. Tradition Perspectives**
