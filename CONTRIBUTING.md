@@ -20,8 +20,9 @@ Have you identified a universal tension not currently in the Spiral? We'd love t
 
 **How to propose a new thread:**
 
+**Create an issue titled "Proposed Thread":**
 ```
-Create an issue titled "Proposed Thread: \[Name\]" and include:
+\[Name\]" and include:
 
 \#\# Thread Name  
 \[Proposed name for the thread\]
