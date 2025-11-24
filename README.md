@@ -357,7 +357,7 @@ This work is licensed under Creative Commons Attribution-ShareAlike 4.0 Internat
 ## **GitHub Pages**
 
 - **What's added:** A minimal site has been added under the `docs/` directory and a GitHub Actions workflow at `.github/workflows/pages.yml` that publishes `docs/` to GitHub Pages on push to `main`.
-- **First publish URL:** After the workflow runs, the site will be available at either `https://<owner>.github.io/<repo>` (project site) or at a custom domain if you configure one. For this repository the project URL will be `https://ronrothjr.github.io/The-Spiral-of-Becoming` once Pages finishes publishing.
+- **First publish URL:** After the workflow runs, the site updates will be available at either `https://<owner>.github.io/<repo>` (project site) or at a custom domain if you configure one. For this repository the project URL will be `https://ronrothjr.github.io/The-Spiral-of-Becoming` once Pages finishes publishing.
 - **How it works:** The workflow uploads the contents of `docs/` as the artifact and then calls the official Pages deploy action to publish it.
 - **To preview locally:** Open `docs/index.html` in a browser, or use a simple static server, e.g.:
 
@@ -365,15 +365,3 @@ This work is licensed under Creative Commons Attribution-ShareAlike 4.0 Internat
 python3 -m http.server --directory docs 8000
 # then open http://localhost:8000
 ```
-
-- **To use a custom domain:** Add a `CNAME` file in `docs/` with your domain and configure DNS. You can also set a custom domain from the repository's Pages settings.
-
-- **Enable Pages via `gh` CLI:** To programmatically enable Pages hosting from the workflow source you can run:
-
-```bash
-gh api -X POST /repos/ronrothjr/The-Spiral-of-Becoming/pages --raw-field source=workflow
-```
-
-	(Or enable Pages from the repository Settings → Pages UI.)
-
-If you'd like, I can run the `gh` command here or walk through enabling a custom domain and DNS.
