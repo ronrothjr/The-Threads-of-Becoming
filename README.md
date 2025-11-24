@@ -29,7 +29,7 @@ The Spiral is a **framework for dialogue**.
 
 1. **These are just glimpses of infinite possible conversations. What combinations intrigue you? What wisdom does your tradition or experience offer?**
 
-2. **Nobody owns any thread. Everyone might contribute to every thread. The examples above are glimpses, nt limits. What wisdom does your tradition or experience offer? What conversations do you imagine?**
+2. **Nobody owns any thread. Everyone might contribute to every thread. The examples above are glimpses, not limits. What wisdom does your tradition or experience offer? What conversations do you imagine?**
 
 3. **Nobody has THE answer. Everyone has AN answer.**
 
