@@ -181,58 +181,58 @@ When contributing, practice holding tensions:
 5. **Push to your fork**: `git push origin thread/your-thread-name`  
 6. **Submit a Pull Request** with:  
    * Clear description of the contribution  
-      * Context for why this adds value  
-         * Any relevant discussion or issue numbers
+   * Context for why this adds value  
+   * Any relevant discussion or issue numbers
 
-         ## **Review Process**
+## **Review Process**
 
-         All contributions will be reviewed with these considerations:
+All contributions will be reviewed with these considerations:
 
-         1. **Universality**: Does this resonate across difference?  
-         2. **Creativity**: Does it open possibilities rather than close them?  
-         3. **Respect**: Does it honor without appropriating?  
-         4. **Practicality**: Can communities actually use this?  
-         5. **Alignment**: Does it fit the spirit of creative tension?
+1. **Universality**: Does this resonate across difference?
+2. **Creativity**: Does it open possibilities rather than close them?  
+3. **Respect**: Does it honor without appropriating?  
+4. **Practicality**: Can communities actually use this?  
+5. **Alignment**: Does it fit the spirit of creative tension?
 
-         Reviews are not about gatekeeping but about collective discernment. Feedback will be offered in the spirit of "Yes, and..." rather than "No, but..."
+Reviews are not about gatekeeping but about collective discernment. Feedback will be offered in the spirit of "Yes, and..." rather than "No, but..."
 
-         ## **Versioning**
+## **Versioning**
 
-         The Spiral uses semantic versioning:
+The Spiral uses semantic versioning:
 
-         * **Major versions** (1.0, 2.0): Significant evolution of the framework  
-         * **Minor versions** (1.1, 1.2): New threads or substantial additions  
-         * **Patches** (1.1.1, 1.1.2): Clarifications, small practices, fixes
+* **Major versions** (1.0, 2.0): Significant evolution of the framework  
+* **Minor versions** (1.1, 1.2): New threads or substantial additions  
+* **Patches** (1.1.1, 1.1.2): Clarifications, small practices, fixes
 
-         ## **Community Guidelines**
+## **Community Guidelines**
 
-         We commit to:
+We commit to:
 
-         * **Holding creative tension** when disagreements arise  
-         * **Seeking understanding** before seeking to be understood  
-         * **Celebrating diverse perspectives** as enrichment not threat  
-         * **Practicing the framework** we're building together  
-         * **Supporting each other's becoming** through respectful engagement
+* **Holding creative tension** when disagreements arise  
+* **Seeking understanding** before seeking to be understood  
+* **Celebrating diverse perspectives** as enrichment not threat  
+* **Practicing the framework** we're building together  
+* **Supporting each other's becoming** through respectful engagement
 
-         ## **Recognition**
+## **Recognition**
 
-         All contributors will be acknowledged in:
+All contributors will be acknowledged in:
 
-         * The CONTRIBUTORS.md file  
-         * Release notes for versions including their contribution  
-         * Annual community acknowledgment
+* The CONTRIBUTORS.md file  
+* Release notes for versions including their contribution  
+* Annual community acknowledgment
 
-         ## **Questions?**
+## **Questions?**
 
-         If you're unsure about a contribution, open an issue with the "Question" label. We'd rather explore together than have you hesitate to contribute.
+If you're unsure about a contribution, open an issue with the "Question" label. We'd rather explore together than have you hesitate to contribute.
 
-         Remember: The Spiral of Becoming is itself becoming. Your contribution, however small, is part of its evolution. We're not looking for perfection but for authentic engagement with these universal tensions.
+Remember: The Spiral of Becoming is itself becoming. Your contribution, however small, is part of its evolution. We're not looking for perfection but for authentic engagement with these universal tensions.
 
-         ## **License Note**
+## **License Note**
 
-         By contributing, you agree that your contributions will be licensed under the same Creative Commons Attribution-ShareAlike 4.0 International license as the project. This ensures the framework remains open and accessible to all.
+By contributing, you agree that your contributions will be licensed under the same Creative Commons Attribution-ShareAlike 4.0 International license as the project. This ensures the framework remains open and accessible to all.
 
-         ---
+---
 
-         *"We are not building a monument but tending a garden. Every contribution—whether seed, water, or sunlight—helps the Spiral grow."*
+*"We are not building a monument but tending a garden. Every contribution—whether seed, water, or sunlight—helps the Spiral grow."*
          
