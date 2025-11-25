@@ -57,11 +57,11 @@ The Spiral of Becoming isn't locked into any single shape or metaphor. Like wate
 
 There is no "correct" visualization. The framework succeeds when you find the form that helps you hold creative tension rather than resolve it. Draw it, dance it, diagram it however brings it alive. The multiplicity of forms teaches the same lesson as the tensions themselves: hold both/all rather than choosing one.
 
----
-
 ## **Keeping It Explicitly Open**
 
 We are dedicated to allowing this space to grow and change through community involvement, not private ownership.
+
+---
 
 # **The Process Invitation**
 
