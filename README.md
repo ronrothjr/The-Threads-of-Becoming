@@ -13,6 +13,7 @@ It's a **practice framework for engaging creative tension.** _That's all. That's
 
 ## **[The Current Threads of The Spiral of Becoming](https://ronrothjr.github.io/The-Spiral-of-Becoming/threads.html)**
 
+## **[The Spiral 2.0?](spiral-2.0.md)**
 
 ## **Contributing**
 
