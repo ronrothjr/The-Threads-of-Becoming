@@ -40,6 +40,33 @@ The Spiral of Becoming is a living framework, designed to evolve through practic
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
+## **What Shape is the Spiral?**
+
+The Spiral of Becoming isn't locked into any single shape or metaphor. Like water taking the form of its container while maintaining its essential nature, these universal tensions can be understood through whatever geometry serves your purpose, tradition, or learning style. The framework remains consistent whether you visualize it as spiral, web, wheel, or any other pattern that helps you engage. Choose the metaphor that makes the tensions come alive for you:
+
+- **Path/Journey** - Linear progress through the threads
+- **Circle/Wheel** - Continuous cycle without beginning or end
+- **Spiral** - Returning to same tensions at deeper levels
+- **Web** - All threads interconnected, affecting each other
+- **Constellation** - Navigate by different stars in different seasons
+- **Musical Scale** - Seven notes creating infinite melodies
+- **Breath** - Inhale/exhale rhythm of tension and release
+- **River System** - Tributaries flowing together and apart
+- **Loom/Weaving** - Threads held in tension create the fabric
+- **Mycelial Network** - Underground connections exchanging resources
+
+There is no "correct" visualization. The framework succeeds when you find the form that helps you hold creative tension rather than resolve it. Draw it, dance it, diagram it however brings it alive. The multiplicity of forms teaches the same lesson as the tensions themselves: hold both/all rather than choosing one.
+
+---
+
+## **Keeping It Explicitly Open**
+
+We are dedicated to allowing this space to grow and change through community involvement, not private ownership.
+
+# **The Process Invitation**
+
+Let's ensure the Spiral remains a **living process** rather than crystallizing into doctrine. This is Becoming embodied \- even this iteration of the framework for understanding process must itself remain in process.
+
 ## **The Power of Questions**
 
 The Spiral is a **framework for dialogue**.
@@ -52,11 +79,11 @@ The Spiral is a **framework for dialogue**.
 
 **Thread Guidelines:**
 
-1. **These are just glimpses of infinite possible conversations. What combinations intrigue you? What wisdom does your tradition or experience offer?**
+1. **These are just glimpses, not limits, of infinite possible conversations. What combinations intrigue you?**
 
-2. **Nobody owns any thread. Everyone might contribute to every thread. The examples above are glimpses, not limits. What wisdom does your tradition or experience offer? What conversations do you imagine?**
+2. **Nobody owns any thread. Everyone might contribute to every thread. What wisdom does your tradition or experience offer?**
 
-3. **Nobody has THE answer. Everyone has AN answer.**
+3. **Nobody has THE answer. Everyone has AN answer. What conversations do you imagine?**
 
 ## **The Meta-Question**
 
@@ -83,29 +110,6 @@ By offering questions instead of answers, the Spiral becomes MORE universal, not
 
 This is Becoming at its best \- not a fixed theology but a recognition that we're all responding to the same cosmic questions from our unique positions in the creative advance.
 
-## **What Shape is the Spiral?**
-
-The Spiral of Becoming isn't locked into any single shape or metaphor. Like water taking the form of its container while maintaining its essential nature, these universal tensions can be understood through whatever geometry serves your purpose, tradition, or learning style. The framework remains consistent whether you visualize it as spiral, web, wheel, or any other pattern that helps you engage. Choose the metaphor that makes the tensions come alive for you:
-
-- **Path/Journey** - Linear progress through the threads
-- **Circle/Wheel** - Continuous cycle without beginning or end
-- **Spiral** - Returning to same tensions at deeper levels
-- **Web** - All threads interconnected, affecting each other
-- **Constellation** - Navigate by different stars in different seasons
-- **Musical Scale** - Seven notes creating infinite melodies
-- **Breath** - Inhale/exhale rhythm of tension and release
-- **River System** - Tributaries flowing together and apart
-- **Loom/Weaving** - Threads held in tension create the fabric
-- **Mycelial Network** - Underground connections exchanging resources
-
-There is no "correct" visualization. The framework succeeds when you find the form that helps you hold creative tension rather than resolve it. Draw it, dance it, diagram it however brings it alive. The multiplicity of forms teaches the same lesson as the tensions themselves: hold both/all rather than choosing one.
-
-# **The Process Invitation**
-
-Let's ensure the Spiral remains a **living process** rather than crystallizing into doctrine. This is Becoming embodied \- even this iteration of the framework for understanding process must itself remain in process.
-
----
-
 ## Why We Call Them Threads
 
 We use the metaphor of **threads** because, like the strings of an instrument or the warp of a loom, they only become useful when held in creative tension between poles.
@@ -122,10 +126,6 @@ The poles aren't problems to solve by choosing one side. They're the anchor poin
 Like a spider's web, these threads are strongest when woven together - each thread supporting and tensioning the others. When we consciously hold these tensions rather than trying to resolve them, we create a living structure strong enough to catch meaning, flexible enough to move with change, and resilient enough to repair itself when torn.
 
 The word "thread" also carries the sense of continuity - the thread that runs through a story, the thread of connection between people, the thread of becoming that connects who we were to who we're becoming. These are the threads we follow through the labyrinth of transformation, not to escape but to journey deeper into creative engagement with life's fundamental tensions.
-
-## **Keeping It Explicitly Open**
-
-We are dedicated to allowing this space to grow and change through community involvement, not private ownership.
 
 ### **"The Living Spiral Invitation"**
 
