@@ -192,13 +192,12 @@ The Spiral of Becoming is itself becoming. It demonstrates its own teaching \- t
 
 This openness doesn't weaken the framework \- it's what makes it trustworthy. People can engage knowing they're not being recruited into a fixed system but invited into a living practice.
 
+---
+
 # **Process Thought: A Universal Primer**
 
 This is Process Thought at its finest \- even the description of process must remain in process.
 
-### ***Understanding Reality as Continuous Becoming***
-
----
 ## **Process Theology Introduction**
 
 Process Theology, emerging from Alfred North Whitehead's philosophical work in the 1920s, understands reality as composed of events and relationships in continuous creative becoming rather than fixed substances or states. This perspective suggests that everything—from quantum particles to human communities—exists in dynamic process, inheriting its past while remaining genuinely open to novel possibilities. 
