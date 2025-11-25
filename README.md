@@ -31,7 +31,7 @@ It's a **practice framework for engaging creative tension.** _That's all. That's
 
 ## **MISSION:**
 
-The mission of The Threads of Becoming (TSOB) open-source project is to function as a **living framework for engaging creative tension** that evolves through **collective wisdom and continuous practice**.
+The mission of The Threads of Becoming (TOB) open-source project is to function as a **living framework for engaging creative tension** that evolves through **collective wisdom and continuous practice**.
 
 The project aims to serve as a **practice framework** that provides common ground for diverse theological and philosophical viewpoints, rather than functioning as a complete or fixed theological system.
 
