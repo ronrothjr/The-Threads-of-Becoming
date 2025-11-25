@@ -66,11 +66,28 @@ This is radically inclusive. It makes space for:
 
 By offering questions instead of answers, the Spiral becomes MORE universal, not less. Everyone has to grapple with these tensions. No tradition has solved them completely. We're all still learning.
 
-This is Process Theology at its best \- not a fixed theology but a recognition that we're all responding to the same cosmic questions from our unique positions in the creative advance.
+This is Becoming at its best \- not a fixed theology but a recognition that we're all responding to the same cosmic questions from our unique positions in the creative advance.
+
+## **What Shape is the Spiral?**
+
+The Spiral of Becoming isn't locked into any single shape or metaphor. Like water taking the form of its container while maintaining its essential nature, these universal tensions can be understood through whatever geometry serves your purpose, tradition, or learning style. The framework remains consistent whether you visualize it as spiral, web, wheel, or any other pattern that helps you engage. Choose the metaphor that makes the tensions come alive for you:
+
+- **Path/Journey** - Linear progress through the threads
+- **Circle/Wheel** - Continuous cycle without beginning or end
+- **Spiral** - Returning to same tensions at deeper levels
+- **Web** - All threads interconnected, affecting each other
+- **Constellation** - Navigate by different stars in different seasons
+- **Musical Scale** - Seven notes creating infinite melodies
+- **Breath** - Inhale/exhale rhythm of tension and release
+- **River System** - Tributaries flowing together and apart
+- **Loom/Weaving** - Threads held in tension create the fabric
+- **Mycelial Network** - Underground connections exchanging resources
+
+There is no "correct" visualization. The framework succeeds when you find the form that helps you hold creative tension rather than resolve it. Draw it, dance it, diagram it however brings it alive. The multiplicity of forms teaches the same lesson as the tensions themselves: hold both/all rather than choosing one.
 
 # **The Process Invitation**
 
-Let's ensure the Spiral remains a **living process** rather than crystallizing into doctrine. This is Process Theology embodied \- even this iteration of the framework for understanding process must itself remain in process.
+Let's ensure the Spiral remains a **living process** rather than crystallizing into doctrine. This is Becoming embodied \- even this iteration of the framework for understanding process must itself remain in process.
 
 ## Why We Call Them Threads
 
