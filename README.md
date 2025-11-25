@@ -123,7 +123,9 @@ A thread might be universal if:
 
 ### **POWER**
 **Seed:** "Who shapes reality?"
+
 **Tension:** _Agency vs. Structure_
+
 **Questions:**
 * Who decides what's possible and what's not?
 * When is power generative and when is it oppressive?
@@ -133,7 +135,9 @@ A thread might be universal if:
 
 ### **WITNESS**
 **Seed:** "What must be named?"
+
 **Tension:** _Comfort vs. Truth_
+ 
 **Questions:**
 * When do we speak and when do we listen?
 * What requires denunciation and what requires annunciation?
@@ -143,7 +147,9 @@ A thread might be universal if:
 
 ### **RECIPROCITY**
 **Seed:** What's in an exchange?
+
 **Tension:** _Giving vs. Receiving_
+
 **Questions:**
 * How do we maintain balance in exchange?
 * When is giving depleting and receiving greedy?  
@@ -151,7 +157,9 @@ A thread might be universal if:
 
 ### **THRESHOLD**
 **Seed:** What makes us whole?
+
 **Tension:** _Inside vs. Outside_, _Us vs. Them_
+
 **Questions:**
 * Where do boundaries serve and where do they separate?  
 * How do we honor containers while allowing flow?  
@@ -159,7 +167,9 @@ A thread might be universal if:
 
 ### **RHYTHM**
 **Seed:** How do we live?
+
 **Tension:** _Repetition vs. Variation_
+
 **Questions:**
 * How do patterns both sustain and imprison?  
 * When does routine become ritual become rut?  
