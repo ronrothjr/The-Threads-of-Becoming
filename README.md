@@ -37,12 +37,13 @@ The project aims to serve as a **practice framework** that provides common groun
 
 ### Core Mission Components
 
-1.  **To Identify Universal Tensions:**
-2.  **To Foster Co-Creation and Dialogue:** 
-3.  **To Remain Dynamically Evolving:**
-4.  **To Provide a Practice-Based Toolset:**
+1.  **To Identify Universal Tensions**
+2.  **To Foster Co-Creation and Dialogue** 
+3.  **To Remain Dynamically Evolving**
+4.  **To Provide a Practice-Based Toolset**
 5.  **To Provide Common Ground Below Human Experience**
-6.  **To Ensure Openness and Accessibility:**
+6.  **To Ensure Openness and Accessibility**
+
 The underlying philosophy is that the framework succeeds not by being complete, but by being **generatively incomplete**. This openness transforms the project from an individual creation to **"humanity's ongoing discovery"**.
 
 The project is continually refined by its own struggles with tensions (such as Universal $\leftrightarrow$ Particular and Simple $\leftrightarrow$ Complex), demonstrating the very process it seeks to teach: **The Spiral of Becoming is itself becoming**.
