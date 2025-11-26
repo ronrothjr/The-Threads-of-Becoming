@@ -70,10 +70,10 @@ The Threads of Becoming aren't locked into any single shape or metaphor. Like wa
 
 - **Path/Journey** - Linear progress through the threads
 - **Circle/Wheel** - Continuous cycle without beginning or end
-- **Spiral** - Returning to same tensions at deeper levels
+- **Spiral** - Returning to same tensions at deeper/outer levels
 - **Web** - All threads interconnected, affecting each other
 - **Constellation** - Navigate by different stars in different seasons
-- **Musical Scale** - Seven notes creating infinite melodies
+- **Musical Scale** - various modalities of notes creating infinite melodies
 - **Breath** - Inhale/exhale rhythm of tension and release
 - **River System** - Tributaries flowing together and apart
 - **Loom/Weaving** - Threads held in tension create the fabric
@@ -93,7 +93,7 @@ Let's ensure the Threads remain a **living process** rather than crystallizing i
 
 ## **The Power of Questions**
 
-The Threads is a **framework for dialogue**.
+"The Threads" is a **framework for dialogue**.
 
 **We imagine rich possibilities:**
 - How might Christian mystics and Buddhist practitioners compare notes on PRESENCE?
@@ -101,7 +101,7 @@ The Threads is a **framework for dialogue**.
 - Could Muslim practices of surrender and Stoic practices of agency illuminate CONSENT differently?
 - What emerges when trauma therapists and shamans discuss EMBODIMENT?
 
-**Thread Guidelines:**
+**Thread Pathways:**
 
 1. **These are just glimpses, not limits, of infinite possible conversations. What combinations intrigue you?**
 
@@ -111,15 +111,16 @@ The Threads is a **framework for dialogue**.
 
 ## **The Meta-Question**
 
-Each thread also contains a question about creative tension itself:
+Each thread also contains questions about creative tension itself:
 
-* How do we hold opposites without choosing sides?  
+* How do we hold opposites or many truths without choosing sides?
 * When is tension creative and when is it destructive?  
 * What wants to emerge from this particular tension?
+* Where does the tension vibrate within us to create maximum possibilities?
 
 ## **The Invitation This Creates**
 
-We're not saying "I have figured out the universal pattern." We're saying "I've noticed these questions keep appearing. How do you engage them?"
+We're not saying "I have figured out the universal pattern." We're saying "I've noticed these questions keep appearing. How do you engage them more and more skillfully?"
 
 This is radically inclusive. It makes space for:
 
@@ -140,12 +141,12 @@ We use the metaphor of **threads** because, like the strings of an instrument or
 
 A slack thread produces nothing - no music, no fabric, no structure. An over-tightened thread snaps. But a thread held at appropriate tension between opposing points becomes **generative** - it can vibrate with music, support weaving, create patterns, hold weight.
 
-Each thread represents a fundamental tension that runs through human experience - pulled between two or more truths that seem opposite but are actually partners:
+Each thread represents a fundamental tension that runs through human experience - pulled between two or more truths that seem oppositional but are actually partners:
 - Presence stretches between **Being Here** and **Being Elsewhere**
 - Consent stretches between **Agency** and **Surrender**  
 - Memory stretches between **Holding On** and **Letting Go**
 
-The poles aren't problems to solve by choosing one side. They're the anchor points that create the tension that makes the thread useful. Without both poles, the thread goes slack and loses its generative power.
+The poles aren't problems to solve by choosing one side. They're the anchor points that create the tension that makes the thread useful. Without both/many poles, the thread goes slack and loses its generative power.
 
 Like a spider's web, these threads are strongest when woven together - each thread supporting and tensioning the others. When we consciously hold these tensions rather than trying to resolve them, we create a living structure strong enough to catch meaning, flexible enough to move with change, and resilient enough to repair itself when torn.
 
@@ -153,7 +154,7 @@ The word "thread" also carries the sense of continuity - the thread that runs th
 
 ### **"The Living Invitation"**
 
-*The current threads we've identified are not THE threads but OUR threads \- the ones we've discovered so far in our community's becoming. The Threads of Becoming itself is in process, always ready to receive new wisdom.*
+*The current threads we've identified are not THE threads but OUR threads \- the ones we've discovered so far in our own and our community's becomings. The Threads of Becoming itself is in process, always ready to receive new wisdom.*
 
 *We invite you to:*
 
@@ -161,7 +162,7 @@ The word "thread" also carries the sense of continuity - the thread that runs th
 * *Share threads from your tradition we haven't seen*  
 * *Weave new threads as our community discovers them*  
 * *Challenge threads that no longer serve*  
-* *Let the Threads itself thread into new forms*
+* *Let the Threads themselves thread into new forms*
 
 *This is not THE Threads or MY Threads \- it's living Threads that belong to everyone who engages them and no one who would possess them.*
 
@@ -170,16 +171,16 @@ The word "thread" also carries the sense of continuity - the thread that runs th
 Like open-source software:
 
 * **Threads 1.0**: The original seven threads  
-* **Threads 1.1**: Community adds Reciprocity thread  
+* **Threads 1.1**: Community adds WITNESS thread  
 * **Threads 2.0**: Major revision based on collective learning  
 * **Personal Forks**: Individuals create their own versions  
-* **Merge Requests**: New insights integrated back into community version
+* **Merge/Pull Requests**: New insights integrated back into community version
 
 ## **The Meta-Thread**
 
 This openness itself becomes a thread:
 
-**EVOLUTION** *The Tension: Stability vs. Transformation*
+**EVOLUTION** **The Tension:** _Stability vs. Transformation_
 
 * What needs to remain constant for growth?  
 * How does the container itself need to change?  
@@ -193,7 +194,7 @@ By making the Threads explicitly open and evolving, we're:
 * Modeling the very process we're teaching  
 * Preventing the original framework from becoming dogma  
 * Inviting genuine co-creation  
-* Acknowledging the founder's perspective is partial  
+* Acknowledging the founder's perspective is incomplete  
 * Creating space for future wisdom
 
 This transforms it from "Ron's framework" to "humanity's ongoing discovery" \- we're just the current stewards of an ancient and future wisdom.
@@ -202,7 +203,7 @@ This transforms it from "Ron's framework" to "humanity's ongoing discovery" \- w
 
 The Threads of Becoming is itself becoming. It demonstrates its own teaching \- that everything is in process, nothing is final, and creative tension generates new possibilities.
 
-This openness doesn't weaken the framework \- it's what makes it trustworthy. People can engage knowing they're not being recruited into a fixed system but invited into a living practice.
+This openness doesn't weaken the framework \- it's what makes it trustworthy. People can engage knowing they're not being recruited into a fixed system or coerced into a false conformity but invited into a living practice.
 
 ---
 
