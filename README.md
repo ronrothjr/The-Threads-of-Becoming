@@ -26,7 +26,7 @@ This is a broad critique of The Threads of Becoming designed to begin a conversa
 
 ### [A Primer for Thread Discovery](thread-discovery.md)
 
-This is a first pass at providing the initial structure for sharing wisdom in this particular GitHub setting.
+This is a first pass at providing the initial structure for sharing wisdom by identifying threads.
 
 ### **[Process Thought: A Universal Primer](process-thought.md)**
 
@@ -34,7 +34,7 @@ This provides the philosophical grounding for the "becoming" promise built into 
 
 ### **[Contributing](CONTRIBUTING.md)**
 
-The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom. We invite contributions that:
+The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom in this particular GitHub setting. We invite contributions that:
 
 * Identify new universal tensions/threads
 * Share how different traditions engage these questions
