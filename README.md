@@ -26,7 +26,7 @@ This is a broad critique of The Threads of Becoming designed to begin a conversa
 
 ### [A Primer for Thread Discovery](thread-discovery.md)
 
-This is a first pass at providing the initial structure for sharing wisdom by identifying threads.
+This is a first pass at providing the initial structure for sharing wisdom by identifying universal tensions.
 
 ### **[Process Thought: A Universal Primer](process-thought.md)**
 
