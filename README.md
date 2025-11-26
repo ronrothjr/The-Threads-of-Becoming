@@ -14,29 +14,25 @@ It's a **practice framework for engaging creative tension** within and between i
 
 ---
 
-## **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
+## Links
+
+### **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
 
 These are the original seven threads tested in the specific context of a UU community in South Florida.
 
----
-
-## **[The Threads 2.0?](threads-2.0.md)**
+### **[The Threads 2.0?](threads-2.0.md)**
 
 This is a broad critique of The Threads of Becoming designed to begin a conversation to rearchitect The Threads still in process.
 
----
-
-## [A Primer for Thread Discovery](thread-discovery.md)
+### [A Primer for Thread Discovery](thread-discovery.md)
 
 This is a first pass at providing the initial structure for sharing wisdom in this particular GitHub setting.
 
----
-
-## **[Process Thought: A Universal Primer](process-thought.md)**
+### **[Process Thought: A Universal Primer](process-thought.md)**
 
 This provides the philosophical grounding for the "becoming" promise built into the Threads of Becoming.
 
-## **[Contributing](CONTRIBUTING.md)**
+### **[Contributing](CONTRIBUTING.md)**
 
 The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom. We invite contributions that:
 
@@ -49,13 +45,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## **MISSION:**
+## About
+
+### **Mission:**
 
 The mission of The Threads of Becoming (TOB) open-source project is to function as a **living framework for engaging creative tension** that evolves through **collective wisdom and continuous practice**.
 
 The project aims to serve as a **practice framework** that provides common ground for diverse theological and philosophical viewpoints, rather than functioning as a complete or fixed theological system.
 
-### Core Mission Components
+#### Core Mission Components
 
 1.  **To Identify Universal Tensions**
 2.  **To Foster Co-Creation and Dialogue** 
@@ -72,7 +70,7 @@ As an open-source project, its ultimate success is measured not by the absence o
 
 ---
 
-## **What Shape are the Threads?**
+### **What Shape are the Threads?**
 
 The Threads of Becoming aren't locked into any single shape or metaphor. Like water taking the form of its container while maintaining its essential nature, these universal tensions can be understood through whatever geometry serves your purpose, tradition, or learning style. The framework remains consistent whether you visualize it as spiral, web, wheel, or any other pattern that helps you engage. Choose the metaphor that makes the tensions come alive for you:
 
@@ -89,17 +87,17 @@ The Threads of Becoming aren't locked into any single shape or metaphor. Like wa
 
 There is no "correct" visualization. The framework succeeds when you find the form that helps you hold creative tension rather than resolve it. Draw it, dance it, diagram it however brings it alive. The multiplicity of forms teaches the same lesson as the tensions themselves: hold both/all rather than choosing one.
 
-## **Keeping It Explicitly Open**
+### **Keeping It Explicitly Open**
 
 We are dedicated to allowing this space to grow and change through community involvement, not private ownership.
 
 ---
 
-# **The Process Invitation**
+## **The Process Invitation**
 
 Let's ensure the Threads remain a **living process** rather than crystallizing into doctrine. This is Becoming embodied \- even this iteration of the framework for understanding process must itself remain in process.
 
-## **The Power of Questions**
+### **The Power of Questions**
 
 "The Threads" is a **framework for dialogue**.
 
@@ -117,7 +115,7 @@ Let's ensure the Threads remain a **living process** rather than crystallizing i
 
 3. **Nobody has THE answer. Everyone has AN answer. What conversations do you imagine?**
 
-## **The Meta-Question**
+### **The Meta-Question**
 
 Each thread also contains questions about creative tension itself:
 
@@ -126,7 +124,7 @@ Each thread also contains questions about creative tension itself:
 * What wants to emerge from this particular tension?
 * Where does the tension vibrate within us to create maximum possibilities?
 
-## **The Invitation This Creates**
+### **The Invitation This Creates**
 
 We're not saying "I have figured out the universal pattern." We're saying "I've noticed these questions keep appearing. How do you engage them more and more skillfully?"
 
@@ -137,13 +135,13 @@ This is radically inclusive. It makes space for:
 * The mystic living the questions  
 * The agnostic comfortable with not knowing
 
-## **The Beautiful Paradox**
+### **The Beautiful Paradox**
 
 By offering questions instead of answers, the Threads become MORE universal, not less. Everyone has to grapple with these tensions. No tradition has solved them completely. We're all still learning.
 
 This is Becoming at its best \- not a fixed theology but a recognition that we're all responding to the same cosmic questions from our unique positions in the creative advance.
 
-## Why We Call Them Threads
+### Why We Call Them Threads
 
 We use the metaphor of **threads** because, like the strings of an instrument or the warp of a loom, they only become useful when held in creative tension between poles.
 
@@ -160,7 +158,7 @@ Like a spider's web, these threads are strongest when woven together - each thre
 
 The word "thread" also carries the sense of continuity - the thread that runs through a story, the thread of connection between people, the thread of becoming that connects who we were to who we're becoming. These are the threads we follow through the labyrinth of transformation, not to escape but to journey deeper into creative engagement with life's fundamental tensions.
 
-### **"The Living Invitation"**
+#### **"The Living Invitation"**
 
 *The current threads we've identified are not THE threads but OUR threads \- the ones we've discovered so far in our own and our community's becomings. The Threads of Becoming itself is in process, always ready to receive new wisdom.*
 
@@ -174,7 +172,7 @@ The word "thread" also carries the sense of continuity - the thread that runs th
 
 *This is not THE Threads or MY Threads \- it's living Threads that belong to everyone who engages them and no one who would possess them.*
 
-## **The Version Control Model**
+### **The Version Control Model**
 
 Like open-source software:
 
@@ -184,7 +182,7 @@ Like open-source software:
 * **Personal Forks**: Individuals create their own versions  
 * **Merge/Pull Requests**: New insights integrated back into community version
 
-## **The Meta-Thread**
+### **The Meta-Thread**
 
 This openness itself becomes a thread:
 
@@ -195,7 +193,7 @@ This openness itself becomes a thread:
 * When does flexibility become chaos?  
 * When does structure become prison?
 
-## **The Profound Implication**
+### **The Profound Implication**
 
 By making the Threads explicitly open and evolving, we're:
 
@@ -207,7 +205,7 @@ By making the Threads explicitly open and evolving, we're:
 
 This transforms it from "Ron's framework" to "humanity's ongoing discovery" \- we're just the current stewards of an ancient and future wisdom.
 
-## **The Beautiful Recursion**
+### **The Beautiful Recursion**
 
 The Threads of Becoming is itself becoming. It demonstrates its own teaching \- that everything is in process, nothing is final, and creative tension generates new possibilities.
 
@@ -218,6 +216,8 @@ This openness doesn't weaken the framework \- it's what makes it trustworthy. Pe
 ## **License**
 
 This work is licensed under Creative Commons Attribution-ShareAlike 4.0 International. You are free to use, adapt, and share with attribution.
+
+---
 
 ## **GitHub Pages**
 
