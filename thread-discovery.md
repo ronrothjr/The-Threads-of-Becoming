@@ -15,7 +15,7 @@ A thread might be universal if:
 
 ---
 
-![Discovering Threads](docs/assets/thread-discovery.md "Discovering Threads")
+![Discovering Threads](docs/assets/thread-discovery.png "Discovering Threads")
 
 https://github.com/user-attachments/assets/79bb654f-8b16-46dc-b498-82b3e73138ca
 
