@@ -2,7 +2,7 @@
 
 The act of naming tensions is itself the beginning of navigation. When communities can identify and share language for universal tensions, they've already started crossing the bridge. What follows is one simple practice for engaging these tensions - not THE way, but A way that has proven useful.
 
-![Navigating the Threads](image-url "Navigating the Threads")
+![Navigating the Threads](docs/assets/navigating-the-threads.png "Navigating the Threads")
 
 ### **The Navigation Practice**
 
