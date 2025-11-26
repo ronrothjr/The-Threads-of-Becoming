@@ -12,6 +12,7 @@ When you encounter a tension\*:
 4. **Listen** - What is the tension teaching? What needs does it reveal in yourself and others?
 5. **Choose** - Make a conscious choice, including the choice to wait.
 6. **Learn** - What emerged from holding the tension rather than resolving it?
+
 \* You will often find multiple tensions/threads pulling at a single event, since they are all connected.
 
 ### **The Intentional Incompleteness**
