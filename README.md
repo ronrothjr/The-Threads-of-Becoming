@@ -18,7 +18,7 @@ It's a **practice framework for engaging creative tension** within and between i
 
 ### **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
 
-These are the original seven threads tested in the specific context of a UU community in South Florida.
+These are the original seven threads tested in the specific context of a Unitarian Universalist community in South Florida.
 
 ### **[The Threads 2.0?](threads-2.0.md)**
 
