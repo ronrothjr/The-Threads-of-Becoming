@@ -16,17 +16,25 @@ It's a **practice framework for engaging creative tension** within and between i
 
 ## **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
 
+These are the original seven threads tested in the specific context of a UU community in South Florida.
+
 ---
 
 ## **[The Threads 2.0?](threads-2.0.md)**
+
+This is a broad critique of The Threads of Becoming designed to begin a conversation to rearchitect The Threads still in process.
 
 ---
 
 ## [A Primer for Thread Discovery](thread-discovery.md)
 
+This is a first pass at providing the initial structure for sharing wisdom in this particular GitHub setting.
+
 ---
 
 ## **[Process Thought: A Universal Primer](process-thought.md)**
+
+This provides the philosophical grounding for "becoming" promise built into the Threads of Becoming.
 
 ---
 
