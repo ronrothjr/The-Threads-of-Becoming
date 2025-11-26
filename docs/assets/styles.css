@@ -11,7 +11,7 @@ body{font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvet
 section{margin-bottom:1.5rem}
 footer{margin-top:2rem; padding-top:1rem; border-top:1px solid #e6e9f2; color:#6b7280}
 .threads {
-    width: 100vw !important; /* Sets width to 100% of the viewport width */
+    width: 90vw !important; /* Sets width to 100% of the viewport width */
     height: auto;
     margin-left: -50vw; /* Pulls the image left by half the viewport width */
     left: 50%; /* Pushes the image right by half its container width */
