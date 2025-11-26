@@ -4,7 +4,7 @@ The act of naming tensions is itself the beginning of navigation. When communiti
 
 ### **The Navigation Practice**
 
-When you encounter a tension:
+When you encounter a tension\*:
 
 1. **Identify** - Which thread/tension is present? Naming it reduces its unconscious power.
 2. **Locate** - Where do you feel it in your body? Tension lives in flesh before thought.
@@ -12,6 +12,7 @@ When you encounter a tension:
 4. **Listen** - What is the tension teaching? What needs does it reveal in yourself and others?
 5. **Choose** - Make a conscious choice, including the choice to wait.
 6. **Learn** - What emerged from holding the tension rather than resolving it?
+\* You will often find multiple tensions/threads pulling at a single event, since they are all connected.
 
 ### **The Intentional Incompleteness**
 
