@@ -36,6 +36,17 @@ This is a first pass at providing the initial structure for sharing wisdom in th
 
 This provides the philosophical grounding for the "becoming" promise built into the Threads of Becoming.
 
+## **[Contributing](CONTRIBUTING.md)**
+
+The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom. We invite contributions that:
+
+* Identify new universal tensions/threads
+* Share how different traditions engage these questions
+* Offer practices for embodying these tensions
+* Document applications in communities
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
 ---
 
 ## **MISSION:**
@@ -60,17 +71,6 @@ The project is continually refined by its own struggles with tensions (such as U
 As an open-source project, its ultimate success is measured not by the absence of conflict or adherence to doctrine, but by whether it creates **more possibility than it closes**.
 
 ---
-
-## **Contributing**
-
-The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom. We invite contributions that:
-
-* Identify new universal tensions/threads
-* Share how different traditions engage these questions
-* Offer practices for embodying these tensions
-* Document applications in communities
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## **What Shape are the Threads?**
 
