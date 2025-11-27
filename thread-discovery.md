@@ -56,11 +56,15 @@ Does this resonate across:
 
 Share your emerging thread with people unlike yourself. Not to convince them, but to see if they recognize it from their own experience. Pay attention to what translates and what doesn't.
 
+https://github.com/user-attachments/assets/75000015-f024-4669-985a-96048246e194
+
 ### 6. Formulate Generative Questions
 
 Craft questions that open exploration rather than close it. What asks will invite others into this tension from their own experience and tradition?
 
 Questions are the invitation mechanism. Without them, you have a private insight rather than a shared inquiry. A well-formulated question turns a tension you've discovered into a space others can enter.
+
+https://github.com/user-attachments/assets/58a91423-41c2-4dce-ab51-e3ca04dee4c4
 
 ---
 
@@ -131,6 +135,8 @@ Each thread carries an implicit question about how to hold this particular tensi
 * CONSENT: "When does surrender become abdication and agency become control?"
 * MEMORY: "How do we know when holding on is loyalty and when it's imprisonment?"
 * PAUSE: "What distinguishes sacred waiting from fearful avoidance?"
+
+https://github.com/user-attachments/assets/2ede1c8c-bb1f-4695-8960-146b1fa1c8b7
 
 ---
 
