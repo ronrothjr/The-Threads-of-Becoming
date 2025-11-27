@@ -32,7 +32,7 @@ These are the original seven threads tested in the specific context of a Unitari
 
 This basic framework for navigating the threads delivers on the promise in our tagline without overreaching, giving space for cultural and community adaptation.
 
-## If You Want to Contribute...
+## **If You Want to Contribute...*"
 
 ### **[A Primer for Thread Discovery](thread-discovery.md)**
 
@@ -51,7 +51,9 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## If you're Philosophically Curious...
+## **If you're Philosophically Curious...**
+
+### **[About the Threads of Becoming](about.md)**
 
 ### **[Process Thought: A Universal Primer](process-thought.md)**
 
