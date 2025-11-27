@@ -237,3 +237,16 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 *"We are not building a monument but tending a garden. Every contribution—whether seed, water, or sunlight—helps the Threads grow."*
          
+---
+
+## **GitHub Pages**
+
+- **What's added:** A minimal site has been added under the `docs/` directory and a GitHub Actions workflow at `.github/workflows/pages.yml` that publishes `docs/` to GitHub Pages on push to `main`.
+- **First publish URL:** After the workflow runs, the site updates will be available at either `https://<owner>.github.io/<repo>` (project site) or at a custom domain if you configure one. For this repository the project URL will be `https://ronrothjr.github.io/The-Spiral-of-Becoming` once Pages finishes publishing.
+- **How it works:** The workflow uploads the contents of `docs/` as the artifact and then calls the official Pages deploy action to publish it.
+- **To preview locally:** Open `docs/index.html` in a browser, or use a simple static server, e.g.:
+
+```bash
+python3 -m http.server --directory docs 8000
+# then open http://localhost:8000
+```
