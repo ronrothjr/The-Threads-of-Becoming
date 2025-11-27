@@ -12,6 +12,8 @@ _Let's admit what it's NOT:_
 
 It's a **practice framework for engaging creative tension** within and between individuals and communities. _That's all. That's enough._
 
+https://github.com/user-attachments/assets/ad4cd778-7aa1-46d6-bf66-b026e397a9d0
+
 ---
 
 ## Links
