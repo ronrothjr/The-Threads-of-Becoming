@@ -19,6 +19,13 @@ footer{margin-top:2rem; padding-top:1rem; border-top:1px solid #e6e9f2; color:#6
 }
 /* site-logo styling */
 .site-logo{
+    width: 100vw !important; /* Sets width to 100% of the viewport width */
+    height: auto;
+    margin-left: -50vw; /* Pulls the image left by half the viewport width */
+    left: 50%; /* Pushes the image right by half its container width */
+    position: relative; /* Required for left/margin to work relative to the body/viewport */
+}
+.backup {
   display: block;
   margin: 0.75rem auto 0.5rem; /* space between tagline and content */
   max-width: 220px;           /* cap the visual size on large screens */
