@@ -14,25 +14,29 @@ It's a **practice framework for engaging creative tension** within and between i
 
 https://github.com/user-attachments/assets/ad4cd778-7aa1-46d6-bf66-b026e397a9d0
 
----
+## **Preface**
 
-## Links
+This framework's wisdom isn't in inventing new methods but in synthesizing existing ones — creating space for holding creative tension and teaching others to do the same. The deeper wager: asking good questions is an answer for dialogue across most of what separates us as human beings.
+
+This inverts the often limited "let's find common ground" approach. Forget common answers; find common questions. Let different answers enrich the shared inquiry rather than fracture it.
+
+The framework's power isn't that it tells anyone what to believe about presence, consent, memory, or belonging. It's that it gives people a place to stand together while believing different things — the shared question as common ground.
+
+## **Your Path Behind Here...**
 
 ### **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
 
 These are the original seven threads tested in the specific context of a Unitarian Universalist community in South Florida.
 
-### **[A Primer for Thread Discovery](thread-discovery.md)**
-
-This is a first pass at providing the initial structure for sharing wisdom by identifying universal tensions.
-
 ### **[A Basic Navigation Framework](navigation.md)**
 
 This basic framework for navigating the threads delivers on the promise in our tagline without overreaching, giving space for cultural and community adaptation.
 
-### **[Process Thought: A Universal Primer](process-thought.md)**
+## If You Want to Contribute..
 
-This provides the philosophical grounding for the "becoming" promise built into the Threads of Becoming.
+### **[A Primer for Thread Discovery](thread-discovery.md)**
+
+This is a first pass at providing the initial structure for sharing wisdom by identifying universal tensions.
 
 ### **[Contributing](CONTRIBUTING.md)**
 
@@ -47,13 +51,13 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## **Preface**
+## If you're Philosophically Curious...
 
-This framework's wisdom isn't in inventing new methods but in synthesizing existing ones — creating space for holding creative tension and teaching others to do the same. The deeper wager: asking good questions is an answer for dialogue across most of what separates us as human beings.
+### **[Process Thought: A Universal Primer](process-thought.md)**
 
-This inverts the often limited "let's find common ground" approach. Forget common answers; find common questions. Let different answers enrich the shared inquiry rather than fracture it.
+This provides the philosophical grounding for the "becoming" promise built into the Threads of Becoming.
 
-The framework's power isn't that it tells anyone what to believe about presence, consent, memory, or belonging. It's that it gives people a place to stand together while believing different things — the shared question as common ground.
+---
 
 ## **About**
 
@@ -227,16 +231,3 @@ This openness doesn't weaken the framework \- it's what makes it trustworthy. Pe
 
 This work is licensed under Creative Commons Attribution-ShareAlike 4.0 International. You are free to use, adapt, and share with attribution.
 
----
-
-## **GitHub Pages**
-
-- **What's added:** A minimal site has been added under the `docs/` directory and a GitHub Actions workflow at `.github/workflows/pages.yml` that publishes `docs/` to GitHub Pages on push to `main`.
-- **First publish URL:** After the workflow runs, the site updates will be available at either `https://<owner>.github.io/<repo>` (project site) or at a custom domain if you configure one. For this repository the project URL will be `https://ronrothjr.github.io/The-Spiral-of-Becoming` once Pages finishes publishing.
-- **How it works:** The workflow uploads the contents of `docs/` as the artifact and then calls the official Pages deploy action to publish it.
-- **To preview locally:** Open `docs/index.html` in a browser, or use a simple static server, e.g.:
-
-```bash
-python3 -m http.server --directory docs 8000
-# then open http://localhost:8000
-```
