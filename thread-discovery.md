@@ -199,9 +199,11 @@ Once you've moved through the discovery process, document your thread using this
 * [Question using Threshold heuristic]
 * [Question using Practitioner heuristic]
 * [Question using Stakes heuristic]
+* [Question using Identity heuristic]
+* [Question using Tradition Bridge heuristic]
 * [Additional questions as needed...]
 
-**Meta-Question:** [How do we hold this particular tension?]
+**Meta-Question:** [How do we hold this particular tension without trying to resolve it with permanent or easy answers?]
 
 **Evidence of Universality:**
 * [How it appears across traditions]
