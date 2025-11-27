@@ -49,7 +49,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## About
+## **Preface**
+
+The Threads of Becoming wisdom isn't expressed through inventing these methods but in applying them skillfully in a newly synthesized framework aimed at holding space for these tensions and teaching others to do the same, and that asking good questions is an answer for dialogue across most of what separates us as human beings.
+
+Threads wisdom inverts the often limited "let's find common ground" method: forget common answers, find common questions. Let the different answers enrich the shared inquiry rather than fracture it.
+
+The framework's power isn't that it tells anyone what to believe about presence, consent, memory, or belonging. It's that it gives people a place to stand together while believing different things — the shared question as common ground.
+
+## **About**
 
 ### **Mission:**
 
