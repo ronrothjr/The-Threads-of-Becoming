@@ -236,13 +236,13 @@ Now, using the example demonstrated in the explainer videos, let's fill in our T
 
 * Pole-dance: When does protecting our community's identity become harmful exclusion? 
 
-* Threshold: Where does the actual line between Us and Then begin—is it a solid wall, or is it a shared space?
+* Threshold: Where does the actual line between Us and Them begin—is it a solid wall, or is it a shared space?
 
-* Practicioner: How do we decide to open the gates of our own community and when to keep them closed for it own safety?
+* Practicioner: How do we decide to open the gates of our own community and when to keep them closed for our own safety?
 
-* Stakes: When does our strong group loyalty become dangerous nationalism, and when does being radically open dissolve our group's identity entirely
+* Stakes: When does our strong group loyalty become dangerous nationalism, and when does being radically open dissolve our group's identity entirely?
 
-* Identity: Who are we of the very definition of "Us" keeps changing by welcoming "Them"?
+* Identity: Who are we if the very definition of "Us" keeps changing by welcoming "Them"?
 
 * Tradition Bridge: What does it means to belong in a world where every tradition draws the circle of community in a different place?
 
