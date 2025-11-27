@@ -15,11 +15,15 @@ A thread might be universal if:
 
 ---
 
+## The Thread Discovery Process
+
+While this process engages both curiosity and creativity, it grants the practicioner equal measures of joy and frustration. You will often run up against its limits.
+
+This primer is meant to lighten the load and help you apply your effort where it will most likely result in open dialogues with willing participants. Happy threading!
+
 ![Discovering Threads](docs/assets/thread-discovery.png "Discovering Threads")
 
 https://github.com/user-attachments/assets/79bb654f-8b16-46dc-b498-82b3e73138ca
-
-## The Thread Discovery Process
 
 ### 1. Notice Recurring Tensions
 
@@ -324,3 +328,44 @@ What becomes possible is *covenant hospitality*: a community secure enough in it
 * How do patterns both sustain and imprison?  
 * When does routine become ritual become rut?  
 * What wants to stay the same and what wants to change?
+
+---
+
+## When Thread Discovery Gets Hard
+
+The discovery process will humble you. Here's what to expect:
+
+**The resonance gap.** You find a tension that feels profoundly universal — you've encountered it across your entire life, it explains so much — and when you share it, people look at you blankly. The thread that illuminated everything for you illuminates nothing for them. This isn't failure; it's data. Either you haven't found the universal yet (still too embedded in your particular experience), or you haven't found the right questions yet (the doorways aren't opening). Return to Step 3 and strip away more context. Return to Step 6 and try different questions. Sometimes a thread needs years to find its language.
+
+**Wound masquerading as wisdom.** Intense personal experience can feel like universal truth. If you've suffered a particular kind of loss, betrayal, or transformation, the tension you discovered in that crucible *feels* like it must be universal — the heat was so real. But intensity isn't universality. The question isn't whether your experience was real (it was) but whether the pattern beneath it appears across human experience or primarily explains your own. The wound may eventually become a window to something universal, but not until you've processed enough of its charge to see past it.
+
+**Conceptual confusion, not genuine polarity.** Some tensions dissolve under scrutiny. What felt like two truths pulling against each other turns out to be a misunderstanding — an artifact of imprecise language, a false dichotomy inherited from your culture, or a problem that only exists at one level of analysis. You'll know you've hit this when the "tension" can be resolved by clearer thinking alone. Genuine threads can't be thought away; they can only be navigated.
+
+**The creative edge that isn't.** You've identified a real tension, passed the universality tests, but something's missing — it generates more exhaustion than energy. Not all tensions are generative. Some are simply tragic. Some are merely frustrating. The Thread Discovery Process isn't meant to catalog all human suffering, only the tensions that produce creative possibility when held consciously. If holding the tension yields nothing but fatigue, honor what you've found and set it aside. Not every truth needs to become a Thread.
+
+**Redundancy in disguise.** After much work, you realize your "new" thread is actually a facet of an existing one. What you thought was a distinct tension is the CONSENT thread showing up in a particular domain, or MEMORY expressing itself through a specific lens. This isn't wasted effort — you've deepened your understanding of how threads manifest. But it means your discovery belongs in conversation with existing threads rather than alongside them.
+
+**Questions that open for some and close for others.** Your Seed Question cracks things open for contemplatives but alienates activists. Your Universal Questions resonate with older people but confuse younger ones. Some of this is refinement work — keep iterating on language. But some of it reveals a limitation: no question is truly universal in its *form*, only in what it points toward. You may need multiple formulations of the same thread for different communities. This isn't failure; it's localization.
+
+---
+
+## Finding the Edges
+
+The edges of Thread Discovery aren't problems to solve but territories to map. Knowing where the process breaks down is itself wisdom.
+
+**The edge of abstraction.** Fly too high and threads become philosophical puzzles disconnected from lived experience. You'll recognize this edge when your questions sound impressive but don't land in the body. When people can discuss your thread intellectually but not feel it in their gut, you've crossed into abstraction. Return to embodiment. What does this tension feel like? Where does it live in flesh?
+
+**The edge of specificity.** Stay too grounded and threads become case studies, not patterns. If your thread can only be understood by people who share your context — your profession, your generation, your wounds — you haven't found the universal yet. The shepherd and the programmer must both recognize it. Keep stripping context until the bones show.
+
+**The edge of language.** Some genuine tensions resist formulation. You can feel the thread but can't name it. The questions you generate keep missing. This edge is real and may be permanent. Not everything true can be said. You might carry this thread as a practice without ever documenting it. That's legitimate. The Threads of Becoming is a living framework, but it's not the only way to hold wisdom.
+
+**The edge of tradition.** Your thread makes perfect sense within one tradition but violates the core assumptions of another. The Tradition Test keeps failing not because your thread isn't universal but because it's *contested* — different traditions have fundamentally different answers, and even the framing of the question is tradition-specific. This is valuable information. You've found a fault line, not a thread. Fault lines matter too, but they belong to a different kind of work.
+
+**The edge of your own growth.** Some threads can only be discovered by people who have navigated them long enough to see the pattern. If you're still in the middle of a tension — gripped by one pole, unable to genuinely hold both — you may not yet have the perspective to formulate it. This isn't disqualification, just timing. Keep navigating. The thread will clarify as you mature in relationship to it. Discovery often follows decades behind experience.
+
+**The edge of ego.** The desire to contribute a thread can corrupt the discovery process. If you find yourself forcing universality, overstating resonance, or defending your thread against legitimate critique, pause. The framework doesn't need your thread; it needs whatever threads are actually real. Let go. If what you found is genuine, it will survive your letting go. If it doesn't survive, you've saved everyone — including yourself — from building on sand.
+
+---
+
+*The Thread Discovery Process is itself a thread — Structure vs. Emergence, Method vs. Intuition. These edges are where the structure thins and emergence asks you to proceed without a map. That's not where the work fails. That's where the work deepens.*
+
