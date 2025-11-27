@@ -22,7 +22,7 @@ This inverts the often limited "let's find common ground" approach. Forget commo
 
 The framework's power isn't that it tells anyone what to believe about presence, consent, memory, or belonging. It's that it gives people a place to stand together while believing different things — the shared question as common ground.
 
-## **Your Path Behind Here...**
+## **Your Path Begins Here...**
 
 ### **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
 
@@ -32,7 +32,7 @@ These are the original seven threads tested in the specific context of a Unitari
 
 This basic framework for navigating the threads delivers on the promise in our tagline without overreaching, giving space for cultural and community adaptation.
 
-## If You Want to Contribute..
+## If You Want to Contribute...
 
 ### **[A Primer for Thread Discovery](thread-discovery.md)**
 
