@@ -372,3 +372,43 @@ The edges of Thread Discovery aren't problems to solve but territories to map. K
 
 *The Thread Discovery Process is itself a thread — Structure vs. Emergence, Method vs. Intuition. These edges are where the structure thins and emergence asks you to proceed without a map. That's not where the work fails. That's where the work deepens.*
 
+---
+
+## **Your Path Begins Here...**
+
+### **[What Are We?](https://github.com/ronrothjr/The-Threads-of-Becoming/edit/main/README.md)**
+
+The Threads of Becoming is a **practice framework for engaging creative tension** within and between individuals and communities. _That's all. That's enough._
+
+https://github.com/user-attachments/assets/ad4cd778-7aa1-46d6-bf66-b026e397a9d0
+
+### **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
+
+These are the original seven threads tested in the specific context of a Unitarian Universalist community in South Florida.
+
+### **[A Basic Navigation Framework](navigation.md)**
+
+This basic framework for navigating the threads delivers on the promise in our tagline without overreaching, giving space for cultural and community adaptation.
+
+## **If You Want to Contribute...**
+
+### **[Contributing](CONTRIBUTING.md)**
+
+The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom in this particular GitHub setting. We invite contributions that:
+
+* Identify new universal tensions/threads
+* Share how different traditions engage these questions
+* Offer practices for embodying these tensions
+* Document applications in communities
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## **If you're Philosophically Curious...**
+
+### **[About the Threads of Becoming](about.md)**
+
+Why Threads? And how do they work together?
+
+### **[Process Thought: A Universal Primer](process-thought.md)**
