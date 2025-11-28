@@ -18,36 +18,36 @@ The Threads of Becoming is not owned by any individual or tradition—it belongs
 
 Have you identified a universal tension not currently in the Threads? We'd love to explore it with you.
 
+Please read the **[Thread Discovery Process](thread-discovery.md) before proposing your Thread.
+
 **How to propose a new thread:**
 
 **Create an issue titled "Proposed Thread":**
 ```
-"[Name]" and include:
+### [THREAD NAME]
 
-## Thread Name  
-[Proposed name for the thread]
+**Seed:** "[Your 2-5 word primordial question]"
 
-## The Tension  
-[Describe the fundamental tension/polarity]
+**The Tension:** [Pole A] vs. [Pole B]
 
-## Universal Questions  
-- [Question 1]  
-- [Question 2]  
-- [Question 3]  
-- [Additional questions...]
+**Universal Questions:**
+* [Question using Pole Dance heuristic]
+* [Question using Threshold heuristic]
+* [Question using Practitioner heuristic]
+* [Question using Stakes heuristic]
+* [Question using Identity heuristic]
+* [Question using Tradition Bridge heuristic]
+* [Additional questions as needed...]
 
-## Evidence of Universality  
-[How does this appear across different:]  
-- Cultures  
-- Traditions  
-- Developmental stages  
-- Historical periods
+**Meta-Question:** [How do we hold this particular tension without trying to resolve it with permanent or easy answers?]
 
-## Creative Edge  
-[Where does holding this tension generate energy/possibility?]
+**Evidence of Universality:**
+* [How it appears across traditions]
+* [How it shows up developmentally]
+* [Historical/cultural expressions]
 
-## Personal/Community Experience  
-[Share how you've encountered this tension]
+**The Creative Edge:**
+* [What becomes possible by holding rather than resolving]
 ```
 
 ### **2\. Tradition Perspectives**
