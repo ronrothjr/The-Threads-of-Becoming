@@ -1,9 +1,9 @@
 
 ## **About the Threads of Becoming**
 
-### **What Shape are the Threads?**
+### **In What Order or Shape are the Threads?**
 
-The Threads of Becoming aren't locked into any single shape or metaphor. Like water taking the form of its container while maintaining its essential nature, these universal tensions can be understood through whatever geometry serves your purpose, tradition, or learning style. The framework remains consistent whether you visualize it as spiral, web, wheel, or any other pattern that helps you engage. Choose the metaphor that makes the tensions come alive for you:
+The Threads of Becoming aren't locked into any single order or shape or metaphor. Like water taking the form of its container while maintaining its essential nature, these universal tensions can be understood through whatever geometry serves your purpose, tradition, or learning style. The framework remains consistent whether you visualize it as spiral, web, wheel, or any other pattern that helps you engage. Choose the metaphor that makes the tensions come alive for you:
 
 - **Path/Journey** - Linear progress through the threads
 - **Circle/Wheel** - Continuous cycle without beginning or end
@@ -17,10 +17,6 @@ The Threads of Becoming aren't locked into any single shape or metaphor. Like wa
 - **Mycelial Network** - Underground connections exchanging resources
 
 There is no "correct" visualization. The framework succeeds when you find the form that helps you hold creative tension rather than resolve it. Draw it, dance it, diagram it however brings it alive. The multiplicity of forms teaches the same lesson as the tensions themselves: hold both/all rather than choosing one.
-
-### **Keeping It Explicitly Open**
-
-We are dedicated to allowing this space to grow and change through community involvement, not private ownership.
 
 ---
 
