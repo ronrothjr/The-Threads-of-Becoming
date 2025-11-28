@@ -55,7 +55,7 @@ This framing:
 
 ## **Your Path Begins Here...**
 
-### **[What Are We?](https://github.com/ronrothjr/The-Threads-of-Becoming/edit/main/README.md)**
+### **[What Are We?](https://github.com/ronrothjr/The-Threads-of-Becoming)**
 
 The Threads of Becoming is a **practice framework for engaging creative tension** within and between individuals and communities. _That's all. That's enough._
 
