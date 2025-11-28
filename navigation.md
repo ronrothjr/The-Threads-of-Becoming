@@ -53,10 +53,6 @@ This framing:
 
 ---
 
-_This provides the philosophical grounding for the "becoming" promise built into the Threads of Becoming._
-
----
-
 ## **Your Path Begins Here...**
 
 ### **[What Are We?](https://github.com/ronrothjr/The-Threads-of-Becoming/edit/main/README.md)**
@@ -95,3 +91,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 Why Threads? And how do they work together?
 
 ### **[Process Thought: A Universal Primer](process-thought.md)**
+
+This provides the philosophical grounding for the "becoming" promise built into the Threads of Becoming.
+
+---
+
+## **License**
+
+This work is licensed under Creative Commons Attribution-ShareAlike 4.0 International. You are free to use, adapt, and share with attribution.
+
