@@ -225,7 +225,7 @@ All contributors will be acknowledged in:
 
 ## **Questions?**
 
-If you're unsure about a contribution, open an issue with the "Question" label. We'd rather explore together than have you hesitate to contribute.
+If you're unsure about a contribution, **[open an issue](https://github.com/ronrothjr/The-Threads-of-Becoming/issues)** with the "Question" label. We'd rather explore together than have you hesitate to contribute.
 
 Remember: The Threads of Becoming is itself becoming. Your contribution, however small, is part of its evolution. We're not looking for perfection but for authentic engagement with these universal tensions.
 
