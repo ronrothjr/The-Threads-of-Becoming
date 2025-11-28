@@ -43,6 +43,10 @@ The project is continually refined by its own struggles with tensions (such as U
 
 As an open-source project, its ultimate success is measured not by the absence of conflict or adherence to doctrine, but by whether it creates **more possibility than it closes**.
 
+### **Keeping It Explicitly Open**
+
+We are dedicated to allowing this space to grow and change through community involvement, not private ownership.
+
 ## **Your Path Begins Here...**
 
 ### **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
