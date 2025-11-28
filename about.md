@@ -137,3 +137,34 @@ This transforms it from "Ron's framework" to "humanity's ongoing discovery" \- w
 The Threads of Becoming is itself becoming. It demonstrates its own teaching \- that everything is in process, nothing is final, and creative tension generates new possibilities.
 
 This openness doesn't weaken the framework \- it's what makes it trustworthy. People can engage knowing they're not being recruited into a fixed system or coerced into a false conformity but invited into a living practice.
+
+---
+
+## **If You Want to Contribute...**
+
+### **[A Primer for Thread Discovery](thread-discovery.md)**
+
+This is a first pass at providing the initial structure for sharing wisdom by identifying universal tensions.
+
+### **[Contributing](CONTRIBUTING.md)**
+
+The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom in this particular GitHub setting. We invite contributions that:
+
+* Identify new universal tensions/threads
+* Share how different traditions engage these questions
+* Offer practices for embodying these tensions
+* Document applications in communities
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## **If you're Philosophically Curious...**
+
+### **[About the Threads of Becoming](about.md)**
+
+Why Threads? And how do they work together?
+
+### **[Process Thought: A Universal Primer](process-thought.md)**
+
+This provides the philosophical grounding for the "becoming" promise built into the Threads of Becoming.
