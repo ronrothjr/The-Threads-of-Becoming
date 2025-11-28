@@ -137,13 +137,13 @@ Each thread carries an implicit question about how to hold this particular tensi
 The Meta-Question comes last. As people engage the Universal Questions, they often drift toward one pole — collapsing the tension rather than holding it. Naming the collapse creates space to move again.
 
 **Examples:**
-* PRESENCE: "What makes presence feel like engagement rather than escape?"
-* CONSENT: "When does surrender become abdication and agency become control?"
-* MEMORY: "How do we know when holding on is loyalty and when it's imprisonment?"
-* PAUSE: "What distinguishes sacred waiting from fearful avoidance?"
-* EMBODIMENT: "How do we know if we're ascending through the body or escaping from it?"
-* UNCERTAINTY: "When is not-knowing wisdom and when is it avoidance?"
-* BECOMING: "When is our constancy integrity and when is it fear of growth?"
+* PRESENCE: "What are we afraid to feel if we stay?"
+* CONSENT: "What shame is hiding in how we talk about choice?"
+* MEMORY: "Who would we be if we were finally allowed to put this down?"
+* PAUSE: "What are we afraid will happen if we stop — or if we don't?"
+* EMBODIMENT: "What has this body been asked to carry?"
+* UNCERTAINTY: "What safety are we seeking in our answer?"
+* BECOMING: "What if who you are right now is not a problem to be solved?"
 
 https://github.com/user-attachments/assets/2ede1c8c-bb1f-4695-8960-146b1fa1c8b7
 
