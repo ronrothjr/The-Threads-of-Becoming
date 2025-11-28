@@ -18,7 +18,7 @@ The Threads of Becoming is not owned by any individual or tradition—it belongs
 
 Have you identified a universal tension not currently in the Threads? We'd love to explore it with you.
 
-Please read the **[Thread Discovery Process](thread-discovery.md) before proposing your Thread.
+Please read the **[Thread Discovery Process](thread-discovery.md)** before proposing your Thread.
 
 **How to propose a new thread:**
 
