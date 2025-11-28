@@ -161,8 +161,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## **If you're Philosophically Curious...**
 
-### **[About the Threads of Becoming](about.md)**
-
 Why Threads? And how do they work together?
 
 ### **[Process Thought: A Universal Primer](process-thought.md)**
