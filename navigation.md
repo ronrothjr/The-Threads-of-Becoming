@@ -38,7 +38,7 @@ We invite you to:
 - Share what you learn with the community\*
 - Remember: even struggling with these tensions IS navigating them
 
-\*Open an [Issue](https://github.com/ronrothjr/The-Threads-of-Becoming/issues) following the [Controbuting](CONTRIBUTING.md) guidelines.
+\*Open an [Issue](https://github.com/ronrothjr/The-Threads-of-Becoming/issues) following the [Contributing](CONTRIBUTING.md) guidelines.
 
 **Sometimes the most profound navigation is just staying in the boat together while the waters churn.**
 
