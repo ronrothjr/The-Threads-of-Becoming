@@ -157,3 +157,29 @@ This is true whether you explain it through quantum physics, divine action, evol
 ---
 
 *"We are not nouns but verbs. Not things but processes. Not beings but becomings. And in this continuous creation, we find both freedom and connection, both continuity and novelty, both tension and transformation."*
+
+
+## **If You Want to Contribute...**
+
+### **[A Primer for Thread Discovery](thread-discovery.md)**
+
+This is a first pass at providing the initial structure for sharing wisdom by identifying universal tensions.
+
+### **[Contributing](CONTRIBUTING.md)**
+
+The Threads of Becoming is a living framework, designed to evolve through practice and collective wisdom in this particular GitHub setting. We invite contributions that:
+
+* Identify new universal tensions/threads
+* Share how different traditions engage these questions
+* Offer practices for embodying these tensions
+* Document applications in communities
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## **If you're Philosophically Curious...**
+
+### **[About the Threads of Becoming](about.md)**
+
+Why Threads? And how do they work together?
