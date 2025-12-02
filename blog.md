@@ -143,6 +143,8 @@ Both are real. Both are needed. The collapse happens when we get stuck: isolatio
 
 **When presence gets complicated, ask:** *What is being met here?* Not "am I being present enough?"—that's performance. But genuinely: what's the quality of this encounter? What wants to happen between us—or within me—right now?
 
+_Once we know who's there, the next question is what we're allowed to do together._
+
 ---
 
 ## **The Second Thread: CONSENT**
@@ -167,6 +169,8 @@ The tension runs between *yes* and *no*—the giving and withholding of permissi
 * Who am I when I give consent, and who am I when I withhold it?
 
 **When consent gets murky, ask:** *Is every being choosing?* In this conversation, this decision, this relationship—is everyone actually free to participate or refuse? Or has someone's sovereignty been quietly overridden?
+
+_And what we allow—or refuse—is shaped by the stories we carry._
 
 ---
 
@@ -193,6 +197,8 @@ The tension runs between *given* and *chosen*—did I inherit this story or pick
 
 **When memory gets heavy, ask:** *What do we want our story to be?* Not just "what happened?"—that's important but incomplete. What meaning do we make of it? What do we carry forward, and what do we finally set down?
 
+_Before those stories drive our next move, we need to ask: is it time?_
+
 ---
 
 ## **The Fourth Thread: PAUSE**
@@ -218,6 +224,8 @@ Some waiting is sacred patience, trusting that timing matters. Some waiting is f
 
 **When you're not sure whether to move or stay, ask:** *Does patience here lead to better actions?* If waiting serves what's trying to emerge, wait. If waiting is just avoidance, move. A pause that doesn't eventually lead somewhere isn't sacred—it's stuck.
 
+_Timing isn't only a mental calculation—the body knows things the mind hasn't caught up to yet._
+
 ---
 
 ## **The Fifth Thread: EMBODIMENT**
@@ -240,6 +248,8 @@ The tension runs between *think* and *feel*—head knowledge and body knowledge�
 * Who am I if I trust what my body knows before my mind catches up?
 
 **When you've lost touch, ask:** *Can my body find solid ground here?* Not "what should I think about this?" but "where can I land?" Sometimes the body needs safety before it can speak. Sometimes it needs permission. Sometimes it just needs to be asked.
+
+_And when we listen to the body, we often hear: "I don't know."_
 
 ---
 
@@ -265,6 +275,8 @@ The tension runs between *hide* and *seek*—do we rest in mystery or pursue it?
 * Who are we when we stop needing to be right?
 
 **When certainty tempts you to close down, ask:** *How can wanting control give way to discovery?* We all want control—that's human. The question isn't whether we feel the pull but whether we can loosen our grip enough to receive what we couldn't have planned.
+
+_What we do with not-knowing shapes who we're becoming._
 
 ---
 
@@ -292,6 +304,8 @@ The tension runs between *same* and *different*—have I actually changed or am 
 * Who are we if nothing is final and nothing is fixed?
 
 **When you're not sure if you're growing or just going in circles, ask:** *What isn't finished in me?* This isn't accusation—"Why haven't you fixed this yet?" It's recognition that becoming continues. The unfinished isn't failure. It's life. The spiral breathes, and so do you.
+
+_And who we're becoming changes how we show up—which brings us back to presence, transformed._
 
 ### ---
 
