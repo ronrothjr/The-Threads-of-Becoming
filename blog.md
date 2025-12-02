@@ -30,7 +30,7 @@ It's not really about the dishes, or the in-laws, or even money—though that's 
 
 They've tried compromises. Scheduled date nights. Scheduled alone time. It helps, but it doesn't resolve the underlying tension. Because it can't be resolved. It can only be navigated.
 
-## ---
+---
 
 ## **The Problem We Keep Trying to Solve**
 
@@ -113,8 +113,6 @@ In each case, the conflict isn't the problem. The conflict is *information*—it
 What follows are seven places where conscious holding becomes possible—and generative.
 
 ---
-
-## 
 
 ## **The Seven Threads**
 
@@ -317,7 +315,7 @@ The tension runs between *same* and *different*—have I actually changed or am 
 
 _And who we're becoming changes how we show up—which brings us back to presence, transformed._
 
-### ---
+---
 
 ## **Navigating the Threads: A Practice**
 
@@ -375,9 +373,9 @@ The framework doesn't tell you what to believe. It offers a place to stand toget
 
 "The shared question as common ground." That's what the Threads of Becoming offers. In a world that keeps trying to sort us into camps with opposing answers, maybe the way forward runs through the questions we all recognize—the ones that have been asked around every fire, in every language, since humans first wondered who they were and who they might become.
 
-## ---
+---
 
-**Back to Maria and James**
+## **Back to Maria and James**
 
 Remember the couple from the beginning? The ones who keep having the same fight about togetherness and space?
 
