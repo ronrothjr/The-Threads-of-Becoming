@@ -49,7 +49,7 @@ We are dedicated to allowing this space to grow and change through community inv
 
 ## **Your Path Begins Here...**
 
-### **[The Current Threads of Becoming](https://ronrothjr.github.io/The-Threads-of-Becoming/threads.html)**
+### **[The Current Threads of Becoming](threads.md)**
 
 These are the original seven threads tested in the specific context of a Unitarian Universalist community in South Florida.
 
