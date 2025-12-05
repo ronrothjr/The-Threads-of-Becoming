@@ -53,7 +53,7 @@ What if these tensions aren't signs that something is wrong? What if they're inv
 
 *To help you see the pattern at a glance, here is a visual map of the seven threads—each a tension that shapes who we are and who we are becoming.*
 
-![Threads of Becoming](docs/assets/seven-threads. png)
+![Threads of Becoming](docs/assets/seven-threads.png "The Seven Threads")
 
 *Now that you've seen the map, let's return to the territory.*
 
