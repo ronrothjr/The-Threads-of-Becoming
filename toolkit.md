@@ -20,7 +20,7 @@ This toolkit contains 19 documents organized into four categories. Total content
 
 | Document | Pages | Primary Audience | Description |
 | :---- | ----- | :---- | :---- |
-| **[Blog Article](blog.md]** | 36 | General public, newcomers | Accessible introduction to the framework. First exposure for most audiences. |
+| **[Blog Article](blog.md)** | 36 | General public, newcomers | Accessible introduction to the framework. First exposure for most audiences. |
 | **[Visual Maps](docs/assets/threads-map.png)** | 4 | Visual learners, facilitators | Graphic representations of thread relationships and the Spiral of Becoming. |
 | **[Cheat Sheet](cheat-sheet.pdf)** | 2 | Anyone, quick reference | Single-page summary of all seven threads with poles and collapse signs. |
 | **Personal Practice Workbook** | 20 | Individuals, workshop participants | Self-guided journal for personal transformation. Reflection questions for each thread. |
