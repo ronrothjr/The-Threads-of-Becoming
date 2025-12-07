@@ -1,4 +1,4 @@
-# *THE NAVIGATION CONVERSATION**
+# **THE NAVIGATION CONVERSATION**
 
 A Threads of Becoming Protocol
 
