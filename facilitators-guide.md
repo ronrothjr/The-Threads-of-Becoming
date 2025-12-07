@@ -1,4 +1,4 @@
-**THREADS OF BECOMING**
+# **THREADS OF BECOMING**
 
 Integrated Facilitator Guide
 
