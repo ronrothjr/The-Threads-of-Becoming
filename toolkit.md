@@ -35,9 +35,9 @@ This toolkit contains 19 documents organized into four categories. Total content
 | **[Threads and Protocols](protocols.md)** | 70 | Facilitators, group leaders | Detailed thread protocols with activation signals, diagnostic questions, collapse signs, micro-engagements, facilitator notes, example applications, and more |
 | **[Protocol Reference Cards](protocol-reference-cards.pdf)** | 8 | Facilitators (in-session) | Quick-reference cards for use during facilitation. engagement prompts per thread. |
 | **[Navigation Conversation Protocol](navigation-conversation.md)** | 12 | Coaches, therapists, facilitators | Step-by-step guide for one-on-one thread navigation conversations. |
-| **Case Studies (12 Examples)** | 18 | Trainees, practitioners | Detailed examples across contexts: couples, organizations, healthcare, families, etc. |
-| **Intake & Diagnostic Form** | 6 | Practitioners, clients | Assessment tool for identifying active threads and collapse patterns. |
-| **Reflection Tool** | 4 | Clients, individuals | Guided self-assessment for identifying personal thread patterns. |
+| **[Case Studies \(12 Examples\)](case-studies.md)** | 18 | Trainees, practitioners | Detailed examples across contexts: couples, organizations, healthcare, families, etc. |
+| **[Intake & Diagnostic Form](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/intake-diagnostic.pdf)** | 6 | Practitioners, clients | Assessment tool for identifying active threads and collapse patterns. |
+| **[Reflection Tool](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/reflection-tool.pdf)** | 4 | Clients, individuals | Guided self-assessment for identifying personal thread patterns. |
 
 ## **Specialized Applications**
 
@@ -45,10 +45,10 @@ This toolkit contains 19 documents organized into four categories. Total content
 
 | Document | Pages | Primary Audience | Description |
 | :---- | ----- | :---- | :---- |
-| **Clinical Integration & Ethics Guide** | 11 | Therapists, clinical supervisors | Ethical considerations, scope of practice, integration with therapeutic modalities. |
-| **Organizations Field Guide** | 15 | OD consultants, leaders, HR | Organizational application with meeting templates and business case studies. |
-| **Field-Specific Front Doors** | 10 | Various professionals | Entry points for therapy, coaching, ministry, education, and organizational contexts. |
-| **Crosswalk Appendix** | 8 | Academics, integrators | Maps Threads to Polarity Management, IFS, DBT, Spiral Dynamics, and other frameworks. |
+| **[Clinical Integration & Ethics Guide](clinical-integration-ethics.md)** | 11 | Therapists, clinical supervisors | Ethical considerations, scope of practice, integration with therapeutic modalities. |
+| **[Organizations Field Guide](organizations-field-guide.md)** | 15 | OD consultants, leaders, HR | Organizational application with meeting templates and business case studies. |
+| **[Field-Specific Front Doors](front-doors.md)** | 10 | Various professionals | Entry points for therapy, coaching, ministry, education, and organizational contexts. |
+| **[Crosswalk Appendix](crosswalk.md)** | 8 | Academics, integrators | Maps Threads to Polarity Management, IFS, DBT, Spiral Dynamics, and other frameworks. |
 
 ## **Training & Infrastructure**
 
@@ -56,10 +56,10 @@ This toolkit contains 19 documents organized into four categories. Total content
 
 | Document | Pages | Primary Audience | Description |
 | :---- | ----- | :---- | :---- |
-| **Training & Certification Pathway** | 15 | Trainers, program directors | Three-tier certification system with competencies, curricula, and assessment. |
-| **Tier 1 Foundations Slides** | 37 slides | Trainers, workshop leaders | Complete slide deck for introductory training with speaker notes. |
-| **Nonprofit One-Pager** | 1 | Potential partners, donors | Overview of Creative Advance Institute mission and programs. |
-| **501(c)(3) Formation Package** | 20+ | Board, legal, founders | Articles, bylaws, conflict of interest policy, and board materials. |
+| **[Training & Certification Pathway](training-pathways.md)** | 15 | Trainers, program directors | Three-tier certification system with competencies, curricula, and assessment. |
+| **[Tier 1 Foundations Slides](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/tier1-foundations.pdf)** | 37 slides | Trainers, workshop leaders | Complete slide deck for introductory training with speaker notes. |
+| **[Nonprofit One-Pager](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/creative-advance-institute-one-pager.pdf)** | 1 | Potential partners, donors | Overview of Creative Advance Institute mission and programs. |
+| **[501(c)(3) Formation Package](formation-package.md)** | 20+ | Board, legal, founders | Articles, bylaws, conflict of interest policy, and board materials. |
 
 # **How to Use This Toolkit**
 
