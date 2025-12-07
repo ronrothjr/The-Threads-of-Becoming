@@ -22,7 +22,7 @@ This toolkit contains 19 documents organized into four categories. Total content
 | :---- | ----- | :---- | :---- |
 | **[Blog Article](blog.md)** | 36 | General public, newcomers | Accessible introduction to the framework. First exposure for most audiences. |
 | **[Visual Maps](docs/assets/threads-map.png)** | 4 | Visual learners, facilitators | Graphic representations of thread relationships and the Spiral of Becoming. |
-| **[Cheat Sheet](cheat-sheet.pdf)** | 2 | Anyone, quick reference | Single-page summary of all seven threads with poles and collapse signs. |
+| **[Cheat Sheet](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/cheat-sheet.pdf)** | 2 | Anyone, quick reference | Single-page summary of all seven threads with poles and collapse signs. |
 | **Personal Practice Workbook** | 20 | Individuals, workshop participants | Self-guided journal for personal transformation. Reflection questions for each thread. |
 
 ## **Practitioner Resources**
@@ -31,7 +31,7 @@ This toolkit contains 19 documents organized into four categories. Total content
 
 | Document | Pages | Primary Audience | Description |
 | :---- | ----- | :---- | :---- |
-| **[Facilitator Guide](facilitator-guide.md)** | 25-30 | Facilitators, group leaders | Complete methodology for leading Threads-based conversations and workshops. |
+| **[Facilitator Guide](facilitators-guide.md)** | 25-30 | Facilitators, group leaders | Complete methodology for leading Threads-based conversations and workshops. |
 | **[Threads and Protocols](protocols.md)** | 70 | Facilitators, group leaders | Detailed thread protocols with activation signals, diagnostic questions, collapse signs, micro-engagements, facilitator notes, example applications, and more |
 | **[Protocol Reference Cards](protocol-reference-cards.pdf)** | 8 | Facilitators (in-session) | Quick-reference cards for use during facilitation. engagement prompts per thread. |
 | **[Navigation Conversation Protocol](navigation-conversation.md)** | 12 | Coaches, therapists, facilitators | Step-by-step guide for one-on-one thread navigation conversations. |
