@@ -32,8 +32,8 @@ This toolkit contains 19 documents organized into four categories. Total content
 | Document | Pages | Primary Audience | Description |
 | :---- | ----- | :---- | :---- |
 | **Facilitator Guide** | 25-30 | Facilitators, group leaders | Complete methodology for leading Threads-based conversations and workshops. |
-| **Threads and Protocols** | 70 | Facilitators, group leaders | Detailed thread protocols with activation signals, diagnostic questions, collapse signs, micro-interventions, facilitator notes, example applications, and more |
-| **Protocol Reference Cards** | 8 | Facilitators (in-session) | Quick-reference cards for use during facilitation. Intervention prompts per thread. |
+| **Threads and Protocols** | 70 | Facilitators, group leaders | Detailed thread protocols with activation signals, diagnostic questions, collapse signs, micro-engagements, facilitator notes, example applications, and more |
+| **Protocol Reference Cards** | 8 | Facilitators (in-session) | Quick-reference cards for use during facilitation. engagement prompts per thread. |
 | **Navigation Conversation Protocol** | 12 | Coaches, therapists, facilitators | Step-by-step guide for one-on-one thread navigation conversations. |
 | **Case Studies (12 Examples)** | 18 | Trainees, practitioners | Detailed examples across contexts: couples, organizations, healthcare, families, etc. |
 | **Intake & Diagnostic Form** | 6 | Practitioners, clients | Assessment tool for identifying active threads and collapse patterns. |
