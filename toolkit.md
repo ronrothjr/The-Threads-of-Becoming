@@ -10,7 +10,7 @@ Creative Commons Attribution-ShareAlike 4.0
 
 # **Toolkit Index**
 
-This toolkit contains 19 documents organized into four categories. Total content exceeds 200 pages, but you'll rarely need everything at once. Use this index to find what you need.
+This toolkit contains 19 documents organized into four categories. Total content exceeds 300 pages, but you'll rarely need everything at once. Use this index to find what you need.
 
 ## **Foundational Documents**
 
