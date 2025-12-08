@@ -56,7 +56,7 @@ This toolkit contains 19 documents organized into four categories. Total content
 | :---- | ----- | :---- | :---- |
 | **[Training & Certification Pathway](training-pathways.md)** | 15 | Trainers, program directors | Three-tier certification system with competencies, curricula, and assessment. |
 | **[Tier 1 Foundations Slides](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/tier1-foundations.pdf)** | 37 slides | Trainers, workshop leaders | Complete slide deck for introductory training with speaker notes. |
-| **[Tier 2 Supervision Handbook](tier2-supervision-handbook.md)** | 16 | Supervisor ession guides, practice recording guidelines, feedback forms & rubrics, candidate supervision portfolio, and extended engagement pathway |
+| **[Tier 2 Supervision Handbook](tier2-supervision-handbook.md)** | 16 | Trainers, workshop leaders | Supervisor ession guides, practice recording guidelines, feedback forms & rubrics, candidate supervision portfolio, and extended engagement pathway |
 | **[Nonprofit One-Pager](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/creative-advance-institute-one-pager.pdf)** | 1 | Potential partners, donors | Overview of Creative Advance Institute mission and programs. |
 | **[501(c)(3) Formation Package](formation-package.md)** | 20+ | Board, legal, founders | Articles, bylaws, conflict of interest policy, and board materials. |
 
