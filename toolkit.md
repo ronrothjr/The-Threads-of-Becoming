@@ -1,7 +1,5 @@
 
-# **THREADS OF BECOMING**
-
-## Complete Toolkit Guide
+# **THREADS TOOLKIT**
 
 Index, Usage Guide & Quick-Start Paths
 
