@@ -20,7 +20,7 @@ const Home: React.FC = () => {
                 Every person, relationship, and organization is shaped by tension—between what is known and what is emerging, between who we've been and who we are becoming.
               </p>
               <p>
-                Most systems collapse under this pressure. Some learn to <em>hold</em> it.
+                <strong><em>Most systems collapse under this pressure. Some learn to hold it.</em></strong>
               </p>
             </div>
 
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
                 Alfred North Whitehead observed that reality doesn't advance by eliminating opposites but by integrating them—what he called the <em>'creative advance into novelty.'</em>
               </p>
               <p>
-                Opposing truths, held without collapse, become the birthplace of the genuinely new.
+                <strong><em>Opposing truths, held without collapse, become the birthplace of the genuinely new.</em></strong>
               </p>
             </div>
 
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                 Threads provides the navigational layer underneath therapeutic and coaching modalities—helping practitioners and clients recognize <em>where they are</em> in a tension before deciding <em>what to do</em> about it.
               </p>
               <p>
-                A universal framework for navigating complexity without losing yourself.
+                <strong><em>A universal framework for navigating complexity without losing yourself.</em></strong>
               </p>
             </div>
           </div>
