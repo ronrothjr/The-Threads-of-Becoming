@@ -1,601 +1,374 @@
 **THREADS OF BECOMING**
 
-Integrated Facilitator Guide
+Protocol Reference Cards
 
-*A Framework for Holding Creative Tension*
+*Seven Universal Tensions for Conflict Transformation*
 
-For therapists, mediators, team leaders, ministers,
+**The Seven Seeds**
 
-coaches, and anyone who holds space for transformation
+PRESENCE: Where am I…?
+
+CONSENT: What may I…?
+
+MEMORY: Why do I…?
+
+PAUSE: When can I…?
+
+EMBODIMENT: How does my body know?
+
+UNCERTAINTY: What is the mystery unveiling?
+
+BECOMING: Who am I becoming now?
 
 *The Threads of Becoming*  
 Creative Commons Attribution-ShareAlike 4.0
 
-**Contents**
+| THREAD 1: PRESENCE *Where am I…?* |
+| :---: |
 
-# **PART ONE: FOUNDATIONS**
+**CORE TENSIONS**
 
-## **Chapter 1: Understanding the Framework**
+**Within ↔ Between** — Incubating alone or building together?
 
-### **What the Threads Are**
+**Here ↔ Elsewhere** — Present to what's in front or reaching toward what's far?
 
-The Threads of Becoming is a diagnostic and intervention framework built around seven universal tensions that appear in every human system—couples, teams, congregations, organizations, and individuals in transition. Unlike frameworks that treat conflict as a problem to solve, this approach treats tension as the engine of all growth and transformation.
+**ACTIVATION SIGNALS**
 
-**The seven threads are:**
-
-* PRESENCE: Who's there? — Tensions of solitude and connection, attention and distraction
-
-* CONSENT: May I? — Tensions of permission and sovereignty, yes and no
-
-* MEMORY: What happened? — Tensions of inherited and chosen story, narrator and character
-
-* PAUSE: Why do we wait here? — Tensions of timing, urgency, and sufficiency
-
-* EMBODIMENT: How does my body know? — Tensions of thinking and feeling, presence and flight
-
-* UNCERTAINTY: What is the mystery unveiling? — Tensions of knowing and not-knowing, threat and wonder
-
-* BECOMING: Who am I now? — Tensions of continuity and change, return and forward movement
-
-### **The Core Insight**
-
-Every thread contains two or more poles that exist in creative tension. These poles are not problems to solve but polarities to navigate. When we collapse toward one pole—treating it as the answer rather than half of a living tension—we lose the creative potential that emerges only when both poles are honored.
-
-| THE FUNDAMENTAL PRINCIPLE Tension, held without collapse, becomes the birthplace of the genuinely new. Your role as facilitator is not to resolve the tension but to help people stay in it long enough for something to emerge that neither pole could produce alone. |
-| :---- |
-
-### **How This Differs from Problem-Solving**
-
-Traditional approaches to conflict ask: "What's wrong and how do we fix it?" The Threads framework asks: "What tension is alive here, and what is it trying to birth?"
-
-| Problem-Solving Mode | Creative Tension Mode |
-| ----- | ----- |
-| "Someone is wrong" Win/lose or compromise Resolve tension quickly Fix the presenting issue | "Both poles carry truth" Transcend and include Hold tension productively Transform the underlying pattern |
-
-### **The Philosophical Foundation**
-
-This framework draws from Process Philosophy (Whitehead), which holds that reality is not made of static things but of dynamic processes of becoming. Every moment is a new arising. Transformation isn't an event but the nature of existence itself.
-
-Three key Process insights inform this work:
-
-* Creative Advance: Reality moves forward. Even returning to familiar ground, something genuinely new is possible.
-
-* Concrescence: Many things flow together to become one new thing. Holding multiple truths without forcing premature unity allows this flowing-together.
-
-* Novelty: The universe is not just rearranging old pieces but generating the genuinely unprecedented. Your facilitation creates conditions for emergence.
-
-## **Chapter 2: Entering the Work**
-
-### **The Facilitator's Stance**
-
-Before working with threads, understand your role. You are not:
-
-* A problem-solver with answers
-
-* A referee deciding who's right
-
-* A therapist (unless you are one)
-
-* Responsible for outcomes
-
-You are:
-
-* A witness to what's alive
-
-* A holder of space where tension can be named
-
-* A diagnostician of collapse
-
-* A gentle guide back toward the living tension
-
-| YOUR FIRST TASK Before every session, ask yourself: "Am I trying to fix this, or am I trying to hold space for what wants to emerge?" If the answer is "fix," pause until you can genuinely release the outcome. |
-| :---- |
-
-### **Thread Selection: Finding the Entry Point**
-
-Every situation involves multiple threads. Your task is not to address all of them but to find the thread that's most alive right now—the one where intervention will create the most movement.
-
-**The Thread Selection Process:**
-
-1. Listen for the seed question. What question is the person or system actually asking, beneath the surface issue?
-
-2. Watch for activation signals—behavioral, relational, and somatic cues that indicate which thread is activated.
-
-3. Test with a diagnostic question. If it lands, you've found your thread. If not, try another.
-
-4. Name the thread without forcing it. "It sounds like there's something here about permission..." If they agree, proceed. If not, keep listening.
-
-### **The Thread Selection Decision Tree**
-
-| If you're hearing... | Enter through... |
+| Behavioral • Withdrawing from conversation • Pursuing connection intensely • Talking past each other • Physical proximity without engagement | Somatic • Hollow feeling in chest • Restlessness, difficulty settling • Jaw tightening, breath-holding • Leaning forward urgently |
 | :---- | :---- |
-| "They're not really here" / "I need space" / "We're disconnected" | **PRESENCE** |
-| "I felt pressured" / "They decided for me" / "I can't say no" | **CONSENT** |
-| "This is just like when..." / "In my family..." / "They always..." | **MEMORY** |
-| "We need to decide now" / "I've been stuck for months" / "Is this enough?" | **PAUSE** |
-| "I don't know what I feel" / "My body says no" / "I'm numb" | **EMBODIMENT** |
-| "What if we're wrong?" / "I need to be sure" / "I can't know that" | **UNCERTAINTY** |
-| "I don't know who I am anymore" / "Am I really different?" / "Major transition" | **BECOMING** |
 
-| WHEN IN DOUBT: START WITH EMBODIMENT If you're uncertain which thread to enter, try EMBODIMENT first. The body often knows before the mind which thread is most alive. "What's happening in your body right now?" frequently reveals the entry point. |
-| :---- |
+**DIAGNOSTIC QUESTIONS**
 
-# **PART TWO: THE SESSION**
+**1\.** *What's the quality of our being together right now? Meeting, or just occupying space?*
 
-## **Chapter 3: Session Structure**
+**2\.** *Are you pulled toward more solitude or more connection right now?*
 
-### **The Basic Arc**
+**3\.** *Where is your attention actually—here, elsewhere, or split?*
 
-A typical session using the Threads framework follows a four-phase arc. This can happen in 20 minutes or two hours, but the phases remain the same.
+**Meta-Question:** *What is being met here?*
 
-**Phase 1: ARRIVE (2-5 minutes)**
+**COLLAPSE SIGNS**
 
-* Establish presence—yours and theirs
+| Collapse toward WITHIN • Withdrawal as permanent state • Independence weaponized • Solitude becomes avoidance | Collapse toward BETWEEN • Can't tolerate any solitude • Identity dissolves without relationship • Presence demanded not invited |
+| :---- | :---- |
 
-* Brief orientation: "What's alive for you right now?"
+| Collapse toward HERE • Can't plan ahead or imagine future • Trapped in immediate circumstances • Miss the bigger picture | Collapse toward ELSEWHERE • Never fully present in the moment • Always mentally somewhere else • Miss what's right in front of you |
+| :---- | :---- |
 
-* Listen for which thread is activated
+**MICRO-INTERVENTION (2-3 min)**
 
-* Don't rush this. Arrival is its own work.
+**ORIENT:** "Take one breath together."
 
-**Phase 2: NAME (3-10 minutes)**
+**NAME:** "Where is your attention? What kind of presence do you need?"
 
-* Identify the thread: "It sounds like there's something here about..."
+**ATTUNE:** "What would 'enough' presence look like right now?"
 
-* Name the poles: "I hear you pulled toward X, and also toward Y"
+**CHOOSE:** "Stay, break, or table this? Any is valid."
 
-* Use diagnostic questions to deepen understanding
+**TRANSITION CUES**
 
-* Watch for collapse signs—are they stuck in one pole?
+→ Issue is about permission **move to CONSENT**
 
-**Phase 3: HOLD (5-30 minutes)**
+→ Past wounds shaping reactions **move to MEMORY**
 
-* The core work: help them stay in tension without collapsing
+→ Can't feel the body **move to EMBODIMENT**
 
-* Use the micro-intervention for that thread
+| THREAD 2: CONSENT *What may I…?* |
+| :---: |
 
-* Validate both poles: neither is wrong
+**CORE TENSIONS**
 
-* Watch for emergence—something new trying to arise
+**Yes ↔ No** — Giving and withholding permission
 
-* Transition to other threads as needed
+**Self ↔ Other** — Whose sovereignty is at stake?
 
-**Phase 4: INTEGRATE (2-5 minutes)**
+**ACTIVATION SIGNALS**
 
-* Name what emerged: "What's different now?"
+| Behavioral • Agreements made under pressure • Decisions made 'for' others without checking • Resentment after a coerced 'yes' • Walking on eggshells | Somatic • Stomach tightening when asked • Throat constriction (swallowed no) • Feeling small, contracted • Sudden fatigue after agreeing |
+| :---- | :---- |
 
-* Don't force resolution—partial emergence is real
+**DIAGNOSTIC QUESTIONS**
 
-* Identify next step (if any): smallest action
+**1\.** *Do you feel like you actually have a choice here—where 'no' is safe to say?*
 
-* Close with presence: arrive together before departing
+**2\.** *Whose sovereignty feels at stake right now—yours, theirs, or both?*
 
-### **Working with Multiple Threads**
+**3\.** *If you said yes, would it be a gift freely given—or a surrender?*
 
-Most real situations involve multiple threads. The skill is knowing when to stay with one thread and when to transition.
+**Meta-Question:** *Is every being choosing?*
 
-Signs to stay with the current thread:
+**COLLAPSE SIGNS**
 
-* Energy is still moving
+| Collapse toward YES • Chronic people-pleasing • Boundaries stated but never enforced • Resentment building underground | Collapse toward NO • Stonewalling as control • 'No' as default regardless of request • Autonomy weaponized |
+| :---- | :---- |
 
-* Diagnostic questions are landing
+| Collapse toward SELF • Only your needs register as valid • Can't see others' perspectives • Relationships feel transactional | Collapse toward OTHER • Your needs invisible, even to you • Constantly attuned to what others want • Resentment builds silently |
+| :---- | :---- |
 
-* Person/group is engaged
+**MICRO-INTERVENTION (3-4 min)**
 
-* Emergence feels possible
+**ORIENT:** "Something here is about permission. Let's look at it."
 
-Signs to transition to another thread:
+**SURFACE:** "Do you have a real choice? Is 'no' genuinely safe?"
 
-* Current thread has gone as far as it can
+**NAME:** "Sometimes 'yes' isn't really yes—it's surrender."
 
-* A different thread keeps surfacing
+**RENEGOTIATE:** "Do you want to revisit this decision?"
 
-* You hit a wall—movement stopped
+**TRANSITION CUES**
 
-* The person explicitly names something that indicates another thread
+→ 'No' is about past betrayals **move to MEMORY**
 
-**Transition language:**
+→ Can't access what they want **move to EMBODIMENT**
 
-*"As we talk about \[current thread\], I'm noticing something about \[new thread\]. Would it be okay to follow that?"*
+→ Question is about timing **move to PAUSE**
 
-*"The question of \[current seed\] seems connected to \[new seed\]. Is that true for you?"*
+| THREAD 3: MEMORY *Why do I…?* |
+| :---: |
 
-### **The Thread Transition Map**
+**CORE TENSIONS**
 
-Each protocol includes specific transition cues. Here are the most common pathways:
+**Given ↔ Chosen** — Did I inherit this story or pick it up?
 
-| From | When you notice... | Move to |
-| ----- | ----- | ----- |
-| Any thread | They can't feel their body, living in their head | **EMBODIMENT** |
-| Any thread | Old patterns, family stories, past wounds surfacing | **MEMORY** |
-| Any thread | Questions of permission, sovereignty, coercion | **CONSENT** |
-| BECOMING | Integration complete, new self showing up | **PRESENCE** |
+**Telling ↔ Told** — Am I the narrator or the character?
 
-| THE EMBODIMENT GATEWAY EMBODIMENT is often the threshold thread. The body must be accessible before other work can go deep. If you're stuck in any thread, try grounding in the body first. "What's happening in your body right now?" frequently unlocks what thinking cannot. |
-| :---- |
+**ACTIVATION SIGNALS**
 
-## **Chapter 4: Working with Collapse**
+| Behavioral • Repeating family patterns unconsciously • Defending stories that no longer fit • Emotional intensity disproportionate to situation • Competing narratives about shared history | Somatic • Heaviness in chest/shoulders • Sudden flooding—tears, rage, panic • Numbness when certain topics arise • Body bracing for impact already happened |
+| :---- | :---- |
 
-### **Recognizing Collapse**
+**DIAGNOSTIC QUESTIONS**
 
-Collapse happens when someone (or a system) stops holding the tension between poles and falls into treating one pole as the whole truth. This is the most important diagnostic skill in this work.
+**1\.** *Where did this story come from? Did you choose it, or did it choose you?*
 
-General signs of collapse:
+**2\.** *Right now, are you telling your story—or is your story telling you?*
 
-* Rigidity: "This is just how it is"
+**3\.** *Does this story still fit who you're becoming?*
 
-* Either/or thinking: one pole is right, the other is wrong
+**Meta-Question:** *What do we want our story to be?*
 
-* Urgency to resolve rather than hold
+**COLLAPSE SIGNS**
 
-* Defending rather than exploring
+| Collapse toward GIVEN • Loyalty to harmful inherited narratives • Identity fused with origin • "This is just how our family is" | Collapse toward CHOSEN • Cutting off from history without integration • "The past is the past" • Rootlessness disguised as freedom |
+| :---- | :---- |
 
-* Body armoring: tension, holding, bracing
+| Collapse toward TOLD • Passive recipient of narrative • Others define your story • No sense of authorship | Collapse toward TELLING • Compulsive narrative control • Can't receive others' perspectives • Rewriting without honoring |
+| :---- | :---- |
 
-### **The Collapse-Recovery Cycle**
+**MICRO-INTERVENTION (4-5 min)**
 
-Collapse is not failure. It's information. Every collapse shows you which pole someone is running to for safety—and therefore which pole feels threatening. This is diagnostic gold.
+**ORIENT:** "Something from before is present. Let's give it space."
 
-1. Notice the collapse without judgment: "I notice you've landed firmly in \[pole\]."
+**LOCATE:** "What's the story underneath? The sentence you carry?"
 
-2. Validate the pole they've collapsed into: "There's real wisdom in \[pole\]. It's not wrong."
+**CHECK:** "Whose story is that originally? Does it still fit?"
 
-3. Gently introduce the other pole: "And I wonder what \[other pole\] might have to offer here too."
+**OPEN:** "If you could revise one line, what would it say?"
 
-4. Return to the living tension: "What would it be like to hold both?"
+**TRANSITION CUES**
 
-| CAUTION: DON'T FORCE THE OTHER POLE When someone has collapsed into one pole, they've often done so for good reason—the other pole feels unsafe. Forcing them toward it too quickly can trigger shutdown or defensive escalation. Honor the protective function of their collapse before inviting them back into tension. |
-| :---- |
+→ Can't feel the story in body **move to EMBODIMENT**
 
-### **Collapse Patterns by Thread**
+→ Who gets to author shared story **move to CONSENT**
 
-Each thread has characteristic collapse patterns. See the Reference Cards for complete collapse signs. Here are the most common:
+→ Question is "Who am I now?" **move to BECOMING**
 
-**PRESENCE:**
+| THREAD 4: PAUSE *When can I…?* |
+| :---: |
 
-* Toward WITHIN: Isolation as identity, connection feels threatening
+**CORE TENSIONS**
 
-* Toward BETWEEN: Can't be alone, identity dissolves without relationship
+**Not Yet ↔ Now** — Is it time to move or time to wait?
 
-**CONSENT:**
+**More ↔ Enough** — Grasping for what I lack or resting in what I have?
 
-* Toward YES: Chronic people-pleasing, can't access "no"
+**ACTIVATION SIGNALS**
 
-* Toward NO: Walls instead of boundaries, autonomy weaponized
+| Behavioral • Rushing to decision when situation isn't ripe • Endless deliberation that never reaches action • "We need to do something\!" as reflex • Procrastination disguised as wisdom | Somatic • Restlessness, fidgeting, can't be still • Heaviness, lethargy, immobility • Shallow breathing, racing heart • Hunger that isn't physical—grasping quality |
+| :---- | :---- |
 
-**MEMORY:**
+**DIAGNOSTIC QUESTIONS**
 
-* Toward GIVEN: Loyalty to harmful inherited stories
+**1\.** *Is this a 'now' moment or a 'not yet' moment? What's the evidence?*
 
-* Toward CHOSEN: Cutting off from history without integration
+**2\.** *Is the urgency from the situation—or from inside you?*
 
-**PAUSE:**
+**3\.** *Right now—do you have enough to act, or grasping because 'enough' feels unsafe?*
 
-* Toward NOT YET: Perfectionism, waiting becomes permanent
+**Meta-Question:** *Does patience here lead to better action?*
 
-* Toward NOW: Acting to relieve anxiety, manufactured urgency
+**COLLAPSE SIGNS**
 
-**EMBODIMENT:**
+| Collapse toward NOT YET • Waiting becomes permanent • Analysis paralysis • Fear of wrong decision prevents any decision | Collapse toward NOW • Acting to relieve anxiety • Urgency manufactured to avoid discomfort • Confusing speed with effectiveness |
+| :---- | :---- |
 
-* Toward THINK: Living from neck up, emotions analyzed not felt
+| Collapse toward MORE • Never enough information to act • Perfectionism as delay • Hoarding resources, time, options | Collapse toward ENOUGH • Settle too quickly • Don't gather what's needed • Premature closure |
+| :---- | :---- |
 
-* Toward FEEL: Overwhelmed by sensation, chronic reactivity
+**MICRO-INTERVENTION (3-4 min)**
 
-**UNCERTAINTY:**
+**ORIENT:** "Let's check the timing. One breath."
 
-* Toward HIDE: Clinging to certainties, "I'd rather not know"
+**NAME:** "Which direction is the pull—action or waiting?"
 
-* Toward SEEK: Compulsive information gathering, analysis paralysis
+**TEST:** "If you wait, what ripens? If you act, what opens?"
 
-**BECOMING:**
+**QUALITY:** "What does 'ripe timing' feel like for this?"
 
-* Toward SAME: "People don't change," clinging to outdated identity
+**TRANSITION CUES**
 
-* Toward DIFFERENT: Serial reinvention without integration
+→ Paralysis from past failures **move to MEMORY**
 
-# **PART THREE: APPLICATIONS**
+→ Urgency from not being present **move to PRESENCE**
 
-## **Chapter 5: Context-Specific Applications**
+→ Can't feel body's timing signals **move to EMBODIMENT**
 
-### **Working with Couples**
+| THREAD 5: EMBODIMENT *How does my body know?* |
+| :---: |
 
-In couples work, the threads often manifest as relational patterns where each partner has collapsed toward opposite poles—creating a locked system.
+**CORE TENSIONS**
 
-**Common couple patterns:**
+**Think ↔ Feel** — Head knowledge versus body knowledge
 
-* PRESENCE: Pursuer/Distancer dynamic (Between vs. Within)
+**Stay ↔ Go** — Present in body or fled into abstraction/overwhelm?
 
-* CONSENT: Controller/Appeaser dynamic (Self vs. Other sovereignty)
+**ACTIVATION SIGNALS**
 
-* MEMORY: Competing narratives about shared history
+| Behavioral • Answering 'How do you feel?' with thoughts • Chronic overwork, ignoring body signals • Talking about emotions without experiencing them • Repeated 'I don't know' about feelings/wants | Somatic • Breath high and shallow in chest • Numbness, 'I don't feel anything' • Chronic unconscious tension • Incongruence: words vs. body |
+| :---- | :---- |
 
-* PAUSE: One wants to decide now, one needs more time
+**DIAGNOSTIC QUESTIONS**
 
-Key move: Help each partner see the wisdom in the other's pole, rather than defending their own.
+**1\.** *Right now, can you feel your body? Not think about it—actually feel it?*
 
-**Example script:**
+**2\.** *What's happening in your body? Tight, loose, warm, cool, buzzing, numb?*
 
-*"Sarah, when James asks for space, there's real wisdom in that—he might need solitude to bring his full presence back. James, when Sarah reaches for connection, there's wisdom there too—togetherness is how she processes. Neither of you is wrong. The question is: what would 'enough' look like for both of you right now?"*
+**3\.** *If your body had a vote in this decision, what would it say?*
 
-### **Working with Teams and Organizations**
+**Meta-Question:** *Can my body find solid ground here?*
 
-Organizational conflicts often involve systemic collapse—the whole culture has fallen into one pole.
+**COLLAPSE SIGNS**
 
-**Common organizational patterns:**
+| Collapse toward THINK • Living from neck up • Emotions analyzed not felt • Chronic intellectualization as defense | Collapse toward FEEL • Overwhelmed by sensation • Chronic reactivity without reflection • Dissociation when sensation exceeds capacity |
+| :---- | :---- |
 
-* PAUSE: Cultures of manufactured urgency OR analysis paralysis
+| Collapse toward STAY • Frozen when body says move • Override signals to leave • Stuck in situations too long | Collapse toward GO • Flight at first discomfort • Can't stay present with difficulty • Restless, always moving |
+| :---- | :---- |
 
-* CONSENT: Top-down decisions made "for" people vs. endless consensus-seeking
+**MICRO-INTERVENTION (3-4 min)**
 
-* UNCERTAINTY: Risk-averse cultures vs. reckless "move fast" cultures
+**ORIENT:** "Let's check in with the body. Is that okay?"
 
-* MEMORY: "We've always done it this way" vs. constant reinvention
+**GROUND:** "Feel your feet. Feel your weight. One breath to belly."
 
-Key move: Name the cultural collapse without blame, then introduce the missing pole as a resource, not a threat.
+**SCAN:** "What sensation? Not emotion—sensation."
 
-### **Working with Communities**
+**LISTEN:** "If that sensation could speak, what would it say?"
 
-Community conflict often involves competing narratives about shared memory, contested questions of who belongs (PRESENCE), and disagreements about timing (PAUSE).
+**TRANSITION CUES**
 
-**Key principles for community work:**
+→ Body reveals a story **move to MEMORY**
 
-* Name the thread explicitly: "This congregation is wrestling with a MEMORY question—whose story will we tell about our history?"
+→ Body says 'no' to something **move to CONSENT**
 
-* Validate all poles publicly: Create space for multiple truths
+→ Body reveals longing for connection/solitude **move to PRESENCE**
 
-* Use fishbowl or structured dialogue to prevent collapse into factions
+| THREAD 6: UNCERTAINTY *What is the mystery unveiling?* |
+| :---: |
 
-* Expect longer timelines: Community threads take months or years, not sessions
+**CORE TENSIONS**
 
-### **Working with Individuals**
+**Hide ↔ Seek** — Rest in mystery or pursue it?
 
-In individual coaching or pastoral work, the threads often reveal internal conflicts—parts of self at odds with other parts.
+**Threat ↔ Wonder** — Unknown as enemy or invitation?
 
-Key adaptation: Externalize the poles as "parts" or "voices."
+**ACTIVATION SIGNALS**
 
-**Example script:**
+| Behavioral • Rushing to premature certainty • Demanding guarantees before acting • Paralysis without certainty • Needing to be right; can't say 'I don't know' | Somatic • Tightness in chest/throat • Breath-holding (suspended animation) • Grasping quality in hands, jaw, belly • Nausea or dizziness (groundlessness) |
+| :---- | :---- |
 
-*"It sounds like there's a part of you that needs certainty before you can act, and another part that knows you'll never be certain enough. Both of these are trying to protect you. What would it be like to let them both have a voice?"*
+**DIAGNOSTIC QUESTIONS**
 
-## **Chapter 6: Case Studies**
+**1\.** *What's your relationship with not-knowing right now? Tolerable or terrifying?*
 
-### **Case Study 1: The Couples Session (PRESENCE → CONSENT)**
+**2\.** *Is this uncertainty a threat or an invitation?*
 
-*Presenting issue: Maria complains James is "never really here." James says Maria is "suffocating."*
+**3\.** *What are you trying to control that might not be controllable?*
 
-**The facilitator recognizes this as PRESENCE (Within ↔ Between). Rather than siding with either, they name the tension:**
+**Meta-Question:** *How can wanting control give way to discovery?*
 
-*"Maria, you need togetherness to feel connected. James, you need solitude to bring your full self. Both of these are legitimate needs. Neither of you is wrong. The question is: what would 'enough' look like for each of you?"*
+**COLLAPSE SIGNS**
 
-**As they explore, James mentions feeling "pressured" when Maria asks him to talk. The facilitator notices this and transitions to CONSENT:**
+| Collapse toward HIDE • Clinging to inherited certainties • "I'd rather not know" • Dogma as defense against uncertainty | Collapse toward SEEK • Compulsive information gathering • "There must be an answer" • Analysis paralysis from endless seeking |
+| :---- | :---- |
 
-*"James, I'm hearing something about pressure—like your 'yes' to connection doesn't feel fully free. Maria, would it be okay to explore that for a moment?"*
+| Collapse toward THREAT • All unknowns feel dangerous • Anxiety as constant companion • Defensive posture toward life | Collapse toward WONDER • Blind to real dangers • Naively trust the unknown • Ignore warning signs |
+| :---- | :---- |
 
-**The session moves from PRESENCE to CONSENT, uncovering that James's withdrawal is partly about protecting his sovereignty. Maria realizes her pursuit has inadvertently made his "yes" feel coerced. They leave with a new practice: Maria asks, "Would you like to talk?" James practices saying "not yet" without it meaning rejection.**
+**MICRO-INTERVENTION (4-5 min)**
 
-### **Case Study 2: The Team Decision (PAUSE → UNCERTAINTY)**
+**ORIENT:** "There's not-knowing here. Let's make space for it."
 
-*Presenting issue: A leadership team has been debating a strategic decision for six months. Half want to "just decide"; half want "more data."*
+**NAME:** "What can't you know? What can you know or find out?"
 
-**The facilitator recognizes this as PAUSE (Not Yet ↔ Now) and tests with a diagnostic question:**
+**EXPLORE:** "How are you relating to this not-knowing?"
 
-*"I want to ask something that might feel strange: Is this urgency to decide coming from the situation—or from inside this room? And for those who want more time—is that wisdom or avoidance?"*
+**GROUND:** "What's solid—your values, who you want to be?"
 
-**The room gets quiet. Both sides recognize some truth in the questions. As they explore, it becomes clear the real issue isn't timing—it's that no one wants to own a decision that might be wrong. The facilitator transitions to UNCERTAINTY:**
+**TRANSITION CUES**
 
-*"It sounds like the question isn't 'when to decide' but 'how to decide without certainty.' What's the fear if this decision turns out to be wrong?"*
+→ Question is 'Do I have permission?' **move to CONSENT**
 
-**This opens a deeper conversation about risk tolerance, accountability, and what they actually can and cannot know. They don't resolve the decision, but they agree to a "reversibility check"—making a provisional decision with clear milestones to reassess. Both poles (act now / wait for certainty) are honored.**
+→ Past experiences fuel fear **move to MEMORY**
 
-### **Case Study 3: The Ministry Transition (BECOMING → MEMORY)**
+→ Question is 'Who will I become?' **move to BECOMING**
 
-*Presenting issue: A pastor of 25 years has "lost the fire" and doesn't know who he'd be without the pulpit.*
+| THREAD 7: BECOMING *Who am I becoming now?* |
+| :---: |
 
-**The facilitator recognizes this as BECOMING (Same ↔ Different, Return ↔ Forward) and uses the mapping exercise:**
+**CORE TENSIONS**
 
-*"Let's map this. Who were you when you started ministry 25 years ago? Who are you now? And who is trying to emerge—even if you can't see them clearly yet?"*
+**Same ↔ Different** — Have I changed, or going through motions?
 
-**As they explore, strong emotion surfaces when the pastor describes his younger self's certainty. The facilitator notices and transitions to MEMORY:**
+**Return ↔ Forward** — Spiraling back to old ground or into new territory?
 
-*"There's grief here. You're not just losing a role—you're grieving a self that was more certain. Is there a story from that early time that you're still carrying?"*
+**ACTIVATION SIGNALS**
 
-**The pastor uncovers an inherited story from his father: "Ministry is the highest calling." He sees how this story has made any other path feel like failure. The work becomes about honoring what the story gave him while giving himself permission to author something new. He doesn't need to leave ministry—but he needs to choose it again, freely.**
+| Behavioral • Major life transitions • "I don't know who I am anymore" • Clinging to outdated self-definitions • Repeating patterns while insisting "I've changed" | Somatic • Skin feeling too tight; outgrowing container • Exhaustion from holding on • Restlessness—something wants to move • Grief held in body for former selves |
+| :---- | :---- |
 
-# **PART FOUR: INTEGRATION**
+**DIAGNOSTIC QUESTIONS**
 
-## **Chapter 7: The Spiral Nature**
+**1\.** *Who were you before? Who are you now? Who is trying to emerge?*
 
-### **Spiral, Not Circle**
+**2\.** *Does this feel like going in circles—or spiraling?*
 
-One of the most important concepts in this framework is the distinction between circles and spirals.
+**3\.** *What do you want to carry forward? What's ready to release?*
 
-**Circle:**
+**Meta-Question:** *What isn't finished in me?*
 
-* Same patterns repeating unconsciously
+**COLLAPSE SIGNS**
 
-* "Why does this keep happening?"
+| Collapse toward SAME • "People don't really change" • Change as threat • Using history as excuse | Collapse toward DIFFERENT • Serial reinvention without integration • Cutting off from the past • Performing growth without embodying it |
+| :---- | :---- |
 
-* Shame and frustration
+| Collapse toward RETURN • Stuck in nostalgia • Regression under stress • Can't let go of past self | Collapse toward FORWARD • Cut off from roots • Always chasing next version • Dismiss where you've been |
+| :---- | :---- |
 
-* No felt sense of progress
+**MICRO-INTERVENTION (5-6 min)**
 
-**Spiral:**
+**ORIENT:** "Something is shifting. Let's witness it."
 
-* Returning to familiar territory from a different altitude
+**MAP:** "Who were you? Who are you now? Who's emerging?"
 
-* "I've been here before, and I'm different now"
+**SPIRAL:** "Have you been here before? What's different this time?"
 
-* Curiosity about what this pass reveals
+**INTEGRATE:** "What to carry forward? What to release?"
 
-* Each return is an opportunity for deeper integration
+**TRANSITION CUES**
 
-| THE SPIRAL QUESTION When someone says "I thought I dealt with this already"—help them reframe. "You did deal with it. And now you're meeting it again from a different place. What can you see now that you couldn't see before?" |
-| :---- |
+→ Blocked by stories from past **move to MEMORY**
 
-### **BECOMING Returns to PRESENCE**
+→ Question is 'Do I have permission?' **move to CONSENT**
 
-The seven threads form a spiral that returns to its beginning. After the work of BECOMING—the integration of who you were, who you are, and who you're becoming—you arrive back at PRESENCE. But you arrive transformed.
-
-The person who shows up after authentic becoming is not the person who started the journey. They bring new capacity for presence, new understanding of consent, new relationship with their stories, new sense of timing, new embodiment, new comfort with uncertainty.
-
-This is why the framework doesn't "end." Each passage through the threads prepares you for the next spiral—at a different altitude, with different questions, toward deeper integration.
-
-## **Chapter 8: Special Considerations**
-
-### **Trauma-Informed Practice**
-
-This framework touches areas where trauma lives. Practice with care.
-
-**Key principles:**
-
-* The body is not always safe to enter. Go slower, give more control.
-
-* "Can you feel that?" is sometimes answered "No" for protective reasons. Honor the protection.
-
-* Don't push toward the threatening pole. Let them approach at their pace.
-
-* Normalize protective responses: "It makes sense you'd collapse toward \[pole\]—that's how you survived."
-
-* Know your limits. Refer when appropriate.
-
-| THE SAFETY QUESTION Before any embodiment work, ask: "Is it safe enough to feel your body right now?" The question is not "can you feel?" but "is it safe to feel?" If not, work with what is accessible. |
-| :---- |
-
-### **Power Dynamics**
-
-The threads can be weaponized. Be alert to power dynamics.
-
-* CONSENT collapse: "You agreed to this" used to override ongoing consent
-
-* PAUSE collapse: "Let's not rush" used by those with power to maintain status quo
-
-* MEMORY collapse: Controlling the narrative about shared history
-
-* UNCERTAINTY collapse: "We can't know" used to avoid accountability
-
-Your role is to notice when threads are being used to consolidate power rather than hold creative tension. Name it gently but clearly.
-
-### **When the Framework Doesn't Fit**
-
-This framework is not for every situation.
-
-**Don't use it when:**
-
-* Someone is in active crisis requiring stabilization first
-
-* Clear safety boundaries need to be set (not negotiated)
-
-* The other party is acting in bad faith
-
-* Professional clinical intervention is needed
-
-* You're personally activated and can't hold the tension yourself
-
-The framework requires good faith from participants and groundedness from the facilitator. Without these, use other tools.
-
-## **Chapter 9: The Facilitator's Own Work**
-
-### **Know Your Own Collapse Patterns**
-
-You will be tempted to collapse. Know your patterns.
-
-**Common facilitator collapses:**
-
-* Rushing toward resolution (PAUSE collapse toward NOW)
-
-* Over-identifying with one person's position (loss of PRESENCE)
-
-* Intellectualizing to avoid the body's signals (EMBODIMENT collapse toward THINK)
-
-* Needing to be the expert (UNCERTAINTY collapse toward SEEK)
-
-* Imposing your own story onto their experience (MEMORY collapse)
-
-Regular practice: After each session, ask yourself which poles you were drawn to collapse toward. What did that protect you from feeling?
-
-### **Holding Your Own Tension**
-
-The most powerful intervention is your own capacity to hold tension without collapsing. When you can stay present while others are activated, you create a field where transformation becomes possible.
-
-**Practices that help:**
-
-* Regular meditation or contemplative practice
-
-* Supervision or peer consultation
-
-* Your own therapy or spiritual direction
-
-* Body practices: yoga, somatic work, movement
-
-* Journaling to process what sessions activate in you
-
-| THE META-QUESTION FOR FACILITATORS Before each session: "What tension am I avoiding in myself that might make me want to resolve this too quickly in others?" |
-| :---- |
-
-### **Trust the Process**
-
-Finally, trust the process. You are not responsible for making transformation happen. You are responsible for creating conditions where it can happen. The tension itself is generative. Your job is to hold space and witness.
-
-Sometimes nothing seems to emerge. That's okay. Seeds planted in one session may germinate later. Partial movement is real movement. Your witnessing matters even when you can't see the fruit.
-
-The Threads of Becoming is not a technique to master but a way of seeing. With practice, you'll begin to sense the threads in every conversation, every conflict, every threshold moment. You'll recognize collapse earlier and return to tension more gracefully. You'll trust that something new can emerge from what looks like impasse.
-
-This is the work. Welcome to it.
-
-# **APPENDIX: Quick Reference**
-
-## **The Seven Seeds**
-
-| Thread | Seed Question | Core Tensions |
-| ----- | ----- | ----- |
-| **PRESENCE** | *Who's there?* | Within ↔ Between, Here ↔ Elsewhere |
-| **CONSENT** | *May I?* | Yes ↔ No, Self ↔ Other |
-| **MEMORY** | *What happened?* | Given ↔ Chosen, Telling ↔ Told |
-| **PAUSE** | *Why do we wait here?* | Not Yet ↔ Now, More ↔ Enough |
-| **EMBODIMENT** | *How does my body know?* | Think ↔ Feel, Stay ↔ Go |
-| **UNCERTAINTY** | *What is the mystery unveiling?* | Hide ↔ Seek, Threat ↔ Wonder |
-| **BECOMING** | *Who am I now?* | Same ↔ Different, Return ↔ Forward |
-
-## **Session Arc**
-
-1. ARRIVE (2-5 min): Establish presence, listen for which thread is activated
-
-2. NAME (3-10 min): Identify the thread, name the poles, use diagnostic questions
-
-3. HOLD (5-30 min): Help them stay in tension, watch for collapse, support emergence
-
-4. INTEGRATE (2-5 min): Name what emerged, identify next step, close with presence
-
-## **Core Facilitation Moves**
-
-* Validate both poles: "Neither of you is wrong"
-
-* Name the collapse: "I notice you've landed firmly in \[pole\]"
-
-* Introduce the missing pole: "And I wonder what \[other pole\] might offer"
-
-* Return to tension: "What would it be like to hold both?"
-
-* Trust emergence: "Something is trying to arise here"
-
-## **Emergency Questions**
-
-**When stuck:**
-
-* "What's happening in your body right now?" (EMBODIMENT gateway)
-
-* "Is there a story from before that's shaping this?" (MEMORY check)
-
-* "Do you feel like you have a real choice here?" (CONSENT check)
-
-* "Is the urgency from the situation or from inside you?" (PAUSE check)
-
-**When activated yourself:**
-
-* Breathe. Feel your feet.
-
-* "Which pole am I wanting to collapse toward right now?"
-
-* "What am I protecting myself from feeling?"
-
-* "Can I hold this tension, or do I need to pause?"
+→ Can't feel the transition **move to EMBODIMENT**
