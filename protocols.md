@@ -6,7 +6,7 @@
 
 ## 1\. PRESENCE
 
-**Seed:** "Who's there?"
+**Seed:** "Where am I…?"
 
 **Tensions:** Within vs. Between / Here vs. Elsewhere
 
@@ -34,7 +34,7 @@
 
 ## 2\. CONSENT
 
-**Seed:** "May I?"
+**Seed:** "What may I…?"
 
 **Tensions:** Yes vs. No / Self vs. Other
 
@@ -62,7 +62,7 @@
 
 ## 3\. MEMORY
 
-**Seed:** "What happened?"
+**Seed:** "Why do I…?"
 
 **Tensions:** Given vs. Chosen / Telling vs. Told
 
@@ -90,7 +90,7 @@
 
 ## 4\. PAUSE
 
-**Seed:** "Why do we wait here?"
+**Seed:** "When can I…?"
 
 **Tensions:** Not Yet vs. Now / More vs. Enough
 
@@ -174,7 +174,7 @@
 
 ## 7\. BECOMING
 
-**Seed:** "Who am I now?"
+**Seed:** "Who am I becoming now?"
 
 **Tensions:** Same vs. Different / Return vs. Forward
 
@@ -202,7 +202,7 @@
 
 ## **PRESENCE PROTOCOL**
 
-**The Seed:** *Who's there?*
+**The Seed:** *Where amI…?*
 
 **Core Tensions:**
 
@@ -287,7 +287,7 @@ Use these to surface whether PRESENCE is the activated thread:
 
 ---
 
-### **4\. THE PRESENCE MICRO-engagement**
+### **4\. THE PRESENCE MICRO-INTERVENTION**
 
 **Time:** 2-3 minutes **Context:** Use when you've identified PRESENCE as the activated thread
 
@@ -305,14 +305,14 @@ Use these to surface whether PRESENCE is the activated thread:
 
 ### **5\. FACILITATOR NOTES**
 
-**This engagement is working when:**
+**This intervention is working when:**
 
 * The person's body visibly settles (shoulders drop, breath deepens)  
 * They can name which pole they're pulled toward without shame  
 * The conversation shifts from accusation to curiosity  
 * Both parties feel seen, even if needs differ
 
-**This engagement is NOT working when:**
+**This intervention is NOT working when:**
 
 * Naming the poles increases defensiveness  
 * The person can't locate their attention at all (may need EMBODIMENT thread first)  
@@ -346,7 +346,7 @@ Use these to surface whether PRESENCE is the activated thread:
 
 ## **CONSENT PROTOCOL**
 
-**The Seed:** *May I?*
+**The Seed:** *What may I…?*
 
 **Core Tensions:**
 
@@ -439,7 +439,7 @@ Use these to surface whether CONSENT is the activated thread:
 
 ---
 
-### **4\. THE CONSENT MICRO-engagement**
+### **4\. THE CONSENT MICRO-INTERVENTION**
 
 **Time:** 3-4 minutes **Context:** Use when you've identified CONSENT as the activated thread
 
@@ -461,7 +461,7 @@ Use these to surface whether CONSENT is the activated thread:
 
 ### **5\. FACILITATOR NOTES**
 
-**This engagement is working when:**
+**This intervention is working when:**
 
 * Someone admits their "yes" wasn't fully free  
 * The person making the request genuinely pauses to consider a "no"  
@@ -469,7 +469,7 @@ Use these to surface whether CONSENT is the activated thread:
 * The conversation shifts from "getting agreement" to "understanding each other"  
 * Both parties feel their sovereignty acknowledged
 
-**This engagement is NOT working when:**
+**This intervention is NOT working when:**
 
 * The "asking" becomes more sophisticated pressure  
 * One person uses the language to guilt the other: "See? You never give me real consent"  
@@ -535,7 +535,7 @@ Use these to surface whether CONSENT is the activated thread:
 
 ## **MEMORY PROTOCOL**
 
-**The Seed:** *What happened?*
+**The Seed:** *What may I…?*
 
 **Core Tensions:**
 
@@ -631,7 +631,7 @@ Use these to surface whether MEMORY is the activated thread:
 
 ---
 
-### **4\. THE MEMORY MICRO-engagement**
+### **4\. THE MEMORY MICRO-INTERVENTION**
 
 **Time:** 4-5 minutes **Context:** Use when you've identified MEMORY as the activated thread
 
@@ -657,7 +657,7 @@ Use these to surface whether MEMORY is the activated thread:
 
 ### **5\. FACILITATOR NOTES**
 
-**This engagement is working when:**
+**This intervention is working when:**
 
 * The person recognizes a story as *a* story, not just "the truth"  
 * They can distinguish inherited narrative from chosen meaning  
@@ -665,7 +665,7 @@ Use these to surface whether MEMORY is the activated thread:
 * They find language they've never used before for an old experience  
 * There's a felt sense of agency: "I get to decide what this means now"
 
-**This engagement is NOT working when:**
+**This intervention is NOT working when:**
 
 * The person becomes more fused with the story, more defended  
 * Naming the story triggers overwhelming flooding (may need grounding/EMBODIMENT first)  
@@ -753,7 +753,7 @@ Use these to surface whether MEMORY is the activated thread:
 
 ## **PAUSE PROTOCOL**
 
-**The Seed:** *Why do we wait here?*
+**The Seed:** *When can I…?*
 
 **Core Tensions:**
 
@@ -857,7 +857,7 @@ Use these to surface whether PAUSE is the activated thread:
 
 ---
 
-### **4\. THE PAUSE MICRO-engagement**
+### **4\. THE PAUSE MICRO-INTERVENTION**
 
 **Time:** 3-4 minutes **Context:** Use when you've identified PAUSE as the activated thread
 
@@ -885,7 +885,7 @@ Use these to surface whether PAUSE is the activated thread:
 
 ### **5\. FACILITATOR NOTES**
 
-**This engagement is working when:**
+**This intervention is working when:**
 
 * The urgency or paralysis softens  
 * The person can distinguish internal pressure from situational pressure  
@@ -893,9 +893,9 @@ Use these to surface whether PAUSE is the activated thread:
 * The conversation shifts from "Should we?" to "When and how?"  
 * Both action and waiting are held as legitimate options
 
-**This engagement is NOT working when:**
+**This intervention is NOT working when:**
 
-* The engagement itself becomes a stalling tactic  
+* The intervention itself becomes a stalling tactic  
 * Urgency increases: "We don't have time for this\!"  
 * The person can't feel the pull in either direction (may need EMBODIMENT)  
 * Timing question masks a consent issue: someone's being pushed  
@@ -1125,7 +1125,7 @@ Use these to surface whether EMBODIMENT is the activated thread:
 
 ---
 
-### **4\. THE EMBODIMENT MICRO-engagement**
+### **4\. THE EMBODIMENT MICRO-INTERVENTION**
 
 **Time:** 3-4 minutes **Context:** Use when you've identified EMBODIMENT as the activated thread, or as grounding before working with any other thread
 
@@ -1155,7 +1155,7 @@ Use these to surface whether EMBODIMENT is the activated thread:
 
 ### **5\. FACILITATOR NOTES**
 
-**This engagement is working when:**
+**This intervention is working when:**
 
 * The person's body visibly shifts: breath deepens, shoulders drop, face softens  
 * They access sensation language rather than thought/emotion language  
@@ -1163,7 +1163,7 @@ Use these to surface whether EMBODIMENT is the activated thread:
 * Connection emerges between body state and presenting issue  
 * They feel more present—eyes focus, voice grounds
 
-**This engagement is NOT working when:**
+**This intervention is NOT working when:**
 
 * The person can't locate any sensation (may need slower, safer approach)  
 * They become more dissociated or floaty  
@@ -1305,7 +1305,7 @@ The body is not an inferior way of knowing. It's often faster, more accurate, an
 **Don't push:**
 
 * Disembodiment may be adaptive. Respect it.  
-* Body awareness is a capacity built over time, not a single engagement  
+* Body awareness is a capacity built over time, not a single intervention  
 * Refer to trauma-specialized professionals when appropriate
 
 **The question is not "Can you feel your body?" but "Is it safe enough to feel your body right now?"**
@@ -1446,7 +1446,7 @@ Use these to surface whether UNCERTAINTY is the activated thread:
 
 ---
 
-### **4\. THE UNCERTAINTY MICRO-engagement**
+### **4\. THE UNCERTAINTY MICRO-INTERVENTION**
 
 **Time:** 4-5 minutes **Context:** Use when you've identified UNCERTAINTY as the activated thread
 
@@ -1484,7 +1484,7 @@ Use these to surface whether UNCERTAINTY is the activated thread:
 
 ### **5\. FACILITATOR NOTES**
 
-**This engagement is working when:**
+**This intervention is working when:**
 
 * The person's grip loosens visibly—breath deepens, shoulders drop  
 * They can distinguish genuine unknowns from catastrophic fantasies  
@@ -1493,10 +1493,10 @@ Use these to surface whether UNCERTAINTY is the activated thread:
 * They can articulate a next step that doesn't require total certainty  
 * The word "wonder" or "curious" shows up naturally
 
-**This engagement is NOT working when:**
+**This intervention is NOT working when:**
 
 * Anxiety increases rather than settles  
-* The person keeps trying to resolve the uncertainty through the engagement itself  
+* The person keeps trying to resolve the uncertainty through the intervention itself  
 * They perform acceptance without actually feeling it  
 * The not-knowing is connected to trauma and needs clinical support  
 * They become more ungrounded, floaty, dissociated (may need EMBODIMENT first)  
@@ -1714,7 +1714,7 @@ That's the kind of faith that can actually move through the world.
 
 ## **THREAD PROTOCOL: BECOMING**
 
-**The Seed:** *Who am I now?*
+**The Seed:** *Who am I becoming now?*
 
 **Core Tensions:**
 
@@ -1825,7 +1825,7 @@ Use these to surface whether BECOMING is the activated thread:
 
 ---
 
-### **4\. THE BECOMING MICRO-engagement**
+### **4\. THE BECOMING MICRO-INTERVENTION**
 
 **Time:** 5-6 minutes **Context:** Use when you've identified BECOMING as the activated thread—often at threshold moments, life transitions, or when identity questions are central
 
@@ -1873,7 +1873,7 @@ Use these to surface whether BECOMING is the activated thread:
 
 ### **5\. FACILITATOR NOTES**
 
-**This engagement is working when:**
+**This intervention is working when:**
 
 * The person can articulate former self, present self, and emerging self with some clarity  
 * They recognize spiral patterns without shame  
@@ -1882,7 +1882,7 @@ Use these to surface whether BECOMING is the activated thread:
 * The threshold feels real but not terrifying  
 * There's willingness to trust the process without needing to see the destination
 
-**This engagement is NOT working when:**
+**This intervention is NOT working when:**
 
 * The person becomes more destabilized; identity confusion increases  
 * They use the language to perform transformation without feeling it  
