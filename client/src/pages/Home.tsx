@@ -37,7 +37,7 @@ const Home: React.FC = () => {
             <div className={styles.heroCard}>
               <h3>The Framework</h3>
               <p>
-                Threads provides the navigational layer underneath therapeutic and coaching modalities—helping practitioners and clients recognize <em>where they are</em> in a tension before deciding <em>what to do</em> about it.
+                Threads provides the navigational layer underneath personal practice, therapeutic, and coaching modalities—helping practitioners and clients recognize <em>where they are</em> in a tension before deciding <em>what to do</em> about it.
               </p>
               <p>
                 <strong><em>A universal framework for navigating complexity without losing yourself.</em></strong>
@@ -55,6 +55,84 @@ const Home: React.FC = () => {
       <section className={styles.videoSection}>
         <div className="container">
           <div id="home-video-wrapper"></div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className={`${styles.caseStudies} section-lg`}>
+        <div className="container">
+          <div className={styles.caseStudiesCallout}>
+            <p><strong>Threads is for:</strong></p>
+            <ul>
+              <li>Daily use by individuals in conversations, at work, and in personal reflection</li>
+              <li>Therapists to integrate with all their other modalities</li>
+              <li>Small groups and large organizations alike</li>
+            </ul>
+          </div>
+
+          <h2 className={styles.pathwaysTitle}>Case Studies</h2>
+
+          <div className={styles.casesGrid}>
+            {/* Case 1: Individual/Couple */}
+            <div className={styles.caseCard}>
+              <h3>"You never show up for me."</h3>
+              <div className={styles.caseThread}>Thread: PRESENCE</div>
+              <p className={styles.caseTension}>
+                A couple arrives in crisis. Elena says Marc is emotionally unavailable. Marc says Elena is suffocating him.
+              </p>
+              <div className={styles.casePoles}>
+                <div className={styles.pole}>
+                  <strong>Within:</strong> Marc withdraws to regulate himself. Solitude feels safe.
+                </div>
+                <div className={styles.pole}>
+                  <strong>Between:</strong> Elena reaches for connection. Aloneness feels like abandonment.
+                </div>
+              </div>
+              <div className={styles.caseEmergence}>
+                <strong>Emergence:</strong> They create a "90-second pause" ritual. When tension rises, Marc stays in the room but can be silent. Elena asks for one sentence of reassurance. Neither gets their full pole—but neither collapses.
+              </div>
+            </div>
+
+            {/* Case 2: Group/Community */}
+            <div className={styles.caseCard}>
+              <h3>The Worship Style Divide</h3>
+              <div className={styles.caseThread}>Thread: MEMORY</div>
+              <p className={styles.caseTension}>
+                A congregation is polarized between "traditionalists" who want established liturgy and "innovators" who want contemporary worship.
+              </p>
+              <div className={styles.casePoles}>
+                <div className={styles.pole}>
+                  <strong>Given:</strong> "This is who we are. Our history matters."
+                </div>
+                <div className={styles.pole}>
+                  <strong>Chosen:</strong> "We must stay relevant. Growth requires change."
+                </div>
+              </div>
+              <div className={styles.caseEmergence}>
+                <strong>Emergence:</strong> "Woven liturgy" services pairing traditional hymns with contemporary poetry. Neither pole dominates—both inform a richer whole.
+              </div>
+            </div>
+
+            {/* Case 3: Organization */}
+            <div className={styles.caseCard}>
+              <h3>Two Directors, One Budget</h3>
+              <div className={styles.caseThread}>Thread: PAUSE</div>
+              <p className={styles.caseTension}>
+                Director of Product and Director of Operations in constant conflict. Product wants to "move fast." Operations wants to "get it right."
+              </p>
+              <div className={styles.casePoles}>
+                <div className={styles.pole}>
+                  <strong>Not Yet:</strong> "We don't know enough. Rushing creates technical debt."
+                </div>
+                <div className={styles.pole}>
+                  <strong>Now:</strong> "We're losing ground. Perfect is the enemy of good."
+                </div>
+              </div>
+              <div className={styles.caseEmergence}>
+                <strong>Emergence:</strong> Phased rollout: core features ship immediately (Now), while complex integrations get structured development time (Not Yet). Regular checkpoints prevent collapse.
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -90,7 +168,7 @@ const Home: React.FC = () => {
           </div>
 
           <p className={styles.pathwaysCta}>
-            The world doesn't need fewer tensions. It needs more people who can hold them.
+            The world doesn't need fewer tensions.<br />It needs more people who can hold them.
           </p>
         </div>
       </section>
