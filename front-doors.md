@@ -6,7 +6,7 @@ Field-Specific Introductions
 
 This document contains introductions tailored for:
 
-| Clergy \&Pastoral Care | Therapists \&Counselors | Coaches \&Mentors | Mediators \&Facilitators | Corporate \&Org Leaders |
+| Clergy &Pastoral Care | Therapists & Counselors | Coaches &Mentors | Mediators &Facilitators | Corporate &Org Leaders |
 | :---: | :---: | :---: | :---: | :---: |
 
 Each introduction speaks to practitioners in their own language,  
@@ -41,7 +41,7 @@ Good pastoral care doesn't rush to fix. It holds space. It honors the "not yet."
 
 The same framework applies to one-on-one pastoral conversations, couples in crisis, committee conflicts, and congregation-wide discernment. You don't need different tools for different contexts—just different applications of the same diagnostic structure.
 
-| KEY APPLICATIONS FOR CLERGY • Pastoral Conversations: Use the Navigation Conversation protocol for one-on-one care • Couples & Families: Help partners see how they've collapsed toward opposite poles • Congregational Conflict: Diagnose which thread is activated; name both sides' legitimate concerns • Discernment Circles: Use seed questions as prompts for group reflection • Sermon & Teaching: The seven threads provide rich material for preaching series • Committee Work: When meetings get stuck, identify the underlying tension  |
+| KEY APPLICATIONS FOR CLERGY • Pastoral Conversations: Use the Threadwork protocol for one-on-one care • Couples & Families: Help partners see how they've collapsed toward opposite poles • Congregational Conflict: Diagnose which thread is activated; name both sides' legitimate concerns • Discernment Circles: Use seed questions as prompts for group reflection • Sermon & Teaching: The seven threads provide rich material for preaching series • Committee Work: When meetings get stuck, identify the underlying tension  |
 | :---- |
 
 ## **Threads Most Relevant to Pastoral Ministry**
@@ -127,7 +127,7 @@ Threads doesn't assume something is wrong. It assumes something is stuck. The fr
 
 ### **Action-Ready**
 
-The Navigation Conversation is a 20-minute protocol with clear phases: Arrive, Name, Hold, Integrate. It produces movement in a single session. Clients leave with insight AND next steps. This fits the action-orientation of coaching engagements.
+Threadwork is a 20-minute protocol with clear phases: Arrive, Name, Hold, Integrate. It produces movement in a single session. Clients leave with insight AND next steps. This fits the action-orientation of coaching engagements.
 
 ### **Works Across Contexts**
 
@@ -142,7 +142,7 @@ A senior leader is offered a C-suite role. She's excited AND terrified. She keep
 
 Standard coaching might explore values, examine limiting beliefs, or push toward action. Threads adds: This is the BECOMING thread—the tension between Same and Different. She's oscillating between collapse into Same ("I'm not ready") and collapse into Different (idealized fantasies of the new role). Neither pole is the answer. Your work is to help her hold both: she IS who she's been AND she's becoming someone new. From that held tension, a third thing can emerge—perhaps a 90-day transition experiment that reduces the existential stakes while allowing real movement.
 
-## **The 20-Minute Navigation Conversation**
+## **The 20-Minute Threadwork**
 
 The signature Threads protocol fits naturally into coaching sessions:
 
@@ -181,9 +181,9 @@ Compromise splits the difference. Creative tension held without collapse produce
 
 ### **Diagnostic Precision**
 
-When mediation stalls, it helps to know why. The seven threads provide diagnostic categories: Is this about PRESENCE (who's at the table)? CONSENT (who decides)? MEMORY (what happened)? PAUSE (timing)? Accurate diagnosis enables targeted engagement.
+When mediation stalls, it helps to know why. The seven threads provide diagnostic categories: Is this about PRESENCE (who's at the table)? CONSENT (who decides)? MEMORY (what happened)? PAUSE (timing)? Accurate diagnosis enables targeted intervention.
 
-| KEY APPLICATIONS FOR MEDIATORS • Impasse Breaking: Identify which thread is activated; name both poles; reframe as shared challenge • Pre-Mediation: Use seed questions to understand each party's position within a thread • Caucus Work: Help parties see their own collapse and access the other pole's wisdom • Agreement Sustainability: Ensure agreements honor both poles rather than forcing one party's collapse • Restorative Circles: Use seven seed questions as prompts for healing circles • Facilitation: When groups are stuck, diagnose the thread and use appropriate engagements  |
+| KEY APPLICATIONS FOR MEDIATORS • Impasse Breaking: Identify which thread is activated; name both poles; reframe as shared challenge • Pre-Mediation: Use seed questions to understand each party's position within a thread • Caucus Work: Help parties see their own collapse and access the other pole's wisdom • Agreement Sustainability: Ensure agreements honor both poles rather than forcing one party's collapse • Restorative Circles: Use seven seed questions as prompts for healing circles • Facilitation: When groups are stuck, diagnose the thread and use appropriate interventions  |
 | :---- |
 
 ## **A Mediation Example**
@@ -219,11 +219,11 @@ If you've used Barry Johnson's Polarity Management or similar frameworks, Thread
 
 ### **Works at Individual, Team, and System Levels**
 
-The same seven threads appear in individual coaching conversations, team dynamics, and organizational strategy. A leader stuck in PAUSE (Now vs. Not Yet) creates a team culture that reflects that collapse. Systemic diagnosis enables systemic engagement.
+The same seven threads appear in individual coaching conversations, team dynamics, and organizational strategy. A leader stuck in PAUSE (Now vs. Not Yet) creates a team culture that reflects that collapse. Systemic diagnosis enables systemic intervention.
 
 ### **Actionable in Real Time**
 
-The Navigation Conversation protocol can be used in a 20-minute one-on-one, a team meeting that's gone sideways, or a strategic planning session. You don't need to stop everything for a workshop—you can apply the framework in the flow of work.
+Threadwork protocol can be used in a 20-minute one-on-one, a team meeting that's gone sideways, or a strategic planning session. You don't need to stop everything for a workshop—you can apply the framework in the flow of work.
 
 | KEY APPLICATIONS FOR ORGANIZATIONAL LEADERS • Strategic Planning: Identify which organizational tensions are driving strategic debates • Team Dysfunction: Diagnose collapse patterns; help teams access both poles • Decision Paralysis: PAUSE and UNCERTAINTY threads for stuck decisions • Change Management: MEMORY thread (Given ↔ Chosen) for navigating tradition vs. innovation • Executive Coaching: BECOMING thread for leaders in role transitions • Conflict Resolution: Name the underlying thread to shift from adversarial to collaborative  |
 | :---- |
@@ -244,7 +244,7 @@ The Navigation Conversation protocol can be used in a 20-minute one-on-one, a te
 
 Your leadership team is stuck on a strategic decision. Half want to expand into a new market now ("We'll lose the window\!"). Half want to wait until the core business is more stable ("We're not ready\!"). Every meeting ends in frustration. Both sides think the other is being irresponsible.
 
-Traditional approaches might seek compromise or push for a decision. Threads adds: This is the PAUSE thread—Now vs. Not Yet. Both sides carry organizational wisdom. The "Now" faction sees real market opportunity; the "Not Yet" faction sees real operational risk. They've collapsed toward opposite poles and can only see each other as adversaries. Your engagement: Name the thread. Validate both poles publicly. Ask: "What is genuinely ready to move now? What genuinely needs more time?" From that held tension, a third option often emerges—perhaps a targeted pilot that captures opportunity while limiting exposure.
+Traditional approaches might seek compromise or push for a decision. Threads adds: This is the PAUSE thread—Now vs. Not Yet. Both sides carry organizational wisdom. The "Now" faction sees real market opportunity; the "Not Yet" faction sees real operational risk. They've collapsed toward opposite poles and can only see each other as adversaries. Your intervention: Name the thread. Validate both poles publicly. Ask: "What is genuinely ready to move now? What genuinely needs more time?" From that held tension, a third option often emerges—perhaps a targeted pilot that captures opportunity while limiting exposure.
 
 | NEXT STEPS • Attend a Tier 1 Foundations workshop (4 hours) • Explore Tier 2 Practitioner certification • Download the Threads Cheat Sheet for quick reference • Review the Crosswalk Appendix for integration with your current modality • Contact: The Creative Advance Institute |
 | :---- |
@@ -255,13 +255,13 @@ All five field-specific applications draw on the same underlying framework. Here
 
 | Thread | Seed Question | Pole ↔ Pole | Collapse Signs |
 | :---- | :---- | :---- | :---- |
-| **PRESENCE** | *Who's there?* | Within ↔ Between | Isolation / Enmeshment |
-| **CONSENT** | *May I?* | Yes ↔ No | Boundaryless / Rigid |
-| **MEMORY** | *What happened?* | Given ↔ Chosen | Possessed / Rootless |
-| **PAUSE** | *Why wait here?* | Not Yet ↔ Now | Paralysis / Reactivity |
-| **EMBODIMENT** | *How does my body know?* | Think ↔ Feel | Dissociation / Flooding |
-| **UNCERTAINTY** | *What is the mystery?* | Hide ↔ Seek | Paralyzed / Reckless |
-| **BECOMING** | *Who am I now?* | Same ↔ Different | Stuck / Unmoored |
+| **PRESENCE** | *Where am I…?* | Within ↔ BetweenHere ↔ Elsewhere | Isolation / Enmeshment |
+| **CONSENT** | *What may I…?* | Yes ↔ NoSelf ↔ Other | Boundaryless / Rigid |
+| **MEMORY** | *Why do I…?* | Given ↔ ChosenTelling ↔ Told | Possessed / Rootless |
+| **PAUSE** | *When can I…?* | Not Yet ↔ NowMore ↔ Enough | Paralysis / Reactivity |
+| **EMBODIMENT** | *How does my body know?* | Think ↔ FeelStay ↔ Go | Dissociation / Flooding |
+| **UNCERTAINTY** | *What is the mystery unveiling?* | Hide ↔ SeekThreat ↔ Wonder | Paralyzed / Reckless |
+| **BECOMING** | *Who am I becoming now?* | Same ↔ DifferentReturn ↔ Forward | Stuck / Unmoored |
 
 ## **The Session Arc**
 
@@ -277,7 +277,7 @@ These field-specific introductions are entry points into the complete Threads of
 
 * Facilitator Guide — Complete practitioner manual
 
-* Navigation Conversation Protocol — The signature 20-minute engagement
+* Threadwork Protocol — The signature 20-minute engagement
 
 * Cheat Sheet — One-page quick reference for live sessions
 

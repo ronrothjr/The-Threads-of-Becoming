@@ -1,4 +1,4 @@
-# **THREADS OF BECOMING**
+**THREADS OF BECOMING**
 
 Crosswalk Appendix
 
@@ -6,7 +6,7 @@ Crosswalk Appendix
 
 For practitioners trained in other frameworks
 
-## **Introduction**
+# **Introduction**
 
 The Threads of Becoming is designed to complement, not replace, existing therapeutic, coaching, and facilitation modalities. If you're trained in another framework, this crosswalk will help you see where Threads connects with what you already know—and where it offers something distinct.
 
@@ -99,7 +99,7 @@ Use NVC's feelings/needs vocabulary within Threads' structure. When someone iden
 
 ### **Integration Suggestion**
 
-EFT practitioners can use Threads to identify the specific tension driving the negative cycle. The seven threads offer more granularity than EFT's primary focus on attachment. When you've named the cycle, ask: "Which thread is this—Presence, Consent, Memory?" This often reveals the specific engagement point.
+EFT practitioners can use Threads to identify the specific tension driving the negative cycle. The seven threads offer more granularity than EFT's primary focus on attachment. When you've named the cycle, ask: "Which thread is this—Presence, Consent, Memory?" This often reveals the specific intervention point.
 
 # **Polarity Management / Polarity Thinking**
 
@@ -118,7 +118,7 @@ EFT practitioners can use Threads to identify the specific tension driving the n
 
 * Somatic and embodied dimension (Polarity Thinking is primarily cognitive)
 
-* Diagnostic questions for in-session navigation
+* Diagnostic questions for in-session Threadwork
 
 * Collapse as relational/systemic pattern, not just strategic error
 
@@ -204,7 +204,7 @@ Circle keepers can use the seven seed questions as round prompts. When a circle 
 
 ### **Integration Suggestion**
 
-Bowen practitioners can use Threads for real-time navigation within sessions. Bowen provides the systemic diagnosis (triangles, fusion, cutoff); Threads provides the moment-to-moment facilitation moves. When you see emotional reactivity, identify which thread is collapsing and use its micro-engagement.
+Bowen practitioners can use Threads for real-time Threadwork within sessions. Bowen provides the systemic diagnosis (triangles, fusion, cutoff); Threads provides the moment-to-moment facilitation moves. When you see emotional reactivity, identify which thread is collapsing and use its micro-engagement.
 
 # **Summary: Quick-Reference Grid**
 

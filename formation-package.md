@@ -1,4 +1,4 @@
-# **THE CREATIVE ADVANCE INSTITUTE**
+**THE CREATIVE ADVANCE INSTITUTE**
 
 501(c)(3) Nonprofit Formation
 
@@ -568,7 +568,7 @@ ADOPTED this \_\_\_\_\_ day of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_, 20\_\_\_.
 
 # **90-Day Pre-Flight Execution Plan**
 
-*This plan prioritizes the deployment of assets based on dependencies: you cannot sell the Certification until the Legal Entity exists, and you cannot sell the Corporate Workshop until you have beta-tested the Navigation Conversation.*
+*This plan prioritizes the deployment of assets based on dependencies: you cannot sell the Certification until the Legal Entity exists, and you cannot sell the Corporate Workshop until you have beta-tested Threadwork.*
 
 # **PHASE 1: FOUNDATION & COMPLIANCE (Days 1-30)**
 
@@ -587,7 +587,7 @@ ADOPTED this \_\_\_\_\_ day of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_, 20\_\_\_.
 **Assets to Bundle:**  
 • **The Map:** Threads Map (The visual anchor)  
 • **The Dashboard:** Threads Cheat Sheet (The one-pager for real-time use)  
-• **The Manual:** Threads Navigation Conversation (The script)
+• **The Manual:** Threadwork (The script)
 
 ## **3\. Digital Home Base (Week 4\)**
 
@@ -622,7 +622,7 @@ ADOPTED this \_\_\_\_\_ day of \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_, 20\_\_\_.
 
 ## **1\. The Corporate "Trojan Horse" (Week 9-10)**
 
-**Action:** Pitch the "Team Tension Navigation" workshop to three corporate leads.  
+**Action:** Pitch the "Team Tension Threadwork" workshop to three corporate leads.  
 **Asset:** Organizations Field Guide  
 • **The Hook:** Use Case Study 4: The Innovation Impasse  
 • Pitch the resolution of "Risk Aversion vs. Innovation" as a strategic necessity, not a soft skill

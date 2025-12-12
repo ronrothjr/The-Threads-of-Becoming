@@ -29,39 +29,39 @@ This field guide translates the Threads framework into practical organizational 
 
 Each thread manifests in predictable organizational patterns. Use this mapping to quickly diagnose which tension is driving the dynamics you observe.
 
-## **PRESENCE: Within ↔ Between**
+## **PRESENCE: Within ↔ Between / Here ↔ Elsewhere**
 
-**Seed question:** *"Who's there?"*
+**Seed question:** *"Where am I…?"*
 
 | Organizational Tensions | Collapse Signs |
 | :---- | :---- |
 | Individual contributor ↔ Team player Autonomy ↔ Collaboration Remote/async ↔ In-person/sync Deep work ↔ Availability | **Within collapse:** Silos, hoarding, "not my job," isolation, heroic individual contributors **Between collapse:** Meeting overload, groupthink, no individual accountability, decision by committee |
 
-## **CONSENT: Yes ↔ No**
+## **CONSENT: Yes ↔ No / Self ↔ Other**
 
-**Seed question:** *"May I?"*
+**Seed question:** *"What may I…?"*
 
 | Organizational Tensions | Collapse Signs |
 | :---- | :---- |
 | Centralized ↔ Decentralized Top-down ↔ Bottom-up Control ↔ Empowerment Standardization ↔ Local adaptation | **Yes collapse:** No boundaries, scope creep, overcommitment, inability to prioritize, burnout culture **No collapse:** Bureaucratic rigidity, "that's not how we do it," innovation blocked, talent exodus |
 
-## **MEMORY: Given ↔ Chosen**
+## **MEMORY: Given ↔ Chosen / Telling ↔ Told**
 
-**Seed question:** *"What happened?"*
+**Seed question:** *"Why do I…?"*
 
 | Organizational Tensions | Collapse Signs |
 | :---- | :---- |
 | Legacy systems ↔ New technology "How we've always done it" ↔ Innovation Institutional knowledge ↔ Fresh perspective Tradition ↔ Disruption | **Given collapse:** "We tried that before," resistance to change, legacy tech as sacred, new hires dismissed **Chosen collapse:** Reinventing wheels, ignoring lessons learned, no institutional memory, churn |
 
-## **PAUSE: Not Yet ↔ Now**
+## **PAUSE: Not Yet ↔ Now / More ↔ Enough**
 
-**Seed question:** *"Why wait here?"*
+**Seed question:** *"When do I…?"*
 
 | Organizational Tensions | Collapse Signs |
 | :---- | :---- |
 | Planning ↔ Execution Analysis ↔ Action Strategy ↔ Tactics R\&D ↔ Operations | **Not Yet collapse:** Analysis paralysis, endless planning, "we need more data," missed market windows **Now collapse:** Fire-fighting culture, no strategy, reactive chaos, burnout, quality issues |
 
-## **EMBODIMENT: Think ↔ Feel**
+## **EMBODIMENT: Think ↔ Feel / Stay ↔ Go**
 
 **Seed question:** *"How does my body know?"*
 
@@ -69,17 +69,17 @@ Each thread manifests in predictable organizational patterns. Use this mapping t
 | :---- | :---- |
 | Data-driven ↔ Intuition Metrics ↔ Culture Head ↔ Heart in leadership Logic ↔ Relationship | **Think collapse:** Spreadsheet worship, ignoring morale, "feelings don't belong at work," robotic culture **Feel collapse:** Drama-driven decisions, no accountability, "vibe" over performance, avoidance of hard conversations |
 
-## **UNCERTAINTY: Hide ↔ Seek**
+## **UNCERTAINTY: Hide ↔ Seek / Threat ↔ Wonder**
 
-**Seed question:** *"What is the mystery?"*
+**Seed question:** *"What is the mystery unveiling?"*
 
 | Organizational Tensions | Collapse Signs |
 | :---- | :---- |
 | Risk management ↔ Innovation Known markets ↔ New ventures Stability ↔ Agility Predictability ↔ Experimentation | **Hide collapse:** Risk aversion, "we don't do that here," missed opportunities, fear-based culture **Seek collapse:** Reckless bets, no risk assessment, shiny object syndrome, value destruction |
 
-## **BECOMING: Same ↔ Different**
+## **BECOMING: Same ↔ Different / Return ↔ Forward**
 
-**Seed question:** *"Who am I now?"*
+**Seed question:** *"Who am I becoming now?"*
 
 | Organizational Tensions | Collapse Signs |
 | :---- | :---- |
@@ -113,7 +113,7 @@ Use these questions to quickly identify which thread is driving organizational d
 
 # **Meeting Templates**
 
-## **Template 1: Team Tension Navigation (60 minutes)**
+## **Template 1: Team Tension Threadwork (60 minutes)**
 
 **Use when:** A team is stuck on a decision, experiencing recurring conflict, or facing a significant choice.
 
@@ -147,7 +147,7 @@ Use these questions to quickly identify which thread is driving organizational d
 **CLOSE (5 min)**
 
 * Summarize: "The thread we're navigating is \[X\]. Both poles carry wisdom."  
-* Identify next steps (if decision needed) or ongoing navigation practices  
+* Identify next steps (if decision needed) or ongoing Threadwork practices  
 * Check: "What's different now than when we started?"
 
 ## **Template 2: Strategic Planning Tension Mapping (90 minutes)**
@@ -183,7 +183,7 @@ Use these questions to quickly identify which thread is driving organizational d
 
 **INTEGRATION (20 min)**
 
-* Create a "Tension Navigation Dashboard" for ongoing use  
+* Create a "Tension Threadwork Dashboard" for ongoing use  
 * Assign owners for each key tension  
 * Schedule quarterly tension check-ins  
 * Document: "We're committed to holding \[X\] and \[Y\] together"
@@ -220,7 +220,7 @@ Use these questions to quickly identify which thread is driving organizational d
 
 # **Facilitation Micro-Sequences**
 
-Use these short engagements when you encounter thread dynamics in any meeting:
+Use these short interventions when you encounter thread dynamics in any meeting:
 
 ## **When a Meeting Gets Stuck (5 minutes)**
 
@@ -254,7 +254,7 @@ Use these short engagements when you encounter thread dynamics in any meeting:
 * **Primary: PAUSE** (Not Yet ↔ Now) — Engineering collapsed toward Not Yet ("we need to plan this"), Sales collapsed toward Now ("just ship it")  
 * **Secondary: MEMORY** (Given ↔ Chosen) — Tension between "scrappy startup culture" and emerging need for institutional process
 
-**engagement:** 
+**Intervention:** 
 
 * Named the thread explicitly in leadership offsite  
 * Had each faction articulate wisdom in the other's position  
@@ -275,7 +275,7 @@ Leadership stopped trying to "win" and started navigating together. Developed co
 * **Primary: MEMORY** (Given ↔ Chosen) — Regional collapsed toward Given ("our way worked"), National collapsed toward Chosen ("adopt our systems")  
 * **Secondary: BECOMING** (Same ↔ Different) — Regional terrified of losing identity; National saw regional identity as obstacle
 
-**engagement:** 
+**Intervention:** 
 
 * Facilitated "Integration Tensions" workshop with combined leadership  
 * National leaders asked to name what regional bank did better  
@@ -297,7 +297,7 @@ Discovered regional bank's customer relationship practices were measurably super
 * **Primary: PRESENCE** (Within ↔ Between) — Remote advocates collapsed toward Within ("I do my best work alone"), Office advocates collapsed toward Between ("we need connection")  
 * **Secondary: CONSENT** (Yes ↔ No) — Employees experienced mandate as boundary violation; executives saw resistance as entitlement
 
-**engagement:** 
+**Intervention:** 
 
 * Led CEO through personal Threads exploration (where was HE collapsed?)  
 * Facilitated town hall explicitly naming the thread  
@@ -319,7 +319,7 @@ Rather than hybrid mandate, created "connection rituals" (team summits, project 
 * **Primary: UNCERTAINTY** (Hide ↔ Seek) — Organization systemically collapsed toward Hide (risk aversion). 80 years of success had calcified into "we know what works"  
 * **Secondary: MEMORY** (Given ↔ Chosen) — Legacy success treated as sacred; "new" automatically suspect
 
-**engagement:** 
+**Intervention:** 
 
 * Mapped organizational collapse patterns with senior leadership  
 * Asked: "What is our risk aversion protecting? What is it costing us?"  
@@ -364,7 +364,7 @@ Your organization is already navigating these tensions. Threads gives you a shar
 **Next Steps:**
 
 * **Individual:** Complete the Leader Self-Assessment. Identify your collapse patterns.  
-* **Team:** Run a Team Tension Navigation session on your most stuck issue.  
+* **Team:** Run a Team Tension Threadwork session on your most stuck issue.  
 * **Organization:** Map organizational collapse patterns. Where has your culture lost access to important poles?  
 * **Development:** Consider Threads Practitioner Certification for OD professionals and executive coaches.
 

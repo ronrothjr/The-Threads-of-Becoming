@@ -158,7 +158,7 @@ By the end of Tier 1, participants will be able to:
 
 ## **Purpose**
 
-Tier 2 develops practitioners who can skillfully apply the Threads framework in one-on-one and dyadic (couples, pairs) contexts. Participants master the Navigation Conversation protocol and develop diagnostic accuracy, collapse correction skills, and ethical judgment.
+Tier 2 develops practitioners who can skillfully apply the Threads framework in one-on-one and dyadic (couples, pairs) contexts. Participants master the Threadwork protocol and develop diagnostic accuracy, collapse correction skills, and ethical judgment.
 
 This tier is designed for:
 
@@ -176,7 +176,7 @@ This tier is designed for:
 
 By the end of Tier 2, participants will be able to:
 
-1. Conduct a complete Navigation Conversation with fidelity to the protocol.
+1. Conduct a complete Threadwork session with fidelity to the protocol.
 
 2. Accurately diagnose which thread is activated in a presenting situation.
 
@@ -194,7 +194,7 @@ By the end of Tier 2, participants will be able to:
 
 | Module | Topic | Duration | Key Outcomes |
 | :---- | :---- | :---- | :---- |
-| **1** | The Navigation Conversation | 4 hrs | Master the 4-phase protocol; understand facilitator stance |
+| **1** | Threadwork | 4 hrs | Master the 4-phase protocol; understand facilitator stance |
 | **2** | Diagnostic Accuracy | 4 hrs | Develop skill in thread identification; avoid mis-diagnosis |
 | **3** | Collapse & Emergence | 4 hrs | Recognize and correct collapse; detect and support emergence |
 | **4** | Dyadic Application & Ethics | 4 hrs | Adapt for couples/pairs; understand scope and boundaries |
@@ -203,7 +203,7 @@ Plus 6 hours of supervision (3 sessions of 2 hours each) spread across the train
 
 ## **Week-by-Week Detail**
 
-### **Week 1: The Navigation Conversation (4 hours)**
+### **Week 1: Threadwork (4 hours)**
 
 Learning Focus: Master the signature 20-minute engagement protocol.
 
@@ -217,7 +217,7 @@ Learning Focus: Master the signature 20-minute engagement protocol.
 
 * Triads practice: Practitioner, Client, Observer
 
-* Homework: Conduct one practice Navigation Conversation; bring recording or notes
+* Homework: Conduct one practice Threadwork; bring recording or notes
 
 ### **Week 2: Diagnostic Accuracy (4 hours)**
 
@@ -257,7 +257,7 @@ Learning Focus: Adapt the framework for two-party contexts; establish ethical pr
 
 * Dyadic dynamics: How couples/pairs collapse toward opposite poles
 
-* Modified Navigation Conversation for dyads
+* Modified Threadwork for dyads
 
 * Maintaining neutrality while honoring both parties
 
@@ -265,7 +265,7 @@ Learning Focus: Adapt the framework for two-party contexts; establish ethical pr
 
 * When Threads is not appropriate; when to refer out
 
-* Practice: Full dyadic Navigation Conversation
+* Practice: Full dyadic Threadwork
 
 * Introduction to Reflection Tool for ongoing practice
 
@@ -289,7 +289,7 @@ To receive the Certified Threads Practitioner (CTP) designation:
 
 * Complete all three supervision sessions
 
-* Submit one recorded Navigation Conversation for assessment
+* Submit one recorded Threadwork session for assessment
 
 * Submit one written case study (2-3 pages) demonstrating framework application
 
@@ -356,7 +356,7 @@ By the end of Tier 3, participants will be able to:
 | **1** | Multi-Party Dynamics | 4 hrs | Understand group collapse patterns; facilitate beyond dyads |
 | **2** | Discernment Circles | 4 hrs | Design and lead group discernment using Threads |
 | **3** | Organizational Application | 4 hrs | Apply framework to teams, leadership, strategy |
-| **4** | Systemic Diagnosis | 4 hrs | Identify organizational collapse patterns; design engagements |
+| **4** | Systemic Diagnosis | 4 hrs | Identify organizational collapse patterns; design interventions |
 | **5** | Training & Supervision | 4 hrs | Learn to teach Tier 1; supervise Tier 2 candidates |
 | **6** | Advanced Ethics & Integration | 4 hrs | Navigate complex situations; develop personal practice |
 
@@ -372,7 +372,7 @@ Learning Focus: Move from dyadic to group application.
 
 * The facilitator's position in multi-party work
 
-* Modified Navigation Conversation for groups
+* Modified Threadwork for groups
 
 * When different parties are on different threads
 
@@ -414,9 +414,9 @@ Learning Focus: See and work with system-level patterns.
 
 * Diagnostic interviews and observation
 
-* Designing engagements at system level
+* Designing interventions at system level
 
-* The limits of individual engagement in systemic collapse
+* The limits of individual intervention in systemic collapse
 
 * When to recommend deeper organizational work
 
@@ -478,7 +478,7 @@ To receive the Certified Threads Facilitator (CTF) designation:
 
 * Submit practicum portfolio (reflections \+ supervisor feedback)
 
-* Pass live assessment: Facilitate a group Navigation Conversation with observers
+* Pass live assessment: Facilitate a group Threadwork session with observers
 
 * Demonstrate competency in teaching Tier 1 (observed session)
 
@@ -514,7 +514,7 @@ Practitioners have their own tensions and collapses. We commit to ongoing self-a
 
 ### **6\. Maintain Confidentiality**
 
-What is shared in Navigation Conversations and group facilitations is confidential. Exceptions: immediate danger, legal requirements, supervision (with appropriate anonymization).
+What is shared in Threadwork sessions and group facilitations is confidential. Exceptions: immediate danger, legal requirements, supervision (with appropriate anonymization).
 
 ### **7\. Navigate Power Responsibly**
 
@@ -525,7 +525,7 @@ Practitioners are aware of power dynamics in their relationships with clients an
 | Certification | Authorized Activities |
 | :---- | :---- |
 | Foundations Certificate | Personal application; informal sharing with others; NOT professional practice |
-| Certified Practitioner | Individual and dyadic Navigation Conversations within professional context; NOT group facilitation, NOT organizational consulting, NOT training others |
+| Certified Practitioner | Individual and dyadic Threadwork sessions within professional context; NOT group facilitation, NOT organizational consulting, NOT training others |
 | Certified Facilitator | All Practitioner activities PLUS group facilitation, organizational consulting, teaching Tier 1, supervising Tier 2 candidates |
 
 ## **When to Refer**

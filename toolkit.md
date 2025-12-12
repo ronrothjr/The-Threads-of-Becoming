@@ -59,6 +59,10 @@ This toolkit contains 19 documents organized into four categories. Total content
 | **[Tier 2 Supervision Handbook](tier2-supervision-handbook.md)** | 16 | Trainers, workshop leaders | Supervisor ession guides, practice recording guidelines, feedback forms & rubrics, candidate supervision portfolio, and extended engagement pathway |
 | **[Nonprofit One-Pager](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/creative-advance-institute-one-pager.pdf)** | 1 | Potential partners, donors | Overview of Creative Advance Institute mission and programs. |
 | **[501(c)(3) Formation Package](formation-package.md)** | 20+ | Board, legal, founders | Articles, bylaws, conflict of interest policy, and board materials. |
+| **[Community of Practice Guidelines](community-of-practice.md)** | 12 | Board, legal, founders | Structures for Ongoing Learning, Connection, and Growth |
+| **[Program Operations Manual](program-operations.manual.md)** | 12 | Administrative Guide for Training Program Management - Scheduling • Registration • Certification • Records |
+| **[Facilitator Handbook](facilitator-handbook.md)** | 30 | Comprehensive Guide for Certified Threads Facilitators - Competencies • Assessment • Training • Supervision |
+| **[Supervisor Handbook](supervisor-handbook.md)** | 16 | A Comprehensive Guide for Supervisors and Candidates - • Supervision Session Guides • Practice Recording Guidelines • Feedback Forms & Rubrics • Candidate Supervision Portfolio • Extended Engagement Pathway |
 | **[Website Strategy](website-strategy.md)** | 9 | Board, legal, founders | Promotional website copy, materials inventory, and production timeline |
 
 # **How to Use This Toolkit**
