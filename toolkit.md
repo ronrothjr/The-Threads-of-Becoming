@@ -32,7 +32,7 @@ This toolkit contains 19 documents organized into four categories. Total content
 | **[Facilitator Guide](facilitators-guide.md)** | 25-30 | Facilitators, group leaders | Complete methodology for leading Threads-based conversations and workshops. |
 | **[Threads and Protocols](protocols.md)** | 70 | Facilitators, group leaders | Detailed thread protocols with activation signals, diagnostic questions, collapse signs, micro-engagements, facilitator notes, example applications, and more |
 | **[Protocol Reference Cards](protocol-reference-cards.pdf)** | 8 | Facilitators (in-session) | Quick-reference cards for use during facilitation. engagement prompts per thread. |
-| **[Navigation Conversation Protocol](navigation-conversation.md)** | 12 | Coaches, therapists, facilitators | Step-by-step guide for one-on-one thread navigation conversations. |
+| **[Threadwork Protocol](threadwork.md)** | 12 | Coaches, therapists, facilitators | Step-by-step guide for one-on-one threadwork. |
 | **[Case Studies \(12 Examples\)](case-studies.md)** | 18 | Trainees, practitioners | Detailed examples across contexts: couples, organizations, healthcare, families, etc. |
 | **[Intake & Diagnostic Form](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/intake-diagnostic.pdf)** | 6 | Practitioners, clients | Assessment tool for identifying active threads and collapse patterns. |
 | **[Reflection Tool](https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/reflection-tool.pdf)** | 4 | Clients, individuals | Guided self-assessment for identifying personal thread patterns. |
