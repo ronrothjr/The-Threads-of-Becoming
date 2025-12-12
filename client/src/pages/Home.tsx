@@ -70,7 +70,7 @@ const Home: React.FC = () => {
             </ul>
           </div>
 
-          <h2 className={styles.pathwaysTitle}>Case Studies</h2>
+          <h2 className={styles.pathwaysTitle}>Sample Case Studies*</h2>
 
           <div className={styles.casesGrid}>
             {/* Case 1: Individual/Couple */}
@@ -133,6 +133,9 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
+          <p style={{textAlign: 'center', marginTop: '2rem', fontSize: 'var(--text-sm)', color: 'var(--color-text-light)', fontStyle: 'italic'}}>
+            *Sample case studies illustrate anticipated applications of the Threads framework
+          </p>
         </div>
       </section>
 

@@ -33,9 +33,9 @@ const Footer: React.FC = () => {
           <div className={styles.footerSection}>
             <h4>Get Involved</h4>
             <ul className={styles.linkList}>
-              <li><a href="/apply/tier1">Tier 1 Foundations</a></li>
-              <li><a href="/apply/tier2">Practitioner Certification</a></li>
-              <li><a href="/apply/tier3">Facilitator Certification</a></li>
+              <li><a href="/training/tier1">Tier 1 Foundations</a></li>
+              <li><a href="/training/tier2">Tier 2 Professional</a></li>
+              <li><a href="/training/tier3">Tier 3 Facilitator</a></li>
               <li><a href="/donate">Support Our Work</a></li>
             </ul>
           </div>

@@ -32,10 +32,21 @@
 }
 
 .tierHeader {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
   color: var(--color-white);
   padding: 2.5rem 2rem;
   text-align: center;
+}
+
+.tier1Header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
+}
+
+.tier2Header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-blue) 100%);
+}
+
+.tier3Header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-purple) 100%);
 }
 
 .tierHeader h2 {

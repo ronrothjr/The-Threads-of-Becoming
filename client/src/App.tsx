@@ -16,10 +16,16 @@ import ExploreThreads from './pages/ExploreThreads';
 import Threadwork from './pages/Threadwork';
 import Navigate from './pages/Navigate';
 import Training from './pages/Training';
+import Tier1 from './pages/Tier1';
+import Tier2 from './pages/Tier2';
+import Tier3 from './pages/Tier3';
 import Mission from './pages/Mission';
 import Organizations from './pages/Organizations';
 import Communities from './pages/Communities';
 import Resources from './pages/Resources';
+import Donate from './pages/Donate';
+import Contact from './pages/Contact';
+import Apply from './pages/Apply';
 
 function AppContent() {
   const location = useLocation();
@@ -66,10 +72,16 @@ function AppContent() {
         <Route path="/threadwork" element={<Threadwork />} />
         <Route path="/navigate" element={<Navigate />} />
         <Route path="/training" element={<Training />} />
+        <Route path="/training/tier1" element={<Tier1 />} />
+        <Route path="/training/tier2" element={<Tier2 />} />
+        <Route path="/training/tier3" element={<Tier3 />} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/organizations" element={<Organizations />} />
         <Route path="/communities" element={<Communities />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/apply/:tier" element={<Apply />} />
       </Routes>
       <Footer />
       <PersistentVideo isHomePage={isHomePage} />

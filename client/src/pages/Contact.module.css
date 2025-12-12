@@ -1,0 +1,256 @@
+.contact {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
+  color: var(--color-white);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-medium);
+  color: var(--color-orange);
+}
+
+/* Contact Options */
+.contactOptions {
+  background: var(--color-off-white);
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.optionCard {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.optionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.optionCard h3 {
+  color: var(--color-navy);
+  font-size: var(--text-xl);
+  margin-bottom: 0.75rem;
+}
+
+.optionCard p {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.emailLink {
+  display: inline-block;
+  color: var(--color-teal);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.emailLink:hover {
+  border-bottom-color: var(--color-teal);
+}
+
+/* Form Section */
+.formSection {
+  background: var(--color-white);
+}
+
+.formContainer {
+  max-width: 700px;
+  margin: 0 auto;
+  background: var(--color-off-white);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer h2 {
+  color: var(--color-navy);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.formIntro {
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  font-size: var(--text-base);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: var(--font-semibold);
+  color: var(--color-navy);
+  font-size: var(--text-base);
+}
+
+.input,
+.textarea {
+  padding: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: var(--text-base);
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-teal);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.checkboxLabel input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.submitButton {
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  color: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Info */
+.additionalInfo {
+  background: var(--color-off-white);
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.infoCard {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.infoCard h3 {
+  color: var(--color-navy);
+  font-size: var(--text-xl);
+  margin-bottom: 1rem;
+}
+
+.infoCard p {
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.note {
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-top: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.socialLinks a {
+  color: var(--color-teal);
+  text-decoration: none;
+  font-weight: var(--font-medium);
+  transition: color 0.2s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--color-purple);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: var(--text-4xl);
+  }
+
+  .subtitle {
+    font-size: var(--text-xl);
+  }
+
+  .optionsGrid,
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formContainer {
+    padding: 2rem 1.5rem;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

@@ -16,14 +16,14 @@ const Training: React.FC = () => {
       <section className={`${styles.tiers} section-lg`}>
         <div className="container">
           <div className={styles.tier}>
-            <div className={styles.tierHeader}>
+            <div className={`${styles.tierHeader} ${styles.tier1Header}`}>
               <h2>Tier 1 — Foundations</h2>
               <p className={styles.tierSubtitle}>Learn the universal language of human tension</p>
             </div>
 
             <div className={styles.tierContent}>
               <div className={styles.tierInfo}>
-                <p className={styles.duration}>4 hours • Certificate of Completion</p>
+                <p className={styles.duration}>4 hours • Foundations Certificate of Completion</p>
                 <p className={styles.forWho}>
                   <strong>Perfect for:</strong> Individuals, teams, leaders, educators, ministers, seekers
                 </p>
@@ -49,14 +49,14 @@ const Training: React.FC = () => {
           </div>
 
           <div className={styles.tier}>
-            <div className={styles.tierHeader}>
-              <h2>Tier 2 — Practitioner Certification</h2>
+            <div className={`${styles.tierHeader} ${styles.tier2Header}`}>
+              <h2>Tier 2 — Professional</h2>
               <p className={styles.tierSubtitle}>Learn to guide others with skill, humility, and ethical clarity</p>
             </div>
 
             <div className={styles.tierContent}>
               <div className={styles.tierInfo}>
-                <p className={styles.duration}>16 hours + 6 hours supervision • Certified Threads Practitioner (CTP)</p>
+                <p className={styles.duration}>16 hours + 6 hours supervision • Professional Development Certificate</p>
                 <p className={styles.forWho}>
                   <strong>Perfect for:</strong> Coaches, clergy, therapists, mediators, counselors, spiritual directors
                 </p>
@@ -64,7 +64,7 @@ const Training: React.FC = () => {
                   For helping professionals who work with individuals and dyads. Learn the full Navigation Conversation protocol, diagnostic accuracy, and how to integrate Threads with your existing practice.
                 </p>
                 <p className={styles.note}>
-                  <em>Note:</em> Threads certification complements—does not replace—your existing credentials. We train the navigational framework; you bring the clinical or coaching expertise.
+                  <em>Note:</em> This professional development training complements—does not replace—your existing credentials. We train the navigational framework; you bring the clinical or coaching expertise.
                 </p>
               </div>
 
@@ -86,14 +86,14 @@ const Training: React.FC = () => {
           </div>
 
           <div className={styles.tier}>
-            <div className={styles.tierHeader}>
-              <h2>Tier 3 — Facilitator Certification</h2>
+            <div className={`${styles.tierHeader} ${styles.tier3Header}`}>
+              <h2>Tier 3 — Facilitator</h2>
               <p className={styles.tierSubtitle}>Learn to transform systems, teams, and institutions</p>
             </div>
 
             <div className={styles.tierContent}>
               <div className={styles.tierInfo}>
-                <p className={styles.duration}>24 hours + 20-hour practicum • Certified Threads Facilitator (CTF)</p>
+                <p className={styles.duration}>24 hours + 20-hour practicum • Facilitator Training Certificate</p>
                 <p className={styles.forWho}>
                   <strong>Perfect for:</strong> OD consultants, senior clergy, executive coaches, organizational change practitioners
                 </p>
@@ -125,6 +125,11 @@ const Training: React.FC = () => {
         <div className="container">
           <h2>Ready to Begin?</h2>
           <p>Choose your pathway and start your journey today.</p>
+          <p style={{textAlign: 'center', marginBottom: '2rem', fontSize: 'var(--text-base)', color: 'rgba(255, 255, 255, 0.95)', fontStyle: 'italic', backgroundColor: 'rgba(0, 0, 0, 0.3)', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.2)'}}>
+            <strong>Note:</strong> Current offerings are professional development workshops with Certificates of Completion.
+            A formal certification pathway with CE credits and external accreditation is planned for 2026.
+            Early participants will have priority access to upgrade to full certification.
+          </p>
           <div className={styles.applyButtons}>
             <a href="/apply/tier1" className={styles.applyButton}>Apply for Tier 1</a>
             <a href="/apply/tier2" className={styles.applyButton}>Apply for Tier 2</a>
