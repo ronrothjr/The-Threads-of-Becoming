@@ -344,7 +344,7 @@ These aren't the only tensions that matter. They're the ones that have proven mo
 **The First Thread: PRESENCE**
 
 **The Seed:**   
- *Who's there?*
+ *Where am I...?*
 
 You know the difference between someone who's in the room and someone who's actually *with* you. A friend scrolling their phone while you talk. A partner whose eyes are on you but whose mind is elsewhere. We feel the difference in our bones.
 
@@ -372,7 +372,7 @@ Both are real. Both are needed. The collapse happens when we get stuck: isolatio
 **The Second Thread: CONSENT**
 
 **The Seed:**   
- *May I?*
+ *What may I...?*
 
 Two words that change everything.
 
@@ -402,7 +402,7 @@ This matters enormously in relationships. The partner who checks in—"Is this s
 **The Third Thread: MEMORY**
 
 **The Seed:**   
- *What happened?*
+ *Why do I...?*
 
 "The past is never dead," William Faulkner wrote. "It's not even past."
 
@@ -430,7 +430,7 @@ But this isn't about erasing the past. A family that refuses to speak about the 
 **The Fourth Thread: PAUSE**
 
 **The Seed:**   
- *Why do we wait here?*
+ *Whwn can I...?*
 
 We live in a culture that confuses urgency with importance. The inbox demands immediate response. The news cycle rewards instant reaction. "Don't just stand there—do something\!" we tell each other, as if stillness were always failure.
 
@@ -510,7 +510,7 @@ Richard Rohr puts it simply: "We do not think ourselves into new ways of living.
 **The Seventh Thread: BECOMING**
 
 **The Seed:**  
- *Who am I now?*
+ *Who am I becoming now?*
 
 T.S. Eliot captured the spiral perfectly:
 
