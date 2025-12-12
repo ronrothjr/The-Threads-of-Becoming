@@ -136,7 +136,7 @@ const PersistentVideo: React.FC<PersistentVideoProps> = ({ isHomePage }) => {
           controls
           className={styles.video}
         >
-          <source src="/api/video/intro" type="video/mp4" />
+          <source src="/intro-video.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -155,7 +155,7 @@ const PersistentVideo: React.FC<PersistentVideoProps> = ({ isHomePage }) => {
             poster="/video-poster.jpg"
             className={styles.minimizedVideo}
           >
-            <source src="/api/video/intro" type="video/mp4" />
+            <source src="/intro-video.mp4" type="video/mp4" />
           </video>
           <div className={styles.controls}>
             <button
