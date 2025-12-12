@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import styles from './Article.module.css';
 
 const Practice: React.FC = () => {
+
   return (
-    <div className={styles.article}>
+    <div className={styles.article} id="top">
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>Navigating the Threads</h1>
@@ -82,7 +83,7 @@ const Practice: React.FC = () => {
 
         </div>
           <div style={{textAlign: 'center', marginTop: '2rem'}}>
-            <a href="#" className={styles.backToTop}>↑ Back to Top</a>
+            <a href="#top" className={styles.backToTop}>↑ Back to Top</a>
           </div>
 
       </article>

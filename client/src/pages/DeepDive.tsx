@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom';
 import styles from './Article.module.css';
 
 export default function DeepDive() {
+
   return (
-    <div className={styles.container}>
+    <div className={styles.article} id="top">
       <section className={styles.hero}>
         <h1>The Seven Threads</h1>
         <p className={styles.subtitle}>
@@ -632,7 +633,7 @@ export default function DeepDive() {
         </div>
 
         <div style={{textAlign: 'center', marginTop: '2rem'}}>
-          <a href="#" className={styles.backToTop}>↑ Back to Top</a>
+          <a href="#top" className={styles.backToTop}>↑ Back to Top</a>
         </div>
       </section>
     </div>

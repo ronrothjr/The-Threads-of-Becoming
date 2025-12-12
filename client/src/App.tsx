@@ -30,6 +30,26 @@ function AppContent() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // Handle hash navigation for "Back to Top" links
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#top') {
+        const topElement = document.getElementById('top');
+        if (topElement) {
+          topElement.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Handle initial hash and hash changes
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   return (
     <>
       <Navigation />

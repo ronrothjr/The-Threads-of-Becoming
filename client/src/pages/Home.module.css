@@ -40,26 +40,75 @@
   line-height: var(--leading-relaxed);
 }
 
-.heroContent {
-  max-width: 900px;
-  margin: 0 auto;
+.heroCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.heroCard {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
 }
 
-.heroContent p {
-  font-size: var(--text-lg);
+.heroCard:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.heroCard h3 {
+  color: var(--color-orange);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.heroCard p {
+  font-size: var(--text-base);
   line-height: var(--leading-relaxed);
+  margin-bottom: 0.75rem;
 }
 
-.belief {
+.heroCard p:last-child {
+  margin-bottom: 0;
+}
+
+.heroStory {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.storyLink {
+  display: inline-block;
+  color: var(--color-orange);
+  font-size: var(--text-lg);
   font-weight: var(--font-semibold);
-  font-size: var(--text-xl) !important;
-  margin-top: 1rem;
-  padding-top: 1.5rem;
-  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border: 2px solid var(--color-orange);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.storyLink:hover {
+  background: var(--color-orange);
+  color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(243, 156, 18, 0.3);
 }
 
 .videoSection {
@@ -155,8 +204,17 @@
     font-size: var(--text-lg);
   }
 
-  .heroContent p {
-    font-size: var(--text-base);
+  .heroCards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .heroCard {
+    padding: 1.5rem;
+  }
+
+  .heroCard h3 {
+    font-size: var(--text-xl);
   }
 
   .pathwaysGrid {

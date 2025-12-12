@@ -4,6 +4,7 @@ import styles from './Navigation.module.css';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
@@ -22,22 +23,40 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
       <div className="container">
         <div className={styles.navContent}>
-          <Link to="/" className={styles.logo}>
+          <Link to="/" className={styles.logo} onClick={closeMobileMenu}>
             <img src="/threads-logo-transparent.png" alt="Creative Advance Institute" className={styles.logoIcon} />
-            <span>Creative Advance Institute</span>
+            <span>Creative Advance<br />Institute</span>
           </Link>
 
-          <div className={styles.navLinks}>
-            <Link to="/blog" className={styles.navLink}>Blog</Link>
-            <Link to="/explore" className={styles.navLink}>Explore</Link>
-            <Link to="/navigate" className={styles.navLink}>Navigate</Link>
-            <Link to="/training" className={styles.navLink}>Training</Link>
-            <Link to="/mission" className={styles.navLink}>Mission</Link>
-            <Link to="/portal" className={`${styles.navLink} ${styles.portalLink}`}>Portal</Link>
+          <button
+            className={styles.hamburger}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+            <span className={styles.hamburgerLine}></span>
+          </button>
+
+          <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+            <Link to="/blog" className={styles.navLink} onClick={closeMobileMenu}>Blog</Link>
+            <Link to="/explore" className={styles.navLink} onClick={closeMobileMenu}>Explore</Link>
+            <Link to="/navigate" className={styles.navLink} onClick={closeMobileMenu}>Navigate</Link>
+            <Link to="/training" className={styles.navLink} onClick={closeMobileMenu}>Training</Link>
+            <Link to="/mission" className={styles.navLink} onClick={closeMobileMenu}>Mission</Link>
+            <Link to="/portal" className={`${styles.navLink} ${styles.portalLink}`} onClick={closeMobileMenu}>Portal</Link>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import styles from './Article.module.css';
 
 const HoldingTension: React.FC = () => {
   return (
-    <div className={styles.article}>
+    <div className={styles.article} id="top">
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>Holding the Tension</h1>
@@ -63,7 +63,7 @@ const HoldingTension: React.FC = () => {
 
         </div>
           <div style={{textAlign: 'center', marginTop: '2rem'}}>
-            <a href="#" className={styles.backToTop}>↑ Back to Top</a>
+            <a href="#top" className={styles.backToTop}>↑ Back to Top</a>
           </div>
 
       </article>

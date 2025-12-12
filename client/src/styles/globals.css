@@ -71,6 +71,16 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .container-wide {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
   .section {
     padding: 2rem 0;
   }
