@@ -1,0 +1,165 @@
+.home {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
+  color: var(--color-white);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+  margin: 0 auto 2rem;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.title {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+  letter-spacing: var(--tracking-tight);
+}
+
+.tagline {
+  font-size: var(--text-3xl);
+  margin-bottom: 1.5rem;
+  color: var(--color-orange);
+}
+
+.subtitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-medium);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: var(--leading-relaxed);
+}
+
+.heroContent {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heroContent p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.belief {
+  font-weight: var(--font-semibold);
+  font-size: var(--text-xl) !important;
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.videoSection {
+  padding: 4rem 0;
+}
+
+.pathways {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.pathwaysTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-navy);
+}
+
+.pathwaysGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.pathway {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pathway:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(22, 160, 133, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
+}
+
+.pathway h3 {
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+  font-size: var(--text-2xl);
+}
+
+.pathway p {
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  line-height: var(--leading-relaxed);
+}
+
+.pathwayLink {
+  color: var(--color-teal);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.pathwayLink:hover {
+  color: var(--color-blue);
+}
+
+.pathwaysCta {
+  text-align: center;
+  font-size: var(--text-xl);
+  font-weight: var(--font-medium);
+  font-style: italic;
+  color: var(--color-navy);
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo {
+    width: 200px;
+  }
+
+  .title {
+    font-size: var(--text-4xl);
+  }
+
+  .tagline {
+    font-size: var(--text-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .heroContent p {
+    font-size: var(--text-base);
+  }
+
+  .pathwaysGrid {
+    grid-template-columns: 1fr;
+  }
+}

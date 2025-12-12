@@ -1,0 +1,372 @@
+.resources {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  color: var(--color-white);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+  letter-spacing: var(--tracking-tight);
+}
+
+.tagline {
+  font-size: var(--text-3xl);
+  margin-bottom: 1.5rem;
+  color: var(--color-orange);
+}
+
+.subtitle {
+  font-size: var(--text-xl);
+  font-weight: var(--font-medium);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: var(--leading-relaxed);
+}
+
+.publicTools {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.sectionTitle {
+  text-align: center;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  font-size: var(--text-4xl);
+}
+
+.sectionIntro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: var(--text-lg);
+  color: var(--color-text);
+}
+
+.loginNote {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+}
+
+.loginNote a {
+  color: var(--color-teal);
+  text-decoration: underline;
+}
+
+.toolGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tool {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.tool:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+}
+
+.tool h3 {
+  color: var(--color-teal);
+  margin-bottom: 0.75rem;
+  font-size: var(--text-2xl);
+}
+
+.tool p {
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.downloadButton {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: var(--font-semibold);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.downloadButton:hover {
+  background-color: var(--color-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 160, 133, 0.3);
+}
+
+.foundational,
+.practitioner,
+.specialized {
+  background-color: var(--color-off-white);
+}
+
+.docList {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.doc {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(31, 38, 135, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.doc:hover {
+  box-shadow: 0 8px 24px rgba(31, 38, 135, 0.12);
+  transform: translateX(4px);
+}
+
+.docInfo {
+  flex-grow: 1;
+}
+
+.docInfo h3 {
+  color: var(--color-navy);
+  font-size: var(--text-2xl);
+  margin-bottom: 0.5rem;
+}
+
+.audience {
+  color: var(--color-purple);
+  font-style: italic;
+  font-size: var(--text-sm);
+  margin-bottom: 0.5rem;
+}
+
+.docInfo p:not(.audience) {
+  color: var(--color-text);
+  line-height: var(--leading-relaxed);
+}
+
+.accessButton,
+.lockedButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: var(--font-semibold);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.accessButton {
+  background-color: var(--color-teal);
+  color: var(--color-white);
+}
+
+.accessButton:hover {
+  background-color: var(--color-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(22, 160, 133, 0.3);
+}
+
+.lockedButton {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+}
+
+.lockedButton:hover {
+  background-color: var(--color-dark-gray);
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.category {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.category:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+}
+
+.category h3 {
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  font-size: var(--text-2xl);
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.category li {
+  color: var(--color-text);
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.category li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+  font-weight: var(--font-bold);
+}
+
+.categoryLink {
+  color: var(--color-teal);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.categoryLink:hover {
+  color: var(--color-blue);
+}
+
+.cta {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
+  color: var(--color-white);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-size: var(--text-4xl);
+}
+
+.ctaContent p {
+  font-size: var(--text-xl);
+  margin-bottom: 2rem;
+  line-height: var(--leading-relaxed);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: var(--font-semibold);
+  font-size: var(--text-lg);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.primaryButton {
+  background-color: var(--color-white);
+  color: var(--color-teal);
+}
+
+.primaryButton:hover {
+  background-color: var(--color-off-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.secondaryButton {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--text-4xl);
+  }
+
+  .tagline {
+    font-size: var(--text-2xl);
+  }
+
+  .subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .toolGrid,
+  .categoryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .doc {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .accessButton,
+  .lockedButton {
+    width: 100%;
+    text-align: center;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+}

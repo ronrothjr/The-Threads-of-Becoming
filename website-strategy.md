@@ -68,11 +68,7 @@ We believe that opposing truths—held without collapse—become the birthplace 
 
 ### **What is Threads?**
 
-Threads of Becoming is a universal map of human tension—seven foundational dynamics that shape how people relate, communicate, collapse, recover, and create.
-
 Threads of Becoming is a **navigational framework**—not a personality system, not a therapy model, not a conflict mediation technique. It identifies seven universal tensions that shape human experience across every domain: personal growth, relationships, organizations, and communities.
-
-It is a **navigational method**: a way of holding yourself and others in creative tension long enough for insight, connection, and genuinely new possibilities to emerge.
 
 Each Thread names a fundamental question we all face, and each holds two creative tensions that, when held open rather than collapsed into one pole, become the space where genuine transformation happens.
 
@@ -82,7 +78,20 @@ Threads is grounded in Process Theology and the philosophy of Alfred North White
 
 Threads applies this philosophical foundation to lived human experience. Every moment, every relationship, every organization faces opposing truths that demand recognition. The temptation is to collapse toward one pole—to choose safety over openness, action over reflection, continuity over change. But collapse doesn't resolve tension; it merely suppresses it—we lose access to the creative energy that tension provides.
 
-**Threads teaches a different way:** tension, held without collapse, becomes the birthplace of the genuinely new.
+**Threads teaches a different way:**   
+*tension, held without collapse, becomes the birthplace of the genuinely new.*
+
+### **The Three Movements: See. Hold. Emerge.**
+
+The tagline isn't just a tagline—it's the protocol. The seven Threads organize into three movements that mirror how transformation actually works:
+
+| Tagline | Movement | Threads | What Happens |
+| :---: | :---: | :---: | ----- |
+| **SEE** | Orienting | 1-4 | You locate where you are in the tension |
+| **HOLD** | Sourcing | 5-6 | You receive what body and mystery know |
+| **EMERGE** | Integrating | 7 | You become what's next |
+
+**Orienting questions (1-4)** are incomplete—they trail off with ellipses because *you* must complete them. **Sourcing questions (5-6)** are direct and complete because body and mystery already hold the answers—you ask directly because they're already speaking. **The Integrating question (7)** contains its own tension: identity, process, and present moment held in a single question.
 
 ### **The Seven Threads**
 
@@ -90,19 +99,15 @@ Each thread represents a fundamental human tension with its own seed question an
 
 | Thread | Seed Question | The Poles |
 | ----- | ----- | ----- |
-| **PRESENCE** | *Where am I?* | Within ↔ Between • Here ↔ Elsewhere |
-| **CONSENT** | *What am I willing?* | Yes ↔ No • Self ↔ Other |
-| **MEMORY** | *What must I hold?* | Given ↔ Chosen • Telling ↔ Told |
-| **PAUSE** | *When do I act?* | Not Yet ↔ Now • More ↔ Enough |
-| **EMBODIMENT** | *How do I inhabit?* | Think ↔ Feel • Stay ↔ Go |
-| **UNCERTAINTY** | *What can I know?* | Think ↔ Feel • Stay ↔ Go |
+| **PRESENCE** | *Where am I…?* | Within ↔ Between • Here ↔ Elsewhere |
+| **CONSENT** | *What may I…?* | Yes ↔ No • Self ↔ Other |
+| **MEMORY** | *Why do I…?* | Given ↔ Chosen • Telling ↔ Told |
+| **PAUSE** | *When can I…?* | Not Yet ↔ Now • More ↔ Enough |
+| **EMBODIMENT** | *How does my body know?* | Think ↔ Feel • Stay ↔ Go |
+| **UNCERTAINTY** | *What is the mystery unveiling?* | Think ↔ Feel • Stay ↔ Go |
 | **BECOMING** | *Who am I becoming?* | Same ↔ Different • Return ↔ Forward |
 
 *Each Thread holds two creative tensions. Together they form a four-quadrant field for exploration—not a spectrum with a "healthy middle," but a living space where all positions carry wisdom.*
-
-**How Threads Differs**
-
-Unlike assessment tools that categorize you, Threads meets you where you are. Unlike resolution models that push toward answers, Threads creates space for emergence. The question isn't "Which pole is right?" but "What happens when I can hold both?"
 
 ### **How Threads Works With Other Modalities**
 
@@ -211,6 +216,16 @@ Congregations are communities of meaning-making—and that makes them natural si
 
 Threads offers congregations a shared language for navigating these tensions without splitting, scapegoating, or burning out. Developed and tested in Unitarian Universalist communities, the framework is applicable across faith traditions.
 
+### **Common Challenges We Support**
+
+* Board/staff tensions and role confusion  
+* Mission vs. identity conflict during transitions  
+* Multi-generational expectations and communication styles  
+* Leadership burnout and compassion fatigue  
+* Discernment paralysis during major decisions  
+* Polarization and factionalism  
+* Post-conflict rebuilding and trust repair
+
 ### **What We Offer Congregations**
 
 * **Foundations Workshops** — 4-hour introduction for lay leaders and members  
@@ -224,6 +239,12 @@ Threads offers congregations a shared language for navigating these tensions wit
 ### **Our Mission**
 
 *To cultivate the human capacity to hold creative tension—so individuals, communities, and organizations can move from collapse toward emergence.*
+
+### **Where Threads Came From**
+
+Threads of Becoming emerged from the intersection of congregational leadership, Process Theology, and the practical demands of helping people navigate tensions they couldn't resolve. Working with a Unitarian Universalist congregation's Right Relations Team, Ron Bronson found that existing conflict resolution models often pushed too quickly toward resolution—missing the transformative potential that lives in tension itself.
+
+Over seven months of intensive development—drawing on Whitehead's philosophy, clinical frameworks, and lived practice—the seven Threads crystallized as universal dynamics that appear across personal, relational, and organizational life. The framework has since been tested in workshops, pastoral care, leadership retreats, and one-on-one sessions. It continues to evolve through the practitioners who use it.
 
 ### **What We Believe**
 
@@ -279,7 +300,7 @@ Your gift helps provide:
 
 | Document | Status | Notes |
 | :---- | :---: | :---- |
-| Navigation Conversation Protocol | ✓ DONE | Full 4-phase protocol |
+| Threadwork Protocol | ✓ DONE | Full 4-phase protocol |
 | Facilitator Guide | ✓ DONE | Workshop facilitation |
 | Protocol Cards (7) | ✓ DONE | One per thread |
 | Case Studies (12) | ✓ DONE | Expanded from 6 to 12 |
@@ -304,12 +325,13 @@ Your gift helps provide:
 | :---- | :---: | :---- |
 | Training Pathway (Master Document) | ✓ DONE | All 3 tiers defined |
 | Tier 1 Foundations Slides | ✓ DONE | 37 slides |
-| Tier 2 Practitioner Slides | IN PROGRESS | Modules 1-2 done |
-| Tier 3 Facilitator Slides | NEEDED | After Tier 2 complete |
+| Tier 2 Practitioner Slides | ✓ DONE | Modules 1-2 done |
+| Tier 3 Facilitator Slides | ✓ DONE | After Tier 2 complete |
 | Toolkit Index & Usage Guide | ✓ DONE | 7 pages |
 | Formation Package (Nonprofit) | ✓ DONE | Articles, bylaws, etc. |
 | Nonprofit One-Pager | ✓ DONE | Grant/donor summary |
 | Training Promotional Copy | ✓ DONE | All 3 tiers |
+| 2-Minute Explainer Video Script | NEEDED | For homepage \+ social |
 
 ## **Materials Still Needed**
 
@@ -363,3 +385,6 @@ Your gift helps provide:
 **License:** CC BY-SA 4.0 (Open Source)
 
 **Readiness:** Tier 1 launch-ready; Tier 2 in development; Tier 3 framework defined
+
+**See. Hold. Emerge.**  
+*Tension, held without collapse, becomes the birthplace of the genuinely new.*

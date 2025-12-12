@@ -1,0 +1,211 @@
+.explore {
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-purple) 100%);
+  color: var(--color-white);
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: var(--text-2xl);
+  color: var(--color-orange);
+}
+
+.what,
+.philosophy,
+.movements,
+.threads,
+.who {
+  background-color: var(--color-white);
+}
+
+.what h2,
+.philosophy h2,
+.movements h2,
+.threads h2,
+.who h2 {
+  color: var(--color-navy);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.content p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+}
+
+.philosophy {
+  background-color: var(--color-background-alt);
+  padding: 4rem 0;
+}
+
+.quote {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-style: italic;
+  text-align: center;
+  color: var(--color-navy);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-left: 4px solid var(--color-teal);
+  background-color: var(--color-white);
+  border-radius: 8px;
+}
+
+.movementsIntro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+}
+
+.movementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.movement {
+  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  color: var(--color-white);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.movement h3 {
+  font-size: var(--text-3xl);
+  margin-bottom: 0.5rem;
+  letter-spacing: var(--tracking-wider);
+}
+
+.movementType {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.movement p:last-child {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+}
+
+.threadsIntro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+}
+
+.threadsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.thread {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 6px solid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thread:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.thread.blue { border-left-color: var(--color-blue); }
+.thread.purple { border-left-color: var(--color-purple); }
+.thread.teal { border-left-color: var(--color-teal); }
+.thread.orange { border-left-color: var(--color-orange); }
+.thread.pink { border-left-color: var(--color-pink); }
+.thread.brown { border-left-color: var(--color-brown); }
+.thread.navy { border-left-color: var(--color-navy); }
+
+.threadNumber {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.threadName {
+  font-size: var(--text-2xl);
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+  letter-spacing: var(--tracking-wide);
+}
+
+.threadSeed {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.threadPoles {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
+
+.who {
+  background-color: var(--color-background-alt);
+  padding: 4rem 0;
+}
+
+.whoList {
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.whoList li {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  padding: 1rem 0 1rem 2.5rem;
+  position: relative;
+}
+
+.whoList li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+  font-weight: var(--font-bold);
+  font-size: var(--text-xl);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .movementsGrid,
+  .threadsGrid {
+    grid-template-columns: 1fr;
+  }
+}

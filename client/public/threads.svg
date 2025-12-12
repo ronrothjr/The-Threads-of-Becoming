@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <!-- Blue thread -->
+  <path d="M 10 40 Q 30 20, 50 40 T 90 40 T 130 40 T 170 40 T 190 40"
+        stroke="#4A90E2"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <!-- Purple thread -->
+  <path d="M 10 40 Q 30 50, 50 30 T 90 50 T 130 30 T 170 50 T 190 40"
+        stroke="#9B59B6"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <!-- Teal thread -->
+  <path d="M 10 40 Q 30 35, 50 45 T 90 35 T 130 45 T 170 35 T 190 40"
+        stroke="#16A085"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <!-- Orange thread -->
+  <path d="M 10 40 Q 30 45, 50 35 T 90 45 T 130 35 T 170 45 T 190 40"
+        stroke="#E67E22"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"/>
+</svg>

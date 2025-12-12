@@ -1,0 +1,28 @@
+/* Threads of Becoming Color Palette */
+:root {
+  /* Primary Thread Colors */
+  --color-navy: #2C3E50;
+  --color-blue: #4A90E2;
+  --color-purple: #9B59B6;
+  --color-teal: #16A085;
+  --color-orange: #E67E22;
+  --color-pink: #E91E63;
+  --color-brown: #6B4423;
+
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-off-white: #F8F9FA;
+  --color-light-gray: #E9ECEF;
+  --color-gray: #6C757D;
+  --color-dark-gray: #343A40;
+  --color-black: #1A1A1A;
+
+  /* Semantic Colors */
+  --color-primary: var(--color-teal);
+  --color-secondary: var(--color-purple);
+  --color-accent: var(--color-orange);
+  --color-text: var(--color-navy);
+  --color-text-light: var(--color-gray);
+  --color-background: var(--color-white);
+  --color-background-alt: var(--color-off-white);
+}

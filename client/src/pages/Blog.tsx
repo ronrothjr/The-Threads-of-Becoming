@@ -1,0 +1,329 @@
+import React from 'react';
+import styles from './Blog.module.css';
+
+const Blog: React.FC = () => {
+  return (
+    <div className={styles.blog}>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className="container">
+          <h1 className={styles.title}>The Threads of Becoming</h1>
+          <h2 className={styles.subtitle}>Finding Common Ground in Life's Deepest Questions</h2>
+          <p className={styles.meta}>Read time: ~45 minutes</p>
+        </div>
+      </section>
+
+      {/* Article Content */}
+      <article className={`${styles.article} section-lg`}>
+        <div className={`${styles.content} container`}>
+
+          {/* Abstract */}
+          <div id="abstract" className={styles.abstract}>
+            <h3>Abstract</h3>
+            <p>
+              The Threads of Becoming explores seven universal tensions that show up wherever humans wrestle with what matters: <strong>Presence, Consent, Memory, Pause, Embodiment, Uncertainty, and Becoming</strong>. Not a theology. Not a psychology. It's a practical framework for holding these tensions for conflict transformation, based on Alfred North Whitehead's process thinking. A shared language for the questions we all recognize. A diagnostic tool for identifying and transforming unconscious polarity within relational systems. The full article offers real examples, guiding questions, and a simple navigation practice.
+            </p>
+          </div>
+
+          {/* Who is it for */}
+          <div className={styles.audience}>
+            <h3>Who is it for?</h3>
+            <p>
+              Spiritual directors navigating existential questions. Seekers at crossroads of identity and meaning. Therapists naming polarities without pathologizing them. Couples with arguments that keep returning. Mediators helping parties see they hold different ends of the same tension. Social workers navigating tensions in individuals, groups, and systems. Clergy holding tradition and change together. Team leaders reframing workplace polarities as creative tension. Facilitators diagnosing stuck dynamics. Educators supporting growth through complexity. Activists sustaining the long haul. <em>Anyone who's had the same argument twice.</em>
+            </p>
+          </div>
+
+          {/* Key Insights */}
+          <div className={styles.insights}>
+            <h2>In this article, you'll learn:</h2>
+            <ol>
+              <li>Why some conflicts can't be solved, only transformed</li>
+              <li>The philosophy (Process Thought) that explains why</li>
+              <li>Concrete steps to hold tension</li>
+              <li>The 7 universal 'Threads' that shape human experience</li>
+            </ol>
+          </div>
+
+          {/* Introduction */}
+          <div id="introduction" className={styles.intro}>
+            <p className={styles.opening}>You've had this argument before.</p>
+            <p>
+              Maybe it's with your partner—the one about how much time you spend together versus apart. Maybe it's the conversation with yourself about whether to speak up in the meeting or stay quiet. Maybe it's the tug-of-war between honoring where you came from and becoming who you're meant to be.
+            </p>
+            <p>
+              You've tried to solve it. You've compromised. You've picked a side. You've analyzed it from every angle. And somehow, you end up right back here, wrestling with the same thing in a different outfit.
+            </p>
+            <p className={styles.highlight}>
+              Here's the secret nobody tells you: some tensions aren't meant to be resolved—they need to be transformed.
+            </p>
+          </div>
+
+          {/* The Argument That Never Ends */}
+          <section id="argument" className={styles.section}>
+            <h2>The Argument That Never Ends</h2>
+            <p>
+              Maria and James have been married for twelve years. They love each other. They've built a life together. And they keep having the same fight.
+            </p>
+            <p>
+              It's not really about the dishes, or the in-laws, or even money—though that's often what triggers it. Underneath, it's the same tension: Maria needs more togetherness, more shared time, more verbal affirmation. James needs more space, more solitude, more room to breathe. Neither is wrong. Both needs are legitimate. But every few weeks, something sets it off, and they find themselves in the same exhausting loop.
+            </p>
+            <p className={styles.dialogue}>
+              "Why can't you just be more present?" she asks. <br/>"Why can't you give me some room?" he asks back.
+            </p>
+            <p>
+              They've tried compromises. Scheduled date nights. Scheduled alone time. It helps, but it doesn't resolve the underlying tension. <strong>Because it can't be resolved. It can only be navigated.</strong>
+            </p>
+          </section>
+
+          {/* The Problem We Keep Trying to Solve */}
+          <section id="problem" className={styles.section}>
+            <h2>The Problem We Keep Trying to Solve</h2>
+            <p>
+              We've been taught that tensions are problems. That conflict means something is broken. We spend enormous energy trying to fix what was never broken. Should I speak up or listen? Hold on or let go? Trust my gut or think it through? Act now or wait? We treat these like problems with solutions—like if we just think harder, communicate better, or try a new approach, we'll finally arrive at the answer that makes the discomfort go away.
+            </p>
+            <p>
+              So we pick a side. We decide Maria is "too needy" or James is "emotionally unavailable." We pathologize one pole to justify choosing the other. Or we exhaust ourselves trying to find the perfect balance point that will finally end the argument.
+            </p>
+            <p>
+              But what if that discomfort is the point? What if some tensions aren't problems to solve?
+            </p>
+            <p>
+              They're <strong>polarities to navigate</strong>—ongoing, dynamic, requiring continuous attention rather than final resolution. The question isn't "How do we fix this?" but "How do we hold this together?"
+            </p>
+            <p className={styles.highlight}>
+              This isn't just about marriage. It's about everything.
+            </p>
+            <p>
+              The team that can't decide between moving fast and being careful. The organization torn between honoring tradition and embracing change. The parent caught between protecting their child and letting them fail. The community divided between welcoming newcomers and preserving its identity. The person at 2am, unable to sleep, wondering whether to stay in the job or take the risk.
+            </p>
+            <p>
+              What if these tensions aren't signs that something is wrong? What if they're invitations to grow?
+            </p>
+          </section>
+
+          {/* Where the Threads Show Up */}
+          <section id="where-threads-show-up" className={styles.section}>
+            <h2>Where the Threads Show Up</h2>
+
+            <div className={styles.mapSection}>
+              <h3>A Visual Map of the Seven Threads</h3>
+              <p className={styles.mapIntro}>
+                To help you see the pattern at a glance, here is a visual map of the seven threads—each a tension that shapes who we are and who we are becoming.
+              </p>
+              <div className={styles.threadList}>
+                <div className={styles.threadItem}>
+                  <strong>PRESENCE</strong> <span className={styles.polarity}>Within ↔ Between</span>
+                </div>
+                <div className={styles.threadItem}>
+                  <strong>CONSENT</strong> <span className={styles.polarity}>Yes ↔ No</span>
+                </div>
+                <div className={styles.threadItem}>
+                  <strong>MEMORY</strong> <span className={styles.polarity}>Given ↔ Chosen</span>
+                </div>
+                <div className={styles.threadItem}>
+                  <strong>PAUSE</strong> <span className={styles.polarity}>Not Yet ↔ Now</span>
+                </div>
+                <div className={styles.threadItem}>
+                  <strong>EMBODIMENT</strong> <span className={styles.polarity}>Think ↔ Feel</span>
+                </div>
+                <div className={styles.threadItem}>
+                  <strong>UNCERTAINTY</strong> <span className={styles.polarity}>Hide ↔ Seek</span>
+                </div>
+                <div className={styles.threadItem}>
+                  <strong>BECOMING</strong> <span className={styles.polarity}>Same ↔ Different</span>
+                </div>
+              </div>
+            </div>
+
+            <p style={{marginTop: '2rem'}}>Consider how these tensions appear within normal relationships in everyday life. Let's see the Threads of Becoming in action.</p>
+
+            <div className={styles.example}>
+              <h3>The Couple in Conflict</h3>
+              <p>
+                David and Sarah are fighting about finances again. He wants to save more; she wants to enjoy life now. On the surface, it's about money. Underneath, it's about <em>memory</em> (his parents lost everything in a recession; her family never had much and learned to savor what they had), <em>uncertainty</em> (neither knows what the future holds), and <em>consent</em> (each feels the other is imposing their values). And perhaps most impactful here is <em>pause</em> (she wants to enjoy now, when he wants to prepare for what's not yet). Until they can name these threads, they'll keep arguing about numbers while missing what the argument is actually about.
+              </p>
+            </div>
+
+            <div className={styles.example}>
+              <h3>The Team That's Stuck</h3>
+              <p>
+                A nonprofit board is deadlocked. Half want to expand their programs to reach more people. Half want to deepen their existing work before spreading thin. The debate has gone on for months, positions hardening. What's actually happening? The tension between <em>now</em> and <em>not yet</em>—is it time to move, or time to wait? The tension between <em>same</em> and <em>different</em>—are we who we've always been, or are we becoming something new? Until the board can hold these threads together instead of choosing sides, they'll stay paralyzed—which is its own choice, made unconsciously.
+              </p>
+            </div>
+
+            <div className={styles.example}>
+              <h3>The Person at the Crossroads</h3>
+              <p>
+                Elena is fifty-two. She's successful by every external measure—good career, stable income, respected in her field. And she's miserable. Something in her is dying, and she knows it. But walking away feels irresponsible, ungrateful, terrifying. What threads are pulling? <em>What happened?</em>—the stories she's told about who she is and what success means. <em>How does my body know?</em>—the exhaustion she's been overriding for years. <em>Who am I now?</em>—the question she's been avoiding because the answer might require her to change everything.
+              </p>
+            </div>
+
+            <p>
+              In each case, the conflict isn't the problem. The conflict is <em>information</em>—it reveals which threads are activated, which tensions are being held unconsciously, which poles people are protecting without realizing it. Each conflict is an actual occasion, raw material for the creative advance.
+            </p>
+          </section>
+
+          {/* What This Framework Is */}
+          <section id="framework" className={styles.section}>
+            <h2>What This Framework Is (And Isn't)</h2>
+            <p>Let's be clear about what we're offering.</p>
+            <p>
+              The Threads of Becoming serves as a <strong>shared meta-language</strong> designed to complement existing clinical interventions by providing a structural map of underlying polarities. It's not a complete theology. It won't tell you what to believe about God, meaning, or the nature of reality. It's not a psychological system with diagnoses and treatment protocols. It won't replace your therapist. It's not a solution to all problems—some problems actually do have solutions, and you should solve them.
+            </p>
+            <p className={styles.highlight}>
+              The Threads of Becoming is a practice framework for engaging creative tension for conflict transformation.
+            </p>
+            <p>That's all. That's enough.</p>
+            <p>
+              The framework identifies seven universal tensions that show up across cultures, traditions, generations, and individual lives. Not because someone invented them, but because they keep appearing wherever humans wrestle with what matters.
+            </p>
+            <p>
+              By naming these tensions, we gain power over them—not the power to eliminate them, but the power to work with them consciously. When Maria can say, "I'm feeling the pull toward more togetherness," and James can respond, "And I'm feeling the pull toward more space," something shifts from seeking resolution to seeking transformation. They're no longer adversaries with incompatible needs. They're two people holding different ends of the same thread. Thus, the conflict is transformed.
+            </p>
+
+            <h3 style={{marginTop: '2rem'}}>Am I facing a problem or a tension?</h3>
+            <p>
+              You may wonder what distinguishes a problem you should fix and one of those universal threads that you must hold. Simple. A solvable problem, once fixed, stays fixed. The leaky faucet, repaired. The miscommunication, cleared up. The missing information, found. You address it and move on. But a tension—a true polarity—keeps returning. You "solve" it, and six months later you're having the same conversation in different clothes. That's your signal.
+            </p>
+            <p>
+              Ask yourself: <em>if I completely eliminated one side, would that create new problems?</em>
+            </p>
+            <p>
+              If James got all the solitude he wanted and Maria got none of her togetherness, would that "solve" anything—or create a different crisis? Problems have solutions that make them disappear. Tensions have poles that both serve something essential; eliminating either creates its own damage. The recurring argument isn't a sign you haven't found the right answer yet. It's a sign you're holding a tension that will never be "solved"—only transformed and navigated, again and again, with increasing skill and decreasing drama.
+            </p>
+          </section>
+
+          {/* The Tension We Hold */}
+          <section id="tension" className={styles.section}>
+            <h2>The Tension We Hold</h2>
+            <p>Think of a violin string.</p>
+            <p>
+              Slack, it produces nothing—no sound, no music, no beauty. Just limp silence. But wound too tight, it snaps. The instrument is ruined.
+            </p>
+            <p>
+              The magic happens in the tension between. Held at just the right tautness—pulled between two opposing forces—the string can vibrate. It can sing. The very thing that could destroy it, properly held, becomes the source of its music.
+            </p>
+            <p className={styles.emphasis}>
+              You are not a violin string.<br />
+              But you are made of tensions.
+            </p>
+            <p>
+              The pull between togetherness and solitude. Between action and rest. Between what you've inherited and what you're choosing. Between certainty and mystery. These aren't bugs in your operating system. They're the architecture. And when you stop trying to eliminate them and learn to hold them instead, something starts to hum.
+            </p>
+
+            <h3 style={{marginTop: '2rem'}}>Why Threads?</h3>
+            <p>
+              This is why we use the metaphor of threads. Like the strings of an instrument or the warp of a loom, these universal tensions only become useful when held between poles. A thread with no tension is slack and useless. A thread pulled too tight breaks. But a thread held in creative tension can create fabric strong enough to shelter us, flexible enough to move with us, beautiful enough to inspire us.
+            </p>
+            <p>
+              The tensions in our lives work the same way. The pull between togetherness and solitude, between action and patience, between holding on and letting go—these aren't malfunctions. They're the tautness that makes the music possible. They're the actual occasions where reality creates itself anew.
+            </p>
+            <p>
+              Each of the seven threads we'll explore represents a fundamental tension that runs through human experience—pulled between truths that seem opposite but are actually partners.
+            </p>
+            <p className={styles.highlight}>
+              The poles aren't problems to solve by choosing sides. They're the anchor points that create the tension that makes the thread useful. They're the conditions for Whitehead's creative advance.
+            </p>
+            <p>
+              And here's what we've discovered: these same tensions show up everywhere. A shepherd three thousand years ago and a software engineer today both wrestle with questions of presence, consent, memory, pause, embodiment, uncertainty, and becoming. Different contexts, same threads. Different answers, same questions. The Zulu concept of Ubuntu, the Japanese understanding of Ma, the Taoist principle of Wu Wei, the Aboriginal practice of Dadirri—across cultures and centuries, humans have been naming and navigating these same tensions. They've been participating in the same creative advance.
+            </p>
+            <p>
+              "The test of a first-rate intelligence," F. Scott Fitzgerald wrote, "is the ability to hold two opposing ideas in mind at the same time and still retain the ability to function." The Threads of Becoming offers a framework for developing that capacity—not as an intellectual exercise, but as a lived practice for individuals and communities. Not as a way to feel better about conflict, but as a way to participate consciously in how reality creates itself through you.
+            </p>
+          </section>
+
+          {/* Philosophy */}
+          <section id="philosophy" className={styles.section}>
+            <h2>Why Tension Creates: The Philosophy Underneath</h2>
+            <p>
+              This isn't just a nice metaphor. There's something deeper happening when we hold tension rather than collapse it—something the philosopher Alfred North Whitehead spent his life articulating.
+            </p>
+            <p>
+              Whitehead saw reality not as a collection of static things but as a continuous flow of becoming. Each moment—what he called an "actual occasion"—arises by taking in what came before and creating something new from it. Reality doesn't sit still. It moves. It creates. It advances.
+            </p>
+            <p className={styles.highlight}>
+              Here's the key: that creative movement requires tension.
+            </p>
+            <p>
+              When Maria feels the pull toward togetherness and James feels the pull toward solitude, that moment of tension isn't a breakdown. It's a generative event—an actual occasion where something new can emerge. The conflict itself is the raw material for creation. Their competing needs, held together without collapsing into one or the other, become the data point from which new possibilities arise.
+            </p>
+            <p>
+              This is what Whitehead called "the creative advance into novelty." Reality moves forward not by eliminating tension but by holding it—by letting opposing forces create the vibration that produces something that didn't exist before. The violin string doesn't make music by going slack or by snapping. It makes music by holding the tension.
+            </p>
+            <p className={styles.highlight}>
+              And here's what this means practically: when you avoid tension, you're not just avoiding discomfort. You're avoiding reality itself. You're refusing to participate in creation.
+            </p>
+            <p>
+              Think about what happens when Maria and James collapse the tension. If Maria "wins" and James abandons his need for solitude, nothing new emerges—just resentment building underground. If James "wins" and Maria swallows her need for connection, same result. If they "compromise" by splitting the difference without actually holding both truths, they get a tepid middle that satisfies no one and generates nothing.
+            </p>
+            <p>
+              But when they stay in the tension—when they let both poles pull without either winning—something happens. New possibilities emerge that weren't available when they were fighting <em>about</em> the tension instead of creating <em>from</em> it. Maybe it's a way of being together that also honors solitude. Maybe it's a deeper understanding of what each actually needs. Maybe it's a rhythm they couldn't have designed but can only discover by staying in the vibration long enough.
+            </p>
+            <p className={styles.highlight}>
+              When you hold tension without collapsing it, change isn't just possible—it's inevitable.
+            </p>
+            <p>
+              This is why the Threads of Becoming isn't just another conflict resolution model. Traditional models seek synthesis or compromise—collapsing the tension into something manageable. This framework asks you to hold the tension longer, trusting that the creative advance will come. Not because it might come. Because it must. That's how reality works.
+            </p>
+            <p className={styles.highlight}>
+              Movement and change aren't just desired outcomes of this framework. They're guaranteed results.
+            </p>
+            <p>
+              When you successfully hold a tension without collapsing it, novelty emerges. Something shifts. You can't hold the vibrating string and have nothing happen. The music comes because that's what vibrating strings do.
+            </p>
+            <p>
+              The question is never whether transformation will occur. The question is whether you'll participate consciously or let it happen to you while you're busy trying to make the tension stop.
+            </p>
+          </section>
+
+          {/* Continue Reading Navigation */}
+          <div className={styles.cta} style={{marginTop: '4rem'}}>
+            <h2>Continue Reading</h2>
+            <p>This article continues with detailed sections:</p>
+            <div style={{textAlign: 'left', maxWidth: '700px', margin: '0 auto 2rem'}}>
+              <div className={styles.continueLink}>
+                <h3><a href="/holding-tension">Holding the Tension: What It Actually Means →</a></h3>
+                <p>Learn the practical meaning of "holding tension" and what it doesn't mean</p>
+              </div>
+              <div className={styles.continueLink}>
+                <h3><a href="/practice">Navigating the Threads: A 6-Step Practice →</a></h3>
+                <p>A simple, proven practice for working with tensions: Identify, Locate, Breathe, Listen, Choose, Learn</p>
+              </div>
+              <div className={styles.continueLink}>
+                <h3><a href="/collapse">The Anatomy of Collapse →</a></h3>
+                <p>Recognize when tension becomes stuck and return to Maria & James</p>
+              </div>
+              <div className={styles.continueLink}>
+                <h3><a href="/five-moves">Five Practical Moves for Holding Tension →</a></h3>
+                <p>Concrete steps with examples: Name poles, ask what they protect, honor the unchosen, build return points</p>
+              </div>
+              <div className={styles.continueLink}>
+                <h3><a href="/deep-dive">Deep Dives into All Seven Threads →</a></h3>
+                <p>Cultural lenses, seed questions, and meta-questions for each thread</p>
+              </div>
+              <div className={styles.continueLink}>
+                <h3><a href="/your-turn">Your Turn: Practical Exercises →</a></h3>
+                <p>Apply the framework to your own life and begin the spiral</p>
+              </div>
+            </div>
+          </div>
+
+          {/* License */}
+          <div className={styles.license} style={{marginTop: '3rem'}}>
+            <h3>License</h3>
+            <p>
+              This work is licensed under <strong>Creative Commons Attribution-ShareAlike 4.0 International</strong>.
+              You are free to use, adapt, and share with attribution. The complete article is available on{' '}
+              <a href="https://github.com/ronrothjr/The-Threads-of-Becoming/blob/main/blog.md" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>.
+            </p>
+          </div>
+
+        </div>
+      </article>
+    </div>
+  );
+};
+
+export default Blog;
