@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .nav.scrolled .navContent {
@@ -37,17 +37,15 @@
 }
 
 .logoIcon {
-  height: 120px;
+  height: 70px;
   width: auto;
-  object-fit: cover;
+  object-fit: contain;
   object-position: left center;
-  /* Crop top 25% and bottom 25% by clipping */
-  clip-path: inset(25% 0 25% 0);
   flex-shrink: 0;
 }
 
 .nav.scrolled .logoIcon {
-  height: 65px;
+  height: 70px; /* Keep same size when scrolled */
 }
 
 .navLinks {
