@@ -1,8 +1,8 @@
-# **THE NAVIGATION CONVERSATION**
+**THREADWORK**
 
 A Threads of Becoming Protocol
 
-*The Signature 20-Minute engagement*
+*The Signature 20-Minute Intervention*
 
 A complete, scripted conversation for identifying tensions,
 
@@ -13,9 +13,9 @@ preventing collapse, and holding space for emergence
 *The Threads of Becoming*  
 Creative Commons Attribution-ShareAlike 4.0
 
-## **Overview**
+# **Overview**
 
-The Navigation Conversation is the signature engagement of the Threads of Becoming framework. It is a complete, repeatable conversation structure that any practitioner can use to help individuals, couples, teams, or groups identify the creative tension alive in their situation and hold it long enough for something new to emerge.
+Threadwork is the signature intervention of the Threads of Becoming framework. It is a complete, repeatable conversation structure that any practitioner can use to help individuals, couples, teams, or groups identify the creative tension alive in their situation and hold it long enough for something new to emerge.
 
 ### **What It Does**
 
@@ -68,7 +68,7 @@ Before speaking, take one conscious breath. Feel your feet on the floor. Settle 
 
 *\[Listen without interrupting. Let them speak. You're listening for which thread might be activated, but don't rush to identify it yet.\]*
 
-| WHAT YOU'RE LISTENING FOR As they speak, notice: What seed question seems to be underneath their words? Are they asking "Who's there?" (Presence), "May I?" (Consent), "What happened?" (Memory), "Why wait?" (Pause), "How does my body know?" (Embodiment), "What can I know?" (Uncertainty), or "Who am I now?" (Becoming)? Don't force it. Let the thread reveal itself. |
+| WHAT YOU'RE LISTENING FOR As they speak, notice: What seed question seems to be underneath their words? Are they asking "Where am I…?" (Presence), "What may I…?" (Consent), "Why do I…?" (Memory), "When can I…?" (Pause), "How does my body know?" (Embodiment), "What is the Mystery unveiling?" (Uncertainty), or "Who am I becoming now?" (Becoming)? Don't force it. Let the thread reveal itself. |
 | :---- |
 
 ### **Signs That Arrival Is Complete**
