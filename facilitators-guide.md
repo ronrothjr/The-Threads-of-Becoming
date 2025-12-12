@@ -1,4 +1,4 @@
-# **THREADS OF BECOMING**
+**THREADS OF BECOMING**
 
 Integrated Facilitator Guide
 
@@ -19,7 +19,7 @@ Creative Commons Attribution-ShareAlike 4.0
 
 ### **What the Threads Are**
 
-The Threads of Becoming is a diagnostic and engagement framework built around seven universal tensions that appear in every human system—couples, teams, congregations, organizations, and individuals in transition. Unlike frameworks that treat conflict as a problem to solve, this approach treats tension as the engine of all growth and transformation.
+The Threads of Becoming is a diagnostic and intervention framework built around seven universal tensions that appear in every human system—couples, teams, congregations, organizations, and individuals in transition. Unlike frameworks that treat conflict as a problem to solve, this approach treats tension as the engine of all growth and transformation.
 
 **The seven threads are:**
 
@@ -93,7 +93,7 @@ You are:
 
 ### **Thread Selection: Finding the Entry Point**
 
-Every situation involves multiple threads. Your task is not to address all of them but to find the thread that's most alive right now—the one where engagement will create the most movement.
+Every situation involves multiple threads. Your task is not to address all of them but to find the thread that's most alive right now—the one where intervention will create the most movement.
 
 **The Thread Selection Process:**
 
@@ -152,7 +152,7 @@ A typical session using the Threads framework follows a four-phase arc. This can
 
 * The core work: help them stay in tension without collapsing
 
-* Use the micro-engagement for that thread
+* Use the micro-intervention for that thread
 
 * Validate both poles: neither is wrong
 
@@ -487,7 +487,7 @@ This framework is not for every situation.
 
 * The other party is acting in bad faith
 
-* Professional clinical engagement is needed
+* Professional clinical intervention is needed
 
 * You're personally activated and can't hold the tension yourself
 
@@ -515,7 +515,7 @@ Regular practice: After each session, ask yourself which poles you were drawn to
 
 ### **Holding Your Own Tension**
 
-The most powerful engagement is your own capacity to hold tension without collapsing. When you can stay present while others are activated, you create a field where transformation becomes possible.
+The most powerful intervention is your own capacity to hold tension without collapsing. When you can stay present while others are activated, you create a field where transformation becomes possible.
 
 **Practices that help:**
 
