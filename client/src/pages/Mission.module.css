@@ -34,21 +34,31 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-.origins,
-.whyCreativeAdvance {
+.founder {
   background-color: var(--color-white);
 }
 
-.beliefs {
+.origins,
+.whyCreativeAdvance {
   background-color: var(--color-background-alt);
 }
 
+.beliefs {
+  background-color: var(--color-white);
+}
+
+.founder h2,
 .origins h2,
 .beliefs h2,
 .whyCreativeAdvance h2 {
   text-align: center;
   color: var(--color-navy);
   margin-bottom: 2rem;
+}
+
+.founder .content p strong {
+  color: var(--color-navy);
+  font-size: var(--text-xl);
 }
 
 .content {
@@ -155,6 +165,15 @@
   background: var(--color-blue);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.comingSoon {
+  font-style: italic;
+  color: var(--color-text-light);
+  font-size: var(--text-sm);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
 }
 
 /* Responsive */

@@ -19,15 +19,35 @@ const Mission: React.FC = () => {
         </div>
       </section>
 
-      <section className={`${styles.origins} section-lg`}>
+      <section className={`${styles.founder} section-lg`}>
         <div className="container">
-          <h2>Where Threads Came From</h2>
+          <h2>The Founder</h2>
           <div className={styles.content}>
             <p>
-              Threads of Becoming emerged from the intersection of congregational leadership, Process Theology, and the practical demands of helping people navigate tensions they couldn't resolve. Working with a Unitarian Universalist congregation's Right Relations Team, Ron Bronson found that existing conflict resolution models often pushed too quickly toward resolution—missing the transformative potential that lives in tension itself.
+              <strong>Ron Roth Jr.</strong> created Threads of Becoming by bringing together philosophical training, decades of systems thinking, and lived practice in spiritual community leadership.
             </p>
             <p>
-              Over seven months of intensive development—drawing on Whitehead's philosophy, clinical frameworks, and lived practice—the seven Threads crystallized as universal dynamics that appear across personal, relational, and organizational life. The framework has since been tested in workshops, pastoral care, leadership retreats, and one-on-one sessions. It continues to evolve through the practitioners who use it.
+              With a BA in Philosophy from St. John Vianney College Seminary and 25 years as a software engineer, Ron combines rigorous theological grounding with the pattern recognition and systems design discipline that comes from building complex frameworks. As Worship Team Lead at the Unitarian Universalist Fellowship of Boca Raton, he works directly with the tensions that emerge in congregational life—where competing values, relational complexity, and spiritual discernment intersect.
+            </p>
+            <p>
+              Threads emerged from observing that existing conflict resolution models often push too quickly toward resolution, missing the transformative potential that lives in tension itself. Drawing on Process Philosophy, clinical frameworks, and lived practice, Ron developed the seven Threads as universal dynamics that appear across personal, relational, and organizational life.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={`${styles.origins} section-lg`}>
+        <div className="container">
+          <h2>Formation of the Institute</h2>
+          <div className={styles.content}>
+            <p>
+              The Creative Advance Institute is currently being formed as a 501(c)(3) nonprofit organization to steward and scale the Threads of Becoming framework. We are assembling a diverse board of directors representing expertise in theology, organizational development, clinical practice, and governance.
+            </p>
+            <p>
+              The Institute will provide training, certification, and resources for individuals and professionals seeking to integrate Threads into their practice, as well as organizational consulting for communities and teams navigating complex tensions.
+            </p>
+            <p>
+              <strong>Why now?</strong> Because the capacity to hold creative tension—rather than collapsing toward false resolution—has never been more critical. Whether in personal relationships, organizations under strain, or communities facing polarization, the ability to see tension as generative rather than destructive is a skill we desperately need.
             </p>
           </div>
         </div>
@@ -78,31 +98,32 @@ const Mission: React.FC = () => {
 
       <section className={styles.support}>
         <div className="container">
-          <h2>Support the Work</h2>
+          <h2>Support the Launch</h2>
           <div className={styles.supportGrid}>
             <div className={styles.supportCard}>
-              <h3>Donate</h3>
-              <p>Your gift helps provide:</p>
+              <h3>Help Us Launch</h3>
+              <p>We are in the process of forming the Institute and will be launching officially in 2025. Your support helps us:</p>
               <ul>
-                <li>Scholarships for Tier 1 and Tier 2 training</li>
-                <li>Training for facilitators in underserved communities</li>
-                <li>Digital learning platforms and open-source resources</li>
-                <li>Organizational interventions in communities under strain</li>
-                <li>Research and development of new applications</li>
+                <li>Complete the 501(c)(3) formation process</li>
+                <li>Develop training materials and certification programs</li>
+                <li>Create digital learning platforms and open-source resources</li>
+                <li>Provide accessible programming for underserved communities</li>
+                <li>Build a Community of Practice for practitioners</li>
               </ul>
-              <a href="/donate" className={styles.supportButton}>Donate</a>
+              <p className={styles.comingSoon}><em>Donation functionality coming soon once 501(c)(3) status is approved.</em></p>
             </div>
 
             <div className={styles.supportCard}>
-              <h3>Partner With Us</h3>
+              <h3>Get Involved Early</h3>
+              <p>We're looking for early partners and collaborators:</p>
               <ul>
-                <li>Host a Threads workshop at your organization</li>
-                <li>Bring discernment facilitation to your congregation</li>
-                <li>Collaborate on research or curriculum development</li>
-                <li>Join our Community of Practice</li>
-                <li>Offer professional skills or volunteer support</li>
+                <li>Beta testers for workshops and training programs</li>
+                <li>Professional practitioners interested in certification</li>
+                <li>Organizations interested in pilot programs</li>
+                <li>Advisors with expertise in nonprofit governance, clinical practice, or organizational development</li>
+                <li>Volunteers with skills in web development, design, or curriculum development</li>
               </ul>
-              <a href="/contact" className={styles.supportButton}>Get In Touch</a>
+              <a href="/contact" className={styles.supportButton}>Express Interest</a>
             </div>
           </div>
         </div>
