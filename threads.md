@@ -4,7 +4,7 @@
 
 ## 1. PRESENCE
 
-**Seed:** "Who's there?"
+**Seed:** "Where am I...?"
 
 **Tensions:** Within vs. Between / Here vs. Elsewhere
 
@@ -30,7 +30,7 @@
 
 ## 2. CONSENT
 
-**Seed:** "May I?"
+**Seed:** "What may I...?"
 
 **Tensions:** Yes vs. No / Self vs. Other
 
@@ -56,7 +56,7 @@
 
 ## 3. MEMORY
 
-**Seed:** "What happened?"
+**Seed:** "Why do I...?"
 
 **Tensions:** Given vs. Chosen / Telling vs. Told
 
@@ -82,7 +82,7 @@
 
 ## 4. PAUSE
 
-**Seed:** "Why do we wait here?"
+**Seed:** "When can I...?"
 
 **Tensions:** Not Yet vs. Now / More vs. Enough
 
@@ -160,7 +160,7 @@
 
 ## 7. BECOMING
 
-**Seed:** "Who am I now?"
+**Seed:** "Who am I becoming now?"
 
 **Tensions:** Same vs. Different / Return vs. Forward
 
