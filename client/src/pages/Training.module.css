@@ -15,7 +15,11 @@
 
 .tagline {
   font-size: var(--text-xl);
-  color: var(--color-orange);
+  color: rgba(255, 255, 255, 0.95);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: var(--font-normal);
+  letter-spacing: var(--tracking-wide);
 }
 
 .tiers {
