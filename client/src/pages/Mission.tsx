@@ -87,6 +87,9 @@ const Mission: React.FC = () => {
               The name comes from Alfred North Whitehead's concept of the "creative advance into novelty"—the idea that reality itself moves forward through the integration of what has been with what is becoming.
             </p>
             <p>
+              Theologian Parker Palmer defines the "tragic gap" as the space between harsh realities and what we know is possible, urging us to stand in this tension between cynicism and idealism, holding both despair and hope to find authentic action, not by closing the gap but by learning to live within it, like a "broken-open heart" gaining capacity for the world's suffering and joy.
+            </p>
+            <p>
               We are not problems to be solved but tensions to be lived.
             </p>
             <p>
