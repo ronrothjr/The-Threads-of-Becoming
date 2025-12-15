@@ -121,6 +121,7 @@ const ModalityCompatibility: React.FC = () => {
             ))}
           </div>
 
+          {/* Desktop Table View */}
           <div className={styles.tableWrapper}>
             <table className={styles.modalityTable}>
               <thead>
@@ -162,6 +163,39 @@ const ModalityCompatibility: React.FC = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Card View */}
+          <div className={styles.mobileCardView}>
+            {filteredModalities.map((modality) => (
+              <div key={modality.id} className={styles.mobileCard}>
+                <h3>{modality.name}</h3>
+
+                <div className={styles.mobileCardCompatibility}>
+                  <span
+                    className={styles.compatibilityBadge}
+                    style={{
+                      backgroundColor: compatibilityLevels[modality.compatibility].color
+                    }}
+                  >
+                    {compatibilityLevels[modality.compatibility].icon} {modality.compatibility}
+                  </span>
+                </div>
+
+                <div className={styles.mobileCardDetails}>
+                  <p><strong>Core Question:</strong> {modality.coreQuestion}</p>
+                  <p><strong>Thread Alignment:</strong> {modality.threadAlignment}</p>
+                </div>
+
+                <button
+                  className={styles.viewButton}
+                  onClick={() => openModal(modality)}
+                  style={{ width: '100%' }}
+                >
+                  View Details →
+                </button>
+              </div>
+            ))}
           </div>
 
           {filteredModalities.length === 0 && (
@@ -266,6 +300,7 @@ const ModalityCompatibility: React.FC = () => {
               </span>
             </div>
 
+            {/* Desktop Tabs */}
             <div className={styles.modalTabs}>
               <button
                 className={activeTab === 'overview' ? styles.activeTab : ''}
@@ -291,6 +326,20 @@ const ModalityCompatibility: React.FC = () => {
               >
                 Integration
               </button>
+            </div>
+
+            {/* Mobile Tab Selector */}
+            <div className={styles.mobileTabSelector}>
+              <select
+                className={styles.tabSelect}
+                value={activeTab}
+                onChange={(e) => setActiveTab(e.target.value as typeof activeTab)}
+              >
+                <option value="overview">Overview</option>
+                <option value="overlap">Where They Overlap</option>
+                <option value="differences">Key Differences</option>
+                <option value="integration">Integration</option>
+              </select>
             </div>
 
             <div className={styles.modalContent}>

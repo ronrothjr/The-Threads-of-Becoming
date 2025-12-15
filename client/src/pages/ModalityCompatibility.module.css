@@ -525,6 +525,65 @@
   transform: translateY(-2px);
 }
 
+/* Mobile Card View */
+.mobileCardView {
+  display: none;
+}
+
+.mobileCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border);
+}
+
+.mobileCard h3 {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.mobileCardCompatibility {
+  margin-bottom: 1rem;
+}
+
+.mobileCardDetails {
+  margin-bottom: 1rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.mobileCardDetails p {
+  margin-bottom: 0.5rem;
+}
+
+.mobileCardDetails strong {
+  color: var(--color-text);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile Tab Selector */
+.mobileTabSelector {
+  display: none;
+}
+
+.tabSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--color-border);
+  border-radius: 6px;
+  font-size: var(--text-base);
+  background: white;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
 /* Print Styles */
 @media print {
   .printHide {
@@ -587,6 +646,15 @@
     gap: 1rem;
   }
 
+  /* Hide table, show card view on mobile */
+  .tableWrapper {
+    display: none;
+  }
+
+  .mobileCardView {
+    display: block;
+  }
+
   .valueGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -601,15 +669,22 @@
   .modalHeader {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1.5rem;
   }
 
+  .modalHeader h2 {
+    font-size: var(--text-xl);
+    margin-bottom: 0.75rem;
+  }
+
+  /* Hide regular tabs, show dropdown selector */
   .modalTabs {
-    padding: 0 1rem;
+    display: none;
   }
 
-  .modalTabs button {
-    padding: 0.75rem 1rem;
-    font-size: var(--text-xs);
+  .mobileTabSelector {
+    display: block;
+    padding: 0 1.5rem;
   }
 
   .modalContent {
