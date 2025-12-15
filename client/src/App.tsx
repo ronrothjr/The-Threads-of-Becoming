@@ -23,6 +23,7 @@ import Mission from './pages/Mission';
 import Organizations from './pages/Organizations';
 import Communities from './pages/Communities';
 import Resources from './pages/Resources';
+import ModalityCompatibility from './pages/ModalityCompatibility';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
 import Apply from './pages/Apply';
@@ -79,6 +80,7 @@ function AppContent() {
         <Route path="/organizations" element={<Organizations />} />
         <Route path="/communities" element={<Communities />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/modality-compatibility" element={<ModalityCompatibility />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/apply/:tier" element={<Apply />} />

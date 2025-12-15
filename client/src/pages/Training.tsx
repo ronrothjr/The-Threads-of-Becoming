@@ -77,6 +77,12 @@ const Training: React.FC = () => {
                   <li>Clinical integration and ethics</li>
                   <li>Framework crosswalk (IFS, EFT, NVC, Bowen, ACT, etc.)</li>
                 </ul>
+                <p className={styles.modalityNote}>
+                  <em>Wondering how Threads integrates with your practice? </em>
+                  <a href="/modality-compatibility" className={styles.modalityLink}>
+                    View Modality Compatibility Guide →
+                  </a>
+                </p>
               </div>
 
               <a href="/training/tier2" className={styles.tierCta}>

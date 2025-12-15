@@ -131,6 +131,27 @@
   font-weight: var(--font-bold);
 }
 
+.modalityNote {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+.modalityLink {
+  color: var(--color-teal);
+  text-decoration: none;
+  font-weight: var(--font-semibold);
+  font-style: normal;
+  transition: color 0.2s ease;
+}
+
+.modalityLink:hover {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
 .tierCta {
   display: inline-block;
   background: var(--color-teal);

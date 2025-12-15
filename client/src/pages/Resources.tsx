@@ -184,11 +184,13 @@ const Resources: React.FC = () => {
             <div className={styles.category}>
               <h3>Cross-Framework Integration</h3>
               <ul>
+                <li>Modality Compatibility Guide (14 frameworks)</li>
                 <li>Crosswalk with Polarity Management</li>
                 <li>Integration with IFS, NVC, Spiral Dynamics</li>
                 <li>Academic foundations</li>
               </ul>
-              <a href="/portal" className={styles.categoryLink}>View in Portal →</a>
+              <a href="/modality-compatibility" className={styles.categoryLink}>View Compatibility Guide →</a>
+              <a href="/portal" className={styles.categoryLink}>Portal Resources →</a>
             </div>
           </div>
         </div>

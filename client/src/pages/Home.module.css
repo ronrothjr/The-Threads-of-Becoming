@@ -84,6 +84,26 @@
   margin-bottom: 0;
 }
 
+.heroCardCta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-orange);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-orange);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.heroCardCta:hover {
+  background: var(--color-orange);
+  color: var(--color-navy);
+  transform: translateX(4px);
+}
+
 .heroStory {
   text-align: center;
   margin-top: 3rem;

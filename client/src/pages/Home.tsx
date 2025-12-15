@@ -22,6 +22,7 @@ const Home: React.FC = () => {
               <p>
                 <strong><em>Most systems collapse under this pressure. Some learn to hold it.</em></strong>
               </p>
+              <a href="/collapse" className={styles.heroCardCta}>Learn to recognize collapse →</a>
             </div>
 
             <div className={styles.heroCard}>
@@ -32,6 +33,7 @@ const Home: React.FC = () => {
               <p>
                 <strong><em>Opposing truths, held without collapse, become the birthplace of the genuinely new.</em></strong>
               </p>
+              <a href="/explore" className={styles.heroCardCta}>See emergence in action →</a>
             </div>
 
             <div className={styles.heroCard}>
@@ -42,6 +44,7 @@ const Home: React.FC = () => {
               <p>
                 <strong><em>A universal framework for navigating complexity without losing yourself.</em></strong>
               </p>
+              <a href="/modality-compatibility" className={styles.heroCardCta}>See how it integrates →</a>
             </div>
           </div>
 
