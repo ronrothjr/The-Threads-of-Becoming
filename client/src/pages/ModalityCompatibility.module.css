@@ -408,7 +408,7 @@
 }
 
 .modalHeader {
-  padding: 2rem 2rem 1rem;
+  padding: 2rem 4rem 1rem 2rem;
   border-bottom: 2px solid var(--color-border);
   display: flex;
   align-items: center;
@@ -421,6 +421,8 @@
   font-size: var(--text-2xl);
   color: var(--color-text);
   margin: 0;
+  flex: 1;
+  padding-right: 1rem;
 }
 
 .modalTabs {
@@ -717,19 +719,22 @@
 
   .closeButton {
     z-index: 10;
+    top: 0.75rem;
+    right: 0.75rem;
   }
 
   .modalHeader {
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.5rem;
-    padding-top: 1rem;
+    padding: 3rem 3rem 1rem 1.5rem;
     flex-shrink: 0;
   }
 
   .modalHeader h2 {
     font-size: var(--text-xl);
     margin-bottom: 0.75rem;
+    padding-right: 0;
+    width: 100%;
   }
 
   /* Hide regular tabs, show vertical button selector */
