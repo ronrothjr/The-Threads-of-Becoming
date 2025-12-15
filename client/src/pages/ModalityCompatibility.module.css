@@ -376,9 +376,12 @@
   max-width: 900px;
   width: 100%;
   max-height: 90vh;
-  overflow-y: auto;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
   position: relative;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
 }
 
 .closeButton {
@@ -411,6 +414,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-shrink: 0;
 }
 
 .modalHeader h2 {
@@ -425,6 +429,7 @@
   border-bottom: 2px solid var(--color-border);
   padding: 0 2rem;
   overflow-x: auto;
+  flex-shrink: 0;
 }
 
 .modalTabs button {
@@ -453,6 +458,9 @@
 .modalContent {
   padding: 2rem;
   line-height: 1.7;
+  overflow-y: auto;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
 }
 
 .modalSection {
@@ -507,6 +515,7 @@
   border-top: 2px solid var(--color-border);
   background: var(--color-bg-light);
   text-align: center;
+  flex-shrink: 0;
 }
 
 .modalCta {
@@ -701,12 +710,21 @@
     margin: 0;
     border-radius: 0;
     max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .closeButton {
+    z-index: 10;
   }
 
   .modalHeader {
     flex-direction: column;
     align-items: flex-start;
     padding: 1.5rem;
+    padding-top: 1rem;
+    flex-shrink: 0;
   }
 
   .modalHeader h2 {
@@ -721,10 +739,29 @@
 
   .mobileTabSelector {
     display: block;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: white;
+  }
+
+  .mobileTabButtons {
+    padding: 1rem 1.5rem 1.5rem;
   }
 
   .modalContent {
     padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modalFooter {
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
   }
 
   .ctaButtons {
