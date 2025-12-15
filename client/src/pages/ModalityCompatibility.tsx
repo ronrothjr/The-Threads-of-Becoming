@@ -52,6 +52,27 @@ const ModalityCompatibility: React.FC = () => {
     window.print();
   };
 
+  // Get modality-specific example
+  const getModalityExample = (modalityId: string): string => {
+    const examples: Record<string, string> = {
+      nvc: "A couple in couples therapy has done NVC work—they hear each other's needs perfectly. He needs solitude to recharge (autonomy). She needs connection to feel secure (interdependence). Both needs are legitimate, both are heard clearly, and the tension remains. The therapist uses Threads to name this as the PRESENCE thread (Within/Between), helping them see it's not a communication problem to solve but an ongoing polarity to navigate together.",
+      polarity: "An organization uses Polarity Management to map Centralization vs. Decentralization. Threads identifies this as a surface expression of the CONSENT thread (Self/Other). Leadership uses both: Polarity maps for organizational strategy, Threads for understanding why this same tension shows up in team dynamics, individual decision-making, and board governance.",
+      ifs: "A client has a manager part that keeps them productive (collapsed toward achievement) and an exile that feels worthless (collapsed away from rest). The IFS therapist uses Threads to name this as the PAUSE thread (Now/Not Yet). Unburdening the exile allows the system to hold both poles: productivity AND rest, without collapse.",
+      eft: "A couple is stuck in pursue-withdraw. She pursues connection (collapsed toward Between). He withdraws to regulate (collapsed toward Within). The EFT therapist uses Threads to name this as the PRESENCE thread, helping each partner see they're not enemies but holding opposite poles. Then uses EFT's softening protocol. When the withdrawer reaches, that's emergence—capacity to hold both Within AND Between.",
+      act: "A client is psychologically inflexible around a traumatic memory—fused with the story (Told), avoiding the feeling (Think), stuck in rumination (There). The ACT therapist uses Threads to diagnose: MEMORY (Told), EMBODIMENT (Think), and PRESENCE (There) are all collapsed. Uses defusion for MEMORY, acceptance for EMBODIMENT, present-moment awareness for PRESENCE. Threads provides the map; ACT provides the techniques.",
+      somatic: "A trauma survivor experiences freeze (collapsed into Stay when Go is needed). The Somatic Experiencing practitioner recognizes this as EMBODIMENT collapse. Uses pendulation and titration to help the nervous system complete the defensive response. As the window of tolerance expands, Threads tracks emergence: the client can now hold both Stay (groundedness) AND Go (mobility) without collapsing.",
+      dbt: "A client with borderline personality disorder swings between Emotion Mind (EMBODIMENT collapse into Feel) and Reasonable Mind (collapse into Think). The DBT therapist uses Threads to see Wise Mind as holding both poles of EMBODIMENT. Teaches distress tolerance (PAUSE skills), interpersonal effectiveness (CONSENT skills), and emotion regulation (EMBODIMENT skills). DBT provides the skills; Threads provides the architecture.",
+      gottman: "A couple has a perpetual problem about money. He wants to save (security). She wants to spend (experience). Gottman research says this won't be 'solved.' The therapist uses Threads to name this as UNCERTAINTY (Hide/Seek)—he's protecting against threat, she's embracing possibility. Uses Gottman's Dreams Within Conflict to honor both, then Threads to help them hold the polarity rather than trying to win.",
+      bowen: "A client is emotionally cut off from their family (PRESENCE collapse toward Within, MEMORY collapse toward Chosen—rejecting the Given). The Bowen-trained coach recognizes this as pseudodifferentiation. Uses Threads to name which tensions are being avoided, then coaches differentiation work: staying connected (Between) while maintaining self (Within), honoring family history (Given) while authoring new patterns (Chosen).",
+      narrative: "A client is stuck in a problem-saturated story: 'I'm always the victim.' The narrative therapist externalizes the story (movement from Told to Telling). But Threads warns: don't collapse into the Chosen pole by erasing the Given. The re-authoring honors what the 'victim' story protected (real harm was done) while opening space for new authorship (I'm also resilient).",
+      mbsr: "A client practices mindfulness but uses it to avoid difficult emotions (EMBODIMENT collapse into Think, spiritually bypassing Feel). The MBSR teacher uses Threads to diagnose the collapse, then guides body scan practice specifically to build capacity for Feel. Mindfulness is the practice; Threads is the map of what's being navigated.",
+      mi: "A client is ambivalent about quitting smoking. MI explores the ambivalence with empathy and OARS. Threads identifies this as BECOMING (Same/Different) and PAUSE (Not Yet/Now). The MI spirit IS the Threads stance—honoring both poles without pushing toward change. MI provides the conversational technique; Threads explains the existential architecture of ambivalence.",
+      cbt: "A client has the cognitive distortion 'I must be perfect or I'm worthless' (all-or-nothing thinking, PAUSE collapse—can't hold 'good enough'). The CBT therapist challenges the distortion and teaches balanced thinking. Threads asks: what did this distortion protect? Likely UNCERTAINTY collapse (Hide from threat of rejection). Uses CBT skills while honoring the protective function.",
+      focusing: "A client feels 'something stuck' in their chest but can't name it. The Focusing practitioner guides felt sense inquiry. The body shift happens: 'Oh... it's grief AND relief.' That's emergence—the body reveals EMBODIMENT holding both Feel (grief) and its opposite (relief). Focusing provides the somatic methodology; Threads names what emerged."
+    };
+    return examples[modalityId] || "Integration example varies by modality and client presentation.";
+  };
+
   return (
     <div className={styles.modalityCompatibility}>
       {/* Hero Section */}
@@ -502,6 +523,26 @@ const ModalityCompatibility: React.FC = () => {
                   <div className={styles.modalSection} style={{ marginTop: '2rem' }}>
                     <h3>The Honest Positioning</h3>
                     <p>{selectedModality.honestPositioning}</p>
+                  </div>
+
+                  <div className={styles.seeItInAction}>
+                    <h3>See It In Action</h3>
+                    <div className={styles.exampleBox}>
+                      <strong>Example:</strong> {getModalityExample(selectedModality.id)}
+                    </div>
+                    <p className={styles.learnMoreText}>
+                      Want to see more examples and learn how to integrate Threads with your practice?
+                    </p>
+                    <div className={styles.actionLinks}>
+                      <a href="/explore" className={styles.actionLink}>
+                        <strong>Explore Threads</strong>
+                        <span>See real examples of how the seven threads appear in daily life and relationships</span>
+                      </a>
+                      <a href="/training" className={styles.actionLink}>
+                        <strong>View Training Pathway</strong>
+                        <span>Learn about our tiered training, FAQs, and certification options</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               )}
