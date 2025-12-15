@@ -540,7 +540,7 @@ const ModalityCompatibility: React.FC = () => {
                       </a>
                       <a href="/training" className={styles.actionLink}>
                         <strong>View Training Pathway</strong>
-                        <span>Learn about our tiered training, FAQs, and certification options</span>
+                        <span>Learn about our tiered professional development training and FAQs</span>
                       </a>
                     </div>
                   </div>
