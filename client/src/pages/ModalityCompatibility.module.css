@@ -708,25 +708,33 @@
     gap: 2rem;
   }
 
+  .modalOverlay {
+    padding: 0;
+    align-items: flex-start;
+  }
+
   .modal {
     margin: 0;
     border-radius: 0;
-    max-height: 100vh;
-    height: 100vh;
+    max-height: 100dvh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
   .closeButton {
     z-index: 10;
-    top: 0.75rem;
-    right: 0.75rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 36px;
+    height: 36px;
   }
 
   .modalHeader {
     flex-direction: column;
     align-items: flex-start;
-    padding: 3rem 3rem 1rem 1.5rem;
+    padding: 2.5rem 2.5rem 1rem 1rem;
     flex-shrink: 0;
   }
 
