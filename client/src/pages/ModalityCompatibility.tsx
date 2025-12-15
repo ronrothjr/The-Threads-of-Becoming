@@ -328,18 +328,34 @@ const ModalityCompatibility: React.FC = () => {
               </button>
             </div>
 
-            {/* Mobile Tab Selector */}
+            {/* Mobile Tab Buttons */}
             <div className={styles.mobileTabSelector}>
-              <select
-                className={styles.tabSelect}
-                value={activeTab}
-                onChange={(e) => setActiveTab(e.target.value as typeof activeTab)}
-              >
-                <option value="overview">Overview</option>
-                <option value="overlap">Where They Overlap</option>
-                <option value="differences">Key Differences</option>
-                <option value="integration">Integration</option>
-              </select>
+              <div className={styles.mobileTabButtons}>
+                <button
+                  className={activeTab === 'overview' ? styles.activeTab : ''}
+                  onClick={() => setActiveTab('overview')}
+                >
+                  Overview
+                </button>
+                <button
+                  className={activeTab === 'overlap' ? styles.activeTab : ''}
+                  onClick={() => setActiveTab('overlap')}
+                >
+                  Where They Overlap
+                </button>
+                <button
+                  className={activeTab === 'differences' ? styles.activeTab : ''}
+                  onClick={() => setActiveTab('differences')}
+                >
+                  Key Differences
+                </button>
+                <button
+                  className={activeTab === 'integration' ? styles.activeTab : ''}
+                  onClick={() => setActiveTab('integration')}
+                >
+                  Integration
+                </button>
+              </div>
             </div>
 
             <div className={styles.modalContent}>
