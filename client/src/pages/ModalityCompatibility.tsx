@@ -232,6 +232,18 @@ const ModalityCompatibility: React.FC = () => {
                   teams, organizations, and communities.
                 </li>
               </ul>
+              <div className={styles.personalPractice}>
+                <h3>Personal Practice Pathway</h3>
+                <p>
+                  Threads includes a Personal Practice Workbook—a skills curriculum for individuals navigating their own tensions:
+                </p>
+                <ul>
+                  <li>Thread recognition (which tension is active?)</li>
+                  <li>Collapse identification (which pole am I avoiding?)</li>
+                  <li>Tension holding (staying present without forcing resolution)</li>
+                  <li>Emergence awareness (noticing when something new arises)</li>
+                </ul>
+              </div>
             </div>
 
             <div className={styles.valueColumn}>
@@ -241,8 +253,9 @@ const ModalityCompatibility: React.FC = () => {
                 <li>Clinical licensure or expanded scope of practice</li>
                 <li>Permission to diagnose or treat mental health conditions</li>
                 <li>Trauma processing protocols (refer to SE, EMDR, Sensorimotor)</li>
-                <li>Skills training curriculum (use DBT, ACT, Gottman)</li>
-                <li>Parts work methodology (use IFS)</li>
+                <li>Crisis intervention skills (use DBT's TIPP, distress tolerance modules)</li>
+                <li>Behavioral repair sequences (use Gottman's repair checklists, antidotes)</li>
+                <li>Parts work methodology (use IFS unburdening protocols)</li>
                 <li>Evidence base (that's what we're building)</li>
               </ul>
             </div>
@@ -259,6 +272,73 @@ const ModalityCompatibility: React.FC = () => {
               <strong>Use the modality that fits the presenting problem. Use Threads to understand the territory.
               Let each inform the other.</strong>
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinical Decision Tree */}
+      <section className={`${styles.decisionTree} section-lg`}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Clinical Decision Tree</h2>
+          <p className={styles.sectionIntro}>When to use Threads alongside other modalities:</p>
+
+          <div className={styles.decisionGrid}>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is unmet needs that could be met with better communication →</strong>
+              <span>NVC</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is internal parts in conflict →</strong>
+              <span>IFS (Threads identifies which tension parts organize around)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is attachment injury in couples →</strong>
+              <span>EFT (Threads maps the cycle to universal tensions)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is psychological inflexibility →</strong>
+              <span>ACT (Threads shows which tension flexibility is stuck around)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is trauma stored in the body →</strong>
+              <span>Somatic approaches (Threads identifies EMBODIMENT; refer for processing)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is severe emotion dysregulation →</strong>
+              <span>DBT (Threads provides architecture; DBT provides skills)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is negative couple interaction cycles →</strong>
+              <span>Gottman (Threads explains perpetual problems)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is multigenerational patterns →</strong>
+              <span>Bowen (Threads names which tensions are transmitted)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is a problem-saturated story →</strong>
+              <span>Narrative Therapy (Threads ensures both Given and Chosen are honored)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is reactivity and lack of awareness →</strong>
+              <span>Mindfulness (prerequisite for all Threads work)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is ambivalence about specific behavior change →</strong>
+              <span>MI (Threads addresses existential ambivalence)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is cognitive distortions causing acute symptoms →</strong>
+              <span>CBT (Threads asks what collapse protected)</span>
+            </div>
+            <div className={styles.decisionItem}>
+              <strong>If the problem is disconnection from body wisdom →</strong>
+              <span>Focusing (deep EMBODIMENT methodology)</span>
+            </div>
+            <div className={styles.decisionItem + ' ' + styles.decisionHighlight}>
+              <strong>If the problem is a permanent polarity that keeps returning →</strong>
+              <span>This is Threads' home territory</span>
+            </div>
           </div>
         </div>
       </section>

@@ -37,17 +37,19 @@ Most therapeutic approaches aim to resolve tension through understanding, skill-
 
 **Moderate:** Philosophical tension exists. Techniques can be integrated pragmatically, but core assumptions differ. Threads asks different questions. Example: CBT.
 
-# **What Threads Contributes**
+# **What Threads DOES Provide: Personal Practice**
 
-**Universal Architecture:** Seven threads that appear across all contexts—individual, relational, organizational, congregational. The same tensions, the same navigation requirements, at every scale.
+Threads includes a Personal Practice Workbook—a skills curriculum for individuals navigating their own tensions. This teaches:
 
-**Diagnostic Precision:** When someone is stuck, Threads identifies which existential tension is activated. This focuses intervention: you know which modality tools to apply and why.
+• Thread recognition (which tension is active in my life right now?)
 
-**Collapse Recognition:** Specific patterns of how people lose access to one pole. Four collapse modes per thread. Real-time diagnostic indicators.
+• Collapse identification (which pole am I avoiding? what is it protecting?)
 
-**Emergence Framework:** Not just balance or flexibility—genuine novelty arising from held tension. Threads explains why transformation happens when we stop trying to resolve.
+• Tension holding (staying present without forcing resolution)
 
-**Relational and Systemic Extension:** Many modalities are primarily individual. Threads applies the same architecture to couples, families, teams, organizations, and communities.
+• Emergence awareness (noticing when something new arises)
+
+*Threads has both a facilitator training pathway AND a personal practice pathway. The facilitator training teaches practitioners to guide others. The personal practice teaches individuals to navigate their own lives.*
 
 # **What Threads Does NOT Provide**
 
@@ -59,9 +61,11 @@ Threads is enhancement, not replacement. It does not provide:
 
 • Trauma processing protocols (refer to SE, EMDR, Sensorimotor)
 
-• Skills training curriculum (use DBT, ACT, Gottman)
+• Crisis intervention skills (use DBT's TIPP, distress tolerance modules)
 
-• Parts work methodology (use IFS)
+• Behavioral repair sequences (use Gottman's repair checklists, antidotes)
+
+• Parts work methodology (use IFS unburdening protocols)
 
 • Evidence base (that's what we're building)
 

@@ -273,6 +273,38 @@
   color: var(--color-primary);
 }
 
+.personalPractice {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid var(--color-primary);
+}
+
+.personalPractice h3 {
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.personalPractice p {
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.personalPractice ul {
+  list-style: none;
+  padding: 0;
+}
+
+.personalPractice li {
+  padding: 0.5rem 0;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
 .honestPositioning {
   background: white;
   padding: 2rem;
@@ -294,6 +326,84 @@
 
 .honestPositioning p:last-child {
   margin-bottom: 0;
+}
+
+.valueNote {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(var(--color-primary-rgb, 59, 130, 246), 0.1);
+  border-radius: 6px;
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+/* Clinical Decision Tree */
+.decisionTree {
+  background: white;
+}
+
+.sectionTitle {
+  font-size: var(--text-3xl);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.sectionIntro {
+  text-align: center;
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.decisionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.decisionItem {
+  padding: 1.25rem;
+  background: var(--color-bg-light);
+  border-left: 4px solid var(--color-border);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.decisionItem:hover {
+  border-left-color: var(--color-primary);
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.decisionItem strong {
+  display: block;
+  color: var(--color-text);
+  font-size: var(--text-base);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.decisionItem span {
+  display: block;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+
+.decisionHighlight {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border-left-color: var(--color-primary);
+  border-left-width: 6px;
+}
+
+.decisionHighlight strong {
+  color: var(--color-primary);
+}
+
+.decisionHighlight span {
+  font-size: var(--text-lg);
 }
 
 /* CTA Section */
@@ -706,6 +816,10 @@
   .valueGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .decisionGrid {
+    grid-template-columns: 1fr;
   }
 
   .modalOverlay {
