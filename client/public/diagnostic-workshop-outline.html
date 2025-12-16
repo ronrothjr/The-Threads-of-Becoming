@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Thread Diagnostic Workshop | Threads of Becoming</title>
+    <style>
+        /* Thread-based color system */
+        :root {
+            --thread-presence: #7C3AED;
+            --thread-consent: #059669;
+            --thread-memory: #DC2626;
+            --thread-pause: #D97706;
+            --thread-embodiment: #EA580C;
+            --thread-uncertainty: #0284C7;
+            --thread-becoming: #78716C;
+            --color-emergence: #FBBF24;
+            --color-charcoal: #27272A;
+            --color-cream: #FFFBEB;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-cream);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-emergence);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--color-charcoal);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-emergence);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--thread-consent);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            margin: 1rem 0 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        strong {
+            color: var(--color-charcoal);
+        }
+
+        .highlight-box {
+            background: var(--color-cream);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--thread-consent);
+            margin: 1.5rem 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .info-card {
+            background: var(--color-cream);
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .info-card strong {
+            display: block;
+            color: var(--thread-consent);
+            margin-bottom: 0.5rem;
+        }
+
+        .agenda-item {
+            background: white;
+            padding: 1.25rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border-left: 4px solid var(--thread-pause);
+        }
+
+        .agenda-item h4 {
+            color: var(--thread-pause);
+            margin-top: 0;
+        }
+
+        .pricing-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid var(--color-emergence);
+            margin: 2rem 0;
+        }
+
+        .pricing-box ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .pricing-box li::before {
+            content: "✓";
+            color: var(--thread-consent);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-cream);
+            color: var(--color-text-light);
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 1rem;
+                max-width: 100%;
+            }
+            header {
+                page-break-after: avoid;
+            }
+            h2 {
+                page-break-before: always;
+                page-break-after: avoid;
+            }
+            section:first-of-type h2 {
+                page-break-before: avoid;
+            }
+            h3, h4 {
+                page-break-after: avoid;
+            }
+            .agenda-item {
+                page-break-inside: avoid;
+            }
+            .highlight-box, .info-grid, .pricing-box, .info-card {
+                page-break-inside: avoid;
+            }
+            ul, ol {
+                page-break-inside: avoid;
+            }
+            footer {
+                page-break-before: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Organizational Thread Diagnostic Workshop</h1>
+            <p class="subtitle">3-Hour Leadership Team Session</p>
+        </header>
+
+        <section>
+            <h2>Workshop Overview</h2>
+
+            <p><strong>Purpose:</strong> Identify which threads are driving organizational tension and develop initial navigation strategies</p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <strong>Audience</strong>
+                    <p>Leadership teams (5-15 participants): C-suite executives, department heads, team leads</p>
+                </div>
+                <div class="info-card">
+                    <strong>Format</strong>
+                    <p>Facilitated in-person or virtual session</p>
+                </div>
+                <div class="info-card">
+                    <strong>Duration</strong>
+                    <p>3 hours (half-day)</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Deliverables:</strong>
+                <ul>
+                    <li>Thread map identifying primary and secondary tensions</li>
+                    <li>Collapse pattern analysis</li>
+                    <li>Initial navigation strategies (actionable first steps)</li>
+                    <li>Custom diagnostic report (delivered within 5 business days)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pre-Workshop Preparation</h2>
+
+            <h3>2 Weeks Before:</h3>
+            <ul>
+                <li>Leadership team completes Organizational Thread Assessment individually</li>
+                <li>Facilitator reviews results to identify likely primary threads</li>
+                <li>Participants submit 1-2 current tensions they want to address</li>
+            </ul>
+
+            <h3>1 Week Before:</h3>
+            <ul>
+                <li>Facilitator shares agenda and pre-reading:
+                    <ul>
+                        <li>Introduction to Seven Threads (10-minute read)</li>
+                        <li>Assessment results summary (anonymized)</li>
+                    </ul>
+                </li>
+                <li>Optional: 15-minute 1:1 calls with key stakeholders</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Workshop Agenda</h2>
+
+            <div class="agenda-item">
+                <h4>Part 1: Foundations (45 minutes)</h4>
+
+                <p><strong>0:00-0:10 | Welcome & Framing</strong></p>
+                <ul>
+                    <li>Introductions (if needed)</li>
+                    <li>Workshop goals and structure</li>
+                    <li>Ground rules: Curiosity over judgment, name patterns not blame, tensions are data not problems</li>
+                </ul>
+
+                <p><strong>0:10-0:30 | Seven Threads Framework</strong></p>
+                <p>Interactive teaching segment covering:</p>
+                <ul>
+                    <li>Brief overview of all seven threads</li>
+                    <li>Key concept: Tensions ≠ Problems (Problems have solutions; Tensions require navigation)</li>
+                    <li>Collapse patterns: Oscillating, Stuck, Fragmented</li>
+                </ul>
+
+                <p><strong>0:30-0:45 | Assessment Results Review</strong></p>
+                <ul>
+                    <li>Share aggregated assessment results</li>
+                    <li>Identify threads with highest scores</li>
+                    <li>Participants share: "Which thread description resonated most?"</li>
+                </ul>
+                <p><strong>Output:</strong> Prioritized list of 2-3 threads to explore</p>
+            </div>
+
+            <div class="agenda-item">
+                <h4>Part 2: Thread Mapping (90 minutes)</h4>
+
+                <p><strong>0:45-1:15 | Primary Thread Deep Dive</strong></p>
+                <p>Facilitated mapping exercise in three steps:</p>
+
+                <p><strong>Step 1: Name the Tension (10 min)</strong></p>
+                <ul>
+                    <li>What is the specific tension your organization is navigating?</li>
+                    <li>Frame as "X ↔ Y" (both/and, not either/or)</li>
+                    <li>Example: "Predictability ↔ Adaptability" (likely PAUSE thread)</li>
+                </ul>
+
+                <p><strong>Step 2: Map the Poles (10 min)</strong></p>
+                <ul>
+                    <li>What does full collapse into Pole A look like?</li>
+                    <li>What does full collapse into Pole B look like?</li>
+                    <li>What are the gifts of each pole? (Reframe from "good vs. bad")</li>
+                </ul>
+
+                <p><strong>Step 3: Identify Current Collapse Pattern (10 min)</strong></p>
+                <ul>
+                    <li>Are we oscillating? (Swinging back and forth)</li>
+                    <li>Are we stuck? (Collapsed into one pole)</li>
+                    <li>Are we fragmented? (Different parts at different poles)</li>
+                </ul>
+                <p><strong>Output:</strong> Visual thread map on whiteboard/Miro</p>
+
+                <p><strong>1:15-1:30 | Break</strong></p>
+
+                <p><strong>1:30-2:15 | Pattern Analysis</strong></p>
+                <p>Explore the system beneath the symptoms:</p>
+                <ul>
+                    <li><strong>When did this tension first emerge?</strong> What organizational change triggered it?</li>
+                    <li><strong>Who is advocating for each pole?</strong> Which teams/roles pull toward each side?</li>
+                    <li><strong>What reinforces the collapse?</strong> Structures, cultural norms, leadership behaviors</li>
+                    <li><strong>What would "holding both poles" look like?</strong> Can we imagine honoring both?</li>
+                </ul>
+                <p><strong>Output:</strong> Root cause analysis & systemic reinforcers identified</p>
+            </div>
+
+            <div class="agenda-item">
+                <h4>Part 3: Navigation Strategies (45 minutes)</h4>
+
+                <p><strong>2:15-2:45 | Design Initial Interventions</strong></p>
+                <p>Framework: 3 Levels of Intervention</p>
+
+                <ol>
+                    <li><strong>Language:</strong> How do we name this tension going forward? Create thread shorthand for teams</li>
+                    <li><strong>Structure:</strong> What organizational changes support holding both poles? (Decision rights, meeting rhythms, metrics, resource allocation)</li>
+                    <li><strong>Practice:</strong> What daily/weekly practices reinforce navigation? (Check-ins, "both/and" prompts, retrospectives)</li>
+                </ol>
+
+                <p><strong>2:45-3:00 | Commit to Next Steps</strong></p>
+                <p>Define immediate actions:</p>
+                <ul>
+                    <li><strong>30-day experiment:</strong> What will we try for the next month?</li>
+                    <li><strong>Who owns it:</strong> Assign clear accountability</li>
+                    <li><strong>How we'll know:</strong> Define success criteria</li>
+                    <li><strong>When we'll review:</strong> Schedule follow-up check-in</li>
+                </ul>
+                <p><strong>Output:</strong> Action plan with owners and timelines</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Post-Workshop Deliverables</h2>
+
+            <h3>Within 5 Business Days:</h3>
+            <p><strong>Custom Diagnostic Report including:</strong></p>
+            <ul>
+                <li>Thread map (visual diagram)</li>
+                <li>Collapse pattern analysis</li>
+                <li>Recommended navigation strategies</li>
+                <li>30/60/90-day roadmap</li>
+                <li>Resources for leadership team</li>
+            </ul>
+
+            <h3>Within 2 Weeks:</h3>
+            <p><strong>Follow-up call with leadership sponsor (30 min)</strong></p>
+            <ul>
+                <li>Review report</li>
+                <li>Clarify questions</li>
+                <li>Discuss integration options (if desired)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Facilitation Approach</h2>
+
+            <div class="highlight-box">
+                <strong>Facilitator Role:</strong>
+                <ul>
+                    <li><strong>Pattern recognition:</strong> Help teams see what they're too close to see</li>
+                    <li><strong>Non-directive:</strong> Guide discovery, don't prescribe solutions</li>
+                    <li><strong>Thread fluency:</strong> Translate organizational dynamics into thread language</li>
+                    <li><strong>Conflict-comfortable:</strong> Hold space for disagreement without rushing to resolution</li>
+                </ul>
+            </div>
+
+            <h3>Key Facilitation Moves:</h3>
+            <ol>
+                <li><strong>Name the collapse in real-time</strong> – "Notice we just oscillated between planning and executing—that's the PAUSE thread showing up right now"</li>
+                <li><strong>Reframe from blame to pattern</strong> – Not "Engineering is always blocking us" but "Engineering is holding the 'Not Yet' pole; Product is holding the 'Now' pole—how do we honor both?"</li>
+                <li><strong>Invite embodied noticing</strong> – "Where do you feel this tension in your body when it shows up?"</li>
+                <li><strong>Hold paradox</strong> – Resist the urge to resolve too quickly; let the team sit in "both are true"</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Customization Options</h2>
+
+            <h3>By Organization Size:</h3>
+            <ul>
+                <li><strong>5-10 people:</strong> Single-day intensive (6 hours) to go deeper</li>
+                <li><strong>15+ people:</strong> Multiple sessions with subset groups, then synthesis</li>
+                <li><strong>Multi-site:</strong> Virtual workshop with breakout rooms by location</li>
+            </ul>
+
+            <h3>By Thread Focus:</h3>
+            <ul>
+                <li><strong>Single-thread deep dive:</strong> If assessment clearly shows one primary thread</li>
+                <li><strong>Multi-thread mapping:</strong> If organization has multiple threads in collapse</li>
+            </ul>
+
+            <h3>Add-ons:</h3>
+            <ul>
+                <li><strong>+90 min:</strong> Include team-level thread mapping (beyond leadership)</li>
+                <li><strong>+2 hours:</strong> Design facilitation toolkit for leaders to use with their teams</li>
+                <li><strong>+Follow-up:</strong> Monthly thread navigation check-ins (ongoing)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Success Indicators</h2>
+
+            <h3>You'll know the workshop was effective if:</h3>
+
+            <div class="info-card">
+                <strong>Immediate (end of session):</strong>
+                <ul>
+                    <li>Team has shared language for naming the tension</li>
+                    <li>Participants can identify collapse patterns in real-time</li>
+                    <li>Leadership is aligned on primary thread(s)</li>
+                    <li>Concrete 30-day experiment is defined</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <strong>30 Days Post:</strong>
+                <ul>
+                    <li>Teams are using thread language in meetings</li>
+                    <li>Decisions reference "holding both poles"</li>
+                    <li>Collapse patterns are named when they occur (not ignored)</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <strong>90 Days Post:</strong>
+                <ul>
+                    <li>Measurable shift in decision-making velocity or conflict duration</li>
+                    <li>Leadership reports increased clarity on navigation</li>
+                    <li>Organization is ready to integrate threads at scale (or knows it's not a fit)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="pricing-box">
+                <h2>Pricing & Logistics</h2>
+
+                <h3>Investment:</h3>
+                <ul>
+                    <li><strong>Half-day workshop (3 hours):</strong> Starting at $3,500</li>
+                    <li><strong>Full-day intensive (6 hours):</strong> $6,000</li>
+                    <li><strong>Custom multi-session:</strong> Quote based on scope</li>
+                </ul>
+
+                <h3>Includes:</h3>
+                <ul>
+                    <li>Pre-workshop assessment & analysis</li>
+                    <li>Facilitation by certified Threads practitioner</li>
+                    <li>Custom diagnostic report</li>
+                    <li>30-day follow-up call</li>
+                    <li>Digital resource toolkit</li>
+                </ul>
+
+                <h3>Travel (if in-person):</h3>
+                <p>Facilitator travel expenses billed separately. Virtual option available (no travel costs).</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <p><strong>Q: Can we do this remotely?</strong><br>
+            Yes. Virtual workshops use Miro or Zoom whiteboards for collaborative mapping. Effectiveness is comparable to in-person when facilitated well.</p>
+
+            <p><strong>Q: What if we're not sure which thread is primary?</strong><br>
+            That's what the workshop is designed to discover. Pre-assessment results guide us, but the live mapping often reveals unexpected patterns.</p>
+
+            <p><strong>Q: Do we need the whole leadership team?</strong><br>
+            Ideally yes—decision-makers who can commit to navigation strategies. Minimum 5 people; maximum 15 for effective facilitation.</p>
+
+            <p><strong>Q: What happens after the workshop?</strong><br>
+            You have three options:</p>
+            <ol>
+                <li>Take the insights and run with them (self-guided)</li>
+                <li>Schedule follow-up sessions for ongoing navigation support</li>
+                <li>Engage in full integration program (6-month partnership)</li>
+            </ol>
+
+            <p><strong>Q: How do we measure ROI?</strong><br>
+            Most organizations track:</p>
+            <ul>
+                <li>Decision-making velocity (time from issue to resolution)</li>
+                <li>Meeting efficiency (time spent on recurring conflicts)</li>
+                <li>Employee sentiment (engagement scores related to clarity/alignment)</li>
+                <li>Leadership alignment (reduced escalations, faster strategic agreement)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <div class="footer-logo">Creative Advance Institute</div>
+            <p>Threads of Becoming Framework</p>
+            <p>© 2025 | creativeadvance.org</p>
+            <p style="margin-top: 1rem;"><em>This workshop outline is a sample structure. Actual facilitation is customized based on organizational context, size, and specific tensions being navigated.</em></p>
+        </footer>
+    </div>
+</body>
+</html>

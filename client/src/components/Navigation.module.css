@@ -1,5 +1,5 @@
 .nav {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -7,6 +7,15 @@
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 24px rgba(31, 38, 135, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav.scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 24px rgba(31, 38, 135, 0.15);
 }
 
 .navContent {
@@ -24,16 +33,22 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  text-decoration: none;
-  color: var(--color-navy);
-  font-weight: var(--font-semibold);
-  font-size: var(--text-xl);
-  transition: opacity 0.2s ease;
   position: relative;
 }
 
-.logo:hover {
+.logo a {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo a:hover {
   opacity: 0.8;
+}
+
+.logoText {
+  color: var(--color-navy);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-xl);
 }
 
 .logoIcon {
@@ -155,7 +170,11 @@
     padding: 0.75rem 2rem;
   }
 
-  .logo span {
+  .logoText {
+    font-size: var(--text-sm);
+  }
+
+  .logoText span {
     font-size: var(--text-sm);
   }
 }

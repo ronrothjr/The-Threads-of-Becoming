@@ -3,7 +3,12 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  /* Resources - Learning journey (Presence → Pause → Becoming) */
+  background: linear-gradient(135deg,
+    var(--thread-presence) 0%,
+    var(--thread-pause) 50%,
+    var(--thread-becoming) 100%
+  );
   color: var(--color-white);
   padding: 6rem 0 4rem;
   text-align: center;
@@ -19,7 +24,7 @@
 .tagline {
   font-size: var(--text-3xl);
   margin-bottom: 1.5rem;
-  color: var(--color-orange);
+  color: var(--color-emergence);
 }
 
 .subtitle {
@@ -272,7 +277,10 @@
 }
 
 .cta {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
+  background: linear-gradient(135deg,
+    var(--color-charcoal) 0%,
+    var(--cool-teal) 100%
+  );
   color: var(--color-white);
 }
 

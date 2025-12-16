@@ -1,28 +1,60 @@
 /* Threads of Becoming Color Palette */
 :root {
-  /* Primary Thread Colors */
-  --color-navy: #2C3E50;
-  --color-blue: #4A90E2;
-  --color-purple: #9B59B6;
-  --color-teal: #16A085;
-  --color-orange: #E67E22;
-  --color-pink: #E91E63;
-  --color-brown: #6B4423;
+  /* Seven Thread Colors - The Living Weave */
+  --thread-presence: #7C3AED;      /* Deep Purple - Within/Between */
+  --thread-consent: #059669;        /* Forest Green - Self/Other */
+  --thread-memory: #DC2626;         /* Burnt Sienna - Given/Chosen */
+  --thread-pause: #D97706;          /* Golden Amber - Not Yet/Now */
+  --thread-embodiment: #EA580C;     /* Terracotta - Think/Feel */
+  --thread-uncertainty: #0284C7;    /* Storm Blue - Hide/Seek */
+  --thread-becoming: #78716C;       /* Warm Gray - Same/Different */
 
-  /* Neutral Colors */
+  /* Complementary Pairs - Held Tension (Warm ←→ Cool) */
+  --warm-amber: #D97706;            /* Pause */
+  --cool-teal: #0F766E;             /* Deep Teal complement */
+  --warm-coral: #DC2626;            /* Memory */
+  --cool-ocean: #0369A1;            /* Ocean Blue complement */
+  --warm-terra: #EA580C;            /* Embodiment */
+  --cool-forest: #14532D;           /* Deep Forest complement */
+
+  /* Emergence & Collapse States */
+  --color-emergence: #FBBF24;       /* Living Gold - what arises from held tension */
+  --color-collapse: #64748B;        /* Slate - contraction into one pole */
+  --color-holding: #C4B5FD;         /* Soft Lavender - the space between */
+
+  /* Neutral Canvas - The Ground */
   --color-white: #FFFFFF;
-  --color-off-white: #F8F9FA;
+  --color-cream: #FFFBEB;           /* Warm canvas */
+  --color-off-white: #FAF8F3;       /* Parchment */
   --color-light-gray: #E9ECEF;
   --color-gray: #6C757D;
   --color-dark-gray: #343A40;
-  --color-black: #1A1A1A;
+  --color-charcoal: #27272A;        /* Grounding */
+  --color-black: #0A0A0A;           /* Depth */
 
-  /* Semantic Colors */
-  --color-primary: var(--color-teal);
-  --color-secondary: var(--color-purple);
-  --color-accent: var(--color-orange);
-  --color-text: var(--color-navy);
+  /* Semantic Colors - Contextual Application */
+  --color-primary: var(--thread-presence);
+  --color-primary-dark: #6D28D9;
+  --color-secondary: var(--thread-consent);
+  --color-secondary-dark: #047857;
+  --color-accent: var(--thread-pause);
+  --color-accent-dark: #B45309;
+
+  /* Text & Backgrounds */
+  --color-text: #1E293B;            /* Slate 800 for readability */
   --color-text-light: var(--color-gray);
   --color-background: var(--color-white);
-  --color-background-alt: var(--color-off-white);
+  --color-background-alt: var(--color-cream);
+  --color-bg-light: #F1F5F9;
+  --color-bg-dark: var(--color-charcoal);
+  --color-border: #E2E8F0;
+
+  /* Legacy Support (gradually phase out) */
+  --color-navy: #1E293B;
+  --color-blue: var(--thread-uncertainty);
+  --color-purple: var(--thread-presence);
+  --color-teal: var(--cool-teal);
+  --color-orange: var(--thread-pause);
+  --color-pink: #E91E63;
+  --color-brown: var(--thread-becoming);
 }

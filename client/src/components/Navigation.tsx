@@ -35,10 +35,14 @@ const Navigation: React.FC = () => {
     <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
       <div className="container">
         <div className={styles.navContent}>
-          <Link to="/" className={styles.logo} onClick={closeMobileMenu}>
-            <img src="/threads-logo-transparent.png" alt="Creative Advance Institute" className={styles.logoIcon} />
-            <span>Creative Advance<br />Institute</span>
-          </Link>
+          <div className={styles.logo}>
+            <Link to="/" onClick={closeMobileMenu}>
+              <img src="/threads-logo-transparent.png" alt="Threads of Becoming" className={styles.logoIcon} />
+            </Link>
+            <Link to="/mission" className={styles.logoText} onClick={closeMobileMenu}>
+              <span>Creative Advance<br />Institute</span>
+            </Link>
+          </div>
 
           <button
             className={styles.hamburger}

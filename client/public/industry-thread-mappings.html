@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry-Specific Thread Mappings | Threads of Becoming</title>
+    <style>
+        /* Thread-based color system */
+        :root {
+            --thread-presence: #7C3AED;
+            --thread-consent: #059669;
+            --thread-memory: #DC2626;
+            --thread-pause: #D97706;
+            --thread-embodiment: #EA580C;
+            --thread-uncertainty: #0284C7;
+            --thread-becoming: #78716C;
+            --color-emergence: #FBBF24;
+            --color-charcoal: #27272A;
+            --color-cream: #FFFBEB;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-cream);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-emergence);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--color-charcoal);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-emergence);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            margin: 1rem 0 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        strong {
+            color: var(--color-charcoal);
+        }
+
+        .intro-box {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid var(--color-emergence);
+            margin: 2rem 0;
+        }
+
+        .industry-section {
+            background: var(--color-cream);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--thread-consent);
+        }
+
+        .industry-section h2 {
+            color: var(--thread-consent);
+            margin-top: 0;
+        }
+
+        .thread-mapping {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border-left: 3px solid var(--color-text-light);
+        }
+
+        /* Thread-specific colors for h3 */
+        .thread-presence h3 { color: var(--thread-presence); border-left: 4px solid var(--thread-presence); padding-left: 1rem; }
+        .thread-consent h3 { color: var(--thread-consent); border-left: 4px solid var(--thread-consent); padding-left: 1rem; }
+        .thread-memory h3 { color: var(--thread-memory); border-left: 4px solid var(--thread-memory); padding-left: 1rem; }
+        .thread-pause h3 { color: var(--thread-pause); border-left: 4px solid var(--thread-pause); padding-left: 1rem; }
+        .thread-embodiment h3 { color: var(--thread-embodiment); border-left: 4px solid var(--thread-embodiment); padding-left: 1rem; }
+        .thread-uncertainty h3 { color: var(--thread-uncertainty); border-left: 4px solid var(--thread-uncertainty); padding-left: 1rem; }
+        .thread-becoming h3 { color: var(--thread-becoming); border-left: 4px solid var(--thread-becoming); padding-left: 1rem; }
+
+        .collapse-pattern {
+            background: #FEF3C7;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid var(--thread-pause);
+        }
+
+        .navigation-tip {
+            background: #F0FDF4;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid var(--thread-consent);
+        }
+
+        .common-phrases {
+            background: #EFF6FF;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-cream);
+            color: var(--color-text-light);
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 1rem;
+                max-width: 100%;
+            }
+            header {
+                page-break-after: avoid;
+            }
+            .industry-section {
+                page-break-before: always;
+                page-break-inside: avoid;
+            }
+            .industry-section:first-of-type {
+                page-break-before: avoid;
+            }
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+            .thread-mapping {
+                page-break-inside: avoid;
+            }
+            footer {
+                page-break-before: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Industry-Specific Thread Mappings</h1>
+            <p class="subtitle">How the seven threads manifest in different organizational contexts</p>
+        </header>
+
+        <section>
+            <div class="intro-box">
+                <h2 style="margin-top: 0; border: none;">How to Use These Mappings</h2>
+                <p>While the seven threads are universal patterns, they manifest differently across industries. This guide helps you quickly identify which threads are most likely to be in collapse in your sector and what that collapse looks like in practice.</p>
+
+                <p><strong>For each industry, you'll find:</strong></p>
+                <ul>
+                    <li><strong>Common thread manifestations:</strong> How each thread typically shows up</li>
+                    <li><strong>Collapse patterns:</strong> What collapse looks like in this context</li>
+                    <li><strong>Phrases to listen for:</strong> Language that signals thread collapse</li>
+                    <li><strong>Navigation starting points:</strong> Where to begin when addressing this thread</li>
+                </ul>
+
+                <p><strong>Industries covered:</strong> Tech Companies • Healthcare Organizations • Nonprofits • Manufacturing</p>
+            </div>
+        </section>
+
+        <!-- TECH COMPANIES -->
+        <div class="industry-section">
+            <h2>Tech Companies (Software, SaaS, Startups)</h2>
+            <p><strong>Organizational Context:</strong> Fast-paced, innovation-focused, distributed teams, emphasis on speed and iteration, engineering-driven culture, rapid growth/scaling challenges.</p>
+
+            <div class="thread-mapping thread-pause">
+                <h3>PAUSE (Not Yet ↔ Now • More ↔ Enough)</h3>
+                <p><strong>Why it's critical in tech:</strong> Constant tension between shipping fast and building sustainable systems, between "move fast and break things" and technical debt.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Oscillating between "feature freeze" (Not Yet) and "just ship it" (Now). Engineering wants to refactor, Product wants to ship. Leadership swings between both extremes quarterly.
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "We're going too fast" • "We're too slow to market" • "Technical debt is killing us" • "Let's just ship it and fix later" • "Analysis paralysis" • "We need more data"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Establish capacity allocation rules (e.g., 60% features, 40% technical health). Create standing forum for Engineering + Product to negotiate PAUSE tensions in real-time rather than escalating quarterly.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-consent">
+                <h3>CONSENT (Yes ↔ No • Self ↔ Other)</h3>
+                <p><strong>Why it's critical in tech:</strong> Scaling organizations struggle with autonomy vs. alignment. "Move fast" culture clashes with need for consistency and quality control.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Teams have too much autonomy (inconsistent product, fragmented tech stack) OR too little (every decision needs VP approval, slow execution). Swings between "empower teams" and "standardize everything."
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "Just tell me what to do" • "Why do I need permission for this?" • "Every team does it differently" • "We need more process" • "Too much bureaucracy" • "Lack of alignment"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Define decision tiers (what teams can decide autonomously, what needs consultation, what needs approval). Make decision rights explicit, especially for technical architecture, hiring, and budget.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-uncertainty">
+                <h3>UNCERTAINTY (Hide ↔ Seek • Threat ↔ Wonder)</h3>
+                <p><strong>Why it's critical in tech:</strong> Innovation requires experimentation, but investors/board want predictability. Market disruption is both opportunity and threat.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either risk-averse (only incremental improvements, fear of failure) OR reckless (pivot to every shiny object, bet-the-company experiments). Startups often oscillate during growth stages.
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "Too risky" • "Let's disrupt ourselves" • "We can't afford to fail" • "We need to innovate or die" • "What if we're wrong?" • "Let's just try everything"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Portfolio approach (70% core, 20% adjacent, 10% exploration). Different success criteria for each tier. Make experimentation safe-to-fail with clear boundaries.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-presence">
+                <h3>PRESENCE (Within ↔ Between • Here ↔ Elsewhere)</h3>
+                <p><strong>Common manifestation:</strong> Remote/distributed teams, async work, constant Slack notifications. Struggle between deep work and collaboration.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either constant meetings (no time for deep work) OR total isolation (silos, no collaboration). Remote culture intensifies this.
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Establish "collaboration hours" and "focus hours." Design async-first communication with intentional sync touchpoints. Make presence choices explicit.
+                </div>
+            </div>
+
+            <p><strong>Most common thread collapses in tech:</strong> PAUSE (speed vs. sustainability), CONSENT (autonomy vs. alignment), UNCERTAINTY (innovation vs. risk management)</p>
+        </div>
+
+        <!-- HEALTHCARE -->
+        <div class="industry-section">
+            <h2>Healthcare Organizations (Hospitals, Clinics, Health Systems)</h2>
+            <p><strong>Organizational Context:</strong> Life-or-death stakes, heavily regulated, physician autonomy culture, hierarchical structure, tension between clinical and administrative priorities, burnout epidemic.</p>
+
+            <div class="thread-mapping thread-embodiment">
+                <h3>EMBODIMENT (Think ↔ Feel • Stay ↔ Go)</h3>
+                <p><strong>Why it's critical in healthcare:</strong> Evidence-based medicine (data) vs. clinical judgment (intuition). Healthcare workers' burnout signals are often ignored. Patient care requires both analysis and empathy.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either hyper-rational ("just follow the protocol") ignoring clinician/patient experience, OR overly emotional ("this feels wrong") ignoring evidence. Burnout signals dismissed as "just part of the job."
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "What does the data say?" • "Trust your clinical judgment" • "Follow the protocol" • "The numbers don't tell the whole story" • "We're all burned out but keep going" • "Patients aren't data points"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Integrate both quantitative (clinical metrics, wait times) AND qualitative (patient/staff experience, moral injury indicators) into decision-making. Treat burnout signals as valid organizational data.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-consent">
+                <h3>CONSENT (Yes ↔ No • Self ↔ Other)</h3>
+                <p><strong>Why it's critical in healthcare:</strong> Physician autonomy vs. standardization for safety/quality. Clinicians trained to make independent decisions now work in systems requiring collaboration and consistency.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Physician autonomy leads to variation in care quality, OR administrative standardization disempowers clinicians and reduces quality. "Cookbook medicine" vs. "every doctor does it their way."
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "Physicians won't follow protocols" • "Admin doesn't understand patient care" • "My clinical judgment" • "We need consistency" • "Too much autonomy" • "Micromanagement"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Co-design protocols with clinicians. Define what must be standardized (safety-critical) vs. what allows clinical judgment. Create physician-led quality improvement teams.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-pause">
+                <h3>PAUSE (Not Yet ↔ Now • More ↔ Enough)</h3>
+                <p><strong>Why it's critical in healthcare:</strong> Emergency care requires immediate action. Chronic care requires patience. Diagnostic accuracy needs deliberation. Throughput pressures demand speed.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either "do something now" (unnecessary tests/interventions) OR "wait and see" (delays in needed care). ED pressure for speed vs. quality/safety need for deliberation.
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "We need to move patients through faster" • "We can't rush quality care" • "The ED is backed up" • "Are we doing too much?" • "Watchful waiting" • "Defensive medicine"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Different timing protocols for different acuity levels. Explicit decision velocity frameworks matched to clinical stakes. Separate throughput optimization from appropriate care pacing.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-memory">
+                <h3>MEMORY (Given ↔ Chosen • Telling ↔ Told)</h3>
+                <p><strong>Common manifestation:</strong> "We've always done rounds this way" vs. new care models. Generational conflict between senior physicians and residents. Legacy systems vs. EMR transformation.</p>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> "Keep/Change/Create" process for care protocols. Honor clinical wisdom while evolving delivery models. Include frontline staff in storytelling about change.
+                </div>
+            </div>
+
+            <p><strong>Most common thread collapses in healthcare:</strong> EMBODIMENT (data vs. clinical wisdom), CONSENT (autonomy vs. standardization), PAUSE (speed vs. quality)</p>
+        </div>
+
+        <!-- NONPROFITS -->
+        <div class="industry-section">
+            <h2>Nonprofit Organizations</h2>
+            <p><strong>Organizational Context:</strong> Mission-driven, resource-constrained, donor/grant dependencies, tension between service delivery and fundraising, volunteer management, impact measurement challenges.</p>
+
+            <div class="thread-mapping thread-consent">
+                <h3>CONSENT (Yes ↔ No • Self ↔ Other)</h3>
+                <p><strong>Why it's critical in nonprofits:</strong> Founder/ED vision vs. community voice. Funder priorities vs. beneficiary needs. "Nothing about us without us" principle vs. operational efficiency.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either top-down (ED/board decides everything, community not consulted) OR paralysis (endless stakeholder input, can't make decisions). Funder requirements override community needs.
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "The community needs to decide" • "We can't wait for consensus" • "The funder requires this" • "That's not what our beneficiaries want" • "We know what's best for them" • "Participatory approach takes too long"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Define decision tiers with explicit community voice levels (inform, consult, collaborate, defer). Negotiate funder flexibility. Create beneficiary advisory councils with real authority.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-pause">
+                <h3>PAUSE (Not Yet ↔ Now • More ↔ Enough)</h3>
+                <p><strong>Why it's critical in nonprofits:</strong> Urgent social needs demand immediate action. Sustainable change requires long-term investment. Grant cycles force artificial timelines.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either crisis mode (reactive, always urgent) OR endless planning (strategic plans that never execute). Grant deadlines override thoughtful program development.
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "People are suffering now" • "We need to build capacity first" • "The grant ends in 6 months" • "We're always in crisis mode" • "When do we stop strategizing and start doing?" • "Sustainability vs. urgency"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Dual-track approach (crisis response + systems building). Negotiate multi-year funding where possible. Explicit criteria for "urgent now" vs. "invest for later" decisions.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-memory">
+                <h3>MEMORY (Given ↔ Chosen • Telling ↔ Told)</h3>
+                <p><strong>Why it's critical in nonprofits:</strong> Founder's vision vs. evolution. "Mission drift" fears. Honoring beneficiary histories vs. expert-designed interventions.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either stuck in founder's vision (can't adapt to changing needs) OR abandoning core mission (chase every funding opportunity). "That's not our mission" vs. "We need to pivot to survive."
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "The founder intended..." • "That's mission drift" • "We need to evolve or die" • "Staying true to our roots" • "We've always served [X] population" • "New funding requires we shift focus"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Define core mission (non-negotiable) vs. strategies/tactics (evolvable). Annual "mission alignment check" for new opportunities. Center beneficiary voice in defining what "staying true" means.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-becoming">
+                <h3>BECOMING (Same ↔ Different • Return ↔ Forward)</h3>
+                <p><strong>Common manifestation:</strong> Small scrappy startup vs. professionalized organization. Grassroots vs. institution. Identity crisis during scaling.</p>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Define 3 non-negotiables (identity anchors) and 3 evolution zones (where change is welcome). Make scaling choices explicit about what you're preserving vs. transforming.
+                </div>
+            </div>
+
+            <p><strong>Most common thread collapses in nonprofits:</strong> CONSENT (community voice vs. ED authority), PAUSE (urgency vs. sustainability), MEMORY (mission drift vs. rigidity)</p>
+        </div>
+
+        <!-- MANUFACTURING -->
+        <div class="industry-section">
+            <h2>Manufacturing Companies</h2>
+            <p><strong>Organizational Context:</strong> Physical production, safety-critical operations, union/labor relations, legacy equipment/processes, lean/continuous improvement culture, generational workforce, automation pressures.</p>
+
+            <div class="thread-mapping thread-memory">
+                <h3>MEMORY (Given ↔ Chosen • Telling ↔ Told)</h3>
+                <p><strong>Why it's critical in manufacturing:</strong> "Tribal knowledge" of longtime workers vs. new processes. Legacy equipment vs. automation. Craftsmanship culture vs. efficiency metrics.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either trapped by "how we've always done it" (can't modernize) OR erasing institutional knowledge (veteran workers feel disrespected, knowledge lost). "Old guard" vs. "new leadership."
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "We've been making this for 40 years" • "The young engineers don't understand" • "That machine has quirks only Joe knows" • "We need to modernize" • "Respect the craft" • "The old way is inefficient"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Knowledge capture programs pairing veterans with new hires. "Keep/Change/Create" for processes (preserve quality standards, evolve methods). Mentor programs that honor expertise while teaching new techniques.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-embodiment">
+                <h3>EMBODIMENT (Think ↔ Feel • Stay ↔ Go)</h3>
+                <p><strong>Why it's critical in manufacturing:</strong> Data-driven lean vs. operator intuition. Safety protocols vs. worker experience of risk. Floor workers "feel" machine problems before sensors detect them.</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either "just follow the standard work" (ignore operator expertise) OR "gut feel" (ignore data/metrics). Safety culture that dismisses worker concerns as "soft" or overreacts to every feeling.
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "The data shows..." • "I can hear when that machine is off" • "Follow the SOP" • "Something doesn't feel right" • "Trust the process" • "My body knows when it's unsafe"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Integrate operator observations into continuous improvement. Include "operator intuition" as valid data in problem-solving. Safety protocols that honor both metrics AND worker-felt risk.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-pause">
+                <h3>PAUSE (Not Yet ↔ Now • More ↔ Enough)</h3>
+                <p><strong>Why it's critical in manufacturing:</strong> Production schedules demand throughput. Quality requires time. Preventive maintenance vs. reactive fixes. "Ship it now" vs. "Make it right."</p>
+
+                <div class="collapse-pattern">
+                    <strong>Common Collapse Pattern:</strong> Either rushing (quality issues, rework, safety incidents) OR over-engineering (missed deadlines, excess inventory). Reactive maintenance (downtime) vs. excessive preventive maintenance (cost).
+                </div>
+
+                <div class="common-phrases">
+                    <strong>Listen for:</strong> "We're behind schedule" • "Quality over speed" • "Ship what we have" • "That's good enough" • "We can't afford downtime" • "More testing needed"
+                </div>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Takt time analysis matching production pace to demand. Explicit quality gates based on criticality. Predictive maintenance balancing prevention and availability.
+                </div>
+            </div>
+
+            <div class="thread-mapping thread-uncertainty">
+                <h3>UNCERTAINTY (Hide ↔ Seek • Threat ↔ Wonder)</h3>
+                <p><strong>Common manifestation:</strong> Automation as threat (job loss) vs. opportunity (augmentation). Market disruption. New materials/processes vs. proven methods.</p>
+
+                <div class="navigation-tip">
+                    <strong>Navigation Starting Point:</strong> Pilot automation with worker input on augmentation (not replacement). Structured experimentation zones for new processes. Transparent communication about market changes and strategy.
+                </div>
+            </div>
+
+            <p><strong>Most common thread collapses in manufacturing:</strong> MEMORY (legacy knowledge vs. modernization), EMBODIMENT (data vs. operator intuition), PAUSE (throughput vs. quality)</p>
+        </div>
+
+        <!-- CROSS-INDUSTRY INSIGHTS -->
+        <section>
+            <h2>Cross-Industry Insights</h2>
+
+            <h3>Patterns Across All Industries</h3>
+            <ul>
+                <li><strong>Scaling triggers CONSENT:</strong> Almost every growing organization faces autonomy vs. alignment as they add people/locations</li>
+                <li><strong>Generational transitions activate MEMORY:</strong> Succession, leadership changes, and workforce generational shifts surface Given ↔ Chosen tensions</li>
+                <li><strong>Crisis demands PAUSE navigation:</strong> COVID, market shifts, emergencies force organizations to navigate urgency vs. sustainability</li>
+                <li><strong>Innovation requires UNCERTAINTY tolerance:</strong> Any organization trying to innovate must navigate risk-aversion vs. recklessness</li>
+            </ul>
+
+            <h3>Industry Combinations</h3>
+            <p><strong>Healthcare Tech:</strong> Inherits both healthcare's EMBODIMENT challenges (clinical judgment vs. data) AND tech's PAUSE challenges (speed vs. quality). Extra complexity in regulatory environment.</p>
+
+            <p><strong>Social Enterprise/B-Corps:</strong> Nonprofit CONSENT tensions (community voice) + for-profit UNCERTAINTY tensions (market risk). Mission + margin navigation.</p>
+
+            <p><strong>Digital Manufacturing:</strong> Traditional manufacturing MEMORY tensions (craft knowledge) + tech UNCERTAINTY tensions (automation, AI). Industry 4.0 transformations activate multiple threads simultaneously.</p>
+
+            <h3>Using These Mappings</h3>
+            <ol>
+                <li><strong>Diagnostic shortcut:</strong> Start with the threads most common in your industry when doing assessment</li>
+                <li><strong>Language adaptation:</strong> Use the industry-specific phrases to help leaders recognize patterns</li>
+                <li><strong>Peer learning:</strong> Connect with other organizations in your sector navigating similar threads</li>
+                <li><strong>Customization:</strong> Adapt interventions to your industry context (a tech solution won't work in healthcare as-is)</li>
+            </ol>
+        </section>
+
+        <footer>
+            <div class="footer-logo">Creative Advance Institute</div>
+            <p>Threads of Becoming Framework</p>
+            <p>© 2025 | creativeadvance.org</p>
+            <p style="margin-top: 1rem;"><em>These mappings are based on observed patterns across industries. Your organization may have different thread dynamics. Use as a starting point for your own diagnosis.</em></p>
+        </footer>
+    </div>
+</body>
+</html>

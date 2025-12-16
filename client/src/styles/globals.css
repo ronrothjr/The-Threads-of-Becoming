@@ -12,12 +12,19 @@ html {
 }
 
 body {
-  background: linear-gradient(135deg,
-    var(--color-off-white) 0%,
-    #e8f4f8 25%,
-    #f0e8f4 50%,
-    #e8f4f0 75%,
-    var(--color-off-white) 100%);
+  /* Living Weave Background - Subtle thread colors */
+  background:
+    linear-gradient(135deg,
+      var(--color-cream) 0%,
+      rgba(124, 58, 237, 0.03) 14.28%,    /* PRESENCE hint */
+      rgba(5, 150, 105, 0.03) 28.56%,      /* CONSENT hint */
+      rgba(220, 38, 38, 0.03) 42.84%,      /* MEMORY hint */
+      rgba(217, 119, 6, 0.03) 57.12%,      /* PAUSE hint */
+      rgba(234, 88, 12, 0.03) 71.4%,       /* EMBODIMENT hint */
+      rgba(2, 132, 199, 0.03) 85.68%,      /* UNCERTAINTY hint */
+      rgba(120, 113, 108, 0.03) 100%       /* BECOMING hint */
+    ),
+    var(--color-cream);
   background-attachment: fixed;
   min-height: 100vh;
 }

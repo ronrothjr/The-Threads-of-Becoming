@@ -3,7 +3,17 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
+  /* Seven Threads Spectrum - Full weave across the hero */
+  background: linear-gradient(135deg,
+    var(--thread-presence) 0%,      /* Purple */
+    var(--thread-consent) 14.28%,   /* Green */
+    var(--thread-memory) 28.56%,    /* Red */
+    var(--thread-pause) 42.84%,     /* Amber */
+    var(--thread-embodiment) 57.12%, /* Terracotta */
+    var(--thread-uncertainty) 71.4%, /* Blue */
+    var(--thread-becoming) 85.68%,  /* Gray */
+    var(--thread-presence) 100%     /* Back to Purple for continuity */
+  );
   color: var(--color-white);
   padding: 6rem 0 4rem;
   text-align: center;
@@ -25,9 +35,11 @@
 }
 
 .tagline {
-  font-size: var(--text-3xl);
+  font-size: var(--text-4xl);
   margin-bottom: 1.5rem;
-  color: var(--color-orange);
+  color: var(--color-emergence);  /* Living Gold - what arises */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  font-weight: var(--font-bold);
 }
 
 .subtitle {
@@ -58,6 +70,8 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .heroCard:hover {
@@ -67,41 +81,63 @@
 }
 
 .heroCard h3 {
-  color: var(--color-orange);
+  color: white;
   font-size: var(--text-2xl);
   font-weight: var(--font-bold);
   margin-bottom: 1rem;
   text-align: center;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Thread-specific card accents */
+.heroCard:nth-child(1) {
+  border-left: 4px solid var(--warm-coral);  /* Reality - MEMORY (Given) */
+}
+
+.heroCard:nth-child(2) {
+  border-left: 4px solid var(--color-emergence);  /* Insight - Emergence itself */
+}
+
+.heroCard:nth-child(3) {
+  border-left: 4px solid var(--thread-presence);  /* Framework - PRESENCE (holding) */
 }
 
 .heroCard p {
   font-size: var(--text-base);
   line-height: var(--leading-relaxed);
   margin-bottom: 0.75rem;
+  flex-grow: 1;
 }
 
 .heroCard p:last-child {
   margin-bottom: 0;
+  flex-grow: 0;
 }
 
 .heroCardCta {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--color-orange);
+  display: block;
+  margin-top: 1.5rem;
+  color: white;
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-orange);
+  padding: 0.75rem 1rem;
+  border: 2px solid white;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .heroCardCta:hover {
-  background: var(--color-orange);
-  color: var(--color-navy);
-  transform: translateX(4px);
+  background: var(--color-emergence);
+  border-color: var(--color-emergence);
+  color: var(--color-charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
 }
 
 .heroStory {
@@ -111,24 +147,26 @@
 
 .storyLink {
   display: inline-block;
-  color: var(--color-orange);
+  color: white;
   font-size: var(--text-lg);
   font-weight: var(--font-semibold);
   text-decoration: none;
   padding: 0.75rem 2rem;
-  border: 2px solid var(--color-orange);
+  border: 2px solid white;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .storyLink:hover {
-  background: var(--color-orange);
-  color: var(--color-navy);
+  background: var(--color-emergence);
+  border-color: var(--color-emergence);
+  color: var(--color-charcoal);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(243, 156, 18, 0.3);
+  box-shadow: 0 4px 16px rgba(251, 191, 36, 0.4);
 }
 
 .videoSection {

@@ -14,7 +14,7 @@ const Mission: React.FC = () => {
         <div className="container">
           <h2>Our Mission</h2>
           <blockquote className={styles.quote}>
-            To cultivate the human capacity to hold creative tension—<br />so individuals, communities, and organizations<br />can move from the collapse into extremes toward the emergence of new possibilities.
+            To cultivate the human capacity to hold creative tension—<br />so individuals, communities, and organizations<br />can move from the collapse into extremes<br />toward the emergence of new possibilities.
           </blockquote>
         </div>
       </section>

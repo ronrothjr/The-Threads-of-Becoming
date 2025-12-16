@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90-Day Implementation Playbook | Threads of Becoming</title>
+    <style>
+        /* Thread-based color system */
+        :root {
+            --thread-presence: #7C3AED;
+            --thread-consent: #059669;
+            --thread-memory: #DC2626;
+            --thread-pause: #D97706;
+            --thread-embodiment: #EA580C;
+            --thread-uncertainty: #0284C7;
+            --thread-becoming: #78716C;
+            --color-emergence: #FBBF24;
+            --color-charcoal: #27272A;
+            --color-cream: #FFFBEB;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-cream);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-emergence);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--color-charcoal);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-emergence);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--thread-consent);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            margin: 1rem 0 0.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        strong {
+            color: var(--color-charcoal);
+        }
+
+        .overview-box {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 2px solid var(--color-emergence);
+            margin: 2rem 0;
+        }
+
+        .phase {
+            background: var(--color-cream);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--thread-consent);
+        }
+
+        .phase h2 {
+            color: var(--thread-consent);
+            margin-top: 0;
+        }
+
+        .week {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border-left: 3px solid var(--color-text-light);
+        }
+
+        .week h4 {
+            color: var(--thread-pause);
+        }
+
+        .template-box {
+            background: #F0FDF4;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            border-left: 4px solid var(--thread-consent);
+        }
+
+        .template-box h4 {
+            color: var(--thread-consent);
+            margin-top: 0;
+        }
+
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .checklist li {
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            color: var(--thread-consent);
+        }
+
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .metrics-table th {
+            background: var(--color-emergence);
+            color: var(--color-charcoal);
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .metrics-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--color-cream);
+        }
+
+        .metrics-table tr:hover {
+            background: var(--color-cream);
+        }
+
+        .warning-box {
+            background: #FEF3C7;
+            border-left: 4px solid var(--thread-pause);
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .success-indicator {
+            background: #F0FDF4;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 0.5rem 0;
+            border-left: 3px solid var(--thread-consent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-cream);
+            color: var(--color-text-light);
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 1rem;
+                max-width: 100%;
+            }
+            header {
+                page-break-after: avoid;
+            }
+            h2 {
+                page-break-before: always;
+                page-break-after: avoid;
+            }
+            section:first-of-type h2 {
+                page-break-before: avoid;
+            }
+            .phase {
+                page-break-before: always;
+                page-break-inside: avoid;
+            }
+            h3, h4 {
+                page-break-after: avoid;
+            }
+            .week, .template-box {
+                page-break-inside: avoid;
+            }
+            .metrics-table {
+                page-break-inside: avoid;
+            }
+            footer {
+                page-break-before: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .metrics-table {
+                font-size: 0.8rem;
+            }
+            .metrics-table th,
+            .metrics-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Threads Implementation Playbook</h1>
+            <p class="subtitle">Week-by-week guide for your first 90 days</p>
+        </header>
+
+        <section>
+            <div class="overview-box">
+                <h2 style="margin-top: 0; border: none;">How to Use This Playbook</h2>
+                <p><strong>This guide provides a structured 90-day approach to integrating Threads into your organization.</strong></p>
+
+                <p><strong>Before you begin:</strong></p>
+                <ul>
+                    <li>Complete the Organizational Thread Assessment with your leadership team</li>
+                    <li>Identify your primary thread(s) in collapse</li>
+                    <li>Secure executive sponsorship and 2-3 hours/week of leadership team time</li>
+                    <li>Assign a "Thread Champion" (internal owner for the integration)</li>
+                </ul>
+
+                <p><strong>Three phases over 90 days:</strong></p>
+                <ul>
+                    <li><strong>Phase 1 (Weeks 1-4): Foundation</strong> - Learn the framework, diagnose patterns, build shared language</li>
+                    <li><strong>Phase 2 (Weeks 5-8): Navigation</strong> - Design interventions, pilot practices, track early wins</li>
+                    <li><strong>Phase 3 (Weeks 9-12): Integration</strong> - Embed into systems, expand adoption, measure impact</li>
+                </ul>
+
+                <p><strong>Flexibility:</strong> Adjust timelines based on your organization's pace. Some move faster (60 days), others need 120 days. The sequence matters more than the speed.</p>
+            </div>
+        </section>
+
+        <!-- PHASE 1 -->
+        <div class="phase">
+            <h2>Phase 1: Foundation (Weeks 1-4)</h2>
+            <p><strong>Goal:</strong> Leadership team understands thread framework, has diagnosed primary collapse pattern(s), and can name threads in real-time.</p>
+
+            <div class="week">
+                <h4>Week 1: Assessment & Diagnosis</h4>
+
+                <p><strong>Leadership Meeting (2 hours):</strong></p>
+                <ul class="checklist">
+                    <li>Share aggregated thread assessment results</li>
+                    <li>Review thread scores (which are 11+?)</li>
+                    <li>Identify primary thread (highest score + most resonance)</li>
+                    <li>Name current collapse pattern (oscillating, stuck, or fragmented)</li>
+                    <li>Set 90-day intention: "What would shift if we could navigate this thread?"</li>
+                </ul>
+
+                <p><strong>Individual Work:</strong></p>
+                <ul class="checklist">
+                    <li>Each leader reads thread descriptions for primary thread</li>
+                    <li>Reflects on: "Where do I see this pattern in my team/domain?"</li>
+                    <li>Prepares 1 example for Week 2 discussion</li>
+                </ul>
+
+                <div class="template-box">
+                    <h4>Meeting Template: Week 1 Kickoff</h4>
+                    <p><strong>Agenda (2 hours):</strong></p>
+                    <ol>
+                        <li><strong>(15 min)</strong> Context: Why we're doing this, what we hope to achieve</li>
+                        <li><strong>(30 min)</strong> Thread Framework Overview: Seven threads, collapse patterns, navigation vs. solving</li>
+                        <li><strong>(30 min)</strong> Assessment Results: Review scores, identify high-scoring threads</li>
+                        <li><strong>(30 min)</strong> Primary Thread Diagnosis: Which thread is driving our biggest tension? What's the collapse pattern?</li>
+                        <li><strong>(15 min)</strong> Next Steps: Assign homework, schedule Week 2</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="week">
+                <h4>Week 2: Pattern Recognition</h4>
+
+                <p><strong>Leadership Meeting (90 min):</strong></p>
+                <ul class="checklist">
+                    <li>Each leader shares their example of primary thread showing up</li>
+                    <li>Group identifies common language patterns (what phrases signal collapse?)</li>
+                    <li>Practice naming the thread in real-time: "That sounds like [THREAD]"</li>
+                    <li>Identify "listening cues" - what to listen for in meetings</li>
+                </ul>
+
+                <p><strong>Individual Work:</strong></p>
+                <ul class="checklist">
+                    <li>Track thread appearances in meetings for one week</li>
+                    <li>Note: When did it show up? What triggered it? Which pole collapsed into?</li>
+                    <li>Bring observations to Week 3</li>
+                </ul>
+
+                <div class="template-box">
+                    <h4>Listening Cues Worksheet</h4>
+                    <p><strong>For your primary thread, what phrases signal collapse?</strong></p>
+                    <p><em>Example for PAUSE thread:</em></p>
+                    <ul>
+                        <li>"We're moving too fast" (collapse into Not Yet)</li>
+                        <li>"Just ship it" (collapse into Now)</li>
+                        <li>"Let's do more analysis" (collapse into Not Yet)</li>
+                        <li>"We're overthinking this" (collapse into Now)</li>
+                    </ul>
+                    <p><strong>Create your own list for your primary thread.</strong></p>
+                </div>
+            </div>
+
+            <div class="week">
+                <h4>Week 3: Mapping the System</h4>
+
+                <p><strong>Leadership Meeting (2 hours):</strong></p>
+                <ul class="checklist">
+                    <li>Share tracking observations from Week 2</li>
+                    <li>Map the system: What structures reinforce the collapse?
+                        <ul>
+                            <li>Incentives (what gets rewarded?)</li>
+                            <li>Metrics (what gets measured?)</li>
+                            <li>Decision-making processes (who decides what, when?)</li>
+                            <li>Cultural norms ("how we do things here")</li>
+                        </ul>
+                    </li>
+                    <li>Identify leverage points: Where could small changes create big shifts?</li>
+                    <li>Begin brainstorming navigation strategies (don't commit yet)</li>
+                </ul>
+
+                <p><strong>Individual Work:</strong></p>
+                <ul class="checklist">
+                    <li>Each leader maps their domain: Where does primary thread show up most?</li>
+                    <li>Identifies 1-2 "micro-interventions" they could try in their team</li>
+                </ul>
+            </div>
+
+            <div class="week">
+                <h4>Week 4: Navigation Design</h4>
+
+                <p><strong>Leadership Meeting (2 hours):</strong></p>
+                <ul class="checklist">
+                    <li>Review micro-interventions from individual teams - what worked?</li>
+                    <li>Design organization-wide navigation strategy using 3 levels:
+                        <ul>
+                            <li><strong>Language:</strong> How do we name this thread? What's our shorthand?</li>
+                            <li><strong>Structure:</strong> What organizational changes support holding both poles?</li>
+                            <li><strong>Practice:</strong> What daily/weekly rituals reinforce navigation?</li>
+                        </ul>
+                    </li>
+                    <li>Select 1-2 pilot interventions for Phase 2</li>
+                    <li>Define success criteria: How will we know it's working?</li>
+                </ul>
+
+                <div class="template-box">
+                    <h4>Navigation Strategy Template</h4>
+                    <p><strong>Primary Thread:</strong> _________________</p>
+                    <p><strong>Collapse Pattern:</strong> _________________</p>
+
+                    <p><strong>1. Language (How we'll name it):</strong></p>
+                    <ul>
+                        <li>Shared language: ________________</li>
+                        <li>Shorthand phrase: ________________</li>
+                        <li>Permission to name: "When you hear collapse, you can say..."</li>
+                    </ul>
+
+                    <p><strong>2. Structure (What we'll change):</strong></p>
+                    <ul>
+                        <li>Decision rights: ________________</li>
+                        <li>Meeting rhythms: ________________</li>
+                        <li>Metrics/dashboards: ________________</li>
+                    </ul>
+
+                    <p><strong>3. Practice (What we'll do regularly):</strong></p>
+                    <ul>
+                        <li>Daily: ________________</li>
+                        <li>Weekly: ________________</li>
+                        <li>Monthly: ________________</li>
+                    </ul>
+
+                    <p><strong>Success Criteria (90 days):</strong></p>
+                    <ul>
+                        <li>Quantitative: ________________</li>
+                        <li>Qualitative: ________________</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="success-indicator">
+                <strong>Phase 1 Success Indicators:</strong>
+                <ul>
+                    <li>✓ Leadership team can name primary thread and describe collapse pattern</li>
+                    <li>✓ Thread language is being used in meetings (not just facilitator, but multiple leaders)</li>
+                    <li>✓ System map created identifying what reinforces collapse</li>
+                    <li>✓ Navigation strategy defined with clear interventions for Phase 2</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PHASE 2 -->
+        <div class="phase">
+            <h2>Phase 2: Navigation (Weeks 5-8)</h2>
+            <p><strong>Goal:</strong> Pilot navigation interventions, track early wins, adjust based on learning, expand thread awareness to wider organization.</p>
+
+            <div class="week">
+                <h4>Week 5: Launch Pilot Interventions</h4>
+
+                <p><strong>Leadership Meeting (90 min):</strong></p>
+                <ul class="checklist">
+                    <li>Finalize pilot interventions (choose 2-3 max)</li>
+                    <li>Assign owners for each intervention</li>
+                    <li>Establish tracking method (what data will we collect?)</li>
+                    <li>Set check-in cadence (weekly for first month)</li>
+                    <li>Launch communication: How do we explain this to the org?</li>
+                </ul>
+
+                <p><strong>Week 5 Actions:</strong></p>
+                <ul class="checklist">
+                    <li>Intervention owners kick off pilots with their teams</li>
+                    <li>Thread Champion sets up tracking dashboard/system</li>
+                    <li>Leadership communicates thread language to organization (all-hands or dept meetings)</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>Common Pitfall:</strong> Trying too many interventions at once. Start with 2-3 focused pilots. You can always add more in Phase 3.
+                </div>
+            </div>
+
+            <div class="week">
+                <h4>Week 6: Early Observations</h4>
+
+                <p><strong>Leadership Check-In (60 min):</strong></p>
+                <ul class="checklist">
+                    <li>Each intervention owner reports:
+                        <ul>
+                            <li>What's happening? (observations)</li>
+                            <li>What's working? (early wins)</li>
+                            <li>What's not working? (friction points)</li>
+                            <li>What surprised us? (unexpected insights)</li>
+                        </ul>
+                    </li>
+                    <li>Identify quick adjustments needed</li>
+                    <li>Celebrate early wins (however small)</li>
+                </ul>
+
+                <p><strong>Individual Work:</strong></p>
+                <ul class="checklist">
+                    <li>Leaders practice naming thread collapses in their 1:1s and team meetings</li>
+                    <li>Collect stories: When did someone name a thread? What happened next?</li>
+                </ul>
+            </div>
+
+            <div class="week">
+                <h4>Week 7: Refinement</h4>
+
+                <p><strong>Leadership Meeting (90 min):</strong></p>
+                <ul class="checklist">
+                    <li>Review tracking data (qualitative + quantitative)</li>
+                    <li>Adjust interventions based on learning</li>
+                    <li>Identify what to amplify vs. what to stop</li>
+                    <li>Surface new patterns emerging</li>
+                    <li>Plan for wider adoption: Which teams are ready to expand to?</li>
+                </ul>
+
+                <div class="template-box">
+                    <h4>Pilot Review Template</h4>
+                    <p><strong>Intervention:</strong> _________________</p>
+
+                    <table class="metrics-table">
+                        <tr>
+                            <th>Question</th>
+                            <th>Your Answer</th>
+                        </tr>
+                        <tr>
+                            <td>What was our hypothesis?</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>What actually happened?</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Quantitative data (numbers)?</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Qualitative data (stories)?</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>What surprised us?</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Keep / Change / Stop?</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="week">
+                <h4>Week 8: Expansion Planning</h4>
+
+                <p><strong>Leadership Meeting (2 hours):</strong></p>
+                <ul class="checklist">
+                    <li>Decide: Which interventions become permanent?</li>
+                    <li>Plan expansion: How do we bring this to more teams?</li>
+                    <li>Identify internal champions (beyond leadership team)</li>
+                    <li>Design training/onboarding for thread language</li>
+                    <li>Prepare for Phase 3: Integration into existing systems</li>
+                </ul>
+
+                <p><strong>Communication:</strong></p>
+                <ul class="checklist">
+                    <li>Share Phase 2 learnings with organization</li>
+                    <li>Highlight stories of thread navigation working</li>
+                    <li>Invite broader participation in Phase 3</li>
+                </ul>
+            </div>
+
+            <div class="success-indicator">
+                <strong>Phase 2 Success Indicators:</strong>
+                <ul>
+                    <li>✓ 2-3 pilot interventions launched and refined based on data</li>
+                    <li>✓ Early wins documented (both quantitative metrics and qualitative stories)</li>
+                    <li>✓ Thread language spreading beyond leadership team organically</li>
+                    <li>✓ Internal champions identified for wider adoption</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PHASE 3 -->
+        <div class="phase">
+            <h2>Phase 3: Integration (Weeks 9-12)</h2>
+            <p><strong>Goal:</strong> Embed thread navigation into organizational systems, expand adoption, measure sustained impact, plan for ongoing practice.</p>
+
+            <div class="week">
+                <h4>Week 9: System Integration</h4>
+
+                <p><strong>Leadership Meeting (2 hours):</strong></p>
+                <ul class="checklist">
+                    <li>Integrate threads into existing processes:
+                        <ul>
+                            <li>Strategic planning: Add thread analysis to planning sessions</li>
+                            <li>Performance reviews: Include thread navigation capability</li>
+                            <li>Hiring: Add thread fluency to leadership criteria</li>
+                            <li>Onboarding: Teach thread language to new hires</li>
+                        </ul>
+                    </li>
+                    <li>Update documentation (e.g., leadership principles, meeting templates)</li>
+                    <li>Build thread language into regular rhythms</li>
+                </ul>
+
+                <p><strong>Week 9 Actions:</strong></p>
+                <ul class="checklist">
+                    <li>Thread Champion creates onboarding materials</li>
+                    <li>Leaders update their team agreements to include thread language</li>
+                    <li>HR/People team integrates threads into leadership development</li>
+                </ul>
+            </div>
+
+            <div class="week">
+                <h4>Week 10: Measurement & Tracking</h4>
+
+                <p><strong>Leadership Meeting (90 min):</strong></p>
+                <ul class="checklist">
+                    <li>Review 90-day metrics against success criteria (from Week 4)</li>
+                    <li>Collect impact data:
+                        <ul>
+                            <li>Decision-making velocity (time from issue to resolution)</li>
+                            <li>Meeting efficiency (reduced time on recurring conflicts)</li>
+                            <li>Employee sentiment (engagement survey questions)</li>
+                            <li>Leadership alignment (escalation patterns)</li>
+                        </ul>
+                    </li>
+                    <li>Document case study: What changed? What interventions worked?</li>
+                </ul>
+
+                <div class="template-box">
+                    <h4>90-Day Impact Dashboard</h4>
+                    <table class="metrics-table">
+                        <tr>
+                            <th>Metric</th>
+                            <th>Baseline (Week 0)</th>
+                            <th>Current (Week 10)</th>
+                            <th>Change</th>
+                        </tr>
+                        <tr>
+                            <td>Decision velocity (days)</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Recurring conflict time (hours/week)</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Leadership alignment score</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Employee engagement (thread-related questions)</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Teams using thread language</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="week">
+                <h4>Week 11: Wider Adoption</h4>
+
+                <p><strong>Actions:</strong></p>
+                <ul class="checklist">
+                    <li>Train-the-trainer session with internal champions</li>
+                    <li>Roll out thread onboarding to additional teams</li>
+                    <li>Create thread navigation toolkit (worksheets, templates, facilitation guides)</li>
+                    <li>Establish community of practice (monthly thread navigation sessions)</li>
+                </ul>
+
+                <p><strong>Leadership Meeting (60 min):</strong></p>
+                <ul class="checklist">
+                    <li>Review expansion progress</li>
+                    <li>Identify barriers to adoption</li>
+                    <li>Plan ongoing support for champions</li>
+                </ul>
+            </div>
+
+            <div class="week">
+                <h4>Week 12: Retrospective & Next Steps</h4>
+
+                <p><strong>Leadership Meeting (2 hours):</strong></p>
+                <ul class="checklist">
+                    <li>Full 90-day retrospective:
+                        <ul>
+                            <li>What worked?</li>
+                            <li>What didn't work?</li>
+                            <li>What surprised us?</li>
+                            <li>What would we do differently?</li>
+                            <li>What do we want to continue?</li>
+                        </ul>
+                    </li>
+                    <li>Review impact data and share with organization</li>
+                    <li>Decide on next primary thread (if applicable)</li>
+                    <li>Plan next 90 days: Sustain + expand vs. tackle new thread</li>
+                    <li>Celebrate wins</li>
+                </ul>
+
+                <div class="template-box">
+                    <h4>90-Day Retrospective Questions</h4>
+
+                    <p><strong>1. Leadership Development</strong></p>
+                    <ul>
+                        <li>How has our leadership team's relationship to tension changed?</li>
+                        <li>What new capabilities have we developed?</li>
+                    </ul>
+
+                    <p><strong>2. Organizational Culture</strong></p>
+                    <ul>
+                        <li>How has thread language shifted how we talk about conflict?</li>
+                        <li>What stories best illustrate the change?</li>
+                    </ul>
+
+                    <p><strong>3. Measurable Impact</strong></p>
+                    <ul>
+                        <li>What moved (decision velocity, meeting efficiency, engagement)?</li>
+                        <li>What didn't move (and why)?</li>
+                    </ul>
+
+                    <p><strong>4. Sustainability</strong></p>
+                    <ul>
+                        <li>What practices are now embedded?</li>
+                        <li>What still needs active maintenance?</li>
+                        <li>What's our plan for sustaining this over the next 6-12 months?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="success-indicator">
+                <strong>Phase 3 Success Indicators:</strong>
+                <ul>
+                    <li>✓ Thread navigation integrated into at least 3 existing organizational systems</li>
+                    <li>✓ Measurable improvement in at least 2 key metrics</li>
+                    <li>✓ Thread language used across organization (not just leadership)</li>
+                    <li>✓ Sustainability plan in place (champions, community of practice, ongoing rituals)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ONGOING PRACTICE -->
+        <section>
+            <h2>Beyond 90 Days: Ongoing Practice</h2>
+
+            <p><strong>After your first 90 days, thread navigation becomes ongoing organizational practice:</strong></p>
+
+            <h3>Monthly Thread Check-In (Leadership Team)</h3>
+            <ul>
+                <li>Review: Which threads are under tension right now?</li>
+                <li>Diagnose: Any new collapse patterns emerging?</li>
+                <li>Navigate: Adjust interventions as needed</li>
+                <li>Celebrate: Share stories of thread navigation working</li>
+            </ul>
+
+            <h3>Quarterly Thread Assessment</h3>
+            <ul>
+                <li>Re-administer thread assessment to leadership team</li>
+                <li>Compare scores to baseline (Week 0) and previous quarter</li>
+                <li>Identify shifts: Which threads improved? Which need attention?</li>
+                <li>Adjust organizational strategy based on thread landscape</li>
+            </ul>
+
+            <h3>Annual Thread Mapping</h3>
+            <ul>
+                <li>Full-day leadership session to map all seven threads across the organization</li>
+                <li>Identify primary thread for next 12 months</li>
+                <li>Design navigation strategy for the year</li>
+                <li>Integrate into strategic planning</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Common Question:</strong> "When are we done with threads?"<br>
+                Answer: Never. Threads aren't a project—they're a navigational framework. The tensions don't go away; you just get better at navigating them. Like learning a language, thread fluency becomes second nature with practice.
+            </div>
+        </section>
+
+        <!-- MEASUREMENT GUIDE -->
+        <section>
+            <h2>Measurement Guide</h2>
+
+            <h3>What to Track</h3>
+
+            <h4>Quantitative Metrics (track monthly)</h4>
+            <table class="metrics-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>How to Measure</th>
+                    <th>Target Change</th>
+                </tr>
+                <tr>
+                    <td>Decision-making velocity</td>
+                    <td>Average days from "issue raised" to "decision made" (track 10-20 decisions/month)</td>
+                    <td>25-40% reduction by Day 90</td>
+                </tr>
+                <tr>
+                    <td>Meeting efficiency</td>
+                    <td>Hours/week spent on recurring conflicts (leadership team estimate)</td>
+                    <td>30-50% reduction by Day 90</td>
+                </tr>
+                <tr>
+                    <td>Cross-functional collaboration</td>
+                    <td>Pulse survey question: "Teams collaborate effectively across departments" (1-5 scale)</td>
+                    <td>0.5-1.0 point increase by Day 90</td>
+                </tr>
+                <tr>
+                    <td>Leadership alignment</td>
+                    <td>Number of escalations to CEO/exec team (per month)</td>
+                    <td>20-30% reduction by Day 90</td>
+                </tr>
+                <tr>
+                    <td>Thread language adoption</td>
+                    <td>% of teams using thread language in meetings (champion observation)</td>
+                    <td>50%+ by Day 90</td>
+                </tr>
+            </table>
+
+            <h4>Qualitative Indicators (collect weekly)</h4>
+            <ul>
+                <li><strong>Stories:</strong> When did someone name a thread? What happened next?</li>
+                <li><strong>Language shifts:</strong> What phrases are changing? (e.g., from "you're wrong" to "we're in a thread collapse")</li>
+                <li><strong>Relationship changes:</strong> How are previously conflictual relationships shifting?</li>
+                <li><strong>Meeting dynamics:</strong> What's different about how teams make decisions together?</li>
+            </ul>
+
+            <h3>Data Collection Methods</h3>
+            <ul>
+                <li><strong>Weekly leadership check-ins:</strong> 5-minute round of "thread observations this week"</li>
+                <li><strong>Monthly pulse survey:</strong> 3-5 questions about thread-related dynamics</li>
+                <li><strong>Champion observations:</strong> Thread Champion tracks adoption and stories</li>
+                <li><strong>Meeting audits:</strong> Periodically record/observe meetings to track language use</li>
+            </ul>
+        </section>
+
+        <!-- TROUBLESHOOTING -->
+        <section>
+            <h2>Troubleshooting Common Challenges</h2>
+
+            <h4>Challenge: "Thread language feels academic or jargon-y"</h4>
+            <p><strong>Solution:</strong> Simplify. Let teams create their own shorthand. E.g., "We're PAUSEing again" or "Sounds like CONSENT territory." The goal is shared meaning, not perfect terminology.</p>
+
+            <h4>Challenge: "Only leadership uses thread language, teams aren't adopting"</h4>
+            <p><strong>Solution:</strong> Train champions at team level. Use thread language to solve real, immediate problems teams are facing. Make it useful, not theoretical.</p>
+
+            <h4>Challenge: "We're not seeing measurable change in metrics"</h4>
+            <p><strong>Solution:</strong> Check two things: (1) Are you tracking the right metrics? (2) Is your intervention matched to your thread? Often slow metric change means the intervention isn't addressing the actual collapse pattern.</p>
+
+            <h4>Challenge: "Naming threads feels like it's creating more conflict"</h4>
+            <p><strong>Solution:</strong> This is actually progress. The conflict was always there; you're now naming it instead of avoiding it. Stick with it. Within 2-3 weeks, teams learn to name threads without making it personal.</p>
+
+            <h4>Challenge: "We've addressed one thread, but another is now showing up"</h4>
+            <p><strong>Solution:</strong> Normal. As you navigate one thread, others become visible. This is like peeling an onion. Celebrate that you successfully navigated the first thread, then decide: tackle the new one or sustain the first.</p>
+        </section>
+
+        <footer>
+            <div class="footer-logo">Creative Advance Institute</div>
+            <p>Threads of Becoming Framework</p>
+            <p>© 2025 | creativeadvance.org</p>
+            <p style="margin-top: 1rem;"><em>Customize this playbook based on your organization's context, pace, and specific thread dynamics. The framework is a guide, not a script.</em></p>
+        </footer>
+    </div>
+</body>
+</html>

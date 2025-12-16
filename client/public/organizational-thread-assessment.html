@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizational Thread Assessment Tool | Threads of Becoming</title>
+    <style>
+        /* Thread-based color system */
+        :root {
+            --thread-presence: #7C3AED;
+            --thread-consent: #059669;
+            --thread-memory: #DC2626;
+            --thread-pause: #D97706;
+            --thread-embodiment: #EA580C;
+            --thread-uncertainty: #0284C7;
+            --thread-becoming: #78716C;
+            --color-emergence: #FBBF24;
+            --color-charcoal: #27272A;
+            --color-cream: #FFFBEB;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-cream);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-emergence);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--color-charcoal);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-emergence);
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            margin: 0 0 0.4rem 0;
+            padding-left: 0.75rem;
+            border-left: 4px solid;
+            line-height: 1.2;
+        }
+
+        .thread-section p {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        /* Thread-specific colors */
+        .thread-1 h3 { border-left-color: var(--thread-presence); color: var(--thread-presence); }
+        .thread-2 h3 { border-left-color: var(--thread-consent); color: var(--thread-consent); }
+        .thread-3 h3 { border-left-color: var(--thread-memory); color: var(--thread-memory); }
+        .thread-4 h3 { border-left-color: var(--thread-pause); color: var(--thread-pause); }
+        .thread-5 h3 { border-left-color: var(--thread-embodiment); color: var(--thread-embodiment); }
+        .thread-6 h3 { border-left-color: var(--thread-uncertainty); color: var(--thread-uncertainty); }
+        .thread-7 h3 { border-left-color: var(--thread-becoming); color: var(--thread-becoming); }
+
+        .thread-section {
+            background: var(--color-cream);
+            padding: 0.5rem;
+            margin: 0;
+            border-radius: 6px;
+        }
+
+        .instructions {
+            background: #EFF6FF;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--thread-uncertainty);
+            margin: 2rem 0;
+        }
+
+        .instructions ol {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .instructions li {
+            margin: 0.5rem 0;
+        }
+
+        .question {
+            margin: 0.35rem 0;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 4px;
+            border-left: 3px solid var(--color-text-light);
+        }
+
+        .question strong {
+            display: block;
+            font-size: 0.875rem;
+            margin-bottom: 0.15rem;
+            color: var(--color-charcoal);
+        }
+
+        .question ul {
+            list-style: none;
+            margin-top: 0.15rem;
+        }
+
+        .question li {
+            margin: 0.1rem 0;
+            padding-left: 0.9rem;
+            position: relative;
+            font-size: 0.8125rem;
+            line-height: 1.25;
+        }
+
+        .question li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--color-text-light);
+        }
+
+        .score-line {
+            margin-top: 0.3rem;
+            padding: 0.25rem 0.4rem;
+            background: var(--color-cream);
+            border-radius: 3px;
+            font-weight: 600;
+            font-size: 0.8125rem;
+        }
+
+        .total-box {
+            background: var(--color-emergence);
+            color: var(--color-charcoal);
+            padding: 0.35rem;
+            border-radius: 4px;
+            margin: 0.4rem 0;
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .collapse-info {
+            background: white;
+            padding: 0.5rem;
+            margin: 0.4rem 0;
+            border-radius: 4px;
+            border: 2px solid var(--color-emergence);
+        }
+
+        .collapse-info h4 {
+            color: var(--color-charcoal);
+            margin-bottom: 0.25rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+        }
+
+        .collapse-info ul {
+            margin-left: 1rem;
+        }
+
+        .collapse-info li {
+            margin: 0.2rem 0;
+            font-size: 0.8125rem;
+            line-height: 1.3;
+        }
+
+        .interpretation {
+            background: #F0FDF4;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--thread-consent);
+        }
+
+        .interpretation h4 {
+            color: var(--thread-consent);
+            margin-bottom: 1rem;
+        }
+
+        .score-range {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .score-range strong {
+            color: var(--color-charcoal);
+        }
+
+        .next-steps {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 8px;
+            border: 2px solid var(--thread-presence);
+        }
+
+        .next-steps h2 {
+            border-bottom-color: var(--thread-presence);
+        }
+
+        .next-steps ol {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .next-steps li {
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-cream);
+            color: var(--color-text-light);
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 1rem;
+                max-width: 100%;
+            }
+            .no-print {
+                display: none;
+            }
+
+            /* Page breaks for better printing */
+            header {
+                page-break-after: avoid;
+            }
+
+            .instructions {
+                page-break-after: always;
+            }
+
+            .thread-section {
+                page-break-before: always;
+                page-break-inside: avoid;
+            }
+
+            .interpretation {
+                page-break-before: always;
+            }
+
+            .next-steps {
+                page-break-before: always;
+            }
+
+            h2, h3, h4 {
+                page-break-after: avoid;
+            }
+
+            .question {
+                page-break-inside: avoid;
+            }
+
+            .collapse-info {
+                page-break-inside: avoid;
+            }
+
+            .total-box {
+                page-break-before: avoid;
+                page-break-after: avoid;
+            }
+
+            footer {
+                page-break-before: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Organizational Thread Assessment Tool</h1>
+            <p class="subtitle">A diagnostic guide to identify which threads are driving tension in your organization</p>
+        </header>
+
+        <div class="instructions">
+            <h2>How to Use This Assessment</h2>
+            <p>This tool helps leadership teams quickly identify which of the seven threads are currently in collapse or creating tension in your organization.</p>
+            <ol>
+                <li>Answer each question honestly based on current organizational dynamics</li>
+                <li>Score each answer: <strong>Never (0) | Rarely (1) | Sometimes (2) | Often (3) | Constantly (4)</strong></li>
+                <li>Tally your scores for each thread (4 questions × 4 points = 16 points possible per thread)</li>
+                <li>Focus on threads scoring <strong>11 or higher</strong> — these are likely in collapse</li>
+            </ol>
+        </div>
+
+        <!-- Thread 1 -->
+        <div class="thread-section thread-1">
+            <h3>Thread 1: PRESENCE (Within ↔ Between • Here ↔ Elsewhere)</h3>
+            <p style="font-style: italic; margin-bottom: 0.4rem;">Where is organizational attention located?</p>
+
+            <div class="question">
+                <strong>Question 1:</strong> Do teams struggle to balance individual deep work with collaborative team activities?
+                <ul>
+                    <li>Are people either hyper-focused on their own tasks OR constantly in meetings with no middle ground?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> Does your organization oscillate between siloed departments and forced cross-functional collaboration?
+                <ul>
+                    <li>Do reorganizations swing between "centers of excellence" and "matrix teams"?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> Is there conflict between individual autonomy and team accountability?
+                <ul>
+                    <li>Do high performers resist collaboration, or do teams suppress individual initiative?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 4:</strong> Do people struggle to be fully present to what's here versus distracted by what's elsewhere?
+                <ul>
+                    <li>Are meetings filled with multitasking? Do people mentally "check out" while physically present?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="total-box">PRESENCE Total: _____ / 16</div>
+
+            <div class="collapse-info">
+                <h4>If PRESENCE is in collapse:</h4>
+                <ul>
+                    <li><strong>Pattern:</strong> Oscillating between isolation (everyone works alone) and forced togetherness (constant collaboration)</li>
+                    <li><strong>Listen for:</strong> "We never have time to think" vs. "Nobody collaborates anymore" • "Too many meetings" or "Total silos"</li>
+                    <li><strong>What's needed:</strong> Intentional rhythms honoring both deep work AND collaboration, not either/or</li>
+                    <li><strong>Try:</strong> Pilot "collaboration hours" and "focus hours" with one team—explicit windows when interruption is welcome vs. protected</li>
+                </ul>
+                <h4 style="margin-top: 0.5rem;">Healthy navigation looks like:</h4>
+                <ul>
+                    <li>Teams fluidly shift between solo focus and collective work based on task needs, not rigid policy</li>
+                    <li>People are fully present in meetings (not multitasking) because they have protected time for individual work</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thread 2 -->
+        <div class="thread-section thread-2">
+            <h3>Thread 2: CONSENT (Yes ↔ No • Self ↔ Other)</h3>
+            <p style="font-style: italic; margin-bottom: 0.4rem;">Who holds decision-making authority?</p>
+
+            <div class="question">
+                <strong>Question 1:</strong> Do decisions get stuck between "command and control" leadership and "consensus paralysis"?
+                <ul>
+                    <li>Does leadership either mandate decisions OR endlessly seek buy-in?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> Is there ongoing tension between centralized control and local autonomy?
+                <ul>
+                    <li>Do corporate policies clash with frontline realities, or does "empowerment" lead to chaos?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> Do teams struggle with accountability when given autonomy?
+                <ul>
+                    <li>Does decentralization lead to inconsistency, or does standardization kill innovation?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 4:</strong> Is there tension between individual needs and organizational needs?
+                <ul>
+                    <li>Do people feel they must choose between doing what's right for them versus what's right for the company?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="total-box">CONSENT Total: _____ / 16</div>
+
+            <div class="collapse-info">
+                <h4>If CONSENT is in collapse:</h4>
+                <ul>
+                    <li><strong>Pattern:</strong> Swinging between micromanagement ("leadership approves everything") and chaos ("everyone does their own thing")</li>
+                    <li><strong>Listen for:</strong> "Just tell me what to do" vs. "Why do they control everything?" • Endless approvals or total lack of alignment</li>
+                    <li><strong>What's needed:</strong> Clear decision rights frameworks specifying who decides what, when, with what constraints</li>
+                    <li><strong>Try:</strong> Map 5 recurring decision types using RACI—start with decisions currently creating bottlenecks or confusion</li>
+                </ul>
+                <h4 style="margin-top: 0.5rem;">Healthy navigation looks like:</h4>
+                <ul>
+                    <li>Clear boundaries enable freedom—people know exactly where they can act autonomously and where they need approval</li>
+                    <li>When boundaries are crossed, it's treated as a learning opportunity to clarify, not a power struggle</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thread 3 -->
+        <div class="thread-section thread-3">
+            <h3>Thread 3: MEMORY (Given ↔ Chosen • Telling ↔ Told)</h3>
+            <p style="font-style: italic; margin-bottom: 0.4rem;">How does the organization relate to its past?</p>
+
+            <div class="question">
+                <strong>Question 1:</strong> Are conflicts framed as "the old guard vs. new blood"?
+                <ul>
+                    <li>Do veterans say "we've always done it this way" while newcomers dismiss institutional knowledge?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> Does your organization either cling to legacy systems or abandon working processes too quickly?
+                <ul>
+                    <li>Are you stuck with outdated tools OR constantly chasing shiny new methodologies?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> Is there tension between preserving culture and evolving it?
+                <ul>
+                    <li>Do people resist change to "protect what made us successful" OR throw out core values in pursuit of transformation?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 4:</strong> Is the organizational story told by leadership disconnected from the story told by frontline teams?
+                <ul>
+                    <li>Do leadership narratives about "who we are" feel false or out of touch to people doing the actual work?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="total-box">MEMORY Total: _____ / 16</div>
+
+            <div class="collapse-info">
+                <h4>If MEMORY is in collapse:</h4>
+                <ul>
+                    <li><strong>Pattern:</strong> Either trapped by legacy ("we can't change the core system") or erasing institutional wisdom ("throw out the old, bring in the new")</li>
+                    <li><strong>Listen for:</strong> "We've always done it this way" vs. "That's how the old guard thinks" • Generational conflicts, resistance to/obsession with change</li>
+                    <li><strong>What's needed:</strong> Conscious differentiation between what to preserve (timeless principles) and what to evolve (time-bound practices)</li>
+                    <li><strong>Try:</strong> Facilitate "Keep/Change/Create" workshop—what practices to keep, what to change, what to create fresh</li>
+                </ul>
+                <h4 style="margin-top: 0.5rem;">Healthy navigation looks like:</h4>
+                <ul>
+                    <li>New initiatives honor relevant history without being constrained by "we've always done it this way"</li>
+                    <li>Veterans feel their experience is valued while newcomers feel free to challenge assumptions</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thread 4 -->
+        <div class="thread-section thread-4">
+            <h3>Thread 4: PAUSE (Not Yet ↔ Now • More ↔ Enough)</h3>
+            <p style="font-style: italic; margin-bottom: 0.4rem;">When do things happen?</p>
+
+            <div class="question">
+                <strong>Question 1:</strong> Does your organization oscillate between "analysis paralysis" and "ready, fire, aim"?
+                <ul>
+                    <li>Do you over-plan OR execute without thinking?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> Is there ongoing conflict between planning teams and execution teams?
+                <ul>
+                    <li>Does Strategy say "we need more time" while Operations says "just ship it"?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> Do you struggle to balance speed with quality?
+                <ul>
+                    <li>Are you either missing deadlines due to perfectionism OR shipping broken products due to urgency?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 4:</strong> Does your organization struggle with "never enough" versus "good enough"?
+                <ul>
+                    <li>Do people always want more data, more features, more polish OR settle for mediocrity too quickly?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="total-box">PAUSE Total: _____ / 16</div>
+
+            <div class="collapse-info">
+                <h4>If PAUSE is in collapse:</h4>
+                <ul>
+                    <li><strong>Pattern:</strong> Swinging between analysis paralysis ("let's study this more") and reactive urgency ("ship it now, fix it later")</li>
+                    <li><strong>Listen for:</strong> "We're moving too fast" vs. "We overthink everything" • Missed deadlines from perfectionism OR quality issues from rushing</li>
+                    <li><strong>What's needed:</strong> Explicit timing agreements matched to decision stakes—know what deserves deliberation vs. rapid iteration</li>
+                    <li><strong>Try:</strong> Create decision velocity tiers (1-day decisions, 1-week, 1-month) based on reversibility and impact</li>
+                </ul>
+                <h4 style="margin-top: 0.5rem;">Healthy navigation looks like:</h4>
+                <ul>
+                    <li>Teams know which decisions need speed (low-stakes, reversible) and which need deliberation (high-impact, hard to undo)</li>
+                    <li>Prototyping and iteration are valued for learning, not just viewed as "wasted time" or rushed shortcuts</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thread 5 -->
+        <div class="thread-section thread-5">
+            <h3>Thread 5: EMBODIMENT (Think ↔ Feel • Stay ↔ Go)</h3>
+            <p style="font-style: italic; margin-bottom: 0.4rem;">How does the organization know what it knows?</p>
+
+            <div class="question">
+                <strong>Question 1:</strong> Are decisions made purely on data OR purely on gut instinct?
+                <ul>
+                    <li>Do you ignore metrics because "culture matters more" OR ignore morale because "numbers don't lie"?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> Is there tension between "hard skills" people and "soft skills" people?
+                <ul>
+                    <li>Do engineers dismiss HR as "fluffy" OR does People team dismiss metrics as "cold"?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> Does your leadership team struggle to integrate intuition with analysis?
+                <ul>
+                    <li>Do some leaders demand "just the facts" while others want to "feel it out"?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 4:</strong> Do people ignore their bodies' signals about organizational health?
+                <ul>
+                    <li>Is burnout, stress, or disengagement dismissed as "just part of the job" rather than valid organizational data?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="total-box">EMBODIMENT Total: _____ / 16</div>
+
+            <div class="collapse-info">
+                <h4>If EMBODIMENT is in collapse:</h4>
+                <ul>
+                    <li><strong>Pattern:</strong> Split between "just the numbers" rationality (ignore feelings/culture) or "how we feel" emotionality (ignore data/metrics)</li>
+                    <li><strong>Listen for:</strong> "The data is clear" dismissing morale concerns vs. "We need to trust our gut" ignoring evidence • HR vs. Finance conflicts</li>
+                    <li><strong>What's needed:</strong> Integration practices treating quantitative metrics AND qualitative human experience as equally valid forms of knowing</li>
+                    <li><strong>Try:</strong> Require every major decision review to include both hard metrics AND team sentiment/lived experience data</li>
+                </ul>
+                <h4 style="margin-top: 0.5rem;">Healthy navigation looks like:</h4>
+                <ul>
+                    <li>Data informs decisions, and so does somatic/emotional intelligence—leaders value both "what the numbers say" and "what it feels like"</li>
+                    <li>When data and gut instinct conflict, it's treated as important signal to investigate, not dismissed</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thread 6 -->
+        <div class="thread-section thread-6">
+            <h3>Thread 6: UNCERTAINTY (Hide ↔ Seek • Threat ↔ Wonder)</h3>
+            <p style="font-style: italic; margin-bottom: 0.4rem;">How does the organization handle the unknown?</p>
+
+            <div class="question">
+                <strong>Question 1:</strong> Does your culture either avoid risk OR chase shiny objects?
+                <ul>
+                    <li>Are you paralyzed by risk management OR constantly pivoting to new opportunities?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> Is there tension between stability and innovation?
+                <ul>
+                    <li>Does the organization either resist all change OR change so often nothing sticks?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> Do teams struggle to experiment without "betting the company"?
+                <ul>
+                    <li>Is it either "all in" or "too risky"?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 4:</strong> Does uncertainty trigger threat response versus curiosity?
+                <ul>
+                    <li>When facing unknowns, does the organization contract in fear or expand with curiosity and openness?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="total-box">UNCERTAINTY Total: _____ / 16</div>
+
+            <div class="collapse-info">
+                <h4>If UNCERTAINTY is in collapse:</h4>
+                <ul>
+                    <li><strong>Pattern:</strong> Either risk-averse paralysis ("too risky, stick with what works") or reckless innovation chasing ("pivot to every new opportunity")</li>
+                    <li><strong>Listen for:</strong> "We can't afford to fail" vs. "We need to disrupt ourselves" • Stability-seeking blocking all change OR constant pivots preventing depth</li>
+                    <li><strong>What's needed:</strong> Structured experimentation with explicit risk boundaries—safe-to-fail experiments within clear guardrails</li>
+                    <li><strong>Try:</strong> Adopt 70/20/10 portfolio (70% proven core, 20% adjacent innovation, 10% exploratory bets) with different success criteria</li>
+                </ul>
+                <h4 style="margin-top: 0.5rem;">Healthy navigation looks like:</h4>
+                <ul>
+                    <li>Uncertainty is treated as information, not threat—teams stay curious when facing unknowns</li>
+                    <li>Experiments are designed to learn, with clear hypotheses and acceptable risk boundaries</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Thread 7 -->
+        <div class="thread-section thread-7">
+            <h3>Thread 7: BECOMING (Same ↔ Different • Return ↔ Forward)</h3>
+            <p style="font-style: italic; margin-bottom: 0.4rem;">How does the organization evolve its identity?</p>
+
+            <div class="question">
+                <strong>Question 1:</strong> Is there conflict between "staying true to our mission" and "pivoting to market demands"?
+                <ul>
+                    <li>Do people resist evolution as "losing who we are" OR abandon core purpose for trends?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 2:</strong> Does your organization struggle with diversification vs. focus?
+                <ul>
+                    <li>Are you either stuck in one product/market OR scattered across too many initiatives?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 3:</strong> Is there tension between brand consistency and evolution?
+                <ul>
+                    <li>Does marketing either repeat the same message OR change positioning constantly?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="question">
+                <strong>Question 4:</strong> Does the organization struggle between returning to past success versus moving forward into unknown territory?
+                <ul>
+                    <li>Do you keep trying to recreate "the glory days" OR abandon what worked in pursuit of the new?</li>
+                </ul>
+                <div class="score-line">Score: _____</div>
+            </div>
+
+            <div class="total-box">BECOMING Total: _____ / 16</div>
+
+            <div class="collapse-info">
+                <h4>If BECOMING is in collapse:</h4>
+                <ul>
+                    <li><strong>Pattern:</strong> Either frozen in identity ("we're a [X] company, period") or losing coherence ("we're everything to everyone, pivoting constantly")</li>
+                    <li><strong>Listen for:</strong> "That's not who we are" blocking evolution vs. "We need to completely reinvent ourselves" erasing heritage • Identity rigidity or confusion</li>
+                    <li><strong>What's needed:</strong> Clear "core + flex" identity framework—non-negotiable essence that remains stable + intentional evolution zones</li>
+                    <li><strong>Try:</strong> Define 3 non-negotiables (what never changes about who we are) and 3 evolution zones (where we're experimenting with new identity)</li>
+                </ul>
+                <h4 style="margin-top: 0.5rem;">Healthy navigation looks like:</h4>
+                <ul>
+                    <li>The organization has a stable core identity that guides decisions while actively evolving its expression and offerings</li>
+                    <li>Change is spiral, not linear—you revisit core themes while moving forward, not returning to past or abandoning it</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Interpretation -->
+        <div class="interpretation">
+            <h2>Interpreting Your Results</h2>
+
+            <div class="score-range">
+                <strong>High Scores (11-16): Thread in Collapse</strong>
+                <p>This thread is currently driving significant organizational tension. Prioritize navigating this thread.</p>
+            </div>
+
+            <div class="score-range">
+                <strong>Medium Scores (6-10): Thread Under Tension</strong>
+                <p>Watch this thread — it's not in full collapse but showing signs of strain.</p>
+            </div>
+
+            <div class="score-range">
+                <strong>Low Scores (0-5): Thread in Balance</strong>
+                <p>This thread is currently well-navigated (or not yet activated as a tension point).</p>
+            </div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="next-steps">
+            <h2>Next Steps</h2>
+
+            <h4>If you scored 11+ on ANY thread:</h4>
+            <ol>
+                <li><strong>Name it:</strong> Share this assessment with your leadership team. Use thread language to describe what's happening.</li>
+                <li><strong>Map the collapse pattern:</strong> Are you oscillating between extremes? Stuck at one pole? Use the diagnostic workshop to map the specific pattern.</li>
+                <li><strong>Design navigation:</strong> Don't try to "solve" the tension. Design practices that hold both poles simultaneously.</li>
+            </ol>
+
+            <h4>If you scored 11+ on MULTIPLE threads:</h4>
+            <p>You likely have a <strong>systemic collapse pattern</strong>. One thread may be primary, with others as secondary effects.</p>
+            <p><strong>Recommended:</strong> Schedule a diagnostic workshop to identify the core thread driving the system.</p>
+        </div>
+
+        <footer>
+            <div class="footer-logo">Creative Advance Institute</div>
+            <p>Threads of Becoming Framework</p>
+            <p>© 2025 | creativeadvance.org</p>
+        </footer>
+    </div>
+</body>
+</html>

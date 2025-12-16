@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threads vs Other Frameworks | Threads of Becoming</title>
+    <style>
+        /* Thread-based color system */
+        :root {
+            --thread-presence: #7C3AED;
+            --thread-consent: #059669;
+            --thread-memory: #DC2626;
+            --thread-pause: #D97706;
+            --thread-embodiment: #EA580C;
+            --thread-uncertainty: #0284C7;
+            --thread-becoming: #78716C;
+            --color-emergence: #FBBF24;
+            --color-charcoal: #27272A;
+            --color-cream: #FFFBEB;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-cream);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid var(--color-emergence);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--color-charcoal);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-emergence);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--thread-consent);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            margin: 1rem 0 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        strong {
+            color: var(--color-charcoal);
+        }
+
+        .highlight-box {
+            background: var(--color-cream);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--thread-consent);
+            margin: 1.5rem 0;
+        }
+
+        .framework-comparison {
+            background: white;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--thread-pause);
+        }
+
+        .framework-comparison h3 {
+            color: var(--thread-pause);
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: var(--color-emergence);
+            color: var(--color-charcoal);
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--color-cream);
+        }
+
+        tr:hover {
+            background: var(--color-cream);
+        }
+
+        .decision-tree {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(251, 191, 36, 0.05) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 2px solid var(--thread-presence);
+            margin: 1.5rem 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .warning-box {
+            background: #FEF3C7;
+            border-left: 4px solid var(--thread-pause);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .resource-list {
+            background: var(--color-cream);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .resource-list h3 {
+            color: var(--thread-uncertainty);
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-cream);
+            color: var(--color-text-light);
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            color: var(--color-charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 1rem;
+                max-width: 100%;
+            }
+            header {
+                page-break-after: avoid;
+            }
+            h2 {
+                page-break-before: always;
+                page-break-after: avoid;
+            }
+            section:first-of-type h2 {
+                page-break-before: avoid;
+            }
+            h3, h4 {
+                page-break-after: avoid;
+            }
+            .framework-comparison {
+                page-break-before: always;
+                page-break-inside: avoid;
+            }
+            .highlight-box, .decision-tree, .warning-box, .resource-list {
+                page-break-inside: avoid;
+            }
+            table {
+                page-break-inside: avoid;
+                font-size: 0.75rem;
+            }
+            ul, ol {
+                page-break-inside: avoid;
+            }
+            footer {
+                page-break-before: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            table {
+                font-size: 0.8rem;
+            }
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Threads of Becoming vs. Other Frameworks</h1>
+            <p class="subtitle">A Guide to Understanding When to Use What</p>
+        </header>
+
+        <section>
+            <div class="highlight-box">
+                <h2 style="margin-top: 0; border: none;">Overview</h2>
+                <p>Threads of Becoming is not intended to replace other valuable frameworks. Instead, it provides a <strong>diagnostic layer</strong> that helps you identify which frameworks to use when.</p>
+                <p>Think of it as a <strong>navigation system</strong> that sits beneath your existing practices, helping you recognize patterns before you intervene.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Quick Comparison Matrix</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Framework</th>
+                        <th>Primary Focus</th>
+                        <th>Best For</th>
+                        <th>When to Use Threads Instead</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Polarity Management</strong></td>
+                        <td>Mapping interdependent pairs</td>
+                        <td>Understanding specific polarities</td>
+                        <td>You need to <em>identify which polarity</em> you're in first</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nonviolent Communication</strong></td>
+                        <td>Individual needs & empathy</td>
+                        <td>Interpersonal conflict, communication skills</td>
+                        <td>Systemic/organizational tensions (not just person-to-person)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Internal Family Systems</strong></td>
+                        <td>Inner psychological parts</td>
+                        <td>Individual therapy, self-work</td>
+                        <td>Team/organizational dynamics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Agile/Scrum</strong></td>
+                        <td>Iterative development</td>
+                        <td>Software teams, product development</td>
+                        <td>Team is oscillating between planning and execution</td>
+                    </tr>
+                    <tr>
+                        <td><strong>OKRs</strong></td>
+                        <td>Goal-setting, alignment</td>
+                        <td>Strategic planning, performance</td>
+                        <td>Goals conflict because underlying threads are in collapse</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Design Thinking</strong></td>
+                        <td>Human-centered problem solving</td>
+                        <td>Innovation, product design</td>
+                        <td>The "problem" is actually a tension to navigate, not solve</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Theory U</strong></td>
+                        <td>Presencing, emergence</td>
+                        <td>Deep change, transformational leadership</td>
+                        <td>Need diagnostic clarity before presencing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Crucial Conversations</strong></td>
+                        <td>High-stakes dialogue</td>
+                        <td>Difficult conversations, conflict</td>
+                        <td>Need to understand <em>which thread</em> is driving the conflict</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Detailed Comparisons</h2>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. Polarity Management</h3>
+
+                <p><strong>What is Polarity Management?</strong><br>
+                Barry Johnson's framework for mapping interdependent pairs (e.g., centralization ↔ decentralization) and managing them over time.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>Diagnostic first:</strong> Threads helps you <em>identify which polarity you're in</em> before you start mapping</li>
+                    <li><strong>Universal patterns:</strong> Seven archetypal threads that appear across all contexts</li>
+                    <li><strong>Scalability:</strong> Maps individual, team, and organizational simultaneously</li>
+                    <li><strong>Embodied integration:</strong> Includes somatic practices for navigation</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Many organizations use Threads for diagnosis, then apply Polarity Management to specific threads. Example:</p>
+                <ol>
+                    <li>Thread assessment identifies CONSENT (Yes ↔ No • Self ↔ Other) as primary tension</li>
+                    <li>Polarity mapping of "Centralized Control ↔ Distributed Autonomy"</li>
+                    <li>Ongoing polarity management with Threads language</li>
+                </ol>
+            </div>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. Nonviolent Communication (NVC)</h3>
+
+                <p><strong>What is NVC?</strong><br>
+                Marshall Rosenberg's framework for empathetic communication focused on observations, feelings, needs, and requests.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>Organizational vs. interpersonal:</strong> Threads addresses systemic patterns, not just individual communication</li>
+                    <li><strong>Pattern recognition:</strong> NVC focuses on skills; Threads focuses on diagnosis</li>
+                    <li><strong>Complexity:</strong> Threads integrates multiple scales (individual, team, organizational)</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Individual conflicts (use NVC) often reveal thread collapses (use Threads to address systemic pattern). Example: Two leaders have needs conflict → reveals CONSENT thread collapse at organizational level.</p>
+            </div>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. Internal Family Systems (IFS)</h3>
+
+                <p><strong>What is IFS?</strong><br>
+                Richard Schwartz's therapy model focused on internal "parts" (manager, firefighter, exile) and accessing "Self" energy.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>External vs. internal:</strong> Threads maps organizational/relational tensions; IFS maps internal psychological parts</li>
+                    <li><strong>Collective patterns:</strong> Threads works at team/org level; IFS is individual therapeutic work</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Leaders' internal parts often mirror organizational threads. Example: Leader's "manager part" (control) vs. "exile part" (trust) reflects organizational CONSENT collapse. IFS for personal work; Threads for organizational application.</p>
+            </div>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. Agile/Scrum</h3>
+
+                <p><strong>What is Agile/Scrum?</strong><br>
+                Iterative software development methodology focused on sprints, retrospectives, and adaptive planning.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>Framework vs. diagnostic:</strong> Agile is a process; Threads helps diagnose why the process is struggling</li>
+                    <li><strong>Pattern naming:</strong> Threads explains <em>why</em> teams oscillate between over-planning and rushing</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Use Threads to diagnose collapse patterns in Agile teams. Example: Team oscillates between detailed sprint planning (PAUSE: Not Yet • More) and reactive firefighting (PAUSE: Now • Enough). Apply thread navigation to stabilize Agile practice.</p>
+            </div>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. OKRs (Objectives & Key Results)</h3>
+
+                <p><strong>What are OKRs?</strong><br>
+                Goal-setting framework popularized by Google, focused on ambitious objectives and measurable key results.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>Diagnosis vs. execution:</strong> OKRs set goals; Threads helps when goals conflict</li>
+                    <li><strong>Pattern recognition:</strong> Threads explains why OKRs feel impossible to achieve</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Set OKRs that honor both poles of a thread. Example: PAUSE thread → OKR: "Reduce decision-making time by 30% <em>while</em> maintaining quality standards"</p>
+            </div>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. Design Thinking</h3>
+
+                <p><strong>What is Design Thinking?</strong><br>
+                Human-centered innovation process (empathize, define, ideate, prototype, test) developed by IDEO and Stanford d.school.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>Problem vs. tension:</strong> Design Thinking assumes solvable problems; Threads addresses ongoing tensions</li>
+                    <li><strong>Diagnosis first:</strong> Threads helps identify if the challenge is actually a navigable tension, not a solvable problem</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Use Threads to identify which tensions are at play, then use Design Thinking to prototype solutions that honor both poles. Example: EMBODIMENT thread (Think ↔ Feel • Stay ↔ Go) → prototype dashboards that integrate both data and qualitative experience.</p>
+            </div>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. Theory U / Presencing</h3>
+
+                <p><strong>What is Theory U?</strong><br>
+                Otto Scharmer's framework for deep change through "presencing"—accessing the future that wants to emerge.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>Diagnostic precision:</strong> Threads names specific patterns; Theory U focuses on process of sensing</li>
+                    <li><strong>Immediate application:</strong> Threads provides actionable language now; Theory U requires longer journey</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Use Threads to name what's being sensed in presencing work. Example: Theory U retreat surfaces BECOMING thread (Same ↔ Different • Return ↔ Forward) → Threads provides language to navigate it.</p>
+            </div>
+
+            <div class="framework-comparison">
+                <h3>Threads vs. Crucial Conversations</h3>
+
+                <p><strong>What are Crucial Conversations?</strong><br>
+                Patterson, Grenny, et al.'s framework for high-stakes dialogue when opinions vary, stakes are high, and emotions run strong.</p>
+
+                <p><strong>How Threads is Different:</strong></p>
+                <ul>
+                    <li><strong>Systemic vs. situational:</strong> Threads addresses patterns; Crucial Conversations addresses specific moments</li>
+                    <li><strong>Diagnosis:</strong> Threads helps you understand <em>which thread</em> is driving the crucial conversation</li>
+                </ul>
+
+                <p><strong>Use Both:</strong> Use Threads to diagnose which thread is in collapse, then use Crucial Conversations skills to have dialogue <em>about</em> thread navigation. Example: CONSENT thread collapse → Crucial Conversation about decision rights.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Integration Decision Tree</h2>
+
+            <p><strong>Use this flowchart to decide which framework to apply:</strong></p>
+
+            <div class="decision-tree">
+START: You're facing organizational tension
+  ↓
+Q1: Do you know exactly which tension you're navigating?
+  → YES: Go to Q2
+  → NO: Use Threads to diagnose
+  ↓
+Q2: Is it a specific interpersonal conflict?
+  → YES: Use NVC or Crucial Conversations
+  → NO: Go to Q3
+  ↓
+Q3: Is it a known polarity you've already mapped?
+  → YES: Use Polarity Management
+  → NO: Use Threads to identify, then choose framework
+  ↓
+Q4: Do you need to design a solution?
+  → YES: Use Design Thinking (while honoring thread)
+  → NO: Use Threads navigation practices
+  ↓
+Q5: Is the tension internal (within individual)?
+  → YES: Use IFS or personal work
+  → NO: Continue with Threads at team/org level
+            </div>
+        </section>
+
+        <section>
+            <h2>When NOT to Use Threads</h2>
+
+            <div class="warning-box">
+                <p><strong>Threads is powerful, but not for everything. Don't use Threads when:</strong></p>
+
+                <ol>
+                    <li><strong>You have a clear problem with a solution</strong>
+                        <ul><li>Example: "Our software has a bug" → Fix the bug (not a thread). Threads is for tensions, not problems.</li></ul>
+                    </li>
+                    <li><strong>You need a process/methodology</strong>
+                        <ul><li>Example: "How do we run sprints?" → Use Agile (Threads doesn't provide process)</li></ul>
+                    </li>
+                    <li><strong>The issue is individual skill-based</strong>
+                        <ul><li>Example: "Manager needs feedback skills" → Use coaching/training (Threads doesn't teach skills)</li></ul>
+                    </li>
+                    <li><strong>You want a decision-making tool</strong>
+                        <ul><li>Example: "Should we pursue Strategy A or B?" → Use decision frameworks (Threads helps you hold the tension between them)</li></ul>
+                    </li>
+                    <li><strong>It's an emergency requiring immediate action</strong>
+                        <ul><li>Example: "System is down, customers are affected" → Fix it now, reflect on threads later</li></ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <div class="highlight-box">
+                <h2 style="margin-top: 0; border: none;">Summary: Threads as the Substrate</h2>
+                <p>Think of Threads as the <strong>diagnostic and navigational layer beneath other practices:</strong></p>
+                <ul>
+                    <li><strong>Other frameworks</strong> → What to do</li>
+                    <li><strong>Threads</strong> → Why tensions arise and how to navigate them</li>
+                </ul>
+                <p>You don't replace your existing toolbox—you add pattern recognition that helps you choose the right tool at the right time.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Recommended Learning Path</h2>
+
+            <p>If you're new to these frameworks, here's a suggested learning path:</p>
+
+            <ol>
+                <li><strong>Start with Threads</strong> → Learn pattern recognition</li>
+                <li><strong>Add NVC</strong> → Build communication skills for thread navigation</li>
+                <li><strong>Layer in Polarity Management</strong> → Deep-dive specific threads</li>
+                <li><strong>Apply Design Thinking</strong> → Prototype solutions that honor both poles</li>
+                <li><strong>Integrate Theory U</strong> → Access deeper emergence within threads</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Resources</h2>
+
+            <div class="resource-list">
+                <h3>Threads of Becoming:</h3>
+                <ul>
+                    <li>Organizational Thread Assessment (free printable download)</li>
+                    <li>Diagnostic Workshop Outline (free printable download)</li>
+                    <li>Training & Certification programs</li>
+                </ul>
+            </div>
+
+            <div class="resource-list">
+                <h3>Other Frameworks:</h3>
+                <ul>
+                    <li><strong>Polarity Management:</strong> polaritypartnerships.com</li>
+                    <li><strong>NVC:</strong> cnvc.org</li>
+                    <li><strong>IFS:</strong> ifs-institute.com</li>
+                    <li><strong>Design Thinking:</strong> dschool.stanford.edu</li>
+                    <li><strong>Theory U:</strong> presencing.org</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-logo">Creative Advance Institute</div>
+            <p>Threads of Becoming Framework</p>
+            <p>© 2025 | creativeadvance.org</p>
+            <p style="margin-top: 1rem;"><em>This comparison is not intended to critique other valuable frameworks, but to help practitioners understand when and how to integrate Threads with existing approaches.</em></p>
+        </footer>
+    </div>
+</body>
+</html>

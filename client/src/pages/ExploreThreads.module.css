@@ -3,7 +3,16 @@
 }
 
 .header {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-purple) 100%);
+  /* Explore - Full spectrum of threads */
+  background: linear-gradient(135deg,
+    var(--thread-presence) 0%,
+    var(--thread-consent) 14.28%,
+    var(--thread-memory) 28.56%,
+    var(--thread-pause) 42.84%,
+    var(--thread-embodiment) 57.12%,
+    var(--thread-uncertainty) 71.4%,
+    var(--thread-becoming) 100%
+  );
   color: var(--color-white);
   padding: 4rem 0 3rem;
   text-align: center;
@@ -14,8 +23,10 @@
 }
 
 .tagline {
-  font-size: var(--text-2xl);
-  color: var(--color-orange);
+  font-size: var(--text-4xl);
+  color: var(--color-emergence);
+  font-weight: var(--font-bold);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .what,
@@ -142,7 +153,10 @@
 }
 
 .movement {
-  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  background: linear-gradient(135deg,
+    var(--thread-pause) 0%,
+    var(--thread-embodiment) 100%
+  );
   color: var(--color-white);
   padding: 2.5rem 2rem;
   border-radius: 12px;
@@ -195,13 +209,14 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-.thread.blue { border-left-color: var(--color-blue); }
-.thread.purple { border-left-color: var(--color-purple); }
-.thread.teal { border-left-color: var(--color-teal); }
-.thread.orange { border-left-color: var(--color-orange); }
-.thread.pink { border-left-color: var(--color-pink); }
-.thread.brown { border-left-color: var(--color-brown); }
-.thread.navy { border-left-color: var(--color-navy); }
+/* Thread-specific colors mapped to philosophical meanings */
+.thread.blue { border-left-color: var(--thread-uncertainty); }
+.thread.purple { border-left-color: var(--thread-presence); }
+.thread.teal { border-left-color: var(--thread-consent); }
+.thread.orange { border-left-color: var(--thread-pause); }
+.thread.pink { border-left-color: var(--thread-memory); }
+.thread.brown { border-left-color: var(--thread-becoming); }
+.thread.navy { border-left-color: var(--thread-embodiment); }
 
 .threadNumber {
   font-size: var(--text-xl);
@@ -272,7 +287,10 @@
 
 /* Featured Example */
 .featuredExample {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-purple) 100%);
+  background: linear-gradient(135deg,
+    var(--color-charcoal) 0%,
+    var(--thread-presence) 100%
+  );
   color: var(--color-white);
   padding: 4rem 0;
 }
@@ -515,15 +533,15 @@
 }
 
 .exampleTension {
-  border-left: 3px solid var(--color-orange);
+  border-left: 3px solid var(--warm-coral);
 }
 
 .exampleSteps {
-  border-left: 3px solid var(--color-purple);
+  border-left: 3px solid var(--thread-presence);
 }
 
 .exampleEmergence {
-  border-left: 3px solid var(--color-teal);
+  border-left: 3px solid var(--color-emergence);
 }
 
 .exampleTension strong,
@@ -611,13 +629,14 @@
   height: fit-content;
 }
 
-.threadCard.blue { border-left-color: var(--color-blue); }
-.threadCard.purple { border-left-color: var(--color-purple); }
-.threadCard.teal { border-left-color: var(--color-teal); }
-.threadCard.orange { border-left-color: var(--color-orange); }
-.threadCard.pink { border-left-color: var(--color-pink); }
-.threadCard.brown { border-left-color: var(--color-brown); }
-.threadCard.navy { border-left-color: var(--color-navy); }
+/* Thread card colors */
+.threadCard.blue { border-left-color: var(--thread-uncertainty); }
+.threadCard.purple { border-left-color: var(--thread-presence); }
+.threadCard.teal { border-left-color: var(--thread-consent); }
+.threadCard.orange { border-left-color: var(--thread-pause); }
+.threadCard.pink { border-left-color: var(--thread-memory); }
+.threadCard.brown { border-left-color: var(--thread-becoming); }
+.threadCard.navy { border-left-color: var(--thread-embodiment); }
 
 .inlineExample {
   background: var(--color-white);
@@ -649,7 +668,10 @@
 
 /* Call to Action */
 .cta {
-  background: linear-gradient(135deg, var(--color-teal) 0%, var(--color-blue) 100%);
+  background: linear-gradient(135deg,
+    var(--thread-consent) 0%,
+    var(--thread-uncertainty) 100%
+  );
   color: var(--color-white);
   padding: 4rem 0;
   text-align: center;

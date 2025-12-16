@@ -42,15 +42,37 @@
 }
 
 .tier1Header {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal) 100%);
+  /* Tier 1: Single Thread - Foundation (PRESENCE) */
+  background: linear-gradient(135deg,
+    var(--thread-presence) 0%,
+    var(--thread-consent) 100%
+  );
+  border-top: 3px solid var(--thread-presence);
 }
 
 .tier2Header {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-blue) 100%);
+  /* Tier 2: Three Threads Woven - Professional Integration */
+  background: linear-gradient(135deg,
+    var(--thread-presence) 0%,
+    var(--thread-consent) 33.33%,
+    var(--thread-memory) 66.66%,
+    var(--thread-pause) 100%
+  );
+  border-top: 3px solid var(--thread-consent);
 }
 
 .tier3Header {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-purple) 100%);
+  /* Tier 3: Full Spectrum - Mastery of all seven threads */
+  background: linear-gradient(135deg,
+    var(--thread-presence) 0%,
+    var(--thread-consent) 14.28%,
+    var(--thread-memory) 28.56%,
+    var(--thread-pause) 42.84%,
+    var(--thread-embodiment) 57.12%,
+    var(--thread-uncertainty) 71.4%,
+    var(--thread-becoming) 100%
+  );
+  border-top: 3px solid var(--thread-embodiment);
 }
 
 .tierHeader h2 {
