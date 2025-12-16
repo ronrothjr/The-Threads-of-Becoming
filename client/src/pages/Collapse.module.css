@@ -8,11 +8,11 @@
 .hero {
   background:
     linear-gradient(135deg,
-      rgba(220, 38, 38, 0.12) 0%,      /* MEMORY red - what pulls from past */
-      rgba(217, 119, 6, 0.08) 25%,     /* PAUSE amber - frozen moment */
-      rgba(251, 191, 36, 0.05) 50%,    /* EMERGENCE - what could be */
-      rgba(217, 119, 6, 0.08) 75%,     /* PAUSE again - stuck */
-      rgba(220, 38, 38, 0.12) 100%     /* MEMORY - back where we started */
+      rgba(220, 38, 38, 0.30) 0%,      /* MEMORY red - what pulls from past */
+      rgba(217, 119, 6, 0.25) 25%,     /* PAUSE amber - frozen moment */
+      rgba(251, 191, 36, 0.20) 50%,    /* EMERGENCE - what could be */
+      rgba(217, 119, 6, 0.25) 75%,     /* PAUSE again - stuck */
+      rgba(220, 38, 38, 0.30) 100%     /* MEMORY - back where we started */
     );
   padding: 6rem 0 4rem;
   text-align: center;
@@ -33,8 +33,8 @@
       45deg,
       transparent,
       transparent 50px,
-      rgba(220, 38, 38, 0.03) 50px,
-      rgba(220, 38, 38, 0.03) 51px
+      rgba(220, 38, 38, 0.10) 50px,
+      rgba(220, 38, 38, 0.10) 51px
     );
   pointer-events: none;
 }
@@ -70,14 +70,138 @@
   font-weight: 500;
 }
 
-/* Content Area */
+/* Content Area - Full width alternating backgrounds */
 .content {
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none;
 }
 
+.content > .section {
+  padding: 5rem 0;
+  margin: 0;
+}
+
+/* First section - White background (The Problem) */
+.content > .section:nth-of-type(1) {
+  background: var(--color-white);
+}
+
+/* Second section - Red tinted (What Is Collapse) */
+.content > .section:nth-of-type(2) {
+  background: linear-gradient(135deg,
+    rgba(220, 38, 38, 0.22) 0%,
+    rgba(220, 38, 38, 0.14) 50%,
+    rgba(220, 38, 38, 0.22) 100%
+  );
+  position: relative;
+}
+
+.content > .section:nth-of-type(2)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 100px,
+      rgba(220, 38, 38, 0.08) 100px,
+      rgba(220, 38, 38, 0.08) 101px
+    );
+  pointer-events: none;
+}
+
+/* Third section - Amber tinted (Recognition) */
+.content > .section:nth-of-type(3) {
+  background: linear-gradient(135deg,
+    rgba(217, 119, 6, 0.22) 0%,
+    rgba(217, 119, 6, 0.14) 50%,
+    rgba(217, 119, 6, 0.22) 100%
+  );
+}
+
+/* Fourth section - White (Case Study) */
+.content > .section:nth-of-type(4) {
+  background: var(--color-white);
+}
+
+/* Fifth section - Gray tinted (Why We Collapse) */
+.content > .section:nth-of-type(5) {
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.16) 0%,     /* Purple tint for PRESENCE */
+    rgba(120, 113, 108, 0.14) 50%,   /* BECOMING gray */
+    rgba(139, 92, 246, 0.16) 100%    /* Purple bookend */
+  );
+}
+
+/* Sixth section - Gold tinted (The Alternative) */
+.content > .section:nth-of-type(6) {
+  background: linear-gradient(135deg,
+    rgba(251, 191, 36, 0.28) 0%,
+    rgba(251, 191, 36, 0.18) 50%,
+    rgba(251, 191, 36, 0.28) 100%
+  );
+  position: relative;
+}
+
+.content > .section:nth-of-type(6)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(251, 191, 36, 0.08) 5deg,
+      transparent 10deg
+    );
+  pointer-events: none;
+}
+
+/* Seventh section - Spectrum (Seven Threads) */
+.content > .section:nth-of-type(7) {
+  background: linear-gradient(135deg,
+    rgba(124, 58, 237, 0.16) 0%,      /* PRESENCE purple */
+    rgba(5, 150, 105, 0.16) 16.66%,   /* CONSENT green */
+    rgba(220, 38, 38, 0.16) 33.33%,   /* MEMORY red */
+    rgba(217, 119, 6, 0.16) 50%,      /* PAUSE amber */
+    rgba(234, 88, 12, 0.16) 66.66%,   /* EMBODIMENT terracotta */
+    rgba(2, 132, 199, 0.16) 83.33%,   /* UNCERTAINTY blue */
+    rgba(120, 113, 108, 0.16) 100%    /* BECOMING gray */
+  );
+}
+
+/* Eighth section - Gold emergence (CTA) */
+.content > .section:nth-of-type(8) {
+  background: linear-gradient(135deg,
+    rgba(251, 191, 36, 0.35) 0%,
+    rgba(217, 119, 6, 0.22) 50%,
+    rgba(251, 191, 36, 0.35) 100%
+  );
+}
+
+/* Section inner content constraint */
 .section {
-  margin-bottom: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section > * {
+  width: 100%;
+  max-width: 900px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 .section h2 {
@@ -85,10 +209,19 @@
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: 2rem;
-  border-left: 6px solid var(--thread-memory); /* Red for problem/collapse */
-  padding-left: 1.5rem;
+  border-left: 6px solid var(--thread-memory);
+  padding-left: 2.5rem;
   line-height: 1.2;
 }
+
+/* Vary h2 border colors by section theme */
+.content > .section:nth-of-type(2) h2 { border-left-color: var(--thread-memory); }
+.content > .section:nth-of-type(3) h2 { border-left-color: var(--thread-pause); }
+.content > .section:nth-of-type(4) h2 { border-left-color: var(--thread-embodiment); }
+.content > .section:nth-of-type(5) h2 { border-left-color: var(--thread-becoming); }
+.content > .section:nth-of-type(6) h2 { border-left-color: var(--color-emergence); }
+.content > .section:nth-of-type(7) h2 { border-left-color: var(--thread-uncertainty); }
+.content > .section:nth-of-type(8) h2 { border-left-color: var(--color-emergence); }
 
 .largeText {
   font-size: var(--text-xl);
@@ -112,10 +245,10 @@
   line-height: 1.6;
   margin: 2.5rem 0;
   padding: 2rem;
-  background: rgba(220, 38, 38, 0.06);
+  background: rgba(220, 38, 38, 0.08);
   border-left: 6px solid var(--thread-memory);
   border-radius: 0 8px 8px 0;
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.12);
   position: relative;
 }
 
@@ -159,14 +292,14 @@
   right: -5%;
   width: 200px;
   height: 200%;
-  background: linear-gradient(135deg, transparent 0%, rgba(220, 38, 38, 0.03) 50%, transparent 100%);
+  background: linear-gradient(135deg, transparent 0%, rgba(220, 38, 38, 0.05) 50%, transparent 100%);
   transform: rotate(-15deg);
   pointer-events: none;
 }
 
 .collapseType:hover {
-  border-color: rgba(220, 38, 38, 0.2);
-  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.12);
+  border-color: rgba(220, 38, 38, 0.3);
+  box-shadow: 0 12px 32px rgba(220, 38, 38, 0.16);
   transform: translateY(-2px);
 }
 
@@ -182,7 +315,7 @@
   justify-content: center;
   font-size: var(--text-2xl);
   font-weight: 700;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
   position: relative;
   z-index: 1;
 }
@@ -207,7 +340,7 @@
   margin-bottom: 1.5rem;
   font-style: italic;
   padding-left: 1rem;
-  border-left: 3px solid rgba(220, 38, 38, 0.2);
+  border-left: 3px solid rgba(220, 38, 38, 0.3);
 }
 
 .examples {
@@ -236,7 +369,7 @@
   font-size: var(--text-sm);
   color: var(--color-text-light);
   position: relative;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
 .examples li::before {
@@ -245,6 +378,7 @@
   left: 0;
   color: var(--thread-memory);
   font-weight: 700;
+  font-size: var(--text-lg);
 }
 
 .examples li:last-child {
@@ -252,7 +386,7 @@
 }
 
 .consequence {
-  background: rgba(220, 38, 38, 0.06);
+  background: rgba(220, 38, 38, 0.08);
   padding: 1.25rem;
   border-radius: 8px;
   border-left: 4px solid var(--thread-memory);
@@ -281,8 +415,8 @@
   background: var(--color-white);
   border-radius: 12px;
   padding: 1.75rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  border-top: 4px solid var(--thread-memory);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid var(--thread-pause);
   transition: all 0.3s ease;
   position: relative;
 }
@@ -293,7 +427,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 5px;
   background: linear-gradient(to right, var(--thread-memory), var(--thread-pause), var(--thread-embodiment));
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -304,14 +438,14 @@
 }
 
 .signatureCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(220, 38, 38, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(217, 119, 6, 0.16);
 }
 
 .signatureCard h3 {
   font-size: var(--text-lg);
   font-weight: 700;
-  color: var(--thread-memory);
+  color: var(--thread-pause);
   margin-bottom: 1.25rem;
   text-align: center;
   text-transform: uppercase;
@@ -330,7 +464,7 @@
   line-height: 1.6;
   font-size: var(--text-sm);
   color: var(--color-text-light);
-  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
+  border-bottom: 1px solid rgba(217, 119, 6, 0.15);
 }
 
 .signatureCard li:last-child {
@@ -344,14 +478,14 @@
 
 /* Case Study - Featured story with glass effect */
 .caseStudy {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 3rem;
   margin: 3rem 0;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(220, 38, 38, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border: 3px solid rgba(234, 88, 12, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -369,8 +503,8 @@
       90deg,
       transparent,
       transparent 20px,
-      rgba(220, 38, 38, 0.02) 20px,
-      rgba(220, 38, 38, 0.02) 40px
+      rgba(234, 88, 12, 0.03) 20px,
+      rgba(234, 88, 12, 0.03) 40px
     );
   pointer-events: none;
 }
@@ -387,7 +521,7 @@
   margin-bottom: 2rem;
   text-align: center;
   padding-bottom: 1rem;
-  border-bottom: 3px solid rgba(220, 38, 38, 0.2);
+  border-bottom: 4px solid rgba(234, 88, 12, 0.3);
 }
 
 .caseBody {
@@ -401,7 +535,7 @@
 .caseBlock h4 {
   font-size: var(--text-base);
   font-weight: 700;
-  color: var(--thread-memory);
+  color: var(--thread-embodiment);
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -414,7 +548,7 @@
   content: '';
   width: 32px;
   height: 3px;
-  background: linear-gradient(to right, var(--thread-memory), var(--thread-pause));
+  background: linear-gradient(to right, var(--thread-embodiment), var(--thread-pause));
 }
 
 .caseBlock p {
@@ -433,13 +567,13 @@
 }
 
 .emergence {
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.12) 0%, rgba(251, 191, 36, 0.06) 100%);
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.18) 0%, rgba(251, 191, 36, 0.08) 100%);
   padding: 1.5rem;
   border-radius: 12px;
-  border-left: 4px solid var(--color-emergence);
+  border-left: 5px solid var(--color-emergence);
   margin-top: 1.5rem;
   line-height: 1.8;
-  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.1);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.15);
 }
 
 .emergence strong {
@@ -451,18 +585,19 @@
   color: var(--color-text);
   line-height: 1.7;
   padding: 2rem;
-  background: rgba(220, 38, 38, 0.05);
+  background: rgba(234, 88, 12, 0.08);
   border-radius: 12px;
-  border-left: 6px solid var(--thread-memory);
+  border-left: 6px solid var(--thread-embodiment);
   margin-top: 2rem;
   font-weight: 500;
+  box-shadow: 0 2px 12px rgba(234, 88, 12, 0.1);
 }
 
 /* Reasons Grid */
 .reasonsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2.5rem;
 }
 
@@ -470,14 +605,15 @@
   background: var(--color-white);
   border-radius: 12px;
   padding: 1.75rem;
-  border-left: 5px solid var(--thread-pause);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid var(--thread-becoming);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .reasonCard:hover {
-  transform: translateX(4px);
-  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.12);
+  transform: translateX(6px);
+  box-shadow: 0 6px 20px rgba(120, 113, 108, 0.16);
+  border-left-color: var(--thread-pause);
 }
 
 .reasonCard h4 {
@@ -498,7 +634,7 @@
 .threadsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2.5rem;
 }
 
@@ -506,8 +642,8 @@
   background: var(--color-white);
   border-radius: 12px;
   padding: 1.75rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  border-top: 4px solid var(--color-orange);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid var(--color-orange);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -519,7 +655,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 5px;
   background: linear-gradient(to right,
     var(--thread-presence),
     var(--thread-consent),
@@ -538,8 +674,8 @@
 }
 
 .threadCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
 }
 
 .threadCard h3 {
@@ -557,9 +693,9 @@
   color: var(--color-text);
   margin-bottom: 1rem;
   line-height: 1.5;
-  padding: 0.5rem 0;
-  border-top: 2px solid rgba(217, 119, 6, 0.2);
-  border-bottom: 2px solid rgba(217, 119, 6, 0.2);
+  padding: 0.75rem 0;
+  border-top: 3px solid rgba(217, 119, 6, 0.3);
+  border-bottom: 3px solid rgba(217, 119, 6, 0.3);
 }
 
 .threadCard p:last-child {
@@ -572,14 +708,14 @@
 /* CTA Section - Movement toward solutions */
 .ctaSection {
   background: linear-gradient(135deg,
-    rgba(251, 191, 36, 0.1) 0%,
-    rgba(217, 119, 6, 0.05) 50%,
-    rgba(251, 191, 36, 0.1) 100%
+    rgba(251, 191, 36, 0.35) 0%,
+    rgba(217, 119, 6, 0.24) 50%,
+    rgba(251, 191, 36, 0.35) 100%
   );
   border-radius: 16px;
   padding: 4rem 2rem;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 0;
   position: relative;
   overflow: hidden;
 }
@@ -596,8 +732,8 @@
     repeating-conic-gradient(
       from 0deg at 50% 50%,
       transparent 0deg,
-      rgba(251, 191, 36, 0.03) 10deg,
-      transparent 20deg
+      rgba(251, 191, 36, 0.12) 5deg,
+      transparent 10deg
     );
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -619,10 +755,11 @@
 
 .ctaSection > p {
   font-size: var(--text-lg);
-  color: var(--color-text-light);
+  color: var(--color-text);
   max-width: 700px;
   margin: 0 auto 3rem;
   line-height: 1.7;
+  font-weight: 500;
 }
 
 .ctaGrid {
@@ -637,8 +774,8 @@
   padding: 2rem;
   border-radius: 16px;
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border-top: 5px solid var(--color-emergence);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid var(--color-emergence);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -654,7 +791,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(251, 191, 36, 0.15), transparent);
   transition: left 0.5s ease;
 }
 
@@ -663,8 +800,8 @@
 }
 
 .ctaCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(251, 191, 36, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(251, 191, 36, 0.25);
   border-top-color: var(--thread-pause);
 }
 

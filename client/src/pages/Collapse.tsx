@@ -16,8 +16,7 @@ const Collapse: React.FC = () => {
       </section>
 
       {/* Main Content */}
-      <article className="section-lg">
-        <div className={`${styles.content} container`}>
+      <article className={styles.content}>
 
           {/* The Problem */}
           <section className={styles.section}>
@@ -401,7 +400,6 @@ const Collapse: React.FC = () => {
             </div>
           </section>
 
-        </div>
       </article>
     </div>
   );
