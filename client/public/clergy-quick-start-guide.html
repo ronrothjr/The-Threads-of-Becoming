@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start Guide for Clergy | Threads of Becoming</title>
+    <style>
+        /* Thread-based color system */
+        :root {
+            --thread-presence: #7C3AED;
+            --thread-consent: #059669;
+            --thread-memory: #DC2626;
+            --thread-pause: #D97706;
+            --thread-embodiment: #EA580C;
+            --thread-uncertainty: #0284C7;
+            --thread-becoming: #78716C;
+            --color-emergence: #FBBF24;
+            --color-purple: #9B59B6;
+            --color-pink: #E91E63;
+            --color-blue: #4A90E2;
+            --color-charcoal: #27272A;
+            --color-cream: #FFFBEB;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.08) 0%, rgba(74, 144, 226, 0.08) 100%);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(155, 89, 182, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-blue) 100%);
+            color: white;
+            border-radius: 12px;
+            margin: -3rem -3rem 3rem -3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--color-emergence);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--color-charcoal);
+            margin: 2.5rem 0 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 6px solid var(--color-purple);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--color-purple);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--color-purple);
+            border-radius: 50%;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: var(--color-charcoal);
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--color-purple);
+            font-style: italic;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.1) 0%, rgba(74, 144, 226, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--color-purple);
+        }
+
+        .intro p {
+            margin-bottom: 0.75rem;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .thread-box {
+            background: white;
+            border: 3px solid;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            page-break-inside: avoid;
+        }
+
+        .thread-box.presence { border-color: var(--thread-presence); }
+        .thread-box.consent { border-color: var(--thread-consent); }
+        .thread-box.memory { border-color: var(--thread-memory); }
+        .thread-box.pause { border-color: var(--thread-pause); }
+        .thread-box.embodiment { border-color: var(--thread-embodiment); }
+        .thread-box.uncertainty { border-color: var(--thread-uncertainty); }
+        .thread-box.becoming { border-color: var(--thread-becoming); }
+
+        .thread-header {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .thread-box.presence .thread-header { color: var(--thread-presence); }
+        .thread-box.consent .thread-header { color: var(--thread-consent); }
+        .thread-box.memory .thread-header { color: var(--thread-memory); }
+        .thread-box.pause .thread-header { color: var(--thread-pause); }
+        .thread-box.embodiment .thread-header { color: var(--thread-embodiment); }
+        .thread-box.uncertainty .thread-header { color: var(--thread-uncertainty); }
+        .thread-box.becoming .thread-header { color: var(--thread-becoming); }
+
+        .tension {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .collapse-warning {
+            background: rgba(233, 30, 99, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-pink);
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        .collapse-warning strong {
+            color: var(--color-pink);
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(217, 119, 6, 0.12) 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--color-emergence);
+            margin: 2rem 0;
+            page-break-inside: avoid;
+        }
+
+        .tip-box h4 {
+            color: var(--thread-pause);
+            margin-top: 0;
+        }
+
+        .next-steps {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.12) 0%, rgba(16, 185, 129, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 3px solid var(--thread-consent);
+        }
+
+        .next-steps h3 {
+            color: var(--thread-consent);
+            margin-top: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-purple);
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                padding: 1rem;
+            }
+
+            header {
+                margin: 0 0 2rem 0;
+                page-break-after: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+
+            .thread-box, .tip-box, .next-steps {
+                page-break-inside: avoid;
+            }
+        }
+
+        @page {
+            margin: 1in;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Quick Start Guide for Clergy</h1>
+            <p class="subtitle">Introduction to Threads of Becoming for Faith Leaders</p>
+            <p class="tagline">15-Minute Framework Overview</p>
+        </header>
+
+        <div class="intro">
+            <p><strong>Welcome.</strong> If you're leading a faith community, you're already navigating sacred tensions—tradition and innovation, pastoral care and prophetic witness, contemplation and action. These tensions don't need to be resolved. They need to be held.</p>
+            <p>Threads of Becoming gives you language to name these tensions, practices to hold them without splitting your community, and pathways forward that honor both poles without false compromise.</p>
+        </div>
+
+        <h2>What Is Threads?</h2>
+        <p>Threads is a navigational framework built on seven universal tensions that show up in every human context—including congregational life. Each thread names a fundamental polarity that, when held well, generates depth and resilience. When collapsed, it splits communities apart.</p>
+
+        <p><strong>Key insight:</strong> The goal isn't to eliminate tension. The goal is to <em>hold</em> it consciously, allowing something new to emerge from the creative space between poles.</p>
+
+        <h2>The Seven Threads in Congregational Life</h2>
+        <p>Here's how each thread typically shows up in faith communities:</p>
+
+        <div class="thread-box presence">
+            <div class="thread-header">1. PRESENCE: Solitude ↔ Community</div>
+            <div class="tension">Where am I...?</div>
+            <p><strong>The tension:</strong> Contemplative practice vs. communal worship • Individual spiritual journey vs. collective formation</p>
+            <div class="collapse-warning">
+                <strong>Collapse:</strong> Isolated spirituality with no accountability OR constant programming with no space for inner depth
+            </div>
+            <p><strong>Congregational example:</strong> Members complain there's "no community," while others say "we never have silence." Both need honoring.</p>
+        </div>
+
+        <div class="thread-box consent">
+            <div class="thread-header">2. CONSENT: Pastoral Care ↔ Prophetic Witness</div>
+            <div class="tension">What may I...?</div>
+            <p><strong>The tension:</strong> Comfort the afflicted vs. afflict the comfortable • Sanctuary vs. activism • Personal piety vs. social justice</p>
+            <div class="collapse-warning">
+                <strong>Collapse:</strong> All comfort, no challenge OR all confrontation, no care
+            </div>
+            <p><strong>Congregational example:</strong> "Why are you always talking about justice?" vs. "Why don't we ever talk about what matters?"</p>
+        </div>
+
+        <div class="thread-box memory">
+            <div class="thread-header">3. MEMORY: Tradition ↔ Innovation</div>
+            <div class="tension">Why do I...?</div>
+            <p><strong>The tension:</strong> Inherited liturgy vs. contemporary expression • "How we've always done it" vs. experimentation</p>
+            <div class="collapse-warning">
+                <strong>Collapse:</strong> Rigid adherence to forms that no longer serve OR rejection of tradition that carries wisdom
+            </div>
+            <p><strong>Congregational example:</strong> Worship style wars—traditionalists vs. innovators, each believing the other is destroying the church.</p>
+        </div>
+
+        <div class="thread-box pause">
+            <div class="thread-header">4. PAUSE: Discernment ↔ Action</div>
+            <div class="tension">When can I...?</div>
+            <p><strong>The tension:</strong> Waiting for clarity vs. responding to urgent need • Contemplation vs. mission • Study vs. service</p>
+            <div class="collapse-warning">
+                <strong>Collapse:</strong> Endless discernment with no action OR reactive activism with no theological reflection
+            </div>
+            <p><strong>Congregational example:</strong> Board debates that never lead to decisions, or impulsive programs launched without discernment.</p>
+        </div>
+
+        <div class="thread-box embodiment">
+            <div class="thread-header">5. EMBODIMENT: Head ↔ Heart</div>
+            <div class="tension">How does my body know?</div>
+            <p><strong>The tension:</strong> Theological depth vs. emotional accessibility • Intellectual rigor vs. experiential spirituality</p>
+            <div class="collapse-warning">
+                <strong>Collapse:</strong> Dry intellectualism that distances people OR anti-intellectual emotionalism without grounding
+            </div>
+            <p><strong>Congregational example:</strong> Some want deeper teaching; others want to "feel something." Both hold truth.</p>
+        </div>
+
+        <div class="thread-box uncertainty">
+            <div class="thread-header">6. UNCERTAINTY: Certainty ↔ Mystery</div>
+            <div class="tension">What is the mystery unveiling?</div>
+            <p><strong>The tension:</strong> Clear doctrine vs. radical openness • Answers vs. questions • Orthodoxy vs. exploration</p>
+            <div class="collapse-warning">
+                <strong>Collapse:</strong> Rigid fundamentalism that crushes questions OR spiritual relativism where nothing means anything
+            </div>
+            <p><strong>Congregational example:</strong> "We need clear beliefs!" vs. "Why can't we ask hard questions?"</p>
+        </div>
+
+        <div class="thread-box becoming">
+            <div class="thread-header">7. BECOMING: Who We Are ↔ Who We're Called To Be</div>
+            <div class="tension">Who am I becoming?</div>
+            <p><strong>The tension:</strong> Established identity vs. evolving mission • Long-time members vs. newcomers • Continuity vs. transformation</p>
+            <div class="collapse-warning">
+                <strong>Collapse:</strong> Rigid identity resistance that prevents growth OR constant reinvention with no roots
+            </div>
+            <p><strong>Congregational example:</strong> "This isn't who we are!" vs. "We have to change or die."</p>
+        </div>
+
+        <h2>How to Use This Framework</h2>
+
+        <div class="tip-box">
+            <h4>When Tension Arises in Your Congregation:</h4>
+            <ol>
+                <li><strong>Name the thread.</strong> Which of the seven tensions is active? Just naming it reduces its unconscious power.</li>
+                <li><strong>Identify the collapse.</strong> Has your community collapsed toward one pole? Are you stuck, oscillating, or offering false compromise?</li>
+                <li><strong>Honor both poles.</strong> What is each side protecting? Both hold wisdom—help people see that.</li>
+                <li><strong>Hold the tension.</strong> Don't rush to resolve it. Ask: "What might emerge if we hold both truths at once?"</li>
+                <li><strong>Design for both.</strong> Create practices, rituals, or structures that honor both poles without collapsing.</li>
+            </ol>
+        </div>
+
+        <div class="tip-box">
+            <h4>In Your Own Leadership:</h4>
+            <p>Use Threads as a diagnostic tool for your own tensions:</p>
+            <ul>
+                <li><strong>Pastoral care exhaustion?</strong> Check CONSENT—are you collapsed into all "yes," unable to set boundaries?</li>
+                <li><strong>Feeling stuck?</strong> Check PAUSE—are you caught in endless discernment or rushing to action?</li>
+                <li><strong>Identity crisis?</strong> Check BECOMING—who you've been vs. who you're being called to be.</li>
+            </ul>
+        </div>
+
+        <h2>Try It This Week</h2>
+        <p>Pick <strong>one active tension</strong> in your congregation right now. Use these questions:</p>
+        <ol>
+            <li>Which thread is this? (Name it)</li>
+            <li>What are the two poles? (Name both clearly)</li>
+            <li>Where have we collapsed? (Stuck at one? Oscillating? False compromise?)</li>
+            <li>What is each side protecting? (Find the wisdom in both)</li>
+            <li>What could emerge if we held both? (Ask without needing an answer yet)</li>
+        </ol>
+
+        <div class="next-steps">
+            <h3>Next Steps</h3>
+            <ul>
+                <li><strong>Use it in a sermon.</strong> Name one thread your congregation is facing. Help them see the pattern without prescribing the solution.</li>
+                <li><strong>Bring it to your board.</strong> When a debate stalls, pause and name the thread. Ask what both sides are protecting.</li>
+                <li><strong>Apply it personally.</strong> Journal on one thread active in your own life right now. Where have you collapsed?</li>
+                <li><strong>Explore deeper training.</strong> Join a clergy cohort or access more resources at <strong>threadsofbecoming.com/communities</strong></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p><strong>Threads of Becoming</strong> | A framework for holding sacred tension without splitting</p>
+            <p>For more resources, visit <strong>threadsofbecoming.com/resources</strong></p>
+        </div>
+    </div>
+</body>
+</html>

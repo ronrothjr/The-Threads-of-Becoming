@@ -219,20 +219,20 @@ const Communities: React.FC = () => {
           <div className={styles.freeResources}>
             <div className={styles.freeResource}>
               <h3>📄 Quick Start Guide for Clergy</h3>
-              <p>15-minute PDF introducing the seven threads with congregational examples. Use it in your next board meeting or staff retreat.</p>
-              <a href="/resources" className={styles.resourceLink}>Download Free Guide →</a>
+              <p>15-minute guide introducing all seven threads with congregational examples, collapse patterns, and practical next steps. Perfect for board meetings or staff retreats.</p>
+              <a href="/clergy-quick-start-guide.html" target="_blank" className={styles.resourceLink}>Open Guide (Print-Ready) →</a>
             </div>
 
             <div className={styles.freeResource}>
-              <h3>🎥 Sermon Integration Video</h3>
-              <p>7-minute training on how to introduce Threads language in preaching without overwhelming your congregation. Includes sample sermon excerpts.</p>
-              <a href="/resources" className={styles.resourceLink}>Watch Free Video →</a>
+              <h3>📖 Sermon Integration Guide</h3>
+              <p>How to introduce Threads language in preaching without overwhelming your congregation. Includes three complete sermon excerpts you can adapt.</p>
+              <a href="/sermon-integration-guide.html" target="_blank" className={styles.resourceLink}>Open Guide (Print-Ready) →</a>
             </div>
 
             <div className={styles.freeResource}>
               <h3>📋 Facilitation Template: Worship Style Tensions</h3>
-              <p>Step-by-step meeting guide for navigating the "traditional vs. contemporary" debate using the MEMORY thread. Tested with 40+ congregations.</p>
-              <a href="/resources" className={styles.resourceLink}>Get Free Template →</a>
+              <p>Step-by-step 90-minute meeting guide for navigating the "traditional vs. contemporary" debate using the MEMORY thread. Complete with facilitator scripts.</p>
+              <a href="/worship-style-facilitation-template.html" target="_blank" className={styles.resourceLink}>Open Template (Print-Ready) →</a>
             </div>
 
             <div className={styles.freeResource}>
