@@ -40,7 +40,13 @@ const Collapse: React.FC = () => {
           <section className={styles.section}>
             <h2>What Is Collapse?</h2>
             <p>
-              Collapse happens when we stop holding creative tension and instead get stuck in one of three predictable patterns:
+              Collapse happens when we stop holding creative tension and instead get stuck in one of three predictable patterns. Sometimes we collapse unconsciously—we don't realize we're doing it. But often, we collapse <em>on purpose</em>. We pick a side because holding tension feels too hard. We flip-flop because we're desperate for relief. We split the difference because we think that's what compromise means.
+            </p>
+            <p>
+              None of these strategies are wrong or bad. They're human responses to discomfort. But they have consequences. And recognizing the pattern—whether you're doing it on purpose or not—is the first step toward something different.
+            </p>
+            <p className={styles.largeText} style={{marginTop: '1.5rem'}}>
+              <strong>The three patterns of collapse:</strong>
             </p>
 
             <div className={styles.collapseTypes}>
@@ -237,8 +243,8 @@ const Collapse: React.FC = () => {
 
           {/* Why We Collapse */}
           <section className={styles.section}>
-            <h2>Why We Collapse (And Why It's Not Your Fault)</h2>
-            <p>Collapse isn't a character flaw. It's a predictable response to discomfort. We collapse because:</p>
+            <h2>Why We Collapse (Whether We Mean To or Not)</h2>
+            <p>Collapse isn't a character flaw. Sometimes we do it without thinking. Sometimes we choose it deliberately because it seems like the only option. Either way, it's a predictable response to the discomfort of holding tension. We collapse because:</p>
 
             <div className={styles.reasonsGrid}>
               <div className={styles.reasonCard}>
@@ -259,6 +265,13 @@ const Collapse: React.FC = () => {
                 <h4>Systems Pressure Us</h4>
                 <p>
                   Organizations want clear strategy. Relationships want consistency. Communities want shared identity. The pressure to "be clear" pushes us toward poles.
+                </p>
+              </div>
+
+              <div className={styles.reasonCard}>
+                <h4>It Seems Like the Solution</h4>
+                <p>
+                  Sometimes we deliberately pick a side because we think that's what decisiveness looks like. We flip-flop because we're trying different options. We compromise because we think that's mature. These aren't mistakes—they're honest attempts to solve tension. They just don't work long-term.
                 </p>
               </div>
 

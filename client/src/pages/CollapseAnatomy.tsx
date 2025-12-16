@@ -17,7 +17,7 @@ const CollapseAnatomy: React.FC = () => {
         <div className={`${styles.content} container`}>
 
           <p className={styles.intro}>
-            Before we can hold tension, we need to recognize what collapsing looks like:
+            Before we can hold tension, we need to recognize what collapsing looks like. Sometimes we collapse unconsciously—we don't realize we're doing it. But often, we collapse on purpose. We pick a side because holding tension feels too hard, or because we think that's what decisiveness means. Either way, recognizing the pattern is the first step toward something different.
           </p>
 
           <section className={styles.section}>
