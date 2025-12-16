@@ -534,18 +534,18 @@ const ExploreThreads: React.FC = () => {
           <div className={styles.ctaOptions}>
             <div className={styles.ctaOption}>
               <h3>For Individuals & Couples</h3>
-              <p>One-on-one coaching and couples work using the Threads framework.</p>
-              <a href="/services#individual" className={styles.ctaButton}>Learn More</a>
+              <p>Free resources, blog articles, and practice guides to apply Threads in your life.</p>
+              <a href="/resources" className={styles.ctaButton}>Explore Resources</a>
             </div>
             <div className={styles.ctaOption}>
               <h3>For Organizations</h3>
               <p>Workshops, training, and organizational consulting grounded in Threads.</p>
-              <a href="/services#organizational" className={styles.ctaButton}>Learn More</a>
+              <a href="/organizations" className={styles.ctaButton}>Learn More</a>
             </div>
             <div className={styles.ctaOption}>
               <h3>For Professionals</h3>
               <p>Integrate Threads into your practice as a coach, therapist, or spiritual director.</p>
-              <a href="/services#professional" className={styles.ctaButton}>Learn More</a>
+              <a href="/training" className={styles.ctaButton}>Explore Training</a>
             </div>
           </div>
         </div>
