@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couples Threadwork Guide | Threads of Becoming</title>
+    <style>
+        /* Thread-based color system */
+        :root {
+            --thread-presence: #7C3AED;
+            --thread-consent: #059669;
+            --thread-memory: #DC2626;
+            --thread-pause: #D97706;
+            --thread-embodiment: #EA580C;
+            --thread-uncertainty: #0284C7;
+            --thread-becoming: #78716C;
+            --color-emergence: #FBBF24;
+            --color-purple: #9B59B6;
+            --color-pink: #E91E63;
+            --color-blue: #4A90E2;
+            --color-charcoal: #27272A;
+            --color-cream: #FFFBEB;
+            --color-text: #1E293B;
+            --color-text-light: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.08) 0%, rgba(155, 89, 182, 0.08) 100%);
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(233, 30, 99, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-purple) 100%);
+            color: white;
+            border-radius: 12px;
+            margin: -3rem -3rem 3rem -3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--color-emergence);
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--color-charcoal);
+            margin: 2.5rem 0 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 6px solid var(--color-pink);
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--color-pink);
+            margin: 2rem 0 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: var(--color-pink);
+            border-radius: 50%;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            color: var(--color-charcoal);
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.75rem 0;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: var(--color-charcoal);
+            font-weight: 600;
+        }
+
+        em {
+            color: var(--color-pink);
+            font-style: italic;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.1) 0%, rgba(155, 89, 182, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--color-pink);
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .starter-guide {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(217, 119, 6, 0.12) 100%);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            border: 3px solid var(--color-emergence);
+            page-break-inside: avoid;
+        }
+
+        .starter-guide h3 {
+            color: var(--thread-pause);
+            margin-top: 0;
+        }
+
+        .starter-guide h3::before {
+            background: var(--thread-pause);
+        }
+
+        .survey-section {
+            background: white;
+            border: 3px solid var(--color-purple);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 16px rgba(155, 89, 182, 0.15);
+            page-break-before: always;
+            page-break-inside: avoid;
+        }
+
+        .survey-header {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.15) 0%, rgba(74, 144, 226, 0.12) 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .survey-header h3 {
+            color: var(--color-purple);
+            margin: 0;
+        }
+
+        .thread-question {
+            background: rgba(124, 58, 237, 0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--thread-presence);
+            margin: 1.5rem 0;
+        }
+
+        .thread-question h4 {
+            color: var(--thread-presence);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-scale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .rating-option {
+            text-align: center;
+            flex: 1;
+        }
+
+        .rating-option input[type="radio"] {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .rating-label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-top: 0.25rem;
+        }
+
+        .habits-box {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.12) 0%, rgba(16, 185, 129, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 3px solid var(--thread-consent);
+            margin: 2rem 0;
+            page-break-inside: avoid;
+        }
+
+        .habits-box h3 {
+            color: var(--thread-consent);
+            margin-top: 0;
+        }
+
+        .habits-box h3::before {
+            background: var(--thread-consent);
+        }
+
+        .habit-card {
+            background: white;
+            border-left: 5px solid;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .habit-card.presence { border-left-color: var(--thread-presence); }
+        .habit-card.consent { border-left-color: var(--thread-consent); }
+        .habit-card.memory { border-left-color: var(--thread-memory); }
+        .habit-card.pause { border-left-color: var(--thread-pause); }
+
+        .habit-card h4 {
+            margin-top: 0;
+        }
+
+        .habit-card.presence h4 { color: var(--thread-presence); }
+        .habit-card.consent h4 { color: var(--thread-consent); }
+        .habit-card.memory h4 { color: var(--thread-memory); }
+        .habit-card.pause h4 { color: var(--thread-pause); }
+
+        .embodiment-practice {
+            background: linear-gradient(135deg, rgba(234, 88, 12, 0.12) 0%, rgba(217, 119, 6, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 3px solid var(--thread-embodiment);
+            margin: 2rem 0;
+            page-break-before: always;
+            page-break-inside: avoid;
+        }
+
+        .embodiment-practice h3 {
+            color: var(--thread-embodiment);
+            margin-top: 0;
+        }
+
+        .embodiment-practice h3::before {
+            background: var(--thread-embodiment);
+        }
+
+        .step-box {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.25rem 0;
+            border: 2px solid rgba(234, 88, 12, 0.3);
+        }
+
+        .step-box h4 {
+            color: var(--thread-embodiment);
+            margin-top: 0;
+        }
+
+        .uncertainty-space {
+            background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(14, 165, 233, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 3px solid var(--thread-uncertainty);
+            margin: 2rem 0;
+            page-break-inside: avoid;
+        }
+
+        .uncertainty-space h3 {
+            color: var(--thread-uncertainty);
+            margin-top: 0;
+        }
+
+        .uncertainty-space h3::before {
+            background: var(--thread-uncertainty);
+        }
+
+        .becoming-integration {
+            background: linear-gradient(135deg, rgba(120, 113, 108, 0.12) 0%, rgba(168, 162, 158, 0.1) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 3px solid var(--thread-becoming);
+            margin: 2rem 0;
+            page-break-before: always;
+            page-break-inside: avoid;
+        }
+
+        .becoming-integration h3 {
+            color: var(--thread-becoming);
+            margin-top: 0;
+        }
+
+        .becoming-integration h3::before {
+            background: var(--thread-becoming);
+        }
+
+        .reflection-box {
+            background: rgba(251, 191, 36, 0.08);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-emergence);
+            margin: 1.25rem 0;
+        }
+
+        .reflection-box::before {
+            content: '✍️ Reflection:';
+            display: block;
+            font-weight: 700;
+            color: var(--thread-pause);
+            margin-bottom: 0.75rem;
+        }
+
+        .warning-box {
+            background: rgba(233, 30, 99, 0.1);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-pink);
+            margin: 1.25rem 0;
+        }
+
+        .warning-box::before {
+            content: '💡 Remember:';
+            display: block;
+            font-weight: 700;
+            color: var(--color-pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-box {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.12) 0%, rgba(217, 119, 6, 0.1) 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--color-emergence);
+            margin: 2rem 0;
+            page-break-inside: avoid;
+        }
+
+        .tip-box h4 {
+            color: var(--thread-pause);
+            margin-top: 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--color-pink);
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Print styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            body {
+                background: white;
+                padding: 0;
+                font-size: 11pt;
+                line-height: 1.5;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                padding: 0.5rem;
+                margin: 0;
+            }
+
+            header {
+                margin: 0 0 1.5rem 0;
+                padding: 1.5rem;
+                page-break-after: avoid;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                margin: 1.5rem 0 1rem;
+                page-break-after: avoid;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                margin: 1.5rem 0 0.75rem;
+                page-break-after: avoid;
+            }
+
+            h4 {
+                font-size: 1rem;
+                margin: 1rem 0 0.5rem;
+                page-break-after: avoid;
+            }
+
+            p, li {
+                font-size: 10.5pt;
+                line-height: 1.5;
+            }
+
+            .intro {
+                padding: 1.25rem;
+                margin: 1rem 0;
+                page-break-inside: avoid;
+            }
+
+            .warning-box {
+                padding: 1rem;
+                margin: 1rem 0;
+                page-break-inside: avoid;
+            }
+
+            .starter-guide {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                page-break-before: auto;
+                page-break-inside: avoid;
+            }
+
+            .survey-section {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                page-break-before: always;
+                page-break-inside: auto;
+            }
+
+            .survey-header {
+                padding: 1rem;
+                margin-bottom: 1rem;
+                page-break-after: avoid;
+            }
+
+            .thread-question {
+                padding: 1rem;
+                margin: 1rem 0;
+                page-break-inside: avoid;
+            }
+
+            .rating-scale {
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+            }
+
+            .rating-option {
+                font-size: 9pt;
+            }
+
+            .reflection-box {
+                padding: 1rem;
+                margin: 0.75rem 0;
+                page-break-inside: avoid;
+            }
+
+            .habits-box {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                page-break-before: always;
+                page-break-inside: auto;
+            }
+
+            .habit-card {
+                padding: 1.25rem;
+                margin: 1rem 0;
+                page-break-inside: avoid;
+            }
+
+            .embodiment-practice {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                page-break-before: always;
+                page-break-inside: auto;
+            }
+
+            .step-box {
+                padding: 1rem;
+                margin: 0.75rem 0;
+                page-break-inside: avoid;
+            }
+
+            .uncertainty-space {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                page-break-before: always;
+                page-break-inside: avoid;
+            }
+
+            .becoming-integration {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                page-break-before: always;
+                page-break-inside: auto;
+            }
+
+            .tip-box {
+                padding: 1.25rem;
+                margin: 1rem 0;
+                page-break-inside: avoid;
+            }
+
+            .footer {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+                font-size: 9pt;
+            }
+
+            /* Reduce margins on lists for print */
+            ul, ol {
+                margin-left: 1.25rem;
+                margin-bottom: 0.75rem;
+            }
+
+            li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        @page {
+            margin: 0.75in;
+            size: letter;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Couples Threadwork Guide</h1>
+            <p class="subtitle">Holding Space for Each Other Until Something Wonderful Emerges</p>
+            <p class="tagline">A Practical Workbook for Couples</p>
+        </header>
+
+        <div class="intro">
+            <p><strong>For Couples Navigating Tension Together</strong></p>
+            <p>This isn't couples therapy (though it complements therapy beautifully). This is a practical tool for discovering how the Threads framework helps you and your partner hold space for each other's needs, navigate the tensions that arise in relationship, and allow something new to emerge when you resist the urge to collapse.</p>
+            <p><strong>What you'll find here:</strong> A quick-start guide, a thread activation survey to identify what's live between you right now, thread-specific habits to practice when tension arises, and pathways through embodiment and uncertainty toward integration and becoming.</p>
+        </div>
+
+        <div class="warning-box">
+            <strong>This workbook is NOT a replacement for couples therapy, crisis intervention, or professional support.</strong> If your relationship involves abuse, safety concerns, or significant mental health challenges, please seek professional help. This is a tool for couples committed to holding tension together, not resolving crisis alone.
+        </div>
+
+        <!-- ONE-PAGE STARTER GUIDE -->
+        <div class="starter-guide">
+            <h3>Quick Start: How to Use This Guide Together</h3>
+
+            <h4>Step 1: Read This Together (5 minutes)</h4>
+            <p>Sit down in a comfortable space. Read the introduction aloud, taking turns. Notice what resonates for each of you.</p>
+
+            <h4>Step 2: Take the Thread Activation Survey (10 minutes)</h4>
+            <p>Complete the survey individually first, then share your answers. You're looking for which threads are most "activated" in your relationship right now—where tension is showing up.</p>
+
+            <h4>Step 3: Name the Thread(s) Active Between You (5 minutes)</h4>
+            <p>Compare your surveys. Which threads did you both rate highly? Pick <strong>one thread</strong> to focus on for the next week. Don't try to work on everything at once.</p>
+
+            <h4>Step 4: Practice the Thread Habits (Daily, 2-10 minutes)</h4>
+            <p>Use the habit practices for your chosen thread. These are small, concrete actions you can do together when the thread activates and you need to pause rather than collapse.</p>
+
+            <h4>Step 5: Engage Embodiment & Uncertainty (Weekly check-in)</h4>
+            <p>Once a week, sit together and do the embodiment practice (what does your body know?) and the uncertainty practice (what are we not yet seeing?). This deepens your capacity to hold the tension.</p>
+
+            <h4>Step 6: Reflect on Becoming (Monthly)</h4>
+            <p>At the end of each month, use the Becoming integration questions to reflect on how you're evolving together. What's emerging from the tension you've been holding?</p>
+
+            <div class="tip-box">
+                <h4>💡 Core Principle</h4>
+                <p><strong>Don't try to resolve the tension. Hold it.</strong> The goal isn't to eliminate conflict or make the tension disappear. The goal is to <em>hold space for both of your needs at the same time</em> and trust that something will emerge when you don't collapse into blame, withdrawal, or forced compromise.</p>
+            </div>
+        </div>
+
+        <!-- THREAD ACTIVATION SURVEY -->
+        <div class="survey-section">
+            <div class="survey-header">
+                <h3>Thread Activation Survey</h3>
+                <p style="margin: 0; color: var(--color-text-light);">Rate how much each thread is activated in your relationship right now (1 = not at all, 5 = constantly present)</p>
+            </div>
+
+            <p><strong>Instructions:</strong> Complete this individually first, then compare. Circle or mark your rating for each thread.</p>
+
+            <div class="thread-question">
+                <h4>PRESENCE: Within ↔ Between</h4>
+                <p><em>One of us needs more space/solitude. The other needs more connection/togetherness.</em></p>
+                <div class="rating-scale">
+                    <div class="rating-option">
+                        <input type="radio" name="presence" value="1">
+                        <span class="rating-label">1 - Not active</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="presence" value="2">
+                        <span class="rating-label">2</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="presence" value="3">
+                        <span class="rating-label">3 - Moderate</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="presence" value="4">
+                        <span class="rating-label">4</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="presence" value="5">
+                        <span class="rating-label">5 - Very active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thread-question">
+                <h4>CONSENT: Yes ↔ No</h4>
+                <p><em>Tension around boundaries—one says yes too much, the other says no too much. Or we struggle with what we each consent to in the relationship.</em></p>
+                <div class="rating-scale">
+                    <div class="rating-option">
+                        <input type="radio" name="consent" value="1">
+                        <span class="rating-label">1 - Not active</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="consent" value="2">
+                        <span class="rating-label">2</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="consent" value="3">
+                        <span class="rating-label">3 - Moderate</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="consent" value="4">
+                        <span class="rating-label">4</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="consent" value="5">
+                        <span class="rating-label">5 - Very active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thread-question">
+                <h4>MEMORY: Given ↔ Chosen</h4>
+                <p><em>We're navigating what we inherited from our families of origin vs. what we're choosing to create together. Old stories vs. new patterns.</em></p>
+                <div class="rating-scale">
+                    <div class="rating-option">
+                        <input type="radio" name="memory" value="1">
+                        <span class="rating-label">1 - Not active</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="memory" value="2">
+                        <span class="rating-label">2</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="memory" value="3">
+                        <span class="rating-label">3 - Moderate</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="memory" value="4">
+                        <span class="rating-label">4</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="memory" value="5">
+                        <span class="rating-label">5 - Very active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="thread-question">
+                <h4>PAUSE: Not Yet ↔ Now</h4>
+                <p><em>One of us wants to wait, think, discern. The other wants to act, decide, move forward. Timing feels misaligned.</em></p>
+                <div class="rating-scale">
+                    <div class="rating-option">
+                        <input type="radio" name="pause" value="1">
+                        <span class="rating-label">1 - Not active</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="pause" value="2">
+                        <span class="rating-label">2</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="pause" value="3">
+                        <span class="rating-label">3 - Moderate</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="pause" value="4">
+                        <span class="rating-label">4</span>
+                    </div>
+                    <div class="rating-option">
+                        <input type="radio" name="pause" value="5">
+                        <span class="rating-label">5 - Very active</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>After completing:</strong> Which thread(s) scored highest for each of you? Are there differences in what you each feel is most active? Talk about that difference—it's revealing.</p>
+            </div>
+        </div>
+
+        <!-- THREAD HABITS -->
+        <div class="habits-box">
+            <h3>Thread Habits: What to Do When Tension Arises</h3>
+            <p>These are simple, concrete practices you can use <em>in the moment</em> when a thread activates and you feel the urge to collapse (blame, withdraw, demand, fix). Pick the habit that matches your active thread.</p>
+
+            <div class="habit-card presence">
+                <h4>PRESENCE Habit: The Space-Between Check-In</h4>
+                <p><strong>When to use:</strong> One of you needs alone time, the other needs connection. You're feeling the push-pull of within vs. between.</p>
+                <p><strong>What to do:</strong></p>
+                <ol>
+                    <li><strong>Name it:</strong> "I think PRESENCE is activated. You need space, I need closeness. Both are real."</li>
+                    <li><strong>Ask the need:</strong> "How much space/closeness do you actually need right now? Not forever, just right now."</li>
+                    <li><strong>Negotiate a both/and:</strong> "Can you have 30 minutes alone, then we reconnect for 10 minutes before bed?"</li>
+                    <li><strong>Honor it:</strong> Actually do what you agreed. Don't extend the space or demand more connection than agreed.</li>
+                </ol>
+                <p><strong>What emerges:</strong> You learn that both needs can coexist in the same evening. Neither has to dominate.</p>
+            </div>
+
+            <div class="habit-card consent">
+                <h4>CONSENT Habit: The Honest Yes/No Practice</h4>
+                <p><strong>When to use:</strong> One of you is people-pleasing, over-functioning, or saying yes when you mean no. Or one is saying no to everything out of self-protection.</p>
+                <p><strong>What to do:</strong></p>
+                <ol>
+                    <li><strong>Name it:</strong> "I think CONSENT is activated. I'm either not saying what I really want or I'm shutting everything down."</li>
+                    <li><strong>Take a breath:</strong> Pause before answering. Don't respond on autopilot.</li>
+                    <li><strong>Name your real yes/no:</strong> "Honestly? My yes is ___. My no is ___. Both are true."</li>
+                    <li><strong>Don't explain or defend:</strong> Just let the yes and the no sit there. You don't have to justify either.</li>
+                </ol>
+                <p><strong>What emerges:</strong> You discover that naming both your yes and your no (even when they conflict) creates more intimacy than hiding one to please the other.</p>
+            </div>
+
+            <div class="habit-card memory">
+                <h4>MEMORY Habit: The Story We Inherited vs. The Story We're Writing</h4>
+                <p><strong>When to use:</strong> You're fighting about something that feels bigger than the issue at hand—often it's an inherited pattern from family of origin colliding with what you're trying to create together.</p>
+                <p><strong>What to do:</strong></p>
+                <ol>
+                    <li><strong>Name it:</strong> "I think MEMORY is activated. This isn't just about us—it's about what we each inherited."</li>
+                    <li><strong>Ask the source:</strong> "Where did I learn this pattern? What story was I given about how this works?"</li>
+                    <li><strong>Share it:</strong> "In my family, we handled this by ___. That's my Given story. But I want to choose ___ with you."</li>
+                    <li><strong>Design the new:</strong> "What do we want to author together that honors both our histories but isn't bound by them?"</li>
+                </ol>
+                <p><strong>What emerges:</strong> You stop fighting about the dishes/money/sex and start seeing the deeper stories underneath. You can honor the past without being controlled by it.</p>
+            </div>
+
+            <div class="habit-card pause">
+                <h4>PAUSE Habit: The Timing Tension Ritual</h4>
+                <p><strong>When to use:</strong> One of you wants to decide/act NOW. The other wants to wait/think/discern. You're stuck in "urgent vs. patient."</p>
+                <p><strong>What to do:</strong></p>
+                <ol>
+                    <li><strong>Name it:</strong> "I think PAUSE is activated. You need more time, I need movement. Both matter."</li>
+                    <li><strong>Ask the timeline:</strong> "How much time do you actually need? And when do I actually need this decided by?"</li>
+                    <li><strong>Find the both/and window:</strong> "Can we commit to deciding by Friday, but not pressure ourselves before Thursday?"</li>
+                    <li><strong>Set a check-in:</strong> Agree to revisit at the deadline, no sooner. Then actually let it rest.</li>
+                </ol>
+                <p><strong>What emerges:</strong> You learn that "not yet" doesn't mean "never" and "now" doesn't mean "this second." There's a window where both timing needs can be honored.</p>
+            </div>
+        </div>
+
+        <!-- EMBODIMENT PRACTICE -->
+        <div class="embodiment-practice">
+            <h3>Embodiment Practice: What Does Your Body Know?</h3>
+            <p><strong>Why this matters:</strong> Often, one partner is in their head (analyzing, problem-solving) while the other is in their body (feeling, sensing). Or you're both ignoring what your bodies are trying to tell you. This practice helps you integrate head and body wisdom together.</p>
+
+            <p><strong>When to use:</strong> Weekly check-in, or any time you're stuck in a conversation that's going in circles.</p>
+
+            <div class="step-box">
+                <h4>Step 1: Sit Face-to-Face (2 minutes)</h4>
+                <p>Find a quiet space. Sit facing each other, knees almost touching. Close your eyes or soften your gaze. Take three deep breaths together, in sync.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 2: Body Scan (3 minutes each)</h4>
+                <p>One partner goes first. Eyes closed, scan your body from head to toe. Notice:</p>
+                <ul>
+                    <li>Where do you feel tension? (Jaw, shoulders, stomach, chest?)</li>
+                    <li>Where do you feel openness or ease?</li>
+                    <li>What sensations are present? (Tightness, warmth, heaviness, flutter?)</li>
+                </ul>
+                <p>Don't interpret yet. Just notice.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 3: Share What You Noticed (2 minutes each)</h4>
+                <p>Partner A: "When I scan my body right now, I notice ___ in my ___ and ___ in my ___."</p>
+                <p>Partner B: Just listen. Don't fix or interpret. Just witness.</p>
+                <p>Then switch.</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 4: Ask Your Body (3 minutes each)</h4>
+                <p>Now ask your body a question about the tension between you:</p>
+                <ul>
+                    <li>"Body, what do you need from this relationship right now?"</li>
+                    <li>"Body, what are you protecting me from?"</li>
+                    <li>"Body, what would ease look like?"</li>
+                </ul>
+                <p>Don't force an answer. Just notice what arises. Share what you heard (or didn't hear).</p>
+            </div>
+
+            <div class="step-box">
+                <h4>Step 5: Witness Together (2 minutes)</h4>
+                <p>After you've both shared, sit in silence for a moment. Then say to each other: "I hear what your body is saying. I'm not going to fix it, but I'm holding space for it."</p>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>What you're learning:</strong> Your bodies know things your minds haven't processed yet. When you can each name what your body is feeling and have your partner <em>witness</em> it without trying to fix it, something shifts. You're no longer fighting about ideas—you're holding space for embodied needs.</p>
+            </div>
+        </div>
+
+        <!-- UNCERTAINTY SPACE -->
+        <div class="uncertainty-space">
+            <h3>Uncertainty Practice: Resting in the Not-Yet-Known</h3>
+            <p><strong>Why this matters:</strong> Couples often collapse because one or both partners can't tolerate not knowing. You want certainty—will this work? Will you change? Will I? But the not-knowing is actually the birthplace of something new. This practice helps you rest in uncertainty together.</p>
+
+            <p><strong>When to use:</strong> When you're stuck in "I need to know NOW" or when you're both trying to control an outcome you can't predict.</p>
+
+            <div class="tip-box">
+                <h4>The Uncertainty Ritual (15 minutes)</h4>
+                <ol>
+                    <li><strong>Name what you don't know (3 minutes):</strong> Take turns completing this sentence: "What I don't know about us/this situation/our future is ___." List everything you're uncertain about. Don't try to answer it yet.</li>
+                    <li><strong>Feel the discomfort (2 minutes):</strong> Sit with the list. Notice the urge to fix, explain, or reassure. Don't. Just breathe into the not-knowing.</li>
+                    <li><strong>Ask: What if we didn't have to know? (5 minutes):</strong> Take turns: "If I didn't have to know ___ right now, what would become possible?" Not what would happen—what would become <em>possible</em>.</li>
+                    <li><strong>Name one thing you DO know (3 minutes):</strong> After sitting with uncertainty, name one small thing you DO know for certain: "What I know right now is that I love you / I'm committed to this / I want to figure this out together."</li>
+                    <li><strong>Rest there (2 minutes):</strong> Hold hands. Close your eyes. Breathe. You don't have to know everything. You know enough for right now.</li>
+                </ol>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>What you're learning:</strong> The need for certainty is often a fear response. When you can sit in uncertainty <em>together</em> without one partner demanding answers and the other shutting down, you discover that not-knowing can be a shared space rather than a threat. Mystery becomes an invitation, not a crisis.</p>
+            </div>
+        </div>
+
+        <!-- BECOMING INTEGRATION -->
+        <div class="becoming-integration">
+            <h3>Becoming Integration: Who Are We Becoming Together?</h3>
+            <p><strong>Why this matters:</strong> Relationships are always in motion. You're not the same couple you were a year ago, or even a month ago. The question isn't whether you're changing—it's whether you're becoming together or becoming apart. This practice helps you integrate what's emerging.</p>
+
+            <p><strong>When to use:</strong> Monthly reflection, or at transition points (after a conflict, after a breakthrough, after a major decision).</p>
+
+            <h4>The Becoming Questions (30-45 minutes together)</h4>
+
+            <div class="reflection-box">
+                <p><strong>Question 1: What tension have we been holding this month?</strong></p>
+                <p>Name it clearly. Which thread has been most active? Don't just list complaints—name the <em>pattern</em>.</p>
+                <p style="margin-top: 1rem;"><em>Example: "We've been holding the PRESENCE thread—you needing space to process, me needing connection when I'm anxious."</em></p>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>Question 2: How have we each collapsed?</strong></p>
+                <p>Be honest. Where did you get stuck, flip-flop, or force a false compromise? Name it without blame.</p>
+                <p style="margin-top: 1rem;"><em>Example: "I collapsed into withdrawing completely. You collapsed into demanding constant reassurance."</em></p>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>Question 3: What did we learn about each other?</strong></p>
+                <p>What did holding this tension reveal about what each of you needs, fears, or protects?</p>
+                <p style="margin-top: 1rem;"><em>Example: "I learned that your need for space isn't rejection—it's how you stay regulated. You learned that my need for connection isn't control—it's how I feel safe."</em></p>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>Question 4: What emerged that we didn't expect?</strong></p>
+                <p>When you resisted collapsing, what new pattern or insight showed up? What became possible?</p>
+                <p style="margin-top: 1rem;"><em>Example: "We started doing the 30-minute space / 10-minute reconnect rhythm. It wasn't either of our original ideas, but it works."</em></p>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>Question 5: Who are we becoming through this?</strong></p>
+                <p>How is this tension shaping you as a couple? What old pattern are you releasing? What new capacity are you developing?</p>
+                <p style="margin-top: 1rem;"><em>Example: "We're becoming a couple that can handle different nervous systems without pathologizing each other. We're learning that different needs don't mean incompatibility."</em></p>
+            </div>
+
+            <div class="reflection-box">
+                <p><strong>Question 6: What do we want to carry forward?</strong></p>
+                <p>What practice, insight, or habit from this month do you want to keep? What's worth integrating into your ongoing rhythm?</p>
+                <p style="margin-top: 1rem;"><em>Example: "The space-between check-in. Let's keep doing that whenever PRESENCE activates."</em></p>
+            </div>
+
+            <div class="warning-box">
+                <strong>Integration isn't resolution.</strong> You're not trying to "solve" the thread or make it go away. You're integrating what you've learned about how to hold it together. The thread will activate again—but now you have more capacity to navigate it without collapsing.
+            </div>
+        </div>
+
+        <h2>Final Thoughts: Holding Space Until Something Wonderful Emerges</h2>
+
+        <div class="tip-box">
+            <h4>What This Workbook Is Really About</h4>
+            <p>This isn't about becoming a perfect couple. It's about becoming a couple that can <strong>hold complexity without splitting.</strong></p>
+            <p>You will still fight. You will still hurt each other. You will still collapse sometimes. But when you can:</p>
+            <ul>
+                <li><strong>Name the thread</strong> instead of blaming each other</li>
+                <li><strong>Honor both poles</strong> instead of demanding one wins</li>
+                <li><strong>Pause and practice</strong> instead of reacting</li>
+                <li><strong>Listen to your bodies</strong> instead of staying in your heads</li>
+                <li><strong>Rest in uncertainty</strong> instead of forcing premature answers</li>
+                <li><strong>Reflect on becoming</strong> instead of defending who you've been</li>
+            </ul>
+            <p>...something shifts. The tension doesn't disappear, but it becomes <em>generative</em> rather than destructive. You stop trying to eliminate each other's needs and start holding space for both. And that's when something wonderful emerges.</p>
+        </div>
+
+        <div class="warning-box">
+            <p><strong>One Last Thing:</strong> This work is <em>hard</em>. If you're finding it overwhelming, that's normal. If you need support beyond what a workbook can offer, please reach out to a couples therapist who can hold space with you. There's no shame in needing help. The goal isn't to do this perfectly—it's to keep showing up for each other, even when it's messy.</p>
+        </div>
+
+        <div class="footer">
+            <p><strong>Threads of Becoming</strong> | A framework for couples holding sacred tension together</p>
+            <p>For more resources and support: <strong>threadsofbecoming.com/resources</strong></p>
+        </div>
+    </div>
+</body>
+</html>

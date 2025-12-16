@@ -45,6 +45,12 @@ const Resources: React.FC = () => {
               <p>Accessible 36-page introduction to the framework for newcomers</p>
               <a href="/blog" className={styles.downloadButton}>Read Online</a>
             </div>
+
+            <div className={styles.tool}>
+              <h3>Couples Threadwork Guide</h3>
+              <p>Comprehensive workbook for couples holding space for each other's needs until something wonderful emerges</p>
+              <a href="/couples-threadwork-guide.pdf" className={styles.downloadButton} download>Download PDF</a>
+            </div>
           </div>
         </div>
       </section>
