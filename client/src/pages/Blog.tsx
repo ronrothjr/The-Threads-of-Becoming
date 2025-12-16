@@ -290,7 +290,7 @@ const Blog: React.FC = () => {
                 <p>A simple, proven practice for working with tensions: Identify, Locate, Breathe, Listen, Choose, Learn</p>
               </div>
               <div className={styles.continueLink}>
-                <h3><a href="/collapse">The Anatomy of Collapse →</a></h3>
+                <h3><a href="/collapse-anatomy">The Anatomy of Collapse →</a></h3>
                 <p>Recognize when tension becomes stuck and return to Maria & James</p>
               </div>
               <div className={styles.continueLink}>

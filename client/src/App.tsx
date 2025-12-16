@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import HoldingTension from './pages/HoldingTension';
 import Practice from './pages/Practice';
 import Collapse from './pages/Collapse';
+import CollapseAnatomy from './pages/CollapseAnatomy';
 import FiveMoves from './pages/FiveMoves';
 import YourTurn from './pages/YourTurn';
 import DeepDive from './pages/DeepDive';
@@ -66,6 +67,7 @@ function AppContent() {
         <Route path="/holding-tension" element={<HoldingTension />} />
         <Route path="/practice" element={<Practice />} />
         <Route path="/collapse" element={<Collapse />} />
+        <Route path="/collapse-anatomy" element={<CollapseAnatomy />} />
         <Route path="/five-moves" element={<FiveMoves />} />
         <Route path="/deep-dive" element={<DeepDive />} />
         <Route path="/your-turn" element={<YourTurn />} />
