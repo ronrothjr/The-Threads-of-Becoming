@@ -29,6 +29,12 @@ const Resources: React.FC = () => {
             </div>
 
             <div className={styles.tool}>
+              <h3>Couples Threadwork Guide</h3>
+              <p>Comprehensive workbook for couples holding space for each other's needs until something wonderful emerges</p>
+              <a href="/couples-threadwork-guide.pdf" className={styles.downloadButton} download>Download PDF</a>
+            </div>
+
+            <div className={styles.tool}>
               <h3>Personal Practice Workbook</h3>
               <p>Self-guided journal for personal transformation with reflection questions for each thread</p>
               <a href="/personal-practice-workbook.pdf" className={styles.downloadButton} download>Download PDF</a>
@@ -44,12 +50,6 @@ const Resources: React.FC = () => {
               <h3>Threads Blog Article</h3>
               <p>Accessible 36-page introduction to the framework for newcomers</p>
               <a href="/blog" className={styles.downloadButton}>Read Online</a>
-            </div>
-
-            <div className={styles.tool}>
-              <h3>Couples Threadwork Guide</h3>
-              <p>Comprehensive workbook for couples holding space for each other's needs until something wonderful emerges</p>
-              <a href="/couples-threadwork-guide.pdf" className={styles.downloadButton} download>Download PDF</a>
             </div>
           </div>
         </div>
