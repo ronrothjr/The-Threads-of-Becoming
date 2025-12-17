@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Contact.module.css';
 
 const Contact: React.FC = () => {
+  const [subject, setSubject] = useState('');
+
   return (
     <div className={styles.contact}>
       {/* Hero Section */}
@@ -45,6 +47,14 @@ const Contact: React.FC = () => {
               <p>Interested in bringing Threads to your organization, congregation, or community?</p>
               <a href="mailto:partnerships@creativeadvance.org" className={styles.emailLink}>
                 partnerships@creativeadvance.org
+              </a>
+            </div>
+
+            <div className={`${styles.optionCard} ${styles.discoveryCard}`}>
+              <h3>Share Your Thread Discovery</h3>
+              <p>Discovered a universal tension you'd like to share with the community? Submit your thread for consideration.</p>
+              <a href="mailto:discovery@creativeadvance.org" className={styles.emailLink}>
+                discovery@creativeadvance.org
               </a>
             </div>
           </div>
@@ -101,10 +111,13 @@ const Contact: React.FC = () => {
                 <select
                   id="subject"
                   name="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   required
                   className={styles.input}
                 >
                   <option value="">Select a topic...</option>
+                  <option value="discovery">Thread Discovery Submission</option>
                   <option value="training">Training & Workshops</option>
                   <option value="organizational">Organizational Services</option>
                   <option value="donations">Donations & Partnerships</option>
@@ -114,17 +127,132 @@ const Contact: React.FC = () => {
                 </select>
               </div>
 
-              <div className={styles.formGroup}>
-                <label htmlFor="message">Message *</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  required
-                  className={styles.textarea}
-                  placeholder="Tell us how we can help..."
-                />
-              </div>
+              {subject === 'discovery' ? (
+                <>
+                  <div className={styles.formGroup}>
+                    <label htmlFor="threadName">Thread Name *</label>
+                    <input
+                      type="text"
+                      id="threadName"
+                      name="threadName"
+                      required
+                      className={styles.input}
+                      placeholder="e.g., THRESHOLD, RECIPROCITY, POWER"
+                    />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="seedQuestion">Seed Question *</label>
+                    <input
+                      type="text"
+                      id="seedQuestion"
+                      name="seedQuestion"
+                      required
+                      className={styles.input}
+                      placeholder="e.g., Who belongs?"
+                    />
+                    <span className={styles.helpText}>2-5 words, primordial and universal</span>
+                  </div>
+
+                  <div className={styles.formRow}>
+                    <div className={styles.formGroup}>
+                      <label htmlFor="poleA">Pole A *</label>
+                      <input
+                        type="text"
+                        id="poleA"
+                        name="poleA"
+                        required
+                        className={styles.input}
+                        placeholder="e.g., Inside"
+                      />
+                    </div>
+
+                    <div className={styles.formGroup}>
+                      <label htmlFor="poleB">Pole B *</label>
+                      <input
+                        type="text"
+                        id="poleB"
+                        name="poleB"
+                        required
+                        className={styles.input}
+                        placeholder="e.g., Outside"
+                      />
+                    </div>
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="universalQuestions">Universal Questions *</label>
+                    <textarea
+                      id="universalQuestions"
+                      name="universalQuestions"
+                      rows={6}
+                      required
+                      className={styles.textarea}
+                      placeholder="List 4-6 questions that explore this tension from different angles. Use the six heuristics: Pole Dance, Threshold, Practitioner, Stakes, Identity, Tradition Bridge."
+                    />
+                    <span className={styles.helpText}>One question per line</span>
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="metaQuestion">Meta-Question</label>
+                    <input
+                      type="text"
+                      id="metaQuestion"
+                      name="metaQuestion"
+                      className={styles.input}
+                      placeholder="How do we hold this tension without collapsing it?"
+                    />
+                    <span className={styles.helpText}>Optional: Question about how to hold this tension</span>
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="creativeEdge">The Creative Edge *</label>
+                    <textarea
+                      id="creativeEdge"
+                      name="creativeEdge"
+                      rows={6}
+                      required
+                      className={styles.textarea}
+                      placeholder="What becomes possible by holding this tension? What emerges that wouldn't be visible from either pole alone?"
+                    />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="evidence">Evidence of Universality *</label>
+                    <textarea
+                      id="evidence"
+                      name="evidence"
+                      rows={6}
+                      required
+                      className={styles.textarea}
+                      placeholder="Describe how this tension appears across wisdom traditions, developmental stages, and cultural contexts."
+                    />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label htmlFor="additionalNotes">Additional Notes</label>
+                    <textarea
+                      id="additionalNotes"
+                      name="additionalNotes"
+                      rows={4}
+                      className={styles.textarea}
+                      placeholder="Any additional context, personal experiences, or questions about your discovery..."
+                    />
+                  </div>
+                </>
+              ) : (
+                <div className={styles.formGroup}>
+                  <label htmlFor="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    required
+                    className={styles.textarea}
+                    placeholder="Tell us how we can help..."
+                  />
+                </div>
+              )}
 
               <div className={styles.formGroup}>
                 <label className={styles.checkboxLabel}>

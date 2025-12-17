@@ -72,6 +72,48 @@
   border-bottom-color: var(--color-teal);
 }
 
+/* Discovery Card - Special styling */
+.discoveryCard {
+  background: linear-gradient(135deg,
+    rgba(124, 58, 237, 0.08) 0%,
+    rgba(2, 132, 199, 0.05) 100%);
+  border: 2px solid rgba(124, 58, 237, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.discoveryCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--thread-presence) 0%,
+    var(--thread-uncertainty) 50%,
+    var(--thread-becoming) 100%);
+}
+
+.discoveryCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.4);
+}
+
+.discoveryCard h3 {
+  color: var(--thread-presence);
+}
+
+.discoveryCard .emailLink {
+  color: var(--thread-presence);
+  font-weight: var(--font-bold);
+}
+
+.discoveryCard .emailLink:hover {
+  border-bottom-color: var(--thread-presence);
+}
+
 /* Form Section */
 .formSection {
   background: var(--color-white);
@@ -142,6 +184,13 @@
 .textarea {
   resize: vertical;
   min-height: 150px;
+}
+
+.helpText {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-top: 0.25rem;
 }
 
 .checkboxLabel {
