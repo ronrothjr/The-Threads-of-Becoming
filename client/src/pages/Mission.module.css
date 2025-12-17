@@ -42,6 +42,42 @@
   background-color: var(--color-white);
 }
 
+.discovery {
+  background: linear-gradient(135deg,
+    rgba(124, 58, 237, 0.08) 0%,
+    rgba(2, 132, 199, 0.06) 100%
+  );
+}
+
+.discovery h2 {
+  text-align: center;
+  color: var(--color-navy);
+  margin-bottom: 2rem;
+}
+
+.discoveryLink {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.discoveryButton {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--thread-presence) 0%, var(--thread-uncertainty) 100%);
+  color: var(--color-white);
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.3);
+}
+
+.discoveryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.4);
+}
+
 .origins,
 .whyCreativeAdvance {
   background-color: var(--color-background-alt);

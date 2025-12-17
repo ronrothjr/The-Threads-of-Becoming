@@ -51,6 +51,12 @@ const Resources: React.FC = () => {
               <p>Accessible 36-page introduction to the framework for newcomers</p>
               <a href="/blog" className={styles.downloadButton}>Read Online</a>
             </div>
+
+            <div className={styles.tool}>
+              <h3>Thread Discovery Process</h3>
+              <p>6-step methodology for discovering, testing, and documenting universal tensions across cultures and traditions</p>
+              <a href="/thread-discovery" className={styles.downloadButton}>Explore Process</a>
+            </div>
           </div>
         </div>
       </section>

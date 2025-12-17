@@ -36,6 +36,31 @@ const Mission: React.FC = () => {
         </div>
       </section>
 
+      <section className={`${styles.discovery} section-lg`}>
+        <div className="container">
+          <h2>A Living, Flexible Framework</h2>
+          <div className={styles.content}>
+            <p>
+              The seven threads aren't fixed dogma—they're what we've discovered so far. Threads of Becoming is designed to <strong>flex with human knowledge and wisdom</strong>. As communities engage these questions, new threads may emerge. The discovery process never ends.
+            </p>
+            <p>
+              Each thread was found the same way: by noticing recurring tensions across contexts, testing them across difference, and formulating questions that invite others into exploration. The Thread Discovery Process is both art and science—part pattern recognition, part humble listening to what wants to be named.
+            </p>
+            <p>
+              What makes a tension universal? It appears across multiple wisdom traditions. Children naturally encounter it. It can't be permanently resolved. It generates creative energy when held consciously. Avoiding it creates stagnation or suffering.
+            </p>
+            <p>
+              This living framework invites anyone who has navigated tension long enough to see the pattern to contribute to the collective understanding of what shapes human experience.
+            </p>
+            <div className={styles.discoveryLink}>
+              <a href="/thread-discovery" className={styles.discoveryButton}>
+                Explore the Thread Discovery Process →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={`${styles.origins} section-lg`}>
         <div className="container">
           <h2>Formation of the Institute</h2>

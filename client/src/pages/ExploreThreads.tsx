@@ -524,6 +524,68 @@ const ExploreThreads: React.FC = () => {
         </div>
       </section>
 
+      {/* A Living Framework */}
+      <section className={styles.livingFramework}>
+        <div className="container">
+          <h2>A Living, Flexible Framework</h2>
+          <div className={styles.content}>
+            <p>
+              These seven threads aren't the final word. They're not dogma. They're what we've discovered so far—tensions that appear across cultures, traditions, and human experience with enough consistency to be called universal.
+            </p>
+            <p>
+              But the framework itself is <strong>designed to flex with human knowledge and wisdom</strong>. As communities engage these questions, new threads may emerge. Patterns we haven't yet named may reveal themselves. The discovery process never ends.
+            </p>
+            <p>
+              Threads of Becoming is a living framework precisely because tension itself is alive—always moving, always revealing, always inviting us deeper.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Where Threads Come From */}
+      <section className={styles.threadOrigins}>
+        <div className="container">
+          <h2>Where Do Threads Come From?</h2>
+          <div className={styles.content}>
+            <p>
+              The original seven threads weren't invented in an academic office. They were <strong>discovered through lived experience</strong>—by paying attention to recurring tensions that wouldn't resolve, patterns that appeared across generations and traditions, questions that children ask and sages never exhaust.
+            </p>
+            <p>
+              Each thread emerged from noticing what kept showing up: in therapy sessions and board meetings, in ancient wisdom texts and contemporary conflicts, in personal transformation and organizational change. The work was recognizing the universal pattern beneath the particular expression.
+            </p>
+            <p>
+              What makes a tension universal? It appears across multiple wisdom traditions (differently expressed). It can't be permanently resolved. Children naturally encounter it without being taught. It generates creative energy when held consciously. Avoiding it creates stagnation or suffering.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Discovering Your Own Threads */}
+      <section className={styles.threadDiscovery}>
+        <div className="container">
+          <h2>Discovering Threads in Your Own Experience</h2>
+          <div className={styles.content}>
+            <p>
+              You don't need permission to discover a thread. If you've been navigating a tension long enough to see the pattern, if you've watched it appear across different contexts and communities, if holding it generates something new—you may have found one.
+            </p>
+            <p>
+              The Thread Discovery Process is a methodology for recognizing universal tensions, testing them across difference, and formulating questions that invite others into exploration. It's part art, part science, part humble listening to what wants to be named.
+            </p>
+            <p>
+              This isn't advanced practitioner work reserved for experts. It's an invitation to anyone who has lived long enough to notice the recurring tensions that shape human experience—and curious enough to ask what they might reveal.
+            </p>
+            <div className={styles.discoveryLink}>
+              <a href="/thread-discovery" className={styles.discoveryButton}>
+                Explore the Thread Discovery Process →
+              </a>
+              <p className={styles.discoveryCaption}>
+                Learn the 6-step process for discovering and documenting universal threads
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section id="next-steps" className={styles.cta}>
         <div className="container">
