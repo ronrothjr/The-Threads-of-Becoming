@@ -127,6 +127,43 @@ const Training: React.FC = () => {
         </div>
       </section>
 
+      <section className={`${styles.educatorSection} section-lg`}>
+        <div className="container">
+          <h2>Training for Educators</h2>
+          <p className={styles.educatorIntro}>
+            K-12 teachers receive specialized training with pedagogical focus, classroom applications, and professional development credits.
+          </p>
+          <div className={styles.educatorContent}>
+            <div className={styles.educatorFeatures}>
+              <h3>What Makes Educator Training Different</h3>
+              <ul>
+                <li>Grade-level adaptations (K-5, 6-8, 9-12)</li>
+                <li>Curriculum integration and lesson planning</li>
+                <li>Classroom management applications</li>
+                <li>Student assessment strategies</li>
+                <li>SEL competency alignment</li>
+                <li>Parent communication resources</li>
+              </ul>
+            </div>
+            <div className={styles.educatorCredits}>
+              <h3>Professional Development Credits</h3>
+              <p>All educator training qualifies for CEU/PD credits:</p>
+              <ul>
+                <li><strong>Tier 1:</strong> 15-20 contact hours (1.5-2 CEUs)</li>
+                <li><strong>Tier 2:</strong> 40-60 contact hours (4-6 CEUs)</li>
+                <li><strong>Tier 3:</strong> 80-100 contact hours (8-10 CEUs)</li>
+              </ul>
+              <p className={styles.educatorNote}>
+                Individual teachers, school teams, and district partnerships available.
+              </p>
+            </div>
+          </div>
+          <a href="/educators" className={styles.educatorCta}>
+            Explore Educator Training →
+          </a>
+        </div>
+      </section>
+
       <section className={styles.apply}>
         <div className="container">
           <h2>Ready to Begin?</h2>

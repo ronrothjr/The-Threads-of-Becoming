@@ -487,6 +487,31 @@
   font-weight: var(--font-bold);
 }
 
+.educatorNote {
+  text-align: center;
+  font-size: var(--text-base);
+  color: var(--color-text);
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background: linear-gradient(135deg,
+    rgba(251, 191, 36, 0.1) 0%,
+    rgba(5, 150, 105, 0.1) 100%);
+  border-radius: 12px;
+  border-left: 4px solid var(--thread-becoming);
+  line-height: var(--leading-relaxed);
+}
+
+.educatorNote a {
+  color: var(--thread-becoming);
+  text-decoration: none;
+  font-weight: var(--font-semibold);
+}
+
+.educatorNote a:hover {
+  text-decoration: underline;
+}
+
 /* CTA Section */
 .cta {
   background: linear-gradient(135deg,

@@ -67,7 +67,7 @@ const Chapters: React.FC = () => {
             <div className={styles.activityCard}>
               <div className={styles.activityIcon}>🌱</div>
               <h3>Specialized Groups</h3>
-              <p>Threads for Parents groups in schools, couples' circles, professional peer groups (therapists, coaches, clergy), and affinity spaces where the framework meets specific contexts.</p>
+              <p>Threads for Parents groups in schools, couples' circles, professional peer groups (therapists, coaches, clergy, educators), school-based teacher cohorts, and affinity spaces where the framework meets specific contexts.</p>
             </div>
 
             <div className={styles.activityCard}>
@@ -255,7 +255,23 @@ const Chapters: React.FC = () => {
                 <li>Teen facilitation training program</li>
               </ul>
             </div>
+
+            <div className={styles.exampleCard}>
+              <h3>Seattle School-Based Educator Chapter</h3>
+              <p className={styles.exampleContext}>CAI-trained teachers from a middle school building professional learning community</p>
+              <ul>
+                <li>Weekly teacher cohort meetings for classroom integration support</li>
+                <li>Student advisory groups practicing thread work</li>
+                <li>Monthly parent workshops on navigating family tensions</li>
+                <li>Collaboration with district for broader PD offerings</li>
+                <li>Summer intensive for expanding to other schools</li>
+              </ul>
+            </div>
           </div>
+
+          <p className={styles.educatorNote}>
+            <strong>For K-12 Educators:</strong> School-based chapters provide ongoing support for teachers integrating Threads into their classrooms. All chapter leaders must complete CAI educator training (Tier 2 minimum). <a href="/educators">Learn more about educator training →</a>
+          </p>
         </div>
       </section>
 

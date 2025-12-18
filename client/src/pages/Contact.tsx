@@ -57,6 +57,14 @@ const Contact: React.FC = () => {
                 discovery@creativeadvance.org
               </a>
             </div>
+
+            <div className={styles.optionCard}>
+              <h3>Educator Inquiries</h3>
+              <p>Questions about K-12 educator training, school partnerships, or professional development credits?</p>
+              <a href="mailto:educators@creativeadvance.org" className={styles.emailLink}>
+                educators@creativeadvance.org
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -119,6 +127,7 @@ const Contact: React.FC = () => {
                   <option value="">Select a topic...</option>
                   <option value="discovery">Thread Discovery Submission</option>
                   <option value="training">Training & Workshops</option>
+                  <option value="educators">Educator Training & School Partnerships</option>
                   <option value="organizational">Organizational Services</option>
                   <option value="donations">Donations & Partnerships</option>
                   <option value="media">Media & Press</option>
