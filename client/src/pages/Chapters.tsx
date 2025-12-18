@@ -267,6 +267,30 @@ const Chapters: React.FC = () => {
                 <li>Summer intensive for expanding to other schools</li>
               </ul>
             </div>
+
+            <div className={styles.exampleCard}>
+              <h3>Denver Healthcare Professionals Chapter</h3>
+              <p className={styles.exampleContext}>Nurses, physicians, and medical social workers from two hospital systems</p>
+              <ul>
+                <li>Monthly peer support circles for healthcare workers navigating burnout</li>
+                <li>Workshops on patient-provider tension and difficult conversations</li>
+                <li>Training for hospital ethics committees using Threads framework</li>
+                <li>Support groups for families facing end-of-life care decisions</li>
+                <li>Collaboration with nursing schools for student resilience programs</li>
+              </ul>
+            </div>
+
+            <div className={styles.exampleCard}>
+              <h3>Minneapolis Creative Community Chapter</h3>
+              <p className={styles.exampleContext}>Artists, musicians, writers, and arts administrators navigating creative tensions</p>
+              <ul>
+                <li>Monthly "Creative Tensions" salons exploring artistic process</li>
+                <li>Workshops for arts organizations on funding vs. mission tensions</li>
+                <li>Studio visits and peer critique through Threads lens</li>
+                <li>Public art installations exploring universal tensions</li>
+                <li>Facilitation for collaborative projects and collectives</li>
+              </ul>
+            </div>
           </div>
 
           <p className={styles.educatorNote}>
