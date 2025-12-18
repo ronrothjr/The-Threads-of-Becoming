@@ -23,6 +23,7 @@ import Tier3 from './pages/Tier3';
 import Mission from './pages/Mission';
 import Organizations from './pages/Organizations';
 import Communities from './pages/Communities';
+import Chapters from './pages/Chapters';
 import Resources from './pages/Resources';
 import ModalityCompatibility from './pages/ModalityCompatibility';
 import ThreadDiscovery from './pages/ThreadDiscovery';
@@ -82,6 +83,7 @@ function AppContent() {
         <Route path="/mission" element={<Mission />} />
         <Route path="/organizations" element={<Organizations />} />
         <Route path="/communities" element={<Communities />} />
+        <Route path="/chapters" element={<Chapters />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/modality-compatibility" element={<ModalityCompatibility />} />
         <Route path="/thread-discovery" element={<ThreadDiscovery />} />

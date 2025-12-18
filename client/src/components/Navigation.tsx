@@ -59,6 +59,7 @@ const Navigation: React.FC = () => {
             <Link to="/explore" className={styles.navLink} onClick={closeMobileMenu}>Explore</Link>
             <Link to="/navigate" className={styles.navLink} onClick={closeMobileMenu}>Navigate</Link>
             <Link to="/training" className={styles.navLink} onClick={closeMobileMenu}>Training</Link>
+            <Link to="/chapters" className={styles.navLink} onClick={closeMobileMenu}>Chapters</Link>
             <Link to="/mission" className={styles.navLink} onClick={closeMobileMenu}>Mission</Link>
             <Link to="/portal" className={`${styles.navLink} ${styles.portalLink}`} onClick={closeMobileMenu}>Portal</Link>
           </div>
