@@ -347,7 +347,306 @@
 .transformHighlight {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #000000;
+}
+
+/* Research Callout */
+.researchCallout {
+  max-width: 1000px;
+  margin: 4rem auto 0;
+  padding: 3rem;
+  background: linear-gradient(135deg, #F0F8FF 0%, #E6F3FF 100%);
+  border-radius: 16px;
+  border: 4px solid #6B98B3;
+  box-shadow: 0 8px 24px rgba(107, 152, 179, 0.15);
+}
+
+.researchCallout h3 {
+  font-size: 2.25rem;
+  color: #2E5C6E;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.researchCallout p {
+  font-size: 1.125rem;
+  color: #3A7CA5;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.researchHighlight {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2E5C6E;
+  background: rgba(123, 168, 195, 0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 6px solid #7BA8C3;
+  margin: 2rem 0;
+}
+
+.researchLink {
+  display: inline-block;
+  background: #7BA8C3;
+  color: #FFFFFF;
+  padding: 1.25rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(123, 168, 195, 0.3);
+  margin-top: 1rem;
+}
+
+.researchLink:hover {
+  background: #6B98B3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(123, 168, 195, 0.4);
+}
+
+.researchQuestion {
+  font-size: 1.125rem;
+  color: #2E5C6E;
+  font-style: italic;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.researchEvidence {
+  margin: 2rem 0;
+}
+
+.researchEvidence h4 {
+  font-size: 1.75rem;
+  color: #2E5C6E;
+  margin: 2.5rem 0 1.5rem;
+  font-weight: 900;
+  border-bottom: 3px solid #7BA8C3;
+  padding-bottom: 0.75rem;
+}
+
+.collapsePoints {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.collapsePoint {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 6px solid #E09F7D;
+}
+
+.collapsePoint strong {
+  color: #2E5C6E;
+  font-size: 1.125rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.collapsePoint p {
+  margin: 0;
+  color: #3A7CA5;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.protectedStatusBox {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 3px solid #7BA8C3;
+  margin: 1.5rem 0;
+}
+
+.criticalQuestion {
+  font-size: 1.125rem;
+  color: #2E5C6E;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(224, 159, 125, 0.1);
+  border-radius: 8px;
+}
+
+.exitRamps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.traditionalExit,
+.safeExit {
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.traditionalExit {
+  background: rgba(224, 159, 125, 0.1);
+  border: 2px solid #E09F7D;
+}
+
+.safeExit {
+  background: rgba(168, 200, 186, 0.1);
+  border: 2px solid #A8C8BA;
+}
+
+.traditionalExit h5 {
+  color: #E09F7D;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.safeExit h5 {
+  color: #A8C8BA;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.traditionalExit ul,
+.safeExit ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.traditionalExit li,
+.safeExit li {
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  position: relative;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #2E5C6E;
+}
+
+.traditionalExit li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: #E09F7D;
+  font-weight: 900;
+}
+
+.safeExit li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #A8C8BA;
+  font-weight: 900;
+}
+
+.bothAndBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.bothAndSide {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.bothAndSide:first-child {
+  border-left: 6px solid #E09F7D;
+}
+
+.bothAndSide:last-child {
+  border-left: 6px solid #A8C8BA;
+}
+
+.bothAndSide h5 {
+  color: #2E5C6E;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.bothAndSide ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bothAndSide li {
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  position: relative;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #3A7CA5;
+}
+
+.bothAndSide:first-child li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #E09F7D;
+  font-weight: 900;
+}
+
+.bothAndSide:last-child li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #A8C8BA;
+  font-weight: 900;
+}
+
+.researchConclusion {
+  font-size: 1.125rem;
+  color: #2E5C6E;
+  background: rgba(168, 200, 186, 0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 6px solid #A8C8BA;
+  margin: 2rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.exitRampCallout {
+  background: linear-gradient(135deg,
+    rgba(255, 215, 0, 0.15) 0%,
+    rgba(255, 165, 0, 0.15) 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 4px solid #FFD700;
+  margin: 2.5rem 0;
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2);
+}
+
+.exitRampCallout h4 {
+  color: #2E5C6E;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.exitRampText {
+  font-size: 1.25rem;
+  color: #2E5C6E;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 8px;
+}
+
+.exitRampCallout p {
+  font-size: 1.0625rem;
+  color: #3A7CA5;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* Safety Section */
@@ -1190,6 +1489,65 @@
   .emphasis {
     padding: 1.25rem;
     margin: 1.5rem 1rem;
+  }
+
+  .researchCallout {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .researchCallout h3 {
+    font-size: 1.75rem;
+  }
+
+  .researchEvidence h4 {
+    font-size: 1.5rem;
+  }
+
+  .collapsePoint {
+    padding: 1.25rem;
+  }
+
+  .protectedStatusBox {
+    padding: 1.5rem;
+  }
+
+  .exitRamps {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .traditionalExit,
+  .safeExit {
+    padding: 1.25rem;
+  }
+
+  .bothAndBox {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bothAndSide {
+    padding: 1.25rem;
+  }
+
+  .researchConclusion {
+    padding: 1.25rem;
+    font-size: 1.0625rem;
+  }
+
+  .exitRampCallout {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .exitRampCallout h4 {
+    font-size: 1.5rem;
+  }
+
+  .exitRampText {
+    font-size: 1.125rem;
+    padding: 0.75rem;
   }
 
   .cta {

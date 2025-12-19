@@ -76,6 +76,12 @@ const Safe: React.FC = () => {
                     <p>"I see someone being hurt. I see that I'm scared to help."</p>
                   </div>
                 </div>
+
+                <div className={styles.transformation}>
+                  <h4>Why this is transformative:</h4>
+                  <p>Most programs tell kids "don't bully" or "tell an adult." S.A.F.E. teaches presence first—noticing what's happening in your body and around you before reacting.</p>
+                  <p className={styles.transformHighlight}>When kids learn to SEE (both internally and externally), they develop <strong>awareness before action</strong>—the foundation of all self-regulation and empathy.</p>
+                </div>
               </div>
             </div>
 
@@ -118,6 +124,12 @@ const Safe: React.FC = () => {
 
                 <div className={styles.threadConnection}>
                   <strong>Thread Foundation:</strong> All seven threads show up in bullying dynamics—PRESENCE, CONSENT, MEMORY, PAUSE, EMBODIMENT, UNCERTAINTY, BECOMING
+                </div>
+
+                <div className={styles.transformation}>
+                  <h4>Why this is transformative:</h4>
+                  <p>Traditional programs frame conflict as "victim vs. bully." ASK reframes it as tension—two competing needs or values pulling against each other.</p>
+                  <p className={styles.transformHighlight}>When kids learn to ASK about the tension (not assign blame), they develop <strong>complexity thinking</strong>: "Both sides have needs. How do we hold that?"</p>
                 </div>
               </div>
             </div>
@@ -224,6 +236,106 @@ const Safe: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Research Grounding Link */}
+          <div className={styles.researchCallout}>
+            <h3>Is S.A.F.E. Actually Safe?</h3>
+            <p className={styles.researchQuestion}>
+              From a developmental psychology standpoint, does this approach hold up? Are we threading a needle when we need a fire blanket?
+              What about protected status and the "endangered list"—when does capacity-building cross the line into expecting too much from vulnerable students?
+            </p>
+
+            <div className={styles.researchEvidence}>
+              <h4>The Research Says: Traditional Approaches Collapse Toward NOW</h4>
+              <div className={styles.collapsePoints}>
+                <div className={styles.collapsePoint}>
+                  <strong>Learned Helplessness (Seligman, 1967-present):</strong>
+                  <p>"Tell an adult to fix it" → Child learns they have no control → Helplessness becomes identity</p>
+                </div>
+                <div className={styles.collapsePoint}>
+                  <strong>Self-Determination Theory (Deci & Ryan, 1985):</strong>
+                  <p>Traditional approaches deny autonomy ("adults decide"), competence ("you can't handle it"), and conditional relatedness ("victim good, bully bad"). S.A.F.E. supports all three.</p>
+                </div>
+                <div className={styles.collapsePoint}>
+                  <strong>Identity Development (Erikson, Marcia):</strong>
+                  <p>Traditional = Identity foreclosure ("You're the victim"). S.A.F.E. = Identity achievement ("Who do you want to EMERGE as?")</p>
+                </div>
+              </div>
+
+              <h4>The Protected Status Problem: When Does Anyone Come Off the List?</h4>
+              <div className={styles.protectedStatusBox}>
+                <p className={styles.criticalQuestion}>
+                  Traditional anti-bullying creates a system where victimhood becomes identity, protection becomes the goal, and there's no exit.
+                  <strong> Students learn that the path to safety is through protected status, not through capacity.</strong>
+                </p>
+                <div className={styles.exitRamps}>
+                  <div className={styles.traditionalExit}>
+                    <h5>Traditional Answer: Never</h5>
+                    <ul>
+                      <li>Your protection is permanent because your vulnerability is permanent</li>
+                      <li>Power comes from victimhood status (borrowed from enforcers)</li>
+                      <li>Safety only exists when authority is present</li>
+                    </ul>
+                  </div>
+                  <div className={styles.safeExit}>
+                    <h5>S.A.F.E. Answer: You Were Never ON the List</h5>
+                    <ul>
+                      <li>You're not "endangered species"—you're human navigating tension</li>
+                      <li>You have vulnerability (real) AND capacity (also real)</li>
+                      <li>You're defined by who you're BECOMING, not what happened to you</li>
+                      <li>Safety comes from within (capacity) AND from without (authority)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.exitRampCallout}>
+                <h4>🔑 Key Insight: Exit Ramps, Not Free Passes</h4>
+                <p className={styles.exitRampText}>
+                  <strong>S.A.F.E. doesn't remove consequences for bullying—it provides EXIT RAMPS from victim and aggressor roles.</strong>
+                </p>
+                <p>
+                  Traditional approaches lock kids into permanent identities: "You're the victim" (helpless), "You're the bully" (bad).
+                  S.A.F.E. says: "You're BECOMING. Who do you choose to be?" Consequences still apply for harm,
+                  <strong> but the child also learns how to emerge differently.</strong>
+                </p>
+              </div>
+
+              <h4>The Both/And We Must Hold</h4>
+              <div className={styles.bothAndBox}>
+                <div className={styles.bothAndSide}>
+                  <h5>Traditional Approaches Are RIGHT:</h5>
+                  <ul>
+                    <li>Kids need protection NOW</li>
+                    <li>Authority must intervene in crisis</li>
+                    <li>Vulnerable students need to know adults will keep them safe</li>
+                  </ul>
+                </div>
+                <div className={styles.bothAndSide}>
+                  <h5>S.A.F.E. Is ALSO RIGHT:</h5>
+                  <ul>
+                    <li>Kids need capacity for NOT YET</li>
+                    <li>Most conflicts (90-95%) are tension, not crisis</li>
+                    <li>Vulnerable students need to know THEY can keep themselves safe (eventually)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <p className={styles.researchConclusion}>
+                <strong>S.A.F.E. is safe enough when it's part of a complete system</strong> (legal protections + crisis support + daily capacity-building).
+                Alone, it's not enough. But traditional approaches alone aren't enough either.
+                <strong> Together, they might be.</strong>
+              </p>
+            </div>
+
+            <p className={styles.researchHighlight}>
+              Explore 6 areas of developmental psychology research, honest examination of when S.A.F.E. is NOT enough, and the critical question:
+              <strong> When does anyone come off the endangered list?</strong>
+            </p>
+            <a href="/PROTECTED_STATUS.md" className={styles.researchLink} target="_blank" rel="noopener noreferrer">
+              Read the Full Research & Critical Examination →
+            </a>
           </div>
         </div>
       </section>
