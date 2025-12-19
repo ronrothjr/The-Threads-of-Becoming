@@ -289,6 +289,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem 2rem;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -297,8 +301,18 @@
     font-size: 1.2rem;
   }
 
+  .content {
+    padding: 2rem 0;
+  }
+
   .sectionTitle {
     font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .intro {
+    padding: 0 1rem;
+    font-size: 1.125rem;
   }
 
   .collapseGrid,
@@ -306,9 +320,67 @@
   .resourceGrid,
   .roleGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 
   .assessmentGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card h4 {
+    font-size: 1.125rem;
+  }
+
+  .card p,
+  .card li {
+    font-size: 1rem;
+  }
+
+  .beforeBox,
+  .afterBox {
+    padding: 1.5rem;
+  }
+
+  .highlight {
+    padding: 1.25rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .info {
+    padding: 1.25rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .moduleHeader {
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .cta {
+    padding: 3rem 1rem;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 1.125rem;
+  }
+
+  .ctaButton {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
   }
 }

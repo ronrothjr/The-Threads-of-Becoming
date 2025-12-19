@@ -1049,6 +1049,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem 3rem;
+  }
+
   .title {
     font-size: 3rem;
   }
@@ -1061,11 +1065,35 @@
     font-size: 1.5rem;
   }
 
+  .insight,
+  .framework,
+  .safety,
+  .different,
+  .training,
+  .crisisProtocol,
+  .specialPopulations,
+  .furtherDevelopment {
+    padding: 3rem 1rem;
+  }
+
+  .insightText,
+  .insightHighlight {
+    padding: 0 1rem;
+  }
+
   .frameworkTitle,
   .safety h2,
   .different h2,
-  .training h2 {
+  .training h2,
+  .crisisProtocol h2,
+  .specialPopulations h2,
+  .furtherDevelopment h2 {
     font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .furtherIntro {
+    padding: 0 1rem;
   }
 
   .stepHeader {
@@ -1083,20 +1111,108 @@
     font-size: 2rem;
   }
 
+  .step {
+    padding: 2rem 1.5rem;
+  }
+
+  .stepContent {
+    padding: 1.5rem 1rem;
+  }
+
   .safetyGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .safetyCard {
+    padding: 1.5rem;
   }
 
   .comparisonTable {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .comparisonColumn {
+    padding: 1.5rem;
   }
 
   .modules {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .module {
+    padding: 1.5rem;
+  }
+
+  .developmentGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .developmentCard {
+    padding: 1.5rem;
+  }
+
+  .protocolComparison {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .crisisBox,
+  .safeBox {
+    padding: 1.5rem;
+  }
+
+  .afterCrisis {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .populationGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .populationCard {
+    padding: 1.5rem;
+  }
+
+  .specialNote {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .emphasis {
+    padding: 1.25rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .cta {
+    padding: 3rem 1rem;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 1.125rem;
   }
 
   .ctaButtons {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
   }
 }
