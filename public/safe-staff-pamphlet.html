@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.A.F.E. All-Staff Pamphlet (Tri-Fold)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      line-height: 1.5;
+      color: #2c3e50;
+      background: #f5f7fa;
+      padding: 1rem;
+    }
+
+    .pamphlet {
+      max-width: 11in;
+      margin: 0 auto;
+      background: #ffffff;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .page {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      min-height: 8.5in;
+    }
+
+    .panel {
+      padding: 1.5rem;
+      border-right: 1px dashed #bdc3c7;
+    }
+
+    .panel:last-child {
+      border-right: none;
+    }
+
+    .panel-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #2e5c6e;
+      margin-bottom: 1rem;
+      text-align: center;
+      border-bottom: 3px solid #7ba8c3;
+      padding-bottom: 0.5rem;
+    }
+
+    .language-version {
+      background: #e8f4f8;
+      padding: 1.5rem;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+    }
+
+    .language-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #7ba8c3;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #3a7ca5;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .section-header {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #2e5c6e;
+      margin: 1rem 0 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.85rem;
+    }
+
+    .phrases {
+      list-style: none;
+      padding: 0;
+    }
+
+    .phrases li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #ecf0f1;
+      font-size: 0.9rem;
+      color: #2c3e50;
+    }
+
+    .phrases li:last-child {
+      border-bottom: none;
+    }
+
+    .step-label {
+      font-weight: 700;
+      color: #7ba8c3;
+      margin-right: 0.25rem;
+    }
+
+    .emergency-box {
+      background: #fff3cd;
+      border: 3px solid #ffc107;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+
+    .emergency-title {
+      font-size: 1rem;
+      font-weight: 900;
+      color: #2c3e50;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .emergency-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .emergency-list li {
+      padding: 0.25rem 0 0.25rem 1.25rem;
+      position: relative;
+      font-size: 0.9rem;
+      color: #2c3e50;
+    }
+
+    .emergency-list li::before {
+      content: '✕';
+      position: absolute;
+      left: 0;
+      color: #ffc107;
+      font-weight: 700;
+    }
+
+    .emergency-action {
+      background: rgba(255, 193, 7, 0.2);
+      padding: 0.75rem;
+      border-radius: 4px;
+      margin-top: 0.75rem;
+    }
+
+    .emergency-action p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .emergency-action p:last-child {
+      margin-bottom: 0;
+    }
+
+    .safe-wait {
+      font-weight: 900;
+      font-size: 1.125rem;
+      color: #2c3e50;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    .note {
+      font-size: 0.8rem;
+      color: #7f8c8d;
+      font-style: italic;
+      margin-top: 1rem;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+
+      .pamphlet {
+        box-shadow: none;
+      }
+
+      .page {
+        page-break-after: avoid;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .panel {
+        border-right: none;
+        border-bottom: 1px dashed #bdc3c7;
+      }
+
+      .panel:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pamphlet">
+    <!-- Front + Inside + Back -->
+    <div class="page">
+
+      <!-- Panel 1: FRONT - What It Is -->
+      <div class="panel">
+        <div class="panel-title">S.A.F.E.</div>
+
+        <!-- English -->
+        <div class="language-version">
+          <div class="language-label">English</div>
+          <h2 style="font-size: 1.125rem; font-weight: 900; color: #2e5c6e; margin-bottom: 0.5rem;">A Simple Way to Handle Everyday Conflict</h2>
+          <p class="tagline">"S.A.F.E. helps students pause, name what's happening, and choose how to act. It's for everyday situations — not emergencies."</p>
+        </div>
+
+        <!-- Spanish -->
+        <div class="language-version">
+          <div class="language-label">Español</div>
+          <h2 style="font-size: 1.125rem; font-weight: 900; color: #2e5c6e; margin-bottom: 0.5rem;">Una Manera Simple de Manejar Conflictos Cotidianos</h2>
+          <p class="tagline">"S.A.F.E. ayuda a los estudiantes a hacer una pausa, identificar lo que está pasando y elegir cómo actuar. Es para situaciones cotidianas — no emergencias."</p>
+        </div>
+
+        <!-- Haitian Creole -->
+        <div class="language-version">
+          <div class="language-label">Kreyòl Ayisyen</div>
+          <h2 style="font-size: 1.125rem; font-weight: 900; color: #2e5c6e; margin-bottom: 0.5rem;">Yon Fason Senp pou Jere Konfli Chak Jou</h2>
+          <p class="tagline">"S.A.F.E. ede elèv yo poze, di sa k ap pase, epi chwazi kijan yo vle aji. Li se pou sitiyasyon chak jou — pa pou ijans."</p>
+        </div>
+      </div>
+
+      <!-- Panel 2: INSIDE - What to Say -->
+      <div class="panel">
+        <div class="panel-title">What You Can Say</div>
+        <p style="font-weight: 700; color: #2c3e50; text-align: center; margin-bottom: 1rem; font-size: 0.95rem;">You only need ONE sentence.</p>
+
+        <!-- English -->
+        <div style="margin-bottom: 1.5rem;">
+          <div class="language-label">English</div>
+          <ul class="phrases">
+            <li><span class="step-label">SEE:</span> "I SEE something happening."</li>
+            <li><span class="step-label">ASK:</span> "Can you ASK what they need?"</li>
+            <li><span class="step-label">FEEL:</span> "I FEEL a lot of tension here — let's pause."</li>
+            <li><span class="step-label">EMERGE:</span> "Who do you want to be right now?"</li>
+          </ul>
+        </div>
+
+        <!-- Spanish -->
+        <div style="margin-bottom: 1.5rem;">
+          <div class="language-label">Español</div>
+          <ul class="phrases">
+            <li><span class="step-label">SEE:</span> "VEO algo pasando."</li>
+            <li><span class="step-label">ASK:</span> "¿Puedes PREGUNTAR qué necesitan?"</li>
+            <li><span class="step-label">FEEL:</span> "SIENTO mucha tensión aquí — hagamos una pausa."</li>
+            <li><span class="step-label">EMERGE:</span> "¿Quién quieres ser ahora?"</li>
+          </ul>
+        </div>
+
+        <!-- Haitian Creole -->
+        <div>
+          <div class="language-label">Kreyòl Ayisyen</div>
+          <ul class="phrases">
+            <li><span class="step-label">SEE:</span> "Mwen WÈ yon bagay k ap pase."</li>
+            <li><span class="step-label">ASK:</span> "Èske ou ka MANDE sa yo bezwen?"</li>
+            <li><span class="step-label">FEEL:</span> "Mwen SANTI anpil tansyon — ann fè yon poz."</li>
+            <li><span class="step-label">EMERGE:</span> "Kilès ou vle ye kounye a?"</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Panel 3: BACK - When NOT to Use -->
+      <div class="panel">
+        <div class="panel-title" style="font-size: 1.25rem;">When NOT to Use S.A.F.E.</div>
+
+        <div class="emergency-box">
+          <div class="emergency-title">Do NOT use S.A.F.E. when:</div>
+          <ul class="emergency-list">
+            <li>Someone is being hurt</li>
+            <li>There is a threat or weapon</li>
+            <li>A child is out of control</li>
+            <li>You are worried about safety</li>
+          </ul>
+
+          <div class="emergency-action">
+            <p style="font-weight: 700;">In those moments:</p>
+            <p>Step in. Get help. Handle safety first.</p>
+          </div>
+
+          <div class="safe-wait">"S.A.F.E. can wait."</div>
+        </div>
+
+        <div class="note">This protects everyone legally and emotionally. Safety always comes first.</div>
+
+        <!-- Spanish version -->
+        <div class="emergency-box" style="margin-top: 1.5rem;">
+          <div class="emergency-title">NO usar S.A.F.E. cuando:</div>
+          <ul class="emergency-list">
+            <li>Alguien está siendo lastimado</li>
+            <li>Hay una amenaza o arma</li>
+            <li>Un niño está fuera de control</li>
+            <li>Estás preocupado por la seguridad</li>
+          </ul>
+          <div class="emergency-action">
+            <p style="font-weight: 700;">En esos momentos:</p>
+            <p>Intervén. Busca ayuda. Maneja la seguridad primero.</p>
+          </div>
+          <div class="safe-wait">"S.A.F.E. puede esperar."</div>
+        </div>
+
+        <!-- Creole version -->
+        <div class="emergency-box" style="margin-top: 1.5rem;">
+          <div class="emergency-title">PA itilize S.A.F.E. lè:</div>
+          <ul class="emergency-list">
+            <li>Yon moun ap fè mal</li>
+            <li>Gen yon menas oswa zam</li>
+            <li>Yon timoun pa an kontwòl</li>
+            <li>Ou enkyete pou sekirite</li>
+          </ul>
+          <div class="emergency-action">
+            <p style="font-weight: 700;">Nan moman sa yo:</p>
+            <p>Intervni. Jwenn èd. Okipe sekirite an premye.</p>
+          </div>
+          <div class="safe-wait">"S.A.F.E. ka tann."</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

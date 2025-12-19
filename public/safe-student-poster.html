@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.A.F.E. Student Poster</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .poster {
+      background: linear-gradient(135deg, #e8f4f8 0%, #d4e9f2 100%);
+      max-width: 11in;
+      width: 100%;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      text-align: center;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #2e5c6e;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      color: #3a7ca5;
+      font-weight: 400;
+      margin-bottom: 3rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .step {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      border-radius: 8px;
+      border-left: 6px solid #7ba8c3;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .step:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(123, 168, 195, 0.2);
+    }
+
+    .step-name {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #2e5c6e;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-question {
+      font-size: 1.5rem;
+      color: #3a7ca5;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .footer {
+      background: rgba(255, 255, 255, 0.7);
+      padding: 1.5rem;
+      border-radius: 8px;
+      font-size: 1.125rem;
+      color: #3a7ca5;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #ffffff;
+      }
+
+      .poster {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0.75in;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .poster {
+        padding: 2rem 1.5rem;
+      }
+
+      .title {
+        font-size: 2rem;
+        letter-spacing: 0.25rem;
+      }
+
+      .subtitle {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+      }
+
+      .step {
+        padding: 1.5rem;
+      }
+
+      .step-name {
+        font-size: 1.75rem;
+      }
+
+      .step-question {
+        font-size: 1.125rem;
+      }
+
+      .footer {
+        font-size: 1rem;
+        padding: 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <div class="title">S.A.F.E.</div>
+    <div class="subtitle">When Something Feels Hard</div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-name">SEE</div>
+        <div class="step-question">What's happening?</div>
+      </div>
+
+      <div class="step">
+        <div class="step-name">ASK</div>
+        <div class="step-question">What do you need? What do they need?</div>
+      </div>
+
+      <div class="step">
+        <div class="step-name">FEEL</div>
+        <div class="step-question">What am I feeling in my body?</div>
+      </div>
+
+      <div class="step">
+        <div class="step-name">EMERGE</div>
+        <div class="step-question">Who do I want to be right now?</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      You don't have to use every step. One is enough.
+    </div>
+  </div>
+</body>
+</html>

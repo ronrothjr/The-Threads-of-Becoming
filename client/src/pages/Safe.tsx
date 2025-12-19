@@ -761,6 +761,65 @@ const Safe: React.FC = () => {
         </div>
       </section>
 
+      {/* Downloadable Resources */}
+      <section className={`${styles.downloadables} section-lg`}>
+        <div className="container">
+          <h2>Minimum Viable S.A.F.E. — Printable Resources</h2>
+          <p className={styles.mvSafeIntro}>
+            <strong>These five resources are all you need to implement S.A.F.E. school-wide.</strong> No full program adoption required. Within 2 weeks, you'll see spontaneous student use, de-escalating adults, and fewer "who started it?" conversations.
+          </p>
+
+          <div className={styles.downloadGrid}>
+            <div className={styles.downloadCard}>
+              <h3>📄 Teacher One-Pagers (3)</h3>
+              <p className={styles.downloadDesc}>
+                5-minute scripts teachers read or paraphrase to students. Each fits on one page.
+              </p>
+              <div className={styles.downloadLinks}>
+                <a href="/safe-teacher-onepager-1.html" target="_blank" className={styles.downloadLink}>
+                  #1: What S.A.F.E. Is (and Isn't)
+                </a>
+                <a href="/safe-teacher-onepager-2.html" target="_blank" className={styles.downloadLink}>
+                  #2: Using S.A.F.E. in the Moment
+                </a>
+                <a href="/safe-teacher-onepager-3.html" target="_blank" className={styles.downloadLink}>
+                  #3: When It Doesn't Work
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.downloadCard}>
+              <h3>🪧 Student Poster</h3>
+              <p className={styles.downloadDesc}>
+                Visually calm, linguistically sparse. Hang in every classroom.
+              </p>
+              <div className={styles.downloadLinks}>
+                <a href="/safe-student-poster.html" target="_blank" className={styles.downloadLink}>
+                  S.A.F.E. Student Poster
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.downloadCard}>
+              <h3>📋 All-Staff Pamphlet</h3>
+              <p className={styles.downloadDesc}>
+                Half-sheet tri-fold in English/Spanish/Haitian Creole. Give one to every adult in the building.
+              </p>
+              <div className={styles.downloadLinks}>
+                <a href="/safe-staff-pamphlet.html" target="_blank" className={styles.downloadLink}>
+                  S.A.F.E. Staff Pamphlet (Trilingual)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.mvNote}>
+            <p><strong>What makes this "minimum viable"?</strong></p>
+            <p>If a school reads the three one-pagers, hangs the poster, and gives every adult the pamphlet—that's enough. Shared verbs change behavior faster than shared values.</p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className={styles.cta}>
         <div className="container">
