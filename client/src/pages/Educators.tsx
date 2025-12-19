@@ -15,6 +15,23 @@ const Educators: React.FC = () => {
         </p>
       </section>
 
+      {/* S.A.F.E. Callout */}
+      <section className={`${styles.safeCallout} section-lg`}>
+        <div className="container">
+          <div className={styles.safeCard}>
+            <h2>Introducing S.A.F.E. For All</h2>
+            <p className={styles.safeTagline}>An anti-bullying framework built on Threads</p>
+            <p className={styles.safeDescription}>
+              <strong>S.A.F.E.</strong> (See. Ask. Feel. Emerge.) teaches students to navigate conflict without collapsing into victim/bully binaries. Instead of rules, students learn who they want to become when things get hard.
+            </p>
+            <p className={styles.safeDescription}>
+              Built specifically for elementary classrooms, S.A.F.E. creates psychological safety for everyone—the kid being hurt, the kid doing harm, the witnesses, and the teacher.
+            </p>
+            <a href="/safe" className={styles.safeButton}>Explore S.A.F.E. For All →</a>
+          </div>
+        </div>
+      </section>
+
       {/* Why Threads for Teaching */}
       <section className={`${styles.whySection} section-lg`}>
         <h2>Why Threads for Teaching?</h2>

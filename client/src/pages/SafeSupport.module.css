@@ -1,0 +1,314 @@
+/* Shared styles for S.A.F.E. Support Pages */
+
+.page {
+  min-height: 100vh;
+}
+
+/* Hero Sections */
+.hero {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+  border-bottom: 8px solid #FFD700;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #FFD700;
+  text-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content {
+  background: var(--color-off-white);
+}
+
+.intro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--color-navy);
+  margin-bottom: 2rem;
+}
+
+/* Cards and Grids */
+.collapseGrid,
+.workshopGrid,
+.resourceGrid,
+.roleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-top: 6px solid #FFD700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+  color: var(--color-navy);
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  color: var(--thread-presence);
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.card p {
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.card li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  position: relative;
+}
+
+.card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+/* Special Card Types */
+.workshopCard {
+  border-top-color: #0066FF;
+}
+
+.resourceCard {
+  border-top-color: #00CC44;
+}
+
+.roleCard {
+  border-top-color: #FF6600;
+}
+
+.measurementCard {
+  border-top-color: #6600CC;
+}
+
+/* Collapse Pattern Specific */
+.collapseCard {
+  border-left: 8px solid #FF3333;
+  padding-left: 1.75rem;
+}
+
+.collapseCard h3 {
+  color: #FF3333;
+}
+
+/* Module/Section Headers */
+.moduleHeader {
+  background: linear-gradient(135deg,
+    rgba(0, 102, 255, 0.1) 0%,
+    rgba(255, 215, 0, 0.1) 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid #0066FF;
+}
+
+.moduleHeader h4 {
+  color: #0066FF;
+  margin: 0 0 0.5rem 0;
+}
+
+.moduleHeader p {
+  margin: 0;
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* Assessment Grids */
+.assessmentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.beforeBox,
+.afterBox {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.beforeBox {
+  border-top: 6px solid #FF3333;
+}
+
+.beforeBox h3 {
+  color: #FF3333;
+}
+
+.afterBox {
+  border-top: 6px solid #00CC44;
+}
+
+.afterBox h3 {
+  color: #00CC44;
+}
+
+/* Duration/Info Pills */
+.duration {
+  display: inline-block;
+  background: #FFD700;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.info {
+  background: rgba(0, 102, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #0066FF;
+  margin: 1.5rem 0;
+}
+
+.info p {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+/* Notes and Highlights */
+.note {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-text-light);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.highlight {
+  background: linear-gradient(135deg,
+    rgba(255, 215, 0, 0.2) 0%,
+    rgba(255, 165, 0, 0.2) 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 3px solid #FFD700;
+  margin: 2rem 0;
+}
+
+.highlight strong {
+  color: #000000;
+  font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 8px solid #FFD700;
+}
+
+.cta h2 {
+  color: #FFD700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: #FFD700;
+  color: #000000;
+  padding: 1.25rem 3rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ctaButton:hover {
+  background: #FFA500;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .collapseGrid,
+  .workshopGrid,
+  .resourceGrid,
+  .roleGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .assessmentGrid {
+    grid-template-columns: 1fr;
+  }
+}

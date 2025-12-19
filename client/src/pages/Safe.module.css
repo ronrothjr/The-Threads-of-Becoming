@@ -1,0 +1,1102 @@
+/* Hero Section - High Contrast */
+.hero {
+  background: linear-gradient(135deg,
+    #000000 0%,
+    #1a1a1a 100%);
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 8px solid #FFD700;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 60%, rgba(255, 69, 0, 0.2) 0%, transparent 50%);
+  animation: pulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #FFD700;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+  letter-spacing: 0.1em;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.heroBrief {
+  font-size: 2rem;
+  color: #FFD700;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+}
+
+/* Insight Section */
+.insight {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+  border-bottom: 4px solid #000000;
+}
+
+.insight h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.insightText {
+  font-size: 1.25rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.insightHighlight {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background: #000000;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto 0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  border: 4px solid #FFD700;
+}
+
+/* Framework Section */
+.framework {
+  background: #F5F5F5;
+  padding: 4rem 2rem;
+}
+
+.frameworkTitle {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.steps {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Individual Step Cards - High Contrast Colors */
+.step {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+  border: 4px solid;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 64px rgba(0, 0, 0, 0.25);
+}
+
+/* S - See - Bright Blue */
+.stepSee {
+  border-color: #0066FF;
+}
+
+.stepSee .stepLetter {
+  background: #0066FF;
+  color: #FFFFFF;
+}
+
+/* A - Ask - Vibrant Orange */
+.stepAsk {
+  border-color: #FF6600;
+}
+
+.stepAsk .stepLetter {
+  background: #FF6600;
+  color: #FFFFFF;
+}
+
+/* F - Feel - Deep Purple */
+.stepFeel {
+  border-color: #6600CC;
+}
+
+.stepFeel .stepLetter {
+  background: #6600CC;
+  color: #FFFFFF;
+}
+
+/* E - Emerge - Bright Green */
+.stepEmerge {
+  border-color: #00CC44;
+}
+
+.stepEmerge .stepLetter {
+  background: #00CC44;
+  color: #FFFFFF;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stepLetter {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.stepTitleBlock h3 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+}
+
+.stepSubtitle {
+  font-size: 1.25rem;
+  color: #666666;
+  font-style: italic;
+}
+
+.stepContent {
+  color: #333333;
+}
+
+.stepSection {
+  margin-bottom: 2rem;
+}
+
+.stepSection h4 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.stepSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stepSection li {
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  position: relative;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.stepSection li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+  color: #000000;
+}
+
+.emphasis {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 1rem 0;
+}
+
+.threadConnection {
+  background: #000000;
+  color: #FFD700;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  font-size: 1.125rem;
+  border: 3px solid #FFD700;
+}
+
+.perspectives {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.perspective {
+  background: #F9F9F9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 6px solid #000000;
+}
+
+.perspective h5 {
+  font-size: 1.25rem;
+  color: #000000;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.perspective p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.perspective ul {
+  list-style: none;
+  padding: 0;
+}
+
+.perspective li {
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.tensionExamples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tensionExample {
+  background: #F9F9F9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: 4px solid #FF6600;
+}
+
+.tensionExample h5 {
+  font-size: 1.125rem;
+  color: #000000;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.tensionExample p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.transformation {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  border: 4px solid #000000;
+}
+
+.transformation h4 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.transformation p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 0.75rem;
+}
+
+.transformHighlight {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Safety Section */
+.safety {
+  background: #000000;
+  padding: 4rem 2rem;
+  color: #FFFFFF;
+}
+
+.safety h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.safetyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.safetyCard {
+  background: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 4px solid #FFD700;
+}
+
+.safetyCard h3 {
+  font-size: 2rem;
+  color: #FFD700;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.traditional h4,
+.safeApproach h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.traditional h4 {
+  color: #FF6666;
+}
+
+.safeApproach h4 {
+  color: #66FF66;
+}
+
+.traditional ul,
+.safeApproach ul {
+  list-style: none;
+  padding: 0;
+}
+
+.traditional li,
+.safeApproach li {
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+.safetyNote {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #FFD700;
+  color: #000000;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+/* Different Section */
+.different {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+  border-top: 8px solid #000000;
+}
+
+.different h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.comparisonTable {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comparisonColumn {
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+.comparisonColumn:first-child {
+  background: #FFE6E6;
+  border: 4px solid #FF0000;
+}
+
+.comparisonColumn:last-child {
+  background: #E6FFE6;
+  border: 4px solid #00CC44;
+}
+
+.comparisonColumn h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.comparisonColumn:first-child h3 {
+  color: #CC0000;
+}
+
+.comparisonColumn:last-child h3 {
+  color: #00AA00;
+}
+
+.comparisonColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comparisonColumn li {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Training Section */
+.training {
+  background: #F5F5F5;
+  padding: 4rem 2rem;
+}
+
+.training h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.trainingIntro {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #666666;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.modules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.module {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #0066FF;
+}
+
+.module h3 {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.moduleTime {
+  font-size: 1rem;
+  color: #0066FF;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.module p {
+  font-size: 1.125rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.module ul {
+  list-style: none;
+  padding: 0;
+}
+
+.module li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.module li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #0066FF;
+  font-weight: 900;
+}
+
+.trainingNote {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #000000;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #FFD700;
+  border-radius: 8px;
+  font-weight: 700;
+  border: 4px solid #000000;
+}
+
+/* Further Development Section */
+.furtherDevelopment {
+  background: linear-gradient(135deg, #F5F5F5 0%, #FFFFFF 100%);
+  padding: 5rem 2rem;
+}
+
+.furtherDevelopment h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.furtherIntro {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.developmentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.developmentCard {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #FFD700;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.developmentCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  border-top-color: #FFA500;
+}
+
+.developmentCard h3 {
+  font-size: 1.75rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.developmentCard p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333333;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.cardLink {
+  font-weight: 900;
+  color: #FFD700;
+  font-size: 1.125rem;
+  transition: color 0.3s ease;
+}
+
+.developmentCard:hover .cardLink {
+  color: #FFA500;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  border-top: 8px solid #FFD700;
+}
+
+.cta h2 {
+  font-size: 3rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-shadow: 0 4px 12px rgba(255, 215, 0, 0.5);
+}
+
+.cta p {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  background: #FFD700;
+  color: #000000;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.4);
+  border: 4px solid #FFD700;
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(255, 215, 0, 0.6);
+  background: #FFA500;
+  border-color: #FFA500;
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #FFD700;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 1.25rem;
+  border: 4px solid #FFD700;
+  transition: all 0.3s ease;
+}
+
+.ctaSecondary:hover {
+  background: rgba(255, 215, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Crisis Protocol Section */
+.crisisProtocol {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+  border-top: 8px solid #FF0000;
+}
+
+.crisisProtocol h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #FF0000;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.crisisIntro {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #000000;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.protocolComparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.crisisBox {
+  background: linear-gradient(135deg, #FFE6E6 0%, #FFF0F0 100%);
+  border: 4px solid #FF0000;
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.crisisBox h3 {
+  font-size: 2rem;
+  color: #FF0000;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.crisisBox h4 {
+  font-size: 1.25rem;
+  color: #CC0000;
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+}
+
+.crisisBox ul,
+.crisisBox ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.crisisBox li {
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.crisisNote {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #FF0000;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.safeBox {
+  background: linear-gradient(135deg, #E6FFE6 0%, #F0FFF0 100%);
+  border: 4px solid #00CC44;
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.safeBox h3 {
+  font-size: 2rem;
+  color: #00AA00;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.safeBox h4 {
+  font-size: 1.25rem;
+  color: #009900;
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+}
+
+.safeBox ul,
+.safeBox ol {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.safeBox li {
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.safeNote {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #00CC44;
+  color: #FFFFFF;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.afterCrisis {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #FFF9E6;
+  border: 4px solid #FFD700;
+  border-radius: 16px;
+}
+
+.afterCrisis h3 {
+  font-size: 1.75rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.afterCrisis ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.afterCrisis li {
+  padding: 0.5rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Special Populations Section */
+.specialPopulations {
+  background: #F5F5F5;
+  padding: 4rem 2rem;
+}
+
+.specialPopulations h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.specialIntro {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+}
+
+.populationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.populationCard {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #0066FF;
+  transition: all 0.3s ease;
+}
+
+.populationCard:nth-child(2) {
+  border-top-color: #FF6600;
+}
+
+.populationCard:nth-child(3) {
+  border-top-color: #6600CC;
+}
+
+.populationCard:nth-child(4) {
+  border-top-color: #00CC44;
+}
+
+.populationCard:nth-child(5) {
+  border-top-color: #FFD700;
+}
+
+.populationCard:nth-child(6) {
+  border-top-color: #FF0066;
+}
+
+.populationCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.populationCard h3 {
+  font-size: 1.75rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.populationCard h4 {
+  font-size: 1.125rem;
+  color: #666666;
+  margin: 1.5rem 0 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.populationCard ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.populationCard li {
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333333;
+  position: relative;
+}
+
+.populationCard li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+  color: #0066FF;
+}
+
+.populationNote {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #F0F0F0;
+  border-left: 4px solid #0066FF;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #666666;
+  font-style: italic;
+}
+
+.specialNote {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, #E6F3FF 0%, #F0F8FF 100%);
+  border: 4px solid #0066FF;
+  border-radius: 16px;
+}
+
+.specialNote h3 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.specialNote p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.specialNote ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.specialNote li {
+  padding: 0.75rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.emphasis {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #FFD700;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+  }
+
+  .heroBrief {
+    font-size: 1.5rem;
+  }
+
+  .frameworkTitle,
+  .safety h2,
+  .different h2,
+  .training h2 {
+    font-size: 2rem;
+  }
+
+  .stepHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stepLetter {
+    width: 80px;
+    height: 80px;
+    font-size: 3rem;
+  }
+
+  .stepTitleBlock h3 {
+    font-size: 2rem;
+  }
+
+  .safetyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparisonTable {
+    grid-template-columns: 1fr;
+  }
+
+  .modules {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

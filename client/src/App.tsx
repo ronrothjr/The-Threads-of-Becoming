@@ -25,6 +25,12 @@ import Organizations from './pages/Organizations';
 import Communities from './pages/Communities';
 import Chapters from './pages/Chapters';
 import Educators from './pages/Educators';
+import Safe from './pages/Safe';
+import ParentEducation from './pages/ParentEducation';
+import SchoolWideSafe from './pages/SchoolWideSafe';
+import PublicMeasurement from './pages/PublicMeasurement';
+import CrisisProtocol from './pages/CrisisProtocol';
+import SpecialPopulations from './pages/SpecialPopulations';
 import Resources from './pages/Resources';
 import ModalityCompatibility from './pages/ModalityCompatibility';
 import ThreadDiscovery from './pages/ThreadDiscovery';
@@ -86,6 +92,12 @@ function AppContent() {
         <Route path="/communities" element={<Communities />} />
         <Route path="/chapters" element={<Chapters />} />
         <Route path="/educators" element={<Educators />} />
+        <Route path="/safe" element={<Safe />} />
+        <Route path="/safe/parent-education" element={<ParentEducation />} />
+        <Route path="/safe/school-wide" element={<SchoolWideSafe />} />
+        <Route path="/safe/public-measurement" element={<PublicMeasurement />} />
+        <Route path="/safe/crisis-protocol" element={<CrisisProtocol />} />
+        <Route path="/safe/special-populations" element={<SpecialPopulations />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/modality-compatibility" element={<ModalityCompatibility />} />
         <Route path="/thread-discovery" element={<ThreadDiscovery />} />
