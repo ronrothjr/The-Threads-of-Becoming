@@ -600,12 +600,12 @@ const Safe: React.FC = () => {
         </div>
       </section>
 
-      {/* Special Populations */}
+      {/* Universal Design & Adaptations */}
       <section className={`${styles.specialPopulations} section-lg`}>
         <div className="container">
-          <h2>S.A.F.E. for Special Populations</h2>
+          <h2>S.A.F.E. for All Learners: Universal Design & Adaptations</h2>
           <p className={styles.specialIntro}>
-            S.A.F.E. is for everyone—but HOW we practice it must adapt to individual needs. Not "Can this child do S.A.F.E.?" but "How does S.A.F.E. work FOR this child?"
+            Design for those who struggle most, and everyone benefits. Not "Can this child do S.A.F.E.?" but "How does S.A.F.E. work FOR this child?"
           </p>
 
           <div className={styles.populationGrid}>
@@ -742,12 +742,12 @@ const Safe: React.FC = () => {
               <span className={styles.cardLink}>Review Crisis Protocols →</span>
             </a>
 
-            <a href="/safe/special-populations" className={styles.developmentCard}>
-              <h3>🌈 Special Populations</h3>
+            <a href="/safe/all-learners" className={styles.developmentCard}>
+              <h3>🌈 S.A.F.E. for All Learners</h3>
               <p>
-                Adaptations for students with trauma, autism, ADHD, anxiety, language barriers, and other needs.
+                Universal design and adaptations for neurodivergent learners, students with trauma, language learners, and more.
               </p>
-              <span className={styles.cardLink}>See Adaptations →</span>
+              <span className={styles.cardLink}>See Universal Design & Adaptations →</span>
             </a>
 
             <a href="/safe/stomp-out-comparison" className={styles.developmentCard}>

@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './SafeSupport.module.css';
 
-const SpecialPopulations: React.FC = () => {
+const AllLearners: React.FC = () => {
   return (
     <div className={styles.page}>
       {/* Hero */}
       <section className={styles.hero}>
         <div className="container">
-          <h1>S.A.F.E. for Special Populations</h1>
+          <h1>S.A.F.E. for All Learners: Universal Design & Adaptations</h1>
           <p className={styles.tagline}>
-            Universal framework, individualized adaptations
+            Design for those who struggle most, and everyone benefits
           </p>
         </div>
       </section>
@@ -353,4 +353,4 @@ const SpecialPopulations: React.FC = () => {
   );
 };
 
-export default SpecialPopulations;
+export default AllLearners;
