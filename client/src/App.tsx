@@ -31,6 +31,7 @@ import SchoolWideSafe from './pages/SchoolWideSafe';
 import PublicMeasurement from './pages/PublicMeasurement';
 import CrisisProtocol from './pages/CrisisProtocol';
 import SpecialPopulations from './pages/SpecialPopulations';
+import StompOutComparison from './pages/StompOutComparison';
 import Resources from './pages/Resources';
 import ModalityCompatibility from './pages/ModalityCompatibility';
 import ThreadDiscovery from './pages/ThreadDiscovery';
@@ -98,6 +99,7 @@ function AppContent() {
         <Route path="/safe/public-measurement" element={<PublicMeasurement />} />
         <Route path="/safe/crisis-protocol" element={<CrisisProtocol />} />
         <Route path="/safe/special-populations" element={<SpecialPopulations />} />
+        <Route path="/safe/stomp-out-comparison" element={<StompOutComparison />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/modality-compatibility" element={<ModalityCompatibility />} />
         <Route path="/thread-discovery" element={<ThreadDiscovery />} />

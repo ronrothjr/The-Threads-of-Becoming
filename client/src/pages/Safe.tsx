@@ -637,6 +637,14 @@ const Safe: React.FC = () => {
               </p>
               <span className={styles.cardLink}>See Adaptations →</span>
             </a>
+
+            <a href="/safe/stomp-out-comparison" className={styles.developmentCard}>
+              <h3>🤝 S.A.F.E. + STOMP OUT Bullying</h3>
+              <p>
+                How S.A.F.E. complements STOMP OUT Bullying's crisis intervention and awareness campaigns—a complete K-12 system.
+              </p>
+              <span className={styles.cardLink}>See Partnership Vision →</span>
+            </a>
           </div>
         </div>
       </section>
