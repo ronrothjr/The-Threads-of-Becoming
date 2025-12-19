@@ -26,6 +26,7 @@ import Communities from './pages/Communities';
 import Chapters from './pages/Chapters';
 import Educators from './pages/Educators';
 import Safe from './pages/Safe';
+import ProtectedStatus from './pages/ProtectedStatus';
 import ParentEducation from './pages/ParentEducation';
 import SchoolWideSafe from './pages/SchoolWideSafe';
 import PublicMeasurement from './pages/PublicMeasurement';
@@ -94,6 +95,7 @@ function AppContent() {
         <Route path="/chapters" element={<Chapters />} />
         <Route path="/educators" element={<Educators />} />
         <Route path="/safe" element={<Safe />} />
+        <Route path="/safe/capacity-building" element={<ProtectedStatus />} />
         <Route path="/safe/parent-education" element={<ParentEducation />} />
         <Route path="/safe/school-wide" element={<SchoolWideSafe />} />
         <Route path="/safe/public-measurement" element={<PublicMeasurement />} />

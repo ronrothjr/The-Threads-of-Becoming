@@ -333,7 +333,7 @@ const Safe: React.FC = () => {
               Explore 6 areas of developmental psychology research, honest examination of when S.A.F.E. is NOT enough, and the critical question:
               <strong> When does anyone come off the endangered list?</strong>
             </p>
-            <a href="/PROTECTED_STATUS.md" className={styles.researchLink} target="_blank" rel="noopener noreferrer">
+            <a href="/safe/capacity-building" className={styles.researchLink}>
               Read the Full Research & Critical Examination →
             </a>
           </div>
