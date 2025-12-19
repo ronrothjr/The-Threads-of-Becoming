@@ -1485,9 +1485,38 @@
     padding: 3rem 1rem;
   }
 
+  .step {
+    padding: 1.5rem;
+    margin: 0 0.25rem;
+  }
+
+  .stepContent {
+    padding: 0;
+  }
+
+  .perspective {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .tensionExample {
+    padding: 1rem;
+  }
+
+  .transformation {
+    padding: 1.5rem;
+    margin: 1.5rem 0.25rem;
+  }
+
+  .threadConnection {
+    padding: 1rem;
+    margin: 1.5rem 0.25rem;
+  }
+
   .insightText,
   .insightHighlight {
-    padding: 0 1rem;
+    padding: 1.5rem;
+    margin: 0 0.25rem;
   }
 
   .frameworkTitle,
@@ -1498,11 +1527,11 @@
   .specialPopulations h2,
   .furtherDevelopment h2 {
     font-size: 2rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .furtherIntro {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .downloadables {
@@ -1511,17 +1540,17 @@
 
   .downloadables h2 {
     font-size: 2rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .mvSafeIntro {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .downloadGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 0.25rem;
   }
 
   .downloadCard {
@@ -1530,7 +1559,7 @@
 
   .mvNote {
     padding: 1.5rem;
-    margin: 0 1rem;
+    margin: 0 0.25rem;
   }
 
   .stepHeader {
@@ -1548,17 +1577,10 @@
     font-size: 2rem;
   }
 
-  .step {
-    padding: 2rem 1.5rem;
-  }
-
-  .stepContent {
-    padding: 1.5rem 1rem;
-  }
-
   .safetyGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 0.25rem;
   }
 
   .safetyCard {
@@ -1568,6 +1590,7 @@
   .comparisonTable {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 0.25rem;
   }
 
   .comparisonColumn {
@@ -1577,6 +1600,7 @@
   .modules {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding: 0 0.25rem;
   }
 
   .module {
@@ -1586,7 +1610,7 @@
   .developmentGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 0.25rem;
   }
 
   .developmentCard {
@@ -1596,7 +1620,7 @@
   .protocolComparison {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 0.25rem;
   }
 
   .crisisBox,
@@ -1606,13 +1630,13 @@
 
   .afterCrisis {
     padding: 1.5rem;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 0.25rem;
   }
 
   .populationGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 0.25rem;
   }
 
   .populationCard {
@@ -1621,17 +1645,17 @@
 
   .specialNote {
     padding: 1.5rem;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 0.25rem;
   }
 
   .emphasis {
     padding: 1.25rem;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 0.25rem;
   }
 
   .researchCallout {
     padding: 1.5rem;
-    margin: 2rem 1rem;
+    margin: 2rem 0.25rem;
   }
 
   .researchCallout h3 {
@@ -1648,6 +1672,7 @@
 
   .protectedStatusBox {
     padding: 1.5rem;
+    margin: 1.5rem 0;
   }
 
   .exitRamps {
@@ -1672,11 +1697,12 @@
   .researchConclusion {
     padding: 1.25rem;
     font-size: 1.0625rem;
+    margin: 1.5rem 0;
   }
 
   .exitRampCallout {
     padding: 1.5rem;
-    margin: 2rem 1rem;
+    margin: 2rem 0.25rem;
   }
 
   .exitRampCallout h4 {

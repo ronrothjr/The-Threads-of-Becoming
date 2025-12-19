@@ -949,6 +949,23 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hero,
+  .safeCallout,
+  .whySection,
+  .gradeBands,
+  .pdCredits,
+  .trainingPathway,
+  .resources,
+  .differences,
+  .partnerships,
+  .chapters,
+  .faq,
+  .gettingStarted,
+  .cta {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .title {
     font-size: 2.5rem;
   }
@@ -959,6 +976,11 @@
 
   .heroBrief {
     font-size: 1rem;
+  }
+
+  .safeCard {
+    padding: 1.5rem;
+    margin: 0 0.25rem;
   }
 
   .whySection h2,
@@ -989,6 +1011,20 @@
   .faqGrid,
   .pathways {
     grid-template-columns: 1fr;
+    padding: 0 0.25rem;
+  }
+
+  .whyCard,
+  .gradeBandCard,
+  .creditCard,
+  .tierCard,
+  .resourceCard,
+  .differenceCard,
+  .partnershipCard,
+  .chapterType,
+  .faqItem,
+  .pathwayCard {
+    padding: 1.5rem;
   }
 
   .ctaButtons {

@@ -815,16 +815,16 @@
   }
 
   .content {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
 
   .sectionTitle {
     font-size: 2rem;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .intro {
-    padding: 0 1rem;
+    padding: 0 0.5rem;
     font-size: 1.125rem;
   }
 
@@ -836,13 +836,13 @@
   .indicators {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 0.25rem;
   }
 
   .assessmentGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1rem;
+    padding: 0 0.25rem;
   }
 
   .card {
@@ -869,12 +869,12 @@
 
   .highlight {
     padding: 1.25rem;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 0.25rem;
   }
 
   .info {
     padding: 1.25rem;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 0.25rem;
   }
 
   .moduleHeader {
@@ -905,6 +905,12 @@
     font-size: 1rem;
   }
 
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 0.25rem;
+  }
+
   .resourceCard,
   .packetCard,
   .indicatorColumn {
@@ -913,31 +919,50 @@
 
   .measureBox {
     padding: 1.5rem;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 0.25rem;
   }
 
   .module {
     padding: 1.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
   }
 
   .keyInsight {
     padding: 1.5rem;
-    margin: 2rem 1rem;
+    margin: 2rem 0.25rem;
   }
 
   .workshops {
     padding: 0 1rem;
   }
 
+  .workshop {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
   .comparison,
   .instead,
   .trySafe {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
   }
 
   .templateBox,
   .repairBox {
     padding: 1.25rem;
+  }
+
+  .safeSteps {
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .resources,
+  .packets,
+  .assessment {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
