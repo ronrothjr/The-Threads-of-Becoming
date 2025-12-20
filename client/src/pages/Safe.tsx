@@ -597,6 +597,250 @@ const Safe: React.FC = () => {
             </ul>
             <p className={styles.emphasis}>The order matters: <strong>Safety FIRST → Then S.A.F.E.</strong></p>
           </div>
+
+          {/* Full Critique & Red Flags Accordion */}
+          <details className={styles.critiqueAccordion}>
+            <summary className={styles.critiqueSummary}>
+              <span className={styles.critiqueIcon}>🚨</span>
+              <span className={styles.critiqueText}>When to Stop Using S.A.F.E.: A Full Critique & Red Flags Guide</span>
+              <span className={styles.critiqueChevron}>▼</span>
+            </summary>
+
+            <div className={styles.critiqueContent}>
+              {/* Introduction */}
+              <div className={styles.critiqueIntro}>
+                <p>While the S.A.F.E. framework is grounded in developmental psychology, it faces significant practical and philosophical challenges that could lead to failure if not managed correctly. This critique helps ensure responsible implementation.</p>
+              </div>
+
+              {/* The 5 Critiques */}
+              <div className={styles.critiquesGrid}>
+                <div className={styles.critiqueCard}>
+                  <div className={styles.critiqueNumber}>1</div>
+                  <div className={styles.critiqueCardContent}>
+                    <h3>The "Burning Victim" Paradox (Pace and Urgency)</h3>
+                    <p className={styles.critiqueDesc}>S.A.F.E. might be too slow for an active crisis.</p>
+                    <ul>
+                      <li><strong>The Fire Blanket vs. The Needle:</strong> In a situation where a child is being tormented or physically harmed <em>now</em>, "holding the tension" can feel like an abdication of adult responsibility.</li>
+                      <li><strong>Cognitive Overload:</strong> Students in a state of fight-or-flight (trauma response) are neurologically unable to engage in the reflection required for the SEE or FEEL steps.</li>
+                      <li><strong>The Action Gap:</strong> If a school uses S.A.F.E. as a replacement for—rather than a supplement to—immediate intervention, it risks leaving vulnerable students in harm's way.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={styles.critiqueCard}>
+                  <div className={styles.critiqueNumber}>2</div>
+                  <div className={styles.critiqueCardContent}>
+                    <h3>The Implementation Burden</h3>
+                    <p className={styles.critiqueDesc}>S.A.F.E. is significantly "harder" to execute than traditional zero-tolerance policies.</p>
+                    <ul>
+                      <li><strong>Staff Fluency Requirements:</strong> It requires deep training for all staff; a teacher who skims the overview but doesn't understand the "Threads" can inadvertently re-traumatize a victim.</li>
+                      <li><strong>Time Constraints:</strong> Traditional discipline (punishment) is fast; S.A.F.E. (capacity building) takes time that many teachers, managing 35–45 micro-conflicts a day, may not have.</li>
+                      <li><strong>Systemic Fragility:</strong> The framework is "wishful thinking" if it exists in a vacuum without legal protections, clear consequences, or administrative backup.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={styles.critiqueCard}>
+                  <div className={styles.critiqueNumber}>3</div>
+                  <div className={styles.critiqueCardContent}>
+                    <h3>The Power Differential Risk</h3>
+                    <p className={styles.critiqueDesc}>S.A.F.E. could be misused in situations of extreme power imbalance.</p>
+                    <ul>
+                      <li><strong>False Neutrality:</strong> In cases of systematic bullying or abuse (where one student has massive social, physical, or age-related power over another), asking the victim to "hold tension" can feel like gaslighting.</li>
+                      <li><strong>Coddling the Aggressor:</strong> By focusing on the bully's "unmet needs," the framework might avoid the necessary moral clarity that certain behaviors are simply unacceptable and require immediate sanction.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={styles.critiqueCard}>
+                  <div className={styles.critiqueNumber}>4</div>
+                  <div className={styles.critiqueCardContent}>
+                    <h3>Behavioral Strategy "Stickiness"</h3>
+                    <p className={styles.critiqueDesc}>Bullying often persists because it <strong>works</strong>—it provides status, laughter, and power.</p>
+                    <ul>
+                      <li><strong>The Reward Gap:</strong> If the social rewards for "collapsed play" (bullying) remain higher than the rewards for "holding tension," students will continue to choose the working strategy of bullying.</li>
+                      <li><strong>Borrowed Pressure:</strong> If the child is managing intense pressure from home or trauma, the school-based S.A.F.E. protocol may not be enough to override the biological need to discharge that pressure through aggression.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={styles.critiqueCard}>
+                  <div className={styles.critiqueNumber}>5</div>
+                  <div className={styles.critiqueCardContent}>
+                    <h3>Developmental Mismatch</h3>
+                    <p className={styles.critiqueDesc}>If the framework asks for "therapy-level work" from children who are too young or cognitively overwhelmed, it will fail.</p>
+                    <ul>
+                      <li><strong>Age Appropriateness:</strong> Expecting a 5-year-old to navigate complex "identity formation" without heavy adult scaffolding may be unrealistic.</li>
+                      <li><strong>Neurodiversity Barriers:</strong> Students with Autism or ADHD may find the abstract nature of "feeling the tension" inaccessible without heavy modification (Visuals/AAC).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Red Flag Checklist */}
+              <div className={styles.redFlagsSection}>
+                <h3 className={styles.redFlagsSectionTitle}>🚨 The Red Flag Checklist: Stop S.A.F.E. Immediately</h3>
+                <p className={styles.redFlagsIntro}>
+                  To ensure S.A.F.E. is used responsibly, recognize when the "Not Yet" of capacity-building must yield to the "Now" of crisis intervention. The following conditions require immediate transition to the <strong>SEE & ACT</strong> crisis protocol.
+                </p>
+
+                <div className={styles.redFlagCategories}>
+                  <div className={styles.redFlagCategory}>
+                    <h4>1. Physical and Immediate Danger</h4>
+                    <ul>
+                      <li><strong>Active Violence:</strong> Physical harm is happening NOW (hitting, kicking, choking, or shoving).</li>
+                      <li><strong>Weapon Presence:</strong> A student is in possession of or is threatening others with a weapon.</li>
+                      <li><strong>Credible Threats:</strong> A student makes a specific, credible threat of imminent harm.</li>
+                    </ul>
+                  </div>
+
+                  <div className={styles.redFlagCategory}>
+                    <h4>2. Legal and Ethical Mandates</h4>
+                    <ul>
+                      <li><strong>Abuse Disclosure:</strong> A student discloses physical, sexual, or emotional abuse.</li>
+                      <li><strong>Self-Harm/Suicide Risk:</strong> A student shows signs of self-harm or expresses suicidal ideation.</li>
+                      <li><strong>Sexual Harassment/Assault:</strong> Any situation involving sexual coercion, touching, or exposure.</li>
+                    </ul>
+                  </div>
+
+                  <div className={styles.redFlagCategory}>
+                    <h4>3. Neurological Inaccessibility</h4>
+                    <ul>
+                      <li><strong>Trauma Response:</strong> A student is in an active "fight, flight, or freeze" state.</li>
+                      <li><strong>Severe Dysregulation:</strong> A student is screaming, throwing objects, or experiencing a meltdown.</li>
+                      <li><strong>The Refusal:</strong> A student explicitly states, "I'm not ready," or refuses to engage. S.A.F.E. requires CONSENT; it cannot be forced.</li>
+                    </ul>
+                  </div>
+
+                  <div className={styles.redFlagCategory}>
+                    <h4>4. Severe Power Imbalances</h4>
+                    <ul>
+                      <li><strong>Systemic Power:</strong> One student holds systematic power over another (due to age, size, social status, or disability).</li>
+                      <li><strong>Adult-to-Child Harm:</strong> Any conflict involving an adult abusing their power over a child.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className={styles.transitionProtocol}>
+                  <h4>🛠️ The Transition: From Conflict to Crisis</h4>
+                  <p>If you encounter any of the red flags above, follow the <strong>SEE & ACT</strong> protocol:</p>
+                  <ol>
+                    <li><strong>Stop the Harm:</strong> Physically separate students or use a firm verbal command to end the interaction.</li>
+                    <li><strong>Call for Backup:</strong> Contact administration, the school counselor, or security immediately.</li>
+                    <li><strong>Secure the Scene:</strong> Remove other students from the area to ensure privacy and safety.</li>
+                    <li><strong>Check for Injuries:</strong> Attend to physical harm and call 911 or the school nurse if needed.</li>
+                    <li><strong>Report & Document:</strong> Follow mandatory reporting laws and file an incident report within one hour.</li>
+                  </ol>
+                </div>
+
+                <div className={styles.whySafeCanWait}>
+                  <h4>Why S.A.F.E. Can Wait</h4>
+                  <p>S.A.F.E. is <strong>not a replacement for discipline or safety</strong>.</p>
+                  <ul>
+                    <li><strong>Safety First:</strong> Reflection and identity work can only happen after the nervous system is regulated.</li>
+                    <li><strong>Repair Happens Later:</strong> You can always return to a S.A.F.E. conversation hours or days later, once the crisis has been resolved and legal protocols have been followed.</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Thread Collapse Cheat Sheet */}
+              <div className={styles.threadCollapseSheet}>
+                <h3 className={styles.sheetTitle}>🚨 S.A.F.E. Red Flags: The Thread Collapse Cheat Sheet</h3>
+                <p className={styles.sheetIntro}>
+                  This <strong>Staff Cheat Sheet</strong> maps the "Red Flags" directly to the <strong>Threads of Becoming</strong> framework. It helps staff recognize that a crisis is not just a "bad day," but a total collapse of the psychological safety mechanisms that allow for learning and capacity-building.
+                </p>
+
+                <div className={styles.collapseTable}>
+                  {[
+                    {
+                      flag: 'Physical Violence / Weapons',
+                      thread: 'CONSENT & PAUSE',
+                      why: 'The "Now" has completely overwhelmed the "Not Yet." There is no space for choice; only the impulse for dominance remains.'
+                    },
+                    {
+                      flag: 'Fight / Flight / Freeze (Trauma Response)',
+                      thread: 'EMBODIMENT',
+                      why: 'The "Body Knows" too much harm. The nervous system is flooded, making the cognitive reflection required for SEE and FEEL impossible.'
+                    },
+                    {
+                      flag: 'Abuse or Assault Disclosure',
+                      thread: 'CONSENT & PRESENCE',
+                      why: 'This is a criminal violation of boundaries, not a peer conflict. Asking for "tension-holding" here is a betrayal of the adult\'s duty to protect.'
+                    },
+                    {
+                      flag: 'Suicide Risk / Self-Harm',
+                      thread: 'BECOMING',
+                      why: 'The student\'s sense of an unfolding future has collapsed. They cannot EMERGE because they cannot see a "Not Yet".'
+                    },
+                    {
+                      flag: 'Severe Power Imbalance',
+                      thread: 'UNCERTAINTY',
+                      why: 'The "Bully" has eliminated all uncertainty through total control. The "Victim" is trapped in a fixed identity of helplessness.'
+                    }
+                  ].map((row, index) => (
+                    <div key={index} className={styles.collapseRow}>
+                      <div className={styles.collapseCell}>
+                        <h5>The Red Flag</h5>
+                        <p>{row.flag}</p>
+                      </div>
+                      <div className={styles.threadCell}>
+                        <h5>Thread Collapsed</h5>
+                        <p><strong>{row.thread}</strong></p>
+                      </div>
+                      <div className={styles.whyCell}>
+                        <h5>Why S.A.F.E. Won't Work</h5>
+                        <p>{row.why}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Printable Cheat Sheet Link */}
+              <div className={styles.printableLink}>
+                <a href="/safe-red-flags-cheat-sheet.html" target="_blank" rel="noopener noreferrer" className={styles.printButton}>
+                  🖨️ Download Printable Red Flags Cheat Sheet
+                </a>
+              </div>
+
+              {/* Conflict vs Crisis Guide */}
+              <div className={styles.conflictVsCrisisGuide}>
+                <h3>🛑 When to "Pause" the Framework</h3>
+                <p>Use this guide to determine if you are in <strong>Conflict</strong> (Practice S.A.F.E.) or <strong>Crisis</strong> (Use SEE & ACT).</p>
+
+                <div className={styles.guideBoxes}>
+                  <div className={styles.conflictGuideBox}>
+                    <h4>Conflict: Use S.A.F.E.</h4>
+                    <p className={styles.guideSubtitle}>The Threads are strained but intact.</p>
+                    <ul>
+                      <li>Students can still <strong>PAUSE</strong> and use their words.</li>
+                      <li>There is <strong>UNCERTAINTY</strong> about the outcome (room for growth).</li>
+                      <li>Both students are relatively regulated (within their <strong>EMBODIMENT</strong>).</li>
+                    </ul>
+                  </div>
+
+                  <div className={styles.crisisGuideBox}>
+                    <h4>Crisis: Use SEE & ACT</h4>
+                    <p className={styles.guideSubtitle}>The Threads have snapped.</p>
+                    <ul>
+                      <li><strong>CONSENT</strong> is being actively violated through violence or coercion.</li>
+                      <li><strong>MEMORY</strong> is fixed on trauma or "getting even" with no room for a new story.</li>
+                      <li><strong>PRESENCE</strong> is lost to a "trance" of automatic aggression.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Staff Mantra */}
+              <div className={styles.staffMantra}>
+                <h3>📢 The Staff Mantra</h3>
+                <blockquote className={styles.mantraQuote}>
+                  "We cannot build capacity in a collapse."
+                </blockquote>
+                <p>If you see a Red Flag, you are witnessing a <strong>systemic collapse</strong>. Your role changes from <strong>Facilitator</strong> (building capacity) to <strong>Intervener</strong> (securing safety). S.A.F.E. can only return once the threads are re-anchored by adult intervention and the student is back in their "window of tolerance".</p>
+              </div>
+            </div>
+          </details>
         </div>
       </section>
 

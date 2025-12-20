@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.A.F.E. Red Flags Cheat Sheet - Thread Collapse Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #FFFFFF;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 4px solid #CC0000;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #CC0000;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, rgba(204, 0, 0, 0.05) 0%, rgba(255, 102, 0, 0.05) 100%);
+            border-left: 6px solid #CC0000;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 8px;
+        }
+
+        .intro h2 {
+            font-size: 1.5rem;
+            color: #CC0000;
+            margin-bottom: 1rem;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cheat-sheet {
+            margin-bottom: 3rem;
+        }
+
+        .cheat-sheet-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: #FFFFFF;
+            border: 3px solid #CC0000;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+        }
+
+        .cheat-sheet-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .cell {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cell h3 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .cell p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .red-flag {
+            color: #CC0000;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .thread {
+            color: #FF6600;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .why {
+            color: #1a1a1a;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .mantra {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #FFFFFF;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
+            break-inside: avoid;
+        }
+
+        .mantra h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #FF6600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mantra-text {
+            font-size: 1.75rem;
+            font-weight: 900;
+            line-height: 1.6;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .mantra-text span {
+            color: #FF6600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #E5E5E5;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .logo {
+            font-weight: 900;
+            color: #FF6600;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 1rem;
+                background: white;
+            }
+
+            .container {
+                max-width: 100%;
+            }
+
+            header {
+                margin-bottom: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+                page-break-inside: avoid;
+            }
+
+            .intro h2 {
+                font-size: 1.25rem;
+            }
+
+            .intro p {
+                font-size: 1rem;
+            }
+
+            .cheat-sheet-row {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                page-break-inside: avoid;
+            }
+
+            .cell h3 {
+                font-size: 0.75rem;
+            }
+
+            .cell p {
+                font-size: 1rem;
+            }
+
+            .red-flag {
+                font-size: 1.1rem;
+            }
+
+            .thread {
+                font-size: 1.1rem;
+            }
+
+            .why {
+                font-size: 0.9rem;
+            }
+
+            .mantra {
+                padding: 2rem;
+                margin-top: 2rem;
+                page-break-inside: avoid;
+            }
+
+            .mantra h2 {
+                font-size: 1.25rem;
+            }
+
+            .mantra-text {
+                font-size: 1.5rem;
+            }
+
+            footer {
+                margin-top: 2rem;
+                padding-top: 1rem;
+                font-size: 0.8rem;
+            }
+
+            /* Ensure color prints */
+            .cheat-sheet-row,
+            .intro,
+            .mantra {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+            }
+
+            .intro h2 {
+                font-size: 1.25rem;
+            }
+
+            .intro p {
+                font-size: 1rem;
+            }
+
+            .cheat-sheet-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .mantra {
+                padding: 2rem 1.5rem;
+            }
+
+            .mantra-text {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚨 Red Flags Cheat Sheet</h1>
+            <p class="subtitle">Thread Collapse Guide: When S.A.F.E. Won't Work</p>
+        </header>
+
+        <div class="intro">
+            <h2>When to Stop Using S.A.F.E. Immediately</h2>
+            <p><strong>This cheat sheet maps 5 critical red flags to the specific threads that have collapsed.</strong> When you see these red flags, S.A.F.E. won't work because the developmental conditions for holding tension are gone.</p>
+            <p><strong>What to do instead:</strong> Use the SEE & ACT crisis protocol to ensure immediate safety, then return to S.A.F.E. when the conditions stabilize.</p>
+        </div>
+
+        <div class="cheat-sheet">
+            <div class="cheat-sheet-row">
+                <div class="cell">
+                    <h3>🚨 The Red Flag</h3>
+                    <p class="red-flag">Physical Violence / Weapons</p>
+                </div>
+                <div class="cell">
+                    <h3>🧵 Thread Collapsed</h3>
+                    <p class="thread">CONSENT & PAUSE</p>
+                </div>
+                <div class="cell">
+                    <h3>❌ Why S.A.F.E. Won't Work</h3>
+                    <p class="why">There is no "Yes" to check in with, and no "Pause" to hold. The situation has collapsed into active harm. Immediate intervention is required to stop the violence and ensure safety.</p>
+                </div>
+            </div>
+
+            <div class="cheat-sheet-row">
+                <div class="cell">
+                    <h3>🚨 The Red Flag</h3>
+                    <p class="red-flag">Fight / Flight / Freeze (Trauma Response)</p>
+                </div>
+                <div class="cell">
+                    <h3>🧵 Thread Collapsed</h3>
+                    <p class="thread">EMBODIMENT</p>
+                </div>
+                <div class="cell">
+                    <h3>❌ Why S.A.F.E. Won't Work</h3>
+                    <p class="why">The nervous system has hijacked the body. There is no "Stay" to work with—the student is neurologically offline. S.A.F.E. requires embodied presence; trauma responses require co-regulation and safety first.</p>
+                </div>
+            </div>
+
+            <div class="cheat-sheet-row">
+                <div class="cell">
+                    <h3>🚨 The Red Flag</h3>
+                    <p class="red-flag">Abuse or Assault Disclosure</p>
+                </div>
+                <div class="cell">
+                    <h3>🧵 Thread Collapsed</h3>
+                    <p class="thread">CONSENT & PRESENCE</p>
+                </div>
+                <div class="cell">
+                    <h3>❌ Why S.A.F.E. Won't Work</h3>
+                    <p class="why">Abuse is a systemic collapse of consent and safety. This is not a developmental moment—it's a legal and ethical mandate. Report immediately. S.A.F.E. cannot address power structures outside the classroom.</p>
+                </div>
+            </div>
+
+            <div class="cheat-sheet-row">
+                <div class="cell">
+                    <h3>🚨 The Red Flag</h3>
+                    <p class="red-flag">Suicide Risk / Self-Harm</p>
+                </div>
+                <div class="cell">
+                    <h3>🧵 Thread Collapsed</h3>
+                    <p class="thread">BECOMING</p>
+                </div>
+                <div class="cell">
+                    <h3>❌ Why S.A.F.E. Won't Work</h3>
+                    <p class="why">The student cannot see a future self worth becoming. This is not a conflict—it's a crisis of existence. Mental health professionals and crisis intervention are required. S.A.F.E. requires hope; crisis requires safety nets.</p>
+                </div>
+            </div>
+
+            <div class="cheat-sheet-row">
+                <div class="cell">
+                    <h3>🚨 The Red Flag</h3>
+                    <p class="red-flag">Severe Power Imbalance</p>
+                </div>
+                <div class="cell">
+                    <h3>🧵 Thread Collapsed</h3>
+                    <p class="thread">UNCERTAINTY</p>
+                </div>
+                <div class="cell">
+                    <h3>❌ Why S.A.F.E. Won't Work</h3>
+                    <p class="why">When one party has zero social capital or structural safety, there is no "Not Yet" to explore. The weaker party cannot afford to hold tension—they're in survival mode. Address the power structure first.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mantra">
+            <h2>📋 Staff Mantra</h2>
+            <p class="mantra-text">
+                If the threads are <span>intact</span>, use S.A.F.E.<br>
+                If the threads have <span>collapsed</span>, use SEE & ACT.<br>
+                The goal is always the same: <span>restore the conditions for becoming.</span>
+            </p>
+        </div>
+
+        <footer>
+            <p><strong class="logo">The Threads of Becoming</strong> | MV-S.A.F.E. Framework</p>
+            <p>For more information, visit our website or contact your school's S.A.F.E. coordinator.</p>
+            <p>&copy; 2024 The Threads of Becoming. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
