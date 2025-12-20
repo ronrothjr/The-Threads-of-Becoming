@@ -1914,6 +1914,14 @@
     padding: 1.5rem;
   }
 
+  .metricShift {
+    padding: 0.75rem;
+  }
+
+  .metricColumn {
+    padding: 0.75rem;
+  }
+
   .rewireGrid,
   .implementationGrid {
     grid-template-columns: 1fr;
