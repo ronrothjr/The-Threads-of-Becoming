@@ -222,7 +222,14 @@ const BullyingIsPlay: React.FC = () => {
       {/* Why "I Was Just Playing" Is Usually True */}
       <section className={`${styles.justPlaying} section-lg`}>
         <div className="container">
-          <h2>Why "I Was Just Playing" Is Usually True</h2>
+          <details className={styles.contentAccordion}>
+            <summary className={styles.contentSummary}>
+              <span className={styles.contentIcon}>🎮</span>
+              <span className={styles.contentTitle}>Why "I Was Just Playing" Is Usually True</span>
+              <span className={styles.contentChevron}>▼</span>
+            </summary>
+
+            <div className={styles.accordionContent}>
           <p className={styles.sectionIntro}>
             <strong>"I was just playing around" is not denial — it's a developmental reality.</strong>
           </p>
@@ -277,14 +284,22 @@ const BullyingIsPlay: React.FC = () => {
           <p className={styles.conclusion}>
             If you don't address the <em>play-reward loop</em>, punishment just drives it underground.
           </p>
+            </div>
+          </details>
         </div>
       </section>
 
       {/* The Bully is Also a Victim */}
       <section className={`${styles.bullyAsVictim} section-lg`}>
         <div className="container">
-          <h2>The Bully is Also a Victim — Of Collapsed Play They Learned Elsewhere</h2>
+          <details className={styles.contentAccordion}>
+            <summary className={styles.contentSummary}>
+              <span className={styles.contentIcon}>💔</span>
+              <span className={styles.contentTitle}>The Bully is Also a Victim — Of Collapsed Play They Learned Elsewhere</span>
+              <span className={styles.contentChevron}>▼</span>
+            </summary>
 
+            <div className={styles.accordionContent}>
           <div className={styles.learningBox}>
             <p className={styles.uncomfortable}>Here's where it gets uncomfortable:</p>
 
@@ -326,14 +341,22 @@ const BullyingIsPlay: React.FC = () => {
               If not, we're teaching collapsed play at the adult level and punishing it at the peer level.
             </p>
           </div>
+            </div>
+          </details>
         </div>
       </section>
 
       {/* Rewiring the Reward System */}
       <section className={`${styles.rewardSystem} section-lg`}>
         <div className="container">
-          <h2>The Reward System Isn't the Problem — It's What We're Rewarding</h2>
+          <details className={styles.contentAccordion}>
+            <summary className={styles.contentSummary}>
+              <span className={styles.contentIcon}>🧠</span>
+              <span className={styles.contentTitle}>The Reward System Isn't the Problem — It's What We're Rewarding</span>
+              <span className={styles.contentChevron}>▼</span>
+            </summary>
 
+            <div className={styles.accordionContent}>
           <div className={styles.rewardAnalysis}>
             <div className={styles.needsBox}>
               <h3>The bully gets rewards for collapsed play:</h3>
@@ -386,14 +409,22 @@ const BullyingIsPlay: React.FC = () => {
               <p>But if <strong>tension-holding feels more powerful than collapse</strong>, the system changes.</p>
             </div>
           </div>
+            </div>
+          </details>
         </div>
       </section>
 
       {/* The Wrong Goal */}
       <section className={`${styles.wrongGoal} section-lg`}>
         <div className="container">
-          <h2>What if "Bullying Prevention" is the Wrong Goal?</h2>
+          <details className={styles.contentAccordion}>
+            <summary className={styles.contentSummary}>
+              <span className={styles.contentIcon}>🎯</span>
+              <span className={styles.contentTitle}>What if "Bullying Prevention" is the Wrong Goal?</span>
+              <span className={styles.contentChevron}>▼</span>
+            </summary>
 
+            <div className={styles.accordionContent}>
           <div className={styles.goalAnalysis}>
             <p>If bullying is collapsed play, then:</p>
             <ul className={styles.preventionList}>
@@ -441,14 +472,22 @@ const BullyingIsPlay: React.FC = () => {
               </div>
             </div>
           </div>
+            </div>
+          </details>
         </div>
       </section>
 
       {/* Training Kids to Detect Collapse */}
       <section className={`${styles.detectCollapse} section-lg`}>
         <div className="container">
-          <h2>S.A.F.E. is Training Kids to Detect Collapse — Everywhere</h2>
+          <details className={styles.contentAccordion}>
+            <summary className={styles.contentSummary}>
+              <span className={styles.contentIcon}>👁️</span>
+              <span className={styles.contentTitle}>S.A.F.E. is Training Kids to Detect Collapse — Everywhere</span>
+              <span className={styles.contentChevron}>▼</span>
+            </summary>
 
+            <div className={styles.accordionContent}>
           <div className={styles.dangerousIdea}>
             <p>If we teach kids to recognize collapsed Consent, Pause, and Embodiment in bullying...</p>
             <p className={styles.consequence}><strong>They'll start noticing it everywhere:</strong></p>
@@ -476,13 +515,22 @@ const BullyingIsPlay: React.FC = () => {
             <p className={styles.notJustAvoiding}>They're not just avoiding bullying.</p>
             <p className={styles.actuallyLearning}><strong>They're learning to hold power accountable.</strong></p>
           </div>
+            </div>
+          </details>
         </div>
       </section>
 
       {/* Implementation */}
       <section className={`${styles.implementation} section-lg`}>
         <div className="container">
-          <h2>What This Means for Implementation</h2>
+          <details className={styles.contentAccordion}>
+            <summary className={styles.contentSummary}>
+              <span className={styles.contentIcon}>📋</span>
+              <span className={styles.contentTitle}>What This Means for Implementation</span>
+              <span className={styles.contentChevron}>▼</span>
+            </summary>
+
+            <div className={styles.accordionContent}>
           <p className={styles.sectionIntro}>
             S.A.F.E. works when all three levels practice anti-collapse together.
           </p>
@@ -533,6 +581,8 @@ const BullyingIsPlay: React.FC = () => {
             <p className={styles.withoutWith}>Without all three levels, we're just managing symptoms.</p>
             <p className={styles.withoutWith}>With all three levels, <strong>we're changing the conditions that create collapse in the first place.</strong></p>
           </div>
+            </div>
+          </details>
         </div>
       </section>
 

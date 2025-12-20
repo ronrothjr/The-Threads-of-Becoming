@@ -97,6 +97,70 @@
   margin: 0;
 }
 
+/* Content Accordion Styles (shared for all content sections) */
+.contentAccordion {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 3px solid #FF6600;
+}
+
+.contentSummary {
+  padding: 2.5rem;
+  cursor: pointer;
+  background: linear-gradient(135deg,
+    rgba(255, 102, 0, 0.05) 0%,
+    rgba(255, 215, 0, 0.05) 100%);
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.contentSummary::-webkit-details-marker {
+  display: none;
+}
+
+.contentSummary:hover {
+  background: linear-gradient(135deg,
+    rgba(255, 102, 0, 0.08) 0%,
+    rgba(255, 215, 0, 0.08) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 102, 0, 0.15);
+}
+
+.contentIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.contentTitle {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #FF6600;
+  letter-spacing: 0.5px;
+}
+
+.contentChevron {
+  font-size: 1.5rem;
+  color: #FF6600;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.contentAccordion[open] .contentChevron {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  padding: 3rem;
+  background: #FFFFFF;
+}
+
 /* Paradigm Shift Section */
 .paradigmShift {
   background: var(--color-off-white);
@@ -1733,6 +1797,33 @@
 
   .definitionText {
     font-size: 1.125rem;
+  }
+
+  .contentAccordion {
+    margin-bottom: 1.5rem;
+    border-width: 2px;
+  }
+
+  .contentSummary {
+    padding: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .contentIcon {
+    font-size: 2rem;
+  }
+
+  .contentTitle {
+    font-size: 1.125rem;
+  }
+
+  .contentChevron {
+    font-size: 1.25rem;
+  }
+
+  .accordionContent {
+    padding: 1.5rem;
   }
 
   .researchSummary {

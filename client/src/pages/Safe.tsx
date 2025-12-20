@@ -238,15 +238,23 @@ const Safe: React.FC = () => {
             </div>
           </div>
 
-          {/* Research Grounding Link */}
-          <div className={styles.researchCallout}>
-            <h3>Is S.A.F.E. Actually Safe?</h3>
-            <p className={styles.researchQuestion}>
-              From a developmental psychology standpoint, does this approach hold up? Are we threading a needle when we need a fire blanket?
-              What about protected status and the "endangered list"—when does capacity-building cross the line into expecting too much from vulnerable students?
-            </p>
+          {/* Research Grounding Accordion */}
+          <details className={styles.researchAccordion}>
+            <summary className={styles.researchSummary}>
+              <span className={styles.researchIcon}>📚</span>
+              <span className={styles.researchTitle}>Is S.A.F.E. Actually Safe? (Research Evidence & Critical Examination)</span>
+              <span className={styles.researchChevron}>▼</span>
+            </summary>
 
-            <div className={styles.researchEvidence}>
+            <div className={styles.researchContent}>
+              <div className={styles.researchIntro}>
+                <p className={styles.researchQuestion}>
+                  From a developmental psychology standpoint, does this approach hold up? Are we threading a needle when we need a fire blanket?
+                  What about protected status and the "endangered list"—when does capacity-building cross the line into expecting too much from vulnerable students?
+                </p>
+              </div>
+
+              <div className={styles.researchEvidence}>
               <h4>The Research Says: Traditional Approaches Collapse Toward NOW</h4>
               <div className={styles.collapsePoints}>
                 <div className={styles.collapsePoint}>
@@ -329,14 +337,17 @@ const Safe: React.FC = () => {
               </p>
             </div>
 
-            <p className={styles.researchHighlight}>
-              Explore 6 areas of developmental psychology research, honest examination of when S.A.F.E. is NOT enough, and the critical question:
-              <strong> When does anyone come off the endangered list?</strong>
-            </p>
-            <a href="/safe/capacity-building" className={styles.researchLink}>
-              Read the Full Research & Critical Examination →
-            </a>
-          </div>
+            <div className={styles.researchFooter}>
+              <p className={styles.researchHighlight}>
+                Want even more depth? Explore 6 areas of developmental psychology research, honest examination of when S.A.F.E. is NOT enough, and the critical question:
+                <strong> When does anyone come off the endangered list?</strong>
+              </p>
+              <a href="/safe/capacity-building" className={styles.researchLink}>
+                Read the Full Research & Critical Examination →
+              </a>
+            </div>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -345,6 +356,14 @@ const Safe: React.FC = () => {
         <div className="container">
           <h2>How S.A.F.E. Creates Safety for Everyone</h2>
 
+          <details className={styles.safetyAccordion}>
+            <summary className={styles.safetySummary}>
+              <span className={styles.safetyIcon}>🛡️</span>
+              <span className={styles.safetyTitle}>See How S.A.F.E. Protects Each Person (Kid Being Hurt, Kid Doing Harm, Witness, Teacher)</span>
+              <span className={styles.safetyChevron}>▼</span>
+            </summary>
+
+            <div className={styles.safetyContent}>
           <div className={styles.safetyGrid}>
             <div className={styles.safetyCard}>
               <h3>For the Kid Being Hurt</h3>
@@ -439,6 +458,8 @@ const Safe: React.FC = () => {
               </div>
             </div>
           </div>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -855,82 +876,112 @@ const Safe: React.FC = () => {
 
           <div className={styles.populationGrid}>
             {/* Trauma */}
-            <div className={styles.populationCard}>
-              <h3>Students with Trauma Histories</h3>
-              <h4>Key Adaptations:</h4>
-              <ul>
-                <li><strong>Start with safety:</strong> "Are you safe right now? Can you feel your feet on the floor?"</li>
-                <li><strong>Go slower:</strong> Don't rush to "feel both sides" if they're in survival mode</li>
-                <li><strong>Body first:</strong> Help them regulate before processing</li>
-                <li><strong>Small steps:</strong> "Today we just keep you safe. S.A.F.E. can wait."</li>
-              </ul>
-              <p className={styles.populationNote}>Requires: Trauma-informed counseling, safety planning, possible IEP/504 accommodations</p>
-            </div>
+            <details className={styles.populationAccordion}>
+              <summary className={styles.populationSummary}>
+                <span className={styles.populationTitle}>Students with Trauma Histories</span>
+                <span className={styles.populationChevron}>▼</span>
+              </summary>
+              <div className={styles.populationContent}>
+                <h4>Key Adaptations:</h4>
+                <ul>
+                  <li><strong>Start with safety:</strong> "Are you safe right now? Can you feel your feet on the floor?"</li>
+                  <li><strong>Go slower:</strong> Don't rush to "feel both sides" if they're in survival mode</li>
+                  <li><strong>Body first:</strong> Help them regulate before processing</li>
+                  <li><strong>Small steps:</strong> "Today we just keep you safe. S.A.F.E. can wait."</li>
+                </ul>
+                <p className={styles.populationNote}>Requires: Trauma-informed counseling, safety planning, possible IEP/504 accommodations</p>
+              </div>
+            </details>
 
             {/* Autism */}
-            <div className={styles.populationCard}>
-              <h3>Students on the Autism Spectrum</h3>
-              <h4>Key Adaptations:</h4>
-              <ul>
-                <li><strong>Concrete language:</strong> Avoid metaphors—"You wanted X, they wanted Y"</li>
-                <li><strong>Visual supports:</strong> Social stories, emotion charts, picture sequences</li>
-                <li><strong>Explicit teaching:</strong> "Your brain can think about two things. Let's practice."</li>
-                <li><strong>Pre-teach:</strong> Practice S.A.F.E. in calm moments, not just conflicts</li>
-              </ul>
-              <p className={styles.populationNote}>Requires: Social skills instruction, visual aids, sensory accommodations, IEP support</p>
-            </div>
+            <details className={styles.populationAccordion}>
+              <summary className={styles.populationSummary}>
+                <span className={styles.populationTitle}>Students on the Autism Spectrum</span>
+                <span className={styles.populationChevron}>▼</span>
+              </summary>
+              <div className={styles.populationContent}>
+                <h4>Key Adaptations:</h4>
+                <ul>
+                  <li><strong>Concrete language:</strong> Avoid metaphors—"You wanted X, they wanted Y"</li>
+                  <li><strong>Visual supports:</strong> Social stories, emotion charts, picture sequences</li>
+                  <li><strong>Explicit teaching:</strong> "Your brain can think about two things. Let's practice."</li>
+                  <li><strong>Pre-teach:</strong> Practice S.A.F.E. in calm moments, not just conflicts</li>
+                </ul>
+                <p className={styles.populationNote}>Requires: Social skills instruction, visual aids, sensory accommodations, IEP support</p>
+              </div>
+            </details>
 
             {/* ADHD */}
-            <div className={styles.populationCard}>
-              <h3>Students with ADHD</h3>
-              <h4>Key Adaptations:</h4>
-              <ul>
-                <li><strong>Keep it short:</strong> "30 seconds. What happened?"</li>
-                <li><strong>Movement okay:</strong> "You can stand/pace while we talk"</li>
-                <li><strong>Action-oriented:</strong> "What are you going to do right now?"</li>
-                <li><strong>Visual reminders:</strong> S.A.F.E. card on desk or in pocket</li>
-              </ul>
-              <p className={styles.populationNote}>Requires: Movement breaks, visual cues, repetition, immediate reinforcement</p>
-            </div>
+            <details className={styles.populationAccordion}>
+              <summary className={styles.populationSummary}>
+                <span className={styles.populationTitle}>Students with ADHD</span>
+                <span className={styles.populationChevron}>▼</span>
+              </summary>
+              <div className={styles.populationContent}>
+                <h4>Key Adaptations:</h4>
+                <ul>
+                  <li><strong>Keep it short:</strong> "30 seconds. What happened?"</li>
+                  <li><strong>Movement okay:</strong> "You can stand/pace while we talk"</li>
+                  <li><strong>Action-oriented:</strong> "What are you going to do right now?"</li>
+                  <li><strong>Visual reminders:</strong> S.A.F.E. card on desk or in pocket</li>
+                </ul>
+                <p className={styles.populationNote}>Requires: Movement breaks, visual cues, repetition, immediate reinforcement</p>
+              </div>
+            </details>
 
             {/* Anxiety */}
-            <div className={styles.populationCard}>
-              <h3>Students with Anxiety Disorders</h3>
-              <h4>Key Adaptations:</h4>
-              <ul>
-                <li><strong>Ground first:</strong> "Let's take 3 deep breaths before we talk"</li>
-                <li><strong>Time-limit difficult parts:</strong> "Just for 10 seconds. Both are true. Then we let it go."</li>
-                <li><strong>Reassure often:</strong> "This isn't about who's right or wrong"</li>
-                <li><strong>Small, concrete steps:</strong> "Just for today, what's one small thing?"</li>
-              </ul>
-              <p className={styles.populationNote}>Requires: Anxiety management tools, counseling support, predictability</p>
-            </div>
+            <details className={styles.populationAccordion}>
+              <summary className={styles.populationSummary}>
+                <span className={styles.populationTitle}>Students with Anxiety Disorders</span>
+                <span className={styles.populationChevron}>▼</span>
+              </summary>
+              <div className={styles.populationContent}>
+                <h4>Key Adaptations:</h4>
+                <ul>
+                  <li><strong>Ground first:</strong> "Let's take 3 deep breaths before we talk"</li>
+                  <li><strong>Time-limit difficult parts:</strong> "Just for 10 seconds. Both are true. Then we let it go."</li>
+                  <li><strong>Reassure often:</strong> "This isn't about who's right or wrong"</li>
+                  <li><strong>Small, concrete steps:</strong> "Just for today, what's one small thing?"</li>
+                </ul>
+                <p className={styles.populationNote}>Requires: Anxiety management tools, counseling support, predictability</p>
+              </div>
+            </details>
 
             {/* ELL */}
-            <div className={styles.populationCard}>
-              <h3>English Language Learners</h3>
-              <h4>Key Adaptations:</h4>
-              <ul>
-                <li><strong>Simple language:</strong> "What happened?" not "What do you notice?"</li>
-                <li><strong>Visual supports:</strong> Draw it, act it out, use pictures</li>
-                <li><strong>Physical representation:</strong> Hold two objects for "both sides"</li>
-                <li><strong>Bilingual materials:</strong> Translated posters and parent letters</li>
-              </ul>
-              <p className={styles.populationNote}>Requires: ESL services, visual aids, cultural liaison, simplified vocabulary</p>
-            </div>
+            <details className={styles.populationAccordion}>
+              <summary className={styles.populationSummary}>
+                <span className={styles.populationTitle}>English Language Learners</span>
+                <span className={styles.populationChevron}>▼</span>
+              </summary>
+              <div className={styles.populationContent}>
+                <h4>Key Adaptations:</h4>
+                <ul>
+                  <li><strong>Simple language:</strong> "What happened?" not "What do you notice?"</li>
+                  <li><strong>Visual supports:</strong> Draw it, act it out, use pictures</li>
+                  <li><strong>Physical representation:</strong> Hold two objects for "both sides"</li>
+                  <li><strong>Bilingual materials:</strong> Translated posters and parent letters</li>
+                </ul>
+                <p className={styles.populationNote}>Requires: ESL services, visual aids, cultural liaison, simplified vocabulary</p>
+              </div>
+            </details>
 
             {/* ODD */}
-            <div className={styles.populationCard}>
-              <h3>Students with ODD</h3>
-              <h4>Key Adaptations:</h4>
-              <ul>
-                <li><strong>Offer choices:</strong> "Do you want to talk here or walk and talk?"</li>
-                <li><strong>Frame as strength:</strong> "Strong people can hold two things at once"</li>
-                <li><strong>Their choice:</strong> "You decide. Who are you choosing to be?"</li>
-                <li><strong>Stay neutral:</strong> Don't make it a power struggle</li>
-              </ul>
-              <p className={styles.populationNote}>Requires: Consistent consequences, relationship-building, possible therapy/BIP</p>
-            </div>
+            <details className={styles.populationAccordion}>
+              <summary className={styles.populationSummary}>
+                <span className={styles.populationTitle}>Students with ODD</span>
+                <span className={styles.populationChevron}>▼</span>
+              </summary>
+              <div className={styles.populationContent}>
+                <h4>Key Adaptations:</h4>
+                <ul>
+                  <li><strong>Offer choices:</strong> "Do you want to talk here or walk and talk?"</li>
+                  <li><strong>Frame as strength:</strong> "Strong people can hold two things at once"</li>
+                  <li><strong>Their choice:</strong> "You decide. Who are you choosing to be?"</li>
+                  <li><strong>Stay neutral:</strong> Don't make it a power struggle</li>
+                </ul>
+                <p className={styles.populationNote}>Requires: Consistent consequences, relationship-building, possible therapy/BIP</p>
+              </div>
+            </details>
           </div>
 
           <div className={styles.specialNote}>

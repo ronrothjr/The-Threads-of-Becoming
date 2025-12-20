@@ -1739,6 +1739,263 @@
   }
 }
 
+/* Research Accordion Styles */
+.researchAccordion {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  margin-top: 3rem;
+  border: 3px solid #0066CC;
+}
+
+.researchSummary {
+  padding: 2.5rem;
+  cursor: pointer;
+  background: linear-gradient(135deg,
+    rgba(0, 102, 204, 0.05) 0%,
+    rgba(0, 153, 255, 0.05) 100%);
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.researchSummary::-webkit-details-marker {
+  display: none;
+}
+
+.researchSummary:hover {
+  background: linear-gradient(135deg,
+    rgba(0, 102, 204, 0.08) 0%,
+    rgba(0, 153, 255, 0.08) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15);
+}
+
+.researchIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.researchTitle {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #0066CC;
+  letter-spacing: 0.5px;
+}
+
+.researchChevron {
+  font-size: 1.5rem;
+  color: #0066CC;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.researchAccordion[open] .researchChevron {
+  transform: rotate(180deg);
+}
+
+.researchContent {
+  padding: 3rem;
+  background: #FFFFFF;
+}
+
+.researchIntro {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.03) 0%, rgba(0, 153, 255, 0.03) 100%);
+  border-left: 6px solid #0066CC;
+  border-radius: 8px;
+}
+
+.researchIntro .researchQuestion {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 0;
+}
+
+.researchFooter {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.03) 0%, rgba(0, 153, 255, 0.03) 100%);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.researchFooter .researchHighlight {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.researchFooter .researchLink {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #0066CC;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.researchFooter .researchLink:hover {
+  background: #0052A3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.3);
+}
+
+/* Safety Accordion Styles */
+.safetyAccordion {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  border: 3px solid #00CC44;
+}
+
+.safetySummary {
+  padding: 2.5rem;
+  cursor: pointer;
+  background: linear-gradient(135deg,
+    rgba(0, 204, 68, 0.05) 0%,
+    rgba(0, 255, 85, 0.05) 100%);
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.safetySummary::-webkit-details-marker {
+  display: none;
+}
+
+.safetySummary:hover {
+  background: linear-gradient(135deg,
+    rgba(0, 204, 68, 0.08) 0%,
+    rgba(0, 255, 85, 0.08) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 204, 68, 0.15);
+}
+
+.safetyIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.safetyTitle {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #00CC44;
+  letter-spacing: 0.5px;
+}
+
+.safetyChevron {
+  font-size: 1.5rem;
+  color: #00CC44;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.safetyAccordion[open] .safetyChevron {
+  transform: rotate(180deg);
+}
+
+.safetyContent {
+  padding: 3rem;
+  background: #FFFFFF;
+}
+
+/* Population Accordion Styles */
+.populationAccordion {
+  background: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid #9966CC;
+}
+
+.populationSummary {
+  padding: 1.5rem;
+  cursor: pointer;
+  background: linear-gradient(135deg,
+    rgba(153, 102, 204, 0.05) 0%,
+    rgba(204, 153, 255, 0.05) 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  list-style: none;
+}
+
+.populationSummary::-webkit-details-marker {
+  display: none;
+}
+
+.populationSummary:hover {
+  background: linear-gradient(135deg,
+    rgba(153, 102, 204, 0.08) 0%,
+    rgba(204, 153, 255, 0.08) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(153, 102, 204, 0.15);
+}
+
+.populationTitle {
+  flex-grow: 1;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #7744AA;
+}
+
+.populationChevron {
+  font-size: 1.25rem;
+  color: #7744AA;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.populationAccordion[open] .populationChevron {
+  transform: rotate(180deg);
+}
+
+.populationContent {
+  padding: 1.5rem;
+  background: #FFFFFF;
+}
+
+.populationContent h4 {
+  color: #7744AA;
+  margin-bottom: 1rem;
+}
+
+.populationContent ul {
+  margin-bottom: 1rem;
+}
+
+.populationContent li {
+  margin-bottom: 0.75rem;
+}
+
+.populationNote {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(153, 102, 204, 0.05);
+  border-left: 4px solid #9966CC;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+}
+
 /* Critique Accordion Styles */
 .critiqueAccordion {
   background: #FFFFFF;
@@ -2279,6 +2536,106 @@
 }
 
 @media (max-width: 768px) {
+  .researchAccordion {
+    margin-top: 2rem;
+    border-width: 2px;
+  }
+
+  .researchSummary {
+    padding: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .researchIcon {
+    font-size: 2rem;
+  }
+
+  .researchTitle {
+    font-size: 1.125rem;
+  }
+
+  .researchChevron {
+    font-size: 1.25rem;
+  }
+
+  .researchContent {
+    padding: 1.5rem;
+  }
+
+  .researchIntro {
+    padding: 1.5rem;
+  }
+
+  .researchIntro .researchQuestion {
+    font-size: 1rem;
+  }
+
+  .researchFooter {
+    padding: 1.5rem;
+  }
+
+  .researchFooter .researchHighlight {
+    font-size: 1rem;
+  }
+
+  .researchFooter .researchLink {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .safetyAccordion {
+    margin-top: 1.5rem;
+    border-width: 2px;
+  }
+
+  .safetySummary {
+    padding: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .safetyIcon {
+    font-size: 2rem;
+  }
+
+  .safetyTitle {
+    font-size: 1.125rem;
+  }
+
+  .safetyChevron {
+    font-size: 1.25rem;
+  }
+
+  .safetyContent {
+    padding: 1.5rem;
+  }
+
+  .populationAccordion {
+    border-width: 2px;
+  }
+
+  .populationSummary {
+    padding: 1.25rem;
+  }
+
+  .populationTitle {
+    font-size: 1rem;
+  }
+
+  .populationChevron {
+    font-size: 1.125rem;
+  }
+
+  .populationContent {
+    padding: 1.25rem;
+  }
+
+  .populationNote {
+    font-size: 0.85rem;
+    padding: 0.875rem;
+  }
+
   .critiqueAccordion {
     margin-top: 2rem;
     border-width: 2px;
