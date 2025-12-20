@@ -598,11 +598,11 @@ const Safe: React.FC = () => {
             <p className={styles.emphasis}>The order matters: <strong>Safety FIRST → Then S.A.F.E.</strong></p>
           </div>
 
-          {/* Full Critique & Red Flags Accordion */}
+          {/* Misuse Prevention Accordion */}
           <details className={styles.critiqueAccordion}>
             <summary className={styles.critiqueSummary}>
               <span className={styles.critiqueIcon}>🚨</span>
-              <span className={styles.critiqueText}>When to Stop Using S.A.F.E.: A Full Critique & Red Flags Guide</span>
+              <span className={styles.critiqueText}>Misuse Prevention: When S.A.F.E. Must Not Be Used</span>
               <span className={styles.critiqueChevron}>▼</span>
             </summary>
 
@@ -610,6 +610,7 @@ const Safe: React.FC = () => {
               {/* Introduction */}
               <div className={styles.critiqueIntro}>
                 <p>While the S.A.F.E. framework is grounded in developmental psychology, it faces significant practical and philosophical challenges that could lead to failure if not managed correctly. This critique helps ensure responsible implementation.</p>
+                <p className={styles.consequencesClarification}><strong>Important:</strong> Using S.A.F.E. does not eliminate consequences; it changes how learning and repair occur after safety is secured.</p>
               </div>
 
               {/* The 5 Critiques */}

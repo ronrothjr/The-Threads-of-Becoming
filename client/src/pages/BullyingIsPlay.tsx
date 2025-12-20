@@ -10,6 +10,14 @@ const BullyingIsPlay: React.FC = () => {
         <p className={styles.subtitle}>
           How Bullying is Collapsed Play and How to Disrupt Its Reward System
         </p>
+        <div className={styles.framingStatement}>
+          <p className={styles.framingQuote}>
+            "I was just playing around" is usually true.
+          </p>
+          <p className={styles.framingTruth}>
+            And that truth is exactly why most anti-bullying approaches fail.
+          </p>
+        </div>
         <div className={styles.revolutionaryCore}>
           <p className={styles.coreStatement}>
             We don't stop bullying.<br />
@@ -79,6 +87,11 @@ const BullyingIsPlay: React.FC = () => {
           <p className={styles.sectionIntro}>
             Bullying is <strong>play that collapses three critical threads</strong>. Understanding this changes everything.
           </p>
+          <div className={styles.collapseDefinition}>
+            <p className={styles.definitionText}>
+              Play becomes bullying when consent, pause, and embodied feedback are no longer available.
+            </p>
+          </div>
 
           <div className={styles.collapseGrid}>
             {/* Consent Collapse */}

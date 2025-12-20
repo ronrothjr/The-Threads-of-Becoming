@@ -1823,6 +1823,18 @@
   margin-bottom: 0;
 }
 
+.consequencesClarification {
+  background: rgba(255, 102, 0, 0.08);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 2px solid #FF6600;
+  font-size: 1.125rem !important;
+}
+
+.consequencesClarification strong {
+  color: #FF6600;
+}
+
 .critiquesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

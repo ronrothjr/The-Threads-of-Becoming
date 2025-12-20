@@ -38,11 +38,42 @@
 .subtitle {
   font-size: 1.75rem;
   color: #FFFFFF;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
   z-index: 1;
   opacity: 0.95;
   font-weight: 600;
+}
+
+.framingStatement {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2.5rem;
+  background: linear-gradient(135deg,
+    rgba(255, 102, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.1) 100%);
+  border-left: 6px solid #FFD700;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.framingQuote {
+  font-size: 1.875rem;
+  color: #FFD700;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.framingTruth {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.95;
 }
 
 .revolutionaryCore {
@@ -184,8 +215,28 @@
   font-size: 1.25rem;
   color: #333333;
   max-width: 900px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 1.5rem;
   line-height: 1.8;
+}
+
+.collapseDefinition {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg,
+    rgba(255, 102, 0, 0.08) 0%,
+    rgba(255, 215, 0, 0.08) 100%);
+  border: 3px solid #FF6600;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.definitionText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .collapseGrid {
@@ -1628,6 +1679,19 @@
     font-size: 1.25rem;
   }
 
+  .framingStatement {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .framingQuote {
+    font-size: 1.375rem;
+  }
+
+  .framingTruth {
+    font-size: 1.125rem;
+  }
+
   .revolutionaryCore {
     padding: 2rem;
   }
@@ -1660,6 +1724,15 @@
   .revolutionary h2,
   .research h2 {
     font-size: 2rem;
+  }
+
+  .collapseDefinition {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .definitionText {
+    font-size: 1.125rem;
   }
 
   .researchSummary {
