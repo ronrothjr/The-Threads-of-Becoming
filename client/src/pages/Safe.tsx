@@ -710,6 +710,14 @@ const Safe: React.FC = () => {
           </p>
 
           <div className={styles.developmentGrid}>
+            <a href="/safe/bullying-is-play" className={styles.developmentCard}>
+              <h3>🔥 Bullying is Play</h3>
+              <p>
+                The paradigm shift from anti-bullying to anti-collapse. How bullying is collapsed play and how to disrupt its reward system.
+              </p>
+              <span className={styles.cardLink}>Read the Revolutionary Framework →</span>
+            </a>
+
             <a href="/safe/parent-education" className={styles.developmentCard}>
               <h3>👨‍👩‍👧‍👦 Parent Education</h3>
               <p>
