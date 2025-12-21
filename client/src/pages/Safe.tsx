@@ -31,6 +31,135 @@ const Safe: React.FC = () => {
         </div>
       </section>
 
+      {/* Anti-Bullying Trap */}
+      <section className={`${styles.antiBullyingTrap} section-lg`}>
+        <div className="container">
+          <h2>The Anti-Bullying Trap</h2>
+          <p className={styles.trapTeaser}>
+            Traditional anti-bullying programs may be creating the very dynamics they claim to prevent—producing victim identity,
+            atrophying conflict capacity, and collapsing every Thread in the name of protecting children.
+          </p>
+
+          <details className={styles.trapAccordion}>
+            <summary className={styles.trapSummary}>
+              <span className={styles.trapIcon}>⚠️</span>
+              <span className={styles.trapTitle}>Why Protection Without Capacity Fails Our Children</span>
+              <span className={styles.trapChevron}>▼</span>
+            </summary>
+
+            <div className={styles.trapContent}>
+              <h3>The 7 Unexamined Assumptions</h3>
+
+              <div className={styles.assumptionsList}>
+                <div className={styles.assumption}>
+                  <h4>1. Children Cannot Navigate Social Conflict</h4>
+                  <p>
+                    The policy: "Report immediately. Don't handle it yourself." This collapses <strong>BECOMING</strong> into fixed incapacity
+                    and eliminates <strong>PAUSE</strong>—no space between experience and adult intervention.
+                  </p>
+                </div>
+
+                <div className={styles.assumption}>
+                  <h4>2. Every Negative Social Interaction Is Bullying</h4>
+                  <p>
+                    Zero tolerance teaches children that any uncomfortable social experience is a violation, violating <strong>CONSENT</strong>
+                    paradoxically: telling children they have a right to be included (violating others' consent to choose their friends).
+                  </p>
+                </div>
+
+                <div className={styles.assumption}>
+                  <h4>3. Immediate Reporting Produces Better Outcomes</h4>
+                  <p>
+                    The reporting imperative eliminates <strong>PAUSE</strong>. Children learn: "Don't reflect. Don't wait. Report immediately."
+                    This produces adults who escalate to HR, lawyers, social media at the first sign of conflict.
+                  </p>
+                </div>
+
+                <div className={styles.assumption}>
+                  <h4>4. The Victim/Bully Binary Is Real and Useful</h4>
+                  <p>
+                    If victim = protection + moral authority, and bully = punishment + shame, children learn to race to the victim position.
+                    This collapses <strong>BECOMING</strong> into fixed identity: "I am a victim" or "I am a bully."
+                  </p>
+                </div>
+
+                <div className={styles.assumption}>
+                  <h4>5. Parents Are Helpful Allies</h4>
+                  <p>
+                    Parents receive distorted narratives and often escalate conflicts. The <strong>MEMORY</strong> problem: once the story
+                    is told, it crystallizes and becomes fixed truth—even if incomplete or self-serving.
+                  </p>
+                </div>
+
+                <div className={styles.assumption}>
+                  <h4>6. Prevention Means Awareness Campaigns</h4>
+                  <p>
+                    Awareness lives in the head; capacity lives in the body. Traditional anti-bullying lacks <strong>EMBODIMENT</strong>—all
+                    cognition ("bullying is wrong") with no somatic capacity building.
+                  </p>
+                </div>
+
+                <div className={styles.assumption}>
+                  <h4>7. Schools Can (and Should) Eliminate Social Harm</h4>
+                  <p>
+                    The system demands certainty: "Is this bullying or not?" But social life requires holding <strong>UNCERTAINTY</strong>.
+                    Systems that can't hold uncertainty produce false certainty and missed complexity.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.victimFactory}>
+                <h3>The Victim Identity Factory</h3>
+                <p className={styles.factoryHighlight}>
+                  Traditional anti-bullying doesn't just fail to help children—it actively produces victim identity.
+                </p>
+                <p>
+                  When children learn that presenting as a victim gets them protection, attention, and moral authority, while the other person gets punished,
+                  the system creates an incentive to claim victim status. This prevents children from developing the <strong>CONSENT</strong> capacity
+                  to say "no" because they never get to practice—adults swoop in every time.
+                </p>
+              </div>
+
+              <div className={styles.threadCollapse}>
+                <h3>What Traditional Anti-Bullying Actually Collapses</h3>
+                <div className={styles.collapseGrid}>
+                  <div className={styles.collapseItem}>
+                    <strong>PRESENCE:</strong> Removes children from their own social "between"—adults occupy the space
+                  </div>
+                  <div className={styles.collapseItem}>
+                    <strong>CONSENT:</strong> Doesn't ask if children want intervention—imposes adult will
+                  </div>
+                  <div className={styles.collapseItem}>
+                    <strong>MEMORY:</strong> Crystallizes distorted narratives immediately—no space for revision
+                  </div>
+                  <div className={styles.collapseItem}>
+                    <strong>PAUSE:</strong> Eliminates reflection—immediate reporting, speed over wisdom
+                  </div>
+                  <div className={styles.collapseItem}>
+                    <strong>EMBODIMENT:</strong> All cognition (awareness), no body (capacity building)
+                  </div>
+                  <div className={styles.collapseItem}>
+                    <strong>UNCERTAINTY:</strong> Demands false certainty—forces binary determinations
+                  </div>
+                  <div className={styles.collapseItem}>
+                    <strong>BECOMING:</strong> Fixes identity (victim/bully) rather than holding becoming
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.trapFooter}>
+                <p className={styles.trapHighlight}>
+                  S.A.F.E. and Threads offer a paradigm shift: from protection without capacity to capacity-building within appropriate protection.
+                </p>
+                <a href="/safe/anti-bullying-trap" className={styles.trapLink}>
+                  Read the Full Critique: The Anti-Bullying Trap →
+                </a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
       {/* The Framework */}
       <section className={`${styles.framework} section-lg`}>
         <div className="container">

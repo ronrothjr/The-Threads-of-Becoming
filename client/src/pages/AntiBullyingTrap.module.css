@@ -1,0 +1,884 @@
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+/* Introduction */
+.introduction {
+  background: #FFFFFF;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.introLead {
+  font-size: 1.5rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 600;
+}
+
+/* Assumptions Section */
+.assumptions {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.assumptions h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #8B0000;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.assumptionCard {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+  border-left: 8px solid #FF8C00;
+}
+
+.assumptionCard h3 {
+  font-size: 2rem;
+  color: #8B0000;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.assumptionCard h4 {
+  font-size: 1.375rem;
+  color: #333333;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.belief,
+.policy,
+.teaches,
+.prevents,
+.actuallyHappens,
+.actuallyDoes,
+.perverseIncentives {
+  margin-bottom: 2rem;
+}
+
+.belief p,
+.policy p {
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.teaches ul,
+.prevents ul,
+.actuallyHappens ul,
+.actuallyDoes ul {
+  list-style: disc;
+  padding-left: 2rem;
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.teaches li,
+.prevents li,
+.actuallyHappens li,
+.actuallyDoes li {
+  margin-bottom: 0.5rem;
+}
+
+/* Special Callouts */
+.threadCollapse,
+.consentParadox,
+.pauseCollapse,
+.perverseIncentive,
+.becomingCollapse,
+.memoryDistortion,
+.consentViolation,
+.embodimentAbsence,
+.uncertaintyAvoidance {
+  background: rgba(139, 0, 0, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #8B0000;
+  margin-top: 2rem;
+}
+
+.threadCollapse h4,
+.consentParadox h4,
+.pauseCollapse h4,
+.perverseIncentive h4,
+.becomingCollapse h4,
+.memoryDistortion h4,
+.consentViolation h4,
+.embodimentAbsence h4,
+.uncertaintyAvoidance h4 {
+  font-size: 1.25rem;
+  color: #8B0000;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.threadCollapse p,
+.consentParadox p,
+.pauseCollapse p,
+.perverseIncentive p,
+.becomingCollapse p,
+.memoryDistortion p,
+.consentViolation p,
+.embodimentAbsence p,
+.uncertaintyAvoidance p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.threadCollapse p:last-child,
+.consentParadox p:last-child,
+.pauseCollapse p:last-child,
+.perverseIncentive p:last-child,
+.becomingCollapse p:last-child,
+.memoryDistortion p:last-child,
+.consentViolation p:last-child,
+.embodimentAbsence p:last-child,
+.uncertaintyAvoidance p:last-child {
+  margin-bottom: 0;
+}
+
+.consentMessage,
+.pauseMessage,
+.childIntent,
+.safeContrast,
+.becomingAlternative {
+  font-weight: 600;
+  color: #8B0000;
+  margin-top: 1rem;
+}
+
+.adultConsequence {
+  font-weight: 600;
+  color: #B22222;
+  margin-top: 1rem;
+}
+
+.incentiveSetup {
+  font-style: italic;
+}
+
+.incentiveConclusion {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8B0000;
+  margin: 1rem 0;
+}
+
+.produces {
+  margin-top: 1.5rem;
+}
+
+.produces h4 {
+  font-size: 1.25rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.produces ul {
+  list-style: disc;
+  padding-left: 2rem;
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.produces li {
+  margin-bottom: 0.5rem;
+}
+
+.parentResponse {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Incentive Categories */
+.incentiveCategory {
+  margin-bottom: 1.5rem;
+}
+
+.incentiveCategory h5 {
+  font-size: 1.125rem;
+  color: #8B0000;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.incentiveCategory ul {
+  list-style: disc;
+  padding-left: 2rem;
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.incentiveCategory li {
+  margin-bottom: 0.5rem;
+}
+
+.uncertaintyProduces {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Victim Factory Section */
+.victimFactory {
+  background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
+  padding: 4rem 2rem;
+  color: #FFFFFF;
+}
+
+.victimFactory h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.factoryLead,
+.factoryThesis {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.factoryThesis {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.howItWorks {
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+.howItWorks h3 {
+  font-size: 2rem;
+  color: #8B0000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.victimSteps {
+  list-style: none;
+  padding: 0;
+}
+
+.victimSteps li {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.victimSteps li strong {
+  color: #8B0000;
+}
+
+.consentCollapseYes {
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+.consentCollapseYes h3 {
+  font-size: 2rem;
+  color: #8B0000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.consentCollapseYes p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.consentCollapseYes ul {
+  list-style: disc;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.consentCollapseYes li {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.systemsRole,
+.weakensCapacity {
+  font-weight: 600;
+  color: #8B0000;
+  font-size: 1.125rem;
+  margin: 1.5rem 0;
+}
+
+/* Produces Section */
+.produces {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+}
+
+.produces h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #8B0000;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.effectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.effectsCard {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.effectsCard h3 {
+  font-size: 1.75rem;
+  color: #8B0000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.effectsCard p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.effectsCard ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.effectsCard li {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.effectsCard li strong {
+  color: #8B0000;
+}
+
+/* Threads Critique Section */
+.threadsCritique {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  padding: 4rem 2rem;
+  color: #FFFFFF;
+}
+
+.threadsCritique h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.critiqueTable {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.critiqueRow {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.critiqueRow:last-child {
+  border-bottom: none;
+}
+
+.threadName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8B0000;
+  display: flex;
+  align-items: center;
+}
+
+.collapseDescription {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  display: flex;
+  align-items: center;
+}
+
+.critiqueConclusion {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Alternative Section */
+.alternative {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.alternative h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #8B0000;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.paradigmShift,
+.fundamentalDifference,
+.capacityFocus {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+}
+
+.paradigmShift h3,
+.fundamentalDifference h3,
+.capacityFocus h3 {
+  font-size: 2rem;
+  color: #8B0000;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.comparisonTable {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comparisonRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.traditionalCell {
+  font-size: 1.0625rem;
+  color: #666666;
+  text-align: right;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  color: #8B0000;
+  font-weight: 700;
+}
+
+.safeCell {
+  font-size: 1.0625rem;
+  color: #333333;
+  font-weight: 600;
+}
+
+.differenceComparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.traditionalApproach,
+.safeApproach {
+  background: rgba(0, 0, 0, 0.02);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.traditionalApproach h4,
+.safeApproach h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.traditionalApproach h4 {
+  color: #666666;
+}
+
+.safeApproach h4 {
+  color: #8B0000;
+}
+
+.traditionalApproach p,
+.safeApproach p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.traditionalApproach p {
+  color: #666666;
+}
+
+.safeApproach p {
+  color: #333333;
+  font-weight: 600;
+}
+
+.capacityFocus > p {
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.safeSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.safeStep {
+  background: rgba(139, 0, 0, 0.05);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid #8B0000;
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.safeStep strong {
+  color: #8B0000;
+  font-size: 1.125rem;
+}
+
+.capacityProduces {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #8B0000;
+  margin-bottom: 1rem;
+}
+
+.capacityFocus ul {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.capacityFocus li {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+/* Hard Questions Section */
+.hardQuestions {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+}
+
+.hardQuestions h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #8B0000;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.questionCard {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  background: var(--color-off-white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-left: 6px solid #FF8C00;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.questionCard h3 {
+  font-size: 1.75rem;
+  color: #8B0000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.questionCard p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.keyQuestion {
+  background: rgba(139, 0, 0, 0.05);
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #8B0000;
+}
+
+/* Conclusion Section */
+.conclusion {
+  background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
+  padding: 4rem 2rem;
+  color: #FFFFFF;
+}
+
+.conclusion h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.conclusionLead {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  font-size: 1.375rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.anthropology {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.anthropologyTraditional,
+.anthropologyThreads {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.anthropologyTraditional h4,
+.anthropologyThreads h4 {
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.anthropologyTraditional h4 {
+  color: #666666;
+}
+
+.anthropologyThreads h4 {
+  color: #8B0000;
+}
+
+.anthropologyTraditional p,
+.anthropologyThreads p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+}
+
+.anthropologyNote,
+.courage {
+  max-width: 900px;
+  margin: 2rem auto;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-align: center;
+  font-style: italic;
+}
+
+.workAhead {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+}
+
+.workAhead h3 {
+  font-size: 1.75rem;
+  color: #8B0000;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.workAhead ul {
+  list-style: none;
+  padding: 0;
+}
+
+.workAhead li {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.workAhead li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #8B0000;
+  font-weight: 700;
+}
+
+.returnToSafe {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.returnLink {
+  display: inline-block;
+  padding: 1.25rem 2.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #8B0000;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.returnLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  background: #FFFFFF;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .assumptions h2,
+  .victimFactory h2,
+  .produces h2,
+  .threadsCritique h2,
+  .alternative h2,
+  .hardQuestions h2,
+  .conclusion h2 {
+    font-size: 2rem;
+  }
+
+  .assumptionCard {
+    padding: 1.5rem;
+  }
+
+  .assumptionCard h3 {
+    font-size: 1.5rem;
+  }
+
+  .critiqueRow {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .threadName {
+    font-size: 1.125rem;
+  }
+
+  .comparisonRow {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .traditionalCell {
+    text-align: left;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .effectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .anthropology {
+    grid-template-columns: 1fr;
+  }
+}
