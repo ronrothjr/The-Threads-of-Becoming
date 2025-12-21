@@ -1746,6 +1746,7 @@
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
   margin-top: 3rem;
   border: 3px solid #0066CC;
+  overflow: hidden;
 }
 
 .researchSummary {
@@ -1857,6 +1858,7 @@
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
   border: 3px solid #00CC44;
+  overflow: hidden;
 }
 
 .safetySummary {
@@ -1920,6 +1922,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 2px solid #9966CC;
+  overflow: hidden;
 }
 
 .populationSummary {
@@ -2003,6 +2006,7 @@
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
   margin-top: 3rem;
   border: 3px solid #CC0000;
+  overflow: hidden;
 }
 
 .critiqueSummary {
@@ -2090,6 +2094,17 @@
 
 .consequencesClarification strong {
   color: #FF6600;
+}
+
+.researchTeaser,
+.safetyTeaser,
+.populationTeaser {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333333;
 }
 
 .critiquesGrid {

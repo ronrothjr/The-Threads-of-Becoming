@@ -98,12 +98,22 @@
 }
 
 /* Content Accordion Styles (shared for all content sections) */
+.contentTeaser {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
 .contentAccordion {
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
   border: 3px solid #FF6600;
+  overflow: hidden;
 }
 
 .contentSummary {

@@ -222,10 +222,15 @@ const BullyingIsPlay: React.FC = () => {
       {/* Why "I Was Just Playing" Is Usually True */}
       <section className={`${styles.justPlaying} section-lg`}>
         <div className="container">
+          <h2>Why "I Was Just Playing" Is Usually True</h2>
+          <p className={styles.contentTeaser}>
+            When kids say "I was just playing," they're usually telling the truth. This isn't denial—it's a developmental reality that changes everything about intervention.
+          </p>
+
           <details className={styles.contentAccordion}>
             <summary className={styles.contentSummary}>
               <span className={styles.contentIcon}>🎮</span>
-              <span className={styles.contentTitle}>Why "I Was Just Playing" Is Usually True</span>
+              <span className={styles.contentTitle}>The Developmental Reality of Play Under Distorted Conditions</span>
               <span className={styles.contentChevron}>▼</span>
             </summary>
 
@@ -292,10 +297,15 @@ const BullyingIsPlay: React.FC = () => {
       {/* The Bully is Also a Victim */}
       <section className={`${styles.bullyAsVictim} section-lg`}>
         <div className="container">
+          <h2>The Bully is Also a Victim</h2>
+          <p className={styles.contentTeaser}>
+            Kids reproduce the collapse they experience. Understanding where bullies learned collapsed dynamics transforms our intervention from punishment to system change.
+          </p>
+
           <details className={styles.contentAccordion}>
             <summary className={styles.contentSummary}>
               <span className={styles.contentIcon}>💔</span>
-              <span className={styles.contentTitle}>The Bully is Also a Victim — Of Collapsed Play They Learned Elsewhere</span>
+              <span className={styles.contentTitle}>Where Bullies Learn Collapsed Play</span>
               <span className={styles.contentChevron}>▼</span>
             </summary>
 
@@ -349,10 +359,15 @@ const BullyingIsPlay: React.FC = () => {
       {/* Rewiring the Reward System */}
       <section className={`${styles.rewardSystem} section-lg`}>
         <div className="container">
+          <h2>The Reward System Isn't the Problem</h2>
+          <p className={styles.contentTeaser}>
+            The brain's reward system is working perfectly—it's just rewarding collapsed play. The solution isn't to punish the bully; it's to rewire what gets rewarded.
+          </p>
+
           <details className={styles.contentAccordion}>
             <summary className={styles.contentSummary}>
               <span className={styles.contentIcon}>🧠</span>
-              <span className={styles.contentTitle}>The Reward System Isn't the Problem — It's What We're Rewarding</span>
+              <span className={styles.contentTitle}>What We're Rewarding vs. What We Could Reward</span>
               <span className={styles.contentChevron}>▼</span>
             </summary>
 
@@ -417,10 +432,15 @@ const BullyingIsPlay: React.FC = () => {
       {/* The Wrong Goal */}
       <section className={`${styles.wrongGoal} section-lg`}>
         <div className="container">
+          <h2>What if "Bullying Prevention" is the Wrong Goal?</h2>
+          <p className={styles.contentTeaser}>
+            If bullying is collapsed play, prevention is the wrong framework. We need collapse prevention—keeping the threads of healthy play intact.
+          </p>
+
           <details className={styles.contentAccordion}>
             <summary className={styles.contentSummary}>
               <span className={styles.contentIcon}>🎯</span>
-              <span className={styles.contentTitle}>What if "Bullying Prevention" is the Wrong Goal?</span>
+              <span className={styles.contentTitle}>The Right Goal: Collapse Prevention</span>
               <span className={styles.contentChevron}>▼</span>
             </summary>
 
@@ -523,10 +543,15 @@ const BullyingIsPlay: React.FC = () => {
       {/* Implementation */}
       <section className={`${styles.implementation} section-lg`}>
         <div className="container">
+          <h2>What This Means for Implementation</h2>
+          <p className={styles.contentTeaser}>
+            Understanding bullying as collapsed play transforms implementation from fixing kids to fixing systems. Here's how.
+          </p>
+
           <details className={styles.contentAccordion}>
             <summary className={styles.contentSummary}>
               <span className={styles.contentIcon}>📋</span>
-              <span className={styles.contentTitle}>What This Means for Implementation</span>
+              <span className={styles.contentTitle}>Three Levels of Anti-Collapse Practice</span>
               <span className={styles.contentChevron}>▼</span>
             </summary>
 
