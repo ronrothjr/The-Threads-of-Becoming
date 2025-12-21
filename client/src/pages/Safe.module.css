@@ -2097,7 +2097,6 @@
 }
 
 .researchTeaser,
-.safetyTeaser,
 .populationTeaser {
   max-width: 900px;
   margin: 0 auto 2rem;
@@ -2105,6 +2104,15 @@
   font-size: 1.25rem;
   line-height: 1.7;
   color: #333333;
+}
+
+.safetyTeaser {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #FFFFFF;
 }
 
 .critiquesGrid {
