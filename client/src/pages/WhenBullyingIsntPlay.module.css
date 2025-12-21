@@ -522,7 +522,8 @@ blockquote {
   }
 
   .typeCard {
-    padding: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
   .typeTitle {
@@ -530,11 +531,34 @@ blockquote {
   }
 
   .collapseBox {
-    padding: 1.5rem;
+    padding: 0.75rem;
+    margin: 1rem 0;
   }
 
   blockquote {
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .hardTruth,
+  .institutionalNote,
+  .integration,
+  .keyInsight,
+  .hiddenTension,
+  .coreProblem,
+  .sophisticationNote,
+  .hiddenFear,
+  .distinctionNote,
+  .profoundTension,
+  .redemptionPossibility {
+    padding: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .threadExplanation,
+  .threadworkDescription {
+    padding: 0.75rem;
+    margin: 1rem 0;
   }
 
   .comparisonTable {
@@ -543,7 +567,7 @@ blockquote {
 
   .comparisonTable th,
   .comparisonTable td {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .protocolGrid {
@@ -551,6 +575,15 @@ blockquote {
   }
 
   .frameworkBox {
-    padding: 2rem;
+    padding: 1rem;
+  }
+
+  .linkButton {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .threadworkLink {
+    margin-top: 1rem;
   }
 }

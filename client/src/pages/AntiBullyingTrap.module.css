@@ -845,25 +845,85 @@
   }
 
   .assumptionCard {
-    padding: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
   .assumptionCard h3 {
     font-size: 1.5rem;
   }
 
+  .assumptionCard h4 {
+    font-size: 1.125rem;
+    margin-top: 1rem;
+  }
+
+  .belief,
+  .policy,
+  .teaches,
+  .prevents,
+  .actuallyHappens,
+  .actuallyDoes,
+  .perverseIncentives {
+    margin-bottom: 1rem;
+  }
+
+  .threadCollapse,
+  .consentParadox,
+  .pauseCollapse,
+  .perverseIncentive,
+  .becomingCollapse,
+  .memoryDistortion,
+  .consentViolation,
+  .embodimentAbsence,
+  .uncertaintyAvoidance {
+    padding: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .produces {
+    margin-top: 1rem;
+  }
+
+  .incentiveCategory {
+    margin-bottom: 1rem;
+  }
+
+  .howItWorks,
+  .consentCollapseYes {
+    padding: 1.25rem;
+    margin: 1.5rem auto 0;
+  }
+
+  .effectsCard {
+    padding: 1.25rem;
+  }
+
   .critiqueRow {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+    padding: 1rem;
   }
 
   .threadName {
     font-size: 1.125rem;
   }
 
+  .critiqueTable {
+    padding: 0;
+  }
+
+  .paradigmShift,
+  .fundamentalDifference,
+  .capacityFocus {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
   .comparisonRow {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+    padding: 0.75rem;
   }
 
   .traditionalCell {
@@ -874,11 +934,39 @@
     display: none;
   }
 
+  .traditionalApproach,
+  .safeApproach {
+    padding: 1.25rem;
+  }
+
+  .safeStep {
+    padding: 1rem;
+  }
+
   .effectsGrid {
     grid-template-columns: 1fr;
   }
 
+  .questionCard {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
   .anthropology {
     grid-template-columns: 1fr;
+  }
+
+  .anthropologyTraditional,
+  .anthropologyThreads {
+    padding: 1.25rem;
+  }
+
+  .workAhead {
+    padding: 1.25rem;
+    margin: 2rem auto;
+  }
+
+  .returnLink {
+    padding: 1rem 1.5rem;
   }
 }
