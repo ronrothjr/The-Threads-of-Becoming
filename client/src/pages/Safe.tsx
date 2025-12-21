@@ -239,7 +239,7 @@ const Safe: React.FC = () => {
           </div>
 
           {/* Research Grounding Accordion */}
-          <h2>Is S.A.F.E. Actually Safe?</h2>
+          <h2 className={styles.researchSectionTitle}>Is S.A.F.E. Actually Safe?</h2>
           <p className={styles.researchTeaser}>
             From a developmental psychology standpoint, does this approach hold up? Are we threading a needle when we need a fire blanket?
             What about protected status and the "endangered list"—when does capacity-building cross the line into expecting too much from vulnerable students?

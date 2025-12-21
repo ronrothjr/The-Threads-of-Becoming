@@ -1525,7 +1525,8 @@
   .training h2,
   .crisisProtocol h2,
   .specialPopulations h2,
-  .furtherDevelopment h2 {
+  .furtherDevelopment h2,
+  .researchSectionTitle {
     font-size: 2rem;
     padding: 0 0.5rem;
   }
@@ -2094,6 +2095,14 @@
 
 .consequencesClarification strong {
   color: #FF6600;
+}
+
+.researchSectionTitle {
+  text-align: center;
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-weight: 900;
 }
 
 .researchTeaser,
