@@ -611,6 +611,39 @@ const BullyingIsPlay: React.FC = () => {
         </div>
       </section>
 
+      {/* When Bullying Isn't Play */}
+      <section className={`${styles.notPlay} section-lg`}>
+        <div className="container">
+          <h2 className={styles.notPlayTitle}>When Bullying Isn't Play</h2>
+          <p className={styles.contentTeaser}>
+            S.A.F.E. is a rapid-deployment protocol optimized for cases where tension is <em>present and accessible</em> — probably 60-70% of school incidents.
+            But when bullying goes beyond collapsed play, we need to consider deeper usage of Threadwork.
+          </p>
+
+          <details className={styles.contentAccordion}>
+            <summary className={styles.contentSummary}>
+              <span className={styles.contentIcon}>🧵</span>
+              <span className={styles.contentTitle}>Threads Applied to Each Bullying Type</span>
+              <span className={styles.contentChevron}>▼</span>
+            </summary>
+
+            <div className={styles.accordionContent}>
+              <p className={styles.threadworkDescription}>
+                S.A.F.E. is a <em>deployment vehicle</em> — simplified for school staff who need one sentence and 20 seconds.
+                But Threads is the underlying architecture of human tension, and it applies to everything.
+                The question becomes: <strong>how</strong> does Threadwork happen in each case, and <strong>who</strong> does it?
+              </p>
+
+              <div className={styles.threadworkLink}>
+                <a href="/safe/when-bullying-isnt-play" className={styles.linkButton}>
+                  Explore When Bullying Isn't Play: Beyond S.A.F.E. to Threadwork →
+                </a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
       {/* Final Revolutionary Statement */}
       <section className={`${styles.revolutionary} section-lg`}>
         <div className="container">

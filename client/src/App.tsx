@@ -27,6 +27,7 @@ import Chapters from './pages/Chapters';
 import Educators from './pages/Educators';
 import Safe from './pages/Safe';
 import BullyingIsPlay from './pages/BullyingIsPlay';
+import WhenBullyingIsntPlay from './pages/WhenBullyingIsntPlay';
 import ProtectedStatus from './pages/ProtectedStatus';
 import ParentEducation from './pages/ParentEducation';
 import SchoolWideSafe from './pages/SchoolWideSafe';
@@ -97,6 +98,7 @@ function AppContent() {
         <Route path="/educators" element={<Educators />} />
         <Route path="/safe" element={<Safe />} />
         <Route path="/safe/bullying-is-play" element={<BullyingIsPlay />} />
+        <Route path="/safe/when-bullying-isnt-play" element={<WhenBullyingIsntPlay />} />
         <Route path="/safe/capacity-building" element={<ProtectedStatus />} />
         <Route path="/safe/parent-education" element={<ParentEducation />} />
         <Route path="/safe/school-wide" element={<SchoolWideSafe />} />
