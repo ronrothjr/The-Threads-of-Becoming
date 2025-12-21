@@ -29,6 +29,7 @@ import Safe from './pages/Safe';
 import BullyingIsPlay from './pages/BullyingIsPlay';
 import WhenBullyingIsntPlay from './pages/WhenBullyingIsntPlay';
 import AntiBullyingTrap from './pages/AntiBullyingTrap';
+import BehavioralEmotionalLandscape from './pages/BehavioralEmotionalLandscape';
 import ProtectedStatus from './pages/ProtectedStatus';
 import ParentEducation from './pages/ParentEducation';
 import SchoolWideSafe from './pages/SchoolWideSafe';
@@ -97,6 +98,7 @@ function AppContent() {
         <Route path="/communities" element={<Communities />} />
         <Route path="/chapters" element={<Chapters />} />
         <Route path="/educators" element={<Educators />} />
+        <Route path="/educators/behavioral-emotional-landscape" element={<BehavioralEmotionalLandscape />} />
         <Route path="/safe" element={<Safe />} />
         <Route path="/safe/bullying-is-play" element={<BullyingIsPlay />} />
         <Route path="/safe/when-bullying-isnt-play" element={<WhenBullyingIsntPlay />} />

@@ -497,6 +497,89 @@ const Educators: React.FC = () => {
         </div>
       </section>
 
+      {/* How Threads Weaves into the Fabric */}
+      <section className={`${styles.landscape} section-lg`}>
+        <div className="container">
+          <h2>How Threads Weaves into the Fabric</h2>
+          <p className={styles.landscapeTeaser}>
+            Where does Threads fit in the broader educational landscape of SEL, dialogue pedagogy, mental health support,
+            and human development frameworks? How does it relate to what you're already doing—and what might it offer that
+            existing approaches cannot?
+          </p>
+
+          <details className={styles.landscapeAccordion}>
+            <summary className={styles.landscapeSummary}>
+              <span className={styles.landscapeIcon}>🧵</span>
+              <span className={styles.landscapeTitle}>Threads as Evolution: From Competency to Capacity</span>
+              <span className={styles.landscapeChevron}>▼</span>
+            </summary>
+
+            <div className={styles.landscapeContent}>
+              <h3>Beyond SEL: A Different Approach to Development</h3>
+
+              <div className={styles.comparisonHighlight}>
+                <p>
+                  <strong>SEL teaches skills.</strong> Threads builds embodied capacity to hold irresolvable tensions.
+                </p>
+                <p>
+                  <strong>SEL lives in the head</strong> ("name the emotion"). Threads starts with the body ("what do you notice?").
+                </p>
+                <p>
+                  <strong>SEL focuses on individual competencies.</strong> Threads holds the relational field between people.
+                </p>
+                <p>
+                  <strong>SEL asks "What should you do?"</strong> Threads asks "Who do you want to become?"
+                </p>
+              </div>
+
+              <h3>The Key Distinction</h3>
+              <p className={styles.keyDistinction}>
+                <strong>SEL wants resolution:</strong> Identify the emotion, apply the strategy, achieve regulation.
+                Problem → Solution.
+              </p>
+              <p className={styles.keyDistinction}>
+                <strong>Threads wants holding:</strong> Notice the tension, feel both poles, stay present without collapsing.
+                The tension doesn't resolve—you develop capacity to hold it.
+              </p>
+              <p>
+                This is profound. SEL is ultimately about fixing problems. Threads is about building capacity for
+                problems that can't be fixed—which is most of social-emotional life.
+              </p>
+
+              <h3>Not Replacement, But Evolution</h3>
+              <p>
+                Threads can encompass SEL—SEL vocabulary and strategies can serve Thread practice. But it operates as
+                the meta-framework: "We're learning about self-management. In Threads terms, we're practicing the
+                PAUSE tension—Not Yet vs. Now."
+              </p>
+              <p>
+                The framework provides what SEL cannot: genuine capacity for complexity, embodied practice (not just
+                cognitive learning), identity formation (not just skill acquisition), and honest acknowledgment that
+                some tensions don't resolve—you hold them.
+              </p>
+
+              <h3>Questions Unite, Answers Divide</h3>
+              <p className={styles.questionsUnite}>
+                Threads operates at the question level, not the answer level. This makes it genuinely portable across
+                political, cultural, and religious divides. Progressive and conservative families can both use Threads
+                to build their children's capacity—they'll navigate the same tensions toward different conclusions,
+                and that's the point.
+              </p>
+
+              <div className={styles.landscapeFooter}>
+                <p className={styles.landscapeHighlight}>
+                  Explore the complete positioning analysis—how Threads relates to SEL, dialogue pedagogy, mental health
+                  frameworks, political landscapes, and the deeper philosophical questions about human development.
+                </p>
+                <a href="/educators/behavioral-emotional-landscape" className={styles.landscapeLink}>
+                  Read the Full Analysis: The Behavioral and Emotional Landscape →
+                </a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className={styles.cta}>
         <h2>Transform Your Classroom</h2>

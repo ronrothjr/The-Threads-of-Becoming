@@ -1,0 +1,1219 @@
+.behavioralEmotionalLandscape {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  opacity: 0.9;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Introduction */
+.introduction {
+  background: #FFFFFF;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.introLead {
+  font-size: 1.5rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* Understanding SEL Section */
+.understandingSEL {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.understandingSEL h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.selOverview,
+.selAccomplishments,
+.selLimitations {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.selOverview h3,
+.selAccomplishments h3,
+.selLimitations h3 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.selOverview p {
+  font-size: 1.25rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Competency Grid */
+.competencyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.competencyCard {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border: 2px solid #0066CC;
+  transition: all 0.3s ease;
+}
+
+.competencyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 102, 204, 0.15);
+}
+
+.competencyCard h4 {
+  font-size: 1.5rem;
+  color: #0066CC;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.competencyCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.competencyCard li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.6;
+  position: relative;
+}
+
+.competencyCard li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #0066CC;
+  font-weight: 700;
+}
+
+/* Accomplishments List */
+.accomplishmentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.accomplishment {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #00CC44;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.accomplishment strong {
+  color: #00CC44;
+  font-size: 1.125rem;
+}
+
+/* Limitation Cards */
+.limitationCard {
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+  border-left: 8px solid #FF6600;
+}
+
+.limitationCard h4 {
+  font-size: 2rem;
+  color: #FF6600;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.limitationContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.selFrame,
+.problem,
+.threadDifference {
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.selFrame {
+  background: rgba(102, 102, 102, 0.05);
+  border-left: 4px solid #666666;
+}
+
+.selFrame strong {
+  color: #666666;
+  font-size: 1.125rem;
+}
+
+.problem {
+  background: rgba(255, 102, 0, 0.05);
+  border-left: 4px solid #FF6600;
+}
+
+.problem strong {
+  color: #FF6600;
+  font-size: 1.125rem;
+}
+
+.threadDifference {
+  background: rgba(0, 102, 204, 0.05);
+  border-left: 4px solid #0066CC;
+}
+
+.threadDifference strong {
+  color: #0066CC;
+  font-size: 1.125rem;
+}
+
+.selFrame ul,
+.problem ul,
+.threadDifference ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.selFrame li,
+.problem li,
+.threadDifference li {
+  margin-bottom: 0.5rem;
+}
+
+/* Threads Mapping Section */
+.threadsMapping {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+}
+
+.threadsMapping h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.mappingTable {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.mappingTable table {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-collapse: collapse;
+}
+
+.mappingTable thead {
+  background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+  color: #FFFFFF;
+}
+
+.mappingTable th {
+  padding: 1.5rem;
+  text-align: left;
+  font-weight: 900;
+  font-size: 1.125rem;
+}
+
+.mappingTable td {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.mappingTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.mappingTable tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.mappingNote {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333333;
+  font-style: italic;
+  padding: 1.5rem;
+  background: rgba(0, 102, 204, 0.05);
+  border-radius: 12px;
+}
+
+/* Philosophical Difference Section */
+.philosophicalDifference {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.philosophicalDifference h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.anthropologyComparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.anthropologyCard {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+  border: 3px solid #0066CC;
+}
+
+.anthropologyCard h3 {
+  font-size: 2rem;
+  color: #0066CC;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.anthropologyCard p {
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.anthropologyCard ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.anthropologyCard li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  color: #333333;
+}
+
+.anthropologyCard li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #0066CC;
+  font-weight: 700;
+}
+
+.anthropologyCard li:last-child {
+  border-bottom: none;
+}
+
+.goal {
+  background: rgba(0, 102, 204, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #0066CC;
+  margin-top: 1.5rem;
+}
+
+.goal strong {
+  color: #0066CC;
+  font-size: 1.125rem;
+}
+
+/* Key Distinction */
+.keyDistinction {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+}
+
+.keyDistinction h3 {
+  font-size: 2rem;
+  color: #0066CC;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.distinctionComparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.distinctionItem {
+  background: rgba(0, 0, 0, 0.02);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.distinctionItem strong {
+  color: #0066CC;
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.distinctionItem p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.distinctionNote {
+  background: rgba(0, 102, 204, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #0066CC;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+/* Threads Offers Section */
+.threadsOffers {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+}
+
+.threadsOffers h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.offeringsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offeringCard {
+  background: var(--color-off-white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 2px solid #0066CC;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.offeringCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 102, 204, 0.15);
+}
+
+.offeringCard h3 {
+  font-size: 1.75rem;
+  color: #0066CC;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.offeringCard p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.offeringCard p strong {
+  color: #0066CC;
+}
+
+/* Political Landscape Section */
+.politicalLandscape {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.politicalLandscape h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.floridaSituation,
+.conservativeCritique,
+.howThreadsDiffers {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  background: #FFFFFF;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+}
+
+.floridaSituation h3,
+.conservativeCritique h3,
+.howThreadsDiffers h3 {
+  font-size: 2rem;
+  color: #0066CC;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.floridaSituation p,
+.conservativeCritique p,
+.howThreadsDiffers p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.rufoQuote {
+  background: rgba(255, 102, 0, 0.05);
+  border-left: 5px solid #FF6600;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.critiqueThreads {
+  margin-top: 2rem;
+}
+
+.critiqueThreads h4 {
+  font-size: 1.5rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.critiqueThreads ul {
+  list-style: none;
+  padding: 0;
+}
+
+.critiqueThreads li {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.critiqueThreads li strong {
+  color: #0066CC;
+}
+
+/* Difference Table */
+.differenceTable {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  overflow-x: auto;
+}
+
+.differenceTable table {
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-collapse: collapse;
+}
+
+.differenceTable thead {
+  background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+  color: #FFFFFF;
+}
+
+.differenceTable th {
+  padding: 1.5rem;
+  text-align: left;
+  font-weight: 900;
+  font-size: 1.125rem;
+}
+
+.differenceTable td {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+.differenceTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.differenceTable tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+/* Strategic Positioning Section */
+.strategicPositioning {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+}
+
+.strategicPositioning h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.framingOptions {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.framingOptions h3 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.framingGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.framingCard {
+  background: var(--color-off-white);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid #0066CC;
+  transition: all 0.3s ease;
+}
+
+.framingCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 102, 204, 0.2);
+}
+
+.framingCard h4 {
+  font-size: 1.375rem;
+  color: #0066CC;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.framingCard p {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+}
+
+/* Core Positioning Section */
+.corePositioning {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.corePositioning h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.positioningStatements {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.statementCard {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #0066CC;
+}
+
+.statementCard h3 {
+  font-size: 1.75rem;
+  color: #0066CC;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.statementCard blockquote {
+  background: rgba(0, 102, 204, 0.05);
+  border-left: 5px solid #0066CC;
+  padding: 1.5rem 2rem;
+  margin: 0;
+  border-radius: 8px;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+/* Thread Examples Section */
+.threadExamples {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+}
+
+.threadExamples h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #0066CC;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.examplesGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.exampleCard {
+  background: var(--color-off-white);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.08);
+  border: 3px solid #0066CC;
+}
+
+.exampleCard h3 {
+  font-size: 2rem;
+  color: #0066CC;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
+
+.question {
+  font-size: 1.25rem;
+  color: #333333;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.navItem {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #0066CC;
+}
+
+.navItem strong {
+  color: #0066CC;
+  font-size: 1.125rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.navItem p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #333333;
+  margin: 0;
+}
+
+.exampleNote {
+  background: rgba(0, 102, 204, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #0066CC;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #333333;
+  font-style: italic;
+}
+
+/* Profound Insight Section */
+.profoundInsight {
+  background: linear-gradient(135deg, #0066CC 0%, #0052A3 100%);
+  padding: 4rem 2rem;
+  color: #FFFFFF;
+}
+
+.profoundInsight h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.insightContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.insightLead {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.insightQuote {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 5px solid #00CC44;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #333333;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.insightExplanation {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+.insightExplanation p {
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.insightExplanation p strong {
+  color: #0066CC;
+  font-size: 1.25rem;
+}
+
+.insightExplanation ul {
+  list-style: disc;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.insightExplanation li {
+  font-size: 1.0625rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.insightConclusion {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0066CC;
+  margin: 1.5rem 0;
+}
+
+.insightConclusion em {
+  font-style: italic;
+}
+
+.insightFinal {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0066CC;
+  padding: 1.5rem;
+  background: rgba(0, 102, 204, 0.05);
+  border-radius: 8px;
+  border-left: 5px solid #0066CC;
+}
+
+.insightFinal strong {
+  font-size: 1.375rem;
+}
+
+.universality,
+.belovedCommunity {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin: 2rem 0;
+}
+
+.universality h3,
+.belovedCommunity h3 {
+  font-size: 2rem;
+  color: #0066CC;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.universality ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.universality li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.6;
+  position: relative;
+}
+
+.universality li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #0066CC;
+  font-weight: 700;
+}
+
+.universalityNote {
+  background: rgba(0, 102, 204, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #0066CC;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.universalityNote strong {
+  color: #0066CC;
+  font-size: 1.375rem;
+}
+
+.belovedCommunity p {
+  font-size: 1.125rem;
+  color: #333333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .introduction {
+    padding: 2rem 1rem;
+  }
+
+  .introLead {
+    font-size: 1.125rem;
+  }
+
+  .understandingSEL,
+  .threadsMapping,
+  .philosophicalDifference,
+  .threadsOffers,
+  .politicalLandscape,
+  .strategicPositioning,
+  .corePositioning,
+  .threadExamples,
+  .profoundInsight {
+    padding: 2rem 1rem;
+  }
+
+  .understandingSEL h2,
+  .threadsMapping h2,
+  .philosophicalDifference h2,
+  .threadsOffers h2,
+  .politicalLandscape h2,
+  .strategicPositioning h2,
+  .corePositioning h2,
+  .threadExamples h2,
+  .profoundInsight h2 {
+    font-size: 2rem;
+  }
+
+  .selOverview h3,
+  .selAccomplishments h3,
+  .selLimitations h3,
+  .framingOptions h3 {
+    font-size: 1.75rem;
+  }
+
+  .competencyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .competencyCard {
+    padding: 1rem;
+  }
+
+  .competencyCard h4 {
+    font-size: 1.25rem;
+  }
+
+  .accomplishment {
+    padding: 0.75rem;
+  }
+
+  .limitationCard {
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .limitationCard h4 {
+    font-size: 1.5rem;
+  }
+
+  .selFrame,
+  .problem,
+  .threadDifference {
+    padding: 0.75rem;
+  }
+
+  .mappingTable th,
+  .mappingTable td,
+  .differenceTable th,
+  .differenceTable td {
+    padding: 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .mappingNote {
+    font-size: 1.0625rem;
+    padding: 1rem;
+  }
+
+  .anthropologyComparison {
+    grid-template-columns: 1fr;
+  }
+
+  .anthropologyCard {
+    padding: 1.25rem;
+  }
+
+  .anthropologyCard h3 {
+    font-size: 1.5rem;
+  }
+
+  .keyDistinction {
+    padding: 1.25rem;
+  }
+
+  .keyDistinction h3 {
+    font-size: 1.5rem;
+  }
+
+  .distinctionComparison {
+    grid-template-columns: 1fr;
+  }
+
+  .distinctionItem {
+    padding: 1rem;
+  }
+
+  .offeringsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .offeringCard {
+    padding: 1.25rem;
+  }
+
+  .offeringCard h3 {
+    font-size: 1.5rem;
+  }
+
+  .floridaSituation,
+  .conservativeCritique,
+  .howThreadsDiffers {
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .floridaSituation h3,
+  .conservativeCritique h3,
+  .howThreadsDiffers h3 {
+    font-size: 1.5rem;
+  }
+
+  .rufoQuote {
+    padding: 0.75rem 1rem;
+  }
+
+  .critiqueThreads li {
+    padding: 0.75rem;
+  }
+
+  .framingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .framingCard {
+    padding: 1rem;
+  }
+
+  .framingCard h4 {
+    font-size: 1.125rem;
+  }
+
+  .statementCard {
+    padding: 1.25rem;
+  }
+
+  .statementCard h3 {
+    font-size: 1.5rem;
+  }
+
+  .statementCard blockquote {
+    padding: 0.75rem 1rem;
+    font-size: 1.0625rem;
+  }
+
+  .exampleCard {
+    padding: 1.25rem;
+  }
+
+  .exampleCard h3 {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .navItem {
+    padding: 1rem;
+  }
+
+  .insightQuote {
+    padding: 1rem 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  .insightExplanation,
+  .universality,
+  .belovedCommunity {
+    padding: 1.25rem;
+  }
+
+  .insightExplanation p,
+  .belovedCommunity p {
+    font-size: 1.0625rem;
+  }
+
+  .insightConclusion,
+  .insightFinal {
+    font-size: 1.0625rem;
+  }
+
+  .universality h3,
+  .belovedCommunity h3 {
+    font-size: 1.5rem;
+  }
+
+  .universalityNote {
+    padding: 1rem;
+    font-size: 1.0625rem;
+  }
+}
