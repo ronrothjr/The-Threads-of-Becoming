@@ -828,7 +828,7 @@ const Hold: React.FC = () => {
                     <li>Neither mainstream conservatives nor progressives address the real hunger: for <strong>belonging,
                     rootedness, meaning beyond consumption and self-expression</strong></li>
                   </ul>
-                  <a href="https://ndias.nd.edu/fellows/patrick-deneen/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                  <a href="https://politicalscience.nd.edu/people/patrick-deneen/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
                     Read Patrick Deneen's work on community and tradition →
                   </a>
                 </div>
