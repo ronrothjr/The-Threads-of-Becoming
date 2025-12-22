@@ -2007,6 +2007,17 @@
 
   .threadTension {
     font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  /* Make each tension pair display on its own line on mobile */
+  .threadTension span {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .threadPrimerCard .threadTension {
+    line-height: 1.8;
   }
 
   .threadCollapse,
@@ -2072,5 +2083,47 @@
 
   .thresholdNote p {
     font-size: 0.95rem;
+  }
+
+  /* Section Width Adjustments for Mobile */
+  .threadsPrimer {
+    padding: 3rem 1rem;
+  }
+
+  .accordionSection {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .accordionSection h2 {
+    font-size: 1.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .accordionTeaser {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .accordion {
+    margin: 0;
+  }
+
+  .accordionContent {
+    padding: 1.25rem 1rem;
+  }
+
+  .threadGrid {
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+
+  .creativeTension,
+  .holdConnectionBox,
+  .deeperWork {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
