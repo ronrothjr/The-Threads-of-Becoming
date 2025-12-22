@@ -362,11 +362,20 @@ const Hold: React.FC = () => {
       <section className={`${styles.accordions} section-lg`}>
         <div className="container">
 
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>For Both Sides: Different Doors, Same Practice</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>For Both Sides: Different Doors, Same Practice</h2>
+            <p className={styles.accordionTeaser}>
+              What would be welcome on both Fox News and MSNBC? How can one practice appeal to conservatives
+              and progressives without compromise? The same message, framed differently—because both sides
+              are being played by the same outrage machines.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>How HOLD Speaks to Every Side</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <h3>Fox News Messaging</h3>
               <div className={styles.messagingCard}>
                 <h4>Guest Segment Concept:</h4>
@@ -406,13 +415,22 @@ const Hold: React.FC = () => {
               </div>
             </div>
           </details>
+          </div>
 
-          {/* The Practice Progression */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>The Practice Progression</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>The Practice Progression</h2>
+            <p className={styles.accordionTeaser}>
+              How does HOLD scale from millions learning a simple practice to thousands training as facilitators
+              to hundreds of institutions embedding it in their culture? The journey from 60-second video to
+              institutional transformation.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>From Mass Awareness to Institutional Integration</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <div className={styles.progressionLevel}>
                 <h3>Level 1: Mass Awareness (Millions)</h3>
                 <ul>
@@ -463,13 +481,390 @@ const Hold: React.FC = () => {
               </div>
             </div>
           </details>
+          </div>
 
-          {/* Five Pilot Opportunities */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>Five Pilot Opportunities</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>Political Collapse - Thread by Thread</h2>
+            <p className={styles.accordionTeaser}>
+              How does each of the seven Threads show up in our broken political discourse? What does it look
+              like when PAUSE collapses into outrage cycles, when CONSENT collapses into forced agreement,
+              when BECOMING collapses into fixed political identities? And crucially—how do Left and Right
+              collapse the same Threads, just in opposite directions?
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>All Seven Threads Collapsed in Political Context</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
+              <p className={styles.collapseIntro}>
+                The political quagmire isn't about having the wrong policies. It's about having lost the
+                capacity to hold tension together. Here's how each Thread collapses in our political life—and
+                what reopening them looks like.
+              </p>
+
+              <div className={styles.threadCollapseGrid}>
+                <div className={styles.threadCollapseCard}>
+                  <h3>PAUSE (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Outrage cycles measured in hours</li>
+                    <li>Social media as stimulus-response machine</li>
+                    <li>"Clap back" culture as virtue</li>
+                    <li>No space between hearing and reacting</li>
+                    <li>The hot take as currency</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> React → Defend → Escalate → Entrench
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "I notice I'm having a strong reaction. Let me
+                    hold that before I respond."
+                  </p>
+                  <p className={styles.impact}>
+                    The inability to PAUSE is why Twitter became a war zone, why family dinners explode, why
+                    congressional hearings are performance rather than inquiry.
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>EMBODIMENT (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Disembodied debate (screens, not faces)</li>
+                    <li>Ideology detached from lived experience</li>
+                    <li>Talking points replacing felt sense</li>
+                    <li>"The data says" while ignoring what bodies know</li>
+                    <li>Political identity held in abstraction, not in flesh</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> We argue positions we've never felt. We defend policies that
+                    don't touch our lives. We attack people we've never met.
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "What does my body know about this that my
+                    arguments don't? Have I actually experienced what I'm so certain about? When I imagine the
+                    person I'm arguing with as a body—tired, scared, hopeful—what shifts?"
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>CONSENT (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Imposition as default ("you MUST agree")</li>
+                    <li>Cancel culture (withdraw consent to exist in public)</li>
+                    <li>"If you're not with us, you're against us"</li>
+                    <li>No legitimate disagreement</li>
+                    <li>Boundaries as betrayal</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>Left collapse:</strong> "Your disagreement is violence. Consent to our framing or
+                    be expelled."
+                  </p>
+                  <p className={styles.collapsePattern}>
+                    <strong>Right collapse:</strong> "Your boundaries are weakness. Real Americans don't need
+                    safe spaces."
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "You have the right to see this differently. I
+                    have the right to hold my view. Can we stay in relationship across that difference?"
+                  </p>
+                  <p className={styles.impact}>
+                    This is the Thread most obviously broken in political life. We've lost the capacity to
+                    consent to difference.
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>THRESHOLD (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Safety-seeking that eliminates all challenge (left collapse)</li>
+                    <li>Provocation as virtue, "owning" as goal (right collapse)</li>
+                    <li>No calibrated risk—either total protection or total exposure</li>
+                    <li>Growth requires discomfort, but discomfort is labeled trauma</li>
+                    <li>Challenge is labeled attack</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> We've lost the ability to distinguish discomfort from danger,
+                    challenge from assault, disagreement from hatred, growth-edges from genuine threats.
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "This is uncomfortable. Is it dangerous, or is
+                    it a growth edge? Am I seeking safety because I need protection, or because I want to avoid
+                    being changed?"
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>MEMORY (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Inherited political identities ("my family has always been...")</li>
+                    <li>Historical narratives treated as fact, not interpretation</li>
+                    <li>Inability to see one's own story as story</li>
+                    <li>"That's not who we are" (denial) vs. "That's all we've ever been" (despair)</li>
+                    <li>Nostalgia weaponized, history weaponized</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> We're possessed by stories we didn't choose and can't examine.
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "What political story was I given? What story am
+                    I telling? Can I hold my inheritance without being held by it?"
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>UNCERTAINTY (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Certainty as virtue on all sides</li>
+                    <li>"The science is settled" / "The truth is obvious"</li>
+                    <li>Doubt as weakness or betrayal</li>
+                    <li>Nuance as cowardice</li>
+                    <li>Complexity as elitism</li>
+                    <li>Simple answers to complex problems</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> We've made not-knowing shameful. So everyone performs
+                    knowing—even when they don't.
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "I don't actually know. I have intuitions,
+                    values, guesses—but I don't know. What if we're both partly right and partly wrong? What
+                    would I need to see to change my mind?"
+                  </p>
+                  <p className={styles.impact}>
+                    <strong>Diagnostic question:</strong> If there's nothing that could change your mind, your
+                    UNCERTAINTY Thread is fully collapsed. You're not reasoning; you're defending.
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>BECOMING (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Fixed political identities ("I AM a conservative/progressive")</li>
+                    <li>Change as betrayal ("you've sold out")</li>
+                    <li>Purity tests</li>
+                    <li>No legitimate evolution</li>
+                    <li>"How dare you change your position?"</li>
+                    <li>Identity so fused with position that questioning position = attacking self</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> People can't change their minds without feeling they're losing
+                    themselves.
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "Who I was politically five years ago isn't who
+                    I am now. That's not betrayal—that's growth. I can hold my current views strongly while
+                    remaining open to becoming someone who sees differently."
+                  </p>
+                  <p className={styles.impact}>
+                    When BECOMING collapses, every disagreement is an existential threat.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.comparisonTable}>
+                <h3>The Meta-Pattern: Both Sides Collapse the Same Threads</h3>
+                <p className={styles.tableIntro}>
+                  Here's what makes the Threads framework genuinely apolitical: Both Left and Right collapse
+                  the same Threads—just in opposite directions. This isn't false equivalence; it's recognizing
+                  that the capacity failure is the same even when the content differs.
+                </p>
+
+                <table className={styles.symmetricTable}>
+                  <thead>
+                    <tr>
+                      <th>Thread</th>
+                      <th>Left Collapse</th>
+                      <th>Right Collapse</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>PAUSE</strong></td>
+                      <td>Callout culture, immediate cancellation</td>
+                      <td>Trigger the libs, provocation as sport</td>
+                    </tr>
+                    <tr>
+                      <td><strong>EMBODIMENT</strong></td>
+                      <td>Abstracted identity politics</td>
+                      <td>Abstracted nationalism</td>
+                    </tr>
+                    <tr>
+                      <td><strong>CONSENT</strong></td>
+                      <td>Forced agreement or exile</td>
+                      <td>Forced exposure, "toughen up"</td>
+                    </tr>
+                    <tr>
+                      <td><strong>THRESHOLD</strong></td>
+                      <td>Over-protection, safety as absolute</td>
+                      <td>No acknowledged limits, cruelty as strength</td>
+                    </tr>
+                    <tr>
+                      <td><strong>MEMORY</strong></td>
+                      <td>"That's all we've ever been" (despair)</td>
+                      <td>"That's not who we are" (denial)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>UNCERTAINTY</strong></td>
+                      <td>"The science is settled"</td>
+                      <td>"The truth is obvious"</td>
+                    </tr>
+                    <tr>
+                      <td><strong>BECOMING</strong></td>
+                      <td>Purity tests, cancel the evolved</td>
+                      <td>Loyalty tests, purge the dissenters</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p className={styles.symmetryNote}>
+                  <strong>This is why the framework is genuinely apolitical.</strong> Both sides suffer from the
+                  same collapsed capacities. Threads doesn't say which side is right. It asks: can you hold the
+                  tension without collapsing?
+                </p>
+              </div>
+            </div>
+          </details>
+          </div>
+
+          <div className={styles.accordionSection}>
+            <h2>Practical Applications</h2>
+            <p className={styles.accordionTeaser}>
+              How does this work in real life? What does HOLD look like in family conversations during the
+              holidays, in friendships strained by political difference, in community dialogues, in political
+              movements, in justice organizations? Here are specific interventions for each context.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>Specific Interventions for Real Contexts</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
+              <div className={styles.applicationCard}>
+                <h3>Family Conversations</h3>
+                <p className={styles.threadFocus}>
+                  <strong>Primary Thread:</strong> MEMORY
+                </p>
+                <p>
+                  The collapsed MEMORY Thread is usually what makes family political conversations impossible.
+                  Everyone is carrying inherited stories they can't examine.
+                </p>
+                <div className={styles.intervention}>
+                  <h4>A HOLD intervention:</h4>
+                  <blockquote>
+                    "Before we argue about what's true, can we each share what story we were given? Not defend
+                    it—just name it. What did your family teach you about [government/justice/freedom/responsibility]?"
+                  </blockquote>
+                  <p className={styles.interventionNote}>
+                    This doesn't resolve disagreement. It opens space to see that we're all navigating inherited
+                    narratives, not pure reason.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.applicationCard}>
+                <h3>Friendships Across Difference</h3>
+                <p className={styles.threadFocus}>
+                  <strong>Primary Thread:</strong> CONSENT
+                </p>
+                <p>
+                  The collapsed CONSENT Thread is what ends friendships and fragments communities. "If you voted
+                  for X, we can't be friends" is a CONSENT collapse—an inability to stay in relationship across
+                  difference.
+                </p>
+                <div className={styles.intervention}>
+                  <h4>A HOLD intervention:</h4>
+                  <blockquote>
+                    "I feel strongly about this. I imagine you do too. Can we consent to care about each other
+                    even when we disagree about politics? Can we hold the tension of loving someone whose
+                    political views feel wrong to us?"
+                  </blockquote>
+                </div>
+              </div>
+
+              <div className={styles.applicationCard}>
+                <h3>Community Dialogue</h3>
+                <p className={styles.threadFocus}>
+                  <strong>Primary Thread:</strong> THRESHOLD
+                </p>
+                <p>
+                  The collapsed THRESHOLD Thread is what prevents productive community dialogue. People either
+                  won't enter spaces where they might be challenged, or they enter to dominate rather than learn.
+                </p>
+                <div className={styles.intervention}>
+                  <h4>A HOLD intervention:</h4>
+                  <blockquote>
+                    "This conversation will be uncomfortable. Discomfort isn't danger. We're going to practice
+                    staying in the room when we want to leave, and staying curious when we want to be certain.
+                    That's the work."
+                  </blockquote>
+                </div>
+              </div>
+
+              <div className={styles.applicationCard}>
+                <h3>Political Movements</h3>
+                <p className={styles.threadFocus}>
+                  <strong>Primary Thread:</strong> UNCERTAINTY
+                </p>
+                <p>
+                  The collapsed UNCERTAINTY Thread is what makes movements become cults. When doubt is disloyalty,
+                  you're no longer a movement—you're a belief system that can't learn.
+                </p>
+                <div className={styles.intervention}>
+                  <h4>A HOLD intervention:</h4>
+                  <blockquote>
+                    "What would need to be true for our approach to be wrong? If we can't answer that, we've
+                    stopped thinking and started believing. Movements that can't question themselves become
+                    what they oppose."
+                  </blockquote>
+                </div>
+              </div>
+
+              <div className={styles.applicationCard}>
+                <h3>Justice Organizations</h3>
+                <p className={styles.threadFocus}>
+                  <strong>Primary Thread:</strong> BECOMING
+                </p>
+                <p>
+                  The collapsed BECOMING Thread is what creates burnout and purges. When identity fuses with
+                  position, people can't evolve, can't admit past mistakes, can't grow. So they perform purity
+                  until they're exhausted or exiled.
+                </p>
+                <div className={styles.intervention}>
+                  <h4>A HOLD intervention:</h4>
+                  <blockquote>
+                    "Your commitment to justice can deepen even as your understanding of justice evolves. You're
+                    not the same organizer you were five years ago. That's not failure—that's learning. Can we
+                    build a movement where people are allowed to become?"
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </details>
+          </div>
+
+          <div className={styles.accordionSection}>
+            <h2>Five Pilot Opportunities</h2>
+            <p className={styles.accordionTeaser}>
+              Where do you start? Not with everyone, everywhere—but with specific contexts where the need is
+              felt and the capacity can be built. Each pilot teaches us something different about how HOLD
+              works in practice.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>Starting Points for Building Capacity</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <div className={styles.pilotCard}>
                 <h3>Family Conversations</h3>
                 <p>
@@ -555,13 +950,22 @@ const Hold: React.FC = () => {
               </div>
             </div>
           </details>
+          </div>
 
-          {/* The Other Players */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>The Other Players in This Space</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>The Other Players in This Space</h2>
+            <p className={styles.accordionTeaser}>
+              What's already being tried? Who else is working on depolarization and bridge-building? And why,
+              with hundreds of organizations and millions of dollars invested, is polarization still worsening?
+              The landscape, the limitations, and where Threads fits differently.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>The Depolarization Landscape and Its Limitations</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <h3>Braver Angels (formerly Better Angels)</h3>
               <div className={styles.playerCard}>
                 <p>
@@ -626,13 +1030,21 @@ const Hold: React.FC = () => {
               </div>
             </div>
           </details>
+          </div>
 
-          {/* How HOLD Integrates */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>How HOLD Integrates With Existing Organizations</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>How HOLD Integrates With Existing Organizations</h2>
+            <p className={styles.accordionTeaser}>
+              HOLD doesn't compete with Braver Angels, Bridge Alliance, or other bridge-building organizations.
+              It provides the prerequisite capacity their work requires. Here's how partnership could work.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>Partnership Models for Capacity Building</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <p className={styles.integrationIntro}>
                 HOLD doesn't compete with existing bridge-building organizations. It provides the
                 <strong> prerequisite capacity</strong> their work requires.
@@ -677,13 +1089,22 @@ const Hold: React.FC = () => {
               </div>
             </div>
           </details>
+          </div>
 
-          {/* The Media Strategy */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>The Media Strategy</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>The Media Strategy</h2>
+            <p className={styles.accordionTeaser}>
+              How do you present the same practice to conservative and progressive audiences—without compromise,
+              without false equivalence, and with both messages being authentically true? The framing that makes
+              HOLD welcome on Fox News and MSNBC.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>Different Frames, Same Practice</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <p className={styles.strategyIntro}>
                 The same practice, framed differently for different audiences. Each frame is true. Each leads
                 to the same capacity-building work.
@@ -728,13 +1149,22 @@ const Hold: React.FC = () => {
               </div>
             </div>
           </details>
+          </div>
 
-          {/* Does It Actually Work? */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>Does It Actually Work?</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>Does It Actually Work?</h2>
+            <p className={styles.accordionTeaser}>
+              The hard question: Is HOLD just another "calm down" technique that doesn't build real developmental
+              capacity? Or does it actually reopen collapsed Threads? And what conditions must be present for
+              this work to succeed?
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>Why It's Different and What Makes It Possible</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <p className={styles.workIntro}>
                 Legitimate concern: Is HOLD just another "calm down" technique that doesn't build real
                 developmental capacity?
@@ -802,15 +1232,107 @@ const Hold: React.FC = () => {
                   Threads framework → deeper capacity building.
                 </p>
               </div>
+
+              <h3>What Makes It Possible: The Five Key Factors</h3>
+              <p className={styles.factorsIntro}>
+                Can this actually work with adults whose Threads have been collapsed for decades? Honest
+                answer: it's harder than with children. But it's possible. Here's what needs to be present:
+              </p>
+
+              <div className={styles.factorCard}>
+                <h4>1. Shared Stakes</h4>
+                <p>
+                  People have to want the relationship/community/country more than they want to win. Without
+                  shared investment in something beyond the argument itself, there's no motivation to do the
+                  harder work of holding tension.
+                </p>
+                <p className={styles.example}>
+                  <strong>Example:</strong> A family that wants to stay connected despite political difference.
+                  A workplace that needs to function across political lines. A community that shares geography
+                  even when they don't share values.
+                </p>
+              </div>
+
+              <div className={styles.factorCard}>
+                <h4>2. Small Groups</h4>
+                <p>
+                  Threads can't reopen in mass discourse. They reopen in actual human contact, face to face,
+                  body to body. The practice requires the intimacy of small groups where people can be seen
+                  and held.
+                </p>
+                <p className={styles.example}>
+                  <strong>Why scale requires this:</strong> HOLD spreads through small group practice, not
+                  through mass media alone. The 60-second video creates awareness, but the practice circles
+                  build capacity.
+                </p>
+              </div>
+
+              <div className={styles.factorCard}>
+                <h4>3. Skilled Facilitation</h4>
+                <p>
+                  Someone who can name the Thread without taking sides on the content. Someone who can hold
+                  space for genuine difficulty without collapsing into fixing or dismissing. Someone who has
+                  done their own Thread work.
+                </p>
+                <p className={styles.example}>
+                  <strong>What this means:</strong> The facilitator training isn't optional. HOLD is simple
+                  enough for individual practice, but guiding others through collapsed Threads requires skill
+                  and preparation.
+                </p>
+              </div>
+
+              <div className={styles.factorCard}>
+                <h4>4. Repeated Practice</h4>
+                <p>
+                  One conversation doesn't rebuild capacity. It takes sustained work. Weekly practice groups.
+                  Regular check-ins. Integration into daily life. The commitment to keep returning when it's
+                  hard.
+                </p>
+                <p className={styles.example}>
+                  <strong>The rhythm:</strong> Not a workshop you attend once, but a practice you maintain. Like
+                  physical therapy or meditation—the benefits come from repetition over time.
+                </p>
+              </div>
+
+              <div className={styles.factorCard}>
+                <h4>5. Permission to Fail</h4>
+                <p>
+                  People will collapse. The practice is noticing and returning, not achieving perfection. If
+                  collapse is treated as failure rather than information, people will perform rather than
+                  practice.
+                </p>
+                <p className={styles.example}>
+                  <strong>The culture shift:</strong> "I collapsed" becomes a useful observation, not a shameful
+                  admission. "Let me try that again" becomes normalized. Failure is part of the practice, not
+                  a sign the practice isn't working.
+                </p>
+              </div>
+
+              <div className={styles.successNote}>
+                <p>
+                  <strong>When these five factors are present, Threads can reopen even in adults with decades
+                  of collapse.</strong> The Right Relations work at UUFBR is evidence. It's not easy. It's not
+                  fast. But it's possible.
+                </p>
+              </div>
             </div>
           </details>
+          </div>
 
-          {/* The Honest Limitations */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>The Honest Limitations</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>The Honest Limitations</h2>
+            <p className={styles.accordionTeaser}>
+              HOLD won't reach everyone. Some people are too collapsed, too fused with their position, too
+              rewarded by their outrage. But that's okay—because the goal isn't universal adoption. It's
+              reaching the moveable middle and changing the culture.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>What HOLD Can and Cannot Do</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
               <div className={styles.limitationSection}>
                 <h3>HOLD Won't Reach Everyone</h3>
                 <p>
@@ -877,13 +1399,22 @@ const Hold: React.FC = () => {
               </div>
             </div>
           </details>
+          </div>
 
-          {/* Deep Dive: Critique From Major Players */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>Deep Dive: Critique From Major Players</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>Deep Dive: Critique From Major Players</h2>
+            <p className={styles.accordionTeaser}>
+              The serious critiques from the depolarization field: bridge-building vs. power-building, the
+              asymmetry problem, the exhausted middle myth, the sedative effect, the neutrality trap. And
+              how HOLD responds to each without false equivalence or evasion.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>Addressing the Serious Critiques</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
 
               <div className={styles.critiqueCard}>
                 <h3>Critique 1: Bridge-Building vs. Power-Building</h3>
@@ -997,16 +1528,24 @@ const Hold: React.FC = () => {
                   </p>
                 </div>
               </div>
-
             </div>
           </details>
+          </div>
 
-          {/* Where Threads Fits */}
-          <details className={styles.accordion}>
-            <summary className={styles.accordionSummary}>
-              <h2>Where Threads Fits: The Unique Contribution</h2>
-            </summary>
-            <div className={styles.accordionContent}>
+          <div className={styles.accordionSection}>
+            <h2>Where Threads Fits: The Unique Contribution</h2>
+            <p className={styles.accordionTeaser}>
+              With hundreds of organizations already working on depolarization, what does Threads offer that's
+              different? Not better communication techniques or moderate positions—but the underlying capacity
+              that makes all other work possible.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>The Gap Threads Addresses</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
 
               <div className={styles.contributionCard}>
                 <h3>1. Diagnostic Precision</h3>
@@ -1119,9 +1658,9 @@ const Hold: React.FC = () => {
                   the unique contribution.
                 </p>
               </div>
-
             </div>
           </details>
+          </div>
 
         </div>
       </section>

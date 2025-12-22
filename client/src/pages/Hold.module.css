@@ -486,9 +486,31 @@
   padding: 4rem 2rem;
 }
 
+.accordionSection {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.accordionSection h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #1E3A8A;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.accordionTeaser {
+  font-size: 1.25rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
 .accordion {
   max-width: 1000px;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   background: var(--color-off-white);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
@@ -502,6 +524,10 @@
   list-style: none;
   background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .accordionSummary:hover {
@@ -516,11 +542,24 @@
   display: none;
 }
 
-.accordionSummary h2 {
-  font-size: 2rem;
+.accordionSummary h2,
+.accordionSummary h3 {
+  flex: 1;
+  font-size: 1.75rem;
   color: #FFFFFF;
   margin: 0;
-  font-weight: 900;
+  font-weight: 700;
+}
+
+.accordionChevron {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion[open] .accordionChevron {
+  transform: rotate(180deg);
 }
 
 .accordionContent {
@@ -1100,8 +1139,35 @@
   .problem h2,
   .tensions h2,
   .universalMessage h2,
-  .reopening h2 {
+  .reopening h2,
+  .accordionSection h2 {
     font-size: 1.75rem;
+  }
+
+  .accordionSection {
+    margin-bottom: 2.5rem;
+  }
+
+  .accordionTeaser {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .accordionSummary {
+    padding: 1rem 1.5rem;
+  }
+
+  .accordionSummary h2,
+  .accordionSummary h3 {
+    font-size: 1.25rem;
+  }
+
+  .accordionContent {
+    padding: 1.25rem;
+  }
+
+  .accordionChevron {
+    font-size: 1.25rem;
   }
 
   .explainerLead {
