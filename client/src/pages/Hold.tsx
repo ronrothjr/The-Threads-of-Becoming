@@ -84,6 +84,30 @@ const Hold: React.FC = () => {
           <h2>The Problem We're Addressing</h2>
 
           <div className={styles.problemContent}>
+            <div className={`${styles.problemCard} ${styles.collapseExplainer}`}>
+              <h3>What Is Collapse?</h3>
+              <p>
+                <strong>Collapse</strong> happens when a tension that should be held between two poles falls entirely
+                to one side. Instead of "both/and," we get "only this, never that."
+              </p>
+              <p>
+                In healthy political discourse, we hold the tension between competing values—safety AND freedom,
+                individual rights AND collective responsibility, tradition AND progress. When one pole disappears—when
+                only my side matters, when only winning counts—the tension collapses. Democracy becomes tribalism.
+              </p>
+              <div className={styles.collapseExample}>
+                <p>
+                  <strong>Example:</strong> You hold the tension between "I'm certain about my values" and "I might
+                  not know everything about this issue." When certainty collapses—when there's nothing that could change
+                  your mind—you've stopped thinking and started defending.
+                </p>
+              </div>
+              <p className={styles.collapseNote}>
+                Collapse isn't just about politics—it's a fundamental pattern in how humans lose capacity to hold
+                complexity. <a href="/collapse" className={styles.collapseLink}>Explore the anatomy of collapse →</a>
+              </p>
+            </div>
+
             <div className={styles.problemCard}>
               <h3>This Is Not A Policy Problem</h3>
               <p>
