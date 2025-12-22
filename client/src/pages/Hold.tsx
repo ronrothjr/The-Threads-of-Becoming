@@ -122,10 +122,10 @@ const Hold: React.FC = () => {
                     <h4>CONSENT</h4>
                     <p className={styles.threadTension}><span>Yes ↔ No |</span> <span>Self ↔ Other</span></p>
                     <p className={styles.threadCollapse}>
-                      <strong>Collapsed:</strong> "You must agree with me or you're wrong/evil/dangerous"—no legitimate disagreement allowed
+                      <strong>Collapsed:</strong> Either total accommodation ("I must say yes to keep relationship") or total rejection ("No to you entirely, no relationship")—can't hold boundaries AND connection
                     </p>
                     <p className={styles.threadOpen}>
-                      <strong>Open:</strong> You can hold your position strongly while allowing others to hold theirs—staying in relationship across difference
+                      <strong>Open:</strong> You can say NO to someone's politics/beliefs/demands AND YES to relationship with them as a person—boundaries don't require rejection
                     </p>
                   </div>
 
@@ -209,9 +209,9 @@ const Hold: React.FC = () => {
                   </p>
                   <div className={styles.tensionExample}>
                     <p><strong>Example:</strong> The CONSENT Thread doesn't ask you to soften your views. It asks: Can you
-                    be absolutely certain you're right <em>and</em> genuinely allow that others might see differently? When
-                    you can hold both—"I stand here" AND "you're allowed to stand there"—that's creative tension. That's
-                    what makes dialogue possible.</p>
+                    say NO to someone's politics <em>and</em> YES to relationship with them? When you can hold both—"I strongly
+                    disagree with your position" AND "I'm staying in connection with you as a person"—that's creative tension.
+                    That's what makes relationship across difference possible.</p>
                   </div>
                   <p className={styles.tensionNote}>
                     <strong>The magic:</strong> Creative tension generates new possibilities. When you stop collapsing,
@@ -707,7 +707,7 @@ const Hold: React.FC = () => {
                 <h4>Without HOLD (Collapsed Threads)</h4>
                 <ul>
                   <li><strong>Lost in my head, not actually here</strong> - PRESENCE collapsed (entirely Within, no Between)</li>
-                  <li><strong>He's simply wrong and bad</strong> - CONSENT collapsed (no legitimate disagreement)</li>
+                  <li><strong>Must cut him off or else agree with him</strong> - CONSENT collapsed (can't say No AND stay in relationship)</li>
                   <li><strong>He's always been like this</strong> - MEMORY collapsed (fixed story)</li>
                   <li><strong>Immediate rage</strong> - PAUSE collapsed</li>
                   <li><strong>Argument from pure position</strong> - EMBODIMENT collapsed</li>
@@ -746,8 +746,8 @@ const Hold: React.FC = () => {
                   </p>
                   <p className={styles.threadNote}>
                     Just naming these tensions begins to reopen the collapsed Threads. The CONSENT Thread reopens
-                    when you acknowledge the tension between standing firm and staying connected. The UNCERTAINTY
-                    Thread reopens when you admit you don't fully understand.
+                    when you acknowledge the tension between saying No (to beliefs) and saying Yes (to relationship).
+                    The UNCERTAINTY Thread reopens when you admit you don't fully understand.
                   </p>
                 </div>
 
@@ -947,27 +947,28 @@ const Hold: React.FC = () => {
                   <h3>CONSENT (Collapsed)</h3>
                   <h4>What we're seeing:</h4>
                   <ul>
-                    <li>Imposition as default ("you MUST agree")</li>
-                    <li>Cancel culture (withdraw consent to exist in public)</li>
-                    <li>"If you're not with us, you're against us"</li>
-                    <li>No legitimate disagreement</li>
-                    <li>Boundaries as betrayal</li>
+                    <li>Either total accommodation ("I can't say no, must agree to keep peace") or total rejection ("If you believe that, we're done")</li>
+                    <li>Cancel culture—saying No means ending all relationship</li>
+                    <li>"If you're not with us, you're against us"—No to your position = No to you as a person</li>
+                    <li>Setting political boundaries treated as violence or betrayal</li>
+                    <li>OR demanding others have no boundaries around your beliefs ("You must tolerate my intolerance")</li>
                   </ul>
                   <p className={styles.collapsePattern}>
-                    <strong>Left collapse:</strong> "Your disagreement is violence. Consent to our framing or
-                    be expelled."
+                    <strong>Left collapse toward Yes/Other:</strong> "I can't set boundaries around harmful speech—that's
+                    violence. I must accommodate to maintain relationship, even when it violates my values."
                   </p>
                   <p className={styles.collapsePattern}>
-                    <strong>Right collapse:</strong> "Your boundaries are weakness. Real Americans don't need
-                    safe spaces."
+                    <strong>Right collapse toward No/Self:</strong> "I don't need to accommodate anyone. Your boundaries
+                    are weakness. My 'no' to political correctness means no relationship with you."
                   </p>
                   <p className={styles.reopening}>
-                    <strong>What reopening looks like:</strong> "You have the right to see this differently. I
-                    have the right to hold my view. Can we stay in relationship across that difference?"
+                    <strong>What reopening looks like:</strong> "I can say NO to your political beliefs/demands/rhetoric
+                    AND YES to staying in relationship with you as a person. My boundaries don't require your disappearance.
+                    Your boundaries don't require my agreement."
                   </p>
                   <p className={styles.impact}>
-                    This is the Thread most obviously broken in political life. We've lost the capacity to
-                    consent to difference.
+                    CONSENT is the Thread most obviously broken in political life. We've lost the capacity to say
+                    both Yes (to relationship) and No (to beliefs/behaviors) simultaneously.
                   </p>
                 </div>
 
@@ -1137,8 +1138,8 @@ const Hold: React.FC = () => {
                     </tr>
                     <tr>
                       <td><strong>CONSENT</strong></td>
-                      <td>Forced agreement or exile</td>
-                      <td>Forced exposure, "toughen up"</td>
+                      <td>Must accommodate or you're violent/intolerant (collapsed toward Yes)</td>
+                      <td>No boundaries, "deal with it" (collapsed toward No)</td>
                     </tr>
                     <tr>
                       <td><strong>MEMORY</strong></td>
@@ -1226,8 +1227,8 @@ const Hold: React.FC = () => {
                 </p>
                 <p>
                   The collapsed CONSENT Thread is what ends friendships and fragments communities. "If you voted
-                  for X, we can't be friends" is a CONSENT collapse—an inability to stay in relationship across
-                  difference.
+                  for X, we can't be friends" is a CONSENT collapse—an inability to say NO to someone's politics
+                  while saying YES to relationship with them.
                 </p>
                 <div className={styles.intervention}>
                   <h4>A HOLD intervention:</h4>
@@ -1353,8 +1354,8 @@ const Hold: React.FC = () => {
                 <h3>Community Organizations</h3>
                 <p>
                   The collapsed CONSENT Thread is what ends friendships and fragments communities. "If you voted
-                  for X, we can't be friends" is a CONSENT collapse - an inability to stay in relationship across
-                  difference.
+                  for X, we can't be friends" is a CONSENT collapse—an inability to say NO to someone's politics
+                  while saying YES to relationship with them.
                 </p>
                 <div className={styles.intervention}>
                   <strong>A HOLD intervention:</strong>
@@ -1569,17 +1570,17 @@ const Hold: React.FC = () => {
                 </p>
                 <p className={styles.distinction}>
                   <strong>HOLD is different:</strong> It connects to the Threads framework (seven core capacities plus
-                  THRESHOLD for political contexts), allowing precise diagnosis. "Your CONSENT Thread is collapsed—you're
-                  requiring agreement rather than allowing difference." "Your UNCERTAINTY Thread is collapsed—there's
+                  THRESHOLD for political contexts), allowing precise diagnosis. "Your CONSENT Thread is collapsed—you
+                  can't say No to their politics AND stay in relationship." "Your UNCERTAINTY Thread is collapsed—there's
                   nothing that could change your mind." This precision makes the work targetable.
                 </p>
                 <div className={styles.diagnosticExample}>
                   <p>
                     <strong>Example:</strong> A Braver Angels workshop struggles when a conservative is "on the
-                    defensive, fielding data-driven diatribes." Thread diagnosis: THRESHOLD collapsed (discomfort =
-                    attack), CONSENT collapsed (no legitimate disagreement), UNCERTAINTY collapsed (certainty as
-                    weapon). Name the specific collapses, work with those. Not "be more civil"—"your THRESHOLD Thread
-                    needs reopening."
+                    defensive, fielding data-driven diatribes." Thread diagnosis: THRESHOLD collapsed ("you're attacking
+                    my group"), CONSENT collapsed (can't say No to progressive framing AND stay in the room), UNCERTAINTY
+                    collapsed (certainty as weapon). Name the specific collapses, work with those. Not "be more civil"—
+                    "your CONSENT Thread needs reopening: can you disagree AND stay connected?"
                   </p>
                 </div>
               </div>
@@ -2196,7 +2197,7 @@ const Hold: React.FC = () => {
                 <h3>1. Diagnostic Precision</h3>
                 <p>
                   Threads can name <em>which</em> capacity is collapsed in any given interaction. "Your CONSENT
-                  is collapsed toward forced agreement" is more actionable than "you're being divisive."
+                  is collapsed—you're saying either total Yes or total No, can't hold both" is more actionable than "you're being divisive."
                 </p>
                 <p>
                   This precision helps people understand what's actually happening, not just that "something
@@ -2292,7 +2293,7 @@ const Hold: React.FC = () => {
                 <ul>
                   <li>Listen without defending (requires PAUSE)</li>
                   <li>Stay grounded in experience (requires EMBODIMENT)</li>
-                  <li>Allow legitimate disagreement (requires CONSENT)</li>
+                  <li>Say No to beliefs AND Yes to relationship (requires CONSENT)</li>
                   <li>Hold discomfort without collapsing (requires THRESHOLD)</li>
                   <li>Examine inherited stories (requires MEMORY)</li>
                   <li>Remain genuinely open (requires UNCERTAINTY)</li>
