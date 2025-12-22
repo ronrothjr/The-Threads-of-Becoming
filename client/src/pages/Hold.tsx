@@ -253,6 +253,121 @@ const Hold: React.FC = () => {
         </div>
       </section>
 
+      {/* What We're Hearing */}
+      <section className={`${styles.hearing} section-lg`}>
+        <div className="container">
+          <h2>What We're Hearing: The Real Experiences Driving the Rage</h2>
+          <p className={styles.hearingIntro}>
+            Before we talk about collapse, let's acknowledge what's actually REAL. These aren't manufactured grievances—these
+            are lived experiences. The collapse isn't that you're experiencing them. It's that you can't hold YOUR reality
+            AND stay curious about theirs.
+          </p>
+
+          <div className={styles.hearingColumns}>
+            <div className={styles.hearingColumn}>
+              <h3>From Conservative America</h3>
+              <ul className={styles.hearingList}>
+                <li><strong>Economic abandonment:</strong> "My town used to have manufacturing jobs that supported families. Now it's dollar stores and opioid deaths. I'm told to 'learn to code' while watching my community die."</li>
+                <li><strong>Cultural erasure:</strong> "The America I grew up in—church on Sunday, neighbors who knew each other, shared values—feels gone. I'm not allowed to mourn that without being called a bigot."</li>
+                <li><strong>Elite contempt:</strong> "I work three jobs and can't afford what my dad bought on one. But I'm told I have 'privilege' by people who've never done physical labor in their lives."</li>
+                <li><strong>Institutional betrayal:</strong> "I trusted the experts. They were wrong about Iraq, the financial crisis, COVID response, Hunter's laptop. Now I'm supposed to just trust them again?"</li>
+                <li><strong>Voiceless concerns:</strong> "I have legitimate concerns about border security, about my daughter's sports team, about biological sex. But I can't even SAY these things without being called hateful."</li>
+                <li><strong>Faith dismissed:</strong> "My Christianity isn't a quaint tradition—it's the foundation of my life. But it's treated as backwards superstition that enlightened people outgrow."</li>
+                <li><strong>Demonization:</strong> "I voted for a candidate I thought would help my community. I was called a fascist, a threat to democracy, irredeemable. Not 'misguided'—evil."</li>
+                <li><strong>Double standards:</strong> "Riots were 'mostly peaceful' when it was the left. Parents at school boards were 'domestic terrorists' when it was us. The rules aren't applied equally."</li>
+                <li><strong>Family fracture:</strong> "My own kids, who I raised and loved, won't speak to me because of who I voted for. I'm grieving the loss of my family over politics."</li>
+                <li><strong>Ignored sacrifice:</strong> "I served my country. I pay my taxes. I follow the rules. And I'm told I'm the problem—that my values are what's wrong with America."</li>
+              </ul>
+            </div>
+
+            <div className={styles.hearingColumn}>
+              <h3>From Progressive America</h3>
+              <ul className={styles.hearingList}>
+                <li><strong>Existence as debate:</strong> "My right to exist—as trans, as immigrant, as Black in America—is treated as a political opinion to be argued about, not a lived reality to be honored."</li>
+                <li><strong>Rights rollback:</strong> "Rights I thought were settled—abortion, voting access, marriage equality—are being stripped away. This isn't abstract policy. This is my body, my family, my life."</li>
+                <li><strong>Climate terror:</strong> "The planet is burning. Scientists are screaming. And half the country denies it's happening while my generation inherits an uninhabitable world."</li>
+                <li><strong>Violence normalized:</strong> "Hate crimes are rising. White supremacists are emboldened. And I'm told to 'understand' the people creating the conditions for my community to be attacked."</li>
+                <li><strong>Exhausted explaining:</strong> "I've explained racism, sexism, transphobia a thousand times. I'm tired of educating people who refuse to listen, then being told I'm divisive when I stop trying."</li>
+                <li><strong>System rigged:</strong> "The wealthy hoard billions while I can't afford rent, healthcare, or student loans. The system is designed to keep me struggling, and voting hasn't changed it."</li>
+                <li><strong>Dignity denied:</strong> "I'm told to be 'civil' to people who vote to strip my healthcare, deport my neighbors, ban books about my history. Where's the civility for us?"</li>
+                <li><strong>Progress sabotaged:</strong> "Every step forward—civil rights, environmental protection, social safety nets—is met with backlash and obstruction. It feels like half the country wants to go backwards."</li>
+                <li><strong>Moral exhaustion:</strong> "I'm watching injustice daily—police violence, family separation at the border, mass shootings—and I'm supposed to just keep going to work, keep being polite, keep hoping it gets better."</li>
+                <li><strong>Future stolen:</strong> "The generation before me had affordable college, livable wages, a stable climate. They pulled the ladder up, destroyed the planet, and blame us for being 'entitled' when we can't afford homes."</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.hearingPivot}>
+            <h3>These Experiences Are Real</h3>
+            <p>
+              <strong>Every single thing on both lists is true for the person experiencing it.</strong> The conservative who's
+              watched their town die isn't making it up. The progressive watching rights disappear isn't overreacting. The
+              betrayal, the fear, the grief—all real.
+            </p>
+            <p>
+              <strong>Here's the collapse:</strong> You can't hold YOUR reality AND stay curious about theirs. You can't care
+              deeply about what you're experiencing AND allow that others might be experiencing something equally legitimate.
+              When someone from the other list speaks, you either dismiss them entirely or feel like you have to abandon your
+              own truth.
+            </p>
+            <p className={styles.holdOffer}>
+              <strong>HOLD doesn't ask you to stop caring about your reality. It doesn't ask you to compromise your values or
+              pretend "both sides are equally right."</strong> It asks: Can you hold the tension between caring deeply about
+              YOUR experience AND remaining curious about theirs? Can you fight for what matters WITHOUT collapsing into tribal
+              warfare that makes you easier to control?
+            </p>
+            <p className={styles.holdOffer}>
+              That's the work. That's what's broken. That's what HOLD rebuilds.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What HOLD Isn't / What HOLD Is */}
+      <section className={`${styles.whatHoldIs} section-lg`}>
+        <div className="container">
+          <h2>What HOLD Isn't / What HOLD Is</h2>
+
+          <div className={styles.whatHoldContent}>
+            <div className={styles.whatHoldColumn}>
+              <h3 className={styles.isntTitle}>HOLD Is NOT:</h3>
+              <ul className={styles.isntList}>
+                <li>❌ Asking you to compromise your values</li>
+                <li>❌ Saying "both sides are equally right"</li>
+                <li>❌ Telling you to tolerate intolerance</li>
+                <li>❌ Pretending there aren't real policy differences with real consequences</li>
+                <li>❌ Another way to tell conservatives to "be nicer"</li>
+                <li>❌ Another way to tell progressives to "understand bigotry"</li>
+                <li>❌ Asking you to like people you disagree with</li>
+                <li>❌ Asking you to stop caring about what matters</li>
+              </ul>
+            </div>
+
+            <div className={styles.whatHoldColumn}>
+              <h3 className={styles.isTitle}>HOLD IS:</h3>
+              <ul className={styles.isList}>
+                <li>✅ Taking back control from people profiting off your reactivity</li>
+                <li>✅ Choosing your response instead of being hijacked</li>
+                <li>✅ Building the capacity to hold YOUR truth AND stay in relationship</li>
+                <li>✅ Stopping collapse so you can actually FIGHT for what matters (instead of just rage-posting)</li>
+                <li>✅ Refusing to let anyone—media, politicians, algorithms—control how you show up</li>
+                <li>✅ Strength, not weakness—choosing conviction AND complexity</li>
+                <li>✅ A practice for when you're triggered, not a philosophy you have to believe</li>
+                <li>✅ The capacity-building that makes real change possible</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.whatHoldPivot}>
+            <p>
+              <strong>The core insight:</strong> Your experiences are real. Your concerns are legitimate. AND you're
+              ALSO being manipulated to collapse around those concerns in ways that make you easier to control. HOLD
+              helps you fight for what matters WITHOUT being weaponized.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* The Problem We're Addressing */}
       <section className={`${styles.problem} section-lg`}>
         <div className="container">
@@ -496,8 +611,9 @@ const Hold: React.FC = () => {
               <div className={styles.accordionContent}>
 
               <p className={styles.legitimacyIntro}>
-                HOLD builds on years of research and analysis from established platforms and thought leaders
-                who've been documenting our polarization crisis. Here's what they've found—and how HOLD responds.
+                HOLD builds on years of research and analysis from established platforms and thought leaders—
+                progressive and conservative, academic and popular, religious and secular—who've been documenting
+                our polarization crisis. Here's what they've found—and how HOLD responds.
               </p>
 
               <div className={styles.sourceCard}>
@@ -527,6 +643,37 @@ const Hold: React.FC = () => {
               </div>
 
               <div className={styles.sourceCard}>
+                <h3>Arthur Brooks: "Love Your Enemies" - Contempt as the Cultural Poison (Former AEI President)</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Central Thesis:</h4>
+                  <ul>
+                    <li><strong>"Contempt is the weapon of the weak"</strong>—it's easier to demonize opponents than to
+                    engage their actual arguments</li>
+                    <li>Political industry profits from contempt: <strong>outrage is the product, you are the
+                    consumer</strong></li>
+                    <li>Only <strong>20% of Americans drive 80% of political discourse</strong>—and they're the angriest,
+                    most certain, most contemptuous voices</li>
+                    <li>Solution isn't agreement or compromise—it's <strong>refusing to treat disagreement as moral
+                    deficiency</strong></li>
+                    <li>Love doesn't mean liking or agreeing; it means <strong>seeing the other as fully human despite
+                    profound disagreement</strong></li>
+                  </ul>
+                  <a href="https://arthurbrooks.com/love-your-enemies/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Explore "Love Your Enemies" by Arthur Brooks →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Brooks names contempt as the poison; HOLD is the antidote. The "H" step interrupts the contempt
+                    reflex: "I'm about to dismiss this person as stupid/evil. Is that who I want to be?" The "D" step
+                    operationalizes Brooks' insight: you can love your enemies without surrendering your position. HOLD
+                    doesn't ask you to like people or agree with them—it asks you to refuse contempt as a strategy.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
                 <h3>Ezra Klein: "Why We're Polarized" (2020-2024)</h3>
                 <div className={styles.sourceFindings}>
                   <h4>Key Insights:</h4>
@@ -548,6 +695,35 @@ const Hold: React.FC = () => {
                     the circuit breaker: "Notice you're about to be hijacked. The outrage you're feeling is exactly
                     what someone wants you to feel." It's not about eliminating emotional response—it's about
                     reclaiming agency over it.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
+                <h3>Yuval Levin: Institutional Decay and the Roots of Polarization (American Enterprise Institute)</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Arguments:</h4>
+                  <ul>
+                    <li><strong>"A Time to Build" (2020):</strong> Our institutions have become platforms for performance
+                    rather than molds for formation</li>
+                    <li>Americans across the political spectrum feel <strong>institutionally homeless</strong>—neither
+                    party, media, nor civic institutions feel trustworthy</li>
+                    <li>The collapse isn't just partisan—it's <strong>relational and formative</strong>: we've lost the
+                    places that teach us how to be citizens together</li>
+                    <li>Solution requires rebuilding trust through <strong>commitment to institutions that form
+                    character</strong>, not just platforms that amplify outrage</li>
+                  </ul>
+                  <a href="https://www.aei.org/profile/yuval-levin/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Read Yuval Levin's work on institutional renewal →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Levin identifies the problem: our institutions have stopped forming us and started performing us.
+                    HOLD is a formative practice. It doesn't require trusting broken institutions—it builds the internal
+                    capacity to engage WITHOUT collapsing into reactive tribalism. It's the character formation Levin
+                    calls for, practiced one moment at a time.
                   </p>
                 </div>
               </div>
@@ -581,6 +757,36 @@ const Hold: React.FC = () => {
               </div>
 
               <div className={styles.sourceCard}>
+                <h3>David French: Holding Conviction AND Pluralism (Conservative Evangelical Perspective)</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Insights:</h4>
+                  <ul>
+                    <li><strong>"Divided We Fall" (2020):</strong> Americans are increasingly sorted into geographic and
+                    cultural enclaves, losing contact with political "others"</li>
+                    <li>It IS possible to hold <strong>deep religious and moral conviction AND commitment to
+                    pluralism</strong>—but it requires practice, not just principle</li>
+                    <li>The collapse isn't about "compromise"—it's about losing the ability to distinguish between
+                    <strong>enemy and opponent</strong></li>
+                    <li>Real tolerance doesn't mean agreement; it means <strong>willingness to protect the rights of
+                    those you believe are wrong</strong></li>
+                  </ul>
+                  <a href="https://www.nytimes.com/by/david-french" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Read David French's columns on conviction and pluralism →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    French models what's possible when you hold conviction without collapse. HOLD builds that capacity.
+                    The "L" step forces you to name the tension: "I'm certain abortion is wrong AND I don't know what
+                    it's like to face an unwanted pregnancy" or "I'm certain gun rights are essential AND I don't know
+                    what it's like to lose a child to gun violence." That's how you hold conviction AND pluralism—not by
+                    softening your beliefs, but by refusing to collapse the complexity.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
                 <h3>Jonathan Haidt: Social Media, Polarization, and Democratic Fragility</h3>
                 <div className={styles.sourceFindings}>
                   <h4>Key Arguments:</h4>
@@ -604,6 +810,37 @@ const Hold: React.FC = () => {
                     builds capacity person by person. The "D" step (DECIDE who you want to be) operationalizes
                     Haidt's insight: we can choose to shape ourselves differently, but we need a practice that makes
                     that choice actionable in the moment of trigger.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
+                <h3>Patrick Deneen: "Why Liberalism Failed" - The Conservative Critique That Resonates with MAGA</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Arguments:</h4>
+                  <ul>
+                    <li><strong>Liberalism (both left and right) has failed</strong> by destroying the communities,
+                    traditions, and institutions that give life meaning</li>
+                    <li>Modern life is characterized by <strong>radical individualism AND radical centralization</strong>
+                    —we're isolated from community but controlled by distant elites</li>
+                    <li>The "culture war" is actually a fight over <strong>whether anything bigger than the individual
+                    self can make claims on us</strong> (family, faith, place, nation)</li>
+                    <li>Neither mainstream conservatives nor progressives address the real hunger: for <strong>belonging,
+                    rootedness, meaning beyond consumption and self-expression</strong></li>
+                  </ul>
+                  <a href="https://ndias.nd.edu/fellows/patrick-deneen/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Read Patrick Deneen's work on community and tradition →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Deneen diagnoses the hunger underneath the rage: people aren't just angry about politics—they're
+                    grieving the loss of community, meaning, and belonging. HOLD doesn't solve that directly, but it
+                    DOES reopen the Threads that make community possible. PRESENCE reopens "Within AND Between."
+                    THRESHOLD reopens "Us AND hospitality to outsiders." BECOMING reopens "Who I've been AND who I'm
+                    becoming." HOLD can't restore your town's economy or your church's congregation—but it can restore
+                    the capacity to BUILD those things instead of just raging at their absence.
                   </p>
                 </div>
               </div>
@@ -761,6 +998,80 @@ const Hold: React.FC = () => {
                     Maybe: engage with curiosity. Maybe: set a boundary. Maybe: say nothing now but raise it at
                     Thanksgiving. Maybe: write a thoughtful response instead of a reactive one. The point isn't
                     a prescribed answer. The point is that you <em>chose</em> instead of <em>reacted</em>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Conservative-Specific Scenario */}
+          <div className={styles.scenario} style={{marginTop: '4rem'}}>
+            <h3 className={styles.scenarioTitle}>Scenario: Your Niece Calls You a Fascist for Your Vote</h3>
+            <p className={styles.scenarioSetup}>
+              She's home from college. At dinner, she says voting for Trump makes you complicit in fascism.
+              Here's what happens with and without HOLD:
+            </p>
+
+            <div className={styles.comparison}>
+              <div className={styles.comparisonColumn}>
+                <h4>Without HOLD (Collapsed Threads)</h4>
+                <ul>
+                  <li><strong>Retreat into conservative media echo chamber, no real encounter</strong> - PRESENCE collapsed (entirely Within, no Between)</li>
+                  <li><strong>"If she thinks I'm evil, we're done"</strong> - CONSENT collapsed (can't say No to accusation AND stay in relationship)</li>
+                  <li><strong>"She was indoctrinated at that liberal college"</strong> - MEMORY collapsed (fixed story about who she is)</li>
+                  <li><strong>Immediate defensive rage</strong> - PAUSE collapsed</li>
+                  <li><strong>Argue ideology, not lived experience</strong> - EMBODIMENT collapsed</li>
+                  <li><strong>"I KNOW I'm right and she's brainwashed"</strong> - UNCERTAINTY collapsed</li>
+                  <li><strong>"I've always been conservative, can't change now"</strong> - BECOMING collapsed</li>
+                  <li><strong>"She's not family anymore if she thinks that"</strong> - THRESHOLD collapsed (tribal exclusion)</li>
+                </ul>
+              </div>
+
+              <div className={styles.comparisonColumn}>
+                <h4>With HOLD (Thread Reopening)</h4>
+
+                <div className={styles.holdStepScenario}>
+                  <h5>H - HALT</h5>
+                  <p>
+                    "I'm about to cut her off forever. Is that who I want to be? What am I protecting? My pride?
+                    My beliefs? Or am I protecting myself from feeling dismissed and demonized?"
+                  </p>
+                </div>
+
+                <div className={styles.holdStepScenario}>
+                  <h5>O - OBSERVE</h5>
+                  <p>
+                    "Chest tight. Jaw clenched. Feeling dismissed. Feeling like my whole identity—my values, my
+                    faith, my life choices—are being called evil. That's a threat response. She's not actually
+                    threatening me. But my nervous system feels under attack."
+                  </p>
+                </div>
+
+                <div className={styles.holdStepScenario}>
+                  <h5>L - LOOK FOR THE TENSION</h5>
+                  <p>
+                    "I want to be understood AND I want relationship with her. I'm certain about my values AND
+                    I don't actually know what it's like to be her generation in her city. I want her to respect
+                    my beliefs AND I haven't asked what she's actually scared of. I can be right about policy AND
+                    wrong about how I'm showing up in this moment."
+                  </p>
+                  <p className={styles.threadNote}>
+                    The CONSENT Thread reopens: I can say NO to being called a fascist AND YES to staying in her life.
+                    The UNCERTAINTY Thread reopens: I'm certain AND I don't know everything about her experience.
+                  </p>
+                </div>
+
+                <div className={styles.holdStepScenario}>
+                  <h5>D - DECIDE</h5>
+                  <p>
+                    "I can hold my ground AND stay in her life. My boundary is: 'I won't be called a fascist.
+                    I voted for policies I believe in, not for hatred. But I will listen to why you're scared.
+                    And I want you to understand why I voted the way I did—not to change your mind, but because
+                    I'm your family and you should know me, not a caricature.'"
+                  </p>
+                  <p className={styles.threadNote}>
+                    This is strength, not weakness. You didn't compromise your values. You didn't agree with her.
+                    You chose relationship AND conviction. That's the Thread work.
                   </p>
                 </div>
               </div>
@@ -958,8 +1269,10 @@ const Hold: React.FC = () => {
                     violence. I must accommodate to maintain relationship, even when it violates my values."
                   </p>
                   <p className={styles.collapsePattern}>
-                    <strong>Right collapse toward No/Self:</strong> "I don't need to accommodate anyone. Your boundaries
-                    are weakness. My 'no' to political correctness means no relationship with you."
+                    <strong>Right collapse toward No/Self:</strong> "I've accommodated for years—political correctness,
+                    changing language, biting my tongue at work. I'm done accommodating people who hate me anyway. If you
+                    can't handle my beliefs, that's YOUR problem. I tried to be respectful and got demonized. So fuck it—no
+                    more compromise."
                   </p>
                   <p className={styles.reopening}>
                     <strong>What reopening looks like:</strong> "I can say NO to your political beliefs/demands/rhetoric

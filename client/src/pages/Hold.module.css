@@ -120,6 +120,194 @@
   line-height: 1.7;
 }
 
+/* What We're Hearing Section */
+.hearing {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.hearing h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #1E3A8A;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.hearingIntro {
+  font-size: 1.25rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.hearingColumns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.hearingColumn h3 {
+  font-size: 2rem;
+  color: #1E3A8A;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.hearingList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hearingList li {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  background: #FFFFFF;
+  border-left: 4px solid #5B21B6;
+  border-radius: 8px;
+  line-height: 1.7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.hearingList li strong {
+  color: #5B21B6;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hearingPivot {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 3px solid #5B21B6;
+}
+
+.hearingPivot h3 {
+  font-size: 2.25rem;
+  color: #5B21B6;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.hearingPivot p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hearingPivot p:last-child {
+  margin-bottom: 0;
+}
+
+.holdOffer {
+  font-size: 1.15rem !important;
+  font-weight: 600;
+  color: #1E3A8A;
+  line-height: 1.8;
+  margin-top: 1.5rem;
+}
+
+/* What HOLD Isn't / What HOLD Is Section */
+.whatHoldIs {
+  background: #FFFFFF;
+  padding: 4rem 2rem;
+}
+
+.whatHoldIs h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #1E3A8A;
+  margin-bottom: 3rem;
+  font-weight: 900;
+}
+
+.whatHoldContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatHoldColumn {
+  background: var(--color-off-white);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.isntTitle {
+  font-size: 2rem;
+  color: #DC2626;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.isTitle {
+  font-size: 2rem;
+  color: #5B21B6;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.isntList,
+.isList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.isntList li,
+.isList li {
+  padding: 1rem 1rem 1rem 2.5rem;
+  margin-bottom: 0.75rem;
+  background: #FFFFFF;
+  border-radius: 8px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.isntList li {
+  border-left: 4px solid #DC2626;
+}
+
+.isList li {
+  border-left: 4px solid #5B21B6;
+}
+
+.whatHoldPivot {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 3px solid #5B21B6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.whatHoldPivot p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 0;
+  color: #333333;
+}
+
+.whatHoldPivot strong {
+  color: #5B21B6;
+  font-weight: 900;
+}
+
 /* Threads Primer Section */
 .threadsPrimer {
   background: var(--color-off-white);
@@ -2088,6 +2276,99 @@
   /* Section Width Adjustments for Mobile */
   .threadsPrimer {
     padding: 3rem 1rem;
+  }
+
+  /* What HOLD Isn't / What HOLD Is Mobile */
+  .whatHoldIs {
+    padding: 3rem 1rem;
+  }
+
+  .whatHoldIs h2 {
+    font-size: 1.75rem;
+  }
+
+  .whatHoldContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .whatHoldColumn {
+    padding: 1.5rem;
+  }
+
+  .isntTitle,
+  .isTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .isntList li,
+  .isList li {
+    padding: 0.875rem 0.875rem 0.875rem 2rem;
+    margin-bottom: 0.625rem;
+    font-size: 0.95rem;
+  }
+
+  .whatHoldPivot {
+    padding: 1.5rem;
+  }
+
+  .whatHoldPivot p {
+    font-size: 1rem;
+  }
+
+  /* What We're Hearing Mobile */
+  .hearing {
+    padding: 3rem 1rem;
+  }
+
+  .hearing h2 {
+    font-size: 1.75rem;
+  }
+
+  .hearingIntro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hearingColumns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hearingColumn h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hearingList li {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .hearingList li strong {
+    font-size: 1rem;
+  }
+
+  .hearingPivot {
+    padding: 1.5rem;
+  }
+
+  .hearingPivot h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hearingPivot p {
+    font-size: 0.95rem;
+  }
+
+  .holdOffer {
+    font-size: 1rem !important;
+    margin-top: 1rem;
   }
 
   .accordionSection {
