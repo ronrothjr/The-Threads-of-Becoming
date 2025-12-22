@@ -109,7 +109,7 @@ const Hold: React.FC = () => {
                 <div className={styles.threadGrid}>
                   <div className={styles.threadPrimerCard}>
                     <h4>PRESENCE</h4>
-                    <p className={styles.threadTension}><span>Within ↔ Between</span> | <span>Here ↔ Elsewhere</span></p>
+                    <p className={styles.threadTension}><span>Within ↔ Between |</span> <span>Here ↔ Elsewhere</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> Either complete isolation ("I don't need anyone") or total enmeshment ("I can't exist without others")—no ability to move between
                     </p>
@@ -120,7 +120,7 @@ const Hold: React.FC = () => {
 
                   <div className={styles.threadPrimerCard}>
                     <h4>CONSENT</h4>
-                    <p className={styles.threadTension}><span>Yes ↔ No</span> | <span>Self ↔ Other</span></p>
+                    <p className={styles.threadTension}><span>Yes ↔ No |</span> <span>Self ↔ Other</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> "You must agree with me or you're wrong/evil/dangerous"—no legitimate disagreement allowed
                     </p>
@@ -131,7 +131,7 @@ const Hold: React.FC = () => {
 
                   <div className={styles.threadPrimerCard}>
                     <h4>MEMORY</h4>
-                    <p className={styles.threadTension}><span>Given ↔ Chosen</span> | <span>Telling ↔ Told</span></p>
+                    <p className={styles.threadTension}><span>Given ↔ Chosen |</span> <span>Telling ↔ Told</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> You're possessed by stories you didn't choose and can't examine—or you reject all inheritance
                     </p>
@@ -142,7 +142,7 @@ const Hold: React.FC = () => {
 
                   <div className={styles.threadPrimerCard}>
                     <h4>PAUSE</h4>
-                    <p className={styles.threadTension}><span>Not Yet ↔ Now</span> | <span>More ↔ Enough</span></p>
+                    <p className={styles.threadTension}><span>Not Yet ↔ Now |</span> <span>More ↔ Enough</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> You react automatically to triggers—no space between stimulus and response
                     </p>
@@ -153,7 +153,7 @@ const Hold: React.FC = () => {
 
                   <div className={styles.threadPrimerCard}>
                     <h4>EMBODIMENT</h4>
-                    <p className={styles.threadTension}><span>Think ↔ Feel</span> | <span>Stay ↔ Go</span></p>
+                    <p className={styles.threadTension}><span>Think ↔ Feel |</span> <span>Stay ↔ Go</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> You argue positions you've never felt, defend policies detached from actual human experience
                     </p>
@@ -164,7 +164,7 @@ const Hold: React.FC = () => {
 
                   <div className={styles.threadPrimerCard}>
                     <h4>UNCERTAINTY</h4>
-                    <p className={styles.threadTension}><span>Hide ↔ Seek</span> | <span>Threat ↔ Wonder</span></p>
+                    <p className={styles.threadTension}><span>Hide ↔ Seek |</span> <span>Threat ↔ Wonder</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> Certainty as virtue—"the science is settled," "the truth is obvious"—nothing could change your mind
                     </p>
@@ -175,7 +175,7 @@ const Hold: React.FC = () => {
 
                   <div className={styles.threadPrimerCard}>
                     <h4>BECOMING</h4>
-                    <p className={styles.threadTension}><span>Same ↔ Different</span> | <span>Return ↔ Forward</span></p>
+                    <p className={styles.threadTension}><span>Same ↔ Different |</span> <span>Return ↔ Forward</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> Your identity is fused with your positions—changing your mind = betraying yourself
                     </p>
@@ -186,7 +186,7 @@ const Hold: React.FC = () => {
 
                   <div className={styles.threadPrimerCard}>
                     <h4>THRESHOLD</h4>
-                    <p className={styles.threadTension}><span>Inside ↔ Outside</span> | <span>Us ↔ Them</span></p>
+                    <p className={styles.threadTension}><span>Inside ↔ Outside |</span> <span>Us ↔ Them</span></p>
                     <p className={styles.threadCollapse}>
                       <strong>Collapsed:</strong> Either rigid tribalism ("you're with us or against us") or dissolved identity ("no boundaries, everyone belongs everywhere")—no discernment about belonging
                     </p>
