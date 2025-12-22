@@ -244,7 +244,7 @@ const Hold: React.FC = () => {
                     diagnostic tools, developmental practices, and applications across education, politics, relationships,
                     and organizational life.
                   </p>
-                  <a href="/threads" className={styles.threadsLink}>Explore the full Threads framework →</a>
+                  <a href="/explore-threads" className={styles.threadsLink}>Explore the full Threads framework →</a>
                 </div>
 
               </div>
