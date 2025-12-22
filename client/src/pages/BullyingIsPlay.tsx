@@ -27,6 +27,38 @@ const BullyingIsPlay: React.FC = () => {
         </div>
       </section>
 
+      {/* What is Collapse? */}
+      <section className={`${styles.collapseIntro} section-lg`}>
+        <div className="container">
+          <h2>What is Collapse?</h2>
+          <p className={styles.collapseExplanation}>
+            <strong>Collapse</strong> happens when a tension that should be held between two poles falls entirely to one side.
+            Instead of "both/and," we get "only this, never that."
+          </p>
+          <p className={styles.collapseExplanation}>
+            In healthy play, children navigate the tension between <em>power and safety</em>, <em>excitement and care</em>,
+            <em>my needs and yours</em>. They hold both poles simultaneously. When one pole disappears—when only power matters,
+            when only excitement drives behavior, when only my needs count—the tension collapses. Play becomes bullying.
+          </p>
+          <div className={styles.collapseExample}>
+            <p>
+              <strong>Example:</strong> In tag, you hold the tension between "chase/flee" (excitement) and "tag gently/stop when
+              someone says stop" (safety). When safety collapses—when you tackle someone hard or keep chasing after they say
+              "I'm done"—play turns into harm.
+            </p>
+          </div>
+          <div className={styles.collapseLearnMore}>
+            <p>
+              Collapse isn't just about bullying—it's a fundamental pattern in how humans lose capacity to hold complexity.
+              Understanding collapse changes how we see conflict, polarization, and human development.
+            </p>
+            <a href="/collapse" className={styles.collapseLink}>
+              Explore the Anatomy of Collapse →
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* The Paradigm Shift */}
       <section className={`${styles.paradigmShift} section-lg`}>
         <div className="container">
