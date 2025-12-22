@@ -254,7 +254,8 @@
 }
 
 .holdConnectionBox ul {
-  list-style: none;
+  list-style: none !important;
+  list-style-type: none !important;
   padding-left: 0;
   margin: 1.5rem 0;
 }
@@ -265,6 +266,7 @@
   position: relative;
   font-size: 1.1rem;
   line-height: 1.7;
+  list-style: none !important;
 }
 
 .holdConnectionBox li::before {
