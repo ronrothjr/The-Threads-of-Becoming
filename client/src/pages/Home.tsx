@@ -177,6 +177,12 @@ const Home: React.FC = () => {
               <p>Bring tension-holding into K-12 classrooms</p>
               <a href="/educators" className={styles.pathwayLink}>Learn More →</a>
             </div>
+
+            <div className={styles.pathway}>
+              <h3>For Voters</h3>
+              <p>Take back your response—stop being played</p>
+              <a href="/hold" className={styles.pathwayLink}>Learn HOLD →</a>
+            </div>
           </div>
 
           <p className={styles.pathwaysCta}>
