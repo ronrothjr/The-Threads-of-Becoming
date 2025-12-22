@@ -120,6 +120,204 @@
   line-height: 1.7;
 }
 
+/* Threads Primer Section */
+.threadsPrimer {
+  background: var(--color-off-white);
+  padding: 4rem 2rem;
+}
+
+.primerIntro {
+  font-size: 1.25rem;
+  color: #333333;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.threadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.threadPrimerCard {
+  background: #FFFFFF;
+  border: 3px solid #5B21B6;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.1);
+}
+
+.threadPrimerCard h4 {
+  font-size: 1.5rem;
+  color: #5B21B6;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.threadTension {
+  font-size: 1rem;
+  color: #1E3A8A;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.threadCollapse {
+  background: rgba(220, 38, 38, 0.08);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 4px solid #DC2626;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.threadOpen {
+  background: rgba(91, 33, 182, 0.08);
+  padding: 0.75rem;
+  border-radius: 8px;
+  border-left: 4px solid #5B21B6;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.thresholdNote {
+  background: rgba(251, 191, 36, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #FBBF24;
+  margin: 2rem 0;
+  font-style: italic;
+}
+
+.thresholdNote p {
+  margin: 0;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.creativeTension {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  border: 3px solid #5B21B6;
+}
+
+.creativeTension h3 {
+  font-size: 2rem;
+  color: #5B21B6;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.creativeTension p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.tensionExample {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 5px solid #1E3A8A;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.tensionNote {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1E3A8A;
+  margin-bottom: 0;
+}
+
+.holdConnectionBox {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(91, 33, 182, 0.1) 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  border: 3px solid #1E3A8A;
+}
+
+.holdConnectionBox h3 {
+  font-size: 2rem;
+  color: #1E3A8A;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.holdConnectionBox ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.holdConnectionBox li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.holdConnectionBox li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #5B21B6;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.practiceNote {
+  background: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+.deeperWork {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #5B21B6;
+}
+
+.deeperWork p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.threadsLink {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(91, 33, 182, 0.3);
+}
+
+.threadsLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(91, 33, 182, 0.4);
+}
+
 /* Problem Section */
 .problem {
   background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
@@ -1784,5 +1982,93 @@
 
   .infrastructureRole {
     font-size: 1.05rem;
+  }
+
+  /* Threads Primer Mobile */
+  .primerIntro {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .threadGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .threadPrimerCard {
+    padding: 1.5rem;
+  }
+
+  .threadPrimerCard h4 {
+    font-size: 1.25rem;
+  }
+
+  .threadTension {
+    font-size: 0.95rem;
+  }
+
+  .threadCollapse,
+  .threadOpen {
+    padding: 0.625rem;
+    font-size: 0.9rem;
+  }
+
+  .creativeTension {
+    padding: 1.5rem;
+  }
+
+  .creativeTension h3 {
+    font-size: 1.5rem;
+  }
+
+  .creativeTension p {
+    font-size: 0.95rem;
+  }
+
+  .tensionExample {
+    padding: 1rem;
+  }
+
+  .tensionNote {
+    font-size: 1rem;
+  }
+
+  .holdConnectionBox {
+    padding: 1.5rem;
+  }
+
+  .holdConnectionBox h3 {
+    font-size: 1.5rem;
+  }
+
+  .holdConnectionBox li {
+    font-size: 0.95rem;
+  }
+
+  .practiceNote {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .deeperWork {
+    padding: 1.5rem;
+  }
+
+  .deeperWork p {
+    font-size: 0.95rem;
+  }
+
+  .threadsLink {
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+
+  .thresholdNote {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .thresholdNote p {
+    font-size: 0.95rem;
   }
 }

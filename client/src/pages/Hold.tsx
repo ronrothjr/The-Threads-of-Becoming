@@ -78,6 +78,181 @@ const Hold: React.FC = () => {
         </div>
       </section>
 
+      {/* Threads Primer */}
+      <section className={`${styles.threadsPrimer} section-lg`}>
+        <div className="container">
+          <div className={styles.accordionSection}>
+            <h2>What Are "Threads" and Why Does It Matter?</h2>
+            <p className={styles.accordionTeaser}>
+              HOLD is built on a deeper framework called "Threads"—seven fundamental capacities that allow humans
+              to hold creative tension without collapsing. When these capacities are strong, we can navigate
+              complexity, disagreement, and uncertainty. When they collapse, we lose the ability to be with what's
+              difficult. Here's what you need to know.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>The Threads: A Quick Primer</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
+
+                <p className={styles.primerIntro}>
+                  Think of Threads as the developmental capacities that allow you to hold complexity. Each Thread
+                  represents a fundamental tension that can't be resolved—only held. When a Thread collapses, you
+                  lose the ability to navigate that tension and fall to one extreme or the other. In politics, this
+                  shows up as rigid polarization: either total withdrawal OR tribal warfare, either forced agreement OR
+                  forced exposure, either absolute certainty OR complete relativism. The capacity to hold both poles
+                  simultaneously—that's what's broken.
+                </p>
+
+                <div className={styles.threadGrid}>
+                  <div className={styles.threadPrimerCard}>
+                    <h4>PRESENCE</h4>
+                    <p className={styles.threadTension}>Within ↔ Between | Here ↔ Elsewhere</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> Either complete isolation ("I don't need anyone") or total enmeshment ("I can't exist without others")—no ability to move between
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You can be fully present with yourself (internal processing) AND fully present with others (external engagement), moving fluidly between solitude and connection
+                    </p>
+                  </div>
+
+                  <div className={styles.threadPrimerCard}>
+                    <h4>CONSENT</h4>
+                    <p className={styles.threadTension}>Yes ↔ No | Self ↔ Other</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> "You must agree with me or you're wrong/evil/dangerous"—no legitimate disagreement allowed
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You can hold your position strongly while allowing others to hold theirs—staying in relationship across difference
+                    </p>
+                  </div>
+
+                  <div className={styles.threadPrimerCard}>
+                    <h4>MEMORY</h4>
+                    <p className={styles.threadTension}>Given ↔ Chosen | Telling ↔ Told</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> You're possessed by stories you didn't choose and can't examine—or you reject all inheritance
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You can hold your political identity as story rather than fate, examine what you inherited without abandoning it
+                    </p>
+                  </div>
+
+                  <div className={styles.threadPrimerCard}>
+                    <h4>PAUSE</h4>
+                    <p className={styles.threadTension}>Not Yet ↔ Now | More ↔ Enough</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> You react automatically to triggers—no space between stimulus and response
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You can halt, notice your reaction, and choose what to do next
+                    </p>
+                  </div>
+
+                  <div className={styles.threadPrimerCard}>
+                    <h4>EMBODIMENT</h4>
+                    <p className={styles.threadTension}>Think ↔ Feel | Stay ↔ Go</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> You argue positions you've never felt, defend policies detached from actual human experience
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You stay connected to what your body knows, to concrete experience, to the human reality beneath the argument
+                    </p>
+                  </div>
+
+                  <div className={styles.threadPrimerCard}>
+                    <h4>UNCERTAINTY</h4>
+                    <p className={styles.threadTension}>Hide ↔ Seek | Threat ↔ Wonder</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> Certainty as virtue—"the science is settled," "the truth is obvious"—nothing could change your mind
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You can be certain about your values while genuinely uncertain about application, hold strong views lightly
+                    </p>
+                  </div>
+
+                  <div className={styles.threadPrimerCard}>
+                    <h4>BECOMING</h4>
+                    <p className={styles.threadTension}>Same ↔ Different | Return ↔ Forward</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> Your identity is fused with your positions—changing your mind = betraying yourself
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You can hold current views strongly while remaining open to becoming someone who sees differently
+                    </p>
+                  </div>
+
+                  <div className={styles.threadPrimerCard}>
+                    <h4>THRESHOLD</h4>
+                    <p className={styles.threadTension}>Inside ↔ Outside | Us ↔ Them</p>
+                    <p className={styles.threadCollapse}>
+                      <strong>Collapsed:</strong> Either rigid tribalism ("you're with us or against us") or dissolved identity ("no boundaries, everyone belongs everywhere")—no discernment about belonging
+                    </p>
+                    <p className={styles.threadOpen}>
+                      <strong>Open:</strong> You can hold clear boundaries about your community AND genuine hospitality toward others, can define "us" without demonizing "them"
+                    </p>
+                  </div>
+                </div>
+
+                <div className={styles.thresholdNote}>
+                  <p><strong>Note on THRESHOLD:</strong> While discovered more recently than the original seven Threads, THRESHOLD has become essential to political work. The "Who belongs?" question—the tension between Us and Them, Inside and Outside—sits at the heart of our political crisis. Every polarization issue involves drawing circles of belonging.</p>
+                </div>
+
+                <div className={styles.creativeTension}>
+                  <h3>What Is "Creative Tension"?</h3>
+                  <p>
+                    Creative tension is what happens when you hold both poles of a Thread without collapsing to either side.
+                    It's not "balance" or "moderation"—it's the capacity to move fluidly between poles depending on context,
+                    while honoring both as necessary.
+                  </p>
+                  <div className={styles.tensionExample}>
+                    <p><strong>Example:</strong> The CONSENT Thread doesn't ask you to soften your views. It asks: Can you
+                    be absolutely certain you're right <em>and</em> genuinely allow that others might see differently? When
+                    you can hold both—"I stand here" AND "you're allowed to stand there"—that's creative tension. That's
+                    what makes dialogue possible.</p>
+                  </div>
+                  <p className={styles.tensionNote}>
+                    <strong>The magic:</strong> Creative tension generates new possibilities. When you stop collapsing,
+                    you stop being hijacked by reaction. You start choosing who you're becoming. That's not a technique—that's
+                    transformation.
+                  </p>
+                </div>
+
+                <div className={styles.holdConnectionBox}>
+                  <h3>How HOLD Reopens Threads</h3>
+                  <p>
+                    Each step of HOLD corresponds to reopening specific Threads:
+                  </p>
+                  <ul>
+                    <li><strong>H - HALT:</strong> Reopens PAUSE (space between trigger and reaction)</li>
+                    <li><strong>O - OBSERVE:</strong> Reopens EMBODIMENT (what does your body know?) and PRESENCE (where are you—in your head or actually here?)</li>
+                    <li><strong>L - LOOK for tension:</strong> Reopens CONSENT (can both poles be legitimate?), UNCERTAINTY (what don't I know?), and MEMORY (what story am I possessed by?)</li>
+                    <li><strong>D - DECIDE who to be:</strong> Reopens BECOMING (choosing your character, not just your position)</li>
+                  </ul>
+                  <p className={styles.practiceNote}>
+                    You don't need to understand all the Threads to practice HOLD. The practice does the Thread work
+                    whether you know the theory or not. But understanding the framework helps you see what's actually
+                    happening—and why it matters.
+                  </p>
+                </div>
+
+                <div className={styles.deeperWork}>
+                  <p>
+                    <strong>Want to go deeper?</strong> HOLD is the entry point. The full Threads framework includes
+                    diagnostic tools, developmental practices, and applications across education, politics, relationships,
+                    and organizational life.
+                  </p>
+                  <a href="/threads" className={styles.threadsLink}>Explore the full Threads framework →</a>
+                </div>
+
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       {/* The Problem We're Addressing */}
       <section className={`${styles.problem} section-lg`}>
         <div className="container">
@@ -318,13 +493,14 @@ const Hold: React.FC = () => {
               <div className={styles.comparisonColumn}>
                 <h4>Without HOLD (Collapsed Threads)</h4>
                 <ul>
+                  <li><strong>Lost in my head, not actually here</strong> - PRESENCE collapsed (entirely Within, no Between)</li>
+                  <li><strong>He's simply wrong and bad</strong> - CONSENT collapsed (no legitimate disagreement)</li>
+                  <li><strong>He's always been like this</strong> - MEMORY collapsed (fixed story)</li>
                   <li><strong>Immediate rage</strong> - PAUSE collapsed</li>
                   <li><strong>Argument from pure position</strong> - EMBODIMENT collapsed</li>
-                  <li><strong>He's simply wrong and bad</strong> - CONSENT collapsed (no legitimate disagreement)</li>
-                  <li><strong>Must defeat/shame him</strong> - THRESHOLD collapsed (attack mode)</li>
-                  <li><strong>He's always been like this</strong> - MEMORY collapsed (fixed story)</li>
                   <li><strong>I KNOW I'm right</strong> - UNCERTAINTY collapsed</li>
                   <li><strong>He'll never change / I can't change</strong> - BECOMING collapsed</li>
+                  <li><strong>He's not one of us anymore</strong> - THRESHOLD collapsed (tribal exclusion)</li>
                 </ul>
               </div>
 
@@ -476,7 +652,7 @@ const Hold: React.FC = () => {
                 <ul>
                   <li>Online courses going deeper into each step</li>
                   <li>Practice groups (virtual and in-person)</li>
-                  <li>Introduction to the seven Threads as underlying framework</li>
+                  <li>Introduction to the Threads as underlying framework (seven core capacities plus THRESHOLD)</li>
                   <li>"HOLD Circles" - regular practice gatherings</li>
                   <li>Integration with existing communities (churches, civic groups, workplaces)</li>
                 </ul>
@@ -510,15 +686,15 @@ const Hold: React.FC = () => {
           <div className={styles.accordionSection}>
             <h2>Political Collapse - Thread by Thread</h2>
             <p className={styles.accordionTeaser}>
-              How does each of the seven Threads show up in our broken political discourse? What does it look
-              like when PAUSE collapses into outrage cycles, when CONSENT collapses into forced agreement,
-              when BECOMING collapses into fixed political identities? And crucially—how do Left and Right
-              collapse the same Threads, just in opposite directions?
+              How does each Thread show up in our broken political discourse? What does it look
+              like when PRESENCE collapses into isolation or tribal identity, when PAUSE collapses into outrage cycles,
+              when CONSENT collapses into forced agreement, when BECOMING collapses into fixed political identities?
+              And crucially—how do Left and Right collapse the same Threads, just in opposite directions?
             </p>
 
             <details className={styles.accordion}>
               <summary className={styles.accordionSummary}>
-                <h3>All Seven Threads Collapsed in Political Context</h3>
+                <h3>The Threads Collapsed in Political Context</h3>
                 <span className={styles.accordionChevron}>▼</span>
               </summary>
               <div className={styles.accordionContent}>
@@ -529,6 +705,78 @@ const Hold: React.FC = () => {
               </p>
 
               <div className={styles.threadCollapseGrid}>
+                <div className={styles.threadCollapseCard}>
+                  <h3>PRESENCE (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Entirely "in your head"—no actual connection to others</li>
+                    <li>Political identity as abstraction, not lived relationship</li>
+                    <li>Screen-mediated outrage replacing face-to-face encounter</li>
+                    <li>Collapse toward Within (isolation, echo chambers)</li>
+                    <li>OR collapse toward Between (identity only exists in relation to tribe/enemy)</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> Either total withdrawal from political engagement OR total enmeshment
+                    where your identity exists only in relation to your tribe and their enemies.
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "I can be fully myself—with my own thoughts and values—AND
+                    fully present with others who see differently. I don't need to withdraw to protect myself, and I don't
+                    need others to agree to feel whole."
+                  </p>
+                  <p className={styles.impact}>
+                    When PRESENCE collapses, politics becomes either lonely abstraction or tribal warfare. There's no
+                    space for genuine encounter.
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>CONSENT (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Imposition as default ("you MUST agree")</li>
+                    <li>Cancel culture (withdraw consent to exist in public)</li>
+                    <li>"If you're not with us, you're against us"</li>
+                    <li>No legitimate disagreement</li>
+                    <li>Boundaries as betrayal</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>Left collapse:</strong> "Your disagreement is violence. Consent to our framing or
+                    be expelled."
+                  </p>
+                  <p className={styles.collapsePattern}>
+                    <strong>Right collapse:</strong> "Your boundaries are weakness. Real Americans don't need
+                    safe spaces."
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "You have the right to see this differently. I
+                    have the right to hold my view. Can we stay in relationship across that difference?"
+                  </p>
+                  <p className={styles.impact}>
+                    This is the Thread most obviously broken in political life. We've lost the capacity to
+                    consent to difference.
+                  </p>
+                </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>MEMORY (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>Inherited political identities ("my family has always been...")</li>
+                    <li>Historical narratives treated as fact, not interpretation</li>
+                    <li>Inability to see one's own story as story</li>
+                    <li>"That's not who we are" (denial) vs. "That's all we've ever been" (despair)</li>
+                    <li>Nostalgia weaponized, history weaponized</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> We're possessed by stories we didn't choose and can't examine.
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "What political story was I given? What story am
+                    I telling? Can I hold my inheritance without being held by it?"
+                  </p>
+                </div>
+
                 <div className={styles.threadCollapseCard}>
                   <h3>PAUSE (Collapsed)</h3>
                   <h4>What we're seeing:</h4>
@@ -570,74 +818,6 @@ const Hold: React.FC = () => {
                     <strong>What reopening looks like:</strong> "What does my body know about this that my
                     arguments don't? Have I actually experienced what I'm so certain about? When I imagine the
                     person I'm arguing with as a body—tired, scared, hopeful—what shifts?"
-                  </p>
-                </div>
-
-                <div className={styles.threadCollapseCard}>
-                  <h3>CONSENT (Collapsed)</h3>
-                  <h4>What we're seeing:</h4>
-                  <ul>
-                    <li>Imposition as default ("you MUST agree")</li>
-                    <li>Cancel culture (withdraw consent to exist in public)</li>
-                    <li>"If you're not with us, you're against us"</li>
-                    <li>No legitimate disagreement</li>
-                    <li>Boundaries as betrayal</li>
-                  </ul>
-                  <p className={styles.collapsePattern}>
-                    <strong>Left collapse:</strong> "Your disagreement is violence. Consent to our framing or
-                    be expelled."
-                  </p>
-                  <p className={styles.collapsePattern}>
-                    <strong>Right collapse:</strong> "Your boundaries are weakness. Real Americans don't need
-                    safe spaces."
-                  </p>
-                  <p className={styles.reopening}>
-                    <strong>What reopening looks like:</strong> "You have the right to see this differently. I
-                    have the right to hold my view. Can we stay in relationship across that difference?"
-                  </p>
-                  <p className={styles.impact}>
-                    This is the Thread most obviously broken in political life. We've lost the capacity to
-                    consent to difference.
-                  </p>
-                </div>
-
-                <div className={styles.threadCollapseCard}>
-                  <h3>THRESHOLD (Collapsed)</h3>
-                  <h4>What we're seeing:</h4>
-                  <ul>
-                    <li>Safety-seeking that eliminates all challenge (left collapse)</li>
-                    <li>Provocation as virtue, "owning" as goal (right collapse)</li>
-                    <li>No calibrated risk—either total protection or total exposure</li>
-                    <li>Growth requires discomfort, but discomfort is labeled trauma</li>
-                    <li>Challenge is labeled attack</li>
-                  </ul>
-                  <p className={styles.collapsePattern}>
-                    <strong>The collapse:</strong> We've lost the ability to distinguish discomfort from danger,
-                    challenge from assault, disagreement from hatred, growth-edges from genuine threats.
-                  </p>
-                  <p className={styles.reopening}>
-                    <strong>What reopening looks like:</strong> "This is uncomfortable. Is it dangerous, or is
-                    it a growth edge? Am I seeking safety because I need protection, or because I want to avoid
-                    being changed?"
-                  </p>
-                </div>
-
-                <div className={styles.threadCollapseCard}>
-                  <h3>MEMORY (Collapsed)</h3>
-                  <h4>What we're seeing:</h4>
-                  <ul>
-                    <li>Inherited political identities ("my family has always been...")</li>
-                    <li>Historical narratives treated as fact, not interpretation</li>
-                    <li>Inability to see one's own story as story</li>
-                    <li>"That's not who we are" (denial) vs. "That's all we've ever been" (despair)</li>
-                    <li>Nostalgia weaponized, history weaponized</li>
-                  </ul>
-                  <p className={styles.collapsePattern}>
-                    <strong>The collapse:</strong> We're possessed by stories we didn't choose and can't examine.
-                  </p>
-                  <p className={styles.reopening}>
-                    <strong>What reopening looks like:</strong> "What political story was I given? What story am
-                    I telling? Can I hold my inheritance without being held by it?"
                   </p>
                 </div>
 
@@ -691,6 +871,33 @@ const Hold: React.FC = () => {
                     When BECOMING collapses, every disagreement is an existential threat.
                   </p>
                 </div>
+
+                <div className={styles.threadCollapseCard}>
+                  <h3>THRESHOLD (Collapsed)</h3>
+                  <h4>What we're seeing:</h4>
+                  <ul>
+                    <li>"You're either with us or against us"—rigid tribal boundaries</li>
+                    <li>Purity tests determining who belongs in the group</li>
+                    <li>Dehumanization of "them" to justify excluding or attacking</li>
+                    <li>OR complete dissolution of identity ("borders are violence," "all boundaries are oppression")</li>
+                    <li>Inability to hold both community identity AND hospitality to outsiders</li>
+                    <li>Every difference becomes an existential threat to group coherence</li>
+                  </ul>
+                  <p className={styles.collapsePattern}>
+                    <strong>The collapse:</strong> We've lost the ability to answer "Who belongs?" with discernment.
+                    Either the circle is drawn so tightly that anyone different is excluded (tribalism), or the circle
+                    dissolves entirely and there's no coherent "us" left (formless openness).
+                  </p>
+                  <p className={styles.reopening}>
+                    <strong>What reopening looks like:</strong> "We have a clear identity and values as a community
+                    AND we can welcome those who are different. We can define 'us' without demonizing 'them.' We can
+                    hold boundaries that protect what matters while remaining hospitable to strangers."
+                  </p>
+                  <p className={styles.impact}>
+                    THRESHOLD sits at the heart of political polarization. Immigration, identity politics, cancel culture,
+                    nationalism—all are THRESHOLD collapses. The "Who belongs?" question shows up in every political divide.
+                  </p>
+                </div>
               </div>
 
               <div className={styles.comparisonTable}>
@@ -711,6 +918,21 @@ const Hold: React.FC = () => {
                   </thead>
                   <tbody>
                     <tr>
+                      <td><strong>PRESENCE</strong></td>
+                      <td>Entirely in abstraction, no embodied encounter</td>
+                      <td>Tribal identity, no individual sovereignty</td>
+                    </tr>
+                    <tr>
+                      <td><strong>CONSENT</strong></td>
+                      <td>Forced agreement or exile</td>
+                      <td>Forced exposure, "toughen up"</td>
+                    </tr>
+                    <tr>
+                      <td><strong>MEMORY</strong></td>
+                      <td>"That's all we've ever been" (despair)</td>
+                      <td>"That's not who we are" (denial)</td>
+                    </tr>
+                    <tr>
                       <td><strong>PAUSE</strong></td>
                       <td>Callout culture, immediate cancellation</td>
                       <td>Trigger the libs, provocation as sport</td>
@@ -721,21 +943,6 @@ const Hold: React.FC = () => {
                       <td>Abstracted nationalism</td>
                     </tr>
                     <tr>
-                      <td><strong>CONSENT</strong></td>
-                      <td>Forced agreement or exile</td>
-                      <td>Forced exposure, "toughen up"</td>
-                    </tr>
-                    <tr>
-                      <td><strong>THRESHOLD</strong></td>
-                      <td>Over-protection, safety as absolute</td>
-                      <td>No acknowledged limits, cruelty as strength</td>
-                    </tr>
-                    <tr>
-                      <td><strong>MEMORY</strong></td>
-                      <td>"That's all we've ever been" (despair)</td>
-                      <td>"That's not who we are" (denial)</td>
-                    </tr>
-                    <tr>
                       <td><strong>UNCERTAINTY</strong></td>
                       <td>"The science is settled"</td>
                       <td>"The truth is obvious"</td>
@@ -744,6 +951,11 @@ const Hold: React.FC = () => {
                       <td><strong>BECOMING</strong></td>
                       <td>Purity tests, cancel the evolved</td>
                       <td>Loyalty tests, purge the dissenters</td>
+                    </tr>
+                    <tr>
+                      <td><strong>THRESHOLD</strong></td>
+                      <td>"No borders, all boundaries are violence"</td>
+                      <td>"Build the wall, keep them out"</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1351,10 +1563,10 @@ const Hold: React.FC = () => {
                   is important." True but vague. When everything is the problem, nothing is actionable.
                 </p>
                 <p className={styles.distinction}>
-                  <strong>HOLD is different:</strong> It connects to the seven Threads framework, allowing precise
-                  diagnosis. "Your CONSENT Thread is collapsed—you're requiring agreement rather than allowing
-                  difference." "Your UNCERTAINTY Thread is collapsed—there's nothing that could change your mind."
-                  This precision makes the work targetable.
+                  <strong>HOLD is different:</strong> It connects to the Threads framework (seven core capacities plus
+                  THRESHOLD for political contexts), allowing precise diagnosis. "Your CONSENT Thread is collapsed—you're
+                  requiring agreement rather than allowing difference." "Your UNCERTAINTY Thread is collapsed—there's
+                  nothing that could change your mind." This precision makes the work targetable.
                 </p>
                 <div className={styles.diagnosticExample}>
                   <p>
@@ -1446,10 +1658,10 @@ const Hold: React.FC = () => {
                   <strong>But what if those capacities are exactly what's broken?</strong>
                 </p>
                 <p className={styles.holdAnswer}>
-                  HOLD builds the seven capacities (PAUSE, EMBODIMENT, CONSENT, THRESHOLD, MEMORY, UNCERTAINTY,
-                  BECOMING) that all other civic work requires. It's not competing with existing efforts—it's providing
-                  the prerequisite capacity their work assumes. That's the gap. That's what makes HOLD necessary even
-                  in a landscape with hundreds of organizations already working on depolarization.
+                  HOLD builds the core capacities (PRESENCE, CONSENT, MEMORY, PAUSE, EMBODIMENT, UNCERTAINTY,
+                  BECOMING, plus THRESHOLD for political contexts) that all other civic work requires. It's not competing
+                  with existing efforts—it's providing the prerequisite capacity their work assumes. That's the gap. That's
+                  what makes HOLD necessary even in a landscape with hundreds of organizations already working on depolarization.
                 </p>
                 <p className={styles.infrastructureRole}>
                   <strong>HOLD is civic infrastructure.</strong> Like building roads before asking people to drive,
