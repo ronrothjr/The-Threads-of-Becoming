@@ -477,6 +477,219 @@ const Hold: React.FC = () => {
         </div>
       </section>
 
+      <section className={`${styles.legitimacy} section-lg`}>
+        <div className="container">
+          <div className={styles.accordionSection}>
+            <h2>Standing on the Shoulders of Giants</h2>
+            <p className={styles.accordionTeaser}>
+              HOLD didn't emerge in a vacuum. Major platforms, researchers, and thought leaders have been
+              documenting this crisis for years—from Hidden Brain's research on affective polarization to
+              Ezra Klein's analysis of systemic collapse to Jonathan Haidt's work on social media's impact.
+              Their work validates the problem. HOLD offers a practical response.
+            </p>
+
+            <details className={styles.accordion}>
+              <summary className={styles.accordionSummary}>
+                <h3>The Research and Thought Leadership That Makes HOLD Possible</h3>
+                <span className={styles.accordionChevron}>▼</span>
+              </summary>
+              <div className={styles.accordionContent}>
+
+              <p className={styles.legitimacyIntro}>
+                HOLD builds on years of research and analysis from established platforms and thought leaders
+                who've been documenting our polarization crisis. Here's what they've found—and how HOLD responds.
+              </p>
+
+              <div className={styles.sourceCard}>
+                <h3>Hidden Brain: "US 2.0" Series (NPR, 2024)</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Findings:</h4>
+                  <ul>
+                    <li><strong>Affective Polarization:</strong> Americans relate to political parties like sports
+                    teams—defending "our side" regardless of policy</li>
+                    <li>Only <strong>15% are "deeply involved"</strong> but they dominate media and discourse</li>
+                    <li><strong>Misperception epidemic:</strong> People think opponents are more extreme than they are</li>
+                    <li>The Lincoln model: working across deep disagreement without requiring agreement</li>
+                  </ul>
+                  <a href="https://www.hiddenbrain.org/podcast/us-2-0-what-we-have-in-common/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Explore Hidden Brain's US 2.0 series on polarization →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Hidden Brain documents the problem: we've lost the capacity to disagree without demonization.
+                    HOLD provides the practice. The "L" step (Look for the tension) directly addresses misperception
+                    by forcing acknowledgment of legitimate competing values. When you name "I want safety AND I want
+                    freedom," you've already begun to see past caricature.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
+                <h3>Ezra Klein: "Why We're Polarized" (2020-2024)</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Insights:</h4>
+                  <ul>
+                    <li><strong>"We're polarized less about politics and more about the system itself"</strong> -
+                    the fight is now about whether institutions are legitimate</li>
+                    <li>Social media "ratchets up the emotional tenor"—supplies content to feel strongly about</li>
+                    <li>Educational polarization now overwhelming racial polarization</li>
+                    <li>The question isn't "why are we polarized?" but "can broad, diverse coalitions re-form?"</li>
+                  </ul>
+                  <a href="https://www.simonandschuster.com/books/Why-Were-Polarized/Ezra-Klein/9781476700366" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Read "Why We're Polarized" by Ezra Klein →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Klein identified that social media weaponizes emotional reactivity. HOLD's "H" step (HALT) is
+                    the circuit breaker: "Notice you're about to be hijacked. The outrage you're feeling is exactly
+                    what someone wants you to feel." It's not about eliminating emotional response—it's about
+                    reclaiming agency over it.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
+                <h3>Krista Tippett: On Being & The Civil Conversations Project</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Work:</h4>
+                  <ul>
+                    <li><strong>Civil Conversations Project (2011):</strong> "An emergent approach to healing our
+                    fractured civic spaces"</li>
+                    <li>Response to widespread sentiment that "civic life is broken, bipartisan consensus is
+                    inconceivable"</li>
+                    <li><strong>Political Bridge People series:</strong> Showcasing figures who work across
+                    partisan divides</li>
+                    <li>Better Conversations Guides for navigating difficult topics</li>
+                  </ul>
+                  <a href="https://onbeing.org/libraries/civil-conversations/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Explore On Being's Civil Conversations Project →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Tippett's work models what's possible when people bring capacity to conversation. HOLD builds
+                    that capacity. Before you can have a civil conversation, you need the ability to PAUSE before
+                    reacting, OBSERVE your somatic response, LOOK at the tension you're holding, and DECIDE who you
+                    want to be. HOLD is the pre-work that makes Tippett's conversations possible.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
+                <h3>Jonathan Haidt: Social Media, Polarization, and Democratic Fragility</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Arguments:</h4>
+                  <ul>
+                    <li><strong>"Tribalism is pre-wired but not hardwired"</strong>—human societies are more plastic
+                    than individuals and can be shaped by institutional design</li>
+                    <li>Social media has become an <strong>"outrage machine"</strong> feeding a polarization spiral</li>
+                    <li>Both extremes are becoming "more extreme, more powerful, and more intimidating"</li>
+                    <li>Faith in democracy is waning; modern polarization could realize Founding Fathers' worst fears</li>
+                    <li>Co-founded CivilPolitics.org and Heterodox Academy to apply moral psychology</li>
+                  </ul>
+                  <a href="https://jonathanhaidt.com/politics/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Read Haidt's research on politics and polarization →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Haidt argues societies can be "shaped by voluntary choices shaped by reason, goodwill, and
+                    institutional design." HOLD is that institutional design—a simple, repeatable practice that
+                    builds capacity person by person. The "D" step (DECIDE who you want to be) operationalizes
+                    Haidt's insight: we can choose to shape ourselves differently, but we need a practice that makes
+                    that choice actionable in the moment of trigger.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
+                <h3>Braver Angels: Depolarization Through Dialogue</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Key Work:</h4>
+                  <ul>
+                    <li><strong>Red/Blue workshops</strong> designed to facilitate understanding between conservatives
+                    and progressives</li>
+                    <li><strong>"Depolarizing Within" workshops</strong> teaching strategies for engaging without
+                    demonization</li>
+                    <li>Research shows depolarization most effective when it includes <strong>both informational AND
+                    emotional components</strong></li>
+                    <li>Emphasis on civic muscle: <strong>"Resilience doesn't just come from structures but from
+                    practice—muscle that only grows by being used"</strong></li>
+                  </ul>
+                  <a href="https://braverangels.org/attend-a-workshop/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Learn about Braver Angels workshops →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    Braver Angels' research confirms what Threads teaches: you need both informational (the "L" step)
+                    AND emotional (the "O" step) work. HOLD provides the "civic muscle" practice Braver Angels
+                    identifies. Where their workshops require bringing Reds and Blues together, HOLD starts with
+                    individual practice—building capacity before requiring contact. It's the training program before
+                    the game.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.sourceCard}>
+                <h3>TED & Big Think: Emotional Intelligence for 2025</h3>
+                <div className={styles.sourceFindings}>
+                  <h4>Emerging Themes:</h4>
+                  <ul>
+                    <li><strong>Daniel Goleman (Big Think):</strong> Emotional intelligence gaining urgency in
+                    leadership</li>
+                    <li><strong>Anxiety management</strong> as positive force rather than weakness</li>
+                    <li><strong>Building trust and collaboration</strong> in conditions of uncertainty</li>
+                    <li><strong>TED 2024:</strong> "Builders" movement replacing "us vs. them" thinking</li>
+                    <li>Research on <strong>mindfulness for managing political polarization</strong></li>
+                  </ul>
+                  <a href="https://www.ted.com/playlists/775/the_political_mind" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
+                    Explore TED talks on the political mind →
+                  </a>
+                </div>
+                <div className={styles.holdConnection}>
+                  <h4>How HOLD Responds:</h4>
+                  <p>
+                    The emotional intelligence community has identified the need; HOLD provides the specific practice.
+                    The "O" step (OBSERVE what's happening in your body) is emotional intelligence operationalized.
+                    Where Goleman describes the competency, HOLD builds the capacity through daily practice. It's the
+                    bridge between theory and embodiment.
+                  </p>
+                </div>
+              </div>
+
+              <div className={styles.standingTogether}>
+                <h3>The Pattern Across All Sources</h3>
+                <p>
+                  Every major platform and thought leader is identifying the same crisis:
+                </p>
+                <ul>
+                  <li>Social media amplifies emotional reactivity</li>
+                  <li>Polarization is getting worse despite hundreds of organizations working on it</li>
+                  <li>We've lost the capacity to disagree without destroying relationships and institutions</li>
+                  <li>The problem is <strong>capacity</strong>, not information or policy positions</li>
+                  <li>Solutions require both emotional and cognitive work</li>
+                  <li>Individual practice must scale to cultural change</li>
+                </ul>
+                <p className={styles.holdAnswer}>
+                  <strong>HOLD is the practical answer to the problem they're all documenting.</strong> It takes
+                  their research and analysis and distills it into a four-step practice anyone can do in the moment
+                  of trigger. It's not competing with their work—it's building on it.
+                </p>
+              </div>
+            </div>
+          </details>
+          </div>
+        </div>
+      </section>
+
       {/* How HOLD Opens Collapsed Threads */}
       <section className={`${styles.reopening} section-lg`}>
         <div className="container">
@@ -1268,214 +1481,6 @@ const Hold: React.FC = () => {
           </details>
           </div>
 
-          <div className={styles.accordionSection}>
-            <h2>Standing on the Shoulders of Giants</h2>
-            <p className={styles.accordionTeaser}>
-              HOLD didn't emerge in a vacuum. Major platforms, researchers, and thought leaders have been
-              documenting this crisis for years—from Hidden Brain's research on affective polarization to
-              Ezra Klein's analysis of systemic collapse to Jonathan Haidt's work on social media's impact.
-              Their work validates the problem. HOLD offers a practical response.
-            </p>
-
-            <details className={styles.accordion}>
-              <summary className={styles.accordionSummary}>
-                <h3>The Research and Thought Leadership That Makes HOLD Possible</h3>
-                <span className={styles.accordionChevron}>▼</span>
-              </summary>
-              <div className={styles.accordionContent}>
-
-              <p className={styles.legitimacyIntro}>
-                HOLD builds on years of research and analysis from established platforms and thought leaders
-                who've been documenting our polarization crisis. Here's what they've found—and how HOLD responds.
-              </p>
-
-              <div className={styles.sourceCard}>
-                <h3>Hidden Brain: "US 2.0" Series (NPR, 2024)</h3>
-                <div className={styles.sourceFindings}>
-                  <h4>Key Findings:</h4>
-                  <ul>
-                    <li><strong>Affective Polarization:</strong> Americans relate to political parties like sports
-                    teams—defending "our side" regardless of policy</li>
-                    <li>Only <strong>15% are "deeply involved"</strong> but they dominate media and discourse</li>
-                    <li><strong>Misperception epidemic:</strong> People think opponents are more extreme than they are</li>
-                    <li>The Lincoln model: working across deep disagreement without requiring agreement</li>
-                  </ul>
-                  <a href="https://www.hiddenbrain.org/podcast/us-2-0-what-we-have-in-common/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-                    Explore Hidden Brain's US 2.0 series on polarization →
-                  </a>
-                </div>
-                <div className={styles.holdConnection}>
-                  <h4>How HOLD Responds:</h4>
-                  <p>
-                    Hidden Brain documents the problem: we've lost the capacity to disagree without demonization.
-                    HOLD provides the practice. The "L" step (Look for the tension) directly addresses misperception
-                    by forcing acknowledgment of legitimate competing values. When you name "I want safety AND I want
-                    freedom," you've already begun to see past caricature.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.sourceCard}>
-                <h3>Ezra Klein: "Why We're Polarized" (2020-2024)</h3>
-                <div className={styles.sourceFindings}>
-                  <h4>Key Insights:</h4>
-                  <ul>
-                    <li><strong>"We're polarized less about politics and more about the system itself"</strong> -
-                    the fight is now about whether institutions are legitimate</li>
-                    <li>Social media "ratchets up the emotional tenor"—supplies content to feel strongly about</li>
-                    <li>Educational polarization now overwhelming racial polarization</li>
-                    <li>The question isn't "why are we polarized?" but "can broad, diverse coalitions re-form?"</li>
-                  </ul>
-                  <a href="https://www.simonandschuster.com/books/Why-Were-Polarized/Ezra-Klein/9781476700366" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-                    Read "Why We're Polarized" by Ezra Klein →
-                  </a>
-                </div>
-                <div className={styles.holdConnection}>
-                  <h4>How HOLD Responds:</h4>
-                  <p>
-                    Klein identified that social media weaponizes emotional reactivity. HOLD's "H" step (HALT) is
-                    the circuit breaker: "Notice you're about to be hijacked. The outrage you're feeling is exactly
-                    what someone wants you to feel." It's not about eliminating emotional response—it's about
-                    reclaiming agency over it.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.sourceCard}>
-                <h3>Krista Tippett: On Being & The Civil Conversations Project</h3>
-                <div className={styles.sourceFindings}>
-                  <h4>Key Work:</h4>
-                  <ul>
-                    <li><strong>Civil Conversations Project (2011):</strong> "An emergent approach to healing our
-                    fractured civic spaces"</li>
-                    <li>Response to widespread sentiment that "civic life is broken, bipartisan consensus is
-                    inconceivable"</li>
-                    <li><strong>Political Bridge People series:</strong> Showcasing figures who work across
-                    partisan divides</li>
-                    <li>Better Conversations Guides for navigating difficult topics</li>
-                  </ul>
-                  <a href="https://onbeing.org/libraries/civil-conversations/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-                    Explore On Being's Civil Conversations Project →
-                  </a>
-                </div>
-                <div className={styles.holdConnection}>
-                  <h4>How HOLD Responds:</h4>
-                  <p>
-                    Tippett's work models what's possible when people bring capacity to conversation. HOLD builds
-                    that capacity. Before you can have a civil conversation, you need the ability to PAUSE before
-                    reacting, OBSERVE your somatic response, LOOK at the tension you're holding, and DECIDE who you
-                    want to be. HOLD is the pre-work that makes Tippett's conversations possible.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.sourceCard}>
-                <h3>Jonathan Haidt: Social Media, Polarization, and Democratic Fragility</h3>
-                <div className={styles.sourceFindings}>
-                  <h4>Key Arguments:</h4>
-                  <ul>
-                    <li><strong>"Tribalism is pre-wired but not hardwired"</strong>—human societies are more plastic
-                    than individuals and can be shaped by institutional design</li>
-                    <li>Social media has become an <strong>"outrage machine"</strong> feeding a polarization spiral</li>
-                    <li>Both extremes are becoming "more extreme, more powerful, and more intimidating"</li>
-                    <li>Faith in democracy is waning; modern polarization could realize Founding Fathers' worst fears</li>
-                    <li>Co-founded CivilPolitics.org and Heterodox Academy to apply moral psychology</li>
-                  </ul>
-                  <a href="https://jonathanhaidt.com/politics/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-                    Read Haidt's research on politics and polarization →
-                  </a>
-                </div>
-                <div className={styles.holdConnection}>
-                  <h4>How HOLD Responds:</h4>
-                  <p>
-                    Haidt argues societies can be "shaped by voluntary choices shaped by reason, goodwill, and
-                    institutional design." HOLD is that institutional design—a simple, repeatable practice that
-                    builds capacity person by person. The "D" step (DECIDE who you want to be) operationalizes
-                    Haidt's insight: we can choose to shape ourselves differently, but we need a practice that makes
-                    that choice actionable in the moment of trigger.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.sourceCard}>
-                <h3>Braver Angels: Depolarization Through Dialogue</h3>
-                <div className={styles.sourceFindings}>
-                  <h4>Key Work:</h4>
-                  <ul>
-                    <li><strong>Red/Blue workshops</strong> designed to facilitate understanding between conservatives
-                    and progressives</li>
-                    <li><strong>"Depolarizing Within" workshops</strong> teaching strategies for engaging without
-                    demonization</li>
-                    <li>Research shows depolarization most effective when it includes <strong>both informational AND
-                    emotional components</strong></li>
-                    <li>Emphasis on civic muscle: <strong>"Resilience doesn't just come from structures but from
-                    practice—muscle that only grows by being used"</strong></li>
-                  </ul>
-                  <a href="https://braverangels.org/attend-a-workshop/" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-                    Learn about Braver Angels workshops →
-                  </a>
-                </div>
-                <div className={styles.holdConnection}>
-                  <h4>How HOLD Responds:</h4>
-                  <p>
-                    Braver Angels' research confirms what Threads teaches: you need both informational (the "L" step)
-                    AND emotional (the "O" step) work. HOLD provides the "civic muscle" practice Braver Angels
-                    identifies. Where their workshops require bringing Reds and Blues together, HOLD starts with
-                    individual practice—building capacity before requiring contact. It's the training program before
-                    the game.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.sourceCard}>
-                <h3>TED & Big Think: Emotional Intelligence for 2025</h3>
-                <div className={styles.sourceFindings}>
-                  <h4>Emerging Themes:</h4>
-                  <ul>
-                    <li><strong>Daniel Goleman (Big Think):</strong> Emotional intelligence gaining urgency in
-                    leadership</li>
-                    <li><strong>Anxiety management</strong> as positive force rather than weakness</li>
-                    <li><strong>Building trust and collaboration</strong> in conditions of uncertainty</li>
-                    <li><strong>TED 2024:</strong> "Builders" movement replacing "us vs. them" thinking</li>
-                    <li>Research on <strong>mindfulness for managing political polarization</strong></li>
-                  </ul>
-                  <a href="https://www.ted.com/playlists/775/the_political_mind" target="_blank" rel="noopener noreferrer" className={styles.sourceLink}>
-                    Explore TED talks on the political mind →
-                  </a>
-                </div>
-                <div className={styles.holdConnection}>
-                  <h4>How HOLD Responds:</h4>
-                  <p>
-                    The emotional intelligence community has identified the need; HOLD provides the specific practice.
-                    The "O" step (OBSERVE what's happening in your body) is emotional intelligence operationalized.
-                    Where Goleman describes the competency, HOLD builds the capacity through daily practice. It's the
-                    bridge between theory and embodiment.
-                  </p>
-                </div>
-              </div>
-
-              <div className={styles.standingTogether}>
-                <h3>The Pattern Across All Sources</h3>
-                <p>
-                  Every major platform and thought leader is identifying the same crisis:
-                </p>
-                <ul>
-                  <li>Social media amplifies emotional reactivity</li>
-                  <li>Polarization is getting worse despite hundreds of organizations working on it</li>
-                  <li>We've lost the capacity to disagree without destroying relationships and institutions</li>
-                  <li>The problem is <strong>capacity</strong>, not information or policy positions</li>
-                  <li>Solutions require both emotional and cognitive work</li>
-                  <li>Individual practice must scale to cultural change</li>
-                </ul>
-                <p className={styles.holdAnswer}>
-                  <strong>HOLD is the practical answer to the problem they're all documenting.</strong> It takes
-                  their research and analysis and distills it into a four-step practice anyone can do in the moment
-                  of trigger. It's not competing with their work—it's building on it.
-                </p>
-              </div>
-            </div>
-          </details>
-          </div>
 
           <div className={styles.accordionSection}>
             <h2>HOLD's Unique Contribution: What Makes It Different</h2>
