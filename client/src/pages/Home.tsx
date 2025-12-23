@@ -183,6 +183,12 @@ const Home: React.FC = () => {
               <p>Take back your response—stop being played</p>
               <a href="/hold" className={styles.pathwayLink}>Learn HOLD →</a>
             </div>
+
+            <div className={styles.pathway}>
+              <h3>For Racial Justice</h3>
+              <p>Build collective capacity to hold what's been too painful</p>
+              <a href="/reckon" className={styles.pathwayLink}>Learn RECKON →</a>
+            </div>
           </div>
 
           <p className={styles.pathwaysCta}>

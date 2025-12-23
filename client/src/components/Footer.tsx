@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <h3>Creative Advance Institute</h3>
             <p className={styles.tagline}>See. Hold. Emerge.</p>
             <p className={styles.description}>
-              Cultivating the human capacity to hold creative tension—so individuals, communities, and organizations can move from collapse toward emergence.
+              To cultivate the human capacity to hold creative tension—so individuals, communities, and organizations can move from the collapse into extremes toward the emergence of new possibilities.
             </p>
           </div>
 
