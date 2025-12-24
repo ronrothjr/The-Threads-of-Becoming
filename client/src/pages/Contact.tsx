@@ -1,8 +1,57 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, FormEvent } from 'react';
 import styles from './Contact.module.css';
+import { submitContactForm, ContactFormData } from '../services/api';
 
 const Contact: React.FC = () => {
   const [subject, setSubject] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    const formData = new FormData(e.currentTarget);
+    const data: ContactFormData = {
+      firstName: formData.get('firstName') as string,
+      lastName: formData.get('lastName') as string,
+      email: formData.get('email') as string,
+      subject: formData.get('subject') as string,
+      message: formData.get('message') as string,
+      threadName: formData.get('threadName') as string,
+      seedQuestion: formData.get('seedQuestion') as string,
+      poleA: formData.get('poleA') as string,
+      poleB: formData.get('poleB') as string,
+      universalQuestions: formData.get('universalQuestions') as string,
+      metaQuestion: formData.get('metaQuestion') as string,
+      creativeEdge: formData.get('creativeEdge') as string,
+      evidence: formData.get('evidence') as string,
+      additionalNotes: formData.get('additionalNotes') as string,
+      newsletter: formData.get('newsletter') === 'on',
+    };
+
+    try {
+      await submitContactForm(data);
+      setSubmitStatus('success');
+      formRef.current?.reset();
+      setSubject('');
+
+      // Scroll to success message
+      setTimeout(() => {
+        const successElement = document.getElementById('success-message');
+        successElement?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className={styles.contact}>
@@ -78,7 +127,21 @@ const Contact: React.FC = () => {
               Fill out the form below and we'll get back to you within 2 business days.
             </p>
 
-            <form className={styles.form}>
+            {submitStatus === 'success' && (
+              <div id="success-message" className={styles.successMessage}>
+                <h3>✓ Message Sent Successfully!</h3>
+                <p>Thank you for contacting us. We'll respond within 2 business days.</p>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className={styles.errorMessage}>
+                <h3>⚠ Error Sending Message</h3>
+                <p>{errorMessage}</p>
+              </div>
+            )}
+
+            <form ref={formRef} className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label htmlFor="firstName">First Name *</label>
@@ -270,8 +333,8 @@ const Contact: React.FC = () => {
                 </label>
               </div>
 
-              <button type="submit" className={styles.submitButton}>
-                Send Message
+              <button type="submit" className={styles.submitButton} disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>

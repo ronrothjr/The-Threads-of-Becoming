@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import './styles/globals.css';
+import { AuthProvider } from './context/AuthContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PersistentVideo from './components/PersistentVideo';
@@ -45,10 +46,19 @@ import ThreadDiscovery from './pages/ThreadDiscovery';
 import Donate from './pages/Donate';
 import Contact from './pages/Contact';
 import Apply from './pages/Apply';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import VerifyEmail from './pages/VerifyEmail';
+import Dashboard from './pages/Dashboard';
+import QuickProfile from './pages/QuickProfile';
+import AssessmentResults from './pages/AssessmentResults';
+import Journal from './pages/Journal';
+import PracticeTool from './pages/PracticeTool';
 
 function AppContent() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const isQuickProfilePage = location.pathname === '/assessment/quick-profile';
 
   // Scroll to top on route change
   useEffect(() => {
@@ -120,8 +130,16 @@ function AppContent() {
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/apply/:tier" element={<Apply />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/verify-email" element={<VerifyEmail />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/assessment/quick-profile" element={<QuickProfile />} />
+        <Route path="/assessment/results" element={<AssessmentResults />} />
+        <Route path="/journal" element={<Journal />} />
+        <Route path="/practice-tool" element={<PracticeTool />} />
       </Routes>
-      <Footer />
+      {!isQuickProfilePage && <Footer />}
       <PersistentVideo isHomePage={isHomePage} />
     </>
   );
@@ -129,9 +147,11 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <AuthProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </AuthProvider>
   );
 }
 

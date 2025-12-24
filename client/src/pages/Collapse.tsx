@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import styles from './Collapse.module.css';
 
 const Collapse: React.FC = () => {
+  const { isAuthenticated } = useAuth();
+
   return (
     <div className={styles.collapsePage}>
       {/* Hero Section */}
@@ -398,6 +402,20 @@ const Collapse: React.FC = () => {
                 <span className={styles.ctaArrow}>→</span>
               </a>
             </div>
+          </section>
+
+          {/* Assessment CTA */}
+          <section className={styles.assessmentCta}>
+            <h2>Discover Your Collapse Patterns</h2>
+            <p>
+              Take the free Quick Profile to identify which threads show up most in your life—and where collapse might be lurking.
+            </p>
+            <Link
+              to={isAuthenticated ? "/dashboard" : "/signup"}
+              className={styles.assessmentButton}
+            >
+              {isAuthenticated ? "Continue Your Journey" : "Start Free Assessment"}
+            </Link>
           </section>
 
       </article>

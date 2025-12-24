@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import styles from './ExploreThreads.module.css';
 
 const ExploreThreads: React.FC = () => {
+  const { isAuthenticated } = useAuth();
+
   const threads = [
     {
       number: 1,
@@ -610,6 +614,22 @@ const ExploreThreads: React.FC = () => {
               <a href="/training" className={styles.ctaButton}>Explore Training</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Assessment CTA */}
+      <section className={styles.assessmentCta}>
+        <div className="container">
+          <h2>Take the Assessment</h2>
+          <p>
+            Discover which threads show up most in your life—and begin practicing the art of holding tension.
+          </p>
+          <Link
+            to={isAuthenticated ? "/dashboard" : "/signup"}
+            className={styles.assessmentButton}
+          >
+            {isAuthenticated ? "Continue Your Journey" : "Start Free Assessment"}
+          </Link>
         </div>
       </section>
     </div>

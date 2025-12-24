@@ -11,9 +11,14 @@ async function bootstrap() {
     new FastifyAdapter(),
   );
 
+  // Configure CORS for cross-origin requests
+  const allowedOrigins = process.env.CORS_ORIGINS 
+    ? process.env.CORS_ORIGINS.split(',')
+    : ['http://localhost:5051'];
+  
   // Enable CORS for React client
   await app.register(require('@fastify/cors'), {
-    origin: 'http://localhost:5051',
+    origin: allowedOrigins,
     credentials: true,
   });
 

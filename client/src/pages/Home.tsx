@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import styles from './Home.module.css';
 
 const Home: React.FC = () => {
+  const { isAuthenticated } = useAuth();
+
   return (
     <div className={styles.home}>
       {/* Hero Section */}
@@ -58,6 +62,22 @@ const Home: React.FC = () => {
       <section className={styles.videoSection}>
         <div className="container">
           <div id="home-video-wrapper"></div>
+        </div>
+      </section>
+
+      {/* Assessment CTA Section */}
+      <section className={styles.assessmentCta}>
+        <div className="container">
+          <h2>Discover Your Threads</h2>
+          <p className={styles.assessmentSubtitle}>
+            Take the free Quick Profile to identify which threads show up most in your life—and where collapse might be lurking.
+          </p>
+          <Link
+            to={isAuthenticated ? "/dashboard" : "/signup"}
+            className={styles.assessmentButton}
+          >
+            {isAuthenticated ? "Continue Your Journey" : "Start Free Assessment"}
+          </Link>
         </div>
       </section>
 

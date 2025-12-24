@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const { isAuthenticated } = useAuth();
 
   return (
     <footer className={styles.footer}>
@@ -33,6 +35,11 @@ const Footer: React.FC = () => {
           <div className={styles.footerSection}>
             <h4>Get Involved</h4>
             <ul className={styles.linkList}>
+              <li>
+                <Link to={isAuthenticated ? "/dashboard" : "/signup"}>
+                  {isAuthenticated ? "Your Dashboard" : "Get Started"}
+                </Link>
+              </li>
               <li><a href="/training/tier1">Tier 1 Foundations</a></li>
               <li><a href="/training/tier2">Tier 2 Professional</a></li>
               <li><a href="/training/tier3">Tier 3 Facilitator</a></li>

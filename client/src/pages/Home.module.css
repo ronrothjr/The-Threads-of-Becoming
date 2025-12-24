@@ -389,4 +389,55 @@
   .pathwaysGrid {
     grid-template-columns: 1fr;
   }
+
+  .assessmentCta {
+    padding: 3rem 0;
+  }
+
+  .assessmentCta h2 {
+    font-size: var(--text-3xl);
+  }
+}
+
+/* Assessment CTA Section */
+.assessmentCta {
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.assessmentCta h2 {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.assessmentSubtitle {
+  font-size: var(--text-xl);
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: var(--leading-relaxed);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.assessmentButton {
+  display: inline-block;
+  background: white;
+  color: var(--color-teal);
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.assessmentButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: var(--color-emergence);
+  color: var(--color-navy);
 }

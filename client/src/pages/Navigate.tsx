@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import styles from './Navigate.module.css';
 
 const Navigate: React.FC = () => {
+  const { isAuthenticated } = useAuth();
+
   return (
     <div className={styles.navigate}>
       <section className={styles.header}>
@@ -91,6 +95,22 @@ const Navigate: React.FC = () => {
               <a href="/portal" className={styles.categoryLink}>Sign In →</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Assessment CTA */}
+      <section className={styles.assessmentCta}>
+        <div className="container">
+          <h2>Start Navigating Your Threads</h2>
+          <p>
+            Take the free Quick Profile to discover which threads are most active in your life and access personalized navigation tools.
+          </p>
+          <Link
+            to={isAuthenticated ? "/dashboard" : "/signup"}
+            className={styles.assessmentButton}
+          >
+            {isAuthenticated ? "Continue Your Journey" : "Start Free Assessment"}
+          </Link>
         </div>
       </section>
     </div>

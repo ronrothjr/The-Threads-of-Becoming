@@ -1,0 +1,157 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 1rem;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-navy);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.form {
+  margin-bottom: 2rem;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.field label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: var(--text-base);
+  border: 2px solid var(--color-bg);
+  border-radius: 6px;
+  transition: border-color 0.2s ease;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--color-teal);
+}
+
+.error {
+  background: #fee;
+  border: 1px solid #fcc;
+  color: #c00;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: var(--text-sm);
+}
+
+.submitButton {
+  width: 100%;
+  background: var(--color-teal);
+  color: white;
+  padding: 1rem;
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--color-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(22, 160, 133, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signupSection {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-bg);
+}
+
+.signupSection p {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.signupButton {
+  background: white;
+  color: var(--color-teal);
+  border: 2px solid var(--color-teal);
+  padding: 0.75rem 2rem;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.signupButton:hover {
+  background: rgba(22, 160, 133, 0.05);
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 2rem 1.5rem;
+  }
+}

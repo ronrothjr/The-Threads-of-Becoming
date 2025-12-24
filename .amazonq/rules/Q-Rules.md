@@ -1,0 +1,1 @@
+Always ask before modifying files, showing a Diff view and allowing me to approve and offer suggestions before changes are made.

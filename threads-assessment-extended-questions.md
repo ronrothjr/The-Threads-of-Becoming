@@ -7,9 +7,9 @@ This document contains the full question bank for the Extended Threads Capacity 
 - **Collapse direction identification** — Which pole do you collapse toward?
 - **Context-specific measurement** — Where does collapse happen most?
 - **Deeper pattern recognition** — Nuanced understanding of your collapse dynamics
-- **More reliable scoring** — 7-10 questions per Thread for greater accuracy
+- **More reliable scoring** — 10 questions per Thread for greater accuracy
 
-**Estimated completion time:** 20-25 minutes
+**Estimated completion time:** 25-30 minutes
 
 ---
 
@@ -24,11 +24,317 @@ For each Thread, questions address:
 
 ---
 
+## PRESENCE: Locating Yourself in Relationship
+
+### Collapse Directions
+- **Collapse A (Isolation):** Complete withdrawal into "Within"; can't access "Between"; solitary to the point of disconnection
+- **Collapse B (Enmeshment):** Lost in "Between"; can't access "Within"; no internal anchor; need others constantly
+
+**The Thread:** Where am I...? The capacity to hold both Within and Between, Here and Elsewhere. When held: sovereignty AND connection. When collapsed: either isolated or enmeshed.
+
+**Shadows:** Intrusion (violating the boundary between) / Abandonment (severing connection entirely)
+
+### General Tendency Questions
+
+**PR1. Internal Anchor**
+> When you're alone with no external demands, how do you feel?
+
+- (a) Lost or anxious—I need others or external structure to feel grounded
+- (b) Somewhat uncomfortable—I can manage but prefer company or activity
+- (c) Generally comfortable—I can be with myself
+- (d) Deeply resourced—solitude is nourishing
+
+**PR2. Relational Overwhelm**
+> In social settings, how easily do you lose track of your own experience?
+
+- (a) Very easily—I'm absorbed by others' energy and needs
+- (b) Fairly easily—I notice myself fading in group settings
+- (c) Sometimes—depends on the situation and people
+- (d) Rarely—I maintain clear awareness of my own experience
+
+**PR3. Boundary Clarity**
+> How clear are you about where you end and others begin?
+
+- (a) Not clear—others' feelings become mine, my needs get lost in theirs
+- (b) Somewhat unclear—I struggle to distinguish my experience from others'
+- (c) Mostly clear—I can usually track what's mine and what's theirs
+- (d) Very clear—I know my own experience while being with others
+
+### Collapse Direction Questions
+
+**PR4. Which Pattern Fits You Better?**
+> When you're struggling with presence, which is more true?
+
+- (a) I withdraw completely—can't access connection, isolated in my own world
+- (b) I lose myself in others—no internal anchor, need others to feel real
+- (c) Both happen depending on the situation
+- (d) Neither—I can usually hold both Within and Between
+
+**PR5. The Crisis Response**
+> When emotionally overwhelmed, what happens?
+
+- (a) I disappear—cut contact, go into my shell, can't let anyone in
+- (b) I cling—need constant contact, texting, reassurance from others
+- (c) Sometimes isolate, sometimes cling
+- (d) I can reach out for support while maintaining my own ground
+
+**PR6. The Preference Pattern**
+> Which feels more comfortable as a default state?
+
+- (a) Being alone—connection requires effort and feels risky
+- (b) Being with others—being alone feels empty or anxious
+- (c) I oscillate—sometimes need isolation, sometimes need enmeshment
+- (d) I'm comfortable in both solitude and connection
+
+### Context-Specific Questions
+
+**PR7. Family Context**
+> With family members, your capacity to hold Within and Between is:
+
+- (a) Very low—I either withdraw completely or get absorbed in family dynamics
+- (b) Lower than usual—family triggers isolation or enmeshment
+- (c) About the same as other contexts
+- (d) Actually good—I've worked on presence with family
+
+**PR8. Intimate Relationships**
+> In romantic or deeply intimate relationships, your presence capacity is:
+
+- (a) Low—I lose myself in the relationship or can't let my partner in
+- (b) Variable—sometimes present, sometimes collapsed
+- (c) Moderate—I can maintain some presence
+- (d) Good—I can be deeply connected while staying grounded in myself
+
+**PR9. Online/Digital Context**
+> In online interactions and social media, your presence capacity is:
+
+- (a) Very low—I either disappear from online life or get lost in it
+- (b) Lower than in person—digital space triggers collapse
+- (c) About the same as face-to-face
+- (d) Actually easier—digital space helps me maintain boundaries
+
+### Awareness Questions
+
+**PR10. Presence Collapse Recognition**
+> When you've collapsed into isolation or enmeshment, when do you notice?
+
+- (a) I don't recognize it—isolation feels like protection, enmeshment feels like love
+- (b) Later—sometimes days later I realize I was collapsed
+- (c) Fairly quickly—I can catch it within hours or the same day
+- (d) In real-time—I can feel myself moving toward isolation or enmeshment
+
+---
+
+## CONSENT: Allowing Others Their Experience While Maintaining Your Own
+
+### Collapse Directions
+- **Collapse A (Forced Agreement):** Need to convince; can't let others be "wrong"; boundary violation
+- **Collapse B (Total Exile):** Complete withdrawal; relationship severed; no engagement possible
+
+### General Tendency Questions
+
+**C1. Conviction Urgency**
+> When someone holds a view you think is wrong, how strong is your need to change their mind?
+
+- (a) Very strong—I can't rest until they see the truth
+- (b) Strong—I feel compelled to try, even if I know it won't work
+- (c) Moderate—I might share my view but can let it go
+- (d) Low—I can allow them their perspective without needing to change it
+
+**C2. Disagreement Tolerance**
+> Can you feel close to and respect someone who holds a view you find wrong or even harmful?
+
+- (a) No—certain views make closeness impossible
+- (b) It's very difficult—disagreement creates distance
+- (c) Usually—disagreement doesn't determine my respect
+- (d) Yes—I can hold both deep disagreement and deep connection
+
+**C3. Persuasion Investment**
+> How much energy do you spend trying to convince people who disagree with you?
+
+- (a) Enormous—I'll argue for hours, write long explanations
+- (b) Significant—more than I'd like
+- (c) Some—but I know when to stop
+- (d) Little—I've learned that persuasion rarely works this way
+
+### Collapse Direction Questions
+
+**C4. Which Pattern Fits You Better?**
+> When someone holds a view you strongly oppose, what's your tendency?
+
+- (a) Push harder—increase attempts to convince
+- (b) Withdraw—reduce contact or cut them off
+- (c) Both—first push, then withdraw when it doesn't work
+- (d) Neither—I can hold my position and the relationship
+
+**C5. The Boundary Violation**
+> Someone repeatedly makes choices you believe are harmful to themselves. Your response:
+
+- (a) Keep trying to fix it—give advice, send resources, intervene
+- (b) Cut them off—I can't watch them harm themselves
+- (c) Cycle between rescuing and distancing
+- (d) Maintain connection while allowing them their path
+
+**C6. The Repeated Difference**
+> Someone continues to hold views or make choices you've tried to change. What happens?
+
+- (a) I keep trying—maybe a different approach will work
+- (b) I distance myself—can't stay close to someone like that
+- (c) I give up trying but feel resentful
+- (d) I accept that we see differently and focus on what connects us
+
+### Context-Specific Questions
+
+**C7. Political Disagreement**
+> With political disagreement specifically, your consent capacity is:
+
+- (a) Very low—political views feel too important to allow
+- (b) Lower than other areas—politics is especially hard
+- (c) About the same as other significant disagreements
+- (d) Actually good—I've worked on this specifically
+
+**C8. Bodily Autonomy**
+> When someone makes choices about their own body that you disagree with (health, appearance, lifestyle), your consent capacity is:
+
+- (a) Low—I need to convince them or I withdraw
+- (b) Variable—depends on how much I care about them
+- (c) Moderate—I can usually allow their autonomy
+- (d) High—their body, their choice, even when I disagree
+
+**C9. Parenting/Caregiving**
+> When others parent or care for loved ones differently than you would, your consent capacity is:
+
+- (a) Very low—I intervene or judge harshly
+- (b) Low—it's hard to allow different approaches with children/vulnerable people
+- (c) Moderate—I can mostly allow different styles
+- (d) Good—I can hold my views while respecting their approach
+
+**C10. Relationship Boundaries**
+> When someone says "no" to you (declines help, rejects advice, sets a limit), your response is:
+
+- (a) Push back—explain why they should say yes
+- (b) Withdraw—take it personally and distance
+- (c) Accept it but feel hurt or frustrated
+- (d) Honor their no without taking it personally
+
+### Awareness Questions
+
+**C11. Consent Collapse Recognition**
+> When you're pushing hard to convince someone or withdrawing from them because of differences, do you recognize it?
+
+- (a) It doesn't feel like "collapse"—it feels like the right response
+- (b) I recognize it afterward, sometimes with regret
+- (c) I can often catch myself in the moment
+- (d) I'm usually aware of the choice I'm making in real-time
+
+---
+
+## MEMORY: Holding Inherited Stories Without Being Possessed
+
+### Collapse Directions
+- **Collapse A (Possessed):** Identified with inherited narrative; Given/Told story = reality
+- **Collapse B (Rootless):** Reject all inheritance; no anchor; groundless
+
+### General Tendency Questions
+
+**M1. View Origins**
+> Have you examined where your core political/social views came from?
+
+- (a) Not really—they're just what's true
+- (b) A little—I know some came from family/culture
+- (c) Significantly—I've traced most of my views to their sources
+- (d) Deeply—I've interrogated which are genuinely mine vs. inherited
+
+**M2. Narrative Distance**
+> Can you hold your "side's" narrative with some critical distance?
+
+- (a) No—my side's story is accurate
+- (b) In theory, but it's hard in practice
+- (c) Yes—I can see where my side exaggerates or simplifies
+- (d) Yes—I regularly notice my side's narrative distortions
+
+**M3. Identity Fusion**
+> How fused is your identity with your political/social positions?
+
+- (a) Completely—these positions are who I am
+- (b) Substantially—they feel core to my identity
+- (c) Partially—they matter but don't define me
+- (d) Loosely—I hold positions but they're not my identity
+
+### Collapse Direction Questions
+
+**M4. Which Pattern Fits You Better?**
+> Regarding inherited beliefs and stories:
+
+- (a) I carry my family's/community's views—they feel like truth
+- (b) I've rejected my inheritance—my views are my own rebellion
+- (c) Some inherited, some rejected, some genuinely chosen
+- (d) I can hold my inheritance without being possessed or reactive
+
+**M5. The Challenge Test**
+> When someone challenges a view you grew up with:
+
+- (a) It feels like they're attacking my family/people/world
+- (b) I'm defensive because I've worked hard to have my own views
+- (c) I can hear the challenge but it stirs something deep
+- (d) I can consider the challenge without it triggering identity
+
+**M6. Tradition Relationship**
+> Your relationship to the traditions you inherited:
+
+- (a) I live within them—they're the frame for my life
+- (b) I've rejected them—they were constraints I escaped
+- (c) I have a complicated relationship—honoring some, rejecting some
+- (d) I can appreciate them without being defined or constrained by them
+
+### Context-Specific Questions
+
+**M7. Family Narratives**
+> Regarding your family's stories about politics, values, and "how the world works":
+
+- (a) I basically hold these stories as accurate
+- (b) I've deliberately rejected these stories
+- (c) I've examined them and kept some, released some
+- (d) I can see them as stories my family tells, valuable but not absolute truth
+
+**M8. Cultural/National Narratives**
+> Regarding your culture's or nation's story about itself:
+
+- (a) I believe this narrative—it's our history
+- (b) I've rejected this narrative as propaganda or myth
+- (c) I hold it critically—seeing both truth and distortion
+- (d) I can appreciate the story without being possessed by it or needing to reject it
+
+**M9. Religious/Philosophical Inheritance**
+> Regarding spiritual or philosophical frameworks you inherited:
+
+- (a) These are the truth—not just my inheritance
+- (b) I've left them behind for different beliefs
+- (c) I've kept some elements, released others
+- (d) I can draw from them without being defined by them
+
+### Awareness Questions
+
+**M10. Memory Collapse Recognition**
+> When an inherited narrative is driving your reaction, do you notice?
+
+- (a) It doesn't feel like "narrative"—it feels like truth
+- (b) Sometimes afterward I see I was defending an inherited story
+- (c) I can often notice in the moment which story is activated
+- (d) I'm usually aware of what inherited material is shaping my response
+
+---
+
 ## PAUSE: Creating Space Between Stimulus and Response
 
 ### Collapse Directions
-- **Collapse A (Impulsive):** React immediately; no gap between trigger and response
-- **Collapse B (Frozen):** Paralyzed; can't respond at all; over-deliberation
+- **Collapse A (Impulsive):** React immediately; no gap between trigger and response; collapse to Now without Not Yet
+- **Collapse B (Procrastination):** Avoid timely action; always needing "more" preparation/information; collapse to Not Yet without Now
+
+**The Thread:** The sacred pause—holding Not Yet AND Enough. The wisdom to know when to act and when to wait, without impulsivity or endless delay.
+
+**Tensions:** Not Yet vs. Now / More vs. Enough
+
+**Shadows:** Procrastination (endless Not Yet, never Enough) / Impulsivity (only Now, never Not Yet)
 
 ### General Tendency Questions
 
@@ -62,25 +368,25 @@ For each Thread, questions address:
 > Think about your typical response to triggering situations. Which is more accurate?
 
 - (a) I react too quickly—words come out before I've processed
-- (b) I freeze up—I can't find words or take action
+- (b) I delay too long—I avoid responding when I should act
 - (c) It depends on the situation
-- (d) Neither—I usually respond thoughtfully
+- (d) Neither—I usually respond at the right time
 
 **P5. The Email Test**
 > You receive an insulting email. What's your pattern?
 
 - (a) I fire back a response immediately
-- (b) I read it over and over but can't figure out how to respond
+- (b) I read it over and over but can't figure out how to respond—days pass
 - (c) I draft a response but wait before sending
 - (d) I take time to consider, then respond when ready
 
-**P6. Analysis Paralysis**
-> Do you ever over-think situations to the point of inaction?
+**P6. Decision Paralysis**
+> When you need to make an important decision, what happens?
 
-- (a) Never—I act quickly, sometimes too quickly
-- (b) Rarely—I lean toward action
-- (c) Sometimes—I can get stuck deliberating
-- (d) Often—I frequently can't decide how to respond
+- (a) I decide quickly—sometimes too quickly, without gathering enough information
+- (b) I keep researching and waiting—never feeling like I have enough information
+- (c) I balance gathering information with timely decision-making
+- (d) I can act decisively while remaining open to new information
 
 ### Context-Specific Questions
 
@@ -103,7 +409,7 @@ For each Thread, questions address:
 **P9. Work Context**
 > At work, when someone criticizes your ideas, your pause capacity is:
 
-- (a) Low—I get defensive quickly
+- (a) Low—I get defensive quickly or avoid responding
 - (b) Variable—depends on who and what
 - (c) Generally okay—professional context helps
 - (d) High—I've developed good pause capacity at work
@@ -111,7 +417,7 @@ For each Thread, questions address:
 ### Awareness Questions
 
 **P10. Recognition Timing**
-> When you collapse PAUSE (react impulsively OR freeze), when do you typically realize it?
+> When you collapse PAUSE (react impulsively OR procrastinate), when do you typically realize it?
 
 - (a) I don't usually recognize it at all
 - (b) Hours or days later, in reflection
@@ -216,294 +522,6 @@ For each Thread, questions address:
 
 ---
 
-## CONSENT: Allowing Others Their Experience While Maintaining Your Own
-
-### Collapse Directions
-- **Collapse A (Forced Agreement):** Need to convince; can't let others be "wrong"; boundary violation
-- **Collapse B (Total Exile):** Complete withdrawal; relationship severed; no engagement possible
-
-### General Tendency Questions
-
-**C1. Conviction Urgency**
-> When someone holds a view you think is wrong, how strong is your need to change their mind?
-
-- (a) Very strong—I can't rest until they see the truth
-- (b) Strong—I feel compelled to try, even if I know it won't work
-- (c) Moderate—I might share my view but can let it go
-- (d) Low—I can allow them their perspective without needing to change it
-
-**C2. Disagreement Tolerance**
-> Can you feel close to and respect someone who holds a view you find wrong or even harmful?
-
-- (a) No—certain views make closeness impossible
-- (b) It's very difficult—disagreement creates distance
-- (c) Usually—disagreement doesn't determine my respect
-- (d) Yes—I can hold both deep disagreement and deep connection
-
-**C3. Persuasion Investment**
-> How much energy do you spend trying to convince people who disagree with you?
-
-- (a) Enormous—I'll argue for hours, write long explanations
-- (b) Significant—more than I'd like
-- (c) Some—but I know when to stop
-- (d) Little—I've learned that persuasion rarely works this way
-
-### Collapse Direction Questions
-
-**C4. Which Pattern Fits You Better?**
-> When someone holds a view you strongly oppose, what's your tendency?
-
-- (a) Push harder—increase attempts to convince
-- (b) Withdraw—reduce contact or cut them off
-- (c) Both—first push, then withdraw when it doesn't work
-- (d) Neither—I can hold my position and the relationship
-
-**C5. The Family Dinner**
-> A family member expresses a political view you find offensive. Your likely response:
-
-- (a) Engage forcefully—they need to understand why they're wrong
-- (b) Shut down—go quiet, leave early, or avoid future dinners
-- (c) Make one attempt, then distance
-- (d) Maintain connection while holding your own view internally
-
-**C6. The Repeated Offense**
-> Someone continues to hold views you've tried to change. What happens?
-
-- (a) I keep trying—maybe a different argument will work
-- (b) I distance myself—can't stay close to someone like that
-- (c) I give up trying but feel resentful
-- (d) I accept that we see differently and focus on what connects us
-
-### Context-Specific Questions
-
-**C7. Political Context**
-> With political disagreement specifically, your consent capacity is:
-
-- (a) Very low—political views feel too important to allow
-- (b) Lower than other areas—politics is especially hard
-- (c) About the same as other significant disagreements
-- (d) Actually good—I've worked on this specifically
-
-**C8. Close Relationships**
-> With partners, family, or close friends, your consent capacity is:
-
-- (a) Lower—I expect people close to me to share my views
-- (b) Variable—depends on the issue and person
-- (c) About the same as other relationships
-- (d) Higher—I prioritize the relationship over agreement
-
-**C9. Professional Context**
-> At work, when colleagues hold views you oppose, your consent capacity is:
-
-- (a) Still low—I need to change their minds
-- (b) Better—professionalism helps but it's still hard
-- (c) Good—I can work with people I disagree with
-- (d) Very good—work has taught me to allow difference
-
-### Awareness Questions
-
-**C10. Consent Collapse Recognition**
-> When you're pushing hard to convince someone or withdrawing from them because of views, do you recognize it?
-
-- (a) It doesn't feel like "collapse"—it feels like the right response
-- (b) I recognize it afterward, sometimes with regret
-- (c) I can often catch myself in the moment
-- (d) I'm usually aware of the choice I'm making in real-time
-
----
-
-## THRESHOLD: Staying Present with Discomfort
-
-### Collapse Directions
-- **Collapse A (Avoidance):** Flee, distract, numb, change subject, shut down
-- **Collapse B (Aggression):** Attack, escalate, dominate, overwhelm the source
-
-### General Tendency Questions
-
-**T1. Discomfort Tolerance**
-> How long can you sit with emotional discomfort without trying to escape or fix it?
-
-- (a) Very briefly—discomfort demands immediate action
-- (b) A short while—but the pressure builds quickly
-- (c) Reasonably well—I can tolerate significant discomfort
-- (d) Very well—I've developed high tolerance for discomfort
-
-**T2. Difficult Conversations**
-> How do you handle conversations you know will be uncomfortable?
-
-- (a) Avoid them as long as possible
-- (b) Have them but try to get through quickly
-- (c) Can engage but feel stressed throughout
-- (d) Can stay present even when it's uncomfortable
-
-**T3. Uncertainty Tension**
-> When a conflict is unresolved, what's your experience?
-
-- (a) Unbearable—I need resolution now
-- (b) Very uncomfortable—hard to focus on anything else
-- (c) Uncomfortable but manageable—I can function
-- (d) Tolerable—I can hold unresolved tension
-
-### Collapse Direction Questions
-
-**T4. Which Pattern Fits You Better?**
-> When something becomes uncomfortably tense, what's your instinct?
-
-- (a) Escape—change subject, leave room, go silent
-- (b) Attack—get louder, more forceful, shut it down
-- (c) Both—depending on the situation
-- (d) Neither—I can usually stay present
-
-**T5. Rising Tension**
-> As a conversation gets heated, what typically happens?
-
-- (a) I start looking for the exit—emotionally or physically
-- (b) I escalate—voice gets louder, arguments get sharper
-- (c) I cycle between wanting to flee and wanting to fight
-- (d) I can stay engaged without fleeing or escalating
-
-**T6. The Confrontation**
-> Someone confronts you about something you did wrong. Your response:
-
-- (a) Deflect, minimize, change subject—anything to escape
-- (b) Counter-attack—find something wrong with them
-- (c) Depends on my state—sometimes flee, sometimes fight
-- (d) Stay present and engage with what they're saying
-
-### Context-Specific Questions
-
-**T7. Shame Contexts**
-> When you feel shame (exposed, embarrassed, failing), your threshold capacity is:
-
-- (a) Very low—shame is intolerable, I must escape
-- (b) Low—I'll do almost anything to not feel shame
-- (c) Moderate—I can sit with some shame
-- (d) Good—I can feel shame without fleeing or attacking
-
-**T8. Grief Contexts**
-> With sadness, loss, or grief, your threshold capacity is:
-
-- (a) Low—I avoid or numb these feelings
-- (b) Variable—sometimes I can feel them, sometimes I can't
-- (c) Moderate—I can be present with grief
-- (d) Good—I can hold grief fully without escaping
-
-**T9. Criticism Contexts**
-> When receiving criticism, your threshold capacity is:
-
-- (a) Low—criticism feels like attack, I flee or fight
-- (b) Variable—depends on how it's delivered and who
-- (c) Moderate—I can usually hear criticism
-- (d) Good—I can stay present with criticism as information
-
-### Awareness Questions
-
-**T10. Threshold Collapse Recognition**
-> When you're avoiding or attacking to escape discomfort, when do you realize it?
-
-- (a) It feels like protection, not collapse—I don't see it
-- (b) Later—sometimes I recognize the pattern in hindsight
-- (c) During—I can often catch myself mid-flight or mid-attack
-- (d) Before—I can feel the urge and choose differently
-
----
-
-## MEMORY: Holding Inherited Stories Without Being Possessed
-
-### Collapse Directions
-- **Collapse A (Possessed):** Identified with inherited narrative; Given/Told story = reality
-- **Collapse B (Rootless):** Reject all inheritance; no anchor; groundless
-
-### General Tendency Questions
-
-**M1. View Origins**
-> Have you examined where your core political/social views came from?
-
-- (a) Not really—they're just what's true
-- (b) A little—I know some came from family/culture
-- (c) Significantly—I've traced most of my views to their sources
-- (d) Deeply—I've interrogated which are genuinely mine vs. inherited
-
-**M2. Narrative Distance**
-> Can you hold your "side's" narrative with some critical distance?
-
-- (a) No—my side's story is accurate
-- (b) In theory, but it's hard in practice
-- (c) Yes—I can see where my side exaggerates or simplifies
-- (d) Yes—I regularly notice my side's narrative distortions
-
-**M3. Identity Fusion**
-> How fused is your identity with your political/social positions?
-
-- (a) Completely—these positions are who I am
-- (b) Substantially—they feel core to my identity
-- (c) Partially—they matter but don't define me
-- (d) Loosely—I hold positions but they're not my identity
-
-### Collapse Direction Questions
-
-**M4. Which Pattern Fits You Better?**
-> Regarding inherited beliefs and stories:
-
-- (a) I carry my family's/community's views—they feel like truth
-- (b) I've rejected my inheritance—my views are my own rebellion
-- (c) Some inherited, some rejected, some genuinely chosen
-- (d) I can hold my inheritance without being possessed or reactive
-
-**M5. The Challenge Test**
-> When someone challenges a view you grew up with:
-
-- (a) It feels like they're attacking my family/people/world
-- (b) I'm defensive because I've worked hard to have my own views
-- (c) I can hear the challenge but it stirs something deep
-- (d) I can consider the challenge without it triggering identity
-
-**M6. Tradition Relationship**
-> Your relationship to the traditions you inherited:
-
-- (a) I live within them—they're the frame for my life
-- (b) I've rejected them—they were constraints I escaped
-- (c) I have a complicated relationship—honoring some, rejecting some
-- (d) I can appreciate them without being defined or constrained by them
-
-### Context-Specific Questions
-
-**M7. Family Narratives**
-> Regarding your family's stories about politics, values, and "how the world works":
-
-- (a) I basically hold these stories as accurate
-- (b) I've deliberately rejected these stories
-- (c) I've examined them and kept some, released some
-- (d) I can see them as stories my family tells, valuable but not absolute truth
-
-**M8. Cultural/National Narratives**
-> Regarding your culture's or nation's story about itself:
-
-- (a) I believe this narrative—it's our history
-- (b) I've rejected this narrative as propaganda or myth
-- (c) I hold it critically—seeing both truth and distortion
-- (d) I can appreciate the story without being possessed by it or needing to reject it
-
-**M9. Religious/Philosophical Inheritance**
-> Regarding spiritual or philosophical frameworks you inherited:
-
-- (a) These are the truth—not just my inheritance
-- (b) I've left them behind for different beliefs
-- (c) I've kept some elements, released others
-- (d) I can draw from them without being defined by them
-
-### Awareness Questions
-
-**M10. Memory Collapse Recognition**
-> When an inherited narrative is driving your reaction, do you notice?
-
-- (a) It doesn't feel like "narrative"—it feels like truth
-- (b) Sometimes afterward I see I was defending an inherited story
-- (c) I can often notice in the moment which story is activated
-- (d) I'm usually aware of what inherited material is shaping my response
-
----
-
 ## UNCERTAINTY: Remaining Curious When You Don't Know
 
 ### Collapse Directions
@@ -603,8 +621,16 @@ For each Thread, questions address:
 ## BECOMING: Allowing Identity and Positions to Evolve
 
 ### Collapse Directions
-- **Collapse A (Fixed):** Rigid identity; positions feel permanent; change = betrayal
-- **Collapse B (Flux):** No stable identity; constant reinvention; no continuity
+- **Collapse A (Regression):** Stuck in loops; Same + Return; repeating old patterns without growth
+- **Collapse B (Bypass):** Appearing to change without real transformation; Same + Forward; spiritual/intellectual bypassing
+
+**The Thread:** The capacity for genuine transformation. Holding Different AND Return—the spiral path where we return transformed, not just cycling through the same patterns or performing growth without embodiment.
+
+**True Becoming:** Different + Return = The Spiral (returning to the same questions, same ground, but transformed)
+
+**Collapse Patterns:**
+- **Regression:** Same + Return = Stuck loops, no actual development
+- **Bypass:** Same + Forward = Using growth language to avoid real change; understanding without embodiment; appearing evolved while maintaining old patterns
 
 ### General Tendency Questions
 
@@ -624,75 +650,75 @@ For each Thread, questions address:
 - (c) It feels difficult but possible
 - (d) It feels like natural growth
 
-**B3. Identity Flexibility**
-> How much continuity do you feel between past, present, and future self?
+**B3. Pattern Recognition**
+> Do you notice yourself returning to the same problems or conflicts repeatedly?
 
-- (a) Strong—I'm the same person I've always been
-- (b) Substantial—my core is stable
-- (c) Moderate—I've changed significantly and expect to continue
-- (d) Loose—I'm different in each chapter of life
+- (a) Yes, and I can't seem to break the cycle
+- (b) Sometimes, but I tell myself I'm different now
+- (c) Yes, but each time I engage differently
+- (d) Yes, and I can see how I'm transformed in the return
 
 ### Collapse Direction Questions
 
 **B4. Which Pattern Fits You Better?**
 > Regarding personal change and development:
 
-- (a) My core identity is settled—growth is refinement, not transformation
-- (b) I'm always changing—it's hard to know who I really am
-- (c) I have stable periods and then significant shifts
-- (d) I have continuity AND ongoing transformation—both are true
+- (a) I keep cycling through the same patterns—stuck in familiar loops
+- (b) I'm always learning new frameworks but not really changing—spiritual/intellectual bypassing
+- (c) I have periods of real transformation and periods of stuck patterns
+- (d) I can return to familiar ground while being genuinely transformed
 
-**B5. The Position Change**
-> If you changed your mind on a major political issue:
+**B5. The Growth Pattern**
+> When you engage with personal development, what happens?
 
-- (a) I'd feel I was betraying my community or past self
-- (b) It would be disorienting—what else might change?
-- (c) It would be uncomfortable but I've done it before
-- (d) It would feel like growth—my views should evolve
+- (a) I fall back into old patterns—the insights don't stick
+- (b) I collect insights and practices but don't embody them—I can talk about change better than I live it
+- (c) Sometimes real change, sometimes just new concepts
+- (d) I integrate slowly—fewer insights, but they change how I live
 
-**B6. Past Self Relationship**
-> Your relationship to who you were 10 years ago:
+**B6. The Shadow Return**
+> When old wounds or patterns resurface:
 
-- (a) We're the same person with the same core
-- (b) That person is almost unrecognizable to me now
-- (c) Connected but different—growth, not discontinuity
-- (d) I can honor that person while being someone new
+- (a) I feel like I've failed—I thought I'd moved past this
+- (b) I apply new techniques to the old pattern but don't feel different
+- (c) I can see I'm engaging with familiar material in new ways
+- (d) I recognize the spiral—returning transformed to old ground
 
 ### Context-Specific Questions
 
-**B7. Political Identity**
-> Regarding your political identity (liberal, conservative, etc.):
+**B7. Spiritual/Therapeutic Context**
+> In your spiritual or therapeutic work:
 
-- (a) It's core to who I am—I've always been this
-- (b) It shifts—I don't have a stable political identity
-- (c) It's evolved over time but feels relatively stable now
-- (d) I hold it loosely—it describes current views, not permanent identity
+- (a) I keep working on the same issues without resolution
+- (b) I've learned all the right language but my life hasn't changed
+- (c) Some real shifts, some repeated patterns
+- (d) I can track genuine transformation alongside ongoing work
 
-**B8. Professional Identity**
-> Regarding your career/professional identity:
+**B8. Intellectual Growth**
+> Regarding new ideas and frameworks you encounter:
 
-- (a) It's who I am—I can't imagine being someone different
-- (b) I'm always reinventing—no stable professional identity
-- (c) It's evolved—different chapters, continuous thread
-- (d) I do this work without being only this identity
+- (a) I resist them—I know what I know
+- (b) I collect them enthusiastically but they don't change my behavior
+- (c) Some integrate, some remain abstract
+- (d) I'm selective—only taking in what I can embody
 
-**B9. Relational Identity**
-> In relationships (partner, parent, friend), your identity:
+**B9. Relational Patterns**
+> In your relationship patterns over time:
 
-- (a) Is fixed—I'm the same person in relationships I've always been
-- (b) Shifts dramatically—I become different with different people
-- (c) Has evolved—I'm a different partner/parent/friend than years ago
-- (d) Is stable but not fixed—I have patterns AND continue to grow
+- (a) Same conflicts, same dynamics, different people
+- (b) I can articulate my patterns clearly but still enact them
+- (c) Slow evolution—some patterns shifting, some persistent
+- (d) Clear transformation—I relate differently while honoring continuity
 
 ### Awareness Questions
 
 **B10. Becoming Collapse Recognition**
-> When you're either rigidly defending a fixed identity OR destabilized by change, do you notice?
+> When you're either stuck in loops (regression) OR performing growth without real change (bypass), do you notice?
 
-- (a) My stability/instability feels appropriate, not like collapse
-- (b) Later I sometimes recognize I was too rigid or too unmoored
-- (c) I can often catch myself getting stuck or ungrounded
-- (d) I'm usually aware of my relationship to identity in real-time
+- (a) My patterns feel like just how I am, or my growth feels real
+- (b) Later I sometimes recognize I was stuck or bypassing
+- (c) I can often catch myself in regression or bypass
+- (d) I'm usually aware of the difference between real transformation and its shadows
 
 ---
 
@@ -749,6 +775,88 @@ Higher awareness = faster development, because you can catch collapse sooner.
 
 ---
 
+## SEE/HOLD/EMERGE Framework
+
+The seven Threads organize into three functional groups:
+
+### SEE (Orienting - Threads 1-4)
+
+**Threads:** PRESENCE, CONSENT, MEMORY, PAUSE
+
+These are the orienting capacities—locating yourself, allowing others, holding history, creating pause. Together they form the capacity to SEE clearly where you are and what is happening.
+
+**To Calculate SEE Average:**
+Add scores for PRESENCE + CONSENT + MEMORY + PAUSE, divide by 4
+
+**SEE Interpretation:**
+
+| Average | Level | Meaning |
+|---------|-------|---------|
+| 30-40 | Very High | Strong orientation; you can see clearly even under pressure |
+| 23-29 | High | Good orientation; some collapse in extreme situations |
+| 16-22 | Moderate | Variable orientation; stress disrupts your seeing |
+| 10-15 | Low | Frequent disorientation; difficulty seeing clearly what's happening |
+
+### HOLD (Sourcing - Threads 5-6)
+
+**Threads:** EMBODIMENT, UNCERTAINTY
+
+These are the sourcing capacities—staying connected to body wisdom and remaining curious in not-knowing. Together they form the capacity to HOLD complexity and remain resourced.
+
+**To Calculate HOLD Average:**
+Add scores for EMBODIMENT + UNCERTAINTY, divide by 2
+
+**HOLD Interpretation:**
+
+| Average | Level | Meaning |
+|---------|-------|---------|
+| 30-40 | Very High | Strong holding; you stay resourced and curious |
+| 23-29 | High | Good holding; can source from body and uncertainty |
+| 16-22 | Moderate | Variable holding; stress disconnects you from resources |
+| 10-15 | Low | Difficult to hold; disconnected from body and curiosity |
+
+### EMERGE (Integrating - Thread 7)
+
+**Thread:** BECOMING
+
+This is the integrating capacity—allowing genuine transformation through the spiral path of Different + Return. The capacity to change while maintaining continuity, to grow without bypassing.
+
+**EMERGE Interpretation:**
+
+| Score | Level | Meaning |
+|-------|-------|---------|
+| 34-40 | Very High | Genuine transformation; spiral development |
+| 27-33 | High | Real growth; mostly avoiding regression and bypass |
+| 20-26 | Moderate | Some transformation, some stuck patterns or bypassing |
+| 13-19 | Low | Frequent regression or bypass; difficulty with real change |
+| 10-12 | Very Low | Stuck in loops or performing growth without embodiment |
+
+### Integration Patterns
+
+**Pattern 1: Capacity Without Integration**
+- SEE/HOLD: High
+- EMERGE: Low
+- **Meaning:** You can see clearly and stay resourced, but fear prevents transformation. You have the capacity but won't use it for real change.
+
+**Pattern 2: Bypass Pattern**
+- SEE/HOLD: Low
+- EMERGE: High
+- **Meaning:** You're changing without proper foundation—spiritual or intellectual bypassing. You appear to transform but lack the embodiment and orientation to make it real.
+
+**Pattern 3: Developing Foundation**
+- SEE: Moderate to High
+- HOLD: Low
+- EMERGE: Any
+- **Meaning:** You can orient but struggle to stay resourced. Build EMBODIMENT and UNCERTAINTY before focusing on BECOMING.
+
+**Pattern 4: Integrated Development**
+- SEE: Moderate to High
+- HOLD: Moderate to High
+- EMERGE: Moderate to High
+- **Meaning:** Balanced development across all capacities. Continue spiral development.
+
+---
+
 ## Extended Profile Template
 
 After completing the Extended Assessment:
@@ -758,29 +866,41 @@ THREADS EXTENDED PROFILE
 
 Name: ___________________ Date: _______________
 
-THREAD SCORES
-─────────────────────────────────────────────────
-Thread        Score    Level       Direction    Awareness
-PAUSE         ___/40   _________   A / B / Both ___
-EMBODIMENT    ___/40   _________   A / B / Both ___
-CONSENT       ___/40   _________   A / B / Both ___
-THRESHOLD     ___/40   _________   A / B / Both ___
-MEMORY        ___/40   _________   A / B / Both ___
-UNCERTAINTY   ___/40   _________   A / B / Both ___
-BECOMING      ___/40   _________   A / B / Both ___
+SEE (Orienting)
+─────────────────────────────────
+PRESENCE        Score: ___  Direction: A/B/Both  Awareness: ___
+CONSENT         Score: ___  Direction: A/B/Both  Awareness: ___
+MEMORY          Score: ___  Direction: A/B/Both  Awareness: ___
+PAUSE           Score: ___  Direction: A/B/Both  Awareness: ___
+SEE Average:    ___
+
+HOLD (Sourcing)
+─────────────────────────────────
+EMBODIMENT      Score: ___  Direction: A/B/Both  Awareness: ___
+UNCERTAINTY     Score: ___  Direction: A/B/Both  Awareness: ___
+HOLD Average:   ___
+
+EMERGE (Integrating)
+─────────────────────────────────
+BECOMING        Score: ___  Direction: A/B/Both  Awareness: ___
 
 CONTEXT PATTERNS
-─────────────────────────────────────────────────
+─────────────────────────────────
 Most collapse-prone context: ___________________
 Most resilient context: _______________________
 
 PRIORITY DEVELOPMENT
-─────────────────────────────────────────────────
+─────────────────────────────────
 Thread 1: _____________ (lowest score)
 Thread 2: _____________ (second lowest)
 
+INTEGRATION PATTERN
+─────────────────────────────────
+(Capacity Without Integration / Bypass Pattern /
+ Developing Foundation / Integrated Development)
+
 SIGNATURE PATTERN
-─────────────────────────────────────────────────
+─────────────────────────────────
 (See Collapse Patterns document for identification)
 ```
 
@@ -794,13 +914,15 @@ SIGNATURE PATTERN
 2. **Know your collapse direction** — Practice shifts based on which pole you collapse toward
 3. **Target your weakest context** — Practice HOLD specifically in this environment
 4. **Use awareness level as leverage** — Build real-time awareness to catch collapse sooner
+5. **Check SEE/HOLD/EMERGE balance** — Identify if you need foundation building or integration work
 
 ### For Facilitators
 
 1. **Design interventions for specific Thread weaknesses**
 2. **Adjust language based on collapse direction** (different medicine for different poles)
-3. **Sequence development** (PAUSE and EMBODIMENT often enable other Threads)
+3. **Sequence development** (SEE and HOLD capacities often enable EMERGE)
 4. **Track progress** with periodic re-assessment
+5. **Identify bypass patterns** (high EMERGE with low SEE/HOLD signals spiritual/intellectual bypassing)
 
 ### For Groups/Organizations
 
@@ -808,9 +930,10 @@ SIGNATURE PATTERN
 2. **Design team practices** based on shared weaknesses
 3. **Create balanced teams** with complementary Thread strengths
 4. **Measure culture change** through group capacity development
+5. **Build collective SEE/HOLD capacity** before organizational transformation initiatives
 
 ---
 
 *Threads Capacity Assessment: Extended Questions Bank*
 *Part of the Threads of Becoming Framework*
-*Version 1.0*
+*Version 2.0*
