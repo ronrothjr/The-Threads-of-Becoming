@@ -13,12 +13,14 @@ const Navigation: React.FC = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [hasCompletedQuickProfile, setHasCompletedQuickProfile] = useState(false);
   const [hasPartialQuickProfile, setHasPartialQuickProfile] = useState(false);
+  const [hasPartialJourneyMap, setHasPartialJourneyMap] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const { isAuthenticated, logout } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
   const isOnQuickProfile = location.pathname === '/assessment/quick-profile';
+  const isOnPersonalJourneyMap = location.pathname === '/assessment/personal-journey-map';
 
   useEffect(() => {
     let ticking = false;
@@ -59,6 +61,18 @@ const Navigation: React.FC = () => {
         const data = await response.json();
         setHasCompletedQuickProfile(data.quickProfileCompleted);
         setHasPartialQuickProfile(data.hasPartialQuickProfile);
+      }
+
+      // Check for partial Personal Journey Map
+      const partialJourneyMapResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/partial`, {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
+      if (partialJourneyMapResponse.ok) {
+        const partialData = await partialJourneyMapResponse.json();
+        setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
       }
     } catch (error) {
       console.error('Failed to check assessment status:', error);
@@ -106,6 +120,28 @@ const Navigation: React.FC = () => {
 
       // Get current responses from QuickProfile state (if any)
       // For now, just navigate - the QuickProfile component handles saving
+      navigate('/dashboard');
+      closeMobileMenu();
+
+      // Refresh status to update button text
+      await checkAssessmentStatus();
+    } catch (error) {
+      console.error('Failed to save progress:', error);
+      navigate('/dashboard');
+      closeMobileMenu();
+    }
+  };
+
+  const handleExitPersonalJourneyMap = async () => {
+    try {
+      const token = localStorage.getItem('auth_token');
+      if (!token) {
+        navigate('/dashboard');
+        closeMobileMenu();
+        return;
+      }
+
+      // Navigate to dashboard - the PersonalJourneyMap component handles auto-saving
       navigate('/dashboard');
       closeMobileMenu();
 
@@ -170,14 +206,19 @@ const Navigation: React.FC = () => {
                 <>
                   {/* Desktop: Show button + user menu */}
                   <div className={styles.desktopAuthNav}>
-                    {!hasCompletedQuickProfile && !isOnQuickProfile && (
+                    {!hasCompletedQuickProfile && !isOnQuickProfile && !isOnPersonalJourneyMap && (
                       <Link to="/assessment/quick-profile" className={styles.assessmentButton} onClick={closeMobileMenu}>
                         {hasPartialQuickProfile ? 'Resume Quick Profile' : 'Quick Profile'}
                       </Link>
                     )}
                     {isOnQuickProfile && (
                       <button onClick={handleExitQuickProfile} className={styles.exitButton}>
-                        Exit Quick Profile
+                        Pause Quick Profile
+                      </button>
+                    )}
+                    {isOnPersonalJourneyMap && (
+                      <button onClick={handleExitPersonalJourneyMap} className={styles.exitButton}>
+                        Pause Personal Journey Map
                       </button>
                     )}
                     <div className={styles.userMenuWrapper}>
@@ -196,14 +237,19 @@ const Navigation: React.FC = () => {
                       </div>
                     )}
 
-                    {!hasCompletedQuickProfile && !isOnQuickProfile && (
+                    {!hasCompletedQuickProfile && !isOnQuickProfile && !isOnPersonalJourneyMap && (
                       <Link to="/assessment/quick-profile" className={styles.mobileNavItem} onClick={closeMobileMenu}>
                         {hasPartialQuickProfile ? 'Resume Quick Profile' : 'Quick Profile'}
                       </Link>
                     )}
                     {isOnQuickProfile && (
                       <button onClick={handleExitQuickProfile} className={styles.mobileNavItem}>
-                        Exit Quick Profile
+                        Pause Quick Profile
+                      </button>
+                    )}
+                    {isOnPersonalJourneyMap && (
+                      <button onClick={handleExitPersonalJourneyMap} className={styles.mobileNavItem}>
+                        Pause Personal Journey Map
                       </button>
                     )}
 

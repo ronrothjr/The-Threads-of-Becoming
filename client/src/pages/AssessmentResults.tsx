@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import styles from './AssessmentResults.module.css';
+import { logger } from '../utils/logger';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
@@ -38,10 +39,15 @@ const AssessmentResults: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Determine which assessment type based on URL
+  const isPersonalJourneyMap = location.pathname.includes('personal-journey-map');
+  const assessmentTitle = isPersonalJourneyMap ? 'Personal Journey Map' : 'Quick Profile';
 
   useEffect(() => {
     loadResults();
-  }, []);
+  }, [location.pathname]);
 
   const loadResults = async () => {
     try {
@@ -51,18 +57,39 @@ const AssessmentResults: React.FC = () => {
         return;
       }
 
-      const response = await fetch(`${API_URL}/api/assessments/quick-profile/results`, {
+      // Determine which assessment type based on the CURRENT URL
+      const isPersonalJourneyMap = location.pathname.includes('personal-journey-map');
+      const assessmentType = isPersonalJourneyMap ? 'personal-journey-map' : 'quick-profile';
+
+      // Log to server for debugging
+      logger.debug('AssessmentResults loading', {
+        url: location.pathname,
+        isPersonalJourneyMap,
+        assessmentType,
+        endpoint: `${API_URL}/api/assessments/${assessmentType}/results`,
+      });
+
+      const response = await fetch(`${API_URL}/api/assessments/${assessmentType}/results`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
 
       if (!response.ok) {
+        logger.error('Failed to load assessment results', { status: response.status });
         throw new Error('Failed to load results');
       }
 
       const data = await response.json();
-      setResults(data.results);
+      logger.debug('AssessmentResults loaded', {
+        presenceScore: data.results?.threadScores?.presence?.score,
+        presencePercentage: data.results?.threadScores?.presence?.percentage,
+        allThreadScores: data.results?.threadScores,
+      });
+
+      // Force state update
+      setResults(null);
+      setTimeout(() => setResults(data.results), 0);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load results');
     } finally {
@@ -98,7 +125,7 @@ const AssessmentResults: React.FC = () => {
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>Your Threads Profile</h1>
-        <p className={styles.subtitle}>Quick Profile Assessment Results</p>
+        <p className={styles.subtitle}>{assessmentTitle} Results</p>
       </header>
 
       {/* What This Means */}
@@ -106,16 +133,18 @@ const AssessmentResults: React.FC = () => {
         <h2>What This Assessment Reveals</h2>
         <div className={styles.introContent}>
           <p>
-            This assessment measures your <strong>current capacity to hold creative tension</strong> across seven developmental threads.
-            These aren't personality traits—they're capacities you can develop through practice.
+            This assessment measures how you respond when life presents you with competing demands or conflicting needs.
+            For example: wanting connection but also needing space, or knowing you should rest but feeling pressure to keep working.
+            We call these situations <strong>"tensions"</strong>—not problems to solve, but natural parts of being human.
           </p>
           <p>
-            <strong>Higher scores</strong> indicate greater capacity to stay present and integrated when facing tensions and challenges.
-            <strong>Lower scores</strong> reveal where you tend to collapse under pressure—and therefore where focused practice will be most transformative.
+            <strong>Higher scores</strong> show where you can stay with these tensions without immediately picking a side or shutting down.
+            <strong>Lower scores</strong> reveal where you tend to react automatically—either forcing a solution or avoiding the situation entirely.
+            In the Threads framework, we call this automatic reaction <strong>"collapsing the tension"</strong> rather than holding it.
           </p>
           <p>
+            These aren't personality traits—they're skills you can develop through practice.
             Think of these results as a map showing where you are right now, and where deliberate practice can help you grow.
-            This is the beginning of your integration journey, not a verdict on who you are.
           </p>
         </div>
       </section>
@@ -124,7 +153,8 @@ const AssessmentResults: React.FC = () => {
       <section className={styles.focusSection}>
         <h2>Your Practice Focus: Where to Begin</h2>
         <p className={styles.focusIntro}>
-          Based on your responses, here are the threads where you most often collapse under pressure—and therefore where focused practice will create the most transformation in your first few weeks.
+          Based on your responses, here are the two areas where you most often react automatically under pressure—and therefore where focused practice will create the most transformation in your first few weeks.
+          In the Threads framework, we call these areas "threads"—different types of tension you face in daily life.
         </p>
 
         <div className={styles.focusCards}>
@@ -137,38 +167,38 @@ const AssessmentResults: React.FC = () => {
             const threadDescriptions: Record<string, { poles: string; collapse: string; practice: string }> = {
               presence: {
                 poles: "Within ↔ Between • Here ↔ Elsewhere",
-                collapse: "You tend to either isolate completely or lose yourself in others. You struggle to be fully present, often mentally elsewhere.",
-                practice: "Practice noticing when you're physically present but mentally absent. In conversations, notice when you're relating to a category rather than the actual person."
+                collapse: "In stressful moments, you either withdraw completely and shut people out, OR you lose yourself trying to please everyone and can't tell what you actually want. You're often physically present but mentally elsewhere, replaying the past or worrying about the future. We call this 'collapsing' the tension between being alone and being connected.",
+                practice: "Practice noticing when you're physically present but mentally absent. In conversations, notice when you're relating to an idea about someone ('narcissist,' 'liberal,' 'my difficult mother') rather than the actual person in front of you."
               },
               consent: {
                 poles: "Yes ↔ No • Self ↔ Other",
-                collapse: "You find it hard to set boundaries while maintaining connection, or to honor others' refusals without feeling rejected.",
-                practice: "Practice saying 'no' to small things while staying connected. Notice when you're trying to change someone's mind rather than allowing their experience."
+                collapse: "You either push your way forward and need others to agree with you, OR you give in completely and lose track of what you actually need. Setting a boundary feels like rejection; hearing 'no' feels personal. This is what we call collapsing the tension between honoring yourself and allowing others their autonomy.",
+                practice: "Practice saying 'no' to small things while staying warm and connected. Notice when you're trying to convince someone or change their mind rather than simply allowing them their experience."
               },
               memory: {
                 poles: "Given ↔ Chosen • Telling ↔ Told",
-                collapse: "You either feel trapped by your past story or try to completely rewrite it. Your identity feels fixed or fragmented.",
-                practice: "Notice which stories you tell about yourself repeatedly. Ask: 'Am I telling this story, or is it telling me?'"
+                collapse: "You're either stuck replaying old wounds and patterns (\"this always happens to me\"), OR you dismiss the past entirely and chase what's next without learning from it. Your identity feels either fixed by your history or fragmented into constant reinvention. We call this collapsing the tension between honoring the past and being present to now.",
+                practice: "Notice which stories you tell about yourself repeatedly. Ask: 'Am I telling this story, or is it telling me?' Can you hold your history as true without letting it determine your future?"
               },
               pause: {
                 poles: "Not Yet ↔ Now • More ↔ Enough",
-                collapse: "You tend toward either anxious rushing (never enough) or paralyzed waiting (not yet ready).",
-                practice: "Before responding or acting, pause for three breaths. Notice: Am I acting from urgency or from fullness?"
+                collapse: "You either rush to resolve things immediately (\"just do something!\") OR you delay endlessly and can't move forward (\"I'm not ready yet\"). You struggle to sense when it's time to act versus when more waiting is needed. This is collapsing the tension between 'not yet' and 'now.'",
+                practice: "Before responding or acting, pause for three conscious breaths. Notice: Am I acting from urgency and anxiety, or from a sense of readiness and fullness?"
               },
               embodiment: {
                 poles: "Think ↔ Feel • Stay ↔ Go",
-                collapse: "You either disconnect from your body entirely or get lost in physical sensation without meaning.",
-                practice: "Set a timer to check in with your body three times daily. Simply notice: What sensations are present right now?"
+                collapse: "You either disconnect from your body and live entirely in your head, OR you get overwhelmed by every sensation and can't function. Physical discomfort either gets ignored or floods your whole experience. We call this collapsing the tension between being grounded in your body and having perspective on it.",
+                practice: "Set a timer to check in with your body three times daily. Simply notice: What sensations are present right now? Can you name them without either ignoring them or getting lost in them?"
               },
               uncertainty: {
                 poles: "Hide ↔ Seek • Threat ↔ Wonder",
-                collapse: "You need certainty to feel safe, or you use not-knowing to avoid commitment and responsibility.",
-                practice: "In moments of uncertainty, practice saying 'I don't know yet' without immediately seeking an answer. Sit with the question."
+                collapse: "You either grasp for certainty and need definite answers to feel safe, OR you get lost in confusion and can't orient yourself at all. Not-knowing feels threatening, so you either force clarity or avoid making any commitments. This is collapsing the tension between the desire for answers and the reality of mystery.",
+                practice: "In moments of uncertainty, practice saying 'I don't know yet' without immediately googling, asking someone, or forcing a decision. Can you sit with the question itself for a day?"
               },
               becoming: {
                 poles: "Same ↔ Different • Return ↔ Forward",
-                collapse: "You either cling to who you've been or constantly reinvent yourself without integration.",
-                practice: "Notice when you say 'I'm just not that kind of person.' Ask: Who am I becoming that I wasn't before?"
+                collapse: "You either stay stuck in old patterns despite intentions to change (\"I'm just not that kind of person\"), OR you constantly chase growth and new ideas without actually embodying them. Real transformation feels either impossible or superficial. We call this collapsing the tension between stability and change.",
+                practice: "Notice when you say 'I'm just not that kind of person.' Ask: Who am I becoming that I wasn't before? Are you repeating old loops or genuinely different?"
               }
             };
 
@@ -183,7 +213,7 @@ const AssessmentResults: React.FC = () => {
                     <span className={styles.focusScore}>{data.percentage.toFixed(0)}%</span>
                   </div>
                   <div className={styles.tensionPoles}>
-                    <div className={styles.tensionLabel}>Tension Poles:</div>
+                    <div className={styles.tensionLabel}>The Competing Pulls:</div>
                     {poles.map((pole, idx) => (
                       <div key={idx} className={styles.poleGroup}>
                         {pole.split(' ↔ ').map((p, i, arr) => (
@@ -206,18 +236,19 @@ const AssessmentResults: React.FC = () => {
         <div className={styles.focusReminder}>
           <p>
             Focus on these threads for the next 3-4 weeks. Practice daily, and record your observations in your journal.
-            After consistent practice and journaling, you'll unlock the Extended Assessment for deeper analysis across all seven threads.
+            After consistent practice and journaling, you'll unlock your Personal Journey Map for deeper analysis across all seven threads.
           </p>
         </div>
       </section>
 
       {/* See. Hold. Emerge. Overview */}
       <section className={styles.movementSection}>
-        <h2>See. Hold. Emerge.</h2>
+        <h2>How Transformation Actually Works</h2>
         <p className={styles.movementIntro}>
-          The seven Threads organize into three movements that mirror how transformation actually works.
-          These scores show your average capacity across the threads in each movement. As you practice with your focus threads,
-          you'll see these movement scores increase—this is how you track your integration journey.
+          The seven threads you've been assessed on actually follow a natural sequence—the way real change happens in your life.
+          First, you <strong>See</strong> where you are (orienting yourself). Then you <strong>Hold</strong> the discomfort without immediately fixing it (sourcing wisdom from your body and the unknown).
+          Finally, something new can <strong>Emerge</strong> (integrating the change into who you're becoming).
+          In the Threads framework, we call these three movements <strong>"See. Hold. Emerge."</strong> These scores show your average capacity in each movement.
         </p>
 
         <div className={styles.movementsGrid}>
@@ -229,7 +260,7 @@ const AssessmentResults: React.FC = () => {
                 <span className={styles.scoreMax}> / 12</span>
               </div>
             </div>
-            <p className={styles.movementDesc}>You locate where you are in the tension</p>
+            <p className={styles.movementDesc}>Locate where you are: Am I present? Do I have agency? What story am I telling? Is this the right timing?</p>
             <div className={styles.threadsInMovement}>
               PRESENCE • CONSENT • MEMORY • PAUSE
             </div>
@@ -243,7 +274,7 @@ const AssessmentResults: React.FC = () => {
                 <span className={styles.scoreMax}> / 12</span>
               </div>
             </div>
-            <p className={styles.movementDesc}>You receive what body and mystery know</p>
+            <p className={styles.movementDesc}>Stay with the discomfort: What is my body telling me? What happens if I don't force an answer?</p>
             <div className={styles.threadsInMovement}>
               EMBODIMENT • UNCERTAINTY
             </div>
@@ -257,7 +288,7 @@ const AssessmentResults: React.FC = () => {
                 <span className={styles.scoreMax}> / 12</span>
               </div>
             </div>
-            <p className={styles.movementDesc}>You become what's next</p>
+            <p className={styles.movementDesc}>Let something new arise: Who am I becoming? What's actually changing vs. rearranging?</p>
             <div className={styles.threadsInMovement}>
               BECOMING
             </div>
@@ -297,16 +328,18 @@ const AssessmentResults: React.FC = () => {
 
       {/* HOLD Practice Mapping */}
       <section className={styles.practiceSection}>
-        <h2>Your HOLD Practice Focus</h2>
+        <h2>A Simple Practice Tool: HOLD</h2>
         <p className={styles.practiceIntro}>
-          Based on your thread scores, here's where to focus your HOLD practice:
+          When you notice yourself reacting automatically—shutting down, forcing a solution, avoiding, or pushing—you can use this four-step practice to interrupt the pattern.
+          We call it <strong>HOLD</strong> (Halt, Observe, Look, Decide). Think of it as a way to pause the automatic response and create space for something new.
+          Based on your scores, here's which step will be most helpful for your focus threads:
         </p>
 
         <div className={styles.practiceGrid}>
           {results.holdPracticeMapping.halt.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>H - HALT</h3>
-              <p>Stop automatic reaction; create space</p>
+              <p>Stop the automatic reaction; create space before responding</p>
               <div className={styles.practiceThreads}>
                 {results.holdPracticeMapping.halt.join(' • ')}
               </div>
@@ -316,7 +349,7 @@ const AssessmentResults: React.FC = () => {
           {results.holdPracticeMapping.observe.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>O - OBSERVE</h3>
-              <p>Notice body sensations and present reality</p>
+              <p>Notice what your body is telling you and what's actually happening right now</p>
               <div className={styles.practiceThreads}>
                 {results.holdPracticeMapping.observe.join(' • ')}
               </div>
@@ -326,7 +359,7 @@ const AssessmentResults: React.FC = () => {
           {results.holdPracticeMapping.look.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>L - LOOK</h3>
-              <p>Name the tension; identify which poles are pulling</p>
+              <p>Name the tension: Which competing needs are pulling at you?</p>
               <div className={styles.practiceThreads}>
                 {results.holdPracticeMapping.look.join(' • ')}
               </div>
@@ -336,7 +369,7 @@ const AssessmentResults: React.FC = () => {
           {results.holdPracticeMapping.decide.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>D - DECIDE</h3>
-              <p>Choose from fullness, not fear</p>
+              <p>Choose from readiness, not from anxiety or urgency</p>
               <div className={styles.practiceThreads}>
                 {results.holdPracticeMapping.decide.join(' • ')}
               </div>
@@ -345,22 +378,25 @@ const AssessmentResults: React.FC = () => {
         </div>
       </section>
 
-      {/* Next Steps - Unlock Extended Assessment */}
+      {/* Next Steps - Unlock Personal Journey Map (only show for Quick Profile) */}
+      {!isPersonalJourneyMap && (
       <section className={styles.unlockSection}>
-        <h2>Unlock the Extended Assessment</h2>
+        <h2>Unlock Your Personal Journey Map</h2>
         <p className={styles.unlockIntro}>
-          The Quick Profile gives you a starting point. The <strong>Extended Assessment</strong> provides deep analysis
-          of your collapse patterns, specific pole tendencies, and personalized integration pathways across all seven threads.
+          The Quick Profile gives you a starting point. The <strong>Personal Journey Map</strong> provides deep analysis
+          of your automatic reaction patterns, which direction you tend to go in each area, and a personalized roadmap
+          for developing all seven threads. In the Threads framework, we call these automatic reactions "collapse patterns"
+          and the different directions you can go "poles."
         </p>
 
         <div className={styles.unlockBenefits}>
-          <h3>What the Extended Assessment Reveals:</h3>
+          <h3>What Your Personal Journey Map Reveals:</h3>
           <ul>
-            <li><strong>Pole-Specific Patterns:</strong> Discover exactly which pole you collapse toward in each thread (e.g., do you isolate or enmesh in PRESENCE?)</li>
-            <li><strong>Cross-Thread Dynamics:</strong> See how your patterns in one thread trigger collapse in others</li>
-            <li><strong>Developmental Trajectory:</strong> Get a personalized roadmap showing which threads to develop in which order</li>
-            <li><strong>Shadow Work Guidance:</strong> Identify the specific shadows (intrusion/abandonment, coercion/avoidance, etc.) driving your patterns</li>
-            <li><strong>Integration Practices:</strong> Receive customized practices based on your unique pattern constellation</li>
+            <li><strong>Your Specific Patterns:</strong> Discover exactly how you react in each area (e.g., do you withdraw OR merge in PRESENCE?)</li>
+            <li><strong>How Your Patterns Connect:</strong> See how reacting automatically in one area triggers reactions in others (e.g., when you ignore your body, you also grasp for certainty)</li>
+            <li><strong>Your Development Path:</strong> Get a personalized roadmap showing which areas to work on first, second, third</li>
+            <li><strong>What's Driving This:</strong> Identify the deeper fears and needs underneath your automatic reactions</li>
+            <li><strong>Custom Practices:</strong> Receive specific practices designed for your unique combination of patterns</li>
           </ul>
         </div>
 
@@ -370,17 +406,17 @@ const AssessmentResults: React.FC = () => {
             <div className={styles.requirementCard}>
               <div className={styles.requirementIcon}>1</div>
               <h4>Focused Practice</h4>
-              <p>Use the interactive practice tools on your dashboard to work with your two focus threads. Practice daily for 3-4 weeks.</p>
+              <p>Use the interactive practice tools on your dashboard to work with your two focus areas. Practice daily for 3-4 weeks to build new patterns.</p>
             </div>
             <div className={styles.requirementCard}>
               <div className={styles.requirementIcon}>2</div>
               <h4>Journal Your Observations</h4>
-              <p>Record journal entries on at least 10 separate days, documenting your experiences holding tension, moments of collapse, and insights gained. Real integration takes time—give yourself the gift of sustained attention.</p>
+              <p>Record journal entries on at least 10 separate days. Notice when you stayed with difficulty without immediately reacting, and when you reacted automatically. What did you learn? Real change takes time—give yourself the gift of sustained attention.</p>
             </div>
             <div className={styles.requirementCard}>
               <div className={styles.requirementIcon}>3</div>
-              <h4>Extended Assessment Unlocked</h4>
-              <p>After consistent practice and journaling, the 70-question Extended Assessment becomes available. You'll have earned the depth it provides—because you've done the work to meet it.</p>
+              <h4>Personal Journey Map Unlocked</h4>
+              <p>After consistent practice and journaling, your 70-question Personal Journey Map becomes available. You'll have earned the depth it provides—because you've done the work to meet it.</p>
             </div>
           </div>
         </div>
@@ -390,6 +426,7 @@ const AssessmentResults: React.FC = () => {
           <p className={styles.unlockNote}>Your Focused Practice tools are waiting for you</p>
         </div>
       </section>
+      )}
 
       {/* Additional Next Steps */}
       <section className={styles.nextSteps}>

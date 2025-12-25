@@ -4,7 +4,8 @@ import { Model } from 'mongoose';
 import { Assessment, AssessmentDocument } from '../schemas/assessment.schema';
 import { User, UserDocument } from '../schemas/user.schema';
 import { ScoringService } from './scoring.service';
-import { QuickProfileResponse } from './scoring.service';
+import { QuickProfileResponse, ExtendedAssessmentResponse } from './scoring.service';
+import { CollapsePatternService } from './collapse-pattern.service';
 
 
 @Injectable()
@@ -13,6 +14,7 @@ export class AssessmentsService {
     @InjectModel(Assessment.name) private assessmentModel: Model<AssessmentDocument>,
     @InjectModel(User.name) private userModel: Model<UserDocument>,
     private scoringService: ScoringService,
+    private collapsePatternService: CollapsePatternService,
   ) {}
 
   async submitQuickProfile(userId: string, responses: QuickProfileResponse[]) {
@@ -290,6 +292,189 @@ export class AssessmentsService {
       journalDaysRemaining: Math.max(0, 10 - unlockProgress.journalDaysCount),
       practiceDaysCount: unlockProgress.practiceDaysCount,
       unlockedAt: unlockProgress.unlockedAt,
+    };
+  }
+
+  async submitPersonalJourneyMap(userId: string, responses: ExtendedAssessmentResponse[]) {
+    if (responses.length !== 70) {
+      throw new Error('Personal Journey Map requires exactly 70 responses');
+    }
+
+    const expectedQuestions = [
+      ...Array.from({ length: 10 }, (_, i) => `PR${i + 1}`),
+      ...Array.from({ length: 10 }, (_, i) => `C${i + 1}`),
+      ...Array.from({ length: 10 }, (_, i) => `M${i + 1}`),
+      ...Array.from({ length: 10 }, (_, i) => `P${i + 1}`),
+      ...Array.from({ length: 10 }, (_, i) => `E${i + 1}`),
+      ...Array.from({ length: 10 }, (_, i) => `U${i + 1}`),
+      ...Array.from({ length: 10 }, (_, i) => `B${i + 1}`),
+    ];
+    const receivedQuestions = responses.map((r) => r.questionId).sort();
+    const missingQuestions = expectedQuestions.filter(
+      (q) => !receivedQuestions.includes(q),
+    );
+
+    if (missingQuestions.length > 0) {
+      throw new Error(
+        `Missing responses for questions: ${missingQuestions.join(', ')}`,
+      );
+    }
+
+    const results = this.scoringService.scoreExtendedAssessment(responses);
+    const timestampedResponses = responses.map((r) => ({
+      ...r,
+      answeredAt: new Date(),
+    }));
+
+    // Mark any incomplete assessments as complete
+    await this.assessmentModel.deleteMany({
+      userId,
+      type: 'personal_journey_map',
+      isComplete: false,
+    });
+
+    const assessment = new this.assessmentModel({
+      userId,
+      type: 'personal_journey_map',
+      responses: timestampedResponses,
+      results,
+      completedAt: new Date(),
+      isComplete: true,
+    });
+
+    await assessment.save();
+
+    await this.userModel.findByIdAndUpdate(userId, {
+      'assessments.personalJourneyMapCompleted': true,
+      'assessments.personalJourneyMapDate': new Date(),
+    });
+
+    return {
+      message: 'Personal Journey Map completed successfully',
+      assessmentId: assessment._id,
+      results,
+    };
+  }
+
+  async getPersonalJourneyMapResults(userId: string) {
+    const assessment = await this.assessmentModel
+      .findOne({
+        userId,
+        type: 'personal_journey_map',
+        isComplete: true,
+      })
+      .sort({ completedAt: -1 })
+      .exec();
+
+    if (!assessment) {
+      throw new NotFoundException(
+        'No Personal Journey Map found for this user',
+      );
+    }
+
+    return {
+      results: assessment.results,
+      completedAt: assessment.completedAt,
+      assessmentId: assessment._id,
+    };
+  }
+
+  async getComprehensivePatternAnalysis(userId: string) {
+    // Get the Personal Journey Map results
+    const assessment = await this.assessmentModel
+      .findOne({
+        userId,
+        type: 'personal_journey_map',
+        isComplete: true,
+      })
+      .sort({ completedAt: -1 })
+      .exec();
+
+    if (!assessment) {
+      throw new NotFoundException(
+        'No Personal Journey Map found for this user',
+      );
+    }
+
+    const { threadScores } = assessment.results;
+
+    // Detect collapse patterns
+    const detectedPatterns = this.collapsePatternService.detectPatterns(threadScores);
+
+    // Analyze cascades
+    const cascades = this.collapsePatternService.analyzeCascades(threadScores, detectedPatterns);
+
+    // Create development path
+    const developmentPath = this.collapsePatternService.createDevelopmentPath(threadScores, detectedPatterns);
+
+    return {
+      detectedPatterns,
+      cascades,
+      developmentPath,
+      threadScores,
+    };
+  }
+
+  async savePartialPersonalJourneyMap(
+    userId: string,
+    responses: ExtendedAssessmentResponse[],
+    questionOrder?: string[],
+  ) {
+    let assessment = await this.assessmentModel.findOne({
+      userId,
+      type: 'personal_journey_map',
+      isComplete: false,
+    });
+
+    const timestampedResponses = responses.map((r) => ({
+      ...r,
+      answeredAt: new Date(),
+    }));
+
+    if (assessment) {
+      assessment.responses = timestampedResponses;
+      assessment.lastSavedAt = new Date();
+      if (questionOrder && questionOrder.length > 0) {
+        assessment.questionOrder = questionOrder;
+      }
+      await assessment.save();
+    } else {
+      assessment = new this.assessmentModel({
+        userId,
+        type: 'personal_journey_map',
+        responses: timestampedResponses,
+        isComplete: false,
+        lastSavedAt: new Date(),
+        questionOrder: questionOrder || [],
+      });
+      await assessment.save();
+    }
+
+    return {
+      message: 'Progress saved',
+      assessmentId: assessment._id,
+      responseCount: responses.length,
+    };
+  }
+
+  async getPartialPersonalJourneyMap(userId: string) {
+    const assessment = await this.assessmentModel
+      .findOne({
+        userId,
+        type: 'personal_journey_map',
+        isComplete: false,
+      })
+      .exec();
+
+    if (!assessment) {
+      return null;
+    }
+
+    return {
+      responses: assessment.responses,
+      questionOrder: assessment.questionOrder || [],
+      lastSavedAt: assessment.lastSavedAt,
+      responseCount: assessment.responses.length,
     };
   }
 }

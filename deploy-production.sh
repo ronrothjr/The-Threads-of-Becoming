@@ -67,31 +67,43 @@ EXPOSE 3000
 CMD ["npm", "run", "start:prod"]
 EOF
 
-echo -e "${BLUE}Step 4: Creating App Runner service...${NC}"
-# Create App Runner service configuration
+echo -e "${BLUE}Step 4: Creating App Runner service with container image...${NC}"
+# Build and push Docker image to ECR first
+REPO_NAME="threads-backend"
+REGION="us-east-1"
+ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+ECR_URI="$ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPO_NAME"
+
+# Create ECR repository if it doesn't exist
+aws ecr describe-repositories --repository-names $REPO_NAME 2>/dev/null || \
+aws ecr create-repository --repository-name $REPO_NAME
+
+# Get ECR login token
+aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $ECR_URI
+
+# Build and push Docker image
+cd server
+docker build -t $REPO_NAME .
+docker tag $REPO_NAME:latest $ECR_URI:latest
+docker push $ECR_URI:latest
+cd ..
+
+# Create App Runner service with ECR image
 SERVICE_ARN=$(aws apprunner create-service \
   --service-name "$APP_NAME" \
   --source-configuration '{
-    "CodeRepository": {
-      "RepositoryUrl": "https://github.com/ronwr/The-Threads-of-Becoming",
-      "SourceCodeVersion": {
-        "Type": "BRANCH",
-        "Value": "main"
-      },
-      "CodeConfiguration": {
-        "ConfigurationSource": "REPOSITORY",
-        "CodeConfigurationValues": {
-          "Runtime": "NODEJS_18",
-          "BuildCommand": "cd server && npm ci && npm run build",
-          "StartCommand": "cd server && npm run start:prod",
-          "RuntimeEnvironmentVariables": {
-            "AWS_REGION": "us-east-1",
-            "CORS_ORIGINS": "https://creativeadvance.org"
-          }
+    "ImageRepository": {
+      "ImageIdentifier": "'$ECR_URI':latest",
+      "ImageConfiguration": {
+        "Port": "3000",
+        "RuntimeEnvironmentVariables": {
+          "AWS_REGION": "us-east-1",
+          "CORS_ORIGINS": "https://creativeadvance.org"
         }
-      }
+      },
+      "ImageRepositoryType": "ECR"
     },
-    "AutoDeploymentsEnabled": true
+    "AutoDeploymentsEnabled": false
   }' \
   --instance-configuration '{
     "Cpu": "0.25 vCPU",

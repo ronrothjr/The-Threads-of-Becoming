@@ -51,14 +51,16 @@ import Login from './pages/Login';
 import VerifyEmail from './pages/VerifyEmail';
 import Dashboard from './pages/Dashboard';
 import QuickProfile from './pages/QuickProfile';
+import PersonalJourneyMap from './pages/PersonalJourneyMap';
 import AssessmentResults from './pages/AssessmentResults';
+import PersonalJourneyMapResults from './pages/PersonalJourneyMapResults';
 import Journal from './pages/Journal';
 import PracticeTool from './pages/PracticeTool';
 
 function AppContent() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
-  const isQuickProfilePage = location.pathname === '/assessment/quick-profile';
+  const isAssessmentPage = location.pathname.startsWith('/assessment/');
 
   // Scroll to top on route change
   useEffect(() => {
@@ -135,11 +137,13 @@ function AppContent() {
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/assessment/quick-profile" element={<QuickProfile />} />
+        <Route path="/assessment/personal-journey-map" element={<PersonalJourneyMap />} />
         <Route path="/assessment/results" element={<AssessmentResults />} />
+        <Route path="/assessment/personal-journey-map/results" element={<PersonalJourneyMapResults />} />
         <Route path="/journal" element={<Journal />} />
         <Route path="/practice-tool" element={<PracticeTool />} />
       </Routes>
-      {!isQuickProfilePage && <Footer />}
+      {!isAssessmentPage && <Footer />}
       <PersistentVideo isHomePage={isHomePage} />
     </>
   );

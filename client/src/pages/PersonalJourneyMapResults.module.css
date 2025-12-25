@@ -1,0 +1,1187 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: var(--text-xl);
+  color: var(--color-text-light);
+}
+
+/* Loading & Error */
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  font-size: var(--text-xl);
+}
+
+.error {
+  color: #c00;
+}
+
+/* Intro Section */
+.introSection {
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, rgba(22, 160, 133, 0.05), rgba(124, 58, 237, 0.05));
+  border-left: 4px solid var(--color-teal);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.introSection h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+}
+
+.introContent {
+  max-width: 800px;
+}
+
+.introContent p {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  margin-bottom: 1.25rem;
+}
+
+.introContent p:last-child {
+  margin-bottom: 0;
+}
+
+.introContent strong {
+  color: var(--color-navy);
+  font-weight: var(--font-semibold);
+}
+
+/* Movement Section */
+.movementSection {
+  margin-bottom: 4rem;
+}
+
+.movementSection h2 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+}
+
+.movementIntro {
+  text-align: center;
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.movementsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.movementCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.movementCard h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 2rem;
+}
+
+.movementSubtitle {
+  font-size: var(--text-base);
+  font-weight: var(--font-normal);
+  color: var(--color-text-light);
+}
+
+.scoreCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.scoreValue {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: white;
+}
+
+.scoreMax {
+  font-size: var(--text-lg);
+  font-weight: var(--font-normal);
+  opacity: 0.8;
+}
+
+.movementDesc {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  line-height: var(--leading-relaxed);
+}
+
+.threadsInMovement {
+  font-size: var(--text-sm);
+  color: var(--color-teal);
+  font-weight: var(--font-semibold);
+  letter-spacing: 0.05em;
+}
+
+/* Threads Section */
+.threadsSection {
+  margin-bottom: 4rem;
+}
+
+.threadsSection h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+}
+
+.threadsIntro {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  max-width: 800px;
+  margin-bottom: 2rem;
+  line-height: var(--leading-relaxed);
+}
+
+.threadsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.threadCard {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.threadCard h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.collapseDirection {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(22, 160, 133, 0.05);
+  border-radius: 6px;
+  line-height: var(--leading-relaxed);
+}
+
+.scoreBar {
+  width: 100%;
+  height: 12px;
+  background: var(--color-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.scoreFill {
+  height: 100%;
+  transition: width 0.6s ease;
+  border-radius: 6px;
+}
+
+.scoreDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.percentage {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+}
+
+.capacity {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+}
+
+.rawScore {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+/* Practice Section */
+.practiceSection {
+  margin-bottom: 4rem;
+  background: rgba(22, 160, 133, 0.05);
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+.practiceSection h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+}
+
+.practiceIntro {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.practiceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.practiceCard {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  border-left: 4px solid var(--color-teal);
+}
+
+.practiceCard h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-teal);
+  margin-bottom: 0.5rem;
+}
+
+.practiceCard p {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.practiceThreads {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-navy);
+}
+
+/* Pattern Analysis Section */
+.patternSection {
+  margin-bottom: 4rem;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(22, 160, 133, 0.05));
+  border-radius: 12px;
+  padding: 3rem;
+}
+
+.patternSection h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.patternSummary {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-purple);
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.insightCard {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.insightCategory {
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.insightText {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.insightEvidence {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: rgba(22, 160, 133, 0.05);
+  border-radius: 6px;
+}
+
+.insightEvidence ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insightEvidence li {
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+
+.insightEvidence li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+  font-weight: var(--font-bold);
+}
+
+.insightRecommendation {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-navy);
+  padding: 1rem;
+  background: rgba(124, 58, 237, 0.05);
+  border-radius: 6px;
+  border-left: 3px solid var(--color-purple);
+}
+
+.insightRecommendation strong {
+  color: var(--color-purple);
+}
+
+/* Next Steps */
+.nextSteps {
+  margin-bottom: 2rem;
+}
+
+.nextSteps h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin-bottom: 2rem;
+  color: var(--color-navy);
+  text-align: center;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.stepCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.stepCard h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.stepCard p {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+  line-height: var(--leading-relaxed);
+}
+
+.stepLink {
+  display: inline-block;
+  color: var(--color-teal);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.stepLink:hover {
+  color: var(--color-blue);
+}
+
+.button {
+  display: inline-block;
+  background: var(--color-teal);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: var(--font-semibold);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background: var(--color-blue);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+    max-width: 100%;
+  }
+
+  /* Prevent overflow on all sections */
+  .collapsePatternSection,
+  .cascadeSection,
+  .developmentPathSection,
+  .threadsSection,
+  .movementSection,
+  .practiceSection,
+  .patternSection,
+  .nextSteps {
+    overflow-x: hidden;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .header h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .introSection {
+    margin-bottom: 2rem;
+    padding: 1rem 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .introContent p {
+    font-size: var(--text-base);
+    word-wrap: break-word;
+  }
+
+  .movementsGrid,
+  .threadsGrid,
+  .practiceGrid,
+  .stepsGrid,
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .practiceSection,
+  .patternSection {
+    padding: 2rem 1.5rem;
+  }
+
+  /* Collapse Pattern Mobile Optimizations */
+  .collapsePatternSection,
+  .cascadeSection,
+  .developmentPathSection,
+  .threadsSection,
+  .movementSection,
+  .practiceSection {
+    margin-bottom: 2rem;
+  }
+
+  .collapsePatternCard {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .patternHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .patternHeader h3 {
+    font-size: var(--text-xl);
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .confidenceBadge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .patternCoreThreads {
+    padding: 0.5rem;
+    font-size: var(--text-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .patternDescription {
+    font-size: var(--text-base);
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .patternExperience h4,
+  .patternBehaviors h4,
+  .patternTrap h4,
+  .patternBreaking h4,
+  .patternHoldFocus h4,
+  .patternCustomPractices h4 {
+    font-size: var(--text-base);
+    margin-bottom: 0.5rem;
+  }
+
+  .patternExperience blockquote {
+    padding: 0.75rem 0.75rem;
+    font-size: var(--text-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .patternExperience,
+  .patternBehaviors,
+  .patternTrap,
+  .patternBreaking,
+  .patternHoldFocus,
+  .patternCustomPractices {
+    margin-bottom: 1rem;
+  }
+
+  .patternTrap,
+  .patternHoldFocus {
+    padding: 0.75rem;
+  }
+
+  .patternFearNeed {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    overflow-x: hidden;
+  }
+
+  .fears h4,
+  .needs h4 {
+    font-size: var(--text-base);
+  }
+
+  .fears ul li,
+  .needs ul li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: var(--text-sm);
+  }
+
+  /* Cascade Mobile Optimizations */
+  .cascadeCard {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cascadeTrigger,
+  .cascadeFinal {
+    padding: 0.75rem;
+    font-size: var(--text-base);
+    margin-bottom: 1rem;
+  }
+
+  .cascadeStep {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stepNumber {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.75rem;
+  }
+
+  .stepThread {
+    font-size: var(--text-sm);
+  }
+
+  .stepType,
+  .stepEffect {
+    font-size: var(--text-sm);
+  }
+
+  /* Development Path Mobile Optimizations */
+  .pathTimeline {
+    gap: 1.5rem;
+  }
+
+  .pathStage {
+    padding: 1.25rem;
+  }
+
+  .pathPriority {
+    font-size: var(--text-xl);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .pathItem {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pathItemHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pathItemHeader h4 {
+    font-size: var(--text-lg);
+  }
+
+  .pathWeeks {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .pathStates {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pathArrow {
+    transform: rotate(90deg);
+    font-size: var(--text-xl);
+  }
+
+  .currentState,
+  .targetState {
+    font-size: var(--text-sm);
+  }
+
+  .pathRationale {
+    font-size: var(--text-sm);
+    margin-bottom: 0.75rem;
+  }
+
+  .pathPractices {
+    margin-top: 0.75rem;
+  }
+
+  .pathPractices ul {
+    padding-left: 1.25rem;
+  }
+
+  .pathPractices ul li {
+    font-size: var(--text-sm);
+    margin-bottom: 0.4rem;
+  }
+
+  /* Thread and Movement Sections */
+  .threadsSection,
+  .movementSection {
+    margin-bottom: 2rem;
+  }
+
+  .threadsGrid {
+    gap: 1rem;
+  }
+
+  .threadCard {
+    padding: 1rem;
+  }
+
+  .movementsGrid {
+    gap: 1rem;
+  }
+
+  .movementCard {
+    padding: 1rem;
+  }
+
+  .scoreCircle {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Practice Section */
+  .practiceGrid {
+    gap: 1rem;
+  }
+
+  .practiceCard {
+    padding: 1rem;
+  }
+
+  /* Pattern Analysis Section */
+  .insightCard {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .insightCategory {
+    font-size: var(--text-sm);
+    padding: 0.4rem 0.8rem;
+  }
+
+  .insightText {
+    font-size: var(--text-base);
+    margin-bottom: 0.75rem;
+  }
+
+  .insightEvidence ul li,
+  .insightRecommendation {
+    font-size: var(--text-sm);
+  }
+
+  /* Next Steps */
+  .nextSteps {
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .stepsGrid {
+    gap: 1rem;
+  }
+
+  .stepCard {
+    padding: 1rem;
+  }
+
+  /* Section headings */
+  .collapsePatternSection h2,
+  .cascadeSection h2,
+  .developmentPathSection h2,
+  .threadsSection h2,
+  .movementSection h2,
+  .practiceSection h2,
+  .patternSection h2,
+  .nextSteps h2 {
+    font-size: var(--text-2xl);
+    margin-bottom: 1rem;
+  }
+
+  .sectionIntro {
+    font-size: var(--text-base);
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Collapse Pattern Section */
+.collapsePatternSection {
+  margin-bottom: 4rem;
+}
+
+.sectionIntro {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.collapsePatternCard {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+
+.patternHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.patternHeader h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+}
+
+.confidenceBadge {
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.patternCoreThreads {
+  font-size: var(--text-base);
+  color: var(--color-purple);
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: rgba(124, 58, 237, 0.05);
+  border-radius: 6px;
+}
+
+.patternDescription {
+  font-size: var(--text-lg);
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.patternExperience {
+  margin-bottom: 1.5rem;
+}
+
+.patternExperience h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
+.patternExperience blockquote {
+  font-style: italic;
+  color: #555;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--color-teal);
+  background: #f9fafb;
+  border-radius: 4px;
+  margin: 0;
+}
+
+.patternBehaviors,
+.patternTrap,
+.patternBreaking,
+.patternHoldFocus,
+.patternCustomPractices {
+  margin-bottom: 1.5rem;
+}
+
+.patternBehaviors h4,
+.patternTrap h4,
+.patternBreaking h4,
+.patternHoldFocus h4,
+.patternCustomPractices h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
+.patternBehaviors ul,
+.patternCustomPractices ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--color-text);
+}
+
+.patternBehaviors ul li,
+.patternCustomPractices ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.patternBreaking ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  color: var(--color-text);
+}
+
+.patternBreaking ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.patternTrap p,
+.patternHoldFocus p {
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.patternTrap {
+  background: rgba(239, 68, 68, 0.05);
+  padding: 1rem;
+  border-left: 4px solid #ef4444;
+  border-radius: 6px;
+}
+
+.patternFearNeed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.fears h4,
+.needs h4 {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.fears h4 {
+  color: #dc2626;
+}
+
+.needs h4 {
+  color: #059669;
+}
+
+.fears ul,
+.needs ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-size: var(--text-base);
+}
+
+.fears ul li,
+.needs ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.patternHoldFocus {
+  background: linear-gradient(135deg, rgba(22, 160, 133, 0.05), rgba(124, 58, 237, 0.05));
+  padding: 1rem;
+  border-left: 4px solid var(--color-teal);
+  border-radius: 6px;
+}
+
+/* Cascade Section */
+.cascadeSection {
+  margin-bottom: 4rem;
+}
+
+.cascadeCard {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cascadeTrigger {
+  font-size: var(--text-lg);
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.05);
+  border-left: 4px solid #ef4444;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.cascadeSequence {
+  margin-bottom: 1.5rem;
+}
+
+.cascadeStep {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-purple);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.stepContent {
+  flex: 1;
+}
+
+.stepThread {
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.25rem;
+}
+
+.stepType {
+  color: #dc2626;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.stepEffect {
+  color: var(--color-text-light);
+}
+
+.cascadeFinal {
+  font-size: var(--text-lg);
+  padding: 1rem;
+  background: rgba(124, 58, 237, 0.05);
+  border-left: 4px solid var(--color-purple);
+  border-radius: 6px;
+}
+
+/* Development Path Section */
+.developmentPathSection {
+  margin-bottom: 4rem;
+}
+
+.pathTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pathStage {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.pathPriority {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.pathItem {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--color-teal);
+}
+
+.pathItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.pathItemHeader h4 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.pathWeeks {
+  background: var(--color-purple);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.pathStates {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+}
+
+.currentState,
+.targetState {
+  line-height: 1.6;
+}
+
+.currentState strong,
+.targetState strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-navy);
+}
+
+.pathArrow {
+  font-size: var(--text-2xl);
+  color: var(--color-teal);
+  font-weight: bold;
+}
+
+.pathRationale {
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.pathPractices {
+  margin-top: 1rem;
+}
+
+.pathPractices strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-navy);
+}
+
+.pathPractices ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.pathPractices ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}

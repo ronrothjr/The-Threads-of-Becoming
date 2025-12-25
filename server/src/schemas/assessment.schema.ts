@@ -8,7 +8,7 @@ export class Assessment {
   @Prop({ type: Types.ObjectId, ref: 'User', required: true })
   userId: Types.ObjectId;
 
-  @Prop({ required: true, enum: ['quick_profile', 'extended'] })
+  @Prop({ required: true, enum: ['quick_profile', 'personal_journey_map', 'extended'] })
   type: string;
 
   @Prop({

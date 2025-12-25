@@ -10,12 +10,23 @@ interface FocusThread {
   percentage: number;
 }
 
-interface UnlockStatus {
-  extendedUnlocked: boolean;
-  journalDaysCount: number;
-  journalRequirementMet: boolean;
-  journalDaysRemaining: number;
-  practiceDaysCount: number;
+interface UnlockAnalysis {
+  isUnlocked: boolean;
+  canUnlock: boolean;
+  requirements: {
+    journalDays: { current: number; required: number; met: boolean };
+    practiceSessions: { current: number; required: number; met: boolean };
+    threadDiversity: { current: number; required: number; met: boolean };
+    daysSinceQuickProfile: { current: number; required: number; met: boolean };
+  };
+  insights: {
+    mostJournaledThread: string;
+    mostPracticedThread: string;
+    threadDistribution: Record<string, number>;
+    commonContexts: string[];
+    collapseIndicators: string[];
+    personalizedMessage: string;
+  };
 }
 
 interface RetakeInfo {
@@ -49,8 +60,9 @@ const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const [hasCompletedQuickProfile, setHasCompletedQuickProfile] = useState(false);
   const [hasPartialQuickProfile, setHasPartialQuickProfile] = useState(false);
+  const [hasPartialJourneyMap, setHasPartialJourneyMap] = useState(false);
   const [focusThreads, setFocusThreads] = useState<FocusThread[]>([]);
-  const [unlockStatus, setUnlockStatus] = useState<UnlockStatus | null>(null);
+  const [unlockAnalysis, setUnlockAnalysis] = useState<UnlockAnalysis | null>(null);
   const [analytics, setAnalytics] = useState<Analytics | null>(null);
   const [retakeInfo, setRetakeInfo] = useState<RetakeInfo | null>(null);
   const [loading, setLoading] = useState(true);
@@ -110,14 +122,24 @@ const Dashboard: React.FC = () => {
             setFocusThreads(sortedThreads);
           }
 
-          // Load unlock status
-          const unlockResponse = await fetch(`${API_URL}/api/assessments/unlock-status`, {
+          // Load Personal Journey Map unlock analysis
+          const unlockResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/unlock-analysis`, {
             headers: { 'Authorization': `Bearer ${token}` }
           });
 
           if (unlockResponse.ok) {
             const unlockData = await unlockResponse.json();
-            setUnlockStatus(unlockData);
+            setUnlockAnalysis(unlockData);
+          }
+
+          // Check for partial Personal Journey Map
+          const partialJourneyMapResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/partial`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+
+          if (partialJourneyMapResponse.ok) {
+            const partialData = await partialJourneyMapResponse.json();
+            setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
           }
 
           // Load analytics
@@ -154,9 +176,11 @@ const Dashboard: React.FC = () => {
 
       <section className={`${styles.content} section-lg`}>
         <div className="container">
-          <div className={styles.grid}>
-            <div className={styles.card}>
-              <h2>Quick Profile Assessment</h2>
+          <div className={styles.layoutGrid}>
+            {/* Left Column */}
+            <div className={styles.leftColumn}>
+              <div className={styles.card}>
+                <h2>Quick Profile Assessment</h2>
               <p>Get started with our 21-question assessment to discover your Thread patterns.</p>
               <p className={styles.meta}>5 minutes • Free{retakeInfo?.canRetake ? ' • Available every 30 days' : ''}</p>
               {hasCompletedQuickProfile ? (
@@ -202,45 +226,11 @@ const Dashboard: React.FC = () => {
                 </Link>
               </div>
             )}
+            </div>
 
-            {hasCompletedQuickProfile && unlockStatus && (
-              <div className={styles.card}>
-                <h2>Unlock Extended Assessment</h2>
-                <p>Journal your practice observations to unlock deeper analysis.</p>
-                <div className={styles.unlockProgress}>
-                  <div className={styles.progressBar}>
-                    <div
-                      className={styles.progressFill}
-                      style={{ width: `${(unlockStatus.journalDaysCount / 10) * 100}%` }}
-                    />
-                  </div>
-                  <p className={styles.progressText}>
-                    {unlockStatus.extendedUnlocked ? (
-                      <span className={styles.unlocked}>✓ Extended Assessment Unlocked!</span>
-                    ) : (
-                      <span>
-                        {unlockStatus.journalDaysCount} / 10 days completed
-                        {unlockStatus.journalDaysRemaining > 0 && (
-                          <span className={styles.remaining}> • {unlockStatus.journalDaysRemaining} days remaining</span>
-                        )}
-                      </span>
-                    )}
-                  </p>
-                </div>
-                {unlockStatus.extendedUnlocked ? (
-                  <Link to="/assessment/extended" className={styles.primaryButton}>
-                    Take Extended Assessment →
-                  </Link>
-                ) : (
-                  <Link to="/journal" className={styles.secondaryButton}>
-                    Continue Journaling →
-                  </Link>
-                )}
-              </div>
-            )}
-
+            {/* Center Column - Analytics */}
             {hasCompletedQuickProfile && analytics && (analytics.journalStats.totalEntries > 0 || analytics.practiceStats.totalSessions > 0) && (
-              <>
+              <div className={styles.centerColumn}>
                 <div className={styles.card}>
                   <h2>Your Practice Analytics</h2>
 
@@ -325,7 +315,128 @@ const Dashboard: React.FC = () => {
                     )}
                   </div>
                 )}
-              </>
+              </div>
+            )}
+
+            {/* Right Column - Personal Journey Map */}
+            {hasCompletedQuickProfile && unlockAnalysis && (
+              <div className={styles.card}>
+                  <h2>Personal Journey Map</h2>
+                  <p className={styles.subtitle}>$10 one-time purchase • Free for Premium subscribers</p>
+                  <p>Complete these requirements to unlock your personalized 70-question journey map:</p>
+
+                  <div className={styles.requirementsList}>
+                  {/* Requirement 1: Journal Days */}
+                  <div className={styles.requirement}>
+                    <div className={styles.requirementHeader}>
+                      <span className={styles.requirementIcon}>
+                        {unlockAnalysis.requirements.journalDays.met ? '✓' : '○'}
+                      </span>
+                      <span className={styles.requirementTitle}>Journal on 10 different days</span>
+                    </div>
+                    <div className={styles.requirementProgress}>
+                      <div className={styles.progressBar}>
+                        <div
+                          className={styles.progressFill}
+                          style={{ width: `${(unlockAnalysis.requirements.journalDays.current / unlockAnalysis.requirements.journalDays.required) * 100}%` }}
+                        />
+                      </div>
+                      <span className={styles.requirementCount}>
+                        {unlockAnalysis.requirements.journalDays.current} / {unlockAnalysis.requirements.journalDays.required}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Requirement 2: Practice Sessions */}
+                  <div className={styles.requirement}>
+                    <div className={styles.requirementHeader}>
+                      <span className={styles.requirementIcon}>
+                        {unlockAnalysis.requirements.practiceSessions.met ? '✓' : '○'}
+                      </span>
+                      <span className={styles.requirementTitle}>Complete 5 practice sessions with notes</span>
+                    </div>
+                    <div className={styles.requirementProgress}>
+                      <div className={styles.progressBar}>
+                        <div
+                          className={styles.progressFill}
+                          style={{ width: `${(unlockAnalysis.requirements.practiceSessions.current / unlockAnalysis.requirements.practiceSessions.required) * 100}%` }}
+                        />
+                      </div>
+                      <span className={styles.requirementCount}>
+                        {unlockAnalysis.requirements.practiceSessions.current} / {unlockAnalysis.requirements.practiceSessions.required}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Requirement 3: Thread Diversity */}
+                  <div className={styles.requirement}>
+                    <div className={styles.requirementHeader}>
+                      <span className={styles.requirementIcon}>
+                        {unlockAnalysis.requirements.threadDiversity.met ? '✓' : '○'}
+                      </span>
+                      <span className={styles.requirementTitle}>Practice across 3 different threads</span>
+                    </div>
+                    <div className={styles.requirementProgress}>
+                      <div className={styles.progressBar}>
+                        <div
+                          className={styles.progressFill}
+                          style={{ width: `${(unlockAnalysis.requirements.threadDiversity.current / unlockAnalysis.requirements.threadDiversity.required) * 100}%` }}
+                        />
+                      </div>
+                      <span className={styles.requirementCount}>
+                        {unlockAnalysis.requirements.threadDiversity.current} / {unlockAnalysis.requirements.threadDiversity.required}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Requirement 4: Time Elapsed */}
+                  <div className={styles.requirement}>
+                    <div className={styles.requirementHeader}>
+                      <span className={styles.requirementIcon}>
+                        {unlockAnalysis.requirements.daysSinceQuickProfile.met ? '✓' : '○'}
+                      </span>
+                      <span className={styles.requirementTitle}>14 days since Quick Profile</span>
+                    </div>
+                    <div className={styles.requirementProgress}>
+                      <div className={styles.progressBar}>
+                        <div
+                          className={styles.progressFill}
+                          style={{ width: `${(unlockAnalysis.requirements.daysSinceQuickProfile.current / unlockAnalysis.requirements.daysSinceQuickProfile.required) * 100}%` }}
+                        />
+                      </div>
+                      <span className={styles.requirementCount}>
+                        {unlockAnalysis.requirements.daysSinceQuickProfile.current} / {unlockAnalysis.requirements.daysSinceQuickProfile.required} days
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {unlockAnalysis.insights.personalizedMessage && (
+                  <p className={styles.unlockMessage}>{unlockAnalysis.insights.personalizedMessage}</p>
+                )}
+
+                {/* DEV: Override for local testing */}
+                {true || unlockAnalysis.isUnlocked ? (
+                  hasPartialJourneyMap ? (
+                    <Link to="/assessment/personal-journey-map" className={styles.primaryButton}>
+                      Resume Personal Journey Map →
+                    </Link>
+                  ) : (
+                    <Link to="/assessment/personal-journey-map" className={styles.primaryButton}>
+                      Start Personal Journey Map ($10) →
+                    </Link>
+                  )
+                ) : (
+                  <div className={styles.actionButtons}>
+                    <Link to="/journal" className={styles.secondaryButton}>
+                      Continue Journaling
+                    </Link>
+                    <Link to="/practice-tool" className={styles.secondaryButton}>
+                      Practice HOLD
+                    </Link>
+                  </div>
+                )}
+              </div>
             )}
 
             {!hasCompletedQuickProfile && (

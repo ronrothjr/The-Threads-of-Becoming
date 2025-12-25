@@ -5,6 +5,11 @@ export interface QuickProfileResponse {
   answer: 'A' | 'B' | 'C' | 'D';
 }
 
+export interface ExtendedAssessmentResponse {
+  questionId: string;
+  answer: 'a' | 'b' | 'c' | 'd';
+}
+
 export interface ThreadScore {
   score: number;
   percentage: number;
@@ -45,6 +50,17 @@ export class ScoringService {
     embodiment: ['Q13', 'Q14', 'Q15'],
     uncertainty: ['Q16', 'Q17', 'Q18'],
     becoming: ['Q19', 'Q20', 'Q21'],
+  };
+
+  // Question mappings for Extended Assessment (10 questions per thread)
+  private readonly extendedAssessmentMapping = {
+    presence: ['PR1', 'PR2', 'PR3', 'PR4', 'PR5', 'PR6', 'PR7', 'PR8', 'PR9', 'PR10'],
+    consent: ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10'],
+    memory: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10'],
+    pause: ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'P9', 'P10'],
+    embodiment: ['E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'E9', 'E10'],
+    uncertainty: ['U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'U9', 'U10'],
+    becoming: ['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'B9', 'B10'],
   };
 
   // Reverse-scored questions (where D=4 still indicates high capacity)
@@ -217,5 +233,110 @@ export class ScoringService {
     mapping.decide = [...new Set(mapping.decide)];
 
     return mapping;
+  }
+
+  /**
+   * Score the Extended Assessment
+   * 70 questions: 10 per thread
+   * Returns thread scores, movement averages, and HOLD practice mapping
+   */
+  scoreExtendedAssessment(responses: ExtendedAssessmentResponse[]): AssessmentResults {
+    const threadScores = {
+      presence: this.scoreExtendedThread(responses, this.extendedAssessmentMapping.presence),
+      consent: this.scoreExtendedThread(responses, this.extendedAssessmentMapping.consent),
+      memory: this.scoreExtendedThread(responses, this.extendedAssessmentMapping.memory),
+      pause: this.scoreExtendedThread(responses, this.extendedAssessmentMapping.pause),
+      embodiment: this.scoreExtendedThread(responses, this.extendedAssessmentMapping.embodiment),
+      uncertainty: this.scoreExtendedThread(responses, this.extendedAssessmentMapping.uncertainty),
+      becoming: this.scoreExtendedThread(responses, this.extendedAssessmentMapping.becoming),
+    };
+
+    // Calculate See, Hold, Emerge averages
+    const seeAverage = this.average([
+      threadScores.presence.score,
+      threadScores.consent.score,
+      threadScores.memory.score,
+      threadScores.pause.score,
+    ]);
+
+    const holdAverage = this.average([
+      threadScores.embodiment.score,
+      threadScores.uncertainty.score,
+    ]);
+
+    const emergeScore = threadScores.becoming.score;
+
+    return {
+      threadScores,
+      movementAverages: {
+        see: seeAverage,
+        hold: holdAverage,
+        emerge: emergeScore,
+      },
+      holdPracticeMapping: this.mapToHoldPractice(threadScores),
+    };
+  }
+
+  /**
+   * Score a single thread for Extended Assessment (10 questions)
+   * Answers are lowercase: a=1, b=2, c=3, d=4
+   * Returns raw score (10-40), percentage, and collapse direction
+   */
+  private scoreExtendedThread(
+    responses: ExtendedAssessmentResponse[],
+    questionIds: string[],
+  ): ThreadScore {
+    let totalScore = 0;
+    let aCount = 0;
+    let bCount = 0;
+    let cCount = 0;
+    let dCount = 0;
+
+    questionIds.forEach((qId) => {
+      const response = responses.find((r) => r.questionId === qId);
+
+      if (response) {
+        const score = this.getExtendedQuestionScore(response.answer);
+        totalScore += score;
+
+        // Track answer distribution for collapse direction
+        if (response.answer === 'a') aCount++;
+        else if (response.answer === 'b') bCount++;
+        else if (response.answer === 'c') cCount++;
+        else if (response.answer === 'd') dCount++;
+      }
+    });
+
+    // Max score is 40 (10 questions × 4 points each)
+    const maxScore = questionIds.length * 4;
+    const percentage = (totalScore / maxScore) * 100;
+
+    // Determine collapse direction
+    let collapseDirection: string;
+    const lowCapacityCount = aCount + bCount;
+    const highCapacityCount = cCount + dCount;
+
+    if (lowCapacityCount >= 6) {
+      collapseDirection = 'low';
+    } else if (highCapacityCount >= 6) {
+      collapseDirection = 'balanced';
+    } else {
+      collapseDirection = 'moderate';
+    }
+
+    return {
+      score: totalScore,
+      percentage: Math.round(percentage * 10) / 10,
+      collapseDirection,
+    };
+  }
+
+  /**
+   * Convert Extended Assessment answer to score
+   * a=1, b=2, c=3, d=4
+   */
+  private getExtendedQuestionScore(answer: 'a' | 'b' | 'c' | 'd'): number {
+    const scores = { a: 1, b: 2, c: 3, d: 4 };
+    return scores[answer];
   }
 }

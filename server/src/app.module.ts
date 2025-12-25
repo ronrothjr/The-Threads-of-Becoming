@@ -10,6 +10,7 @@ import { ContactModule } from './contact/contact.module';
 import { AssessmentsModule } from './assessments/assessments.module';
 import { JournalModule } from './journal/journal.module';
 import { PracticeModule } from './practice/practice.module';
+import { LoggingModule } from './logging/logging.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { PracticeModule } from './practice/practice.module';
     AssessmentsModule,
     JournalModule,
     PracticeModule,
+    LoggingModule,
   ],
   controllers: [AppController],
   providers: [AppService],
