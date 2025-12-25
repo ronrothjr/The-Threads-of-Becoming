@@ -509,6 +509,7 @@
   .stepsGrid,
   .insightsGrid {
     grid-template-columns: 1fr;
+    overflow-x: hidden;
   }
 
   .practiceSection,
@@ -619,20 +620,29 @@
 
   /* Cascade Mobile Optimizations */
   .cascadeCard {
-    padding: 1.25rem;
+    padding: 1rem;
     margin-bottom: 1.5rem;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   .cascadeTrigger,
   .cascadeFinal {
-    padding: 0.75rem;
-    font-size: var(--text-base);
+    padding: 0.75rem 0.5rem;
+    font-size: var(--text-sm);
     margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .cascadeStep {
-    padding: 0.75rem;
+    padding: 0.75rem 0.5rem;
     margin-bottom: 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .cascadeSequence {
+    overflow-x: hidden;
   }
 
   .stepNumber {
@@ -643,31 +653,45 @@
 
   .stepThread {
     font-size: var(--text-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .stepType,
   .stepEffect {
     font-size: var(--text-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .stepContent {
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   /* Development Path Mobile Optimizations */
   .pathTimeline {
     gap: 1.5rem;
+    overflow-x: hidden;
   }
 
   .pathStage {
-    padding: 1.25rem;
+    padding: 1rem;
+    overflow-x: hidden;
   }
 
   .pathPriority {
     font-size: var(--text-xl);
     margin-bottom: 1rem;
     padding-bottom: 0.75rem;
+    word-wrap: break-word;
   }
 
   .pathItem {
-    padding: 1rem;
+    padding: 0.75rem;
     margin-bottom: 1rem;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   .pathItemHeader {
@@ -679,18 +703,22 @@
 
   .pathItemHeader h4 {
     font-size: var(--text-lg);
+    word-wrap: break-word;
+    max-width: 100%;
   }
 
   .pathWeeks {
     padding: 0.2rem 0.6rem;
     font-size: 0.75rem;
+    white-space: nowrap;
   }
 
   .pathStates {
     grid-template-columns: 1fr;
     gap: 0.5rem;
-    padding: 0.75rem;
+    padding: 0.5rem;
     margin-bottom: 0.75rem;
+    overflow-x: hidden;
   }
 
   .pathArrow {
@@ -701,15 +729,20 @@
   .currentState,
   .targetState {
     font-size: var(--text-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .pathRationale {
     font-size: var(--text-sm);
     margin-bottom: 0.75rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .pathPractices {
     margin-top: 0.75rem;
+    overflow-x: hidden;
   }
 
   .pathPractices ul {
@@ -719,6 +752,8 @@
   .pathPractices ul li {
     font-size: var(--text-sm);
     margin-bottom: 0.4rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   /* Thread and Movement Sections */
@@ -732,7 +767,12 @@
   }
 
   .threadCard {
-    padding: 1rem;
+    padding: 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .threadCard h3 {
+    word-wrap: break-word;
   }
 
   .movementsGrid {
@@ -740,7 +780,17 @@
   }
 
   .movementCard {
-    padding: 1rem;
+    padding: 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .movementCard h3 {
+    font-size: var(--text-lg);
+  }
+
+  .movementDesc {
+    font-size: var(--text-sm);
+    word-wrap: break-word;
   }
 
   .scoreCircle {
@@ -754,13 +804,29 @@
   }
 
   .practiceCard {
-    padding: 1rem;
+    padding: 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .practiceCard h3 {
+    font-size: var(--text-base);
+  }
+
+  .practiceCard p {
+    font-size: var(--text-sm);
+    word-wrap: break-word;
+  }
+
+  .practiceThreads {
+    font-size: var(--text-sm);
+    word-wrap: break-word;
   }
 
   /* Pattern Analysis Section */
   .insightCard {
-    padding: 1rem;
+    padding: 0.75rem;
     margin-bottom: 1rem;
+    overflow-x: hidden;
   }
 
   .insightCategory {
@@ -769,19 +835,28 @@
   }
 
   .insightText {
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     margin-bottom: 0.75rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
-  .insightEvidence ul li,
+  .insightEvidence ul li {
+    font-size: var(--text-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
   .insightRecommendation {
     font-size: var(--text-sm);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   /* Next Steps */
   .nextSteps {
     margin-top: 2rem;
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem;
   }
 
   .stepsGrid {
@@ -789,7 +864,18 @@
   }
 
   .stepCard {
-    padding: 1rem;
+    padding: 0.75rem;
+    overflow-x: hidden;
+  }
+
+  .stepCard h3 {
+    font-size: var(--text-base);
+    word-wrap: break-word;
+  }
+
+  .stepCard p {
+    font-size: var(--text-sm);
+    word-wrap: break-word;
   }
 
   /* Section headings */
@@ -808,6 +894,38 @@
   .sectionIntro {
     font-size: var(--text-base);
     margin-bottom: 1.25rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Universal text overflow prevention */
+  .collapsePatternCard *,
+  .cascadeCard *,
+  .pathItem *,
+  .threadCard *,
+  .movementCard *,
+  .practiceCard *,
+  .insightCard *,
+  .stepCard * {
+    max-width: 100%;
+  }
+
+  /* Ensure headings don't overflow */
+  h2, h3, h4 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Ensure all paragraphs handle long text */
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Ensure all list items handle long text */
+  li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
