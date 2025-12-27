@@ -3,22 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import styles from './PracticeAssignments.module.css';
 import { logger } from '../utils/logger';
 import * as practice from '../services/api/practice';
-
-interface PracticeAssignment {
-  _id: string;
-  moduleId: string;
-  assignmentType: string;
-  prompt: string;
-  scheduledDate: string;
-  completedAt?: string;
-  response?: string;
-  metadata?: {
-    type?: string;
-    suggestedDuration?: number;
-    guidance?: string;
-    optional?: boolean;
-  };
-}
+import { PracticeAssignment } from '../services/api/types';
+import { EmptyState } from '../components/common';
+import { formatRelativeDate } from '../utils/dateUtils';
 
 const PracticeAssignments: React.FC = () => {
   const [pendingAssignments, setPendingAssignments] = useState<PracticeAssignment[]>([]);
@@ -86,16 +73,6 @@ const PracticeAssignments: React.FC = () => {
     }
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    const now = new Date();
-    const diffDays = Math.floor((date.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
-
-    if (diffDays === 0) return 'Today';
-    if (diffDays === 1) return 'Tomorrow';
-    if (diffDays > 1 && diffDays < 7) return `In ${diffDays} days`;
-    return date.toLocaleDateString();
-  };
 
   if (loading) {
     return (
@@ -115,7 +92,7 @@ const PracticeAssignments: React.FC = () => {
               ← Back to Assignments
             </button>
             <div className={styles.assignmentType}>
-              {currentAssignment.assignmentType.replace(/-/g, ' ')}
+              {currentAssignment.assignmentType?.replace(/-/g, ' ') || 'Practice Assignment'}
             </div>
           </div>
 
@@ -187,9 +164,9 @@ const PracticeAssignments: React.FC = () => {
                 <div key={assignment._id} className={styles.assignmentCard}>
                   <div className={styles.cardHeader}>
                     <span className={styles.typeLabel}>
-                      {assignment.assignmentType.replace(/-/g, ' ')}
+                      {assignment.assignmentType?.replace(/-/g, ' ') || 'Practice'}
                     </span>
-                    <span className={styles.moduleLabel}>{assignment.moduleId.replace(/-/g, ' ')}</span>
+                    <span className={styles.moduleLabel}>{assignment.moduleId?.replace(/-/g, ' ') || 'Module'}</span>
                   </div>
                   <h3>{assignment.prompt}</h3>
                   <div className={styles.cardFooter}>
@@ -210,16 +187,15 @@ const PracticeAssignments: React.FC = () => {
         )}
 
         {pendingAssignments.length === 0 && upcomingAssignments.length === 0 && (
-          <div className={styles.empty}>
-            <h2>No Practice Assignments Yet</h2>
-            <p>Complete a training module to receive practice assignments</p>
-            <button
-              className={styles.moduleButton}
-              onClick={() => navigate('/training/module/pause-foundation')}
-            >
-              Try PAUSE Foundation Module
-            </button>
-          </div>
+          <EmptyState
+            icon="🎯"
+            title="No Practice Assignments Yet"
+            description="Complete a training module to receive practice assignments"
+            action={{
+              label: "Try PAUSE Foundation Module",
+              onClick: () => navigate('/training/module/pause-foundation')
+            }}
+          />
         )}
 
         {upcomingAssignments.length > 0 && (
@@ -229,11 +205,11 @@ const PracticeAssignments: React.FC = () => {
               {upcomingAssignments.map(assignment => (
                 <div key={assignment._id} className={styles.upcomingCard}>
                   <div className={styles.upcomingDate}>
-                    {formatDate(assignment.scheduledDate)}
+                    {assignment.scheduledDate ? formatRelativeDate(assignment.scheduledDate) : 'Soon'}
                   </div>
                   <div className={styles.upcomingContent}>
                     <span className={styles.upcomingType}>
-                      {assignment.assignmentType.replace(/-/g, ' ')}
+                      {assignment.assignmentType?.replace(/-/g, ' ') || 'Practice'}
                     </span>
                     <p>{assignment.prompt}</p>
                   </div>

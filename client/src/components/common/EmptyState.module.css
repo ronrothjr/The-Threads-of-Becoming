@@ -1,0 +1,100 @@
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--text-muted, #666);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  margin: 0 0 0.5rem 0;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: var(--text-muted, #666);
+  margin: 0 0 1.5rem 0;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.actionButton {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color, #2c5f5d);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background: var(--primary-dark, #1e4543);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.actionButton:active {
+  transform: translateY(0);
+}
+
+/* Size variants */
+.small {
+  padding: 2rem 1.5rem;
+}
+
+.small .icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.small .title {
+  font-size: 1rem;
+}
+
+.small .description {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.small .actionButton {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.large {
+  padding: 4rem 2.5rem;
+}
+
+.large .icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.large .title {
+  font-size: 1.5rem;
+}
+
+.large .description {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.large .actionButton {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}

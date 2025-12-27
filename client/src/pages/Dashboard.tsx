@@ -3,6 +3,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import * as assessments from '../services/api/assessments';
 import * as practice from '../services/api/practice';
 import * as training from '../services/api/training';
+import { UnlockAnalysis, PracticeAnalytics } from '../services/api/types';
+import { getLowestThreads } from '../utils/threadUtils';
 import styles from './Dashboard.module.css';
 
 interface FocusThread {
@@ -10,47 +12,11 @@ interface FocusThread {
   score: number;
   percentage: number;
 }
-interface UnlockAnalysis {
-  isUnlocked: boolean;
-  canUnlock: boolean;
-  requirements: {
-    journalDays: { current: number; required: number; met: boolean };
-    practiceSessions: { current: number; required: number; met: boolean };
-    threadDiversity: { current: number; required: number; met: boolean };
-    daysSinceQuickProfile: { current: number; required: number; met: boolean };
-  };
-  insights: {
-    mostJournaledThread: string;
-    mostPracticedThread: string;
-    threadDistribution: Record<string, number>;
-    commonContexts: string[];
-    collapseIndicators: string[];
-    personalizedMessage: string;
-  };
-}
 interface RetakeInfo {
   canRetake: boolean;
   daysUntilRetake: number | null;
   lastTakenDate: string | null;
   nextAvailableDate: string | null;
-}
-interface Analytics {
-  journalStats: {
-    totalEntries: number;
-    journalDaysCount: number;
-    threadBreakdown: Record<string, number>;
-    recentActivity: Array<{ date: string; count: number }>;
-  };
-  practiceStats: {
-    totalSessions: number;
-    practiceDaysCount: number;
-    typeBreakdown: Record<string, number>;
-    threadBreakdown: Record<string, number>;
-  };
-  streaks: {
-    currentStreak: number;
-    longestStreak: number;
-  };
 }
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
@@ -60,7 +26,7 @@ const Dashboard: React.FC = () => {
   const [hasPartialJourneyMap, setHasPartialJourneyMap] = useState(false);
   const [focusThreads, setFocusThreads] = useState<FocusThread[]>([]);
   const [unlockAnalysis, setUnlockAnalysis] = useState<UnlockAnalysis | null>(null);
-  const [analytics, setAnalytics] = useState<Analytics | null>(null);
+  const [analytics, setAnalytics] = useState<PracticeAnalytics | null>(null);
   const [retakeInfo, setRetakeInfo] = useState<RetakeInfo | null>(null);
   const [pendingAssignmentsCount, setPendingAssignmentsCount] = useState(0);
   const [hasTrainingProgram, setHasTrainingProgram] = useState(false);
@@ -90,16 +56,9 @@ const Dashboard: React.FC = () => {
       if (statusData.quickProfileCompleted) {
         const resultsData = await assessments.getQuickProfileResults();
         const threadScores = resultsData.results.threadScores;
-        // Get 2 lowest scoring threads
-        const sortedThreads = Object.entries(threadScores)
-          .map(([name, data]: [string, any]) => ({
-            name,
-            score: data.raw,
-            percentage: data.percentage
-          }))
-          .sort((a, b) => a.score - b.score)
-          .slice(0, 2);
-        setFocusThreads(sortedThreads);
+        // Get 2 lowest scoring threads using utility function
+        const lowestThreads = getLowestThreads(threadScores, 2);
+        setFocusThreads(lowestThreads);
 
         // Load Personal Journey Map unlock analysis
         const unlockData = await assessments.getUnlockAnalysis();

@@ -184,6 +184,9 @@ const PersonalJourneyMapResults: React.FC = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
+        <button className={styles.backButton} onClick={() => navigate('/dashboard')}>
+          ← Back to Dashboard
+        </button>
         <h1>Your Personal Journey Map</h1>
         <p className={styles.subtitle}>Comprehensive Pattern Analysis & Development Path</p>
       </header>
@@ -244,7 +247,7 @@ const PersonalJourneyMapResults: React.FC = () => {
             <div className={styles.scoreCircle}>
               <div className={styles.scoreValue}>
                 {results.movementAverages.see.toFixed(1)}
-                <span className={styles.scoreMax}> / 12</span>
+                <span className={styles.scoreMax}> / 40</span>
               </div>
             </div>
             <p className={styles.movementDesc}>Locate where you are: Am I present? Do I have agency? What story am I telling? Is this the right timing?</p>
@@ -257,7 +260,7 @@ const PersonalJourneyMapResults: React.FC = () => {
             <div className={styles.scoreCircle}>
               <div className={styles.scoreValue}>
                 {results.movementAverages.hold.toFixed(1)}
-                <span className={styles.scoreMax}> / 6</span>
+                <span className={styles.scoreMax}> / 40</span>
               </div>
             </div>
             <p className={styles.movementDesc}>Stay with the discomfort: What is my body telling me? What happens if I don't force an answer?</p>
@@ -270,7 +273,7 @@ const PersonalJourneyMapResults: React.FC = () => {
             <div className={styles.scoreCircle}>
               <div className={styles.scoreValue}>
                 {results.movementAverages.emerge.toFixed(1)}
-                <span className={styles.scoreMax}> / 3</span>
+                <span className={styles.scoreMax}> / 40</span>
               </div>
             </div>
             <p className={styles.movementDesc}>Let something new arise: Who am I becoming? What's actually changing vs. rearranging?</p>

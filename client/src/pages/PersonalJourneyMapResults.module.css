@@ -12,6 +12,24 @@
   margin-bottom: 4rem;
 }
 
+.backButton {
+  background: rgba(44, 95, 93, 0.1);
+  color: var(--color-navy);
+  border: 1px solid rgba(44, 95, 93, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.backButton:hover {
+  background: rgba(44, 95, 93, 0.2);
+  border-color: rgba(44, 95, 93, 0.3);
+}
+
 .header h1 {
   font-size: var(--text-5xl);
   font-weight: var(--font-bold);
@@ -121,8 +139,8 @@
 }
 
 .scoreCircle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
   display: flex;
@@ -135,6 +153,8 @@
   font-size: var(--text-4xl);
   font-weight: var(--font-bold);
   color: white;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .scoreMax {
@@ -794,8 +814,16 @@
   }
 
   .scoreCircle {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .scoreValue {
+    font-size: var(--text-xl);
+  }
+
+  .scoreMax {
+    font-size: var(--text-xs);
   }
 
   /* Practice Section */

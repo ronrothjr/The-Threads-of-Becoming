@@ -3,26 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import styles from './TrainingDashboard.module.css';
 import { logger } from '../utils/logger';
 import * as training from '../services/api/training';
+import { TrainingModule, ModuleProgress } from '../services/api/types';
+import { EmptyState } from '../components/common';
 
-interface ModuleProgress {
-  moduleId: string;
-  currentPhase: string;
-  phaseItemIndex: number;
-  completed: boolean;
-  lastAccessedAt: string;
-}
-interface TrainingModule {
-  _id: string;
-  thread: string;
-  tier: string;
-  title: string;
-  description?: string;
-  estimatedDuration?: number;
-  published: boolean;
+interface ModuleWithProgress extends TrainingModule {
   progress?: ModuleProgress;
 }
 const TrainingDashboard: React.FC = () => {
-  const [modules, setModules] = useState<TrainingModule[]>([]);
+  const [modules, setModules] = useState<ModuleWithProgress[]>([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
   useEffect(() => {
@@ -63,7 +51,7 @@ const TrainingDashboard: React.FC = () => {
     totalProgress += phaseWeights[progress.currentPhase as keyof typeof phaseWeights] * 0.5;
     return Math.min(100, Math.round(totalProgress));
   };
-  const getStatusBadge = (module: TrainingModule) => {
+  const getStatusBadge = (module: ModuleWithProgress) => {
     if (module.progress?.completed) {
       return <span className={styles.statusCompleted}>✓ Completed</span>;
     } else if (module.progress) {
@@ -95,10 +83,13 @@ const TrainingDashboard: React.FC = () => {
         <h2 className={styles.sectionTitle}>Available Modules</h2>
         <div className={styles.modulesList}>
           {availableModules.length === 0 ? (
-            <div className={styles.emptyState}>
-              <h3>No modules available</h3>
-              <p>All modules have been completed. Check back soon for new training content.</p>
-            </div>
+            <EmptyState
+              icon="🎓"
+              title="No modules available"
+              description="All modules have been completed. Check back soon for new training content."
+              size="small"
+              className={styles.emptyStateCard}
+            />
           ) : (
             availableModules.map(module => (
               <div
@@ -152,10 +143,13 @@ const TrainingDashboard: React.FC = () => {
         <h2 className={styles.sectionTitle}>Completed Modules</h2>
         <div className={styles.modulesList}>
           {completedModules.length === 0 ? (
-            <div className={styles.emptyState}>
-              <h3>No completed modules yet</h3>
-              <p>Finish a module to see it here!</p>
-            </div>
+            <EmptyState
+              icon="✓"
+              title="No completed modules yet"
+              description="Finish a module to see it here!"
+              size="small"
+              className={styles.emptyStateCard}
+            />
           ) : (
             completedModules.map(module => (
               <div

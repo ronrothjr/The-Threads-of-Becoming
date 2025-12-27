@@ -2,19 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './TrainingAdmin.module.css';
 import * as admin from '../services/api/admin';
-
-interface TrainingModule {
-  _id: string;
-  moduleId: string;
-  thread: string;
-  tier: string;
-  title: string;
-  published: boolean;
-  slides?: any[];
-  meditations?: any[];
-  exercises?: any[];
-  practiceAssignments?: any[];
-}
+import { TrainingModule } from '../services/api/types';
+import { EmptyState } from '../components/common';
 const TrainingAdmin: React.FC = () => {
   const [modules, setModules] = useState<TrainingModule[]>([]);
   const [loading, setLoading] = useState(true);
@@ -102,12 +91,15 @@ const TrainingAdmin: React.FC = () => {
       </div>
       <div className={styles.moduleGrid}>
         {filteredModules.length === 0 ? (
-          <div className={styles.empty}>
-            <p>No modules found</p>
-            <button onClick={() => navigate('/admin/training/module/new')}>
-              Create your first module
-            </button>
-          </div>
+          <EmptyState
+            icon="📚"
+            title="No modules found"
+            description="Get started by creating your first training module"
+            action={{
+              label: "Create Module",
+              onClick: () => navigate('/admin/training/module/new')
+            }}
+          />
         ) : (
           filteredModules.map(module => (
             <div key={module._id} className={styles.moduleCard}>

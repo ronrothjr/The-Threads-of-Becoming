@@ -3,69 +3,20 @@ import { useNavigate, useParams } from 'react-router-dom';
 import styles from './TrainingSession.module.css';
 import { logger } from '../utils/logger';
 import * as training from '../services/api/training';
+import {
+  AudioContent,
+  Slide,
+  SlideContent,
+  Meditation,
+  MeditationContent,
+  Exercise,
+  ExerciseContent,
+  WritingPrompt,
+  KnowledgeCheck,
+  TrainingModule
+} from '../services/api/types';
 
-// TrainingModule interfaces based on schema
-interface AudioContent {
-  text: string;
-  voiceId?: string;
-  speed?: number;
-  model?: string;
-  audioUrl?: string;
-  duration?: number;
-  generatedAt?: Date;
-  charactersUsed?: number;
-}
-interface SlideContent {
-  slideNumber: number;
-  title: string;
-  visualDescription: string;
-  visualUrl?: string;
-  narration: AudioContent;
-  metadata?: any;
-}
-
-interface MeditationContent {
-  duration: number;
-  title?: string;
-  audio: AudioContent;
-  scriptSections?: {
-    opening?: string;
-    deepening?: string;
-    closing?: string;
-  };
-}
-
-interface ExerciseContent {
-  type: string;
-  title?: string;
-  duration?: number;
-  setup?: string;
-  experience?: string;
-  reflection?: string;
-  instructionAudio?: AudioContent;
-}
-
-interface WritingPrompt {
-  prompt: string;
-  type?: string;
-  suggestedDuration?: number;
-  guidance?: string;
-  context?: string; // 'in-session' | 'practice-assignment' | 'weekly-reflection'
-  optional?: boolean;
-  scheduledAfterDays?: number;
-}
-
-interface KnowledgeCheck {
-  question: string;
-  type?: string;
-  scenario?: string;
-  options: Array<{
-    text: string;
-    isCorrect: boolean;
-    feedback: string;
-  }>;
-}
-
+// Extended interfaces for session-specific data
 interface SessionStructure {
   ground?: { duration: number; elements?: string[] };
   teach?: { duration: number; slideSequence?: number[] };
@@ -73,22 +24,10 @@ interface SessionStructure {
   integrate?: { duration: number; promptIndex?: number };
 }
 
-interface TrainingModule {
-  _id: string;
-  moduleId: string;
-  thread: string;
-  tier: string;
-  title?: string;
-  seedQuestion: string;
+interface ExtendedTrainingModule extends TrainingModule {
+  seedQuestion?: string;
   learningObjectives?: string[];
-  slides: SlideContent[];
-  meditations: MeditationContent[];
-  exercises: ExerciseContent[];
-  writingPrompts: WritingPrompt[];
-  knowledgeChecks: KnowledgeCheck[];
-  estimatedDuration?: number;
   sessionStructure?: SessionStructure;
-  published: boolean;
 }
 
 type Phase = 'ground' | 'teach' | 'practice' | 'integrate';
@@ -100,7 +39,7 @@ interface PhaseProgress {
 
 const TrainingSession: React.FC = () => {
   const { moduleId } = useParams<{ moduleId: string }>();
-  const [module, setModule] = useState<TrainingModule | null>(null);
+  const [module, setModule] = useState<ExtendedTrainingModule | null>(null);
   const [loading, setLoading] = useState(true);
   const [started, setStarted] = useState(false);
   const [sessionStartTime, setSessionStartTime] = useState<number | null>(null);
@@ -206,17 +145,17 @@ const TrainingSession: React.FC = () => {
           const element = structure.ground.elements[phaseItemIndex];
           if (element?.startsWith('meditation:')) {
             const idx = parseInt(element.split(':')[1]);
-            return { type: 'meditation', content: module.meditations[idx] };
+            return { type: 'meditation', content: module.meditations?.[idx] };
           }
         }
-        return { type: 'meditation', content: module.meditations[0] };
+        return { type: 'meditation', content: module.meditations?.[0] };
       case 'teach':
-        const slideSequence = structure?.teach?.slideSequence || module.slides.map((_, i) => i);
+        const slideSequence = structure?.teach?.slideSequence || module.slides?.map((_, i) => i) || [];
         const slideIdx = slideSequence[phaseItemIndex];
-        return { type: 'slide', content: module.slides[slideIdx] };
+        return { type: 'slide', content: module.slides?.[slideIdx] };
       case 'practice':
         const exerciseIdx = structure?.practice?.exerciseIndex || 0;
-        return { type: 'exercise', content: module.exercises[exerciseIdx + phaseItemIndex] };
+        return { type: 'exercise', content: module.exercises?.[exerciseIdx + phaseItemIndex] };
       case 'integrate':
         // Show all knowledge checks first, then in-session writing prompts
         const inSessionPrompts = module.writingPrompts?.filter(p => !p.context || p.context === 'in-session') || [];
@@ -224,7 +163,7 @@ const TrainingSession: React.FC = () => {
         const totalIntegrateItems = knowledgeCheckCount + inSessionPrompts.length;
         if (phaseItemIndex < knowledgeCheckCount) {
           // Show knowledge checks first
-          return { type: 'knowledge', content: module.knowledgeChecks[phaseItemIndex] };
+          return { type: 'knowledge', content: module.knowledgeChecks?.[phaseItemIndex] };
         } else {
           // Then show writing prompts
           const promptIdx = phaseItemIndex - knowledgeCheckCount;
@@ -241,7 +180,7 @@ const TrainingSession: React.FC = () => {
       case 'ground':
         return structure?.ground?.elements?.length || 1;
       case 'teach':
-        return structure?.teach?.slideSequence?.length || module.slides.length;
+        return structure?.teach?.slideSequence?.length || module.slides?.length || 0;
       case 'practice':
         return module.exercises?.length || 0;
       case 'integrate':
@@ -349,7 +288,7 @@ const TrainingSession: React.FC = () => {
       case 'ground':
         return structure?.ground?.elements?.length || 1;
       case 'teach':
-        return structure?.teach?.slideSequence?.length || module.slides.length;
+        return structure?.teach?.slideSequence?.length || module.slides?.length || 0;
       case 'practice':
         return module.exercises?.length || 0;
       case 'integrate':
@@ -553,7 +492,7 @@ const TrainingSession: React.FC = () => {
                     <strong>TEACH</strong>
                     <span className={styles.phaseDuration}>{structure.teach.duration} min</span>
                   </div>
-                  <p>{module.slides.length} slides with narration</p>
+                  <p>{module.slides?.length || 0} slides with narration</p>
                 </div>
               )}
               {structure?.practice && (
@@ -563,7 +502,7 @@ const TrainingSession: React.FC = () => {
                     <strong>PRACTICE</strong>
                     <span className={styles.phaseDuration}>{structure.practice.duration} min</span>
                   </div>
-                  <p>{module.exercises.length} experiential exercises</p>
+                  <p>{module.exercises?.length || 0} experiential exercises</p>
                 </div>
               )}
               {structure?.integrate && (
@@ -573,7 +512,7 @@ const TrainingSession: React.FC = () => {
                     <strong>INTEGRATE</strong>
                     <span className={styles.phaseDuration}>{structure.integrate.duration} min</span>
                   </div>
-                  <p>{module.writingPrompts.length} reflections, {module.knowledgeChecks.length} knowledge checks</p>
+                  <p>{module.writingPrompts?.length || 0} reflections, {module.knowledgeChecks?.length || 0} knowledge checks</p>
                 </div>
               )}
             </div>
@@ -687,16 +626,16 @@ const TrainingSession: React.FC = () => {
               </div>
 
               <div className={styles.meditationScript}>
-                <p>{(phaseContent.content as MeditationContent).audio.text}</p>
+                <p>{(phaseContent.content as MeditationContent).audio?.text}</p>
               </div>
 
-              {(phaseContent.content as MeditationContent).audio.audioUrl ? (
+              {(phaseContent.content as MeditationContent).audio?.audioUrl ? (
                 <audio
                   ref={audioRef}
                   controls
                   className={styles.audioPlayer}
                 >
-                  <source src={(phaseContent.content as MeditationContent).audio.audioUrl} type="audio/mpeg" />
+                  <source src={(phaseContent.content as MeditationContent).audio?.audioUrl} type="audio/mpeg" />
                   Your browser does not support the audio element.
                 </audio>
               ) : (

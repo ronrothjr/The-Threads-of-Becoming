@@ -1,0 +1,85 @@
+.progressBarContainer {
+  width: 100%;
+}
+
+.progressBarContainer.small {
+  font-size: 0.75rem;
+}
+
+.progressBarContainer.medium {
+  font-size: 0.875rem;
+}
+
+.progressBarContainer.large {
+  font-size: 1rem;
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  color: var(--color-text, #374151);
+  font-weight: 500;
+}
+
+.barWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressBar {
+  flex: 1;
+  background-color: var(--color-bg, #F3F4F6);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressBarContainer.small .progressBar {
+  height: 4px;
+}
+
+.progressBarContainer.medium .progressBar {
+  height: 8px;
+}
+
+.progressBarContainer.large .progressBar {
+  height: 12px;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 999px;
+}
+
+/* Color variants */
+.progressFill.teal {
+  background: linear-gradient(90deg, var(--color-teal, #16A085), #1ABC9C);
+}
+
+.progressFill.purple {
+  background: linear-gradient(90deg, var(--color-purple, #8B5CF6), #A78BFA);
+}
+
+.progressFill.blue {
+  background: linear-gradient(90deg, var(--color-blue, #2563EB), #60A5FA);
+}
+
+.progressFill.green {
+  background: linear-gradient(90deg, #10B981, #34D399);
+}
+
+.progressFill.orange {
+  background: linear-gradient(90deg, #F59E0B, #FBBF24);
+}
+
+.progressFill.red {
+  background: linear-gradient(90deg, #EF4444, #F87171);
+}
+
+.percentage {
+  color: var(--color-text, #374151);
+  font-weight: 600;
+  font-size: 0.875em;
+  min-width: 3ch;
+  text-align: right;
+}

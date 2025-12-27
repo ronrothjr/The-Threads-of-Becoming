@@ -197,12 +197,19 @@ export interface UnlockAnalysis {
   isUnlocked: boolean;
   canUnlock: boolean;
   requirements: {
-    journalDaysRequired: number;
-    journalDaysCompleted: number;
-    daysFromQuickProfile: number;
-    daysRequired: number;
+    journalDays: { current: number; required: number; met: boolean };
+    practiceSessions: { current: number; required: number; met: boolean };
+    threadDiversity: { current: number; required: number; met: boolean };
+    daysSinceQuickProfile: { current: number; required: number; met: boolean };
   };
-  insights: string[];
+  insights: {
+    mostJournaledThread: string;
+    mostPracticedThread: string;
+    threadDistribution: Record<string, number>;
+    commonContexts: string[];
+    collapseIndicators: string[];
+    personalizedMessage: string;
+  };
 }
 
 // ============================================================================
@@ -265,15 +272,26 @@ export interface UpdatePracticeRequest {
 }
 
 export interface PracticeAnalytics {
-  journalStats: JournalStats;
+  journalStats: {
+    totalEntries: number;
+    journalDaysCount: number;
+    threadBreakdown: Record<string, number>;
+    recentActivity: Array<{ date: string; count: number }>;
+  };
   practiceStats: {
     totalPractices: number;
+    totalSessions: number;
     uniqueDays: number;
+    practiceDaysCount: number;
+    typeBreakdown: Record<string, number>;
+    threadBreakdown: Record<string, number>;
     threadDistribution: Record<string, number>;
   };
   streaks: {
     current: number;
+    currentStreak: number;
     longest: number;
+    longestStreak: number;
   };
 }
 
@@ -292,6 +310,15 @@ export interface PracticeAssignment {
   status: 'pending' | 'completed' | 'skipped';
   completedAt?: Date;
   response?: string;
+  moduleId?: string;
+  assignmentType?: string;
+  scheduledDate?: string;
+  metadata?: {
+    type?: string;
+    suggestedDuration?: number;
+    guidance?: string;
+    optional?: boolean;
+  };
 }
 
 export interface SubmitAssignmentRequest {
@@ -317,19 +344,36 @@ export interface Slide {
   visualDescription: string;
   visualUrl?: string;
   narration: AudioContent;
+  metadata?: any;
 }
+
+// Type aliases for backward compatibility
+export type SlideContent = Slide;
 
 export interface Meditation {
-  title: string;
+  title?: string;
   duration: number;
-  script: AudioContent;
+  script?: AudioContent;
+  audio?: AudioContent;
+  scriptSections?: {
+    opening?: string;
+    deepening?: string;
+    closing?: string;
+  };
 }
 
+// Type aliases for backward compatibility
+export type MeditationContent = Meditation;
+
 export interface Exercise {
-  title: string;
-  type: 'solo' | 'partner' | 'group' | 'written';
-  duration: number;
-  instructions: string;
+  title?: string;
+  type: string | 'solo' | 'partner' | 'group' | 'written';
+  duration?: number;
+  instructions?: string;
+  setup?: string;
+  experience?: string;
+  reflection?: string;
+  instructionAudio?: AudioContent;
   phases?: {
     name: string;
     duration: number;
@@ -337,18 +381,28 @@ export interface Exercise {
   }[];
 }
 
+// Type aliases for backward compatibility
+export type ExerciseContent = Exercise;
+
 export interface WritingPrompt {
   prompt: string;
-  type: 'foundation' | 'building' | 'deepening' | 'mastery';
+  type?: 'foundation' | 'building' | 'deepening' | 'mastery';
   guidance?: string;
+  suggestedDuration?: number;
+  context?: string; // 'in-session' | 'practice-assignment' | 'weekly-reflection'
+  optional?: boolean;
+  scheduledAfterDays?: number;
 }
 
 export interface KnowledgeCheck {
   question: string;
+  type?: string;
+  scenario?: string;
   options: {
     text: string;
     isCorrect: boolean;
-    explanation: string;
+    explanation?: string;
+    feedback?: string;
   }[];
 }
 
@@ -366,16 +420,18 @@ export interface TrainingModule {
   thread: string;
   tier: 'foundation' | 'building' | 'deepening' | 'mastery';
   title: string;
-  objective: string;
-  estimatedDuration: number;
+  objective?: string;
+  estimatedDuration?: number;
   slides?: Slide[];
   meditations?: Meditation[];
   exercises?: Exercise[];
   writingPrompts?: WritingPrompt[];
   knowledgeChecks?: KnowledgeCheck[];
   practices?: Practice[];
-  createdAt: Date;
-  updatedAt: Date;
+  published?: boolean;
+  description?: string;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface ModuleProgress {

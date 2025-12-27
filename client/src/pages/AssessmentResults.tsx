@@ -95,6 +95,9 @@ const AssessmentResults: React.FC = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
+        <button className={styles.backButton} onClick={() => navigate('/dashboard')}>
+          ← Back to Dashboard
+        </button>
         <h1>Your Threads Profile</h1>
         <p className={styles.subtitle}>{assessmentTitle} Results</p>
       </header>
