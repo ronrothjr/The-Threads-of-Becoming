@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import styles from './TrainingSetup.module.css';
 import { logger } from '../utils/logger';
+import * as assessments from '../services/api/assessments';
+import * as training from '../services/api/training';
 
 interface ComprehensiveAnalysis {
   detectedPatterns: any[];
@@ -33,19 +34,8 @@ const TrainingSetup: React.FC = () => {
   }, [step]);
   const loadAnalysis = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-      const response = await fetch(`${API_URL}/api/assessments/personal-journey-map/comprehensive-analysis`, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (!response.ok) {
-        throw new Error('Failed to load analysis');
-      }
-      const data = await response.json();
-      setAnalysis(data);
+      const data = await assessments.getComprehensiveAnalysis();
+      setAnalysis(data as any);
     } catch (err) {
       logger.error('Failed to load analysis', { error: err });
     } finally {
@@ -71,22 +61,7 @@ const TrainingSetup: React.FC = () => {
   };
   const handleSubmit = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-      const response = await fetch(`${API_URL}/api/training/initialize`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(config),
-      });
-      if (!response.ok) {
-        throw new Error('Failed to initialize training');
-      }
+      await training.initializeProgram(config);
       logger.info('Training program initialized');
       navigate('/training/session');
     } catch (err) {

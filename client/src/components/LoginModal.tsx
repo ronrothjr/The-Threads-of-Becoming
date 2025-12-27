@@ -1,7 +1,8 @@
 import React, { useState, FormEvent } from 'react';
-import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import * as auth from '../services/api/auth';
+import { ApiClientError } from '../services/api/client';
 import styles from './LoginModal.module.css';
 
 interface LoginModalProps {
@@ -21,21 +22,18 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
     setError('');
     setLoading(true);
     try {
-      const response = await fetch(`${API_URL}/api/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      });
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ message: 'Login failed' }));
-        throw new Error(errorData.message || 'Login failed');
-      }
-      const data = await response.json();
-      login(data.access_token);
+      // Use centralized auth service
+      const response = await auth.login({ email, password });
+      login(response.access_token);
       onClose();
       navigate('/dashboard');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Login failed');
+      // Handle errors from centralized service
+      if (err instanceof ApiClientError) {
+        setError(err.message);
+      } else {
+        setError('Login failed. Please try again.');
+      }
     } finally {
       setLoading(false);
     }

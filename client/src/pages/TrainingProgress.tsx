@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import styles from './TrainingProgress.module.css';
 import { logger } from '../utils/logger';
+import * as training from '../services/api/training';
 
 interface ThreadProgress {
   startingCapacity: number;
@@ -46,20 +46,8 @@ const TrainingProgress: React.FC = () => {
   }, []);
   const loadProgress = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-      const response = await fetch(`${API_URL}/api/training/progress`, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (!response.ok) {
-        throw new Error('Failed to load training progress');
-      }
-
-      const data = await response.json();
-      setProgress(data);
+      const data = await training.getProgress();
+      setProgress(data as any);
     } catch (err) {
       logger.error('Failed to load training progress', { error: err });
     } finally {

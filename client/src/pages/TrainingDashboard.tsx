@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import styles from './TrainingDashboard.module.css';
 import { logger } from '../utils/logger';
+import * as training from '../services/api/training';
 
 interface ModuleProgress {
   moduleId: string;
@@ -30,19 +30,8 @@ const TrainingDashboard: React.FC = () => {
   }, []);
   const loadModules = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-      const response = await fetch(`${API_URL}/api/training/modules/with-progress`, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (!response.ok) {
-        throw new Error('Failed to load modules');
-      }
-      const data = await response.json();
-      setModules(data);
+      const data = await training.getModulesWithProgress();
+      setModules(data as any);
     } catch (err) {
       logger.error('Failed to load training modules', { error: err });
       alert('Unable to load training modules. Please try again.');

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate, Link } from 'react-router-dom';
 import styles from './Auth.module.css';
-import { API_URL } from '../config';
+import * as auth from '../services/api/auth';
 
 const VerifyEmail: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -28,22 +28,11 @@ const VerifyEmail: React.FC = () => {
 
   const verifyEmail = async (token: string) => {
     try {
-      const response = await fetch(
-        `${API_URL}/api/auth/verify-email?token=${token}`,
-        {
-          method: 'GET',
-        }
-      );
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Verification failed');
-      }
+      const data = await auth.verifyEmail(token);
 
       // Store the token if provided
       if (data.access_token) {
-        localStorage.setItem('auth_token', data.access_token);
+        auth.setAuthToken(data.access_token);
       }
 
       setStatus('success');

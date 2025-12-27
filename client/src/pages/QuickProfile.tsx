@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import { quickProfileQuestions } from '../data/quickProfileQuestions';
 import styles from './QuickProfile.module.css';
+import * as assessments from '../services/api/assessments';
 
 // Fisher-Yates shuffle algorithm
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -37,28 +37,16 @@ const QuickProfile: React.FC = () => {
   useEffect(() => {
     const loadPartialProgress = async () => {
       try {
-        const token = localStorage.getItem('auth_token');
-        if (!token) {
-          setIsLoading(false);
-          return;
-        }
-        const response = await fetch(`${API_URL}/api/assessments/quick-profile/partial`, {
-          headers: {
-            'Authorization': `Bearer ${token}`
-          }
-        });
-        if (response.ok) {
-          const data = await response.json();
-          if (data && data.responses) {
-            const loadedResponses: Record<string, 'A' | 'B' | 'C' | 'D'> = {};
-            data.responses.forEach((r: { questionId: string; answer: 'A' | 'B' | 'C' | 'D' }) => {
-              loadedResponses[r.questionId] = r.answer;
-            });
-            setResponses(loadedResponses);
-            // Restore question order if saved
-            if (data.questionOrder && data.questionOrder.length > 0) {
-              setQuestionOrder(data.questionOrder);
-            }
+        const data = await assessments.getPartialQuickProfile();
+        if (data && data.responses) {
+          const loadedResponses: Record<string, 'A' | 'B' | 'C' | 'D'> = {};
+          data.responses.forEach((r: any) => {
+            loadedResponses[r.questionId] = r.answer as 'A' | 'B' | 'C' | 'D';
+          });
+          setResponses(loadedResponses);
+          // Restore question order if saved
+          if (data.questionOrder && data.questionOrder.length > 0) {
+            setQuestionOrder(data.questionOrder);
           }
         }
       } catch (err) {
@@ -83,24 +71,15 @@ const QuickProfile: React.FC = () => {
     const savePartialProgress = async () => {
       if (Object.keys(responses).length > 0 && Object.keys(responses).length < 21) {
         try {
-          const token = localStorage.getItem('auth_token');
-          if (!token) return;
           const formattedResponses = Object.entries(responses).map(([questionId, answer]) => ({
             questionId,
             answer
           }));
           // Save the current question order
           const currentQuestionOrder = randomizedQuestions.map(q => q.id);
-          await fetch(`${API_URL}/api/assessments/quick-profile/partial`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`
-            },
-            body: JSON.stringify({
-              responses: formattedResponses,
-              questionOrder: currentQuestionOrder
-            })
+          await assessments.savePartialQuickProfile({
+            responses: formattedResponses,
+            questionOrder: currentQuestionOrder
           });
         } catch (err) {
           console.error('Failed to save partial progress:', err);
@@ -153,27 +132,11 @@ const QuickProfile: React.FC = () => {
   const handleSubmit = async (finalResponses: Record<string, 'A' | 'B' | 'C' | 'D'> = responses) => {
     setIsSubmitting(true);
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
       const formattedResponses = Object.entries(finalResponses).map(([questionId, answer]) => ({
         questionId,
         answer
       }));
-      const response = await fetch(`${API_URL}/api/assessments/quick-profile`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({ responses: formattedResponses })
-      });
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({ message: 'Failed to submit assessment' }));
-        throw new Error(errorData.message || 'Failed to submit assessment');
-      }
+      await assessments.submitQuickProfile({ responses: formattedResponses });
       // Navigate to results page
       navigate('/assessment/results');
     } catch (err) {

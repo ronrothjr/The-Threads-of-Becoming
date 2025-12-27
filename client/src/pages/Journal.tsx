@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL } from '../config';
 import { useNavigate, Link } from 'react-router-dom';
+import * as journal from '../services/api/journal';
+import * as assessments from '../services/api/assessments';
 import styles from './Journal.module.css';
 
 interface JournalEntry {
@@ -53,44 +54,27 @@ const Journal: React.FC = () => {
   }, []);
   const loadJournalData = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-      const [entriesRes, statsRes, resultsRes] = await Promise.all([
-        fetch(`${API_URL}/api/journal`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        }),
-        fetch(`${API_URL}/api/journal/stats`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        }),
-        fetch(`${API_URL}/api/assessments/quick-profile/results`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        })
+      // Use centralized services
+      const [entriesData, statsData, resultsData] = await Promise.all([
+        journal.getAll(),
+        journal.getStats(),
+        assessments.getQuickProfileResults()
       ]);
-      if (entriesRes.ok) {
-        const entriesData = await entriesRes.json();
-        setEntries(entriesData);
-      }
-      if (statsRes.ok) {
-        const statsData = await statsRes.json();
-        setStats(statsData);
-      }
-      if (resultsRes.ok) {
-        const resultsData = await resultsRes.json();
-        const threadScores = resultsData.results.threadScores;
-        // Get 2 lowest scoring threads
-        const sortedThreads = Object.entries(threadScores)
-          .map(([name, data]: [string, any]) => ({
-            name,
-            score: data.score,
-            percentage: data.percentage
-          }))
-          .sort((a, b) => a.score - b.score)
-          .slice(0, 2);
-        setFocusThreads(sortedThreads);
-      }
+
+      setEntries(entriesData as any);
+      setStats(statsData);
+
+      const threadScores = resultsData.results.threadScores;
+      // Get 2 lowest scoring threads
+      const sortedThreads = Object.entries(threadScores)
+        .map(([name, data]: [string, any]) => ({
+          name,
+          score: data.raw,
+          percentage: data.percentage
+        }))
+        .sort((a, b) => a.score - b.score)
+        .slice(0, 2);
+      setFocusThreads(sortedThreads);
     } catch (error) {
       console.error('Failed to load journal data:', error);
     } finally {
@@ -102,28 +86,20 @@ const Journal: React.FC = () => {
     if (!threadFocus || !content) return;
     setSubmitting(true);
     try {
-      const token = localStorage.getItem('auth_token');
-      const response = await fetch(`${API_URL}/api/journal`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          threadFocus,
-          content,
-          practiceType: practiceType || undefined,
-          tags
-        })
+      // Use centralized journal service
+      await journal.create({
+        threadFocus,
+        content,
+        practiceType: practiceType || undefined,
+        tags
       });
-      if (response.ok) {
-        setThreadFocus('');
-        setContent('');
-        setPracticeType('');
-        setTags([]);
-        setTagInput('');
-        await loadJournalData();
-      }
+
+      setThreadFocus('');
+      setContent('');
+      setPracticeType('');
+      setTags([]);
+      setTagInput('');
+      await loadJournalData();
     } catch (error) {
       console.error('Failed to create journal entry:', error);
     } finally {
@@ -154,22 +130,14 @@ const Journal: React.FC = () => {
   const handleUpdateEntry = async () => {
     if (!editingEntry || !editContent) return;
     try {
-      const token = localStorage.getItem('auth_token');
-      const response = await fetch(`${API_URL}/api/journal/${editingEntry._id}`, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          content: editContent,
-          tags: editTags
-        })
+      // Use centralized journal service
+      await journal.update(editingEntry._id, {
+        content: editContent,
+        tags: editTags
       });
-      if (response.ok) {
-        await loadJournalData();
-        handleCancelEdit();
-      }
+
+      await loadJournalData();
+      handleCancelEdit();
     } catch (error) {
       console.error('Failed to update journal entry:', error);
     }
@@ -177,16 +145,9 @@ const Journal: React.FC = () => {
   const handleDeleteEntry = async (entryId: string) => {
     if (!window.confirm('Are you sure you want to delete this entry?')) return;
     try {
-      const token = localStorage.getItem('auth_token');
-      const response = await fetch(`${API_URL}/api/journal/${entryId}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-      if (response.ok) {
-        await loadJournalData();
-      }
+      // Use centralized journal service
+      await journal.deleteEntry(entryId);
+      await loadJournalData();
     } catch (error) {
       console.error('Failed to delete journal entry:', error);
     }

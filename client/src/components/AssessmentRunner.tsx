@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import styles from './AssessmentRunner.module.css';
+import * as assessments from '../services/api/assessments';
 
 // Fisher-Yates shuffle algorithm
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -71,28 +71,19 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         return;
       }
       try {
-        const token = localStorage.getItem('auth_token');
-        if (!token) {
-          setIsLoading(false);
-          return;
-        }
-        const response = await fetch(`${API_URL}/api/assessments/${config.partialEndpoint}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
-        if (response.ok) {
-          const data = await response.json();
-          if (data && data.responses) {
-            const loadedResponses: Record<string, AnswerValue> = {};
-            data.responses.forEach((r: { questionId: string; answer: AnswerValue }) => {
-              loadedResponses[r.questionId] = r.answer;
-            });
-            setResponses(loadedResponses);
-            // Restore question order if saved
-            if (data.questionOrder && data.questionOrder.length > 0) {
-              setQuestionOrder(data.questionOrder);
-            }
+        const data = config.partialEndpoint === 'quick-profile/partial'
+          ? await assessments.getPartialQuickProfile()
+          : await assessments.getPartialPersonalJourneyMap();
+
+        if (data && data.responses) {
+          const loadedResponses: Record<string, AnswerValue> = {};
+          data.responses.forEach((r: any) => {
+            loadedResponses[r.questionId] = r.answer as AnswerValue;
+          });
+          setResponses(loadedResponses);
+          // Restore question order if saved
+          if (data.questionOrder && data.questionOrder.length > 0) {
+            setQuestionOrder(data.questionOrder);
           }
         }
       } catch (err) {
@@ -121,24 +112,23 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         Object.keys(responses).length < config.totalQuestions
       ) {
         try {
-          const token = localStorage.getItem('auth_token');
-          if (!token) return;
           const formattedResponses = Object.entries(responses).map(([questionId, answer]) => ({
             questionId,
             answer,
           }));
           const order = questionOrder.length > 0 ? questionOrder : orderedQuestions.map((q) => q.id);
-          await fetch(`${API_URL}/api/assessments/${config.partialEndpoint}`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify({
+
+          if (config.partialEndpoint === 'quick-profile/partial') {
+            await assessments.savePartialQuickProfile({
               responses: formattedResponses,
               questionOrder: order,
-            }),
-          });
+            });
+          } else {
+            await assessments.savePartialPersonalJourneyMap({
+              responses: formattedResponses,
+              questionOrder: order,
+            });
+          }
         } catch (err) {
           console.error('Failed to save partial progress:', err);
         }
@@ -164,32 +154,27 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
     // Save partial progress immediately after answering
     if (config.partialEndpoint) {
       try {
-        const token = localStorage.getItem('auth_token');
-        if (token) {
-          const formattedResponses = Object.entries(newResponses).map(([questionId, answer]) => ({
-            questionId,
-            answer,
-          }));
-          const order = questionOrder.length > 0 ? questionOrder : orderedQuestions.map((q) => q.id);
-          fetch(`${API_URL}/api/assessments/${config.partialEndpoint}`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify({
+        const formattedResponses = Object.entries(newResponses).map(([questionId, answer]) => ({
+          questionId,
+          answer,
+        }));
+        const order = questionOrder.length > 0 ? questionOrder : orderedQuestions.map((q) => q.id);
+
+        const savePromise = config.partialEndpoint === 'quick-profile/partial'
+          ? assessments.savePartialQuickProfile({
               responses: formattedResponses,
               questionOrder: order,
-            }),
-          })
-            .then(async (response) => {
-              if (!response.ok) {
-                const errorText = await response.text();
-                console.error('Save progress failed:', response.status, errorText);
-              }
+            })
+          : assessments.savePartialPersonalJourneyMap({
+              responses: formattedResponses,
+              questionOrder: order,
+            });
+
+        savePromise
+            .then(() => {
+              // Progress saved successfully
             })
             .catch((err) => console.error('Failed to save progress (network error):', err));
-        }
       } catch (err) {
         console.error('Failed to save progress (exception):', err);
       }
@@ -223,29 +208,17 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
   const handleSubmit = async (finalResponses: Record<string, AnswerValue> = responses) => {
     setIsSubmitting(true);
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
       const formattedResponses = Object.entries(finalResponses).map(([questionId, answer]) => ({
         questionId,
         answer,
       }));
-      const response = await fetch(`${API_URL}/api/assessments/${config.submitEndpoint}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          responses: formattedResponses,
-        }),
-      });
-      if (!response.ok) {
-        const data = await response.json();
-        throw new Error(data.message || 'Failed to submit assessment');
+
+      if (config.submitEndpoint === 'quick-profile') {
+        await assessments.submitQuickProfile({ responses: formattedResponses });
+      } else {
+        await assessments.submitPersonalJourneyMap({ responses: formattedResponses });
       }
+
       navigate(config.resultsRoute);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to submit assessment');

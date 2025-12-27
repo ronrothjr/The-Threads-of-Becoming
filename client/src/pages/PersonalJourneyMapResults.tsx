@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL } from '../config';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './PersonalJourneyMapResults.module.css';
 import { logger } from '../utils/logger';
+import * as assessments from '../services/api/assessments';
 
 interface ThreadScore {
   score: number;
@@ -106,52 +106,38 @@ const PersonalJourneyMapResults: React.FC = () => {
   }, []);
   const loadResults = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
       logger.debug('PersonalJourneyMapResults loading');
       // Fetch results, pattern analysis, and comprehensive analysis in parallel
-      const [resultsResponse, patternResponse, comprehensiveResponse] = await Promise.all([
-        fetch(`${API_URL}/api/assessments/personal-journey-map/results`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        }),
-        fetch(`${API_URL}/api/assessments/personal-journey-map/pattern-analysis`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        }),
-        fetch(`${API_URL}/api/assessments/personal-journey-map/comprehensive-analysis`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        })
+      const [resultsData, patternData, comprehensiveData] = await Promise.all([
+        assessments.getPersonalJourneyMapResults().catch(() => null),
+        assessments.getPatternAnalysis().catch(() => null),
+        assessments.getComprehensiveAnalysis().catch(() => null)
       ]);
-      if (!resultsResponse.ok) {
-        logger.error('Failed to load Personal Journey Map results', { status: resultsResponse.status });
+
+      if (!resultsData) {
+        logger.error('Failed to load Personal Journey Map results');
         throw new Error('Failed to load results');
       }
-      const resultsData = await resultsResponse.json();
+
       logger.debug('PersonalJourneyMapResults loaded', {
         presenceScore: resultsData.results?.threadScores?.presence?.score,
       });
-      setResults(resultsData.results);
-      // Pattern analysis is optional - don't fail if it errors
-      if (patternResponse.ok) {
-        const patternData = await patternResponse.json();
+      setResults(resultsData.results as any);
+
+      // Pattern analysis is optional
+      if (patternData) {
         logger.debug('Pattern analysis loaded', {
           insightsCount: patternData.insights?.length || 0,
         });
-        setPatternAnalysis(patternData);
-      } else {
-        logger.error('Failed to load pattern analysis', { status: patternResponse.status });
+        setPatternAnalysis(patternData as any);
       }
-      // Comprehensive analysis is optional - don't fail if it errors
-      if (comprehensiveResponse.ok) {
-        const comprehensiveData = await comprehensiveResponse.json();
+
+      // Comprehensive analysis is optional
+      if (comprehensiveData) {
         logger.debug('Comprehensive analysis loaded', {
           patternsDetected: comprehensiveData.detectedPatterns?.length || 0,
         });
-        setComprehensiveAnalysis(comprehensiveData);
-      } else {
-        logger.error('Failed to load comprehensive analysis', { status: comprehensiveResponse.status });
+        setComprehensiveAnalysis(comprehensiveData as any);
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load results');

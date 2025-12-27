@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { API_URL } from '../config';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import * as auth from '../services/api/auth';
+import * as assessments from '../services/api/assessments';
 import LoginModal from './LoginModal';
 import UserMenu from './UserMenu';
 import styles from './Navigation.module.css';
@@ -41,45 +42,23 @@ const Navigation: React.FC = () => {
   }, [isAuthenticated]);
   const checkAssessmentStatus = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) return;
-      const response = await fetch(`${API_URL}/api/assessments/status`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setHasCompletedQuickProfile(data.quickProfileCompleted);
-        setHasPartialQuickProfile(data.hasPartialQuickProfile);
-      }
+      // Use centralized assessments service
+      const data = await assessments.getStatus();
+      setHasCompletedQuickProfile(data.quickProfileCompleted);
+      setHasPartialQuickProfile(data.hasPartialQuickProfile);
+
       // Check for partial Personal Journey Map
-      const partialJourneyMapResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/partial`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-      if (partialJourneyMapResponse.ok) {
-        const partialData = await partialJourneyMapResponse.json();
-        setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
-      }
+      const partialData = await assessments.getPartialPersonalJourneyMap();
+      setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
     } catch (error) {
       console.error('Failed to check assessment status:', error);
     }
   };
   const fetchUserInfo = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) return;
-      const response = await fetch(`${API_URL}/api/auth/me`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setUserEmail(data.email);
-      }
+      // Use centralized auth service
+      const data = await auth.getCurrentUser();
+      setUserEmail(data.email);
     } catch (error) {
       console.error('Failed to fetch user info:', error);
     }
@@ -95,14 +74,7 @@ const Navigation: React.FC = () => {
   };
   const handleExitQuickProfile = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/dashboard');
-        closeMobileMenu();
-        return;
-      }
-      // Get current responses from QuickProfile state (if any)
-      // For now, just navigate - the QuickProfile component handles saving
+      // Navigate to dashboard - the QuickProfile component handles saving
       navigate('/dashboard');
       closeMobileMenu();
       // Refresh status to update button text
@@ -152,6 +124,8 @@ const Navigation: React.FC = () => {
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
             >
+              <span className={styles.hamburgerLine}></span>
+              <span className={styles.hamburgerLine}></span>
               <span className={styles.hamburgerLine}></span>
             </button>
             <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import * as auth from '../services/api/auth';
 
 interface AuthContextType {
   isAuthenticated: boolean;
@@ -14,8 +15,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check for token on mount
-    const storedToken = localStorage.getItem('auth_token');
+    // Check for token on mount using centralized auth service
+    const storedToken = auth.getAuthToken();
     if (storedToken) {
       setToken(storedToken);
       setIsAuthenticated(true);
@@ -23,13 +24,16 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   }, []);
 
   const login = (newToken: string) => {
-    localStorage.setItem('auth_token', newToken);
+    // Use centralized auth service to store token
+    auth.setAuthToken(newToken);
     setToken(newToken);
     setIsAuthenticated(true);
   };
 
   const logout = () => {
-    localStorage.removeItem('auth_token');
+    // Use centralized auth service to clear token
+    auth.setAuthToken(''); // Clear from localStorage
+    localStorage.removeItem('auth_token'); // Ensure it's removed
     setToken(null);
     setIsAuthenticated(false);
   };

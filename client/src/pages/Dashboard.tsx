@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL } from '../config';
 import { useNavigate, Link } from 'react-router-dom';
+import * as assessments from '../services/api/assessments';
+import * as practice from '../services/api/practice';
+import * as training from '../services/api/training';
 import styles from './Dashboard.module.css';
 
 interface FocusThread {
@@ -68,87 +70,60 @@ const Dashboard: React.FC = () => {
   }, []);
   const loadDashboardData = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
+      // Use centralized assessments service
+      const statusData = await assessments.getStatus();
+      setHasCompletedQuickProfile(statusData.quickProfileCompleted);
+      setHasPartialQuickProfile(statusData.hasPartialQuickProfile);
+      setHasCompletedJourneyMap(statusData.personalJourneyMapCompleted || false);
+
+      // Set retake info
+      if (statusData.canRetake !== undefined) {
+        setRetakeInfo({
+          canRetake: statusData.canRetake,
+          daysUntilRetake: statusData.daysUntilRetake || null,
+          lastTakenDate: statusData.lastTakenDate || null,
+          nextAvailableDate: statusData.nextAvailableDate || null
+        });
       }
-      // Load assessment status
-      const statusResponse = await fetch(`${API_URL}/api/assessments/status`, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (statusResponse.ok) {
-        const statusData = await statusResponse.json();
-        setHasCompletedQuickProfile(statusData.quickProfileCompleted);
-        setHasPartialQuickProfile(statusData.hasPartialQuickProfile);
-        setHasCompletedJourneyMap(statusData.personalJourneyMapCompleted || false);
-        // Set retake info
-        if (statusData.canRetake !== undefined) {
-          setRetakeInfo({
-            canRetake: statusData.canRetake,
-            daysUntilRetake: statusData.daysUntilRetake,
-            lastTakenDate: statusData.lastTakenDate,
-            nextAvailableDate: statusData.nextAvailableDate
-          });
-        }
-        // If Quick Profile completed, load results for focus threads
-        if (statusData.quickProfileCompleted) {
-          const resultsResponse = await fetch(`${API_URL}/api/assessments/quick-profile/results`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-          });
-          if (resultsResponse.ok) {
-            const resultsData = await resultsResponse.json();
-            const threadScores = resultsData.results.threadScores;
-            // Get 2 lowest scoring threads
-            const sortedThreads = Object.entries(threadScores)
-              .map(([name, data]: [string, any]) => ({
-                name,
-                score: data.score,
-                percentage: data.percentage
-              }))
-              .sort((a, b) => a.score - b.score)
-              .slice(0, 2);
-            setFocusThreads(sortedThreads);
-          }
-          // Load Personal Journey Map unlock analysis
-          const unlockResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/unlock-analysis`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-          });
-          if (unlockResponse.ok) {
-            const unlockData = await unlockResponse.json();
-            setUnlockAnalysis(unlockData);
-          }
-          // Check for partial Personal Journey Map
-          const partialJourneyMapResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/partial`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-          });
-          if (partialJourneyMapResponse.ok) {
-            const partialData = await partialJourneyMapResponse.json();
-            setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
-          }
-          // Load analytics
-          const analyticsResponse = await fetch(`${API_URL}/api/practice/analytics`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-          });
-          if (analyticsResponse.ok) {
-            const analyticsData = await analyticsResponse.json();
-            setAnalytics(analyticsData);
-          }
-          // Load pending practice assignments count
-          const assignmentsResponse = await fetch(`${API_URL}/api/practice-assignments/pending`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-          });
-          if (assignmentsResponse.ok) {
-            const assignmentsData = await assignmentsResponse.json();
-            setPendingAssignmentsCount(assignmentsData.length);
-          }
-          // Check if user has initialized training program
-          const trainingProgressResponse = await fetch(`${API_URL}/api/training/progress`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-          });
-          if (trainingProgressResponse.ok) {
-            setHasTrainingProgram(true);
-          }
+
+      // If Quick Profile completed, load results for focus threads
+      if (statusData.quickProfileCompleted) {
+        const resultsData = await assessments.getQuickProfileResults();
+        const threadScores = resultsData.results.threadScores;
+        // Get 2 lowest scoring threads
+        const sortedThreads = Object.entries(threadScores)
+          .map(([name, data]: [string, any]) => ({
+            name,
+            score: data.raw,
+            percentage: data.percentage
+          }))
+          .sort((a, b) => a.score - b.score)
+          .slice(0, 2);
+        setFocusThreads(sortedThreads);
+
+        // Load Personal Journey Map unlock analysis
+        const unlockData = await assessments.getUnlockAnalysis();
+        setUnlockAnalysis(unlockData as any);
+
+        // Check for partial Personal Journey Map
+        const partialData = await assessments.getPartialPersonalJourneyMap();
+        setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
+
+        // Load analytics using practice service
+        const analyticsData = await practice.getAnalytics();
+        setAnalytics(analyticsData as any);
+
+        // Load pending practice assignments count
+        const assignmentsData = await practice.getPendingAssignments();
+        setPendingAssignmentsCount(assignmentsData.length);
+
+        // Check if user has initialized training program
+        try {
+          await training.getProgress();
+          setHasTrainingProgram(true);
+        } catch (error) {
+          // User hasn't initialized training yet
+          setHasTrainingProgram(false);
         }
       }
     } catch (error) {

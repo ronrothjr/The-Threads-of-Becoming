@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL } from '../config';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import styles from './AssessmentResults.module.css';
 import { logger } from '../utils/logger';
+import * as assessments from '../services/api/assessments';
 
 interface ThreadScore {
   score: number;
@@ -45,11 +45,6 @@ const AssessmentResults: React.FC = () => {
   }, [location.pathname]);
   const loadResults = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
       // Determine which assessment type based on the CURRENT URL
       const isPersonalJourneyMap = location.pathname.includes('personal-journey-map');
       const assessmentType = isPersonalJourneyMap ? 'personal-journey-map' : 'quick-profile';
@@ -58,18 +53,10 @@ const AssessmentResults: React.FC = () => {
         url: location.pathname,
         isPersonalJourneyMap,
         assessmentType,
-        endpoint: `${API_URL}/api/assessments/${assessmentType}/results`,
       });
-      const response = await fetch(`${API_URL}/api/assessments/${assessmentType}/results`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-      if (!response.ok) {
-        logger.error('Failed to load assessment results', { status: response.status });
-        throw new Error('Failed to load results');
-      }
-      const data = await response.json();
+
+      const data = await assessments.getResultsByType(assessmentType);
+
       logger.debug('AssessmentResults loaded', {
         presenceScore: data.results?.threadScores?.presence?.score,
         presencePercentage: data.results?.threadScores?.presence?.percentage,
@@ -77,7 +64,7 @@ const AssessmentResults: React.FC = () => {
       });
       // Force state update
       setResults(null);
-      setTimeout(() => setResults(data.results), 0);
+      setTimeout(() => setResults(data.results as any), 0);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load results');
     } finally {

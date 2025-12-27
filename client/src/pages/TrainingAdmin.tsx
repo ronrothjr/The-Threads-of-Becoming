@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import styles from './TrainingAdmin.module.css';
+import * as admin from '../services/api/admin';
 
 interface TrainingModule {
   _id: string;
@@ -25,14 +25,8 @@ const TrainingAdmin: React.FC = () => {
   }, []);
   const loadModules = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      const response = await fetch(`${API_URL}/api/admin/training/modules`, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setModules(data);
-      }
+      const data = await admin.getAllModules();
+      setModules(data as any);
     } catch (error) {
       console.error('Failed to load modules:', error);
     } finally {

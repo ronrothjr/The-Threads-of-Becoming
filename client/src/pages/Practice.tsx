@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL } from '../config';
 import { Link } from 'react-router-dom';
 import styles from './Article.module.css';
+import * as auth from '../services/api/auth';
+import * as assessments from '../services/api/assessments';
 
 const Practice: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [hasCompletedQuickProfile, setHasCompletedQuickProfile] = useState(false);
   useEffect(() => {
     const checkAuth = async () => {
-      const token = localStorage.getItem('auth_token');
+      const token = auth.getAuthToken();
       if (!token) {
         setIsLoggedIn(false);
         return;
       }
       setIsLoggedIn(true);
       try {
-        const response = await fetch(`${API_URL}/api/assessments/status`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        });
-        if (response.ok) {
-          const data = await response.json();
-          setHasCompletedQuickProfile(data.quickProfileCompleted);
-        }
+        const data = await assessments.getStatus();
+        setHasCompletedQuickProfile(data.quickProfileCompleted);
       } catch (error) {
         console.error('Failed to check assessment status:', error);
       }

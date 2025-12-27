@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { API_URL } from '../config';
 import { useNavigate, useParams } from 'react-router-dom';
 import styles from './TrainingSession.module.css';
 import { logger } from '../utils/logger';
+import * as training from '../services/api/training';
 
 // TrainingModule interfaces based on schema
 interface AudioContent {
@@ -136,54 +136,37 @@ const TrainingSession: React.FC = () => {
   }, [started, hasProgress]);
   const loadModule = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-
       // For now, hardcode to PAUSE Foundation Module
-      const response = await fetch(`${API_URL}/api/training/modules/pause-foundation`, {
-        method: 'GET',
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (!response.ok) {
-        throw new Error('Failed to load training module');
-      }
+      const [data, savedProgress] = await Promise.all([
+        training.getModule('pause-foundation'),
+        training.getModuleProgress('pause-foundation').catch(() => null)
+      ]);
 
-      const data = await response.json();
-      setModule(data);
+      setModule(data as any);
+
       // Load existing progress if any
-      const progressResponse = await fetch(`${API_URL}/api/training/modules/pause-foundation/progress`, {
-        method: 'GET',
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-
-      if (progressResponse.ok) {
-        const savedProgress = await progressResponse.json();
-        if (savedProgress) {
-          setHasProgress(true);
-          if (savedProgress.completed) {
-            // For completed modules, load all responses but start from the beginning
-            setIsCompleted(true);
-            setAllResponses(savedProgress.allResponses || []);
-            setCurrentPhase('ground');
-            setPhaseItemIndex(0);
-            // Don't set started, let user click "Review Module" button
-            logger.info('Loaded completed module for review - starting from beginning', {
-              totalResponses: savedProgress.allResponses?.length || 0
-            });
-          } else {
-            // For in-progress modules, resume from saved position
-            setCurrentPhase(savedProgress.currentPhase as Phase);
-            setPhaseItemIndex(savedProgress.phaseItemIndex);
-            setStarted(true);
-            setSessionStartTime(new Date(savedProgress.sessionStartTime).getTime());
-            logger.info('Resumed from saved progress', {
-              phase: savedProgress.currentPhase,
-              itemIndex: savedProgress.phaseItemIndex
-            });
-          }
+      if (savedProgress) {
+        setHasProgress(true);
+        if (savedProgress.completed) {
+          // For completed modules, load all responses but start from the beginning
+          setIsCompleted(true);
+          setAllResponses(savedProgress.allResponses || []);
+          setCurrentPhase('ground');
+          setPhaseItemIndex(0);
+          // Don't set started, let user click "Review Module" button
+          logger.info('Loaded completed module for review - starting from beginning', {
+            totalResponses: savedProgress.allResponses?.length || 0
+          });
+        } else {
+          // For in-progress modules, resume from saved position
+          setCurrentPhase(savedProgress.currentPhase as Phase);
+          setPhaseItemIndex(savedProgress.phaseItemIndex);
+          setStarted(true);
+          setSessionStartTime(savedProgress.sessionStartTime ? new Date(savedProgress.sessionStartTime).getTime() : Date.now());
+          logger.info('Resumed from saved progress', {
+            phase: savedProgress.currentPhase,
+            itemIndex: savedProgress.phaseItemIndex
+          });
         }
       }
     } catch (err) {
@@ -430,21 +413,13 @@ const TrainingSession: React.FC = () => {
     // Save progress to backend (only if not in review mode)
     if (!isCompleted) {
       try {
-        const token = localStorage.getItem('auth_token');
-        if (token && module) {
-          await fetch(`${API_URL}/api/training/modules/${module.moduleId}/progress`, {
-            method: 'POST',
-            headers: {
-              'Authorization': `Bearer ${token}`,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              currentPhase: nextPhase,
-              phaseItemIndex: nextItemIndex,
-              allResponses: updatedResponses,
-              sessionStartTime: sessionStartTime,
-              completed: false
-            })
+        if (module) {
+          await training.saveProgress(module.moduleId, {
+            currentPhase: nextPhase,
+            phaseItemIndex: nextItemIndex,
+            allResponses: updatedResponses,
+            sessionStartTime: sessionStartTime ?? undefined,
+            completed: false
           });
         }
       } catch (err) {
@@ -468,22 +443,15 @@ const TrainingSession: React.FC = () => {
       const token = localStorage.getItem('auth_token');
       if (!token) return;
 
-      const totalDuration = Math.floor((Date.now() - sessionStartTime) / 60000);
+      const totalDuration = Math.floor((Date.now() - (sessionStartTime || 0)) / 60000);
 
       // Mark progress as completed
-      await fetch(`${API_URL}/api/training/modules/${module.moduleId}/progress`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          currentPhase: 'integrate',
-          phaseItemIndex: 0,
-          allResponses: allResponses,
-          sessionStartTime: sessionStartTime,
-          completed: true
-        })
+      await training.saveProgress(module.moduleId, {
+        currentPhase: 'integrate',
+        phaseItemIndex: 0,
+        allResponses: allResponses,
+        sessionStartTime: sessionStartTime || undefined,
+        completed: true
       });
 
       // Create practice assignments for this module
@@ -491,16 +459,9 @@ const TrainingSession: React.FC = () => {
         p => p.context === 'practice-assignment' || p.context === 'weekly-reflection'
       ) || [];
       if (practicePrompts.length > 0) {
-        await fetch(`${API_URL}/api/training/modules/${module.moduleId}/complete`, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            duration: totalDuration,
-            responses: allResponses,
-          }),
+        await training.completeModule(module.moduleId, {
+          duration: totalDuration,
+          responses: allResponses,
         });
       }
 
@@ -670,21 +631,13 @@ const TrainingSession: React.FC = () => {
                 // Save progress before exiting (only if not in review mode)
                 if (!isCompleted) {
                   try {
-                    const token = localStorage.getItem('auth_token');
-                    if (token && module) {
-                      await fetch(`${API_URL}/api/training/modules/${module.moduleId}/progress`, {
-                        method: 'POST',
-                        headers: {
-                          'Authorization': `Bearer ${token}`,
-                          'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                          currentPhase,
-                          phaseItemIndex,
-                          allResponses,
-                          sessionStartTime,
-                          completed: false
-                        })
+                    if (module) {
+                      await training.saveProgress(module.moduleId, {
+                        currentPhase,
+                        phaseItemIndex,
+                        allResponses,
+                        sessionStartTime: sessionStartTime ?? undefined,
+                        completed: false
                       });
                     }
                   } catch (err) {

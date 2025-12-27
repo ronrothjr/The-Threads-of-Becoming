@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { API_URL } from '../config';
 import { useNavigate, Link } from 'react-router-dom';
+import * as assessments from '../services/api/assessments';
+import * as practice from '../services/api/practice';
 import styles from './PracticeTool.module.css';
 
 interface FocusThread {
@@ -41,27 +42,18 @@ const PracticeTool: React.FC = () => {
   }, []);
   const loadFocusThreads = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-      const resultsResponse = await fetch(`${API_URL}/api/assessments/quick-profile/results`, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (resultsResponse.ok) {
-        const resultsData = await resultsResponse.json();
-        const threadScores = resultsData.results.threadScores;
-        const sortedThreads = Object.entries(threadScores)
-          .map(([name, data]: [string, any]) => ({
-            name,
-            score: data.score,
-            percentage: data.percentage
-          }))
-          .sort((a, b) => a.score - b.score)
-          .slice(0, 2);
-        setFocusThreads(sortedThreads);
-      }
+      // Use centralized assessments service
+      const resultsData = await assessments.getQuickProfileResults();
+      const threadScores = resultsData.results.threadScores;
+      const sortedThreads = Object.entries(threadScores)
+        .map(([name, data]: [string, any]) => ({
+          name,
+          score: data.raw,
+          percentage: data.percentage
+        }))
+        .sort((a, b) => a.score - b.score)
+        .slice(0, 2);
+      setFocusThreads(sortedThreads);
     } catch (error) {
       console.error('Failed to load focus threads:', error);
     } finally {
@@ -70,15 +62,9 @@ const PracticeTool: React.FC = () => {
   };
   const loadPracticeHistory = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) return;
-      const response = await fetch(`${API_URL}/api/practice/history`, {
-        headers: { 'Authorization': `Bearer ${token}` }
-      });
-      if (response.ok) {
-        const history = await response.json();
-        setPracticeHistory(history);
-      }
+      // Use centralized practice service
+      const history = await practice.getHistory();
+      setPracticeHistory(history as any);
     } catch (error) {
       console.error('Failed to load practice history:', error);
     }
@@ -308,22 +294,17 @@ const PracticeTool: React.FC = () => {
     if (!selectedThread) return;
     setSaving(true);
     try {
-      const token = localStorage.getItem('auth_token');
       const notes = Object.entries(responses)
         .map(([step, response]) => `${step.toUpperCase()}: ${response}`)
         .join('\n\n');
-      await fetch(`${API_URL}/api/practice/log`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          threadId: selectedThread,
-          practiceType: 'interactive-hold',
-          notes
-        })
+
+      // Use centralized practice service
+      await practice.log({
+        threadId: selectedThread,
+        practiceType: 'interactive-hold',
+        notes
       });
+
       // Reload history and reset
       await loadPracticeHistory();
       setSelectedThread(null);
@@ -369,21 +350,13 @@ const PracticeTool: React.FC = () => {
   const handleUpdateEntry = async () => {
     if (!editingEntry) return;
     try {
-      const token = localStorage.getItem('auth_token');
-      const response = await fetch(`${API_URL}/api/practice/${editingEntry._id}`, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          notes: editNotes
-        })
+      // Use centralized practice service
+      await practice.update(editingEntry._id, {
+        notes: editNotes
       });
-      if (response.ok) {
-        handleCancelEdit();
-        await loadPracticeHistory();
-      }
+
+      handleCancelEdit();
+      await loadPracticeHistory();
     } catch (error) {
       console.error('Failed to update practice entry:', error);
     }

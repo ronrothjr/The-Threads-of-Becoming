@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { API_URL } from '../config';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import * as auth from '../services/api/auth';
 import styles from './UserMenu.module.css';
 
 const UserMenu: React.FC = () => {
@@ -28,17 +28,9 @@ const UserMenu: React.FC = () => {
   }, [isOpen]);
   const fetchUserInfo = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) return;
-      const response = await fetch(`${API_URL}/api/auth/me`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-      if (response.ok) {
-        const data = await response.json();
-        setUserEmail(data.email);
-      }
+      // Use centralized auth service
+      const data = await auth.getCurrentUser();
+      setUserEmail(data.email);
     } catch (error) {
       console.error('Failed to fetch user info:', error);
     }

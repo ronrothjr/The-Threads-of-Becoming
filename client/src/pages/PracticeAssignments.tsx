@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './PracticeAssignments.module.css';
 import { logger } from '../utils/logger';
-import { API_URL } from '../config';
+import * as practice from '../services/api/practice';
 
 interface PracticeAssignment {
   _id: string;
@@ -34,30 +34,14 @@ const PracticeAssignments: React.FC = () => {
 
   const loadAssignments = async () => {
     try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/login');
-        return;
-      }
-
-      const [pendingRes, upcomingRes] = await Promise.all([
-        fetch(`${API_URL}/api/practice-assignments/pending`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        }),
-        fetch(`${API_URL}/api/practice-assignments/upcoming`, {
-          headers: { 'Authorization': `Bearer ${token}` }
-        })
+      // Use centralized practice service
+      const [pending, upcoming] = await Promise.all([
+        practice.getPendingAssignments(),
+        practice.getUpcomingAssignments()
       ]);
 
-      if (!pendingRes.ok || !upcomingRes.ok) {
-        throw new Error('Failed to load assignments');
-      }
-
-      const pending = await pendingRes.json();
-      const upcoming = await upcomingRes.json();
-
-      setPendingAssignments(pending);
-      setUpcomingAssignments(upcoming);
+      setPendingAssignments(pending as any);
+      setUpcomingAssignments(upcoming as any);
     } catch (err) {
       logger.error('Failed to load practice assignments', { error: err });
     } finally {
@@ -74,15 +58,8 @@ const PracticeAssignments: React.FC = () => {
     if (!currentAssignment || response.trim().length < 10) return;
 
     try {
-      const token = localStorage.getItem('auth_token');
-      await fetch(`${API_URL}/api/practice-assignments/${currentAssignment._id}/submit`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ response }),
-      });
+      // Use centralized practice service
+      await practice.submitAssignment(currentAssignment._id, { response });
 
       logger.info('Practice assignment submitted', { assignmentId: currentAssignment._id });
       setCurrentAssignment(null);
@@ -98,11 +75,8 @@ const PracticeAssignments: React.FC = () => {
     if (!currentAssignment) return;
 
     try {
-      const token = localStorage.getItem('auth_token');
-      await fetch(`${API_URL}/api/practice-assignments/${currentAssignment._id}/skip`, {
-        method: 'POST',
-        headers: { 'Authorization': `Bearer ${token}` },
-      });
+      // Use centralized practice service
+      await practice.skipAssignment(currentAssignment._id);
 
       logger.info('Practice assignment skipped', { assignmentId: currentAssignment._id });
       setCurrentAssignment(null);
