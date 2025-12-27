@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import { quickProfileQuestions } from '../data/quickProfileQuestions';
 import styles from './QuickProfile.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 // Fisher-Yates shuffle algorithm
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -14,7 +13,6 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   }
   return shuffled;
 };
-
 const QuickProfile: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [responses, setResponses] = useState<Record<string, 'A' | 'B' | 'C' | 'D'>>({});
@@ -24,7 +22,6 @@ const QuickProfile: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [questionOrder, setQuestionOrder] = useState<string[]>([]);
   const navigate = useNavigate();
-
   // Get randomized questions - either from saved order or create new
   const randomizedQuestions = useMemo(() => {
     if (questionOrder.length > 0) {
@@ -36,7 +33,6 @@ const QuickProfile: React.FC = () => {
     // Create new random order
     return shuffleArray(quickProfileQuestions);
   }, [questionOrder]);
-
   // Load partial progress on mount
   useEffect(() => {
     const loadPartialProgress = async () => {
@@ -46,13 +42,11 @@ const QuickProfile: React.FC = () => {
           setIsLoading(false);
           return;
         }
-
         const response = await fetch(`${API_URL}/api/assessments/quick-profile/partial`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
         });
-
         if (response.ok) {
           const data = await response.json();
           if (data && data.responses) {
@@ -61,7 +55,6 @@ const QuickProfile: React.FC = () => {
               loadedResponses[r.questionId] = r.answer;
             });
             setResponses(loadedResponses);
-
             // Restore question order if saved
             if (data.questionOrder && data.questionOrder.length > 0) {
               setQuestionOrder(data.questionOrder);
@@ -74,10 +67,8 @@ const QuickProfile: React.FC = () => {
         setIsLoading(false);
       }
     };
-
     loadPartialProgress();
   }, []);
-
   // Set current question to first unanswered after questions are loaded
   useEffect(() => {
     if (!isLoading && randomizedQuestions.length > 0 && Object.keys(responses).length > 0) {
@@ -87,7 +78,6 @@ const QuickProfile: React.FC = () => {
       }
     }
   }, [isLoading, randomizedQuestions, responses]);
-
   // Save partial progress when user navigates away
   useEffect(() => {
     const savePartialProgress = async () => {
@@ -95,15 +85,12 @@ const QuickProfile: React.FC = () => {
         try {
           const token = localStorage.getItem('auth_token');
           if (!token) return;
-
           const formattedResponses = Object.entries(responses).map(([questionId, answer]) => ({
             questionId,
             answer
           }));
-
           // Save the current question order
           const currentQuestionOrder = randomizedQuestions.map(q => q.id);
-
           await fetch(`${API_URL}/api/assessments/quick-profile/partial`, {
             method: 'POST',
             headers: {
@@ -120,17 +107,14 @@ const QuickProfile: React.FC = () => {
         }
       }
     };
-
     // Save on unmount if there are partial responses
     return () => {
       savePartialProgress();
     };
   }, [responses, randomizedQuestions]);
-
   const question = randomizedQuestions[currentQuestion];
   const progress = ((currentQuestion + 1) / randomizedQuestions.length) * 100;
   const isLastQuestion = currentQuestion === randomizedQuestions.length - 1;
-
   // Don't render if question is not available
   if (!question) {
     return (
@@ -139,14 +123,12 @@ const QuickProfile: React.FC = () => {
       </div>
     );
   }
-
   const handleAnswer = (answer: 'A' | 'B' | 'C' | 'D') => {
     // Save the response (using original question ID for scoring)
     const newResponses = { ...responses, [question.id]: answer };
     setResponses(newResponses);
     setError('');
     setIsTransitioning(true);
-
     // Auto-advance after 1 second
     setTimeout(() => {
       if (isLastQuestion) {
@@ -157,37 +139,29 @@ const QuickProfile: React.FC = () => {
       }
     }, 1000);
   };
-
   const handlePrevious = () => {
     if (currentQuestion > 0 && !isTransitioning) {
       setCurrentQuestion(currentQuestion - 1);
       setError('');
     }
   };
-
   const handleNext = () => {
     if (!isLastQuestion && !isTransitioning) {
       setCurrentQuestion(currentQuestion + 1);
-      setError('');
     }
   };
-
   const handleSubmit = async (finalResponses: Record<string, 'A' | 'B' | 'C' | 'D'> = responses) => {
     setIsSubmitting(true);
-    setError('');
-
     try {
       const token = localStorage.getItem('auth_token');
       if (!token) {
         navigate('/login');
         return;
       }
-
       const formattedResponses = Object.entries(finalResponses).map(([questionId, answer]) => ({
         questionId,
         answer
       }));
-
       const response = await fetch(`${API_URL}/api/assessments/quick-profile`, {
         method: 'POST',
         headers: {
@@ -196,12 +170,10 @@ const QuickProfile: React.FC = () => {
         },
         body: JSON.stringify({ responses: formattedResponses })
       });
-
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({ message: 'Failed to submit assessment' }));
         throw new Error(errorData.message || 'Failed to submit assessment');
       }
-
       // Navigate to results page
       navigate('/assessment/results');
     } catch (err) {
@@ -210,7 +182,6 @@ const QuickProfile: React.FC = () => {
       setIsTransitioning(false);
     }
   };
-
   if (isLoading) {
     return (
       <div className={styles.quickProfileContainer}>
@@ -218,7 +189,6 @@ const QuickProfile: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className={styles.quickProfileContainer}>
       <div className={styles.compactLayout}>
@@ -226,7 +196,6 @@ const QuickProfile: React.FC = () => {
         <div className={styles.instructions}>
           <p>Choose how you <strong>actually</strong> respond in challenging moments—not how you wish you responded. There are no "right" answers.</p>
         </div>
-
         {/* Progress and Question */}
         <div className={styles.header}>
           <div className={styles.progressInfo}>
@@ -236,11 +205,9 @@ const QuickProfile: React.FC = () => {
             <div className={styles.progressFill} style={{ width: `${progress}%` }} />
           </div>
         </div>
-
         {/* Question and Options */}
         <div className={`${styles.questionCard} ${isTransitioning ? styles.transitioning : ''}`} key={question.id}>
           <h2 className={styles.questionText}>{question.text}</h2>
-
           <div className={styles.options}>
             {question.options.map((option) => (
               <label
@@ -260,12 +227,10 @@ const QuickProfile: React.FC = () => {
             ))}
           </div>
         </div>
-
         {error && (
           <div className={styles.error}>{error}</div>
         )}
       </div>
-
       {/* Fixed Bottom Navigation Bar */}
       <div className={styles.bottomNav}>
         <div className={styles.bottomNavContent}>
@@ -278,19 +243,15 @@ const QuickProfile: React.FC = () => {
               ← Previous
             </button>
           )}
-
           <div className={styles.spacer}></div>
-
           {!isLastQuestion && responses[question.id] && !isSubmitting && (
             <button
               onClick={handleNext}
-              disabled={isTransitioning}
               className={styles.buttonPrimary}
             >
               Next →
             </button>
           )}
-
           {isSubmitting && (
             <div className={styles.submittingText}>Submitting your assessment...</div>
           )}
@@ -299,5 +260,4 @@ const QuickProfile: React.FC = () => {
     </div>
   );
 };
-
 export default QuickProfile;

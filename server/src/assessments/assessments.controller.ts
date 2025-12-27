@@ -49,6 +49,8 @@ export class AssessmentsController {
       await this.assessmentsService.hasCompletedQuickProfile(req.user.userId);
     const hasPartial =
       await this.assessmentsService.hasPartialQuickProfile(req.user.userId);
+    const hasCompletedJourneyMap =
+      await this.assessmentsService.hasCompletedPersonalJourneyMap(req.user.userId);
     const subscription = await this.assessmentsService.getUserSubscription(
       req.user.userId,
     );
@@ -58,6 +60,7 @@ export class AssessmentsController {
     return {
       quickProfileCompleted: hasCompleted,
       hasPartialQuickProfile: hasPartial,
+      personalJourneyMapCompleted: hasCompletedJourneyMap,
       ...subscription,
       ...retakeInfo,
     };

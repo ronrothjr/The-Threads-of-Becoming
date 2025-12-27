@@ -56,11 +56,19 @@ import AssessmentResults from './pages/AssessmentResults';
 import PersonalJourneyMapResults from './pages/PersonalJourneyMapResults';
 import Journal from './pages/Journal';
 import PracticeTool from './pages/PracticeTool';
+import TrainingSetup from './pages/TrainingSetup';
+import TrainingDashboard from './pages/TrainingDashboard';
+import TrainingSession from './pages/TrainingSession';
+import TrainingProgress from './pages/TrainingProgress';
+import PracticeAssignments from './pages/PracticeAssignments';
+import TrainingAdmin from './pages/TrainingAdmin';
+import TrainingModuleEditor from './pages/TrainingModuleEditor';
 
 function AppContent() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const isAssessmentPage = location.pathname.startsWith('/assessment/');
+  const isTrainingSession = location.pathname.startsWith('/training/session') || location.pathname.startsWith('/training/module/');
 
   // Scroll to top on route change
   useEffect(() => {
@@ -89,7 +97,7 @@ function AppContent() {
 
   return (
     <>
-      <Navigation />
+      {!isTrainingSession && <Navigation />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog />} />
@@ -142,8 +150,16 @@ function AppContent() {
         <Route path="/assessment/personal-journey-map/results" element={<PersonalJourneyMapResults />} />
         <Route path="/journal" element={<Journal />} />
         <Route path="/practice-tool" element={<PracticeTool />} />
+        <Route path="/training/setup" element={<TrainingSetup />} />
+        <Route path="/training/dashboard" element={<TrainingDashboard />} />
+        <Route path="/training/session" element={<TrainingSession />} />
+        <Route path="/training/module/:moduleId" element={<TrainingSession />} />
+        <Route path="/training/progress" element={<TrainingProgress />} />
+        <Route path="/practice-assignments" element={<PracticeAssignments />} />
+        <Route path="/admin/training" element={<TrainingAdmin />} />
+        <Route path="/admin/training/module/:moduleId" element={<TrainingModuleEditor />} />
       </Routes>
-      {!isAssessmentPage && <Footer />}
+      {!isAssessmentPage && !isTrainingSession && <Footer />}
       <PersistentVideo isHomePage={isHomePage} />
     </>
   );

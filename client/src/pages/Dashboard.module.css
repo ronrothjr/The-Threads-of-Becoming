@@ -107,6 +107,27 @@
   margin-bottom: 1rem;
 }
 
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.featureList li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  color: var(--color-text);
+  position: relative;
+}
+
+.featureList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+  font-weight: bold;
+}
+
 .meta {
   font-size: var(--text-sm);
   color: var(--color-teal);

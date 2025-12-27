@@ -1,0 +1,413 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* Loading & Empty States */
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: var(--text-xl);
+  color: var(--color-text-light);
+}
+
+.empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty h2 {
+  font-size: var(--text-2xl);
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.empty p {
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  font-size: var(--text-lg);
+}
+
+.moduleButton {
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.moduleButton:hover {
+  transform: translateY(-2px);
+}
+
+/* List View */
+.listView {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.pageHeader h1 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.pageHeader p {
+  color: var(--color-text-light);
+  font-size: var(--text-lg);
+}
+
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+}
+
+/* Assignment Cards */
+.assignmentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.assignmentCard {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.assignmentCard:hover {
+  border-color: var(--color-teal);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.typeLabel {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.moduleLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  text-transform: capitalize;
+}
+
+.assignmentCard h3 {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.duration {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+.startButton {
+  background: var(--color-teal);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.startButton:hover {
+  transform: translateX(2px);
+}
+
+/* Upcoming Assignments */
+.upcomingList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.upcomingCard {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-purple);
+}
+
+.upcomingDate {
+  flex-shrink: 0;
+  width: 100px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-purple);
+}
+
+.upcomingContent {
+  flex: 1;
+}
+
+.upcomingType {
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.upcomingCard p {
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+/* Assignment View */
+.assignmentView {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  background: transparent;
+  color: var(--color-text-light);
+  border: none;
+  padding: 0.5rem 0;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.backButton:hover {
+  color: var(--color-navy);
+}
+
+.assignmentType {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.promptSection {
+  margin-bottom: 2rem;
+}
+
+.promptSection h1 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.guidance {
+  background: #fffbf0;
+  border-left: 4px solid #ffd700;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.guidance p {
+  color: var(--color-text);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.meta {
+  display: flex;
+  gap: 2rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+.responseSection {
+  margin-bottom: 2rem;
+}
+
+.responseSection label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+  font-size: var(--text-base);
+}
+
+.responseInput {
+  width: 100%;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: var(--text-base);
+  font-family: inherit;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.responseInput:focus {
+  outline: none;
+  border-color: var(--color-teal);
+}
+
+.responseInput::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.wordCount {
+  margin-top: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  text-align: right;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.skipButton {
+  background: transparent;
+  color: var(--color-text-light);
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.skipButton:hover {
+  background: #f9fafb;
+  border-color: var(--color-text-light);
+}
+
+.submitButton {
+  background: var(--color-teal);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .assignmentView {
+    padding: 1.5rem 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .upcomingCard {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .upcomingDate {
+    width: auto;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .startButton {
+    width: 100%;
+  }
+}

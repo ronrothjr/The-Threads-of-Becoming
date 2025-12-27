@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { API_URL } from '../config';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import LoginModal from './LoginModal';
 import UserMenu from './UserMenu';
 import styles from './Navigation.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,13 +17,10 @@ const Navigation: React.FC = () => {
   const { isAuthenticated, logout } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
-
   const isOnQuickProfile = location.pathname === '/assessment/quick-profile';
   const isOnPersonalJourneyMap = location.pathname === '/assessment/personal-journey-map';
-
   useEffect(() => {
     let ticking = false;
-
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -34,42 +30,35 @@ const Navigation: React.FC = () => {
         ticking = true;
       }
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   useEffect(() => {
     if (isAuthenticated) {
       checkAssessmentStatus();
       fetchUserInfo();
     }
   }, [isAuthenticated]);
-
   const checkAssessmentStatus = async () => {
     try {
       const token = localStorage.getItem('auth_token');
       if (!token) return;
-
       const response = await fetch(`${API_URL}/api/assessments/status`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
-
       if (response.ok) {
         const data = await response.json();
         setHasCompletedQuickProfile(data.quickProfileCompleted);
         setHasPartialQuickProfile(data.hasPartialQuickProfile);
       }
-
       // Check for partial Personal Journey Map
       const partialJourneyMapResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/partial`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
-
       if (partialJourneyMapResponse.ok) {
         const partialData = await partialJourneyMapResponse.json();
         setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
@@ -78,18 +67,15 @@ const Navigation: React.FC = () => {
       console.error('Failed to check assessment status:', error);
     }
   };
-
   const fetchUserInfo = async () => {
     try {
       const token = localStorage.getItem('auth_token');
       if (!token) return;
-
       const response = await fetch(`${API_URL}/api/auth/me`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
-
       if (response.ok) {
         const data = await response.json();
         setUserEmail(data.email);
@@ -98,7 +84,6 @@ const Navigation: React.FC = () => {
       console.error('Failed to fetch user info:', error);
     }
   };
-
   const getInitials = (email: string): string => {
     if (!email) return 'U';
     const name = email.split('@')[0];
@@ -108,7 +93,6 @@ const Navigation: React.FC = () => {
     }
     return name.slice(0, 2).toUpperCase();
   };
-
   const handleExitQuickProfile = async () => {
     try {
       const token = localStorage.getItem('auth_token');
@@ -117,66 +101,39 @@ const Navigation: React.FC = () => {
         closeMobileMenu();
         return;
       }
-
       // Get current responses from QuickProfile state (if any)
       // For now, just navigate - the QuickProfile component handles saving
       navigate('/dashboard');
       closeMobileMenu();
-
       // Refresh status to update button text
       await checkAssessmentStatus();
     } catch (error) {
       console.error('Failed to save progress:', error);
-      navigate('/dashboard');
-      closeMobileMenu();
     }
   };
-
   const handleExitPersonalJourneyMap = async () => {
-    try {
-      const token = localStorage.getItem('auth_token');
-      if (!token) {
-        navigate('/dashboard');
-        closeMobileMenu();
-        return;
-      }
-
-      // Navigate to dashboard - the PersonalJourneyMap component handles auto-saving
-      navigate('/dashboard');
-      closeMobileMenu();
-
-      // Refresh status to update button text
-      await checkAssessmentStatus();
-    } catch (error) {
-      console.error('Failed to save progress:', error);
-      navigate('/dashboard');
-      closeMobileMenu();
-    }
+    // Navigate to dashboard - the PersonalJourneyMap component handles auto-saving
+    navigate('/dashboard');
+    closeMobileMenu();
+    await checkAssessmentStatus();
   };
-
   const handleLogout = () => {
     logout();
     closeMobileMenu();
     navigate('/');
   };
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
-
   const openLoginModal = () => {
     setIsLoginModalOpen(true);
-    closeMobileMenu();
   };
-
   const closeLoginModal = () => {
     setIsLoginModalOpen(false);
   };
-
   return (
     <>
       <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
@@ -190,17 +147,13 @@ const Navigation: React.FC = () => {
                 <span>Creative Advance<br />Institute</span>
               </Link>
             </div>
-
             <button
               className={styles.hamburger}
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
             >
               <span className={styles.hamburgerLine}></span>
-              <span className={styles.hamburgerLine}></span>
-              <span className={styles.hamburgerLine}></span>
             </button>
-
             <div className={`${styles.navLinks} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
               {isAuthenticated ? (
                 <>
@@ -225,7 +178,6 @@ const Navigation: React.FC = () => {
                       <UserMenu />
                     </div>
                   </div>
-
                   {/* Mobile: Show all items inline */}
                   <div className={styles.mobileAuthNav}>
                     {userEmail && (
@@ -236,7 +188,6 @@ const Navigation: React.FC = () => {
                         <div className={styles.mobileUserEmail}>{userEmail}</div>
                       </div>
                     )}
-
                     {!hasCompletedQuickProfile && !isOnQuickProfile && !isOnPersonalJourneyMap && (
                       <Link to="/assessment/quick-profile" className={styles.mobileNavItem} onClick={closeMobileMenu}>
                         {hasPartialQuickProfile ? 'Resume Quick Profile' : 'Quick Profile'}
@@ -252,24 +203,16 @@ const Navigation: React.FC = () => {
                         Pause Personal Journey Map
                       </button>
                     )}
-
                     <div className={styles.mobileDivider} />
-
                     <Link to="/dashboard" className={styles.mobileNavItem} onClick={closeMobileMenu}>
                       Dashboard
                     </Link>
-
-                    <div className={styles.mobileDivider} />
-
                     <Link to="/blog" className={styles.mobileNavItem} onClick={closeMobileMenu}>Blog</Link>
                     <Link to="/explore" className={styles.mobileNavItem} onClick={closeMobileMenu}>Explore</Link>
                     <Link to="/navigate" className={styles.mobileNavItem} onClick={closeMobileMenu}>Navigate</Link>
                     <Link to="/training" className={styles.mobileNavItem} onClick={closeMobileMenu}>Training</Link>
                     <Link to="/chapters" className={styles.mobileNavItem} onClick={closeMobileMenu}>Chapters</Link>
                     <Link to="/mission" className={styles.mobileNavItem} onClick={closeMobileMenu}>Mission</Link>
-
-                    <div className={styles.mobileDivider} />
-
                     <button onClick={handleLogout} className={styles.mobileNavItem}>
                       Log Out
                     </button>
@@ -292,10 +235,8 @@ const Navigation: React.FC = () => {
           </div>
         </div>
       </nav>
-
       <LoginModal isOpen={isLoginModalOpen} onClose={closeLoginModal} />
     </>
   );
 };
-
 export default Navigation;

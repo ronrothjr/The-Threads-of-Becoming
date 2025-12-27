@@ -120,6 +120,18 @@ export class AssessmentsService {
     return count > 0;
   }
 
+  async hasCompletedPersonalJourneyMap(userId: string): Promise<boolean> {
+    const count = await this.assessmentModel
+      .countDocuments({
+        userId,
+        type: 'personal_journey_map',
+        isComplete: true,
+      })
+      .exec();
+
+    return count > 0;
+  }
+
   async getUserSubscription(userId: string) {
     const user = await this.userModel.findById(userId).exec();
 

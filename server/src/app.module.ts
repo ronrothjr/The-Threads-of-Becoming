@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule as NestConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
@@ -11,9 +12,16 @@ import { AssessmentsModule } from './assessments/assessments.module';
 import { JournalModule } from './journal/journal.module';
 import { PracticeModule } from './practice/practice.module';
 import { LoggingModule } from './logging/logging.module';
+import { TrainingModule } from './training/training.module';
+import { ServicesModule } from './services/services.module';
 
 @Module({
   imports: [
+    // Load environment variables from .env file
+    NestConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '.env',
+    }),
     ConfigModule,
     MongooseModule.forRootAsync({
       inject: [SecretsService],
@@ -31,6 +39,8 @@ import { LoggingModule } from './logging/logging.module';
     JournalModule,
     PracticeModule,
     LoggingModule,
+    TrainingModule,
+    ServicesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

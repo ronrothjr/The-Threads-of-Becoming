@@ -1,0 +1,125 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'S3 buckets and CloudFront distributions for media files'
+
+Parameters:
+  AudioBucketName:
+    Type: String
+    Default: threads-of-becoming-audio
+  ImageBucketName:
+    Type: String
+    Default: threads-of-becoming-images
+
+Resources:
+
+  # CloudFront Origin Access Control for Audio
+  AudioOAC:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${AWS::StackName}-audio-oac"
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  # CloudFront Origin Access Control for Images
+  ImageOAC:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${AWS::StackName}-image-oac"
+        OriginAccessControlOriginType: s3
+        SigningBehavior: always
+        SigningProtocol: sigv4
+
+  # CloudFront Distribution for Audio
+  AudioCloudFront:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Origins:
+          - Id: AudioS3Origin
+            DomainName: !Sub "${AudioBucketName}.s3.${AWS::Region}.amazonaws.com"
+            S3OriginConfig: {}
+            OriginAccessControlId: !GetAtt AudioOAC.Id
+        DefaultCacheBehavior:
+          TargetOriginId: AudioS3Origin
+          ViewerProtocolPolicy: redirect-to-https
+          CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingOptimized
+          OriginRequestPolicyId: 88a5eaf4-2fd4-4709-b370-b4c650ea3fcf # Managed-CORS-S3Origin
+        Enabled: true
+        Comment: 'CloudFront distribution for audio files'
+
+  # CloudFront Distribution for Images
+  ImageCloudFront:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Origins:
+          - Id: ImageS3Origin
+            DomainName: !Sub "${ImageBucketName}.s3.${AWS::Region}.amazonaws.com"
+            S3OriginConfig: {}
+            OriginAccessControlId: !GetAtt ImageOAC.Id
+        DefaultCacheBehavior:
+          TargetOriginId: ImageS3Origin
+          ViewerProtocolPolicy: redirect-to-https
+          CachePolicyId: 4135ea2d-6df8-44a3-9df3-4b5a84be39ad # Managed-CachingOptimized
+          OriginRequestPolicyId: 88a5eaf4-2fd4-4709-b370-b4c650ea3fcf # Managed-CORS-S3Origin
+        Enabled: true
+        Comment: 'CloudFront distribution for image files'
+
+  # S3 Bucket Policy for Audio
+  AudioBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref AudioBucketName
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: s3:GetObject
+            Resource: !Sub "arn:aws:s3:::${AudioBucketName}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${AudioCloudFront}"
+
+  # S3 Bucket Policy for Images
+  ImageBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref ImageBucketName
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: s3:GetObject
+            Resource: !Sub "arn:aws:s3:::${ImageBucketName}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${ImageCloudFront}"
+
+Outputs:
+  AudioBucketName:
+    Description: 'Name of the S3 bucket for audio files'
+    Value: !Ref AudioBucketName
+    Export:
+      Name: !Sub "${AWS::StackName}-AudioBucket"
+
+  ImageBucketName:
+    Description: 'Name of the S3 bucket for image files'
+    Value: !Ref ImageBucketName
+    Export:
+      Name: !Sub "${AWS::StackName}-ImageBucket"
+
+  AudioCloudFrontDomain:
+    Description: 'CloudFront domain for audio files'
+    Value: !GetAtt AudioCloudFront.DomainName
+    Export:
+      Name: !Sub "${AWS::StackName}-AudioCloudFront"
+
+  ImageCloudFrontDomain:
+    Description: 'CloudFront domain for image files'
+    Value: !GetAtt ImageCloudFront.DomainName
+    Export:
+      Name: !Sub "${AWS::StackName}-ImageCloudFront"

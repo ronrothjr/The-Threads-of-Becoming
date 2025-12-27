@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { API_URL } from '../config';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './Journal.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 interface JournalEntry {
   _id: string;
@@ -13,7 +12,6 @@ interface JournalEntry {
   createdAt: string;
   tags?: string[];
 }
-
 interface JournalStats {
   journalDaysCount: number;
   totalEntries: number;
@@ -39,24 +37,20 @@ const Journal: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [showHoldPractice, setShowHoldPractice] = useState(false);
-
   // Filters
   const [filterThread, setFilterThread] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [filterTag, setFilterTag] = useState<string>('all');
-
   // Edit state
   const [editingEntry, setEditingEntry] = useState<JournalEntry | null>(null);
   const [editContent, setEditContent] = useState('');
   const [editTags, setEditTags] = useState<string[]>([]);
   const [editTagInput, setEditTagInput] = useState('');
-
   useEffect(() => {
     loadJournalData();
   }, []);
-
   const loadJournalData = async () => {
     try {
       const token = localStorage.getItem('auth_token');
@@ -64,7 +58,6 @@ const Journal: React.FC = () => {
         navigate('/login');
         return;
       }
-
       const [entriesRes, statsRes, resultsRes] = await Promise.all([
         fetch(`${API_URL}/api/journal`, {
           headers: { 'Authorization': `Bearer ${token}` }
@@ -76,21 +69,17 @@ const Journal: React.FC = () => {
           headers: { 'Authorization': `Bearer ${token}` }
         })
       ]);
-
       if (entriesRes.ok) {
         const entriesData = await entriesRes.json();
         setEntries(entriesData);
       }
-
       if (statsRes.ok) {
         const statsData = await statsRes.json();
         setStats(statsData);
       }
-
       if (resultsRes.ok) {
         const resultsData = await resultsRes.json();
         const threadScores = resultsData.results.threadScores;
-
         // Get 2 lowest scoring threads
         const sortedThreads = Object.entries(threadScores)
           .map(([name, data]: [string, any]) => ({
@@ -100,7 +89,6 @@ const Journal: React.FC = () => {
           }))
           .sort((a, b) => a.score - b.score)
           .slice(0, 2);
-
         setFocusThreads(sortedThreads);
       }
     } catch (error) {
@@ -109,11 +97,9 @@ const Journal: React.FC = () => {
       setLoading(false);
     }
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!threadFocus || !content) return;
-
     setSubmitting(true);
     try {
       const token = localStorage.getItem('auth_token');
@@ -130,7 +116,6 @@ const Journal: React.FC = () => {
           tags
         })
       });
-
       if (response.ok) {
         setThreadFocus('');
         setContent('');
@@ -145,18 +130,15 @@ const Journal: React.FC = () => {
       setSubmitting(false);
     }
   };
-
   const handleAddTag = () => {
     if (tagInput.trim() && !tags.includes(tagInput.trim())) {
       setTags([...tags, tagInput.trim()]);
       setTagInput('');
     }
   };
-
   const handleRemoveTag = (tag: string) => {
     setTags(tags.filter(t => t !== tag));
   };
-
   const handleEditEntry = (entry: JournalEntry) => {
     setEditingEntry(entry);
     setEditContent(entry.content);
@@ -164,18 +146,13 @@ const Journal: React.FC = () => {
     setEditTagInput('');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   const handleCancelEdit = () => {
     setEditingEntry(null);
     setEditContent('');
     setEditTags([]);
-    setEditTagInput('');
   };
-
   const handleUpdateEntry = async () => {
     if (!editingEntry || !editContent) return;
-
-    setSubmitting(true);
     try {
       const token = localStorage.getItem('auth_token');
       const response = await fetch(`${API_URL}/api/journal/${editingEntry._id}`, {
@@ -189,21 +166,16 @@ const Journal: React.FC = () => {
           tags: editTags
         })
       });
-
       if (response.ok) {
-        handleCancelEdit();
         await loadJournalData();
+        handleCancelEdit();
       }
     } catch (error) {
       console.error('Failed to update journal entry:', error);
-    } finally {
-      setSubmitting(false);
     }
   };
-
   const handleDeleteEntry = async (entryId: string) => {
     if (!window.confirm('Are you sure you want to delete this entry?')) return;
-
     try {
       const token = localStorage.getItem('auth_token');
       const response = await fetch(`${API_URL}/api/journal/${entryId}`, {
@@ -212,7 +184,6 @@ const Journal: React.FC = () => {
           'Authorization': `Bearer ${token}`
         }
       });
-
       if (response.ok) {
         await loadJournalData();
       }
@@ -220,18 +191,15 @@ const Journal: React.FC = () => {
       console.error('Failed to delete journal entry:', error);
     }
   };
-
   const handleAddEditTag = () => {
     if (editTagInput.trim() && !editTags.includes(editTagInput.trim())) {
       setEditTags([...editTags, editTagInput.trim()]);
       setEditTagInput('');
     }
   };
-
   const handleRemoveEditTag = (tag: string) => {
     setEditTags(editTags.filter(t => t !== tag));
   };
-
   const exportEntries = () => {
     const filtered = getFilteredEntries();
     const text = filtered.map(entry => {
@@ -239,7 +207,6 @@ const Journal: React.FC = () => {
       const tagsList = entry.tags && entry.tags.length > 0 ? `\nTags: ${entry.tags.join(', ')}` : '';
       return `[${date}] ${entry.threadFocus.toUpperCase()}${tagsList}\n\n${entry.content}\n\n---\n`;
     }).join('\n');
-
     const blob = new Blob([text], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -250,27 +217,21 @@ const Journal: React.FC = () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-
   const getFilteredEntries = () => {
     return entries.filter(entry => {
       // Thread filter
       if (filterThread !== 'all' && entry.threadFocus !== filterThread) return false;
-
       // Search filter
       if (searchQuery && !entry.content.toLowerCase().includes(searchQuery.toLowerCase())) return false;
-
       // Date range filter
       const entryDate = new Date(entry.createdAt);
       if (startDate && entryDate < new Date(startDate)) return false;
       if (endDate && entryDate > new Date(endDate + 'T23:59:59')) return false;
-
       // Tag filter
       if (filterTag !== 'all' && (!entry.tags || !entry.tags.includes(filterTag))) return false;
-
       return true;
     });
   };
-
   const getAllTags = () => {
     const tagSet = new Set<string>();
     entries.forEach(entry => {
@@ -278,18 +239,15 @@ const Journal: React.FC = () => {
     });
     return Array.from(tagSet).sort();
   };
-
   if (loading) {
     return <div className={styles.container}><div className={styles.loading}>Loading...</div></div>;
   }
-
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>Practice Journal</h1>
         <p className={styles.subtitle}>Record your observations and insights</p>
       </header>
-
       {stats && (
         <div className={styles.statsCard}>
           <h2>Your Progress</h2>
@@ -315,7 +273,6 @@ const Journal: React.FC = () => {
           </p>
         </div>
       )}
-
       {focusThreads.length > 0 && (
         <div className={styles.focusThreadsCard}>
           <h2>Your Focus Threads</h2>
@@ -494,14 +451,12 @@ const Journal: React.FC = () => {
                   ]
                 }
               };
-
               const threadData = threadPractices[thread.name];
               const randomPractice = threadData.practices[Math.floor(Math.random() * threadData.practices.length)];
               const guidance = {
                 poles: threadData.poles,
                 practice: randomPractice
               };
-
               return (
                 <div key={thread.name} className={styles.focusThreadItem}>
                   <div className={styles.focusThreadHeader}>
@@ -535,10 +490,8 @@ const Journal: React.FC = () => {
           </p>
         </div>
       )}
-
       <section className={styles.newEntrySection}>
         <h2>New Journal Entry</h2>
-
         <div className={styles.holdReference}>
           <button
             type="button"
@@ -547,40 +500,33 @@ const Journal: React.FC = () => {
           >
             {showHoldPractice ? '▼' : '▶'} HOLD Practice Reference
           </button>
-
           {showHoldPractice && (
             <div className={styles.holdContent}>
               <p className={styles.holdIntro}>
                 When you find yourself in collapse, use HOLD to find your way back:
               </p>
-
               <div className={styles.holdStep}>
                 <h4>H – HALT</h4>
                 <p>Stop the automatic reaction. Create a pause between stimulus and response. Notice you've collapsed without judgment.</p>
               </div>
-
               <div className={styles.holdStep}>
                 <h4>O – OBSERVE</h4>
                 <p>Notice what's happening in your body and in the present moment. Where is the tension? What sensations are you experiencing?</p>
               </div>
-
               <div className={styles.holdStep}>
                 <h4>L – LOOK</h4>
                 <p>Name the tension you're experiencing. Identify which poles are pulling at you. Just naming it breaks its unconscious grip.</p>
               </div>
-
               <div className={styles.holdStep}>
                 <h4>D – DECIDE</h4>
                 <p>Choose your next action from fullness, not from fear or collapse. The decision comes from integration, not from one pole trying to win.</p>
               </div>
-
               <p className={styles.holdFooter}>
                 <Link to="/practice">Read more about the HOLD practice →</Link>
               </p>
             </div>
           )}
         </div>
-
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.formGroup}>
             <label htmlFor="threadFocus">Thread Focus</label>
@@ -601,7 +547,6 @@ const Journal: React.FC = () => {
               <option value="becoming">BECOMING</option>
             </select>
           </div>
-
           <div className={styles.formGroup}>
             <label htmlFor="practiceType">Practice Type (optional)</label>
             <select
@@ -617,20 +562,18 @@ const Journal: React.FC = () => {
               <option value="decide">DECIDE - Choose from fullness</option>
             </select>
           </div>
-
           <div className={styles.formGroup}>
             <label htmlFor="content">Entry</label>
             <textarea
               id="content"
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              required
               placeholder="What did you notice? When did you collapse? What emerged from holding the tension?"
               rows={8}
+              required
               className={styles.textarea}
             />
           </div>
-
           <div className={styles.formGroup}>
             <label>Tags (optional)</label>
             <div className={styles.tagInput}>
@@ -657,13 +600,11 @@ const Journal: React.FC = () => {
               </div>
             )}
           </div>
-
           <button type="submit" disabled={submitting} className={styles.submitButton}>
             {submitting ? 'Saving...' : 'Save Entry'}
           </button>
         </form>
       </section>
-
       <section className={styles.entriesSection}>
         <div className={styles.entriesHeader}>
           <h2>Journal Entries</h2>
@@ -671,7 +612,6 @@ const Journal: React.FC = () => {
             Export Entries
           </button>
         </div>
-
         <div className={styles.filters}>
           <div className={styles.filterGroup}>
             <label>Thread:</label>
@@ -686,7 +626,6 @@ const Journal: React.FC = () => {
               <option value="becoming">BECOMING</option>
             </select>
           </div>
-
           <div className={styles.filterGroup}>
             <label>Tag:</label>
             <select value={filterTag} onChange={(e) => setFilterTag(e.target.value)} className={styles.filterSelect}>
@@ -696,7 +635,6 @@ const Journal: React.FC = () => {
               ))}
             </select>
           </div>
-
           <div className={styles.filterGroup}>
             <label>Search:</label>
             <input
@@ -707,7 +645,6 @@ const Journal: React.FC = () => {
               className={styles.searchInput}
             />
           </div>
-
           <div className={styles.filterGroup}>
             <label>From:</label>
             <input
@@ -717,7 +654,6 @@ const Journal: React.FC = () => {
               className={styles.dateInput}
             />
           </div>
-
           <div className={styles.filterGroup}>
             <label>To:</label>
             <input
@@ -770,12 +706,10 @@ const Journal: React.FC = () => {
           </div>
         )}
       </section>
-
       <div className={styles.backLinks}>
         <Link to="/dashboard">← Back to Dashboard</Link>
         <Link to="/practice-tool">Start Interactive Practice →</Link>
       </div>
-
       {editingEntry && (
         <div className={styles.modal} onClick={handleCancelEdit}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -783,13 +717,9 @@ const Journal: React.FC = () => {
               <h2>Edit Journal Entry</h2>
               <button onClick={handleCancelEdit} className={styles.modalClose}>×</button>
             </div>
-
             <div className={styles.modalBody}>
               <div className={styles.formGroup}>
                 <label>Thread: {editingEntry.threadFocus.toUpperCase()}</label>
-              </div>
-
-              <div className={styles.formGroup}>
                 <label htmlFor="editContent">Entry</label>
                 <textarea
                   id="editContent"
@@ -798,9 +728,6 @@ const Journal: React.FC = () => {
                   rows={10}
                   className={styles.textarea}
                 />
-              </div>
-
-              <div className={styles.formGroup}>
                 <label>Tags</label>
                 <div className={styles.tagInput}>
                   <input
@@ -827,7 +754,6 @@ const Journal: React.FC = () => {
                 )}
               </div>
             </div>
-
             <div className={styles.modalFooter}>
               <button onClick={handleCancelEdit} className={styles.cancelButton}>
                 Cancel
@@ -842,5 +768,4 @@ const Journal: React.FC = () => {
     </div>
   );
 };
-
 export default Journal;

@@ -1,0 +1,35 @@
+# Claude Code Rules for The Threads of Becoming
+
+## Process Management
+- **NEVER** start the server or client directly with commands like:
+  - `npm start`
+  - `npm run start:dev`
+  - `node dist/main`
+  - `npm run dev`
+  - Any command that spawns a new server/client process
+- **ONLY** use PM2 commands for process management:
+  - `pm2 start <app-name>`
+  - `pm2 restart <app-name>`
+  - `pm2 stop <app-name>`
+  - `pm2 logs <app-name>`
+  - `pm2 list`
+- **Before API testing**: Always verify PM2 is managing the processes with `pm2 list`
+- **If server/client isn't running**: Alert the user and ask them to start PM2 - do NOT start processes yourself
+
+## Port Usage
+- Port 5050: threads-server (PM2 managed only)
+- Port 5051: threads-client (PM2 managed only)
+- If you find orphaned processes on these ports, kill them and alert the user
+
+## Error Handling
+- The application uses a global exception filter (AllExceptionsFilter) with Fastify
+- All errors should return structured JSON responses with statusCode, error, message, timestamp, and path
+- Server-side logging includes full stack traces
+
+## Build Process
+- Server: `cd server && npm run build`
+- Client: `cd client && npm run build`
+- Always check for compilation errors before considering a task complete
+- **NEVER rebuild manually** - PM2 watches for file changes and rebuilds automatically
+- After making code changes, just check `pm2 logs threads-server` to verify the rebuild succeeded
+- Only check `pm2 list` to verify the server is running - do NOT restart or rebuild unless specifically asked

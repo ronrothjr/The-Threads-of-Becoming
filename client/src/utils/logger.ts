@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
+import { API_URL } from '../config';
 
 export const logger = {
   info: (message: string, data?: any) => {
@@ -6,6 +6,14 @@ export const logger = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ level: 'info', message, data }),
+    }).catch(() => {}); // Silent fail
+  },
+
+  warn: (message: string, data?: any) => {
+    fetch(`${API_URL}/api/logging/client`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ level: 'warn', message, data }),
     }).catch(() => {}); // Silent fail
   },
 

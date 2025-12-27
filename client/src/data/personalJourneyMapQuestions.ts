@@ -872,13 +872,13 @@ export const personalJourneyMapQuestions: PersonalJourneyMapQuestion[] = [
 ];
 
 // Helper to get questions by thread
-export function getQuestionsByThread(thread: string): ExtendedQuestion[] {
-  return extendedAssessmentQuestions.filter(q => q.thread === thread);
+export function getQuestionsByThread(thread: string): PersonalJourneyMapQuestion[] {
+  return personalJourneyMapQuestions.filter(q => q.thread === thread);
 }
 
 // Helper to get question by ID
-export function getQuestionById(id: string): ExtendedQuestion | undefined {
-  return extendedAssessmentQuestions.find(q => q.id === id);
+export function getQuestionById(id: string): PersonalJourneyMapQuestion | undefined {
+  return personalJourneyMapQuestions.find(q => q.id === id);
 }
 
 // Thread order for display

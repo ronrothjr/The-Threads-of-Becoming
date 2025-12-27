@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { API_URL } from '../config';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './Dashboard.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 interface FocusThread {
   name: string;
   score: number;
   percentage: number;
 }
-
 interface UnlockAnalysis {
   isUnlocked: boolean;
   canUnlock: boolean;
@@ -28,14 +26,12 @@ interface UnlockAnalysis {
     personalizedMessage: string;
   };
 }
-
 interface RetakeInfo {
   canRetake: boolean;
   daysUntilRetake: number | null;
   lastTakenDate: string | null;
   nextAvailableDate: string | null;
 }
-
 interface Analytics {
   journalStats: {
     totalEntries: number;
@@ -46,31 +42,30 @@ interface Analytics {
   practiceStats: {
     totalSessions: number;
     practiceDaysCount: number;
-    threadBreakdown: Record<string, number>;
     typeBreakdown: Record<string, number>;
-    recentActivity: Array<{ date: string; count: number }>;
+    threadBreakdown: Record<string, number>;
   };
   streaks: {
     currentStreak: number;
     longestStreak: number;
   };
 }
-
 const Dashboard: React.FC = () => {
   const navigate = useNavigate();
   const [hasCompletedQuickProfile, setHasCompletedQuickProfile] = useState(false);
   const [hasPartialQuickProfile, setHasPartialQuickProfile] = useState(false);
+  const [hasCompletedJourneyMap, setHasCompletedJourneyMap] = useState(false);
   const [hasPartialJourneyMap, setHasPartialJourneyMap] = useState(false);
   const [focusThreads, setFocusThreads] = useState<FocusThread[]>([]);
   const [unlockAnalysis, setUnlockAnalysis] = useState<UnlockAnalysis | null>(null);
   const [analytics, setAnalytics] = useState<Analytics | null>(null);
   const [retakeInfo, setRetakeInfo] = useState<RetakeInfo | null>(null);
+  const [pendingAssignmentsCount, setPendingAssignmentsCount] = useState(0);
+  const [hasTrainingProgram, setHasTrainingProgram] = useState(false);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     loadDashboardData();
   }, []);
-
   const loadDashboardData = async () => {
     try {
       const token = localStorage.getItem('auth_token');
@@ -78,17 +73,15 @@ const Dashboard: React.FC = () => {
         navigate('/login');
         return;
       }
-
       // Load assessment status
       const statusResponse = await fetch(`${API_URL}/api/assessments/status`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
-
       if (statusResponse.ok) {
         const statusData = await statusResponse.json();
         setHasCompletedQuickProfile(statusData.quickProfileCompleted);
         setHasPartialQuickProfile(statusData.hasPartialQuickProfile);
-
+        setHasCompletedJourneyMap(statusData.personalJourneyMapCompleted || false);
         // Set retake info
         if (statusData.canRetake !== undefined) {
           setRetakeInfo({
@@ -98,17 +91,14 @@ const Dashboard: React.FC = () => {
             nextAvailableDate: statusData.nextAvailableDate
           });
         }
-
         // If Quick Profile completed, load results for focus threads
         if (statusData.quickProfileCompleted) {
           const resultsResponse = await fetch(`${API_URL}/api/assessments/quick-profile/results`, {
             headers: { 'Authorization': `Bearer ${token}` }
           });
-
           if (resultsResponse.ok) {
             const resultsData = await resultsResponse.json();
             const threadScores = resultsData.results.threadScores;
-
             // Get 2 lowest scoring threads
             const sortedThreads = Object.entries(threadScores)
               .map(([name, data]: [string, any]) => ({
@@ -118,38 +108,46 @@ const Dashboard: React.FC = () => {
               }))
               .sort((a, b) => a.score - b.score)
               .slice(0, 2);
-
             setFocusThreads(sortedThreads);
           }
-
           // Load Personal Journey Map unlock analysis
           const unlockResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/unlock-analysis`, {
             headers: { 'Authorization': `Bearer ${token}` }
           });
-
           if (unlockResponse.ok) {
             const unlockData = await unlockResponse.json();
             setUnlockAnalysis(unlockData);
           }
-
           // Check for partial Personal Journey Map
           const partialJourneyMapResponse = await fetch(`${API_URL}/api/assessments/personal-journey-map/partial`, {
             headers: { 'Authorization': `Bearer ${token}` }
           });
-
           if (partialJourneyMapResponse.ok) {
             const partialData = await partialJourneyMapResponse.json();
             setHasPartialJourneyMap(partialData && partialData.responses && partialData.responses.length > 0);
           }
-
           // Load analytics
           const analyticsResponse = await fetch(`${API_URL}/api/practice/analytics`, {
             headers: { 'Authorization': `Bearer ${token}` }
           });
-
           if (analyticsResponse.ok) {
             const analyticsData = await analyticsResponse.json();
             setAnalytics(analyticsData);
+          }
+          // Load pending practice assignments count
+          const assignmentsResponse = await fetch(`${API_URL}/api/practice-assignments/pending`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          if (assignmentsResponse.ok) {
+            const assignmentsData = await assignmentsResponse.json();
+            setPendingAssignmentsCount(assignmentsData.length);
+          }
+          // Check if user has initialized training program
+          const trainingProgressResponse = await fetch(`${API_URL}/api/training/progress`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+          });
+          if (trainingProgressResponse.ok) {
+            setHasTrainingProgram(true);
           }
         }
       }
@@ -159,12 +157,10 @@ const Dashboard: React.FC = () => {
       setLoading(false);
     }
   };
-
   const handleLogout = () => {
     localStorage.removeItem('auth_token');
     navigate('/');
   };
-
   return (
     <div className={styles.dashboard}>
       <section className={styles.hero}>
@@ -173,13 +169,11 @@ const Dashboard: React.FC = () => {
           <p className={styles.subtitle}>Your personal assessment and growth platform</p>
         </div>
       </section>
-
       <section className={`${styles.content} section-lg`}>
-        <div className="container">
           <div className={styles.layoutGrid}>
             {/* Left Column */}
             <div className={styles.leftColumn}>
-              <div className={styles.card}>
+            <div className={styles.card}>
                 <h2>Quick Profile Assessment</h2>
               <p>Get started with our 21-question assessment to discover your Thread patterns.</p>
               <p className={styles.meta}>5 minutes • Free{retakeInfo?.canRetake ? ' • Available every 30 days' : ''}</p>
@@ -205,7 +199,6 @@ const Dashboard: React.FC = () => {
                 </Link>
               )}
             </div>
-
             {hasCompletedQuickProfile && focusThreads.length > 0 && (
               <div className={styles.card}>
                 <h2>Your Focused Practice</h2>
@@ -226,14 +219,44 @@ const Dashboard: React.FC = () => {
                 </Link>
               </div>
             )}
+            <div className={styles.card}>
+                <h2>Thread Capacity Training</h2>
+                <p>Structured training program to systematically build capacity in your growth-edge threads.</p>
+                <ul className={styles.featureList}>
+                  <li>Personalized daily sessions based on your assessment</li>
+                  <li>Progressive skill-building across all 7 threads</li>
+                  <li>Track capacity growth over time</li>
+                </ul>
+                {hasTrainingProgram ? (
+                  <Link to="/training/dashboard" className={styles.primaryButton}>
+                    Continue Your Training →
+                  </Link>
+                ) : (
+                  <Link to="/training/setup" className={styles.primaryButton}>
+                    Setup Your Training Program →
+                  </Link>
+                )}
             </div>
-
+            </div>
+            {pendingAssignmentsCount > 0 && (
+              <div className={styles.card}>
+                <h2>Practice Assignments</h2>
+                <p>You have {pendingAssignmentsCount} practice {pendingAssignmentsCount === 1 ? 'assignment' : 'assignments'} ready to complete.</p>
+                <ul className={styles.featureList}>
+                  <li>Apply your learning between training sessions</li>
+                  <li>Build sustainable practice habits</li>
+                  <li>Track your growth over time</li>
+                </ul>
+                <Link to="/practice-assignments" className={styles.primaryButton}>
+                  View Assignments ({pendingAssignmentsCount}) →
+                </Link>
+              </div>
+            )}
             {/* Center Column - Analytics */}
             {hasCompletedQuickProfile && analytics && (analytics.journalStats.totalEntries > 0 || analytics.practiceStats.totalSessions > 0) && (
               <div className={styles.centerColumn}>
                 <div className={styles.card}>
                   <h2>Your Practice Analytics</h2>
-
                   <div className={styles.streaks}>
                     <div className={styles.streakCard}>
                       <div className={styles.streakNumber}>{analytics.streaks.currentStreak}</div>
@@ -244,7 +267,6 @@ const Dashboard: React.FC = () => {
                       <div className={styles.streakLabel}>Longest Streak</div>
                     </div>
                   </div>
-
                   <div className={styles.statsGrid}>
                     <div className={styles.statBox}>
                       <div className={styles.statNumber}>{analytics.journalStats.totalEntries}</div>
@@ -258,12 +280,10 @@ const Dashboard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {Object.keys(analytics.journalStats.threadBreakdown).length > 0 && (
                   <div className={styles.card}>
                     <h2>Thread Focus Distribution</h2>
                     <p className={styles.subtitle}>Where you've been directing your attention</p>
-
                     <div className={styles.threadBreakdown}>
                       <h3>Journal Entries</h3>
                       {Object.entries(analytics.journalStats.threadBreakdown)
@@ -287,7 +307,6 @@ const Dashboard: React.FC = () => {
                           );
                         })}
                     </div>
-
                     {Object.keys(analytics.practiceStats.threadBreakdown).length > 0 && (
                       <div className={styles.threadBreakdown}>
                         <h3>Practice Sessions</h3>
@@ -317,14 +336,13 @@ const Dashboard: React.FC = () => {
                 )}
               </div>
             )}
-
             {/* Right Column - Personal Journey Map */}
             {hasCompletedQuickProfile && unlockAnalysis && (
-              <div className={styles.card}>
+              <div className={styles.rightColumn}>
+                <div className={styles.card}>
                   <h2>Personal Journey Map</h2>
                   <p className={styles.subtitle}>$10 one-time purchase • Free for Premium subscribers</p>
                   <p>Complete these requirements to unlock your personalized 70-question journey map:</p>
-
                   <div className={styles.requirementsList}>
                   {/* Requirement 1: Journal Days */}
                   <div className={styles.requirement}>
@@ -346,7 +364,6 @@ const Dashboard: React.FC = () => {
                       </span>
                     </div>
                   </div>
-
                   {/* Requirement 2: Practice Sessions */}
                   <div className={styles.requirement}>
                     <div className={styles.requirementHeader}>
@@ -367,7 +384,6 @@ const Dashboard: React.FC = () => {
                       </span>
                     </div>
                   </div>
-
                   {/* Requirement 3: Thread Diversity */}
                   <div className={styles.requirement}>
                     <div className={styles.requirementHeader}>
@@ -388,7 +404,6 @@ const Dashboard: React.FC = () => {
                       </span>
                     </div>
                   </div>
-
                   {/* Requirement 4: Time Elapsed */}
                   <div className={styles.requirement}>
                     <div className={styles.requirementHeader}>
@@ -410,14 +425,16 @@ const Dashboard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
-                {unlockAnalysis.insights.personalizedMessage && (
+                {unlockAnalysis?.insights?.personalizedMessage && (
                   <p className={styles.unlockMessage}>{unlockAnalysis.insights.personalizedMessage}</p>
                 )}
-
                 {/* DEV: Override for local testing */}
-                {true || unlockAnalysis.isUnlocked ? (
-                  hasPartialJourneyMap ? (
+                {true || unlockAnalysis?.isUnlocked ? (
+                  hasCompletedJourneyMap ? (
+                    <Link to="/assessment/personal-journey-map/results" className={styles.primaryButton}>
+                      View Your Journey Map Results →
+                    </Link>
+                  ) : hasPartialJourneyMap ? (
                     <Link to="/assessment/personal-journey-map" className={styles.primaryButton}>
                       Resume Personal Journey Map →
                     </Link>
@@ -437,8 +454,8 @@ const Dashboard: React.FC = () => {
                   </div>
                 )}
               </div>
+            </div>
             )}
-
             {!hasCompletedQuickProfile && (
               <>
                 <div className={styles.card}>
@@ -449,7 +466,6 @@ const Dashboard: React.FC = () => {
                     Complete Quick Profile First
                   </button>
                 </div>
-
                 <div className={styles.card}>
                   <h2>Your Progress</h2>
                   <p>Track your growth through the See, Hold, Emerge movements.</p>
@@ -457,28 +473,21 @@ const Dashboard: React.FC = () => {
                     <p>📊 Assessment results will appear here</p>
                   </div>
                 </div>
-
                 <div className={styles.card}>
                   <h2>Practice Journal</h2>
                   <p>Record your daily Thread navigation and insights.</p>
-                  <button className={styles.secondaryButton} disabled>
-                    Complete Quick Profile First
-                  </button>
                 </div>
               </>
             )}
           </div>
-
-          <div className={styles.accountSection}>
-            <h2>Account</h2>
-            <button onClick={handleLogout} className={styles.logoutButton}>
-              Log Out
-            </button>
-          </div>
-        </div>
       </section>
+      <div className={styles.accountSection}>
+        <h2>Account</h2>
+        <button onClick={handleLogout} className={styles.logoutButton}>
+          Log Out
+        </button>
+      </div>
     </div>
   );
 };
-
 export default Dashboard;

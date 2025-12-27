@@ -1,0 +1,442 @@
+{
+  "moduleId": "pause-building",
+  "thread": "PAUSE",
+  "tier": "building",
+  "title": "PAUSE Building: Applying Tension-Holding to Real Life",
+  "seedQuestion": "How long should I hold something before acting?",
+  "tensions": {
+    "axis1": {
+      "pole1": "Act now (urgency, momentum)",
+      "pole2": "Wait, pause (patience, reflection)"
+    },
+    "axis2": {
+      "pole1": "Trust impulse (intuition, spontaneity)",
+      "pole2": "Deliberate carefully (analysis, consideration)"
+    }
+  },
+  "quadrants": [
+    {
+      "name": "REACTIVE RUSH",
+      "description": "Urgent action without reflection - impulse dominates",
+      "examples": [
+        "Firing off angry email immediately",
+        "Making major decisions in emotional states",
+        "Saying yes to everything to avoid disappointing people"
+      ]
+    },
+    {
+      "name": "THOUGHTFUL ACTION",
+      "description": "Timely response with adequate reflection",
+      "examples": [
+        "Responding to conflict after processing emotions",
+        "Making decisions with both intuition and analysis",
+        "Acting when ready, not when pressured"
+      ]
+    },
+    {
+      "name": "PRODUCTIVE PATIENCE",
+      "description": "Strategic waiting that serves the situation",
+      "examples": [
+        "Letting heated conversations cool before continuing",
+        "Sleeping on major decisions",
+        "Allowing creative projects to marinate"
+      ]
+    },
+    {
+      "name": "PARALYSIS",
+      "description": "Endless deliberation that prevents action",
+      "examples": [
+        "Analysis paralysis on simple decisions",
+        "Waiting for perfect clarity that never comes",
+        "Missing opportunities through over-caution"
+      ]
+    }
+  ],
+  "collapsePatterns": [
+    {
+      "name": "The Reactor",
+      "direction": "Act now + Trust impulse",
+      "description": "Collapses into immediate action without adequate pause",
+      "behavioralSigns": [
+        "Send message/email within minutes of feeling triggered",
+        "Make decisions in heightened emotional states",
+        "Rarely sleep on important choices",
+        "Justify with 'I'm just being authentic' or 'strike while iron is hot'"
+      ],
+      "protectiveFunction": "Protects from uncertainty, ambiguity, sitting with uncomfortable feelings"
+    },
+    {
+      "name": "The Overthinker",
+      "direction": "Wait + Deliberate carefully",
+      "description": "Collapses into endless analysis, avoiding action",
+      "behavioralSigns": [
+        "Need more information even when enough exists",
+        "Delay responses until 'absolutely sure'",
+        "Miss time-sensitive opportunities",
+        "Justify with 'I'm being thoughtful' or 'better safe than sorry'"
+      ],
+      "protectiveFunction": "Protects from risk, making mistakes, being judged for poor decisions"
+    }
+  ],
+  "learningObjectives": [
+    "Hold PAUSE tension for 5-7 minutes with moderately activating personal material",
+    "Recognize your collapse pattern within hours of occurrence (not days)",
+    "Apply PAUSE framework to at least one real current dilemma",
+    "Distinguish spiral patterns (growth) from circular patterns (repetition)",
+    "Name what you're protecting when you collapse to either pole"
+  ],
+  "milestones": [
+    {
+      "name": "5-7 Minute Hold",
+      "description": "Successfully held PAUSE tension for 5-7 minutes without collapsing",
+      "successCriteria": "Stayed present with both NOW and WAIT without forcing resolution"
+    },
+    {
+      "name": "Real-Time Recognition",
+      "description": "Recognized collapse within hours of occurrence",
+      "successCriteria": "Can name: which pole, what triggered it, what you were protecting"
+    },
+    {
+      "name": "Real-World Application",
+      "description": "Applied PAUSE framework to actual current life situation",
+      "successCriteria": "Used full protocol: name both poles, hold tension, notice emergence"
+    },
+    {
+      "name": "Pattern Awareness",
+      "description": "Can distinguish spiral from circular patterns in own behavior",
+      "successCriteria": "Identify whether repeated patterns show capacity growth or stagnation"
+    }
+  ],
+  "slides": [
+    {
+      "slideNumber": 1,
+      "title": "PAUSE Building: From Recognition to Application",
+      "visualDescription": "Title slide with PAUSE thread icon, showing NOW and WAIT arrows converging into a center holding space. Background suggests movement from theory to practice.",
+      "narration": {
+        "text": "Welcome to PAUSE Building. In the Foundation module, you learned to recognize the PAUSE thread and identify your collapse patterns. Now we move from recognition to application. This module asks you to work with real PAUSE dilemmas from your own life. You'll practice holding tension for 5 to 7 minutes, recognize collapse within hours instead of days, and discover what emerges when you don't force resolution. This will feel more activating than Foundation because we're working with your actual material. You can modify or pause at any time. The goal isn't perfection, it's building capacity through practice.",
+        "voiceId": "george",
+        "speed": 0.88
+      }
+    },
+    {
+      "slideNumber": 2,
+      "title": "PAUSE in Real Contexts",
+      "visualDescription": "Four-quadrant diagram showing real-world PAUSE situations: work deadline, relationship conflict, creative project timing, parenting moment. Each quadrant shows both NOW and WAIT impulses.",
+      "narration": {
+        "text": "PAUSE shows up everywhere in life. At work, you face deadlines that demand action NOW, while quality needs more time. In relationships, conflicts trigger urgency to respond immediately, yet processing first might serve better. Creative projects pull between finishing and refining. Parenting moments ask: address this behavior now, or wait until everyone is calm? Each situation contains both truths. Acting now has wisdom. Waiting has wisdom. The question isn't which is right, but can you hold both long enough to discover what wants to emerge?",
+        "voiceId": "george",
+        "speed": 0.88
+      }
+    },
+    {
+      "slideNumber": 3,
+      "title": "Deepening Your Collapse Awareness",
+      "visualDescription": "Diagram showing The Reactor and The Overthinker collapse patterns, with body-based markers and protective functions illustrated. Shows timeline: immediate reaction vs hours-later recognition vs real-time awareness.",
+      "narration": {
+        "text": "In Foundation, you identified your primary collapse pattern. Now we deepen. The Reactor collapses into immediate action, sends the email, makes the decision, responds before processing. This protects from sitting with uncertainty and uncomfortable feelings. The Overthinker collapses into endless analysis, needs more information, delays until absolutely sure, misses opportunities. This protects from risk and being judged for mistakes. Building tier asks: can you catch your collapse within hours instead of days? Can you name what you're protecting? This awareness is the foundation of capacity.",
+        "voiceId": "george",
+        "speed": 0.88
+      }
+    },
+    {
+      "slideNumber": 4,
+      "title": "Spiral vs Circular Patterns",
+      "visualDescription": "Visual comparison: circular arrow showing repetitive pattern with no growth, spiral showing same pattern at increasing depth/capacity. Include examples of each.",
+      "narration": {
+        "text": "As you practice PAUSE, you'll notice yourself in similar situations repeatedly. This is where we distinguish circular from spiral patterns. Circular means you're repeating the same collapse with no growth. You recognize it afterward, feel frustrated, but can't shift in the moment. Spiral means you're encountering the same pattern but with increasing capacity. Maybe you catch it sooner, hold tension longer, or notice what you're protecting. Same pattern, deeper awareness. Spiral is not failure, it's how capacity builds. Most growth looks like spirals, not straight lines.",
+        "voiceId": "george",
+        "speed": 0.88
+      }
+    },
+    {
+      "slideNumber": 5,
+      "title": "What Emerges When You Hold",
+      "visualDescription": "Image of open hands holding space between NOW and WAIT, with light or new possibility emerging from the center. Suggests emergence rather than forced resolution.",
+      "narration": {
+        "text": "When you hold PAUSE tension without collapsing, something unexpected happens. A third option appears that wasn't visible before. A creative solution emerges. Clarity arrives without forcing it. You discover what was trying to emerge all along. This isn't magic, it's what becomes possible when you don't collapse into either pole too quickly. In this module, you'll practice holding for 5 to 7 minutes. Not to achieve a specific outcome, but to create space for emergence. Trust the process. What wants to emerge will emerge when you stop forcing resolution.",
+        "voiceId": "george",
+        "speed": 0.88
+      }
+    },
+    {
+      "slideNumber": 6,
+      "title": "Your Practice This Week",
+      "visualDescription": "Three-part visual showing daily micro-practice (3 breaths), weekly mini-session (15 min), and real-world application. Include time estimates and simple icons.",
+      "narration": {
+        "text": "Building capacity requires consistent practice between sessions. You'll do three types. Daily micro-practices: when you notice urgency, pause for three conscious breaths first. Before responding to texts or emails, notice which pole is pulling you. Two to three times per week, do a fifteen-minute mini-session working with a current PAUSE dilemma. And weekly, choose one real situation where you apply the full framework. The goal is not perfection. The goal is practice. Every time you pause, you're building neural pathways. Every time you hold tension, you're expanding capacity. This is how transformation happens.",
+        "voiceId": "george",
+        "speed": 0.88
+      }
+    }
+  ],
+  "meditations": [
+    {
+      "title": "Holding PAUSE: Working with Real Material",
+      "duration": 12,
+      "scriptSections": {
+        "opening": "Find a comfortable position, either seated or lying down. [~~] Close your eyes if that feels safe, or keep them softly focused on a point in front of you. [~~] Take three deep breaths, letting your body settle into this moment. [~~~]",
+        "deepening": "Bring to mind a real situation from your life where you feel urgency to act NOW. [~~] Maybe it's a conversation you need to have, a decision you need to make, an email waiting for response. [~~] Don't filter for something easy. Choose something that has real charge for you. [~~~]\n\nNotice in your body where that urgency lives. [~~] Maybe it's in your chest, your throat, your hands wanting to move. [~~] Just notice. Don't change it. [~~~]\n\nNow, without letting go of that urgency, bring awareness to what might need more time. [~~] What might happen if you paused? [~~] What wisdom might patience offer? [~~] Notice where this lives in your body. [~~] Maybe it's a softening in your shoulders, a settling in your belly, a slowing of your breath. [~~~]\n\nBoth are true. [~~] Both are wise. [~~] The urgency is real and protective. [~~] The pause is real and protective. [~~~]\n\nCan you hold both? [~~] Not choosing, not resolving, just holding. [~~~]\n\nIf you notice yourself collapsing to either pole, that's information. [~~] Notice which way you collapse. [~~] Notice what you're protecting yourself from. [~~] No judgment. Just awareness. [~~~~]\n\nStay here in this space of holding. [~~] Both NOW and WAIT. [~~] Both urgency and patience. [~~] What happens if you don't collapse to either side? [~~~~]\n\nWhat's trying to emerge in this space? [~~] You don't need to force an answer. [~~] Just notice what arises when you create space. [~~~~~]",
+        "closing": "Begin to bring your awareness back to your breath. [~~] Notice your body in this space. [~~] Wiggle your fingers and toes. [~~] When you're ready, open your eyes. [~~~]\n\nTake a moment to acknowledge what you just did. [~~] You held tension without collapsing. [~~] Even if it was hard, even if you did collapse, you practiced. [~~] That's how capacity builds. [~~~]"
+      },
+      "audio": {
+        "text": "Find a comfortable position, either seated or lying down. [~~] Close your eyes if that feels safe, or keep them softly focused on a point in front of you. [~~] Take three deep breaths, letting your body settle into this moment. [~~~]\n\nBring to mind a real situation from your life where you feel urgency to act NOW. [~~] Maybe it's a conversation you need to have, a decision you need to make, an email waiting for response. [~~] Don't filter for something easy. Choose something that has real charge for you. [~~~]\n\nNotice in your body where that urgency lives. [~~] Maybe it's in your chest, your throat, your hands wanting to move. [~~] Just notice. Don't change it. [~~~]\n\nNow, without letting go of that urgency, bring awareness to what might need more time. [~~] What might happen if you paused? [~~] What wisdom might patience offer? [~~] Notice where this lives in your body. [~~] Maybe it's a softening in your shoulders, a settling in your belly, a slowing of your breath. [~~~]\n\nBoth are true. [~~] Both are wise. [~~] The urgency is real and protective. [~~] The pause is real and protective. [~~~]\n\nCan you hold both? [~~] Not choosing, not resolving, just holding. [~~~]\n\nIf you notice yourself collapsing to either pole, that's information. [~~] Notice which way you collapse. [~~] Notice what you're protecting yourself from. [~~] No judgment. Just awareness. [~~~~]\n\nStay here in this space of holding. [~~] Both NOW and WAIT. [~~] Both urgency and patience. [~~] What happens if you don't collapse to either side? [~~~~]\n\nWhat's trying to emerge in this space? [~~] You don't need to force an answer. [~~] Just notice what arises when you create space. [~~~~~]\n\nBegin to bring your awareness back to your breath. [~~] Notice your body in this space. [~~] Wiggle your fingers and toes. [~~] When you're ready, open your eyes. [~~~]\n\nTake a moment to acknowledge what you just did. [~~] You held tension without collapsing. [~~] Even if it was hard, even if you did collapse, you practiced. [~~] That's how capacity builds. [~~~]",
+        "voiceId": "mia",
+        "speed": 0.78
+      }
+    }
+  ],
+  "exercises": [
+    {
+      "title": "Collapse Recognition Mapping",
+      "type": "solo",
+      "duration": 15,
+      "setup": "Get paper and pen. Review the past week and identify 3 specific times you collapsed in PAUSE. Choose real moments with specific details.",
+      "experience": "For each collapse moment, map: 1) Which pole did you collapse toward (NOW or WAIT)? 2) What was the triggering situation? 3) What were you protecting yourself from? 4) How long after did you recognize the collapse? 5) If you could do it again, how long would you try to hold the tension?",
+      "reflection": "Look at your three examples. Do you see a pattern? Is there a common trigger? A consistent protective function? Are you moving from days-later recognition to hours-later? This is your baseline for growth."
+    },
+    {
+      "title": "7-Minute Hold Practice",
+      "type": "solo",
+      "duration": 15,
+      "setup": "Choose a PAUSE dilemma you're facing right now. Something real with actual stakes. Set a timer for 7 minutes. Have journal ready.",
+      "experience": "For 7 minutes, hold both poles of your dilemma without resolving it. Name NOW pole: what's the urgency? Name WAIT pole: what needs more time? Hold both. If you collapse toward action, notice it and return to holding. If you collapse toward paralysis, notice it and return to holding. Don't force resolution. Just hold.",
+      "reflection": "What emerged during those 7 minutes? Did you collapse? How many times? What were you protecting? Was there a moment when something new became visible? Journal whatever arose."
+    },
+    {
+      "title": "Body Mapping PAUSE",
+      "type": "solo",
+      "duration": 20,
+      "setup": "Stand in open space. Think of a current PAUSE situation. You'll embody each pole physically.",
+      "experience": "Part 1: Embody NOW. How does urgency move in your body? Fast? Sharp? Forward? Move that way for 2 minutes. Notice sensations. Part 2: Embody WAIT. How does patience move in your body? Slow? Grounded? Still? Move that way for 2 minutes. Notice sensations. Part 3: Can you hold both? Move between them. What gesture or posture holds both urgency and patience? Explore for 3 minutes.",
+      "reflection": "Where in your body does each pole live? What did you discover about your relationship to NOW vs WAIT through movement? Did a third option emerge when you tried to hold both physically?"
+    },
+    {
+      "title": "Spiral vs Circular Assessment",
+      "type": "solo",
+      "duration": 12,
+      "setup": "Review 2-3 PAUSE moments from the past month. Choose recurring situations (similar contexts or similar collapse patterns).",
+      "experience": "For each recurring situation, ask: Am I showing any capacity growth? Can I hold tension even 30 seconds longer? Do I recognize collapse even slightly sooner? Do I have any more awareness of what I'm protecting? If YES to any = spiral. If NO to all = circular.",
+      "reflection": "Spiral is not failure. It's how growth happens. If you're in circular patterns, that's information about where you need more support or different strategies. If you're in spiral, celebrate even tiny capacity gains."
+    }
+  ],
+  "writingPrompts": [
+    {
+      "prompt": "What was I protecting myself from when I collapsed into NOW (immediate action)?",
+      "type": "exploration",
+      "suggestedDuration": 10,
+      "guidance": "Write freely without censoring. The protective function is intelligent, not pathological. What discomfort, uncertainty, or risk were you trying to avoid by acting quickly?",
+      "context": "in-session"
+    },
+    {
+      "prompt": "What was I protecting myself from when I collapsed into WAIT (endless deliberation)?",
+      "type": "exploration",
+      "suggestedDuration": 10,
+      "guidance": "Write freely without censoring. What risk, judgment, or mistake were you trying to avoid by postponing action? What feels safer about waiting?",
+      "context": "in-session"
+    },
+    {
+      "prompt": "Describe a time I held PAUSE tension successfully for 5+ minutes. What emerged?",
+      "type": "reflection",
+      "suggestedDuration": 12,
+      "guidance": "Be specific: What was the situation? How did you hold both poles? What did it feel like in your body? What became visible that wasn't visible before?",
+      "context": "in-session"
+    },
+    {
+      "prompt": "Write from the NOW pole for 3 minutes, then WAIT pole for 3 minutes. What's true in each?",
+      "type": "application",
+      "suggestedDuration": 8,
+      "guidance": "Choose a current PAUSE dilemma. Set a timer. Write from NOW first: all the reasons to act immediately. Then write from WAIT: all the reasons to pause. Don't edit or judge. Let each pole speak.",
+      "context": "in-session"
+    },
+    {
+      "prompt": "How does my PAUSE collapse pattern show up in: work, relationships, creativity, and parenting/caregiving?",
+      "type": "integration",
+      "suggestedDuration": 15,
+      "guidance": "Map your pattern across life domains. Do you collapse the same way in every context, or differently? Where is your collapse most rigid? Where do you have most flexibility?",
+      "context": "practice-assignment",
+      "scheduledAfterDays": 3
+    }
+  ],
+  "knowledgeChecks": [
+    {
+      "type": "collapse_recognition",
+      "question": "Sarah has been drafting an important email to her boss for 3 days. She's rewritten it 8 times, asked 4 people to review it, and still doesn't feel 'ready' to send it. Which collapse pattern is she demonstrating?",
+      "options": [
+        {
+          "text": "The Reactor - collapsing into immediate action",
+          "isCorrect": false,
+          "feedback": "The Reactor sends the email quickly without adequate pause. Sarah is doing the opposite—she's stuck in endless deliberation."
+        },
+        {
+          "text": "The Overthinker - collapsing into endless analysis",
+          "isCorrect": true,
+          "feedback": "Correct. Sarah is collapsing into the WAIT pole—endless revision, seeking more input, delaying action. She's protecting herself from the risk of making a mistake or being judged."
+        },
+        {
+          "text": "Neither - she's holding the tension appropriately",
+          "isCorrect": false,
+          "feedback": "3 days and 8 rewrites for an email suggests collapse into over-deliberation, not productive tension-holding."
+        }
+      ]
+    },
+    {
+      "type": "collapse_recognition",
+      "question": "Marcus gets a critical text from his partner. He immediately types a defensive response and hits send within 2 minutes. Later that evening, he regrets how he responded. Which collapse pattern is he demonstrating?",
+      "options": [
+        {
+          "text": "The Reactor - collapsing into immediate action",
+          "isCorrect": true,
+          "feedback": "Correct. Marcus collapsed into NOW—responding within minutes while activated. He's protecting himself from sitting with the discomfort of the criticism and uncertainty about how to respond."
+        },
+        {
+          "text": "The Overthinker - collapsing into endless analysis",
+          "isCorrect": false,
+          "feedback": "The Overthinker would delay responding for hours or days. Marcus responded within 2 minutes—this is reactive collapse into action."
+        },
+        {
+          "text": "Neither - he responded authentically in the moment",
+          "isCorrect": false,
+          "feedback": "While he was authentic to his immediate feelings, his later regret suggests he collapsed too quickly into reaction rather than holding the tension long enough to respond skillfully."
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "question": "You're in the middle of a heated conversation and feel the urge to either respond immediately OR shut down and leave. What's the most skillful PAUSE response?",
+      "options": [
+        {
+          "text": "Trust your impulse and respond immediately—authenticity matters",
+          "isCorrect": false,
+          "feedback": "This is collapsing into the NOW pole. While authenticity matters, responding while highly activated often leads to later regret."
+        },
+        {
+          "text": "Leave the conversation and take days to process before returning",
+          "isCorrect": false,
+          "feedback": "This might be collapsing into the WAIT pole. While taking time can be wise, days of processing might avoid the conversation entirely."
+        },
+        {
+          "text": "Say 'I need a few minutes to process this' and take 3-5 minutes to ground before continuing",
+          "isCorrect": true,
+          "feedback": "Correct. This holds both poles—acknowledging the need to respond (NOW) while creating adequate pause for grounding (WAIT). This is timely response with reflection, not reactive rush or paralysis."
+        },
+        {
+          "text": "Immediately analyze all possible responses in your head before speaking",
+          "isCorrect": false,
+          "feedback": "This is trying to do The Overthinker's pattern internally during conversation—analysis paralysis just happens faster. Real tension-holding requires grounding first."
+        }
+      ]
+    },
+    {
+      "type": "thread_identification",
+      "question": "You notice yourself in the same PAUSE situation for the 4th time this month: getting activated, recognizing it 2 hours later instead of 2 days later. What pattern are you demonstrating?",
+      "options": [
+        {
+          "text": "Circular - stuck in repetitive pattern with no growth",
+          "isCorrect": false,
+          "feedback": "Circular would mean no change. But you've shifted from 2 days to 2 hours—that's significant capacity growth even though the situation is similar."
+        },
+        {
+          "text": "Spiral - same situation, increasing capacity",
+          "isCorrect": true,
+          "feedback": "Correct. Spiral means encountering similar situations with increasing capacity. You're recognizing collapse much sooner (2 hours vs 2 days). This is exactly how growth happens—spiral, not straight line."
+        },
+        {
+          "text": "Neither - you're failing because the situation keeps recurring",
+          "isCorrect": false,
+          "feedback": "Recurring situations aren't failure—they're opportunities to practice. The fact that you're recognizing collapse faster shows you're building capacity, not failing."
+        }
+      ]
+    },
+    {
+      "type": "self_assessment",
+      "question": "How long can you currently hold PAUSE tension with moderately activating personal material before collapsing?",
+      "options": [
+        {
+          "text": "Less than 2 minutes",
+          "isCorrect": false,
+          "feedback": "This is Foundation-level capacity. Building tier asks you to work toward 5-7 minutes. If you're still under 2 minutes, consider revisiting Foundation practices or working with less activating material."
+        },
+        {
+          "text": "2-4 minutes",
+          "isCorrect": false,
+          "feedback": "You're building capacity but not yet at Building tier milestone. Keep practicing. Can you extend by even 30 seconds this week? Small gains compound."
+        },
+        {
+          "text": "5-7 minutes",
+          "isCorrect": true,
+          "feedback": "This is the Building tier milestone. You're developing real capacity to hold tension with personal material. Keep practicing to deepen and stabilize this capacity."
+        },
+        {
+          "text": "7+ minutes consistently",
+          "isCorrect": false,
+          "feedback": "If you can consistently hold 7+ minutes with moderately activating material, you're approaching Deepening tier capacity. Consider working with more activating material or progressing to the next tier."
+        }
+      ]
+    }
+  ],
+  "practiceAssignments": [
+    {
+      "type": "micro",
+      "title": "Three-Breath Pause Before Acting",
+      "instructions": "When you notice urgency to act NOW (send email, respond to text, make decision), pause for three conscious breaths first. Don't try to change the decision—just practice pausing. Do this daily.",
+      "frequency": "daily",
+      "duration": 1
+    },
+    {
+      "type": "micro",
+      "title": "Notice Which Pole Is Pulling",
+      "instructions": "Before responding to texts, emails, or requests, notice: am I being pulled toward NOW (respond immediately) or WAIT (postpone indefinitely)? Just notice. Name it. Then respond however you choose.",
+      "frequency": "daily",
+      "duration": 1
+    },
+    {
+      "type": "micro",
+      "title": "Evening PAUSE Journal",
+      "instructions": "Each evening: 'Where did I collapse in PAUSE today? Which pole? Can I name what I was protecting?' Write 3-5 sentences. The goal is awareness, not perfection.",
+      "frequency": "daily",
+      "duration": 5
+    },
+    {
+      "type": "mini",
+      "title": "15-Minute PAUSE Protocol",
+      "instructions": "2-3 times per week, practice the full protocol:\n\n1. Ground (2 min): Body scan and breath awareness\n2. Identify (1 min): What PAUSE dilemma am I facing right now?\n3. Name both poles (2 min): Speak them out loud\n4. Hold tension (7 min): Stay with both without resolving\n5. Journal emergence (3 min): What arose? Did I collapse?\n\nSet timer for each section. Practice building tolerance for holding without resolution.",
+      "frequency": "2-3x per week",
+      "duration": 15,
+      "audio": {
+        "text": "Begin by settling into your body. [~~] Take three deep breaths. [~~~] Scan from head to toe, noticing where you're holding tension. [~~~]\n\nNow identify: what PAUSE dilemma are you facing right now? [~~] Something with real stakes, real urgency. [~~~]\n\nName the NOW pole out loud. [~~] What's the urgency? What wants to happen immediately? [~~~]\n\nName the WAIT pole out loud. [~~] What needs more time? What wisdom lives in patience? [~~~]\n\nNow hold both. [~~] Don't choose, don't resolve. [~~] Just hold. [~~~] Notice if you collapse toward one pole. [~~] Notice what you're protecting. [~~] Return to holding. [~~~~]\n\nStay here for the next few minutes. [~~] Both NOW and WAIT. [~~] Both urgent and patient. [~~] What wants to emerge? [~~~~~]\n\nWhen you're ready, open your journal. [~~] Write what arose. [~~] Write where you collapsed. [~~] Write what you noticed. [~~~]",
+        "voiceId": "mia",
+        "speed": 0.78
+      }
+    },
+    {
+      "type": "real_world",
+      "title": "Weekly PAUSE Challenge",
+      "instructions": "Choose one PAUSE dilemma you're facing this week. Something real with actual stakes.\n\nWhen you feel the collapse happening:\n1. PAUSE and name it: 'I'm collapsing toward NOW/WAIT'\n2. Hold tension for 5 minutes before acting (set timer)\n3. Notice: What am I protecting? What's trying to emerge?\n4. Then act however you choose\n\nJournal afterward: What emerged during the hold? Did you collapse? How long did you hold? What was hard about it?",
+      "frequency": "weekly",
+      "duration": 30
+    }
+  ],
+  "estimatedDuration": 75,
+  "sessionStructure": {
+    "ground": {
+      "duration": 5,
+      "elements": ["Body scan", "Breath awareness", "Arrive in present moment"]
+    },
+    "teach": {
+      "duration": 25,
+      "slideSequence": [1, 2, 3, 4, 5, 6]
+    },
+    "practice": {
+      "duration": 35,
+      "exerciseIndex": 1
+    },
+    "integrate": {
+      "duration": 10,
+      "promptIndex": 2
+    }
+  },
+  "published": false,
+  "version": "1.0",
+  "author": "Threads Training Team",
+  "tags": ["pause", "building", "tier-2", "application", "real-world-practice"]
+}

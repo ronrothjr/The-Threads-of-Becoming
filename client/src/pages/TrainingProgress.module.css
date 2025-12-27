@@ -1,0 +1,358 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+}
+
+/* Loading & Error */
+.loading,
+.error {
+  text-align: center;
+  padding: 3rem;
+  font-size: var(--text-xl);
+}
+
+.error h2 {
+  font-size: var(--text-3xl);
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.error p {
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+}
+
+.error button {
+  background: var(--color-teal);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.statCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.statSubtext {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+/* Section */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+}
+
+/* Thread Progress */
+.threadsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.threadCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.threadHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.threadHeader h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-navy);
+  text-transform: uppercase;
+}
+
+.sessionCount {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.capacityBar {
+  margin-bottom: 1rem;
+}
+
+.capacityLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.barOuter {
+  height: 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.growthBadge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.milestones {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.milestones h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.milestoneCheck {
+  color: var(--color-teal);
+  font-weight: bold;
+}
+
+.milestoneTitle {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+
+/* Pattern Progress */
+.patternsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.patternCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.patternCard h3 {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-purple);
+  margin-bottom: 0.75rem;
+}
+
+.patternSessions {
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+  font-size: var(--text-sm);
+}
+
+.practices {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.practices h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.practices ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.practices li {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  padding: 0.25rem 0;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.practices li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+  font-weight: bold;
+}
+
+/* Next Session CTA */
+.nextSessionCta {
+  background: linear-gradient(135deg, rgba(22, 160, 133, 0.05), rgba(124, 58, 237, 0.05));
+  border: 2px solid var(--color-teal);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.nextSessionCta h3 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.75rem;
+}
+
+.nextSessionCta p {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  font-size: var(--text-lg);
+}
+
+.continueButton {
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.continueButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .header h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .statCard {
+    padding: 1.5rem 1rem;
+  }
+
+  .statIcon {
+    font-size: 2rem;
+  }
+
+  .statValue {
+    font-size: var(--text-3xl);
+  }
+
+  .threadsGrid,
+  .patternsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .threadCard,
+  .patternCard {
+    padding: 1.5rem;
+  }
+
+  .nextSessionCta {
+    padding: 1.5rem;
+  }
+}

@@ -1303,3 +1303,98 @@
   line-height: 1.6;
   color: var(--color-text);
 }
+
+/* Thread Capacity Training Section */
+.trainingSection {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 3rem 0;
+}
+
+.trainingCard {
+  background: linear-gradient(135deg, rgba(22, 160, 133, 0.05), rgba(124, 58, 237, 0.05));
+  border: 2px solid var(--color-teal);
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 100%;
+}
+
+.trainingCard h2 {
+  color: var(--color-navy);
+  font-size: var(--text-3xl);
+  margin-bottom: 1rem;
+}
+
+.trainingCard > p {
+  color: var(--color-text);
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.trainingFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.trainingFeatures li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  color: var(--color-text);
+  line-height: 1.6;
+  position: relative;
+}
+
+.trainingFeatures li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-teal);
+  font-weight: bold;
+  font-size: var(--text-lg);
+}
+
+.trainingButton {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-purple));
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.trainingButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .trainingCard {
+    padding: 1.5rem 1rem;
+  }
+
+  .trainingCard h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .trainingCard > p {
+    font-size: var(--text-base);
+  }
+
+  .trainingFeatures li {
+    padding-left: 1.5rem;
+    font-size: var(--text-sm);
+  }
+
+  .trainingButton {
+    width: 100%;
+    text-align: center;
+    padding: 0.875rem 1.5rem;
+    font-size: var(--text-base);
+  }
+}

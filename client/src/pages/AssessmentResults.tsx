@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { API_URL } from '../config';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import styles from './AssessmentResults.module.css';
 import { logger } from '../utils/logger';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 interface ThreadScore {
   score: number;
   percentage: number;
   collapseDirection: string;
 }
-
 interface Results {
   threadScores: {
     presence: ThreadScore;
@@ -33,22 +31,18 @@ interface Results {
     decide: string[];
   };
 }
-
 const AssessmentResults: React.FC = () => {
   const [results, setResults] = useState<Results | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
-
   // Determine which assessment type based on URL
   const isPersonalJourneyMap = location.pathname.includes('personal-journey-map');
   const assessmentTitle = isPersonalJourneyMap ? 'Personal Journey Map' : 'Quick Profile';
-
   useEffect(() => {
     loadResults();
   }, [location.pathname]);
-
   const loadResults = async () => {
     try {
       const token = localStorage.getItem('auth_token');
@@ -56,11 +50,9 @@ const AssessmentResults: React.FC = () => {
         navigate('/login');
         return;
       }
-
       // Determine which assessment type based on the CURRENT URL
       const isPersonalJourneyMap = location.pathname.includes('personal-journey-map');
       const assessmentType = isPersonalJourneyMap ? 'personal-journey-map' : 'quick-profile';
-
       // Log to server for debugging
       logger.debug('AssessmentResults loading', {
         url: location.pathname,
@@ -68,25 +60,21 @@ const AssessmentResults: React.FC = () => {
         assessmentType,
         endpoint: `${API_URL}/api/assessments/${assessmentType}/results`,
       });
-
       const response = await fetch(`${API_URL}/api/assessments/${assessmentType}/results`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
-
       if (!response.ok) {
         logger.error('Failed to load assessment results', { status: response.status });
         throw new Error('Failed to load results');
       }
-
       const data = await response.json();
       logger.debug('AssessmentResults loaded', {
         presenceScore: data.results?.threadScores?.presence?.score,
         presencePercentage: data.results?.threadScores?.presence?.percentage,
         allThreadScores: data.results?.threadScores,
       });
-
       // Force state update
       setResults(null);
       setTimeout(() => setResults(data.results), 0);
@@ -96,14 +84,12 @@ const AssessmentResults: React.FC = () => {
       setLoading(false);
     }
   };
-
   const getCapacityLevel = (percentage: number): { level: string; color: string } => {
     if (percentage >= 83) return { level: 'High', color: '#10B981' };
     if (percentage >= 58) return { level: 'Moderate', color: '#F59E0B' };
     if (percentage >= 33) return { level: 'Low', color: '#EF4444' };
     return { level: 'Very Low', color: '#991B1B' };
   };
-
   if (loading) {
     return (
       <div className={styles.container}>
@@ -111,7 +97,6 @@ const AssessmentResults: React.FC = () => {
       </div>
     );
   }
-
   if (error || !results) {
     return (
       <div className={styles.container}>
@@ -120,14 +105,12 @@ const AssessmentResults: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>Your Threads Profile</h1>
         <p className={styles.subtitle}>{assessmentTitle} Results</p>
       </header>
-
       {/* What This Means */}
       <section className={styles.introSection}>
         <h2>What This Assessment Reveals</h2>
@@ -148,7 +131,6 @@ const AssessmentResults: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Your Practice Focus */}
       <section className={styles.focusSection}>
         <h2>Your Practice Focus: Where to Begin</h2>
@@ -156,14 +138,12 @@ const AssessmentResults: React.FC = () => {
           Based on your responses, here are the two areas where you most often react automatically under pressure—and therefore where focused practice will create the most transformation in your first few weeks.
           In the Threads framework, we call these areas "threads"—different types of tension you face in daily life.
         </p>
-
         <div className={styles.focusCards}>
           {(() => {
             // Find the 2 lowest scoring threads
             const threadEntries = Object.entries(results.threadScores)
               .sort((a, b) => a[1].score - b[1].score)
               .slice(0, 2);
-
             const threadDescriptions: Record<string, { poles: string; collapse: string; practice: string }> = {
               presence: {
                 poles: "Within ↔ Between • Here ↔ Elsewhere",
@@ -201,11 +181,9 @@ const AssessmentResults: React.FC = () => {
                 practice: "Notice when you say 'I'm just not that kind of person.' Ask: Who am I becoming that I wasn't before? Are you repeating old loops or genuinely different?"
               }
             };
-
             return threadEntries.map(([thread, data]) => {
               const desc = threadDescriptions[thread];
               const poles = desc.poles.split(' • ');
-
               return (
                 <div key={thread} className={styles.focusCard}>
                   <div className={styles.focusHeader}>
@@ -232,7 +210,6 @@ const AssessmentResults: React.FC = () => {
             });
           })()}
         </div>
-
         <div className={styles.focusReminder}>
           <p>
             Focus on these threads for the next 3-4 weeks. Practice daily, and record your observations in your journal.
@@ -240,7 +217,6 @@ const AssessmentResults: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* See. Hold. Emerge. Overview */}
       <section className={styles.movementSection}>
         <h2>How Transformation Actually Works</h2>
@@ -250,7 +226,6 @@ const AssessmentResults: React.FC = () => {
           Finally, something new can <strong>Emerge</strong> (integrating the change into who you're becoming).
           In the Threads framework, we call these three movements <strong>"See. Hold. Emerge."</strong> These scores show your average capacity in each movement.
         </p>
-
         <div className={styles.movementsGrid}>
           <div className={styles.movementCard}>
             <h3>SEE <span className={styles.movementSubtitle}>(Orienting)</span></h3>
@@ -265,13 +240,12 @@ const AssessmentResults: React.FC = () => {
               PRESENCE • CONSENT • MEMORY • PAUSE
             </div>
           </div>
-
           <div className={styles.movementCard}>
             <h3>HOLD <span className={styles.movementSubtitle}>(Sourcing)</span></h3>
             <div className={styles.scoreCircle}>
               <div className={styles.scoreValue}>
                 {results.movementAverages.hold.toFixed(1)}
-                <span className={styles.scoreMax}> / 12</span>
+                <span className={styles.scoreMax}> / 8</span>
               </div>
             </div>
             <p className={styles.movementDesc}>Stay with the discomfort: What is my body telling me? What happens if I don't force an answer?</p>
@@ -279,13 +253,12 @@ const AssessmentResults: React.FC = () => {
               EMBODIMENT • UNCERTAINTY
             </div>
           </div>
-
           <div className={styles.movementCard}>
             <h3>EMERGE <span className={styles.movementSubtitle}>(Integrating)</span></h3>
             <div className={styles.scoreCircle}>
               <div className={styles.scoreValue}>
                 {results.movementAverages.emerge.toFixed(1)}
-                <span className={styles.scoreMax}> / 12</span>
+                <span className={styles.scoreMax}> / 4</span>
               </div>
             </div>
             <p className={styles.movementDesc}>Let something new arise: Who am I becoming? What's actually changing vs. rearranging?</p>
@@ -295,7 +268,6 @@ const AssessmentResults: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Individual Thread Scores */}
       <section className={styles.threadsSection}>
         <h2>All Seven Thread Scores</h2>
@@ -325,7 +297,6 @@ const AssessmentResults: React.FC = () => {
           })}
         </div>
       </section>
-
       {/* HOLD Practice Mapping */}
       <section className={styles.practiceSection}>
         <h2>A Simple Practice Tool: HOLD</h2>
@@ -334,7 +305,6 @@ const AssessmentResults: React.FC = () => {
           We call it <strong>HOLD</strong> (Halt, Observe, Look, Decide). Think of it as a way to pause the automatic response and create space for something new.
           Based on your scores, here's which step will be most helpful for your focus threads:
         </p>
-
         <div className={styles.practiceGrid}>
           {results.holdPracticeMapping.halt.length > 0 && (
             <div className={styles.practiceCard}>
@@ -345,7 +315,6 @@ const AssessmentResults: React.FC = () => {
               </div>
             </div>
           )}
-
           {results.holdPracticeMapping.observe.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>O - OBSERVE</h3>
@@ -355,7 +324,6 @@ const AssessmentResults: React.FC = () => {
               </div>
             </div>
           )}
-
           {results.holdPracticeMapping.look.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>L - LOOK</h3>
@@ -365,7 +333,6 @@ const AssessmentResults: React.FC = () => {
               </div>
             </div>
           )}
-
           {results.holdPracticeMapping.decide.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>D - DECIDE</h3>
@@ -377,7 +344,6 @@ const AssessmentResults: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Next Steps - Unlock Personal Journey Map (only show for Quick Profile) */}
       {!isPersonalJourneyMap && (
       <section className={styles.unlockSection}>
@@ -388,7 +354,6 @@ const AssessmentResults: React.FC = () => {
           for developing all seven threads. In the Threads framework, we call these automatic reactions "collapse patterns"
           and the different directions you can go "poles."
         </p>
-
         <div className={styles.unlockBenefits}>
           <h3>What Your Personal Journey Map Reveals:</h3>
           <ul>
@@ -399,7 +364,6 @@ const AssessmentResults: React.FC = () => {
             <li><strong>Custom Practices:</strong> Receive specific practices designed for your unique combination of patterns</li>
           </ul>
         </div>
-
         <div className={styles.unlockRequirements}>
           <h3>How to Unlock It:</h3>
           <div className={styles.requirementsGrid}>
@@ -420,14 +384,12 @@ const AssessmentResults: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className={styles.unlockCTA}>
           <Link to="/dashboard" className={styles.unlockButton}>Go to Dashboard to Begin →</Link>
           <p className={styles.unlockNote}>Your Focused Practice tools are waiting for you</p>
         </div>
       </section>
       )}
-
       {/* Additional Next Steps */}
       <section className={styles.nextSteps}>
         <h2>Learn More</h2>
@@ -437,13 +399,11 @@ const AssessmentResults: React.FC = () => {
             <p>Learn the four-step process: Halt, Observe, Look, Decide</p>
             <Link to="/practice" className={styles.stepLink}>Learn HOLD Practice →</Link>
           </div>
-
           <div className={styles.stepCard}>
             <h3>Explore the Threads</h3>
             <p>Deep dive into each of the seven threads</p>
             <Link to="/explore" className={styles.stepLink}>Explore Threads →</Link>
           </div>
-
           <div className={styles.stepCard}>
             <h3>Join a Community</h3>
             <p>Connect with others on the integration journey</p>
@@ -454,5 +414,4 @@ const AssessmentResults: React.FC = () => {
     </div>
   );
 };
-
 export default AssessmentResults;

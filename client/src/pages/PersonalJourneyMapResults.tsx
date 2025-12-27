@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { API_URL } from '../config';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './PersonalJourneyMapResults.module.css';
 import { logger } from '../utils/logger';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 interface ThreadScore {
   score: number;
   percentage: number;
   collapseDirection: string;
 }
-
 interface Results {
   threadScores: {
     presence: ThreadScore;
@@ -103,11 +101,9 @@ const PersonalJourneyMapResults: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
   useEffect(() => {
     loadResults();
   }, []);
-
   const loadResults = async () => {
     try {
       const token = localStorage.getItem('auth_token');
@@ -115,9 +111,7 @@ const PersonalJourneyMapResults: React.FC = () => {
         navigate('/login');
         return;
       }
-
       logger.debug('PersonalJourneyMapResults loading');
-
       // Fetch results, pattern analysis, and comprehensive analysis in parallel
       const [resultsResponse, patternResponse, comprehensiveResponse] = await Promise.all([
         fetch(`${API_URL}/api/assessments/personal-journey-map/results`, {
@@ -130,19 +124,15 @@ const PersonalJourneyMapResults: React.FC = () => {
           headers: { 'Authorization': `Bearer ${token}` }
         })
       ]);
-
       if (!resultsResponse.ok) {
         logger.error('Failed to load Personal Journey Map results', { status: resultsResponse.status });
         throw new Error('Failed to load results');
       }
-
       const resultsData = await resultsResponse.json();
       logger.debug('PersonalJourneyMapResults loaded', {
         presenceScore: resultsData.results?.threadScores?.presence?.score,
       });
-
       setResults(resultsData.results);
-
       // Pattern analysis is optional - don't fail if it errors
       if (patternResponse.ok) {
         const patternData = await patternResponse.json();
@@ -153,7 +143,6 @@ const PersonalJourneyMapResults: React.FC = () => {
       } else {
         logger.error('Failed to load pattern analysis', { status: patternResponse.status });
       }
-
       // Comprehensive analysis is optional - don't fail if it errors
       if (comprehensiveResponse.ok) {
         const comprehensiveData = await comprehensiveResponse.json();
@@ -170,14 +159,12 @@ const PersonalJourneyMapResults: React.FC = () => {
       setLoading(false);
     }
   };
-
   const getCapacityLevel = (percentage: number): { level: string; color: string } => {
     if (percentage >= 83) return { level: 'High', color: '#10B981' };
     if (percentage >= 58) return { level: 'Moderate', color: '#F59E0B' };
     if (percentage >= 33) return { level: 'Low', color: '#EF4444' };
     return { level: 'Very Low', color: '#991B1B' };
   };
-
   const getCollapseDirectionLabel = (direction: string, thread: string): string => {
     const directions: Record<string, Record<string, string>> = {
       presence: { low: 'Withdrawal/Isolation', balanced: 'Present & Connected' },
@@ -188,10 +175,8 @@ const PersonalJourneyMapResults: React.FC = () => {
       uncertainty: { low: 'Grasping for Certainty', balanced: 'Comfortable with Unknown' },
       becoming: { low: 'Identity Rigidity', balanced: 'Adaptive Identity' },
     };
-
     return directions[thread]?.[direction] || direction;
   };
-
   if (loading) {
     return (
       <div className={styles.container}>
@@ -199,7 +184,6 @@ const PersonalJourneyMapResults: React.FC = () => {
       </div>
     );
   }
-
   if (error || !results) {
     return (
       <div className={styles.container}>
@@ -211,14 +195,12 @@ const PersonalJourneyMapResults: React.FC = () => {
       </div>
     );
   }
-
   return (
     <div className={styles.container}>
       <header className={styles.header}>
         <h1>Your Personal Journey Map</h1>
         <p className={styles.subtitle}>Comprehensive Pattern Analysis & Development Path</p>
       </header>
-
       {/* Introduction */}
       <section className={styles.introSection}>
         <h2>Your Unique Pattern Profile</h2>
@@ -230,7 +212,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Thread Scores with Collapse Direction */}
       <section className={styles.threadsSection}>
         <h2>Your Thread Profile: Scores & Collapse Directions</h2>
@@ -238,7 +219,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           Each thread shows your capacity level (0-100%) and your typical collapse direction.
           Understanding which direction you tend to collapse toward helps target specific practices.
         </p>
-
         <div className={styles.threadsGrid}>
           {Object.entries(results.threadScores).map(([thread, score]) => {
             const capacity = getCapacityLevel(score.percentage);
@@ -257,13 +237,13 @@ const PersonalJourneyMapResults: React.FC = () => {
                 <div className={styles.scoreDetails}>
                   <span className={styles.percentage}>{score.percentage.toFixed(0)}%</span>
                   <span className={styles.rawScore}>({score.score}/40)</span>
+                  <span className={styles.capacityLevel} style={{ color: capacity.color }}>{capacity.level}</span>
                 </div>
               </div>
             );
           })}
         </div>
       </section>
-
       {/* See, Hold, Emerge Movement Analysis */}
       <section className={styles.movementSection}>
         <h2>See. Hold. Emerge. Movement Analysis</h2>
@@ -272,7 +252,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           then you <strong>Hold</strong> the discomfort, and finally something new can <strong>Emerge</strong>.
           These scores show your capacity in each movement.
         </p>
-
         <div className={styles.movementsGrid}>
           <div className={styles.movementCard}>
             <h3>SEE <span className={styles.movementSubtitle}>(Orienting)</span></h3>
@@ -287,13 +266,12 @@ const PersonalJourneyMapResults: React.FC = () => {
               PRESENCE • CONSENT • MEMORY • PAUSE
             </div>
           </div>
-
           <div className={styles.movementCard}>
             <h3>HOLD <span className={styles.movementSubtitle}>(Sourcing)</span></h3>
             <div className={styles.scoreCircle}>
               <div className={styles.scoreValue}>
                 {results.movementAverages.hold.toFixed(1)}
-                <span className={styles.scoreMax}> / 12</span>
+                <span className={styles.scoreMax}> / 6</span>
               </div>
             </div>
             <p className={styles.movementDesc}>Stay with the discomfort: What is my body telling me? What happens if I don't force an answer?</p>
@@ -301,13 +279,12 @@ const PersonalJourneyMapResults: React.FC = () => {
               EMBODIMENT • UNCERTAINTY
             </div>
           </div>
-
           <div className={styles.movementCard}>
             <h3>EMERGE <span className={styles.movementSubtitle}>(Integrating)</span></h3>
             <div className={styles.scoreCircle}>
               <div className={styles.scoreValue}>
                 {results.movementAverages.emerge.toFixed(1)}
-                <span className={styles.scoreMax}> / 12</span>
+                <span className={styles.scoreMax}> / 3</span>
               </div>
             </div>
             <p className={styles.movementDesc}>Let something new arise: Who am I becoming? What's actually changing vs. rearranging?</p>
@@ -317,7 +294,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* HOLD Practice Mapping */}
       <section className={styles.practiceSection}>
         <h2>Your HOLD Practice Mapping</h2>
@@ -325,7 +301,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           Based on your thread profile, here's which step of the HOLD practice (Halt, Observe, Look, Decide)
           will be most effective for each of your focus areas.
         </p>
-
         <div className={styles.practiceGrid}>
           {results.holdPracticeMapping.halt.length > 0 && (
             <div className={styles.practiceCard}>
@@ -336,7 +311,6 @@ const PersonalJourneyMapResults: React.FC = () => {
               </div>
             </div>
           )}
-
           {results.holdPracticeMapping.observe.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>O - OBSERVE</h3>
@@ -346,7 +320,6 @@ const PersonalJourneyMapResults: React.FC = () => {
               </div>
             </div>
           )}
-
           {results.holdPracticeMapping.look.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>L - LOOK</h3>
@@ -356,7 +329,6 @@ const PersonalJourneyMapResults: React.FC = () => {
               </div>
             </div>
           )}
-
           {results.holdPracticeMapping.decide.length > 0 && (
             <div className={styles.practiceCard}>
               <h3>D - DECIDE</h3>
@@ -368,7 +340,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Detected Collapse Patterns */}
       {comprehensiveAnalysis && comprehensiveAnalysis.detectedPatterns.length > 0 && (
         <section className={styles.collapsePatternSection}>
@@ -377,7 +348,6 @@ const PersonalJourneyMapResults: React.FC = () => {
             Based on your thread profile, we've identified your signature collapse patterns—the characteristic ways
             you react when under pressure. Recognizing your pattern is often more useful than knowing individual thread scores.
           </p>
-
           {comprehensiveAnalysis.detectedPatterns.map((pattern, idx) => (
             <div key={pattern.id} className={styles.collapsePatternCard}>
               <div className={styles.patternHeader}>
@@ -386,20 +356,16 @@ const PersonalJourneyMapResults: React.FC = () => {
                   {(pattern.detectionConfidence * 100).toFixed(0)}% match
                 </div>
               </div>
-
               <div className={styles.patternCoreThreads}>
                 <strong>Core Collapse:</strong> {pattern.coreCollapse.join(' + ')}
               </div>
-
               <div className={styles.patternDescription}>
                 {pattern.description}
               </div>
-
               <div className={styles.patternExperience}>
                 <h4>The Experience:</h4>
                 <blockquote>{pattern.experience}</blockquote>
               </div>
-
               <div className={styles.patternBehaviors}>
                 <h4>Behavioral Signs:</h4>
                 <ul>
@@ -408,12 +374,10 @@ const PersonalJourneyMapResults: React.FC = () => {
                   ))}
                 </ul>
               </div>
-
               <div className={styles.patternTrap}>
                 <h4>The Trap:</h4>
                 <p>{pattern.theTrap}</p>
               </div>
-
               <div className={styles.patternFearNeed}>
                 <div className={styles.fears}>
                   <h4>Deeper Fears Driving This:</h4>
@@ -432,7 +396,6 @@ const PersonalJourneyMapResults: React.FC = () => {
                   </ul>
                 </div>
               </div>
-
               <div className={styles.patternBreaking}>
                 <h4>Breaking the Pattern:</h4>
                 <ol>
@@ -441,12 +404,10 @@ const PersonalJourneyMapResults: React.FC = () => {
                   ))}
                 </ol>
               </div>
-
               <div className={styles.patternHoldFocus}>
                 <h4>HOLD Practice Focus:</h4>
                 <p>{pattern.holdFocus}</p>
               </div>
-
               <div className={styles.patternCustomPractices}>
                 <h4>Custom Practices for This Pattern:</h4>
                 <ul>
@@ -459,7 +420,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           ))}
         </section>
       )}
-
       {/* Pattern Cascades */}
       {comprehensiveAnalysis && comprehensiveAnalysis.cascades.length > 0 && (
         <section className={styles.cascadeSection}>
@@ -468,13 +428,11 @@ const PersonalJourneyMapResults: React.FC = () => {
             When one thread collapses under pressure, it often triggers collapse in connected threads.
             Understanding your cascade helps you intervene earlier.
           </p>
-
           {comprehensiveAnalysis.cascades.map((cascade, idx) => (
             <div key={idx} className={styles.cascadeCard}>
               <div className={styles.cascadeTrigger}>
                 <strong>Trigger:</strong> {cascade.trigger}
               </div>
-
               <div className={styles.cascadeSequence}>
                 {cascade.sequence.map((step, i) => (
                   <div key={i} className={styles.cascadeStep}>
@@ -487,7 +445,6 @@ const PersonalJourneyMapResults: React.FC = () => {
                   </div>
                 ))}
               </div>
-
               <div className={styles.cascadeFinal}>
                 <strong>Result:</strong> {cascade.finalPattern}
               </div>
@@ -495,7 +452,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           ))}
         </section>
       )}
-
       {/* Development Path */}
       {comprehensiveAnalysis && comprehensiveAnalysis.developmentPath.length > 0 && (
         <section className={styles.developmentPathSection}>
@@ -504,12 +460,10 @@ const PersonalJourneyMapResults: React.FC = () => {
             This is your roadmap: which threads to work on first, second, and third, with specific practices
             for each stage. Real transformation happens when you work systematically.
           </p>
-
           <div className={styles.pathTimeline}>
             {['immediate', 'near-term', 'long-term'].map(priority => {
               const pathItems = comprehensiveAnalysis.developmentPath.filter(p => p.priority === priority);
               if (pathItems.length === 0) return null;
-
               return (
                 <div key={priority} className={styles.pathStage}>
                   <h3 className={styles.pathPriority}>
@@ -517,14 +471,12 @@ const PersonalJourneyMapResults: React.FC = () => {
                     {priority === 'near-term' && '📍 Near-Term Focus'}
                     {priority === 'long-term' && '🌱 Long-Term Development'}
                   </h3>
-
                   {pathItems.map((item, idx) => (
                     <div key={idx} className={styles.pathItem}>
                       <div className={styles.pathItemHeader}>
                         <h4>{item.thread}</h4>
                         <span className={styles.pathWeeks}>{item.estimatedWeeks} weeks</span>
                       </div>
-
                       <div className={styles.pathStates}>
                         <div className={styles.currentState}>
                           <strong>Current:</strong> {item.currentState}
@@ -534,11 +486,9 @@ const PersonalJourneyMapResults: React.FC = () => {
                           <strong>Target:</strong> {item.targetState}
                         </div>
                       </div>
-
                       <div className={styles.pathRationale}>
                         <strong>Why this matters:</strong> {item.rationale}
                       </div>
-
                       <div className={styles.pathPractices}>
                         <strong>Specific practices:</strong>
                         <ul>
@@ -555,7 +505,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           </div>
         </section>
       )}
-
       {/* Pattern Analysis from Journal & Practice History */}
       {patternAnalysis && (
         <section className={styles.patternSection}>
@@ -563,7 +512,6 @@ const PersonalJourneyMapResults: React.FC = () => {
           <div className={styles.patternSummary}>
             {patternAnalysis.summary}
           </div>
-
           {patternAnalysis.insights.length > 0 && (
             <div className={styles.insightsGrid}>
               {patternAnalysis.insights.map((insight, idx) => (
@@ -588,7 +536,22 @@ const PersonalJourneyMapResults: React.FC = () => {
           )}
         </section>
       )}
-
+      {/* Thread Capacity Training */}
+      <section className={styles.trainingSection}>
+        <div className={styles.trainingCard}>
+          <h2>Thread Capacity Training</h2>
+          <p>Now that you understand your collapse patterns, build systematic capacity through personalized training.</p>
+          <ul className={styles.trainingFeatures}>
+            <li>Daily training sessions tailored to your assessment results</li>
+            <li>Progressive skill-building across all 7 threads</li>
+            <li>Track capacity growth and milestone achievements</li>
+            <li>Pattern-specific interventions and practices</li>
+          </ul>
+          <Link to="/training/setup" className={styles.trainingButton}>
+            Setup Your Training Program →
+          </Link>
+        </div>
+      </section>
       {/* Next Steps */}
       <section className={styles.nextSteps}>
         <h2>Continue Your Journey</h2>
@@ -598,13 +561,11 @@ const PersonalJourneyMapResults: React.FC = () => {
             <p>Record specific moments when you notice these collapse patterns in daily life</p>
             <Link to="/journal" className={styles.stepLink}>Open Journal →</Link>
           </div>
-
           <div className={styles.stepCard}>
             <h3>Practice HOLD</h3>
             <p>Use the interactive practice tools focused on your specific patterns</p>
             <Link to="/practice" className={styles.stepLink}>Start Practice →</Link>
           </div>
-
           <div className={styles.stepCard}>
             <h3>Track Your Progress</h3>
             <p>See your pattern analytics and retake assessments to measure growth</p>
@@ -615,5 +576,4 @@ const PersonalJourneyMapResults: React.FC = () => {
     </div>
   );
 };
-
 export default PersonalJourneyMapResults;

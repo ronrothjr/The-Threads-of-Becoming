@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import styles from './AssessmentRunner.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 // Fisher-Yates shuffle algorithm
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -13,7 +12,6 @@ const shuffleArray = <T,>(array: T[]): T[] => {
   }
   return shuffled;
 };
-
 export interface AssessmentQuestion {
   id: string;
   thread: string;
@@ -24,9 +22,8 @@ export interface AssessmentQuestion {
     label: string;
   }>;
 }
-
 export interface AssessmentConfig {
-  type: 'quick_profile' | 'extended';
+  type: 'quick_profile' | 'personal_journey_map';
   title: string;
   subtitle: string;
   questions: AssessmentQuestion[];
@@ -42,9 +39,7 @@ export interface AssessmentConfig {
 interface AssessmentRunnerProps {
   config: AssessmentConfig;
 }
-
 type AnswerValue = 'A' | 'B' | 'C' | 'D' | 'a' | 'b' | 'c' | 'd';
-
 const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [responses, setResponses] = useState<Record<string, AnswerValue>>({});
@@ -54,7 +49,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [questionOrder, setQuestionOrder] = useState<string[]>([]);
   const navigate = useNavigate();
-
   // Get questions - shuffled or ordered based on config
   const orderedQuestions = useMemo(() => {
     if (questionOrder.length > 0) {
@@ -69,7 +63,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
     }
     return config.questions;
   }, [questionOrder, config.questions, config.shouldShuffle]);
-
   // Load partial progress on mount
   useEffect(() => {
     const loadPartialProgress = async () => {
@@ -77,20 +70,17 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         setIsLoading(false);
         return;
       }
-
       try {
         const token = localStorage.getItem('auth_token');
         if (!token) {
           setIsLoading(false);
           return;
         }
-
         const response = await fetch(`${API_URL}/api/assessments/${config.partialEndpoint}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
-
         if (response.ok) {
           const data = await response.json();
           if (data && data.responses) {
@@ -99,7 +89,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
               loadedResponses[r.questionId] = r.answer;
             });
             setResponses(loadedResponses);
-
             // Restore question order if saved
             if (data.questionOrder && data.questionOrder.length > 0) {
               setQuestionOrder(data.questionOrder);
@@ -112,10 +101,8 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         setIsLoading(false);
       }
     };
-
     loadPartialProgress();
   }, [config.partialEndpoint]);
-
   // Set current question to first unanswered after questions are loaded
   useEffect(() => {
     if (!isLoading && orderedQuestions.length > 0 && Object.keys(responses).length > 0) {
@@ -125,7 +112,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
       }
     }
   }, [isLoading, orderedQuestions, responses]);
-
   // Save partial progress when user navigates away
   useEffect(() => {
     const savePartialProgress = async () => {
@@ -137,14 +123,11 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         try {
           const token = localStorage.getItem('auth_token');
           if (!token) return;
-
           const formattedResponses = Object.entries(responses).map(([questionId, answer]) => ({
             questionId,
             answer,
           }));
-
           const order = questionOrder.length > 0 ? questionOrder : orderedQuestions.map((q) => q.id);
-
           await fetch(`${API_URL}/api/assessments/${config.partialEndpoint}`, {
             method: 'POST',
             headers: {
@@ -161,27 +144,23 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         }
       }
     };
-
     window.addEventListener('beforeunload', savePartialProgress);
     return () => {
       window.removeEventListener('beforeunload', savePartialProgress);
       savePartialProgress();
     };
   }, [responses, questionOrder, orderedQuestions, config.partialEndpoint, config.totalQuestions]);
-
   // Save question order after randomization
   useEffect(() => {
     if (orderedQuestions.length > 0 && questionOrder.length === 0) {
       setQuestionOrder(orderedQuestions.map((q) => q.id));
     }
   }, [orderedQuestions, questionOrder]);
-
   const handleAnswer = async (questionId: string, answer: AnswerValue) => {
     const newResponses = { ...responses, [questionId]: answer };
     setResponses(newResponses);
     setError('');
     setIsTransitioning(true);
-
     // Save partial progress immediately after answering
     if (config.partialEndpoint) {
       try {
@@ -191,9 +170,7 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
             questionId,
             answer,
           }));
-
           const order = questionOrder.length > 0 ? questionOrder : orderedQuestions.map((q) => q.id);
-
           fetch(`${API_URL}/api/assessments/${config.partialEndpoint}`, {
             method: 'POST',
             headers: {
@@ -217,7 +194,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         console.error('Failed to save progress (exception):', err);
       }
     }
-
     // Auto-advance after 1 second
     setTimeout(() => {
       if (currentQuestion === orderedQuestions.length - 1) {
@@ -228,7 +204,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
       }
     }, 1000);
   };
-
   const handleNext = () => {
     if (currentQuestion < orderedQuestions.length - 1) {
       setIsTransitioning(true);
@@ -240,33 +215,23 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
       handleSubmit();
     }
   };
-
   const handlePrevious = () => {
     if (currentQuestion > 0) {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentQuestion(currentQuestion - 1);
-        setIsTransitioning(false);
-      }, 150);
+      setCurrentQuestion(currentQuestion - 1);
     }
   };
-
   const handleSubmit = async (finalResponses: Record<string, AnswerValue> = responses) => {
     setIsSubmitting(true);
-    setError('');
-
     try {
       const token = localStorage.getItem('auth_token');
       if (!token) {
         navigate('/login');
         return;
       }
-
       const formattedResponses = Object.entries(finalResponses).map(([questionId, answer]) => ({
         questionId,
         answer,
       }));
-
       const response = await fetch(`${API_URL}/api/assessments/${config.submitEndpoint}`, {
         method: 'POST',
         headers: {
@@ -277,12 +242,10 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
           responses: formattedResponses,
         }),
       });
-
       if (!response.ok) {
         const data = await response.json();
         throw new Error(data.message || 'Failed to submit assessment');
       }
-
       navigate(config.resultsRoute);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to submit assessment');
@@ -290,7 +253,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
       setIsSubmitting(false);
     }
   };
-
   if (isLoading) {
     return (
       <div className={styles.container}>
@@ -298,7 +260,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
       </div>
     );
   }
-
   if (orderedQuestions.length === 0) {
     return (
       <div className={styles.container}>
@@ -306,11 +267,9 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
       </div>
     );
   }
-
   const question = orderedQuestions[currentQuestion];
   const progress = ((currentQuestion + 1) / orderedQuestions.length) * 100;
   const answeredCount = Object.keys(responses).length;
-
   return (
     <div className={styles.container}>
       <div className={styles.compactLayout}>
@@ -318,7 +277,6 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
         <div className={styles.instructions}>
           <p>Choose how you <strong>actually</strong> respond in challenging moments—not how you wish you responded. There are no "right" answers.</p>
         </div>
-
         {/* Progress and Question */}
         <div className={styles.header}>
           <div className={styles.progressInfo}>
@@ -328,15 +286,12 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
             <div className={styles.progressFill} style={{ width: `${progress}%` }} />
           </div>
         </div>
-
         {/* Question and Options */}
         <div className={`${styles.questionCard} ${isTransitioning ? styles.transitioning : ''}`} key={question.id}>
           {!config.hideThread && (
             <div className={styles.threadBadge}>{question.thread}</div>
           )}
-
           <h2 className={styles.questionText}>{question.text}</h2>
-
           <div className={styles.options}>
             {question.options.map((option) => (
               <label
@@ -358,10 +313,8 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
             ))}
           </div>
         </div>
-
         {error && <div className={styles.error}>{error}</div>}
       </div>
-
       {/* Fixed Bottom Navigation Bar */}
       <div className={styles.bottomNav}>
         <div className={styles.bottomNavContent}>
@@ -374,19 +327,15 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
               ← Previous
             </button>
           )}
-
           <div className={styles.spacer}></div>
-
           {currentQuestion < orderedQuestions.length - 1 && responses[question.id] && !isSubmitting && (
             <button
               onClick={handleNext}
-              disabled={isTransitioning}
               className={styles.buttonPrimary}
             >
               Next →
             </button>
           )}
-
           {isSubmitting && (
             <div className={styles.submittingText}>Submitting your assessment...</div>
           )}
@@ -395,5 +344,4 @@ const AssessmentRunner: React.FC<AssessmentRunnerProps> = ({ config }) => {
     </div>
   );
 };
-
 export default AssessmentRunner;

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { API_URL } from '../config';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './PracticeTool.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 interface FocusThread {
   name: string;
   score: number;
   percentage: number;
 }
-
 interface PracticeHistoryEntry {
   _id: string;
   threadId: string;
@@ -19,7 +17,6 @@ interface PracticeHistoryEntry {
 }
 
 type HoldStep = 'intro' | 'halt' | 'observe' | 'look' | 'decide' | 'complete';
-
 const PracticeTool: React.FC = () => {
   const navigate = useNavigate();
   const [focusThreads, setFocusThreads] = useState<FocusThread[]>([]);
@@ -30,22 +27,18 @@ const PracticeTool: React.FC = () => {
   const [saving, setSaving] = useState(false);
   const [practiceHistory, setPracticeHistory] = useState<PracticeHistoryEntry[]>([]);
   const [expandedEntries, setExpandedEntries] = useState<Set<string>>(new Set());
-
   // Filters for history
   const [filterThread, setFilterThread] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
-
   // Edit state
   const [editingEntry, setEditingEntry] = useState<PracticeHistoryEntry | null>(null);
   const [editNotes, setEditNotes] = useState('');
-
   useEffect(() => {
     loadFocusThreads();
     loadPracticeHistory();
   }, []);
-
   const loadFocusThreads = async () => {
     try {
       const token = localStorage.getItem('auth_token');
@@ -53,15 +46,12 @@ const PracticeTool: React.FC = () => {
         navigate('/login');
         return;
       }
-
       const resultsResponse = await fetch(`${API_URL}/api/assessments/quick-profile/results`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
-
       if (resultsResponse.ok) {
         const resultsData = await resultsResponse.json();
         const threadScores = resultsData.results.threadScores;
-
         const sortedThreads = Object.entries(threadScores)
           .map(([name, data]: [string, any]) => ({
             name,
@@ -70,7 +60,6 @@ const PracticeTool: React.FC = () => {
           }))
           .sort((a, b) => a.score - b.score)
           .slice(0, 2);
-
         setFocusThreads(sortedThreads);
       }
     } catch (error) {
@@ -79,16 +68,13 @@ const PracticeTool: React.FC = () => {
       setLoading(false);
     }
   };
-
   const loadPracticeHistory = async () => {
     try {
       const token = localStorage.getItem('auth_token');
       if (!token) return;
-
       const response = await fetch(`${API_URL}/api/practice/history`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
-
       if (response.ok) {
         const history = await response.json();
         setPracticeHistory(history);
@@ -97,7 +83,6 @@ const PracticeTool: React.FC = () => {
       console.error('Failed to load practice history:', error);
     }
   };
-
   const threadPrompts: Record<string, { poles: string; intro: string; halt: string[]; observe: string[]; look: string[]; decide: string[] }> = {
     presence: {
       poles: "Within ↔ Between • Here ↔ Elsewhere",
@@ -296,13 +281,11 @@ const PracticeTool: React.FC = () => {
       ]
     }
   };
-
   const handleThreadSelect = (threadName: string) => {
     setSelectedThread(threadName);
     setCurrentStep('intro');
     setResponses({});
   };
-
   const handleNext = () => {
     const steps: HoldStep[] = ['intro', 'halt', 'observe', 'look', 'decide', 'complete'];
     const currentIndex = steps.indexOf(currentStep);
@@ -311,30 +294,24 @@ const PracticeTool: React.FC = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
-
   const handleBack = () => {
     const steps: HoldStep[] = ['intro', 'halt', 'observe', 'look', 'decide', 'complete'];
     const currentIndex = steps.indexOf(currentStep);
     if (currentIndex > 0) {
       setCurrentStep(steps[currentIndex - 1]);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
-
   const handleResponseChange = (step: string, value: string) => {
     setResponses({ ...responses, [step]: value });
   };
-
   const handleComplete = async () => {
     if (!selectedThread) return;
-
     setSaving(true);
     try {
       const token = localStorage.getItem('auth_token');
       const notes = Object.entries(responses)
         .map(([step, response]) => `${step.toUpperCase()}: ${response}`)
         .join('\n\n');
-
       await fetch(`${API_URL}/api/practice/log`, {
         method: 'POST',
         headers: {
@@ -347,7 +324,6 @@ const PracticeTool: React.FC = () => {
           notes
         })
       });
-
       // Reload history and reset
       await loadPracticeHistory();
       setSelectedThread(null);
@@ -359,7 +335,6 @@ const PracticeTool: React.FC = () => {
       setSaving(false);
     }
   };
-
   const toggleEntry = (id: string) => {
     const newExpanded = new Set(expandedEntries);
     if (newExpanded.has(id)) {
@@ -369,7 +344,6 @@ const PracticeTool: React.FC = () => {
     }
     setExpandedEntries(newExpanded);
   };
-
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
@@ -380,26 +354,20 @@ const PracticeTool: React.FC = () => {
       minute: '2-digit'
     });
   };
-
   const getThreadDisplayName = (threadId: string) => {
     return threadId.charAt(0).toUpperCase() + threadId.slice(1);
   };
-
   const handleEditEntry = (entry: PracticeHistoryEntry) => {
     setEditingEntry(entry);
     setEditNotes(entry.notes || '');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   const handleCancelEdit = () => {
     setEditingEntry(null);
     setEditNotes('');
   };
-
   const handleUpdateEntry = async () => {
     if (!editingEntry) return;
-
-    setSaving(true);
     try {
       const token = localStorage.getItem('auth_token');
       const response = await fetch(`${API_URL}/api/practice/${editingEntry._id}`, {
@@ -412,25 +380,20 @@ const PracticeTool: React.FC = () => {
           notes: editNotes
         })
       });
-
       if (response.ok) {
         handleCancelEdit();
         await loadPracticeHistory();
       }
     } catch (error) {
       console.error('Failed to update practice entry:', error);
-    } finally {
-      setSaving(false);
     }
   };
-
   const exportPractices = () => {
     const filtered = getFilteredPractices();
     const text = filtered.map(entry => {
       const date = formatDate(entry.completedAt);
       return `[${date}] ${getThreadDisplayName(entry.threadId)} - ${entry.practiceType}\n\n${entry.notes || 'No notes'}\n\n---\n`;
     }).join('\n');
-
     const blob = new Blob([text], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -441,28 +404,22 @@ const PracticeTool: React.FC = () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-
   const getFilteredPractices = () => {
     return practiceHistory.filter(entry => {
       // Thread filter
       if (filterThread !== 'all' && entry.threadId !== filterThread) return false;
-
       // Search filter
       if (searchQuery && entry.notes && !entry.notes.toLowerCase().includes(searchQuery.toLowerCase())) return false;
-
       // Date range filter
       const entryDate = new Date(entry.completedAt);
       if (startDate && entryDate < new Date(startDate)) return false;
       if (endDate && entryDate > new Date(endDate + 'T23:59:59')) return false;
-
       return true;
     });
   };
-
   if (loading) {
     return <div className={styles.container}><div className={styles.loading}>Loading...</div></div>;
   }
-
   if (!selectedThread) {
     return (
       <div className={styles.container}>
@@ -470,7 +427,6 @@ const PracticeTool: React.FC = () => {
           <h1>Interactive HOLD Practice</h1>
           <p className={styles.subtitle}>Guided practice for working with your focus threads</p>
         </header>
-
         <section className={styles.content}>
           <div className={styles.introCard}>
             <h2>How This Works</h2>
@@ -490,7 +446,6 @@ const PracticeTool: React.FC = () => {
               Each session takes about 10-15 minutes. Your responses will be saved to track your practice journey.
             </p>
           </div>
-
           {focusThreads.length > 0 ? (
             <>
               <h2 className={styles.selectPrompt}>Choose a thread to practice with:</h2>
@@ -524,13 +479,11 @@ const PracticeTool: React.FC = () => {
               </Link>
             </div>
           )}
-
           <div className={styles.backLinks}>
             <Link to="/dashboard">← Back to Dashboard</Link>
             <Link to="/journal">Go to Journal →</Link>
           </div>
         </section>
-
         {practiceHistory.length > 0 && (
           <section className={styles.historySection}>
             <div className={styles.historyHeader}>
@@ -544,7 +497,6 @@ const PracticeTool: React.FC = () => {
                 Export Sessions
               </button>
             </div>
-
             <div className={styles.filters}>
               <div className={styles.filterGroup}>
                 <label>Thread:</label>
@@ -559,7 +511,6 @@ const PracticeTool: React.FC = () => {
                   <option value="becoming">BECOMING</option>
                 </select>
               </div>
-
               <div className={styles.filterGroup}>
                 <label>Search:</label>
                 <input
@@ -570,7 +521,6 @@ const PracticeTool: React.FC = () => {
                   className={styles.searchInput}
                 />
               </div>
-
               <div className={styles.filterGroup}>
                 <label>From:</label>
                 <input
@@ -580,7 +530,6 @@ const PracticeTool: React.FC = () => {
                   className={styles.dateInput}
                 />
               </div>
-
               <div className={styles.filterGroup}>
                 <label>To:</label>
                 <input
@@ -591,7 +540,6 @@ const PracticeTool: React.FC = () => {
                 />
               </div>
             </div>
-
             <div className={styles.historyList}>
               {getFilteredPractices().length === 0 ? (
                 <p className={styles.noHistory}>No sessions match your filters.</p>
@@ -627,7 +575,6 @@ const PracticeTool: React.FC = () => {
             </div>
           </section>
         )}
-
         {editingEntry && (
           <div className={styles.modal} onClick={handleCancelEdit}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -635,16 +582,13 @@ const PracticeTool: React.FC = () => {
                 <h2>Edit Practice Session</h2>
                 <button onClick={handleCancelEdit} className={styles.modalClose}>×</button>
               </div>
-
               <div className={styles.modalBody}>
                 <div className={styles.formGroup}>
                   <label>Thread: {getThreadDisplayName(editingEntry.threadId)}</label>
                 </div>
-
                 <div className={styles.formGroup}>
                   <label>Date: {formatDate(editingEntry.completedAt)}</label>
                 </div>
-
                 <div className={styles.formGroup}>
                   <label htmlFor="editNotes">Notes</label>
                   <textarea
@@ -656,7 +600,6 @@ const PracticeTool: React.FC = () => {
                   />
                 </div>
               </div>
-
               <div className={styles.modalFooter}>
                 <button onClick={handleCancelEdit} className={styles.cancelButton}>
                   Cancel
@@ -671,7 +614,7 @@ const PracticeTool: React.FC = () => {
       </div>
     );
   }
-
+  // When a thread is selected, show the practice interface
   const threadData = threadPrompts[selectedThread];
   const stepContent = {
     intro: {
@@ -705,9 +648,7 @@ const PracticeTool: React.FC = () => {
       prompts: []
     }
   };
-
   const current = stepContent[currentStep];
-
   return (
     <div className={styles.container}>
       <div className={styles.practiceSession}>
@@ -719,7 +660,6 @@ const PracticeTool: React.FC = () => {
             {selectedThread.toUpperCase()}
           </div>
         </div>
-
         <div className={styles.progressBar}>
           {['intro', 'halt', 'observe', 'look', 'decide', 'complete'].map((step, idx) => (
             <div
@@ -734,11 +674,9 @@ const PracticeTool: React.FC = () => {
             />
           ))}
         </div>
-
         <div className={styles.stepContent}>
           <h2 className={styles.stepTitle}>{current.title}</h2>
           <p className={styles.stepIntro}>{current.content}</p>
-
           {current.prompts.length > 0 && (
             <div className={styles.prompts}>
               {current.prompts.map((prompt, idx) => (
@@ -746,7 +684,6 @@ const PracticeTool: React.FC = () => {
               ))}
             </div>
           )}
-
           {currentStep !== 'intro' && currentStep !== 'complete' && (
             <div className={styles.responseArea}>
               <label htmlFor="response">Your reflections:</label>
@@ -760,7 +697,6 @@ const PracticeTool: React.FC = () => {
               />
             </div>
           )}
-
           {currentStep === 'complete' && (
             <div className={styles.completeSummary}>
               <p className={styles.completeMessage}>
@@ -781,9 +717,8 @@ const PracticeTool: React.FC = () => {
             </div>
           )}
         </div>
-
         <div className={styles.navigation}>
-          {currentStep !== 'intro' && currentStep !== 'complete' && (
+          {currentStep !== 'intro' && (
             <button className={styles.navButton} onClick={handleBack}>
               ← Back
             </button>
@@ -806,5 +741,4 @@ const PracticeTool: React.FC = () => {
     </div>
   );
 };
-
 export default PracticeTool;

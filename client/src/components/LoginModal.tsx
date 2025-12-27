@@ -1,15 +1,13 @@
 import React, { useState, FormEvent } from 'react';
+import { API_URL } from '../config';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import styles from './LoginModal.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 interface LoginModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -17,26 +15,21 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
-
   if (!isOpen) return null;
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError('');
     setLoading(true);
-
     try {
       const response = await fetch(`${API_URL}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })
       });
-
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({ message: 'Login failed' }));
         throw new Error(errorData.message || 'Login failed');
       }
-
       const data = await response.json();
       login(data.access_token);
       onClose();
@@ -47,26 +40,21 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
       setLoading(false);
     }
   };
-
   const handleSignUpClick = () => {
     onClose();
     navigate('/signup');
   };
-
   const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
-
   return (
     <div className={styles.overlay} onClick={handleOverlayClick}>
       <div className={styles.modal}>
         <button className={styles.closeButton} onClick={onClose}>×</button>
-
         <h2 className={styles.title}>Log In</h2>
         <p className={styles.subtitle}>Welcome back to your Threads journey</p>
-
         <form onSubmit={handleSubmit} className={styles.form}>
           <div className={styles.field}>
             <label htmlFor="email">Email</label>
@@ -79,8 +67,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               autoFocus
             />
           </div>
-
-          <div className={styles.field}>
+          <div className={styles.formGroup}>
             <label htmlFor="password">Password</label>
             <input
               id="password"
@@ -90,14 +77,11 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
               required
             />
           </div>
-
           {error && <div className={styles.error}>{error}</div>}
-
           <button type="submit" className={styles.submitButton} disabled={loading}>
             {loading ? 'Logging in...' : 'Log In'}
           </button>
         </form>
-
         <div className={styles.signupSection}>
           <p>Don't have an account?</p>
           <button onClick={handleSignUpClick} className={styles.signupButton}>
@@ -108,5 +92,4 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
-
 export default LoginModal;
